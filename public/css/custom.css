@@ -1,0 +1,27 @@
+.hextra-footer {
+  width: 100%;
+  align-content: center;
+
+  .hextra-max-footer-width {
+    width: 100%;
+    display: none;
+  }
+
+  .hextra-custom-footer {
+    display: block;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.anssi-footer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.anssi-footer a {
+  text-decoration-line: underline !important;
+  text-underline-offset: 0.15em;
+}

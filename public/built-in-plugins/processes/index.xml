@@ -1,0 +1,717 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dfir-Ogre documentation – Processes</title>
+    <link>http://localhost:1313/built-in-plugins/processes/</link>
+    <description>Recent content in Processes on Dfir-Ogre documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 06 Jan 2026 16:48:25 +0100</lastBuildDate>
+    
+	  <atom:link href="http://localhost:1313/built-in-plugins/processes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/built-in-plugins/processes/autoruns/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/built-in-plugins/processes/autoruns/</guid>
+      <description>
+        
+        
+        &lt;h3&gt;High‑level description&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;highlevel-description&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#highlevel-description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The &lt;strong&gt;Autoruns&lt;/strong&gt; plug‑in parses CSV files produced by the Windows Autoruns utility, extracting entries that define programs or scripts that start automatically. It reads registry locations, file paths and related metadata to enumerate persistence mechanisms.&lt;/p&gt;
+&lt;p&gt;- Reveals what programs are set to execute on boot or login.&lt;br&gt;
+- Shows whether each autorun entry is active or disabled.&lt;br&gt;
+- Identifies the exact file or command that will be launched.&lt;br&gt;
+- Links each entry to its user profile, aiding attribution.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;File:&lt;/strong&gt; &lt;code&gt;configuration/autoruns.xml&lt;/code&gt;&lt;br&gt;
+&lt;strong&gt;Plugin parser:&lt;/strong&gt; &lt;code&gt;Csv&lt;/code&gt; parser (built‑in CSV parser)&lt;/p&gt;
+&lt;h3&gt;Timeline data&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;timeline-data&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#timeline-data&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The timeline displays the following elements:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Timeline field&lt;/th&gt;
+          &lt;th&gt;Value&lt;/th&gt;
+          &lt;th&gt;Description&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Description&lt;/td&gt;
+          &lt;td&gt;entry&lt;/td&gt;
+          &lt;td&gt;Full registry key of the autorun entry (combined &lt;em&gt;Entry Location&lt;/em&gt; and &lt;em&gt;Entry&lt;/em&gt;).&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Additional Description&lt;/td&gt;
+          &lt;td&gt;image_path&lt;/td&gt;
+          &lt;td&gt;Path to the executable or file that will be run automatically.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;enabled&lt;/td&gt;
+          &lt;td&gt;Boolean indicating if the autorun entry is enabled.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;category&lt;/td&gt;
+          &lt;td&gt;Classification of the autorun (e.g., Startup, Run, Service).&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;profile&lt;/td&gt;
+          &lt;td&gt;User profile context associated with the autorun entry.&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;Fields&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;fields&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#fields&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Output Name&lt;/th&gt;
+          &lt;th&gt;Data Type&lt;/th&gt;
+          &lt;th&gt;Qualifier&lt;/th&gt;
+          &lt;th&gt;Description&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;time&lt;/td&gt;
+          &lt;td&gt;DateTime&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;entry_location&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;KEY_PATH&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;entry_name&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;KEY_NAME&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;enabled&lt;/td&gt;
+          &lt;td&gt;Bool&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;category&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;profile&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;description&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;signer&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;company&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;COMPANY&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;image_path&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;FILE_PATH&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;version&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;PE_VERSION&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;launch_string&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;md5&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;FILE_MD5&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;sha1&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;FILE_SHA1&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;pe_sha1&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;PE_SHA1&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;pe_sha256&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;PE_SHA256&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;sha256&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;FILE_SHA256&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;imp&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/built-in-plugins/processes/orc_process_1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/built-in-plugins/processes/orc_process_1/</guid>
+      <description>
+        
+        
+        &lt;h3&gt;High‑level description&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;highlevel-description&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#highlevel-description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The &lt;strong&gt;Orc Processes 1&lt;/strong&gt; plug‑in extracts rows from an ORC‑generated CSV file that lists Windows processes. It captures basic process attributes such as name, executable path, command line, identifiers and timestamps, exposing the execution context recorded at collection time.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Provides process names and their originating executable locations.&lt;/li&gt;
+&lt;li&gt;Records command‑line arguments, enabling reconstruction of launch parameters.&lt;/li&gt;
+&lt;li&gt;Includes creation and termination timestamps for temporal correlation.&lt;/li&gt;
+&lt;li&gt;Supplies process IDs, parent IDs and session information for relationship mapping.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;File:&lt;/strong&gt; &lt;code&gt;configuration/orc_processes_1.xml&lt;/code&gt;&lt;br&gt;
+&lt;strong&gt;Plugin parser:&lt;/strong&gt; &lt;code&gt;OrcProcesses1&lt;/code&gt; (implemented in &lt;code&gt;src/anssi_ogre_plugin/orc_processes_1.py&lt;/code&gt;)&lt;/p&gt;
+&lt;h3&gt;Timeline data&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;timeline-data&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#timeline-data&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The timeline displays the following elements:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Timeline field&lt;/th&gt;
+          &lt;th&gt;Value&lt;/th&gt;
+          &lt;th&gt;Description&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Description&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;name&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Process name as recorded in the CSV.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Additional Description&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;command_line&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Full command‑line string used to launch the process.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;executable_path&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Full filesystem path of the process executable.&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;Fields&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;fields&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#fields&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Output Name&lt;/th&gt;
+          &lt;th&gt;Data Type&lt;/th&gt;
+          &lt;th&gt;Qualifier&lt;/th&gt;
+          &lt;th&gt;Description&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;name&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;nb_handles&lt;/td&gt;
+          &lt;td&gt;Int&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;executable_path&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;command_line&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;COMMAND_LINE&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;description&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;creation&lt;/td&gt;
+          &lt;td&gt;Python&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;termination&lt;/td&gt;
+          &lt;td&gt;Python&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;kernelmode_time&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;usermode_time&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;parent_id&lt;/td&gt;
+          &lt;td&gt;Int&lt;/td&gt;
+          &lt;td&gt;PROCESS_ID&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;priority&lt;/td&gt;
+          &lt;td&gt;Int&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;process_id&lt;/td&gt;
+          &lt;td&gt;Int&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;session_id&lt;/td&gt;
+          &lt;td&gt;Int&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;nb_threads&lt;/td&gt;
+          &lt;td&gt;Int&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;memory_size&lt;/td&gt;
+          &lt;td&gt;Int&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/built-in-plugins/processes/orc_process_2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/built-in-plugins/processes/orc_process_2/</guid>
+      <description>
+        
+        
+        &lt;h3&gt;High‑level description&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;highlevel-description&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#highlevel-description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The &lt;strong&gt;Orc Processes 2&lt;/strong&gt; plug‑in parses CSV files produced by ORC that enumerate running processes. It extracts each process’s metadata, such as name, executable path, timestamps, identifiers, and resource usage.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Process name, command‑line and executable location.&lt;/li&gt;
+&lt;li&gt;Creation (&lt;code&gt;creation&lt;/code&gt;) and termination (&lt;code&gt;termination&lt;/code&gt;) timestamps.&lt;/li&gt;
+&lt;li&gt;Parent/child relationship via &lt;code&gt;parent_id&lt;/code&gt; and &lt;code&gt;process_id&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Resource metrics: memory size, CPU times, priority, session.&lt;/li&gt;
+&lt;li&gt;Execution context: user‑mode/kernel‑mode time, responding state, privileged flag.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;File:&lt;/strong&gt; &lt;code&gt;configuration/orc_processes_2.xml&lt;/code&gt;&lt;br&gt;
+&lt;strong&gt;Plugin parser:&lt;/strong&gt; &lt;code&gt;Csv&lt;/code&gt; (built‑in CSV parser)&lt;/p&gt;
+&lt;h3&gt;Timeline data&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;timeline-data&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#timeline-data&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The timeline displays the following elements:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Timeline field&lt;/th&gt;
+          &lt;th&gt;Value&lt;/th&gt;
+          &lt;th&gt;Description&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Description&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;name&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Process name as recorded in the CSV&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Additional Description&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;command_line&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Full command‑line used to start the process&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;executable_path&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Filesystem path of the process executable&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;Fields&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;fields&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#fields&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Output Name&lt;/th&gt;
+          &lt;th&gt;Data Type&lt;/th&gt;
+          &lt;th&gt;Qualifier&lt;/th&gt;
+          &lt;th&gt;Description&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;name&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;nb_handles&lt;/td&gt;
+          &lt;td&gt;Int&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;executable_path&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;company&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;COMPANY&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;cpu_time&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;file_version&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;product_version&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;product&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;PRODUCT&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;window_title&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;description&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;creation&lt;/td&gt;
+          &lt;td&gt;DateTime&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;termination&lt;/td&gt;
+          &lt;td&gt;DateTime&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;kernelmode_time&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;usermode_time&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;total_time&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;parent_id&lt;/td&gt;
+          &lt;td&gt;Int&lt;/td&gt;
+          &lt;td&gt;PROCESS_ID&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;priority_class&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;priority&lt;/td&gt;
+          &lt;td&gt;Int&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;process_id&lt;/td&gt;
+          &lt;td&gt;Int&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;session_id&lt;/td&gt;
+          &lt;td&gt;Int&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;responding&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;memory_size&lt;/td&gt;
+          &lt;td&gt;Int&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/built-in-plugins/processes/prefetch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/built-in-plugins/processes/prefetch/</guid>
+      <description>
+        
+        
+        &lt;h3&gt;High‑level description&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;highlevel-description&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#highlevel-description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The &lt;strong&gt;Prefetch&lt;/strong&gt; plug‑in parses Windows Prefetch files to extract execution metadata. It shows when and how often an executable ran, which supporting files were loaded, and storage details of the volumes involved.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Identifies the executable name and version.&lt;/li&gt;
+&lt;li&gt;Records the number of executions and the most recent run timestamp.&lt;/li&gt;
+&lt;li&gt;Lists files and volumes referenced by the executable.&lt;/li&gt;
+&lt;li&gt;Captures path hints that may point to additional artefacts.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;File:&lt;/strong&gt; &lt;code&gt;configuration/prefetch.xml&lt;/code&gt;&lt;br&gt;
+&lt;strong&gt;Plugin parser:&lt;/strong&gt; &lt;code&gt;Prefetch&lt;/code&gt; ( implemented in &lt;code&gt;src/anssi_ogre_plugin/prefetch.py&lt;/code&gt;)&lt;/p&gt;
+&lt;h3&gt;Timeline data&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;timeline-data&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#timeline-data&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The timeline displays the following elements:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Timeline field&lt;/th&gt;
+          &lt;th&gt;Value&lt;/th&gt;
+          &lt;th&gt;Description&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Description&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;executable&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Name of the executable that generated the Prefetch record.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Additional Description&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;path_hints&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Paths hinted by the Prefetch file, often indicating related resources or files accessed by the executable.&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;Fields&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;fields&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#fields&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Output Name&lt;/th&gt;
+          &lt;th&gt;Data Type&lt;/th&gt;
+          &lt;th&gt;Qualifier&lt;/th&gt;
+          &lt;th&gt;Description&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;executable&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;FILE_NAME&lt;/td&gt;
+          &lt;td&gt;executable file name&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;version&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;version&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;prefetch_hash&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Int&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;hash identifier of the prefetch file&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;run_count&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Int&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;number of times the executable was run&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;run_date&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;DateTime&lt;/td&gt;
+          &lt;td&gt;DATE_LAST_RUN&lt;/td&gt;
+          &lt;td&gt;timestamp of the most recent execution&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;file_count&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Int&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;count of file entries referenced by the prefetch&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;files[]&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;files[][index]&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Int&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;index of the file entry&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;files[][path]&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;FILE_PATH&lt;/td&gt;
+          &lt;td&gt;full path of a referenced file&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;files[][frn]&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;file reference number (FRN) in hexadecimal&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;files[][sequence_number]&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Int&lt;/td&gt;
+          &lt;td&gt;MFT_SEQUENCE&lt;/td&gt;
+          &lt;td&gt;sequence component of the FRN&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;files[][record_number]&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Int&lt;/td&gt;
+          &lt;td&gt;FS_INODE&lt;/td&gt;
+          &lt;td&gt;record/inode component of the FRN&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;volume_count&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Int&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;number of volumes referenced&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;volumes[]&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;volumes[][path]&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;device path of the volume&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;volumes[][serial_number]&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Int&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;volume serial number&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;volumes[][creation_time]&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;DateTime&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;creation timestamp of the volume&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;path_hints[]&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;relative paths within volumes that hint at additional artefacts&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
