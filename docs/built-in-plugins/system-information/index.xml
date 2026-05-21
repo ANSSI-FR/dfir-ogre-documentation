@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DFIR-OGRE documentation – System Information</title>
-    <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/system-information/</link>
+    <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/system-information/</link>
     <description>Recent content in System Information on DFIR-OGRE documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="http://localhost:1313/dfir-ogre-documentation/built-in-plugins/system-information/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/system-information/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Network Config</title>
-      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/system-information/network_config/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/system-information/network_config/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/system-information/network_config/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/system-information/network_config/</guid>
       <description>
         
         
@@ -200,10 +200,10 @@ Python Parser: &lt;strong&gt;RegNetworkConfig&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Reg Systeminfo</title>
-      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/system-information/reg_systeminfo/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/system-information/reg_systeminfo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/system-information/reg_systeminfo/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/system-information/reg_systeminfo/</guid>
       <description>
         
         
@@ -466,10 +466,10 @@ Python Parser: &lt;strong&gt;RegSystemInfo&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Systeminfo</title>
-      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/system-information/systeminfo/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/system-information/systeminfo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/system-information/systeminfo/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/system-information/systeminfo/</guid>
       <description>
         
         
@@ -724,10 +724,10 @@ Python Parser: &lt;strong&gt;Regexp&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>User Profile</title>
-      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/system-information/user_profile/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/system-information/user_profile/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/system-information/user_profile/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/system-information/user_profile/</guid>
       <description>
         
         
@@ -903,10 +903,10 @@ Python Parser: &lt;strong&gt;RegUserProfile&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>X509 Cert</title>
-      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/system-information/x509_cert/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/system-information/x509_cert/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/system-information/x509_cert/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/system-information/x509_cert/</guid>
       <description>
         
         
@@ -1116,10 +1116,10 @@ Python Parser: &lt;strong&gt;RegSystemCertificates&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>X509 Cert Certificates</title>
-      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/system-information/x509_cert_certificates/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/system-information/x509_cert_certificates/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/system-information/x509_cert_certificates/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/system-information/x509_cert_certificates/</guid>
       <description>
         
         

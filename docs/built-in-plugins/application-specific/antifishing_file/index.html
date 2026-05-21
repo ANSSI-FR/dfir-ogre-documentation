@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr"><head><script src="/dfir-ogre-documentation/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=dfir-ogre-documentation/livereload" data-no-instant defer></script>
+<html lang="en" dir="ltr"><head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="noindex, nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="index, follow" />
   <link rel="icon shortcut" href="/dfir-ogre-documentation/favicon.ico" sizes="32x32" />
 <link rel="icon" href="/dfir-ogre-documentation/favicon.svg" type="image/svg+xml" id="favicon-svg" />
 <link rel="icon" href="/dfir-ogre-documentation/favicon-16x16.png" type="image/png" sizes="16x16" />
@@ -10,7 +10,7 @@
 <link fetchpriority="low" href="/dfir-ogre-documentation/site.webmanifest" rel="manifest" />
 <title>Antifishing File – DFIR-OGRE documentation</title>
   <meta name="description" content=" Data Type: antifishing_file Python Parser: RegAntifishingFile Description Extracts the Internet Explorer anti‑phishing registry hive under NTUser hive.
-Extracts the UserFile value and the key’s security descriptor, exposing the file used for IE’s anti‑phishing feature and the owning user. Timeline Timeline Field Data Field Related User key_security.owner_sid Description user_file Additional Description order_index Fields Output Name Data Type Qualifier Description user_file String FILE_PATH Path to the file used by Internet Explorer’s anti‑phishing feature key_path String KEY_PATH full registry key name key_modif_time DateTime DATE_MODIFICATION last modification timestamp of the registry key key_security Object key_security.owner_sid String USER_SID SID of the user that owns the registry key key_security.group_sid String SID of the group that owns the registry key key_security.control_flags[] Array[String] security descriptor control flags for the key key_security.dacl_ace Object key_security.dacl_ace.ace_type String type of ACE (e.g., allow, deny) key_security.dacl_ace.account_sid String SID of the account the ACE applies to key_security.dacl_ace.ace_flags[] Array[String] ACE flags that modify inheritance or behavior key_security.dacl_ace.rights[] Array[String] permissions granted or denied by the ACE " /><link rel="canonical" href="http://localhost:1313/dfir-ogre-documentation/built-in-plugins/application-specific/antifishing_file/" itemprop="url" />
+Extracts the UserFile value and the key’s security descriptor, exposing the file used for IE’s anti‑phishing feature and the owning user. Timeline Timeline Field Data Field Related User key_security.owner_sid Description user_file Additional Description order_index Fields Output Name Data Type Qualifier Description user_file String FILE_PATH Path to the file used by Internet Explorer’s anti‑phishing feature key_path String KEY_PATH full registry key name key_modif_time DateTime DATE_MODIFICATION last modification timestamp of the registry key key_security Object key_security.owner_sid String USER_SID SID of the user that owns the registry key key_security.group_sid String SID of the group that owns the registry key key_security.control_flags[] Array[String] security descriptor control flags for the key key_security.dacl_ace Object key_security.dacl_ace.ace_type String type of ACE (e.g., allow, deny) key_security.dacl_ace.account_sid String SID of the account the ACE applies to key_security.dacl_ace.ace_flags[] Array[String] ACE flags that modify inheritance or behavior key_security.dacl_ace.rights[] Array[String] permissions granted or denied by the ACE " /><link rel="canonical" href="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/application-specific/antifishing_file/" itemprop="url" />
 
 <meta property="og:title" content="Antifishing File">
 <meta
@@ -146,7 +146,7 @@ Fields
   content="
     article
   ">
-<meta property="og:url" content="http://localhost:1313/dfir-ogre-documentation/built-in-plugins/application-specific/antifishing_file/"><meta property="article:section" content="built-in-plugins">
+<meta property="og:url" content="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/application-specific/antifishing_file/"><meta property="article:section" content="built-in-plugins">
 
 
 
@@ -159,12 +159,18 @@ Extracts the UserFile value and the key’s security descriptor, exposing the fi
   <meta name="twitter:title" content="Antifishing File">
   <meta name="twitter:description" content="Data Type: antifishing_file Python Parser: RegAntifishingFile Description Extracts the Internet Explorer anti‑phishing registry hive under NTUser hive.
 Extracts the UserFile value and the key’s security descriptor, exposing the file used for IE’s anti‑phishing feature and the owning user. Timeline Timeline Field Data Field Related User key_security.owner_sid Description user_file Additional Description order_index Fields Output Name Data Type Qualifier Description user_file String FILE_PATH Path to the file used by Internet Explorer’s anti‑phishing feature key_path String KEY_PATH full registry key name key_modif_time DateTime DATE_MODIFICATION last modification timestamp of the registry key key_security Object key_security.owner_sid String USER_SID SID of the user that owns the registry key key_security.group_sid String SID of the group that owns the registry key key_security.control_flags[] Array[String] security descriptor control flags for the key key_security.dacl_ace Object key_security.dacl_ace.ace_type String type of ACE (e.g., allow, deny) key_security.dacl_ace.account_sid String SID of the account the ACE applies to key_security.dacl_ace.ace_flags[] Array[String] ACE flags that modify inheritance or behavior key_security.dacl_ace.rights[] Array[String] permissions granted or denied by the ACE">
-<link href="/dfir-ogre-documentation/css/compiled/main.css" rel="stylesheet" />
-    <link href="/dfir-ogre-documentation/css/variables.css" rel="stylesheet" />
-    <link href="/dfir-ogre-documentation/css/custom.css" rel="stylesheet" />
+
+    <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
+    <link href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" rel="stylesheet" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
 
   
-<script src="/dfir-ogre-documentation/js/main-head.js" integrity=""></script>
+
+
+
+
+
+
+<script src="/dfir-ogre-documentation/js/main-head.min.2375b7265ea066ecb314226ce5ff17478453df5f350d34d830b3fc96fba21672.js" integrity="sha256-I3W3Jl6gZuyzFCJs5f8XR4RT3181DTTYMLP8lvuiFnI="></script>
 
   
   
@@ -1913,7 +1919,7 @@ Python Parser: <strong>RegAntifishingFile</strong></div>
   </a></div></div>
     </div></footer>
     
-    <script defer src="/dfir-ogre-documentation/js/main.js" integrity=""></script>
-<script defer src="/dfir-ogre-documentation/js/flexsearch.9f5b5908f93ae86f1ecd4b043b799f580c2d1654e703dd9357d568ac41b2547a.js" integrity="sha256-n1tZCPk66G8ezUsEO3mfWAwtFlTnA92TV9VorEGyVHo=" crossorigin="anonymous"></script><script defer src="/dfir-ogre-documentation/en.search.js" integrity=""></script>
+    <script defer src="/dfir-ogre-documentation/js/main.min.e6ec223dd3472e6949081d081ee4fc56c7e7f90951c40b4ae16c7db05d6213ee.js" integrity="sha256-5uwiPdNHLmlJCB0IHuT8Vsfn&#43;QlRxAtK4Wx9sF1iE&#43;4="></script>
+<script defer src="/dfir-ogre-documentation/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script><script defer src="/dfir-ogre-documentation/en.search.min.e501b4d6f6d74bd60ef5a7c41d513847c5d12b886fd68b45186fb216c3de1de4.js" integrity="sha256-5QG01vbXS9YO9afEHVE4R8XRK4hv1otFGG&#43;yFsPeHeQ="></script>
   </body>
 </html>

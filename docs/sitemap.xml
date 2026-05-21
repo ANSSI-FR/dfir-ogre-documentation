@@ -2,254 +2,254 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/plugin-creation/custom_library/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/plugin-creation/custom_library/</loc>
     <lastmod>2026-01-06T15:54:09+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/plugin-creation/generic_plugins/csv_tutorial/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/plugin-creation/generic_plugins/csv_tutorial/</loc>
     <lastmod>2026-01-06T15:54:09+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/plugin-creation/custom_parsers/hello_world/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/plugin-creation/custom_parsers/hello_world/</loc>
     <lastmod>2026-01-06T15:54:09+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/usage/command_line_usage/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/usage/command_line_usage/</loc>
     <lastmod>2026-01-06T15:52:05+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/getting-started/docker_installation/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/getting-started/docker_installation/</loc>
     <lastmod>2026-01-06T15:52:05+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/getting-started/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/getting-started/</loc>
     <lastmod>2026-01-06T15:52:05+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/plugin-creation/custom_parsers/advanced_topics/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/plugin-creation/custom_parsers/advanced_topics/</loc>
     <lastmod>2026-01-06T15:54:09+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/plugin-creation/generic_plugins/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/plugin-creation/generic_plugins/</loc>
     <lastmod>2026-01-06T15:54:09+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/plugin-creation/generic_plugins/regexp_plugin/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/plugin-creation/generic_plugins/regexp_plugin/</loc>
     <lastmod>2026-01-06T15:54:09+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/usage/ogre_configuration/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/usage/ogre_configuration/</loc>
     <lastmod>2026-01-06T15:52:05+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/getting-started/manual_installation/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/getting-started/manual_installation/</loc>
     <lastmod>2026-01-06T15:52:05+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/usage/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/usage/</loc>
     <lastmod>2026-01-06T15:51:48+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/plugin-creation/custom_parsers/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/plugin-creation/custom_parsers/</loc>
     <lastmod>2026-01-06T15:54:09+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/plugin-creation/generic_plugins/sqlite_plugin/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/plugin-creation/generic_plugins/sqlite_plugin/</loc>
     <lastmod>2026-01-06T15:54:09+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/usage/artefacts_format/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/usage/artefacts_format/</loc>
     <lastmod>2026-01-06T15:52:05+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/plugin-creation/xml_descriptor/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/plugin-creation/xml_descriptor/</loc>
     <lastmod>2026-01-06T15:55:36+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/plugin-creation/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/plugin-creation/</loc>
     <lastmod>2026-01-06T15:54:09+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/plugin-creation/generic_plugins/xml_plugin/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/plugin-creation/generic_plugins/xml_plugin/</loc>
     <lastmod>2026-01-06T15:54:09+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/plugin-creation/api_documentation/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/plugin-creation/api_documentation/</loc>
     <lastmod>2026-01-06T15:54:09+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/</loc>
     <lastmod>2026-01-06T15:49:13+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/application-specific/acmru/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/application-specific/acmru/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/services-and-applications/activity_cache/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/activity_cache/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_driver/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_driver/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_driver_xml/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_driver_xml/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_file/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_file/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_ie_addon_xml/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_ie_addon_xml/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_installer_xml/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_installer_xml/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_program/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_program/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_program_xml/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_program_xml/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_program_xml_xml/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_program_xml_xml/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/application-specific/antifishing_file/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/application-specific/antifishing_file/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/services-and-applications/app_compat_cache/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/app_compat_cache/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/application-specific/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/application-specific/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/autoruns/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/autoruns/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/backup_exclude/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/backup_exclude/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/services-and-applications/bam_dam/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/bam_dam/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_download_history/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_download_history/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_download_history_lite/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_download_history_lite/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_history/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_history/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_history_lite/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_history_lite/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/categories/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_extension/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_extension/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/clsid/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/clsid/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/clsid_software/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/clsid_software/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/logs/evt/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/logs/evt/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/fast-find/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/fast-find/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/fast-find/fastfind_file/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/fast-find/fastfind_file/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/fast-find/fastfind_obj/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/fast-find/fastfind_obj/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/fast-find/fastfind_reg/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/fast-find/fastfind_reg/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_extension/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_extension/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/getthis/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/getthis/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/ie_webcache_history/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/ie_webcache_history/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/application-specific/java_idx/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/application-specific/java_idx/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/services-and-applications/listdlls/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/listdlls/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/lnk/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/lnk/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/logs/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/logs/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/mass_storage/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/mass_storage/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/merge_file/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/merge_file/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/services-and-applications/mui_cache/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/mui_cache/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/network/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/network/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/system-information/network_config/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/system-information/network_config/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/ntfsinfo/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/ntfsinfo/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/objinfo/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/objinfo/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/logs/pca_app_launch/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/logs/pca_app_launch/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/logs/pca_general_record/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/logs/pca_general_record/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/pending_rename/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/pending_rename/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/services-and-applications/prefetch/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/prefetch/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/services-and-applications/processes_orc/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/processes_orc/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/services-and-applications/processes_orc_csv/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/processes_orc_csv/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/services-and-applications/recent_app/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/recent_app/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/recycle_bin/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/recycle_bin/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/reg_autoruns/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/reg_autoruns/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/reg_autoruns_software/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/reg_autoruns_software/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/reg_autoruns_system/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/reg_autoruns_system/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/reg_keys/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/reg_keys/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/system-information/reg_systeminfo/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/system-information/reg_systeminfo/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/services-and-applications/run_mru/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/run_mru/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/scheduled_tasks/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/scheduled_tasks/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/services-and-applications/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/services_control_set/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/services_control_set/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/shellbags/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/shellbags/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/services-and-applications/shim_db/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/shim_db/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/services-and-applications/srum_app_timeline/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/srum_app_timeline/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/services-and-applications/srum_application_resources/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/srum_application_resources/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/services-and-applications/srum_energy_estimation/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/srum_energy_estimation/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_energy_usage/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_energy_usage/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_energy_usage_long_term/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_energy_usage_long_term/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/network/srum_network_connectivity_usage/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/network/srum_network_connectivity_usage/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/network/srum_network_data_usage/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/network/srum_network_data_usage/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/services-and-applications/srum_sdp_cpu/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/srum_sdp_cpu/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/network/srum_sdp_network/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/network/srum_sdp_network/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/srum_sdp_physical_disk/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/srum_sdp_physical_disk/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/srum_sdp_volume/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/srum_sdp_volume/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_tagged_energy/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_tagged_energy/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_vfuprov/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_vfuprov/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_wpn_provider/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_wpn_provider/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/services-and-applications/subject_interface_package/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/subject_interface_package/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/system-information/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/system-information/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/system-information/systeminfo/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/system-information/systeminfo/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/tags/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/tags/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/network/tcpvcon/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/network/tcpvcon/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/services-and-applications/user_assist/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/user_assist/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/system-information/user_profile/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/system-information/user_profile/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/usninfo/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/usninfo/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/volstats/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/volstats/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/vss_snapshot/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/vss_snapshot/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/logs/wer/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/logs/wer/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/logs/windows_events/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/logs/windows_events/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/system-information/x509_cert/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/system-information/x509_cert/</loc>
   </url><url>
-    <loc>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/system-information/x509_cert_certificates/</loc>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/system-information/x509_cert_certificates/</loc>
   </url>
 </urlset>
