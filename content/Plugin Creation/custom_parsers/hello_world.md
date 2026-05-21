@@ -112,8 +112,8 @@ class HelloWorld(OgrePlugin):
         return report
 ```
 Key points:
-- A `Record` is a [key-value dictionnary](/plugin-creation/custom_parsers/api_documentation/#record), used to represent an artefact in the data model.
-- Records only accept `Value` data, which represents [various serializable](/plugin-creation/custom_parsers/api_documentation/#value) data types.
+- A `Record` is a [key-value dictionnary](/plugin-creation/api_documentation/#record), used to represent an artefact in the data model.
+- Records only accept `Value` data, which represents [various serializable](/plugin-creation/api_documentation/#value) data types.
 
 ## Export your plugin
 
