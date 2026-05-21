@@ -4,7 +4,7 @@
 [![category_badge_external](https://img.shields.io/badge/category-external-%23b556b6)](https://anssi-fr.github.io/README.en.html#project-categories)
 [![openess_badge_A](https://img.shields.io/badge/code.gouv.fr-collaborative-blue)](https://anssi-fr.github.io/README.en.html#openness-level)
 
-This project is the source code of the DFIR-OGRE Documentation site available 
+This project is the source code of the [DFIR-OGRE Documentation](https://anssi-fr.github.io/dfir-ogre-documentation/)
 
 ## French Cybersecurity Agency (ANSSI)
 
