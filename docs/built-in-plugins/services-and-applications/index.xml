@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DFIR-OGRE documentation – Services and Applications</title>
-    <link>https://example.org/built-in-plugins/services-and-applications/</link>
+    <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/</link>
     <description>Recent content in Services and Applications on DFIR-OGRE documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="https://example.org/built-in-plugins/services-and-applications/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Activity Cache</title>
-      <link>https://example.org/built-in-plugins/services-and-applications/activity_cache/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/activity_cache/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/built-in-plugins/services-and-applications/activity_cache/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/activity_cache/</guid>
       <description>
         
         
@@ -145,10 +145,10 @@ Python Parser: &lt;strong&gt;SQLite&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Amcache Driver</title>
-      <link>https://example.org/built-in-plugins/services-and-applications/amcache_driver/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_driver/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/built-in-plugins/services-and-applications/amcache_driver/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_driver/</guid>
       <description>
         
         
@@ -387,10 +387,10 @@ Python Parser: &lt;strong&gt;RegAmCacheDriver&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Amcache Driver Xml</title>
-      <link>https://example.org/built-in-plugins/services-and-applications/amcache_driver_xml/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_driver_xml/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/built-in-plugins/services-and-applications/amcache_driver_xml/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_driver_xml/</guid>
       <description>
         
         
@@ -513,10 +513,10 @@ Python Parser: &lt;strong&gt;XML&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Amcache File</title>
-      <link>https://example.org/built-in-plugins/services-and-applications/amcache_file/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_file/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/built-in-plugins/services-and-applications/amcache_file/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_file/</guid>
       <description>
         
         
@@ -799,10 +799,10 @@ Python Parser: &lt;strong&gt;RegAmCacheFile&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Amcache Ie Addon Xml</title>
-      <link>https://example.org/built-in-plugins/services-and-applications/amcache_ie_addon_xml/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_ie_addon_xml/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/built-in-plugins/services-and-applications/amcache_ie_addon_xml/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_ie_addon_xml/</guid>
       <description>
         
         
@@ -869,10 +869,10 @@ Python Parser: &lt;strong&gt;XML&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Amcache Installer Xml</title>
-      <link>https://example.org/built-in-plugins/services-and-applications/amcache_installer_xml/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_installer_xml/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/built-in-plugins/services-and-applications/amcache_installer_xml/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_installer_xml/</guid>
       <description>
         
         
@@ -1091,10 +1091,10 @@ Python Parser: &lt;strong&gt;XML&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Amcache Program</title>
-      <link>https://example.org/built-in-plugins/services-and-applications/amcache_program/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_program/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/built-in-plugins/services-and-applications/amcache_program/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_program/</guid>
       <description>
         
         
@@ -1311,10 +1311,10 @@ Python Parser: &lt;strong&gt;RegAmCacheProgram&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Amcache Program Xml</title>
-      <link>https://example.org/built-in-plugins/services-and-applications/amcache_program_xml/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_program_xml/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/built-in-plugins/services-and-applications/amcache_program_xml/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_program_xml/</guid>
       <description>
         
         
@@ -1519,10 +1519,10 @@ Python Parser: &lt;strong&gt;XML&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Amcache Program Xml XML</title>
-      <link>https://example.org/built-in-plugins/services-and-applications/amcache_program_xml_xml/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_program_xml_xml/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/built-in-plugins/services-and-applications/amcache_program_xml_xml/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_program_xml_xml/</guid>
       <description>
         
         
@@ -1727,10 +1727,10 @@ Python Parser: &lt;strong&gt;XML&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>App Compat Cache</title>
-      <link>https://example.org/built-in-plugins/services-and-applications/app_compat_cache/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/app_compat_cache/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/built-in-plugins/services-and-applications/app_compat_cache/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/app_compat_cache/</guid>
       <description>
         
         
@@ -1883,10 +1883,10 @@ Python Parser: &lt;strong&gt;RegAppCompatCache&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Bam Dam</title>
-      <link>https://example.org/built-in-plugins/services-and-applications/bam_dam/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/bam_dam/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/built-in-plugins/services-and-applications/bam_dam/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/bam_dam/</guid>
       <description>
         
         
@@ -2023,10 +2023,10 @@ Python Parser: &lt;strong&gt;RegBamDam&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Listdlls</title>
-      <link>https://example.org/built-in-plugins/services-and-applications/listdlls/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/listdlls/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/built-in-plugins/services-and-applications/listdlls/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/listdlls/</guid>
       <description>
         
         
@@ -2105,10 +2105,10 @@ Python Parser: &lt;strong&gt;ListDll&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Mui Cache</title>
-      <link>https://example.org/built-in-plugins/services-and-applications/mui_cache/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/mui_cache/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/built-in-plugins/services-and-applications/mui_cache/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/mui_cache/</guid>
       <description>
         
         
@@ -2246,10 +2246,10 @@ Python Parser: &lt;strong&gt;RegMuiCache&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Prefetch</title>
-      <link>https://example.org/built-in-plugins/services-and-applications/prefetch/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/prefetch/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/built-in-plugins/services-and-applications/prefetch/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/prefetch/</guid>
       <description>
         
         
@@ -2416,10 +2416,10 @@ Python Parser: &lt;strong&gt;Prefetch&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Processes Orc</title>
-      <link>https://example.org/built-in-plugins/services-and-applications/processes_orc/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/processes_orc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/built-in-plugins/services-and-applications/processes_orc/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/processes_orc/</guid>
       <description>
         
         
@@ -2572,10 +2572,10 @@ Python Parser: &lt;strong&gt;OrcProcesses1&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Processes Orc Csv</title>
-      <link>https://example.org/built-in-plugins/services-and-applications/processes_orc_csv/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/processes_orc_csv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/built-in-plugins/services-and-applications/processes_orc_csv/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/processes_orc_csv/</guid>
       <description>
         
         
@@ -2771,10 +2771,10 @@ Python Parser: &lt;strong&gt;Csv&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Recent App</title>
-      <link>https://example.org/built-in-plugins/services-and-applications/recent_app/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/recent_app/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/built-in-plugins/services-and-applications/recent_app/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/recent_app/</guid>
       <description>
         
         
@@ -2954,10 +2954,10 @@ Python Parser: &lt;strong&gt;RegRecentApp&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Run Mru</title>
-      <link>https://example.org/built-in-plugins/services-and-applications/run_mru/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/run_mru/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/built-in-plugins/services-and-applications/run_mru/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/run_mru/</guid>
       <description>
         
         
@@ -3096,10 +3096,10 @@ Python Parser: &lt;strong&gt;RegRunMru&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Shim Db</title>
-      <link>https://example.org/built-in-plugins/services-and-applications/shim_db/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/shim_db/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/built-in-plugins/services-and-applications/shim_db/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/shim_db/</guid>
       <description>
         
         
@@ -3238,10 +3238,10 @@ Python Parser: &lt;strong&gt;RegShimDb&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Srum App Timeline</title>
-      <link>https://example.org/built-in-plugins/services-and-applications/srum_app_timeline/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/srum_app_timeline/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/built-in-plugins/services-and-applications/srum_app_timeline/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/srum_app_timeline/</guid>
       <description>
         
         
@@ -3579,10 +3579,10 @@ recieved by each application&lt;/p&gt;
     
     <item>
       <title>Srum Application Resources</title>
-      <link>https://example.org/built-in-plugins/services-and-applications/srum_application_resources/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/srum_application_resources/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/built-in-plugins/services-and-applications/srum_application_resources/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/srum_application_resources/</guid>
       <description>
         
         
@@ -3754,10 +3754,10 @@ whether it still exists on disk or not. If it executed, it should be logged.&lt;
     
     <item>
       <title>Srum Energy Estimation</title>
-      <link>https://example.org/built-in-plugins/services-and-applications/srum_energy_estimation/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/srum_energy_estimation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/built-in-plugins/services-and-applications/srum_energy_estimation/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/srum_energy_estimation/</guid>
       <description>
         
         
@@ -3840,10 +3840,10 @@ Python Parser: &lt;strong&gt;Srum&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Srum Sdp Cpu</title>
-      <link>https://example.org/built-in-plugins/services-and-applications/srum_sdp_cpu/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/srum_sdp_cpu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/built-in-plugins/services-and-applications/srum_sdp_cpu/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/srum_sdp_cpu/</guid>
       <description>
         
         
@@ -3926,10 +3926,10 @@ Python Parser: &lt;strong&gt;Srum&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Subject Interface Package</title>
-      <link>https://example.org/built-in-plugins/services-and-applications/subject_interface_package/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/subject_interface_package/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/built-in-plugins/services-and-applications/subject_interface_package/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/subject_interface_package/</guid>
       <description>
         
         
@@ -4090,10 +4090,10 @@ Python Parser: &lt;strong&gt;RegSIPP&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>User Assist</title>
-      <link>https://example.org/built-in-plugins/services-and-applications/user_assist/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/user_assist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/built-in-plugins/services-and-applications/user_assist/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/user_assist/</guid>
       <description>
         
         
