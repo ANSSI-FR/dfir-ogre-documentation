@@ -1,4 +1,4 @@
-baseURL: https://example.org/
+baseURL: https://anssi-fr.github.io/dfir-ogre-documentation/
 publishDir: docs
 languageCode: en-us
 title: DFIR-OGRE documentation
