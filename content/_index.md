@@ -7,7 +7,7 @@ cascade:
 title: 'DFIR-OGRE'
 ---
 
-**DFIR-OGRE** is a command‑line utility that extract windows forensic artefacts from [DFIR-ORC](https://github.com/DFIR-ORC/dfir-orc) archives into structured data that can be consumed by Splunk, ELK or other databases.
+**DFIR-OGRE** is a command‑line utility that extracts Windows forensic artefacts from [DFIR-ORC](https://github.com/DFIR-ORC/dfir-orc) archives into structured data that can be consumed by Splunk, ELK or other databases.
 
 It provides a collection of **plug‑ins**, each dedicated to parsing a specific class of Windows artefacts. The built‑in plug‑ins cover a lot of artefacts that appears in a typical DFIR-ORC archive:
 
