@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DFIR-OGRE documentation – Browser Artefacts</title>
-    <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/</link>
+    <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/</link>
     <description>Recent content in Browser Artefacts on DFIR-OGRE documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Browser Download History</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_download_history/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_download_history/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_download_history/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_download_history/</guid>
       <description>
         
         
@@ -142,10 +142,10 @@ Python Parser: &lt;strong&gt;SQLite&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Browser Download History Lite</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_download_history_lite/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_download_history_lite/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_download_history_lite/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_download_history_lite/</guid>
       <description>
         
         
@@ -251,10 +251,10 @@ timestamps for the start and end of the download.&lt;/p&gt;
     
     <item>
       <title>Browser History</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_history/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_history/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_history/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_history/</guid>
       <description>
         
         
@@ -358,10 +358,10 @@ visited, and the referer URL if available.&lt;/p&gt;
     
     <item>
       <title>Browser History Lite</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_history_lite/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_history_lite/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_history_lite/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_history_lite/</guid>
       <description>
         
         
@@ -467,10 +467,10 @@ time.&lt;/p&gt;
     
     <item>
       <title>Chrome Extension</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_extension/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_extension/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_extension/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_extension/</guid>
       <description>
         
         
@@ -574,10 +574,10 @@ structured view of the extension’s declared capabilities.&lt;/p&gt;
     
     <item>
       <title>Firefox Extension</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_extension/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_extension/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_extension/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_extension/</guid>
       <description>
         
         
@@ -798,10 +798,10 @@ permissions.&lt;/p&gt;
     
     <item>
       <title>Ie Webcache History</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/ie_webcache_history/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/ie_webcache_history/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/ie_webcache_history/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/ie_webcache_history/</guid>
       <description>
         
         

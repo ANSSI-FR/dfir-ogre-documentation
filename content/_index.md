@@ -18,8 +18,8 @@ It provides a collection of **plug‑ins**, each dedicated to parsing a specific
 * **System logs** – Windows Event logs (EVTX), Windows Error Reporting files, SRUM usage databases, etc.
 
 {{< cards cols="2">}}
-  {{< card link="/getting-started" title="Getting Started" subtitle="Learn how to install DFIR-Ogre " >}}
-  {{< card link="/usage" title="Usage" subtitle="Learn how to use DFIR-OGRE" >}}
-  {{< card link="/built-in-plugins" title="Built-in Plugins" subtitle="Explore the list of available plugins" >}}
-    {{< card link="/plugin-creation" title="Plugin Creation" subtitle="learn how to create custom plugins" >}}
+  {{< card link="getting-started" title="Getting Started" subtitle="Learn how to install DFIR-Ogre " >}}
+  {{< card link="usage" title="Usage" subtitle="Learn how to use DFIR-OGRE" >}}
+  {{< card link="built-in-plugins" title="Built-in Plugins" subtitle="Explore the list of available plugins" >}}
+  {{< card link="plugin-creation" title="Plugin Creation" subtitle="learn how to create custom plugins" >}}
 {{< /cards >}}

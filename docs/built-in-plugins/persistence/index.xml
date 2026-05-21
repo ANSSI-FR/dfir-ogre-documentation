@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DFIR-OGRE documentation – Persistence</title>
-    <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/</link>
+    <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/</link>
     <description>Recent content in Persistence on DFIR-OGRE documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Autoruns</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/autoruns/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/autoruns/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/autoruns/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/autoruns/</guid>
       <description>
         
         
@@ -196,10 +196,10 @@ Python Parser: &lt;strong&gt;Csv&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Reg Autoruns</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/reg_autoruns/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/reg_autoruns/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/reg_autoruns/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/reg_autoruns/</guid>
       <description>
         
         
@@ -344,10 +344,10 @@ and returns the values found under each key.&lt;/li&gt;
     
     <item>
       <title>Reg Autoruns Software</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/reg_autoruns_software/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/reg_autoruns_software/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/reg_autoruns_software/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/reg_autoruns_software/</guid>
       <description>
         
         
@@ -492,10 +492,10 @@ and returns the values found under each key.&lt;/li&gt;
     
     <item>
       <title>Reg Autoruns System</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/reg_autoruns_system/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/reg_autoruns_system/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/reg_autoruns_system/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/reg_autoruns_system/</guid>
       <description>
         
         
@@ -640,10 +640,10 @@ to achieve automatic execution (autoruns).&lt;/li&gt;
     
     <item>
       <title>Scheduled Tasks</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/scheduled_tasks/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/scheduled_tasks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/scheduled_tasks/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/scheduled_tasks/</guid>
       <description>
         
         
@@ -1065,10 +1065,10 @@ Python Parser: &lt;strong&gt;RegScheduledTask&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Services Control Set</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/services_control_set/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/services_control_set/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/services_control_set/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/services_control_set/</guid>
       <description>
         
         

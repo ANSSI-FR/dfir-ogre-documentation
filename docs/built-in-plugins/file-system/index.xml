@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DFIR-OGRE documentation – File System</title>
-    <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/</link>
+    <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/</link>
     <description>Recent content in File System on DFIR-OGRE documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Backup Exclude</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/backup_exclude/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/backup_exclude/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/backup_exclude/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/backup_exclude/</guid>
       <description>
         
         
@@ -169,10 +169,10 @@ Python Parser: &lt;strong&gt;RegSnapExclude&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Getthis</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/getthis/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/getthis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/getthis/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/getthis/</guid>
       <description>
         
         
@@ -410,10 +410,10 @@ collected files.&lt;/p&gt;
     
     <item>
       <title>Mass Storage</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/mass_storage/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/mass_storage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/mass_storage/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/mass_storage/</guid>
       <description>
         
         
@@ -696,10 +696,10 @@ Python Parser: &lt;strong&gt;RegMassStorageSystem&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Merge File</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/merge_file/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/merge_file/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/merge_file/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/merge_file/</guid>
       <description>
         
         
@@ -743,10 +743,10 @@ pre‑processing step that normalises multi‑line artefacts for downstream anal
     
     <item>
       <title>Ntfsinfo</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/ntfsinfo/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/ntfsinfo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/ntfsinfo/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/ntfsinfo/</guid>
       <description>
         
         
@@ -1189,10 +1189,10 @@ Python Parser: &lt;strong&gt;NTFSInfo&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Pending Rename</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/pending_rename/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/pending_rename/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/pending_rename/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/pending_rename/</guid>
       <description>
         
         
@@ -1330,10 +1330,10 @@ Python Parser: &lt;strong&gt;RegPendingRename&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Recycle Bin</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/recycle_bin/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/recycle_bin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/recycle_bin/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/recycle_bin/</guid>
       <description>
         
         
@@ -1410,10 +1410,10 @@ Python Parser: &lt;strong&gt;RecycleBin&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Shellbags</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/shellbags/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/shellbags/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/shellbags/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/shellbags/</guid>
       <description>
         
         
@@ -1605,10 +1605,10 @@ Python Parser: &lt;strong&gt;RegShellBag&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Srum Sdp Physical Disk</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/srum_sdp_physical_disk/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/srum_sdp_physical_disk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/srum_sdp_physical_disk/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/srum_sdp_physical_disk/</guid>
       <description>
         
         
@@ -1691,10 +1691,10 @@ Python Parser: &lt;strong&gt;Srum&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Srum Sdp Volume</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/srum_sdp_volume/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/srum_sdp_volume/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/srum_sdp_volume/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/srum_sdp_volume/</guid>
       <description>
         
         
@@ -1783,10 +1783,10 @@ Python Parser: &lt;strong&gt;Srum&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Usninfo</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/usninfo/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/usninfo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/usninfo/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/usninfo/</guid>
       <description>
         
         
@@ -2078,10 +2078,10 @@ Python Parser: &lt;strong&gt;USNInfo&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Volstats</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/volstats/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/volstats/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/volstats/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/volstats/</guid>
       <description>
         
         
@@ -2203,10 +2203,10 @@ Python Parser: &lt;strong&gt;Csv&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Vss Snapshot</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/vss_snapshot/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/vss_snapshot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/vss_snapshot/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/vss_snapshot/</guid>
       <description>
         
         

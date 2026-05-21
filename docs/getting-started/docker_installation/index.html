@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr"><head>
+<html lang="en" dir="ltr"><head><script src="/dfir-ogre-documentation/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=dfir-ogre-documentation/livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="noindex, nofollow" />
   <link rel="icon shortcut" href="/dfir-ogre-documentation/favicon.ico" sizes="32x32" />
 <link rel="icon" href="/dfir-ogre-documentation/favicon.svg" type="image/svg+xml" id="favicon-svg" />
 <link rel="icon" href="/dfir-ogre-documentation/favicon-16x16.png" type="image/png" sizes="16x16" />
@@ -12,7 +12,7 @@
   <meta name="description" content="A multi‑stage Dockerfile is provided under dfir-ogre/docker/Dockerfile. It builds the DFIR-OGRE packages from the source and ships a minimal runtime image.
 This is the recommended way to use DFIR-OGRE as it allows for finer control of ressources usage than the manual installation.
 Building the Docker image Run the following command to create a dfir-ogre:latest image
-git clone git@github.com/ANSSI-FR/dfir-ogre.git cd dfir-ogre/docker ./build.sh Usage example # Creates a data and tmp folder mkdir data mkdir tmp # Put the ogre.yaml configuration file in /data/ cp _your_source_path_/dfir-ogre/configuration/ogre_docker.yaml data/ogre.yaml # Put your ORC achives in data/input docker run \ -u $(id -u):$(id -g) \ -v ./data:/data \ -v ./tmp:/tmp/ogre \ --rm \ --memory=8g \ --memory-swap=8g \ --log-opt max-size=10m \ --log-opt max-file=1 \ dfir-ogre:latest \ orc \ --configuration /data/ogre.yaml \ --archive &#39;/data/input/ORC_WorkStation_xxx_Outcome.json&#39; for details on the ogre.yaml, see the configuration guide for a full list of supported command‑line options, consult the command‑line usage page. Docker Options Option What it does --rm Auto‑remove : automatically delete the container when it exits. A new clean container is created for every dfir-ogre run -u $(id -u):$(id -g) User/Group ID : runs the container as the current host user and group. Prevents files created inside the container from being owned by root on the host, making permission handling easier when mounting volumes. -v ./data:/data Volume bind‑mount : maps the host directory ./data into the container at /data. Gives the container access to persistent data -v ./tmp:/tmp/ogre Second bind‑mount : maps ./tmp on the host to /tmp/ogre inside the container. Provides a writable temporary space specific to the application. Usefull for debugging --memory=8g Memory limit : caps the container’s RAM usage at 8 GB. Protects the host from a runaway plugin that could otherwise consume all system memory. --memory-swap=8g Swap limit : sets the total memory &#43; swap that the container may use to 8 GB (i.e., disables swap). Guarantees the container cannot start swapping, which could degrade performance. --log-opt max-size=10m Log rotation max size : when a container’s log file reaches 10 MiB, rotates it. Prevents a runaway plugin to fill up disk space with logs. --log-opt max-file=1 Log rotation max files : keep only the most recent log file (the current one) and discard older ones. Together with max-size, this ensures a single ~10 MiB log file at most " /><link rel="canonical" href="https://anssi-fr.github.io/dfir-ogre-documentation/getting-started/docker_installation/" itemprop="url" />
+git clone git@github.com/ANSSI-FR/dfir-ogre.git cd dfir-ogre/docker ./build.sh Usage example # Creates a data and tmp folder mkdir data mkdir tmp # Put the ogre.yaml configuration file in /data/ cp _your_source_path_/dfir-ogre/configuration/ogre_docker.yaml data/ogre.yaml # Put your ORC achives in data/input docker run \ -u $(id -u):$(id -g) \ -v ./data:/data \ -v ./tmp:/tmp/ogre \ --rm \ --memory=8g \ --memory-swap=8g \ --log-opt max-size=10m \ --log-opt max-file=1 \ dfir-ogre:latest \ orc \ --configuration /data/ogre.yaml \ --archive &#39;/data/input/ORC_WorkStation_xxx_Outcome.json&#39; for details on the ogre.yaml, see the configuration guide for a full list of supported command‑line options, consult the command‑line usage page. Docker Options Option What it does --rm Auto‑remove : automatically delete the container when it exits. A new clean container is created for every dfir-ogre run -u $(id -u):$(id -g) User/Group ID : runs the container as the current host user and group. Prevents files created inside the container from being owned by root on the host, making permission handling easier when mounting volumes. -v ./data:/data Volume bind‑mount : maps the host directory ./data into the container at /data. Gives the container access to persistent data -v ./tmp:/tmp/ogre Second bind‑mount : maps ./tmp on the host to /tmp/ogre inside the container. Provides a writable temporary space specific to the application. Usefull for debugging --memory=8g Memory limit : caps the container’s RAM usage at 8 GB. Protects the host from a runaway plugin that could otherwise consume all system memory. --memory-swap=8g Swap limit : sets the total memory &#43; swap that the container may use to 8 GB (i.e., disables swap). Guarantees the container cannot start swapping, which could degrade performance. --log-opt max-size=10m Log rotation max size : when a container’s log file reaches 10 MiB, rotates it. Prevents a runaway plugin to fill up disk space with logs. --log-opt max-file=1 Log rotation max files : keep only the most recent log file (the current one) and discard older ones. Together with max-size, this ensures a single ~10 MiB log file at most " /><link rel="canonical" href="http://localhost:1313/dfir-ogre-documentation/getting-started/docker_installation/" itemprop="url" />
 
 <meta property="og:title" content="Docker‑based Installation">
 <meta
@@ -126,7 +126,7 @@ Docker Options
   content="
     article
   ">
-<meta property="og:url" content="https://anssi-fr.github.io/dfir-ogre-documentation/getting-started/docker_installation/"><meta property="article:section" content="getting-started">
+<meta property="og:url" content="http://localhost:1313/dfir-ogre-documentation/getting-started/docker_installation/"><meta property="article:section" content="getting-started">
 
 <meta
   property="article:published_time"
@@ -153,18 +153,12 @@ git clone git@github.com/ANSSI-FR/dfir-ogre.git cd dfir-ogre/docker ./build.sh U
 This is the recommended way to use DFIR-OGRE as it allows for finer control of ressources usage than the manual installation.
 Building the Docker image Run the following command to create a dfir-ogre:latest image
 git clone git@github.com/ANSSI-FR/dfir-ogre.git cd dfir-ogre/docker ./build.sh Usage example # Creates a data and tmp folder mkdir data mkdir tmp # Put the ogre.yaml configuration file in /data/ cp _your_source_path_/dfir-ogre/configuration/ogre_docker.yaml data/ogre.yaml # Put your ORC achives in data/input docker run \ -u $(id -u):$(id -g) \ -v ./data:/data \ -v ./tmp:/tmp/ogre \ --rm \ --memory=8g \ --memory-swap=8g \ --log-opt max-size=10m \ --log-opt max-file=1 \ dfir-ogre:latest \ orc \ --configuration /data/ogre.yaml \ --archive &#39;/data/input/ORC_WorkStation_xxx_Outcome.json&#39; for details on the ogre.yaml, see the configuration guide for a full list of supported command‑line options, consult the command‑line usage page. Docker Options Option What it does --rm Auto‑remove : automatically delete the container when it exits. A new clean container is created for every dfir-ogre run -u $(id -u):$(id -g) User/Group ID : runs the container as the current host user and group. Prevents files created inside the container from being owned by root on the host, making permission handling easier when mounting volumes. -v ./data:/data Volume bind‑mount : maps the host directory ./data into the container at /data. Gives the container access to persistent data -v ./tmp:/tmp/ogre Second bind‑mount : maps ./tmp on the host to /tmp/ogre inside the container. Provides a writable temporary space specific to the application. Usefull for debugging --memory=8g Memory limit : caps the container’s RAM usage at 8 GB. Protects the host from a runaway plugin that could otherwise consume all system memory. --memory-swap=8g Swap limit : sets the total memory &#43; swap that the container may use to 8 GB (i.e., disables swap). Guarantees the container cannot start swapping, which could degrade performance. --log-opt max-size=10m Log rotation max size : when a container’s log file reaches 10 MiB, rotates it. Prevents a runaway plugin to fill up disk space with logs. --log-opt max-file=1 Log rotation max files : keep only the most recent log file (the current one) and discard older ones. Together with max-size, this ensures a single ~10 MiB log file at most">
-
-    <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
-    <link href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" rel="stylesheet" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
+<link href="/dfir-ogre-documentation/css/compiled/main.css" rel="stylesheet" />
+    <link href="/dfir-ogre-documentation/css/variables.css" rel="stylesheet" />
+    <link href="/dfir-ogre-documentation/css/custom.css" rel="stylesheet" />
 
   
-
-
-
-
-
-
-<script src="/dfir-ogre-documentation/js/main-head.min.2375b7265ea066ecb314226ce5ff17478453df5f350d34d830b3fc96fba21672.js" integrity="sha256-I3W3Jl6gZuyzFCJs5f8XR4RT3181DTTYMLP8lvuiFnI="></script>
+<script src="/dfir-ogre-documentation/js/main-head.js" integrity=""></script>
 
   
   
@@ -1902,7 +1896,7 @@ git clone git@github.com/ANSSI-FR/dfir-ogre.git cd dfir-ogre/docker ./build.sh U
   </a></div></div>
     </div></footer>
     
-    <script defer src="/dfir-ogre-documentation/js/main.min.e6ec223dd3472e6949081d081ee4fc56c7e7f90951c40b4ae16c7db05d6213ee.js" integrity="sha256-5uwiPdNHLmlJCB0IHuT8Vsfn&#43;QlRxAtK4Wx9sF1iE&#43;4="></script>
-<script defer src="/dfir-ogre-documentation/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script><script defer src="/dfir-ogre-documentation/en.search.min.e501b4d6f6d74bd60ef5a7c41d513847c5d12b886fd68b45186fb216c3de1de4.js" integrity="sha256-5QG01vbXS9YO9afEHVE4R8XRK4hv1otFGG&#43;yFsPeHeQ="></script>
+    <script defer src="/dfir-ogre-documentation/js/main.js" integrity=""></script>
+<script defer src="/dfir-ogre-documentation/js/flexsearch.9f5b5908f93ae86f1ecd4b043b799f580c2d1654e703dd9357d568ac41b2547a.js" integrity="sha256-n1tZCPk66G8ezUsEO3mfWAwtFlTnA92TV9VorEGyVHo=" crossorigin="anonymous"></script><script defer src="/dfir-ogre-documentation/en.search.js" integrity=""></script>
   </body>
 </html>

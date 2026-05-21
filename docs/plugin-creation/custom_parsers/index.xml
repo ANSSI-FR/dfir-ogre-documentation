@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DFIR-OGRE documentation – Creating Custom Parsers</title>
-    <link>https://anssi-fr.github.io/dfir-ogre-documentation/plugin-creation/custom_parsers/</link>
+    <link>http://localhost:1313/dfir-ogre-documentation/plugin-creation/custom_parsers/</link>
     <description>Recent content in Creating Custom Parsers on DFIR-OGRE documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 06 Jan 2026 15:54:09 +0100</lastBuildDate>
     
-	  <atom:link href="https://anssi-fr.github.io/dfir-ogre-documentation/plugin-creation/custom_parsers/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:1313/dfir-ogre-documentation/plugin-creation/custom_parsers/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -17,10 +17,10 @@
     
     <item>
       <title>Parser Tutorial</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/plugin-creation/custom_parsers/hello_world/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/plugin-creation/custom_parsers/hello_world/</link>
       <pubDate>Tue, 06 Jan 2026 15:54:09 +0100</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/plugin-creation/custom_parsers/hello_world/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/plugin-creation/custom_parsers/hello_world/</guid>
       <description>
         
         
@@ -154,8 +154,8 @@ Jill Doe&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-co
 &lt;/div&gt;
 &lt;p&gt;Key points:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;A &lt;code&gt;Record&lt;/code&gt; is a &lt;a href=&#34;https://anssi-fr.github.io/dfir-ogre-documentation/plugin-creation/custom_parsers/api_documentation/#record&#34;&gt;key-value dictionnary&lt;/a&gt;, used to represent an artefact in the data model.&lt;/li&gt;
-&lt;li&gt;Records only accept &lt;code&gt;Value&lt;/code&gt; data, which represents &lt;a href=&#34;https://anssi-fr.github.io/dfir-ogre-documentation/plugin-creation/custom_parsers/api_documentation/#value&#34;&gt;various serializable&lt;/a&gt; data types.&lt;/li&gt;
+&lt;li&gt;A &lt;code&gt;Record&lt;/code&gt; is a &lt;a href=&#34;http://localhost:1313/dfir-ogre-documentation/plugin-creation/custom_parsers/api_documentation/#record&#34;&gt;key-value dictionnary&lt;/a&gt;, used to represent an artefact in the data model.&lt;/li&gt;
+&lt;li&gt;Records only accept &lt;code&gt;Value&lt;/code&gt; data, which represents &lt;a href=&#34;http://localhost:1313/dfir-ogre-documentation/plugin-creation/custom_parsers/api_documentation/#value&#34;&gt;various serializable&lt;/a&gt; data types.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Export your plugin&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;export-your-plugin&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#export-your-plugin&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Plugins must be exported by the root &lt;code&gt;__init__.py&lt;/code&gt; be able to be discovered by DFIR-OGRE&lt;/p&gt;
@@ -209,7 +209,7 @@ Jill Doe&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-co
   &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;svg height=1.2em class=&#34;hx:inline-block hx:align-middle&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;
 
   &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;If you want to use the &lt;a href=&#34;https://anssi-fr.github.io/dfir-ogre-documentation/usage/ogre_configuration/#parameters&#34;&gt;csv output format&lt;/a&gt;, you will have to reference the &lt;code&gt;greeting&lt;/code&gt; field in the &lt;code&gt;&amp;lt;fields&amp;gt;&lt;/code&gt; section.&lt;/div&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;If you want to use the &lt;a href=&#34;http://localhost:1313/dfir-ogre-documentation/usage/ogre_configuration/#parameters&#34;&gt;csv output format&lt;/a&gt;, you will have to reference the &lt;code&gt;greeting&lt;/code&gt; field in the &lt;code&gt;&amp;lt;fields&amp;gt;&lt;/code&gt; section.&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;/p&gt;
@@ -311,15 +311,15 @@ It is best to put it in a dedicated subfolder like (ex. &lt;code&gt;myplugins&lt
     
     <item>
       <title>Advanced topics</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/plugin-creation/custom_parsers/advanced_topics/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/plugin-creation/custom_parsers/advanced_topics/</link>
       <pubDate>Tue, 06 Jan 2026 15:54:09 +0100</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/plugin-creation/custom_parsers/advanced_topics/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/plugin-creation/custom_parsers/advanced_topics/</guid>
       <description>
         
         
         &lt;h2&gt;Using field definition&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;using-field-definition&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#using-field-definition&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;In the &lt;a href=&#34;https://anssi-fr.github.io/dfir-ogre-documentation/plugin-creation/custom_parsers/hello_world/&#34;&gt;hello world tutorial&lt;/a&gt;, data is inserted in the records using&lt;/p&gt;
+    &lt;a href=&#34;#using-field-definition&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;In the &lt;a href=&#34;http://localhost:1313/dfir-ogre-documentation/plugin-creation/custom_parsers/hello_world/&#34;&gt;hello world tutorial&lt;/a&gt;, data is inserted in the records using&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
 &lt;div class=&#34;hextra-code-filename not-prose&#34; dir=&#34;auto&#34;&gt;src/my-secret-plugins/hello_world.py&lt;/div&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;record&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;greeting&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Hello &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;line&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strip&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; !)&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-8&#34;&gt;
