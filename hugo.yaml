@@ -38,6 +38,7 @@ params:
 
   navbar:
     displayTitle: true
+    homeLink: https://anssi-fr.github.io/dfir-ogre-documentation/
     displayLogo: true
     logo:
       path: images/logo_ogre.svg
