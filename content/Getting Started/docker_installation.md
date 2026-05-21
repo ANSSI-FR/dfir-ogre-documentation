@@ -38,7 +38,7 @@ docker run \
         --memory-swap=8g \
         --log-opt max-size=10m \
         --log-opt max-file=1 \
-        dfir-ogre:latest \
+        dfir_ogre:latest \
         orc \
         --configuration /data/ogre.yaml \
         --archive '/data/input/ORC_WorkStation_xxx_Outcome.json'
