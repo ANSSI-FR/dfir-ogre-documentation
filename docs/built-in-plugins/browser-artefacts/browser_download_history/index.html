@@ -39,12 +39,12 @@ Description
 
 
 
-  <meta itemprop="name" content="Browser Download History">
-  <meta itemprop="description" content="Data Type: browser_download_history Python Parser: SQLite Description Parses the download history database of a Chrome profile (typically */Default/History). It enables analysts to reconstruct what files a user obtained from the web, when the download started and finished, how much data was transferred, and whether the file was opened or flagged as dangerous.">
-  <meta itemprop="wordCount" content="205">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Browser Download History">
-  <meta name="twitter:description" content="Data Type: browser_download_history Python Parser: SQLite Description Parses the download history database of a Chrome profile (typically */Default/History). It enables analysts to reconstruct what files a user obtained from the web, when the download started and finished, how much data was transferred, and whether the file was opened or flagged as dangerous.">
+	<meta itemprop="name" content="Browser Download History">
+	<meta itemprop="description" content="Data Type: browser_download_history Python Parser: SQLite Description Parses the download history database of a Chrome profile (typically */Default/History). It enables analysts to reconstruct what files a user obtained from the web, when the download started and finished, how much data was transferred, and whether the file was opened or flagged as dangerous.">
+	<meta itemprop="wordCount" content="205">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Browser Download History">
+	<meta name="twitter:description" content="Data Type: browser_download_history Python Parser: SQLite Description Parses the download history database of a Chrome profile (typically */Default/History). It enables analysts to reconstruct what files a user obtained from the web, when the download started and finished, how much data was transferred, and whether the file was opened or flagged as dangerous.">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
     <link href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" rel="stylesheet" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -1660,99 +1660,99 @@ Python Parser: <strong>SQLite</strong></div>
 </ul>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Timeline Field</th>
-          <th>Data Field</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Description</td>
-          <td><code>url</code></td>
-      </tr>
-      <tr>
-          <td>Additional Description</td>
-          <td><code>received_bytes</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>total_bytes</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Timeline Field</th>
+					<th>Data Field</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Description</td>
+					<td><code>url</code></td>
+			</tr>
+			<tr>
+					<td>Additional Description</td>
+					<td><code>received_bytes</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>total_bytes</code></td>
+			</tr>
+	</tbody>
 </table>
 <h3>Fields<span class="hx:absolute hx:-mt-20" id="fields"></span>
     <a href="#fields" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Output Name</th>
-          <th>Data Type</th>
-          <th>Qualifier</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>target_path</code></td>
-          <td>String</td>
-          <td></td>
-          <td>local filesystem path where Chrome saved the downloaded file</td>
-      </tr>
-      <tr>
-          <td><code>url</code></td>
-          <td>String</td>
-          <td></td>
-          <td>original URL of the downloaded resource</td>
-      </tr>
-      <tr>
-          <td><code>received_bytes</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>number of bytes actually received for the download</td>
-      </tr>
-      <tr>
-          <td><code>total_bytes</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>expected total size of the downloaded file in bytes</td>
-      </tr>
-      <tr>
-          <td><code>start_time</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>timestamp when the download started</td>
-      </tr>
-      <tr>
-          <td><code>end_time</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>timestamp when the download finished or was interrupted</td>
-      </tr>
-      <tr>
-          <td><code>state</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>numeric code representing the download&rsquo;s state (e.g., in‑progress, completed)</td>
-      </tr>
-      <tr>
-          <td><code>danger_type</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>numeric identifier indicating if the download was flagged as dangerous</td>
-      </tr>
-      <tr>
-          <td><code>interrupt_reason</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>code describing why the download was interrupted</td>
-      </tr>
-      <tr>
-          <td><code>opened</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>flag (0/1) indicating whether the downloaded file was opened by the user</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Output Name</th>
+					<th>Data Type</th>
+					<th>Qualifier</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>target_path</code></td>
+					<td>String</td>
+					<td></td>
+					<td>local filesystem path where Chrome saved the downloaded file</td>
+			</tr>
+			<tr>
+					<td><code>url</code></td>
+					<td>String</td>
+					<td></td>
+					<td>original URL of the downloaded resource</td>
+			</tr>
+			<tr>
+					<td><code>received_bytes</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>number of bytes actually received for the download</td>
+			</tr>
+			<tr>
+					<td><code>total_bytes</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>expected total size of the downloaded file in bytes</td>
+			</tr>
+			<tr>
+					<td><code>start_time</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>timestamp when the download started</td>
+			</tr>
+			<tr>
+					<td><code>end_time</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>timestamp when the download finished or was interrupted</td>
+			</tr>
+			<tr>
+					<td><code>state</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>numeric code representing the download&rsquo;s state (e.g., in‑progress, completed)</td>
+			</tr>
+			<tr>
+					<td><code>danger_type</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>numeric identifier indicating if the download was flagged as dangerous</td>
+			</tr>
+			<tr>
+					<td><code>interrupt_reason</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>code describing why the download was interrupted</td>
+			</tr>
+			<tr>
+					<td><code>opened</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>flag (0/1) indicating whether the downloaded file was opened by the user</td>
+			</tr>
+	</tbody>
 </table>
 
         </div>

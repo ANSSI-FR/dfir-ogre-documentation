@@ -39,12 +39,12 @@ Description
 
 
 
-  <meta itemprop="name" content="Reg Keys">
-  <meta itemprop="description" content="Data Type: reg_keys Python Parser: HiveKey Description Extracts detailed information from Windows Registry hive files. It reads each key, its path, associated values, and security descriptors,">
-  <meta itemprop="wordCount" content="202">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Reg Keys">
-  <meta name="twitter:description" content="Data Type: reg_keys Python Parser: HiveKey Description Extracts detailed information from Windows Registry hive files. It reads each key, its path, associated values, and security descriptors,">
+	<meta itemprop="name" content="Reg Keys">
+	<meta itemprop="description" content="Data Type: reg_keys Python Parser: HiveKey Description Extracts detailed information from Windows Registry hive files. It reads each key, its path, associated values, and security descriptors,">
+	<meta itemprop="wordCount" content="202">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Reg Keys">
+	<meta name="twitter:description" content="Data Type: reg_keys Python Parser: HiveKey Description Extracts detailed information from Windows Registry hive files. It reads each key, its path, associated values, and security descriptors,">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
     <link href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" rel="stylesheet" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -1659,143 +1659,143 @@ Python Parser: <strong>HiveKey</strong></div>
 </ul>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Timeline Field</th>
-          <th>Data Field</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Related User</td>
-          <td><code>descriptor.owner_sid</code></td>
-      </tr>
-      <tr>
-          <td>Description</td>
-          <td><code>path</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Timeline Field</th>
+					<th>Data Field</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Related User</td>
+					<td><code>descriptor.owner_sid</code></td>
+			</tr>
+			<tr>
+					<td>Description</td>
+					<td><code>path</code></td>
+			</tr>
+	</tbody>
 </table>
 <h3>Fields<span class="hx:absolute hx:-mt-20" id="fields"></span>
     <a href="#fields" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Output Name</th>
-          <th>Data Type</th>
-          <th>Qualifier</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>name</code></td>
-          <td>String</td>
-          <td>KEY_NAME</td>
-          <td>registry key name</td>
-      </tr>
-      <tr>
-          <td><code>path</code></td>
-          <td>String</td>
-          <td>KEY_PATH</td>
-          <td>full registry key name</td>
-      </tr>
-      <tr>
-          <td><code>mtime</code></td>
-          <td>DateTime</td>
-          <td>DATE_MODIFICATION</td>
-          <td>last modification timestamp of the registry key</td>
-      </tr>
-      <tr>
-          <td><code>values[]</code></td>
-          <td>Array[Object]</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>values[].name</code></td>
-          <td>String</td>
-          <td>VALUE_NAME</td>
-          <td>value name</td>
-      </tr>
-      <tr>
-          <td><code>values[].data</code></td>
-          <td>String</td>
-          <td></td>
-          <td>data stored in the value</td>
-      </tr>
-      <tr>
-          <td><code>values[].type</code></td>
-          <td>String</td>
-          <td></td>
-          <td>type of the registry value (e.g., REG_SZ, REG_DWORD)</td>
-      </tr>
-      <tr>
-          <td><code>values[].size</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>size of the value data in bytes</td>
-      </tr>
-      <tr>
-          <td><code>values[].error</code></td>
-          <td>String</td>
-          <td></td>
-          <td>error message if the value could not be parsed</td>
-      </tr>
-      <tr>
-          <td><code>descriptor</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>descriptor.owner_sid</code></td>
-          <td>String</td>
-          <td>USER_SID</td>
-          <td>SID of the user that owns the registry key</td>
-      </tr>
-      <tr>
-          <td><code>descriptor.group_sid</code></td>
-          <td>String</td>
-          <td></td>
-          <td>SID of the group that owns the registry key</td>
-      </tr>
-      <tr>
-          <td><code>descriptor.control_flags[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td>security descriptor control flags for the key</td>
-      </tr>
-      <tr>
-          <td><code>descriptor.dacl_ace</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>descriptor.dacl_ace.ace_type</code></td>
-          <td>String</td>
-          <td></td>
-          <td>type of ACE (e.g., allow, deny)</td>
-      </tr>
-      <tr>
-          <td><code>descriptor.dacl_ace.account_sid</code></td>
-          <td>String</td>
-          <td></td>
-          <td>SID of the account the ACE applies to</td>
-      </tr>
-      <tr>
-          <td><code>descriptor.dacl_ace.ace_flags[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td>ACE flags that modify inheritance or behavior</td>
-      </tr>
-      <tr>
-          <td><code>descriptor.dacl_ace.rights[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td>permissions granted or denied by the ACE</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Output Name</th>
+					<th>Data Type</th>
+					<th>Qualifier</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>name</code></td>
+					<td>String</td>
+					<td>KEY_NAME</td>
+					<td>registry key name</td>
+			</tr>
+			<tr>
+					<td><code>path</code></td>
+					<td>String</td>
+					<td>KEY_PATH</td>
+					<td>full registry key name</td>
+			</tr>
+			<tr>
+					<td><code>mtime</code></td>
+					<td>DateTime</td>
+					<td>DATE_MODIFICATION</td>
+					<td>last modification timestamp of the registry key</td>
+			</tr>
+			<tr>
+					<td><code>values[]</code></td>
+					<td>Array[Object]</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>values[].name</code></td>
+					<td>String</td>
+					<td>VALUE_NAME</td>
+					<td>value name</td>
+			</tr>
+			<tr>
+					<td><code>values[].data</code></td>
+					<td>String</td>
+					<td></td>
+					<td>data stored in the value</td>
+			</tr>
+			<tr>
+					<td><code>values[].type</code></td>
+					<td>String</td>
+					<td></td>
+					<td>type of the registry value (e.g., REG_SZ, REG_DWORD)</td>
+			</tr>
+			<tr>
+					<td><code>values[].size</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>size of the value data in bytes</td>
+			</tr>
+			<tr>
+					<td><code>values[].error</code></td>
+					<td>String</td>
+					<td></td>
+					<td>error message if the value could not be parsed</td>
+			</tr>
+			<tr>
+					<td><code>descriptor</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>descriptor.owner_sid</code></td>
+					<td>String</td>
+					<td>USER_SID</td>
+					<td>SID of the user that owns the registry key</td>
+			</tr>
+			<tr>
+					<td><code>descriptor.group_sid</code></td>
+					<td>String</td>
+					<td></td>
+					<td>SID of the group that owns the registry key</td>
+			</tr>
+			<tr>
+					<td><code>descriptor.control_flags[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>security descriptor control flags for the key</td>
+			</tr>
+			<tr>
+					<td><code>descriptor.dacl_ace</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>descriptor.dacl_ace.ace_type</code></td>
+					<td>String</td>
+					<td></td>
+					<td>type of ACE (e.g., allow, deny)</td>
+			</tr>
+			<tr>
+					<td><code>descriptor.dacl_ace.account_sid</code></td>
+					<td>String</td>
+					<td></td>
+					<td>SID of the account the ACE applies to</td>
+			</tr>
+			<tr>
+					<td><code>descriptor.dacl_ace.ace_flags[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>ACE flags that modify inheritance or behavior</td>
+			</tr>
+			<tr>
+					<td><code>descriptor.dacl_ace.rights[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>permissions granted or denied by the ACE</td>
+			</tr>
+	</tbody>
 </table>
 
         </div>

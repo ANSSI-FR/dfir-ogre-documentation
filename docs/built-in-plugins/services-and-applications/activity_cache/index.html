@@ -39,12 +39,12 @@ Description
 
 
 
-  <meta itemprop="name" content="Activity Cache">
-  <meta itemprop="description" content="Data Type: activity_cache Python Parser: SQLite Description Extracts rows from the Activity SQLite table that records Windows 10 Timeline events. Each row represents a user‑initiated action, linking an application to a time span and optional payload data.">
-  <meta itemprop="wordCount" content="185">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Activity Cache">
-  <meta name="twitter:description" content="Data Type: activity_cache Python Parser: SQLite Description Extracts rows from the Activity SQLite table that records Windows 10 Timeline events. Each row represents a user‑initiated action, linking an application to a time span and optional payload data.">
+	<meta itemprop="name" content="Activity Cache">
+	<meta itemprop="description" content="Data Type: activity_cache Python Parser: SQLite Description Extracts rows from the Activity SQLite table that records Windows 10 Timeline events. Each row represents a user‑initiated action, linking an application to a time span and optional payload data.">
+	<meta itemprop="wordCount" content="185">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Activity Cache">
+	<meta name="twitter:description" content="Data Type: activity_cache Python Parser: SQLite Description Extracts rows from the Activity SQLite table that records Windows 10 Timeline events. Each row represents a user‑initiated action, linking an application to a time span and optional payload data.">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
     <link href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" rel="stylesheet" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -1659,103 +1659,103 @@ Python Parser: <strong>SQLite</strong></div>
 </ul>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Timeline Field</th>
-          <th>Data Field</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Description</td>
-          <td><code>app_id</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>group</code></td>
-      </tr>
-      <tr>
-          <td>Additional Description</td>
-          <td><code>app_activity_id</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>payload</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Timeline Field</th>
+					<th>Data Field</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Description</td>
+					<td><code>app_id</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>group</code></td>
+			</tr>
+			<tr>
+					<td>Additional Description</td>
+					<td><code>app_activity_id</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>payload</code></td>
+			</tr>
+	</tbody>
 </table>
 <h3>Fields<span class="hx:absolute hx:-mt-20" id="fields"></span>
     <a href="#fields" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Output Name</th>
-          <th>Data Type</th>
-          <th>Qualifier</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>app_id</code></td>
-          <td>String</td>
-          <td></td>
-          <td>identifier of the application that generated the activity</td>
-      </tr>
-      <tr>
-          <td><code>app_activity_id</code></td>
-          <td>String</td>
-          <td></td>
-          <td>unique identifier for the specific activity event</td>
-      </tr>
-      <tr>
-          <td><code>group</code></td>
-          <td>String</td>
-          <td></td>
-          <td>grouping value used to categorize related activities</td>
-      </tr>
-      <tr>
-          <td><code>tag</code></td>
-          <td>String</td>
-          <td></td>
-          <td>optional tag associated with the activity</td>
-      </tr>
-      <tr>
-          <td><code>payload</code></td>
-          <td>String</td>
-          <td></td>
-          <td>raw payload data (e.g., JSON) containing additional activity details</td>
-      </tr>
-      <tr>
-          <td><code>created_in_cloud</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>timestamp when the activity was created or synced in the cloud</td>
-      </tr>
-      <tr>
-          <td><code>start_time</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>timestamp marking the start of the activity</td>
-      </tr>
-      <tr>
-          <td><code>end_time</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>timestamp marking the end of the activity</td>
-      </tr>
-      <tr>
-          <td><code>last_modified_on_client</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>local client timestamp of the last modification to the activity record</td>
-      </tr>
-      <tr>
-          <td><code>original_last_modified_on_client</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>original client timestamp before any subsequent modifications</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Output Name</th>
+					<th>Data Type</th>
+					<th>Qualifier</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>app_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>identifier of the application that generated the activity</td>
+			</tr>
+			<tr>
+					<td><code>app_activity_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>unique identifier for the specific activity event</td>
+			</tr>
+			<tr>
+					<td><code>group</code></td>
+					<td>String</td>
+					<td></td>
+					<td>grouping value used to categorize related activities</td>
+			</tr>
+			<tr>
+					<td><code>tag</code></td>
+					<td>String</td>
+					<td></td>
+					<td>optional tag associated with the activity</td>
+			</tr>
+			<tr>
+					<td><code>payload</code></td>
+					<td>String</td>
+					<td></td>
+					<td>raw payload data (e.g., JSON) containing additional activity details</td>
+			</tr>
+			<tr>
+					<td><code>created_in_cloud</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>timestamp when the activity was created or synced in the cloud</td>
+			</tr>
+			<tr>
+					<td><code>start_time</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>timestamp marking the start of the activity</td>
+			</tr>
+			<tr>
+					<td><code>end_time</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>timestamp marking the end of the activity</td>
+			</tr>
+			<tr>
+					<td><code>last_modified_on_client</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>local client timestamp of the last modification to the activity record</td>
+			</tr>
+			<tr>
+					<td><code>original_last_modified_on_client</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>original client timestamp before any subsequent modifications</td>
+			</tr>
+	</tbody>
 </table>
 
         </div>

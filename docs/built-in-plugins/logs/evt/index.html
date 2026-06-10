@@ -30,129 +30,129 @@ Description
     Parse Windows EventLog (EVT) files and emit one record per event.
 Timeline
     
-  
-      
-          Timeline Field
-          Data Field
-      
-  
-  
-      
-          Description
-          provider_name
-      
-      
-          
-          event_id
-      
-      
-          Additional Description
-          event_data
-      
-  
+	
+			
+					Timeline Field
+					Data Field
+			
+	
+	
+			
+					Description
+					provider_name
+			
+			
+					
+					event_id
+			
+			
+					Additional Description
+					event_data
+			
+	
 
 Fields
     
-  
-      
-          Output Name
-          Data Type
-          Qualifier
-          Description
-      
-  
-  
-      
-          provider_name
-          String
-          
-          Name of the source that generated the event.
-      
-      
-          event_id
-          Int
-          
-          Identifier of the event (lower 16 bits of the record identifier).
-      
-      
-          event_type
-          Int
-          
-          Event type (e.g. error, warning, information).
-      
-      
-          record_number
-          Int
-          
-          Sequential number of the event record in the EVT file.
-      
-      
-          offset
-          Int
-          
-          Byte offset of the record from the start of the EVT file.
-      
-      
-          recovered
-          Bool
-          
-          True if the record was recovered (partially overwritten).
-      
-      
-          facility
-          Int
-          
-          Facility code extracted from the event identifier.
-      
-      
-          severity
-          Int
-          
-          Severity level extracted from the event identifier.
-      
-      
-          message_identifier
-          Int
-          
-          Full 32‑bit message identifier.
-      
-      
-          event_category
-          Int
-          
-          Category of the event.
-      
-      
-          computer_name
-          String
-          
-          Computer name stored in the event record.
-      
-      
-          user_sid
-          String
-          USER_ID
-          User security identifier (SID) associated with the event.
-      
-      
-          event_data[]
-          Array[String]
-          
-          Array of strings attached to the event.
-      
-      
-          creation_time
-          DateTime
-          DATE_CREATION
-          Timestamp when the event record was created.
-      
-      
-          written_time
-          DateTime
-          
-          Timestamp when the event record was written to the log.
-      
-  
+	
+			
+					Output Name
+					Data Type
+					Qualifier
+					Description
+			
+	
+	
+			
+					provider_name
+					String
+					
+					Name of the source that generated the event.
+			
+			
+					event_id
+					Int
+					
+					Identifier of the event (lower 16 bits of the record identifier).
+			
+			
+					event_type
+					Int
+					
+					Event type (e.g. error, warning, information).
+			
+			
+					record_number
+					Int
+					
+					Sequential number of the event record in the EVT file.
+			
+			
+					offset
+					Int
+					
+					Byte offset of the record from the start of the EVT file.
+			
+			
+					recovered
+					Bool
+					
+					True if the record was recovered (partially overwritten).
+			
+			
+					facility
+					Int
+					
+					Facility code extracted from the event identifier.
+			
+			
+					severity
+					Int
+					
+					Severity level extracted from the event identifier.
+			
+			
+					message_identifier
+					Int
+					
+					Full 32‑bit message identifier.
+			
+			
+					event_category
+					Int
+					
+					Category of the event.
+			
+			
+					computer_name
+					String
+					
+					Computer name stored in the event record.
+			
+			
+					user_sid
+					String
+					USER_ID
+					User security identifier (SID) associated with the event.
+			
+			
+					event_data[]
+					Array[String]
+					
+					Array of strings attached to the event.
+			
+			
+					creation_time
+					DateTime
+					DATE_CREATION
+					Timestamp when the event record was created.
+			
+			
+					written_time
+					DateTime
+					
+					Timestamp when the event record was written to the log.
+			
+	
 
     
   ">
@@ -166,13 +166,13 @@ Fields
 
 
 
-  <meta itemprop="name" content="Evt">
-  <meta itemprop="description" content="Data Type: evt Python Parser: WinEvt Description Parse Windows EventLog (EVT) files and emit one record per event.
+	<meta itemprop="name" content="Evt">
+	<meta itemprop="description" content="Data Type: evt Python Parser: WinEvt Description Parse Windows EventLog (EVT) files and emit one record per event.
 Timeline Timeline Field Data Field Description provider_name event_id Additional Description event_data Fields Output Name Data Type Qualifier Description provider_name String Name of the source that generated the event. event_id Int Identifier of the event (lower 16 bits of the record identifier). event_type Int Event type (e.g. error, warning, information). record_number Int Sequential number of the event record in the EVT file. offset Int Byte offset of the record from the start of the EVT file. recovered Bool True if the record was recovered (partially overwritten). facility Int Facility code extracted from the event identifier. severity Int Severity level extracted from the event identifier. message_identifier Int Full 32‑bit message identifier. event_category Int Category of the event. computer_name String Computer name stored in the event record. user_sid String USER_ID User security identifier (SID) associated with the event. event_data[] Array[String] Array of strings attached to the event. creation_time DateTime DATE_CREATION Timestamp when the event record was created. written_time DateTime Timestamp when the event record was written to the log.">
-  <meta itemprop="wordCount" content="184">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Evt">
-  <meta name="twitter:description" content="Data Type: evt Python Parser: WinEvt Description Parse Windows EventLog (EVT) files and emit one record per event.
+	<meta itemprop="wordCount" content="184">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Evt">
+	<meta name="twitter:description" content="Data Type: evt Python Parser: WinEvt Description Parse Windows EventLog (EVT) files and emit one record per event.
 Timeline Timeline Field Data Field Description provider_name event_id Additional Description event_data Fields Output Name Data Type Qualifier Description provider_name String Name of the source that generated the event. event_id Int Identifier of the event (lower 16 bits of the record identifier). event_type Int Event type (e.g. error, warning, information). record_number Int Sequential number of the event record in the EVT file. offset Int Byte offset of the record from the start of the EVT file. recovered Bool True if the record was recovered (partially overwritten). facility Int Facility code extracted from the event identifier. severity Int Severity level extracted from the event identifier. message_identifier Int Full 32‑bit message identifier. event_category Int Category of the event. computer_name String Computer name stored in the event record. user_sid String USER_ID User security identifier (SID) associated with the event. event_data[] Array[String] Array of strings attached to the event. creation_time DateTime DATE_CREATION Timestamp when the event record was created. written_time DateTime Timestamp when the event record was written to the log.">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -1783,129 +1783,129 @@ Python Parser: <strong>WinEvt</strong></div>
     <a href="#description" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Parse Windows EventLog (EVT) files and emit one record per event.</p>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Timeline Field</th>
-          <th>Data Field</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Description</td>
-          <td><code>provider_name</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>event_id</code></td>
-      </tr>
-      <tr>
-          <td>Additional Description</td>
-          <td><code>event_data</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Timeline Field</th>
+					<th>Data Field</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Description</td>
+					<td><code>provider_name</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>event_id</code></td>
+			</tr>
+			<tr>
+					<td>Additional Description</td>
+					<td><code>event_data</code></td>
+			</tr>
+	</tbody>
 </table>
 <h3>Fields<span class="hx:absolute hx:-mt-20" id="fields"></span>
     <a href="#fields" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Output Name</th>
-          <th>Data Type</th>
-          <th>Qualifier</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>provider_name</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Name of the source that generated the event.</td>
-      </tr>
-      <tr>
-          <td><code>event_id</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Identifier of the event (lower 16 bits of the record identifier).</td>
-      </tr>
-      <tr>
-          <td><code>event_type</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Event type (e.g. error, warning, information).</td>
-      </tr>
-      <tr>
-          <td><code>record_number</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Sequential number of the event record in the EVT file.</td>
-      </tr>
-      <tr>
-          <td><code>offset</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Byte offset of the record from the start of the EVT file.</td>
-      </tr>
-      <tr>
-          <td><code>recovered</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>True if the record was recovered (partially overwritten).</td>
-      </tr>
-      <tr>
-          <td><code>facility</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Facility code extracted from the event identifier.</td>
-      </tr>
-      <tr>
-          <td><code>severity</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Severity level extracted from the event identifier.</td>
-      </tr>
-      <tr>
-          <td><code>message_identifier</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Full 32‑bit message identifier.</td>
-      </tr>
-      <tr>
-          <td><code>event_category</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Category of the event.</td>
-      </tr>
-      <tr>
-          <td><code>computer_name</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Computer name stored in the event record.</td>
-      </tr>
-      <tr>
-          <td><code>user_sid</code></td>
-          <td>String</td>
-          <td>USER_ID</td>
-          <td>User security identifier (SID) associated with the event.</td>
-      </tr>
-      <tr>
-          <td><code>event_data[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td>Array of strings attached to the event.</td>
-      </tr>
-      <tr>
-          <td><code>creation_time</code></td>
-          <td>DateTime</td>
-          <td>DATE_CREATION</td>
-          <td>Timestamp when the event record was created.</td>
-      </tr>
-      <tr>
-          <td><code>written_time</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>Timestamp when the event record was written to the log.</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Output Name</th>
+					<th>Data Type</th>
+					<th>Qualifier</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>provider_name</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Name of the source that generated the event.</td>
+			</tr>
+			<tr>
+					<td><code>event_id</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Identifier of the event (lower 16 bits of the record identifier).</td>
+			</tr>
+			<tr>
+					<td><code>event_type</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Event type (e.g. error, warning, information).</td>
+			</tr>
+			<tr>
+					<td><code>record_number</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Sequential number of the event record in the EVT file.</td>
+			</tr>
+			<tr>
+					<td><code>offset</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Byte offset of the record from the start of the EVT file.</td>
+			</tr>
+			<tr>
+					<td><code>recovered</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>True if the record was recovered (partially overwritten).</td>
+			</tr>
+			<tr>
+					<td><code>facility</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Facility code extracted from the event identifier.</td>
+			</tr>
+			<tr>
+					<td><code>severity</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Severity level extracted from the event identifier.</td>
+			</tr>
+			<tr>
+					<td><code>message_identifier</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Full 32‑bit message identifier.</td>
+			</tr>
+			<tr>
+					<td><code>event_category</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Category of the event.</td>
+			</tr>
+			<tr>
+					<td><code>computer_name</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Computer name stored in the event record.</td>
+			</tr>
+			<tr>
+					<td><code>user_sid</code></td>
+					<td>String</td>
+					<td>USER_ID</td>
+					<td>User security identifier (SID) associated with the event.</td>
+			</tr>
+			<tr>
+					<td><code>event_data[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>Array of strings attached to the event.</td>
+			</tr>
+			<tr>
+					<td><code>creation_time</code></td>
+					<td>DateTime</td>
+					<td>DATE_CREATION</td>
+					<td>Timestamp when the event record was created.</td>
+			</tr>
+			<tr>
+					<td><code>written_time</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>Timestamp when the event record was written to the log.</td>
+			</tr>
+	</tbody>
 </table>
 
         </div>

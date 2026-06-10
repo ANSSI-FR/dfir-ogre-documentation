@@ -39,12 +39,12 @@ Description
 
 
 
-  <meta itemprop="name" content="Pca General Record">
-  <meta itemprop="description" content="Data Type: pca_general_record Python Parser: Regexp Description Extracts each line of a PCA log. It captures when a program was launched, its status, executable location and associated metadata such as description, vendor, version, and exit code.">
-  <meta itemprop="wordCount" content="167">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Pca General Record">
-  <meta name="twitter:description" content="Data Type: pca_general_record Python Parser: Regexp Description Extracts each line of a PCA log. It captures when a program was launched, its status, executable location and associated metadata such as description, vendor, version, and exit code.">
+	<meta itemprop="name" content="Pca General Record">
+	<meta itemprop="description" content="Data Type: pca_general_record Python Parser: Regexp Description Extracts each line of a PCA log. It captures when a program was launched, its status, executable location and associated metadata such as description, vendor, version, and exit code.">
+	<meta itemprop="wordCount" content="167">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Pca General Record">
+	<meta name="twitter:description" content="Data Type: pca_general_record Python Parser: Regexp Description Extracts each line of a PCA log. It captures when a program was launched, its status, executable location and associated metadata such as description, vendor, version, and exit code.">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
     <link href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" rel="stylesheet" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -1660,83 +1660,83 @@ Python Parser: <strong>Regexp</strong></div>
 </ul>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Timeline Field</th>
-          <th>Data Field</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Description</td>
-          <td><code>executable_path</code></td>
-      </tr>
-      <tr>
-          <td>Additional Description</td>
-          <td><code>file_description</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Timeline Field</th>
+					<th>Data Field</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Description</td>
+					<td><code>executable_path</code></td>
+			</tr>
+			<tr>
+					<td>Additional Description</td>
+					<td><code>file_description</code></td>
+			</tr>
+	</tbody>
 </table>
 <h3>Fields<span class="hx:absolute hx:-mt-20" id="fields"></span>
     <a href="#fields" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Output Name</th>
-          <th>Data Type</th>
-          <th>Qualifier</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>run_time</code></td>
-          <td>DateTime</td>
-          <td>DATE_LAST_RUN</td>
-          <td>timestamp when the program was launched</td>
-      </tr>
-      <tr>
-          <td><code>run_status</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>numeric run status (e.g., 0 = success, non‑zero = error)</td>
-      </tr>
-      <tr>
-          <td><code>executable_path</code></td>
-          <td>String</td>
-          <td>FILE_PATH</td>
-          <td>full path of the executable launched via PCA</td>
-      </tr>
-      <tr>
-          <td><code>file_description</code></td>
-          <td>String</td>
-          <td></td>
-          <td>human‑readable description of the executable or program</td>
-      </tr>
-      <tr>
-          <td><code>software_vendor</code></td>
-          <td>String</td>
-          <td>PUBLISHER</td>
-          <td>name of the software vendor or publisher</td>
-      </tr>
-      <tr>
-          <td><code>file_version</code></td>
-          <td>String</td>
-          <td></td>
-          <td>version of the executable</td>
-      </tr>
-      <tr>
-          <td><code>program_id</code></td>
-          <td>String</td>
-          <td>APP_ID</td>
-          <td>unique identifier for the program</td>
-      </tr>
-      <tr>
-          <td><code>exitcode_value</code></td>
-          <td>String</td>
-          <td>EXIT_CODE</td>
-          <td>exit code returned by the program after execution</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Output Name</th>
+					<th>Data Type</th>
+					<th>Qualifier</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>run_time</code></td>
+					<td>DateTime</td>
+					<td>DATE_LAST_RUN</td>
+					<td>timestamp when the program was launched</td>
+			</tr>
+			<tr>
+					<td><code>run_status</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>numeric run status (e.g., 0 = success, non‑zero = error)</td>
+			</tr>
+			<tr>
+					<td><code>executable_path</code></td>
+					<td>String</td>
+					<td>FILE_PATH</td>
+					<td>full path of the executable launched via PCA</td>
+			</tr>
+			<tr>
+					<td><code>file_description</code></td>
+					<td>String</td>
+					<td></td>
+					<td>human‑readable description of the executable or program</td>
+			</tr>
+			<tr>
+					<td><code>software_vendor</code></td>
+					<td>String</td>
+					<td>PUBLISHER</td>
+					<td>name of the software vendor or publisher</td>
+			</tr>
+			<tr>
+					<td><code>file_version</code></td>
+					<td>String</td>
+					<td></td>
+					<td>version of the executable</td>
+			</tr>
+			<tr>
+					<td><code>program_id</code></td>
+					<td>String</td>
+					<td>APP_ID</td>
+					<td>unique identifier for the program</td>
+			</tr>
+			<tr>
+					<td><code>exitcode_value</code></td>
+					<td>String</td>
+					<td>EXIT_CODE</td>
+					<td>exit code returned by the program after execution</td>
+			</tr>
+	</tbody>
 </table>
 
         </div>

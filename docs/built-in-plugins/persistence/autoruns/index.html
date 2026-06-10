@@ -39,12 +39,12 @@ Description
 
 
 
-  <meta itemprop="name" content="Autoruns">
-  <meta itemprop="description" content="Data Type: autoruns Python Parser: Csv Description Parses CSV files produced by the Windows Autoruns utility, extracting entries that define programs or scripts that start automatically. It reads registry locations, file paths and related metadata to enumerate persistence mechanisms.">
-  <meta itemprop="wordCount" content="278">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Autoruns">
-  <meta name="twitter:description" content="Data Type: autoruns Python Parser: Csv Description Parses CSV files produced by the Windows Autoruns utility, extracting entries that define programs or scripts that start automatically. It reads registry locations, file paths and related metadata to enumerate persistence mechanisms.">
+	<meta itemprop="name" content="Autoruns">
+	<meta itemprop="description" content="Data Type: autoruns Python Parser: Csv Description Parses CSV files produced by the Windows Autoruns utility, extracting entries that define programs or scripts that start automatically. It reads registry locations, file paths and related metadata to enumerate persistence mechanisms.">
+	<meta itemprop="wordCount" content="278">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Autoruns">
+	<meta name="twitter:description" content="Data Type: autoruns Python Parser: Csv Description Parses CSV files produced by the Windows Autoruns utility, extracting entries that define programs or scripts that start automatically. It reads registry locations, file paths and related metadata to enumerate persistence mechanisms.">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
     <link href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" rel="stylesheet" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -1658,155 +1658,155 @@ Python Parser: <strong>Csv</strong></div>
 - Links each entry to its user profile, aiding attribution.</p>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Timeline Field</th>
-          <th>Data Field</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Description</td>
-          <td><code>entry</code></td>
-      </tr>
-      <tr>
-          <td>Additional Description</td>
-          <td><code>image_path</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>enabled</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>category</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>profile</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Timeline Field</th>
+					<th>Data Field</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Description</td>
+					<td><code>entry</code></td>
+			</tr>
+			<tr>
+					<td>Additional Description</td>
+					<td><code>image_path</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>enabled</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>category</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>profile</code></td>
+			</tr>
+	</tbody>
 </table>
 <h3>Fields<span class="hx:absolute hx:-mt-20" id="fields"></span>
     <a href="#fields" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Output Name</th>
-          <th>Data Type</th>
-          <th>Qualifier</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>time</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>timestamp of the autorun entry</td>
-      </tr>
-      <tr>
-          <td><code>entry_location</code></td>
-          <td>String</td>
-          <td>KEY_PATH</td>
-          <td>registry key path where the autorun entry is stored</td>
-      </tr>
-      <tr>
-          <td><code>entry_name</code></td>
-          <td>String</td>
-          <td>KEY_NAME</td>
-          <td>name of the registry value representing the autorun entry</td>
-      </tr>
-      <tr>
-          <td><code>enabled</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>indicates whether the autorun entry is enabled (active)</td>
-      </tr>
-      <tr>
-          <td><code>category</code></td>
-          <td>String</td>
-          <td></td>
-          <td>category of the autorun (e.g., Logon, Services, Drivers)</td>
-      </tr>
-      <tr>
-          <td><code>profile</code></td>
-          <td>String</td>
-          <td></td>
-          <td>user profile associated with the autorun entry</td>
-      </tr>
-      <tr>
-          <td><code>description</code></td>
-          <td>String</td>
-          <td></td>
-          <td>human‑readable description of the autorun entry</td>
-      </tr>
-      <tr>
-          <td><code>signer</code></td>
-          <td>String</td>
-          <td></td>
-          <td>signer of the digital signature of the executable</td>
-      </tr>
-      <tr>
-          <td><code>company</code></td>
-          <td>String</td>
-          <td>COMPANY</td>
-          <td>company name embedded in the executable</td>
-      </tr>
-      <tr>
-          <td><code>image_path</code></td>
-          <td>String</td>
-          <td>FILE_PATH</td>
-          <td>full file‑system path of the executable or script</td>
-      </tr>
-      <tr>
-          <td><code>version</code></td>
-          <td>String</td>
-          <td>PE_VERSION</td>
-          <td>version information of the executable (PE version)</td>
-      </tr>
-      <tr>
-          <td><code>launch_string</code></td>
-          <td>String</td>
-          <td></td>
-          <td>command line or arguments used to launch the executable</td>
-      </tr>
-      <tr>
-          <td><code>md5</code></td>
-          <td>String</td>
-          <td>FILE_MD5</td>
-          <td>MD5 hash of the executable file</td>
-      </tr>
-      <tr>
-          <td><code>sha1</code></td>
-          <td>String</td>
-          <td>FILE_SHA1</td>
-          <td>SHA‑1 hash of the executable file</td>
-      </tr>
-      <tr>
-          <td><code>pe_sha1</code></td>
-          <td>String</td>
-          <td>PE_SHA1</td>
-          <td>SHA‑1 hash of the PE header</td>
-      </tr>
-      <tr>
-          <td><code>pe_sha256</code></td>
-          <td>String</td>
-          <td>PE_SHA256</td>
-          <td>SHA‑256 hash of the PE header</td>
-      </tr>
-      <tr>
-          <td><code>sha256</code></td>
-          <td>String</td>
-          <td>FILE_SHA256</td>
-          <td>SHA‑256 hash of the executable file</td>
-      </tr>
-      <tr>
-          <td><code>imp</code></td>
-          <td>String</td>
-          <td></td>
-          <td>list of imported functions or DLLs used by the executable</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Output Name</th>
+					<th>Data Type</th>
+					<th>Qualifier</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>time</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>timestamp of the autorun entry</td>
+			</tr>
+			<tr>
+					<td><code>entry_location</code></td>
+					<td>String</td>
+					<td>KEY_PATH</td>
+					<td>registry key path where the autorun entry is stored</td>
+			</tr>
+			<tr>
+					<td><code>entry_name</code></td>
+					<td>String</td>
+					<td>KEY_NAME</td>
+					<td>name of the registry value representing the autorun entry</td>
+			</tr>
+			<tr>
+					<td><code>enabled</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>indicates whether the autorun entry is enabled (active)</td>
+			</tr>
+			<tr>
+					<td><code>category</code></td>
+					<td>String</td>
+					<td></td>
+					<td>category of the autorun (e.g., Logon, Services, Drivers)</td>
+			</tr>
+			<tr>
+					<td><code>profile</code></td>
+					<td>String</td>
+					<td></td>
+					<td>user profile associated with the autorun entry</td>
+			</tr>
+			<tr>
+					<td><code>description</code></td>
+					<td>String</td>
+					<td></td>
+					<td>human‑readable description of the autorun entry</td>
+			</tr>
+			<tr>
+					<td><code>signer</code></td>
+					<td>String</td>
+					<td></td>
+					<td>signer of the digital signature of the executable</td>
+			</tr>
+			<tr>
+					<td><code>company</code></td>
+					<td>String</td>
+					<td>COMPANY</td>
+					<td>company name embedded in the executable</td>
+			</tr>
+			<tr>
+					<td><code>image_path</code></td>
+					<td>String</td>
+					<td>FILE_PATH</td>
+					<td>full file‑system path of the executable or script</td>
+			</tr>
+			<tr>
+					<td><code>version</code></td>
+					<td>String</td>
+					<td>PE_VERSION</td>
+					<td>version information of the executable (PE version)</td>
+			</tr>
+			<tr>
+					<td><code>launch_string</code></td>
+					<td>String</td>
+					<td></td>
+					<td>command line or arguments used to launch the executable</td>
+			</tr>
+			<tr>
+					<td><code>md5</code></td>
+					<td>String</td>
+					<td>FILE_MD5</td>
+					<td>MD5 hash of the executable file</td>
+			</tr>
+			<tr>
+					<td><code>sha1</code></td>
+					<td>String</td>
+					<td>FILE_SHA1</td>
+					<td>SHA‑1 hash of the executable file</td>
+			</tr>
+			<tr>
+					<td><code>pe_sha1</code></td>
+					<td>String</td>
+					<td>PE_SHA1</td>
+					<td>SHA‑1 hash of the PE header</td>
+			</tr>
+			<tr>
+					<td><code>pe_sha256</code></td>
+					<td>String</td>
+					<td>PE_SHA256</td>
+					<td>SHA‑256 hash of the PE header</td>
+			</tr>
+			<tr>
+					<td><code>sha256</code></td>
+					<td>String</td>
+					<td>FILE_SHA256</td>
+					<td>SHA‑256 hash of the executable file</td>
+			</tr>
+			<tr>
+					<td><code>imp</code></td>
+					<td>String</td>
+					<td></td>
+					<td>list of imported functions or DLLs used by the executable</td>
+			</tr>
+	</tbody>
 </table>
 
         </div>

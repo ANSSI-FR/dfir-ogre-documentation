@@ -34,261 +34,261 @@ Extracts file name, path, size, SHA‑1 hash, program identifiers, version info,
 
 Timeline
     
-  
-      
-          Timeline Field
-          Data Field
-      
-  
-  
-      
-          Related User
-          key_security.owner_sid
-      
-      
-          Description
-          path
-      
-      
-          Additional Description
-          sha1
-      
-      
-          
-          size
-      
-      
-          
-          program_id
-      
-      
-          
-          key_path
-      
-  
+	
+			
+					Timeline Field
+					Data Field
+			
+	
+	
+			
+					Related User
+					key_security.owner_sid
+			
+			
+					Description
+					path
+			
+			
+					Additional Description
+					sha1
+			
+			
+					
+					size
+			
+			
+					
+					program_id
+			
+			
+					
+					key_path
+			
+	
 
 Fields
     
-  
-      
-          Output Name
-          Data Type
-          Qualifier
-          Description
-      
-  
-  
-      
-          name
-          String
-          FILE_NAME
-          filename
-      
-      
-          path
-          String
-          FILE_PATH
-          file path
-      
-      
-          size
-          Int
-          FILE_SIZE
-          size in bytes
-      
-      
-          program_id
-          String
-          APP_ID
-          program ID, if it exists
-      
-      
-          sha1
-          String
-          FILE_SHA1
-          SHA-1 hash of the file
-      
-      
-          product_name
-          String
-          PRODUCT
-          Product name
-      
-      
-          company_name
-          String
-          COMPANY
-          Company name
-      
-      
-          product_version
-          String
-          PE_VERSION
-          Product version
-      
-      
-          version_language
-          Int
-          
-          Microsoft Language ID in decimal
-      
-      
-          short_name
-          String
-          
-          ShortName of the file as found in the MFT
-      
-      
-          original_filename
-          String
-          FILE_NAME
-          Original FileName field of the PE header
-      
-      
-          file_version
-          String
-          PE_VERSION
-          File version
-      
-      
-          image_size
-          Int
-          
-          &lsquo;SizeOfImage&rsquo; field of the PE header
-      
-      
-          file_description
-          String
-          
-          file description
-      
-      
-          linker_version
-          String
-          PE_VERSION
-          combination of the &lsquo;MajorLinkerVersion&rsquo; and &lsquo;MinorLinkerVersion&rsquo; fields of the PE header
-      
-      
-          link_date
-          DateTime
-          DATE_COMPILATION
-          Compilation date
-      
-      
-          binary_type
-          String
-          
-          32BIT or 64BIT
-      
-      
-          creation_date
-          DateTime
-          DATE_CREATION
-          
-      
-      
-          modification_date
-          DateTime
-          DATE_MODIFICATION
-          
-      
-      
-          long_path_hash
-          String
-          FILE_PATH_SHA1
-          SHA-1 of the complete lowercase file path in UTF-16
-      
-      
-          unique_id
-          String
-          
-          identifies the file location if it is in a program installation directory
-      
-      
-          volume_guid
-          String
-          VOLUME_GUID
-          identifier of the volume where the file is located
-      
-      
-          is_pe_file
-          Bool
-          
-          
-      
-      
-          is_os_component
-          Bool
-          
-          
-      
-      
-          key_path
-          String
-          KEY_PATH
-          full registry key name
-      
-      
-          key_modif_time
-          DateTime
-          DATE_MODIFICATION
-          last modification timestamp of the registry key
-      
-      
-          key_security
-          Object
-          
-          
-      
-      
-          key_security.owner_sid
-          String
-          USER_SID
-          SID of the user that owns the registry key
-      
-      
-          key_security.group_sid
-          String
-          
-          SID of the group that owns the registry key
-      
-      
-          key_security.control_flags[]
-          Array[String]
-          
-          security descriptor control flags for the key
-      
-      
-          key_security.dacl_ace
-          Object
-          
-          
-      
-      
-          key_security.dacl_ace.ace_type
-          String
-          
-          type of ACE (e.g., allow, deny)
-      
-      
-          key_security.dacl_ace.account_sid
-          String
-          
-          SID of the account the ACE applies to
-      
-      
-          key_security.dacl_ace.ace_flags[]
-          Array[String]
-          
-          ACE flags that modify inheritance or behavior
-      
-      
-          key_security.dacl_ace.rights[]
-          Array[String]
-          
-          permissions granted or denied by the ACE
-      
-  
+	
+			
+					Output Name
+					Data Type
+					Qualifier
+					Description
+			
+	
+	
+			
+					name
+					String
+					FILE_NAME
+					filename
+			
+			
+					path
+					String
+					FILE_PATH
+					file path
+			
+			
+					size
+					Int
+					FILE_SIZE
+					size in bytes
+			
+			
+					program_id
+					String
+					APP_ID
+					program ID, if it exists
+			
+			
+					sha1
+					String
+					FILE_SHA1
+					SHA-1 hash of the file
+			
+			
+					product_name
+					String
+					PRODUCT
+					Product name
+			
+			
+					company_name
+					String
+					COMPANY
+					Company name
+			
+			
+					product_version
+					String
+					PE_VERSION
+					Product version
+			
+			
+					version_language
+					Int
+					
+					Microsoft Language ID in decimal
+			
+			
+					short_name
+					String
+					
+					ShortName of the file as found in the MFT
+			
+			
+					original_filename
+					String
+					FILE_NAME
+					Original FileName field of the PE header
+			
+			
+					file_version
+					String
+					PE_VERSION
+					File version
+			
+			
+					image_size
+					Int
+					
+					&lsquo;SizeOfImage&rsquo; field of the PE header
+			
+			
+					file_description
+					String
+					
+					file description
+			
+			
+					linker_version
+					String
+					PE_VERSION
+					combination of the &lsquo;MajorLinkerVersion&rsquo; and &lsquo;MinorLinkerVersion&rsquo; fields of the PE header
+			
+			
+					link_date
+					DateTime
+					DATE_COMPILATION
+					Compilation date
+			
+			
+					binary_type
+					String
+					
+					32BIT or 64BIT
+			
+			
+					creation_date
+					DateTime
+					DATE_CREATION
+					
+			
+			
+					modification_date
+					DateTime
+					DATE_MODIFICATION
+					
+			
+			
+					long_path_hash
+					String
+					FILE_PATH_SHA1
+					SHA-1 of the complete lowercase file path in UTF-16
+			
+			
+					unique_id
+					String
+					
+					identifies the file location if it is in a program installation directory
+			
+			
+					volume_guid
+					String
+					VOLUME_GUID
+					identifier of the volume where the file is located
+			
+			
+					is_pe_file
+					Bool
+					
+					
+			
+			
+					is_os_component
+					Bool
+					
+					
+			
+			
+					key_path
+					String
+					KEY_PATH
+					full registry key name
+			
+			
+					key_modif_time
+					DateTime
+					DATE_MODIFICATION
+					last modification timestamp of the registry key
+			
+			
+					key_security
+					Object
+					
+					
+			
+			
+					key_security.owner_sid
+					String
+					USER_SID
+					SID of the user that owns the registry key
+			
+			
+					key_security.group_sid
+					String
+					
+					SID of the group that owns the registry key
+			
+			
+					key_security.control_flags[]
+					Array[String]
+					
+					security descriptor control flags for the key
+			
+			
+					key_security.dacl_ace
+					Object
+					
+					
+			
+			
+					key_security.dacl_ace.ace_type
+					String
+					
+					type of ACE (e.g., allow, deny)
+			
+			
+					key_security.dacl_ace.account_sid
+					String
+					
+					SID of the account the ACE applies to
+			
+			
+					key_security.dacl_ace.ace_flags[]
+					Array[String]
+					
+					ACE flags that modify inheritance or behavior
+			
+			
+					key_security.dacl_ace.rights[]
+					Array[String]
+					
+					permissions granted or denied by the ACE
+			
+	
 
     
   ">
@@ -302,13 +302,13 @@ Fields
 
 
 
-  <meta itemprop="name" content="Amcache File">
-  <meta itemprop="description" content="Data Type: amcache_file Python Parser: RegAmCacheFile Description Retrieves cached executable file metadata from the Windows AmCache hive.
+	<meta itemprop="name" content="Amcache File">
+	<meta itemprop="description" content="Data Type: amcache_file Python Parser: RegAmCacheFile Description Retrieves cached executable file metadata from the Windows AmCache hive.
 Expose what the OS stores for quick access to recently used files. Extracts file name, path, size, SHA‑1 hash, program identifiers, version info, timestamps, and security descriptors for forensic examination. Timeline Timeline Field Data Field Related User key_security.owner_sid Description path Additional Description sha1 size program_id key_path Fields Output Name Data Type Qualifier Description name String FILE_NAME filename path String FILE_PATH file path size Int FILE_SIZE size in bytes program_id String APP_ID program ID, if it exists sha1 String FILE_SHA1 SHA-1 hash of the file product_name String PRODUCT Product name company_name String COMPANY Company name product_version String PE_VERSION Product version version_language Int Microsoft Language ID in decimal short_name String ShortName of the file as found in the MFT original_filename String FILE_NAME Original FileName field of the PE header file_version String PE_VERSION File version image_size Int ‘SizeOfImage’ field of the PE header file_description String file description linker_version String PE_VERSION combination of the ‘MajorLinkerVersion’ and ‘MinorLinkerVersion’ fields of the PE header link_date DateTime DATE_COMPILATION Compilation date binary_type String 32BIT or 64BIT creation_date DateTime DATE_CREATION modification_date DateTime DATE_MODIFICATION long_path_hash String FILE_PATH_SHA1 SHA-1 of the complete lowercase file path in UTF-16 unique_id String identifies the file location if it is in a program installation directory volume_guid String VOLUME_GUID identifier of the volume where the file is located is_pe_file Bool is_os_component Bool key_path String KEY_PATH full registry key name key_modif_time DateTime DATE_MODIFICATION last modification timestamp of the registry key key_security Object key_security.owner_sid String USER_SID SID of the user that owns the registry key key_security.group_sid String SID of the group that owns the registry key key_security.control_flags[] Array[String] security descriptor control flags for the key key_security.dacl_ace Object key_security.dacl_ace.ace_type String type of ACE (e.g., allow, deny) key_security.dacl_ace.account_sid String SID of the account the ACE applies to key_security.dacl_ace.ace_flags[] Array[String] ACE flags that modify inheritance or behavior key_security.dacl_ace.rights[] Array[String] permissions granted or denied by the ACE">
-  <meta itemprop="wordCount" content="322">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Amcache File">
-  <meta name="twitter:description" content="Data Type: amcache_file Python Parser: RegAmCacheFile Description Retrieves cached executable file metadata from the Windows AmCache hive.
+	<meta itemprop="wordCount" content="322">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Amcache File">
+	<meta name="twitter:description" content="Data Type: amcache_file Python Parser: RegAmCacheFile Description Retrieves cached executable file metadata from the Windows AmCache hive.
 Expose what the OS stores for quick access to recently used files. Extracts file name, path, size, SHA‑1 hash, program identifiers, version info, timestamps, and security descriptors for forensic examination. Timeline Timeline Field Data Field Related User key_security.owner_sid Description path Additional Description sha1 size program_id key_path Fields Output Name Data Type Qualifier Description name String FILE_NAME filename path String FILE_PATH file path size Int FILE_SIZE size in bytes program_id String APP_ID program ID, if it exists sha1 String FILE_SHA1 SHA-1 hash of the file product_name String PRODUCT Product name company_name String COMPANY Company name product_version String PE_VERSION Product version version_language Int Microsoft Language ID in decimal short_name String ShortName of the file as found in the MFT original_filename String FILE_NAME Original FileName field of the PE header file_version String PE_VERSION File version image_size Int ‘SizeOfImage’ field of the PE header file_description String file description linker_version String PE_VERSION combination of the ‘MajorLinkerVersion’ and ‘MinorLinkerVersion’ fields of the PE header link_date DateTime DATE_COMPILATION Compilation date binary_type String 32BIT or 64BIT creation_date DateTime DATE_CREATION modification_date DateTime DATE_MODIFICATION long_path_hash String FILE_PATH_SHA1 SHA-1 of the complete lowercase file path in UTF-16 unique_id String identifies the file location if it is in a program installation directory volume_guid String VOLUME_GUID identifier of the volume where the file is located is_pe_file Bool is_os_component Bool key_path String KEY_PATH full registry key name key_modif_time DateTime DATE_MODIFICATION last modification timestamp of the registry key key_security Object key_security.owner_sid String USER_SID SID of the user that owns the registry key key_security.group_sid String SID of the group that owns the registry key key_security.control_flags[] Array[String] security descriptor control flags for the key key_security.dacl_ace Object key_security.dacl_ace.ace_type String type of ACE (e.g., allow, deny) key_security.dacl_ace.account_sid String SID of the account the ACE applies to key_security.dacl_ace.ace_flags[] Array[String] ACE flags that modify inheritance or behavior key_security.dacl_ace.rights[] Array[String] permissions granted or denied by the ACE">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -1923,261 +1923,261 @@ Python Parser: <strong>RegAmCacheFile</strong></div>
 </ul>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Timeline Field</th>
-          <th>Data Field</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Related User</td>
-          <td><code>key_security.owner_sid</code></td>
-      </tr>
-      <tr>
-          <td>Description</td>
-          <td><code>path</code></td>
-      </tr>
-      <tr>
-          <td>Additional Description</td>
-          <td><code>sha1</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>size</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>program_id</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>key_path</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Timeline Field</th>
+					<th>Data Field</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Related User</td>
+					<td><code>key_security.owner_sid</code></td>
+			</tr>
+			<tr>
+					<td>Description</td>
+					<td><code>path</code></td>
+			</tr>
+			<tr>
+					<td>Additional Description</td>
+					<td><code>sha1</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>size</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>program_id</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>key_path</code></td>
+			</tr>
+	</tbody>
 </table>
 <h3>Fields<span class="hx:absolute hx:-mt-20" id="fields"></span>
     <a href="#fields" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Output Name</th>
-          <th>Data Type</th>
-          <th>Qualifier</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>name</code></td>
-          <td>String</td>
-          <td>FILE_NAME</td>
-          <td>filename</td>
-      </tr>
-      <tr>
-          <td><code>path</code></td>
-          <td>String</td>
-          <td>FILE_PATH</td>
-          <td>file path</td>
-      </tr>
-      <tr>
-          <td><code>size</code></td>
-          <td>Int</td>
-          <td>FILE_SIZE</td>
-          <td>size in bytes</td>
-      </tr>
-      <tr>
-          <td><code>program_id</code></td>
-          <td>String</td>
-          <td>APP_ID</td>
-          <td>program ID, if it exists</td>
-      </tr>
-      <tr>
-          <td><code>sha1</code></td>
-          <td>String</td>
-          <td>FILE_SHA1</td>
-          <td>SHA-1 hash of the file</td>
-      </tr>
-      <tr>
-          <td><code>product_name</code></td>
-          <td>String</td>
-          <td>PRODUCT</td>
-          <td>Product name</td>
-      </tr>
-      <tr>
-          <td><code>company_name</code></td>
-          <td>String</td>
-          <td>COMPANY</td>
-          <td>Company name</td>
-      </tr>
-      <tr>
-          <td><code>product_version</code></td>
-          <td>String</td>
-          <td>PE_VERSION</td>
-          <td>Product version</td>
-      </tr>
-      <tr>
-          <td><code>version_language</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Microsoft Language ID in decimal</td>
-      </tr>
-      <tr>
-          <td><code>short_name</code></td>
-          <td>String</td>
-          <td></td>
-          <td>ShortName of the file as found in the MFT</td>
-      </tr>
-      <tr>
-          <td><code>original_filename</code></td>
-          <td>String</td>
-          <td>FILE_NAME</td>
-          <td>Original FileName field of the PE header</td>
-      </tr>
-      <tr>
-          <td><code>file_version</code></td>
-          <td>String</td>
-          <td>PE_VERSION</td>
-          <td>File version</td>
-      </tr>
-      <tr>
-          <td><code>image_size</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>&lsquo;SizeOfImage&rsquo; field of the PE header</td>
-      </tr>
-      <tr>
-          <td><code>file_description</code></td>
-          <td>String</td>
-          <td></td>
-          <td>file description</td>
-      </tr>
-      <tr>
-          <td><code>linker_version</code></td>
-          <td>String</td>
-          <td>PE_VERSION</td>
-          <td>combination of the &lsquo;MajorLinkerVersion&rsquo; and &lsquo;MinorLinkerVersion&rsquo; fields of the PE header</td>
-      </tr>
-      <tr>
-          <td><code>link_date</code></td>
-          <td>DateTime</td>
-          <td>DATE_COMPILATION</td>
-          <td>Compilation date</td>
-      </tr>
-      <tr>
-          <td><code>binary_type</code></td>
-          <td>String</td>
-          <td></td>
-          <td>32BIT or 64BIT</td>
-      </tr>
-      <tr>
-          <td><code>creation_date</code></td>
-          <td>DateTime</td>
-          <td>DATE_CREATION</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>modification_date</code></td>
-          <td>DateTime</td>
-          <td>DATE_MODIFICATION</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>long_path_hash</code></td>
-          <td>String</td>
-          <td>FILE_PATH_SHA1</td>
-          <td>SHA-1 of the complete lowercase file path in UTF-16</td>
-      </tr>
-      <tr>
-          <td><code>unique_id</code></td>
-          <td>String</td>
-          <td></td>
-          <td>identifies the file location if it is in a program installation directory</td>
-      </tr>
-      <tr>
-          <td><code>volume_guid</code></td>
-          <td>String</td>
-          <td>VOLUME_GUID</td>
-          <td>identifier of the volume where the file is located</td>
-      </tr>
-      <tr>
-          <td><code>is_pe_file</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>is_os_component</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>key_path</code></td>
-          <td>String</td>
-          <td>KEY_PATH</td>
-          <td>full registry key name</td>
-      </tr>
-      <tr>
-          <td><code>key_modif_time</code></td>
-          <td>DateTime</td>
-          <td>DATE_MODIFICATION</td>
-          <td>last modification timestamp of the registry key</td>
-      </tr>
-      <tr>
-          <td><code>key_security</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>key_security.owner_sid</code></td>
-          <td>String</td>
-          <td>USER_SID</td>
-          <td>SID of the user that owns the registry key</td>
-      </tr>
-      <tr>
-          <td><code>key_security.group_sid</code></td>
-          <td>String</td>
-          <td></td>
-          <td>SID of the group that owns the registry key</td>
-      </tr>
-      <tr>
-          <td><code>key_security.control_flags[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td>security descriptor control flags for the key</td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace.ace_type</code></td>
-          <td>String</td>
-          <td></td>
-          <td>type of ACE (e.g., allow, deny)</td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace.account_sid</code></td>
-          <td>String</td>
-          <td></td>
-          <td>SID of the account the ACE applies to</td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace.ace_flags[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td>ACE flags that modify inheritance or behavior</td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace.rights[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td>permissions granted or denied by the ACE</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Output Name</th>
+					<th>Data Type</th>
+					<th>Qualifier</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>name</code></td>
+					<td>String</td>
+					<td>FILE_NAME</td>
+					<td>filename</td>
+			</tr>
+			<tr>
+					<td><code>path</code></td>
+					<td>String</td>
+					<td>FILE_PATH</td>
+					<td>file path</td>
+			</tr>
+			<tr>
+					<td><code>size</code></td>
+					<td>Int</td>
+					<td>FILE_SIZE</td>
+					<td>size in bytes</td>
+			</tr>
+			<tr>
+					<td><code>program_id</code></td>
+					<td>String</td>
+					<td>APP_ID</td>
+					<td>program ID, if it exists</td>
+			</tr>
+			<tr>
+					<td><code>sha1</code></td>
+					<td>String</td>
+					<td>FILE_SHA1</td>
+					<td>SHA-1 hash of the file</td>
+			</tr>
+			<tr>
+					<td><code>product_name</code></td>
+					<td>String</td>
+					<td>PRODUCT</td>
+					<td>Product name</td>
+			</tr>
+			<tr>
+					<td><code>company_name</code></td>
+					<td>String</td>
+					<td>COMPANY</td>
+					<td>Company name</td>
+			</tr>
+			<tr>
+					<td><code>product_version</code></td>
+					<td>String</td>
+					<td>PE_VERSION</td>
+					<td>Product version</td>
+			</tr>
+			<tr>
+					<td><code>version_language</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Microsoft Language ID in decimal</td>
+			</tr>
+			<tr>
+					<td><code>short_name</code></td>
+					<td>String</td>
+					<td></td>
+					<td>ShortName of the file as found in the MFT</td>
+			</tr>
+			<tr>
+					<td><code>original_filename</code></td>
+					<td>String</td>
+					<td>FILE_NAME</td>
+					<td>Original FileName field of the PE header</td>
+			</tr>
+			<tr>
+					<td><code>file_version</code></td>
+					<td>String</td>
+					<td>PE_VERSION</td>
+					<td>File version</td>
+			</tr>
+			<tr>
+					<td><code>image_size</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>&lsquo;SizeOfImage&rsquo; field of the PE header</td>
+			</tr>
+			<tr>
+					<td><code>file_description</code></td>
+					<td>String</td>
+					<td></td>
+					<td>file description</td>
+			</tr>
+			<tr>
+					<td><code>linker_version</code></td>
+					<td>String</td>
+					<td>PE_VERSION</td>
+					<td>combination of the &lsquo;MajorLinkerVersion&rsquo; and &lsquo;MinorLinkerVersion&rsquo; fields of the PE header</td>
+			</tr>
+			<tr>
+					<td><code>link_date</code></td>
+					<td>DateTime</td>
+					<td>DATE_COMPILATION</td>
+					<td>Compilation date</td>
+			</tr>
+			<tr>
+					<td><code>binary_type</code></td>
+					<td>String</td>
+					<td></td>
+					<td>32BIT or 64BIT</td>
+			</tr>
+			<tr>
+					<td><code>creation_date</code></td>
+					<td>DateTime</td>
+					<td>DATE_CREATION</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>modification_date</code></td>
+					<td>DateTime</td>
+					<td>DATE_MODIFICATION</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>long_path_hash</code></td>
+					<td>String</td>
+					<td>FILE_PATH_SHA1</td>
+					<td>SHA-1 of the complete lowercase file path in UTF-16</td>
+			</tr>
+			<tr>
+					<td><code>unique_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>identifies the file location if it is in a program installation directory</td>
+			</tr>
+			<tr>
+					<td><code>volume_guid</code></td>
+					<td>String</td>
+					<td>VOLUME_GUID</td>
+					<td>identifier of the volume where the file is located</td>
+			</tr>
+			<tr>
+					<td><code>is_pe_file</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>is_os_component</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>key_path</code></td>
+					<td>String</td>
+					<td>KEY_PATH</td>
+					<td>full registry key name</td>
+			</tr>
+			<tr>
+					<td><code>key_modif_time</code></td>
+					<td>DateTime</td>
+					<td>DATE_MODIFICATION</td>
+					<td>last modification timestamp of the registry key</td>
+			</tr>
+			<tr>
+					<td><code>key_security</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>key_security.owner_sid</code></td>
+					<td>String</td>
+					<td>USER_SID</td>
+					<td>SID of the user that owns the registry key</td>
+			</tr>
+			<tr>
+					<td><code>key_security.group_sid</code></td>
+					<td>String</td>
+					<td></td>
+					<td>SID of the group that owns the registry key</td>
+			</tr>
+			<tr>
+					<td><code>key_security.control_flags[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>security descriptor control flags for the key</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace.ace_type</code></td>
+					<td>String</td>
+					<td></td>
+					<td>type of ACE (e.g., allow, deny)</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace.account_sid</code></td>
+					<td>String</td>
+					<td></td>
+					<td>SID of the account the ACE applies to</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace.ace_flags[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>ACE flags that modify inheritance or behavior</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace.rights[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>permissions granted or denied by the ACE</td>
+			</tr>
+	</tbody>
 </table>
 
         </div>

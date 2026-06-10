@@ -27,6 +27,13 @@ temp_folder: tmp_ogre
 inner_archive_password: avproof
 plugin_folder: dfir-ogre-plugin-windows/configuration/ 
 
+# Optionnal log configuration
+# log_file_path: ./
+# log_file_name: dfir-ogre.log
+# log_level: INFO # ERROR DEBUG
+# log_max_bytes: 5242880 #1024*1024*5 (5Mb)
+# log_backup_count: 3
+
 output:
     timeline:
         type: gzip
@@ -139,6 +146,7 @@ This example defines an output template named `timeline` that will write JSONL t
 
 ## Mapping Section: Which plugin processes which artefact?
 
+
 The `mapping` list is the heart the data extraction. Each entry tells Ogre:
 
 * **Which files to match**:
@@ -164,3 +172,39 @@ This example tells DFIR_OGRE:
 1. to search for the `ActivitiesCache.db` original file name
 2. launch the plugin defined in `activity_cache.xml`
 3. write result using the `timeline` output template
+
+
+## Logging Configuration
+
+### Overview
+
+DFIR-OGRE supports two logging modes: **stdout-only** (default) and **file + stdout** (optional, configured via `ogre.yaml`).
+
+Logs use this format:
+```
+YYYY-MM-DD HH:MM:SS,mmm - LEVEL - Message
+```
+
+### Default (No File Logging)
+
+If no config file is provided, or the config file lacks log settings, dfir-ogre outputs to **stdout only** at `INFO` level. No log files are created.
+
+### File Logging
+
+To enable log rotation to a file, uncomment and set the `log_*` options in `configuration/ogre.yaml`:
+
+```yaml {filename="configuration/ogre.yaml"}
+log_file_name: dfir-ogre.log
+log_file_path: ./
+log_level: INFO
+log_max_bytes: 5242880
+log_backup_count: 3
+```
+
+| Option | Type | Default | Description |
+|---|---|---|---|
+| `log_file_name` | string | *(none)* | Log file name. **Required** — if omitted, file logging is disabled entirely. |
+| `log_file_path` | string | `./` | Directory for the log file. Created automatically if missing. |
+| `log_level` | string | `INFO` | Minimum level: `DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL` |
+| `log_max_bytes` | int | `5242880` (5 MB) | Max size per log file before rotation. |
+| `log_backup_count` | int | `3` | Number of rotated `.1`, `.2`, `.3` backup files to keep. |

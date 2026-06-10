@@ -60,17 +60,17 @@ dfir-ogre orc \
 
 
 
-  <meta itemprop="name" content="Command line usage">
-  <meta itemprop="description" content="Overview The command line has three main usages:
+	<meta itemprop="name" content="Command line usage">
+	<meta itemprop="description" content="Overview The command line has three main usages:
 orc: Unpacks DFIR-ORC archives and runs every parser defined in the YAML configuration on the extracted files.
 Typical usage:
 dfir-ogre orc \ --archive myarchive.7z --configuration ogre.yaml [--case &lt;name&gt;] The ogre.yaml configuration file tells the CLI which parsers (plugins) to run, where to read source files, where to write outputs, and how the generated artefacts should be formatted.">
-  <meta itemprop="datePublished" content="2026-01-06T15:52:05+01:00">
-  <meta itemprop="dateModified" content="2026-01-06T15:52:05+01:00">
-  <meta itemprop="wordCount" content="727">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Command line usage">
-  <meta name="twitter:description" content="Overview The command line has three main usages:
+	<meta itemprop="datePublished" content="2026-01-06T15:52:05+01:00">
+	<meta itemprop="dateModified" content="2026-01-06T15:52:05+01:00">
+	<meta itemprop="wordCount" content="727">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Command line usage">
+	<meta name="twitter:description" content="Overview The command line has three main usages:
 orc: Unpacks DFIR-ORC archives and runs every parser defined in the YAML configuration on the extracted files.
 Typical usage:
 dfir-ogre orc \ --archive myarchive.7z --configuration ogre.yaml [--case &lt;name&gt;] The ogre.yaml configuration file tells the CLI which parsers (plugins) to run, where to read source files, where to write outputs, and how the generated artefacts should be formatted.">
@@ -1780,26 +1780,26 @@ Typical usage:</p>
     <a href="#the-orc-command" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Unpacks DFIR-ORC archives and runs every parser defined in the YAML configuration on the extracted files.</p>
 <h3>Parameters<span class="hx:absolute hx:-mt-20" id="parameters"></span>
     <a href="#parameters" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Parameter</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>--archive</code></td>
-          <td><strong>Required</strong>. Can be one of four forms: <br>• A <strong>single</strong> 7z/zip archive file path. <br>• A <strong>comma‑separated list</strong> of archive files (treated as one case). <br>• A path to an Orc <code>xxx_Outcome.json</code> file.<br>• A <strong>JSON string</strong> that describes the archives to be parsed</td>
-      </tr>
-      <tr>
-          <td><code>--configuration</code></td>
-          <td>path to the <code>ogre.yaml</code> configuration</td>
-      </tr>
-      <tr>
-          <td><code>--case</code></td>
-          <td>Overrides the case name coming from the configuration or the ORC metadata.</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Parameter</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>--archive</code></td>
+					<td><strong>Required</strong>. Can be one of four forms: <br>• A <strong>single</strong> 7z/zip archive file path. <br>• A <strong>comma‑separated list</strong> of archive files (treated as one case). <br>• A path to an Orc <code>xxx_Outcome.json</code> file.<br>• A <strong>JSON string</strong> that describes the archives to be parsed</td>
+			</tr>
+			<tr>
+					<td><code>--configuration</code></td>
+					<td>path to the <code>ogre.yaml</code> configuration</td>
+			</tr>
+			<tr>
+					<td><code>--case</code></td>
+					<td>Overrides the case name coming from the configuration or the ORC metadata.</td>
+			</tr>
+	</tbody>
 </table>
 <h3>What happens internally<span class="hx:absolute hx:-mt-20" id="what-happens-internally"></span>
     <a href="#what-happens-internally" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ol>
@@ -1914,54 +1914,54 @@ Typical usage:</p>
 <li>debug a single plugin without the overhead of unpacking an entire ORC archive.</li>
 </ul>
 <table>
-  <thead>
-      <tr>
-          <th>Parameter</th>
-          <th>Meaning</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>--filename</code></td>
-          <td>The file that the parser will receive.</td>
-      </tr>
-      <tr>
-          <td><code>--plugin_config</code></td>
-          <td>Path to the plugin’s XML configuration.</td>
-      </tr>
-      <tr>
-          <td><code>--computer_name</code></td>
-          <td>computer identifier that will be stored in the metadata.</td>
-      </tr>
-      <tr>
-          <td><code>--output_folder</code></td>
-          <td>Destination directory for the parser’s output.</td>
-      </tr>
-      <tr>
-          <td><code>--output_format</code></td>
-          <td>the <a href="/dfir-ogre-documentation/usage/artefacts_format/">output format</a>. defaults to <code>jsonl</code></td>
-      </tr>
-      <tr>
-          <td><code>--output_date_format</code></td>
-          <td>the output date format (<code>iso</code>, <code>iso_utc</code> or <code>naive_utc</code>). defaults to <code>iso_utc</code></td>
-      </tr>
-      <tr>
-          <td><code>--params</code></td>
-          <td>JSON object passed verbatim to the parser (some plugins need extra parameters).</td>
-      </tr>
-      <tr>
-          <td><code>--timeline</code></td>
-          <td>If present, the parser is asked to emit timeline entries.</td>
-      </tr>
-      <tr>
-          <td><code>--include_empty</code></td>
-          <td>Keep empty fields in the final JSON output.</td>
-      </tr>
-      <tr>
-          <td><code>--library</code></td>
-          <td>optional, reference a <a href="/dfir-ogre-documentation/plugin-creation/custom_library/">custom plugin library</a></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Parameter</th>
+					<th>Meaning</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>--filename</code></td>
+					<td>The file that the parser will receive.</td>
+			</tr>
+			<tr>
+					<td><code>--plugin_config</code></td>
+					<td>Path to the plugin’s XML configuration.</td>
+			</tr>
+			<tr>
+					<td><code>--computer_name</code></td>
+					<td>computer identifier that will be stored in the metadata.</td>
+			</tr>
+			<tr>
+					<td><code>--output_folder</code></td>
+					<td>Destination directory for the parser’s output.</td>
+			</tr>
+			<tr>
+					<td><code>--output_format</code></td>
+					<td>the <a href="/dfir-ogre-documentation/usage/artefacts_format/">output format</a>. defaults to <code>jsonl</code></td>
+			</tr>
+			<tr>
+					<td><code>--output_date_format</code></td>
+					<td>the output date format (<code>iso</code>, <code>iso_utc</code> or <code>naive_utc</code>). defaults to <code>iso_utc</code></td>
+			</tr>
+			<tr>
+					<td><code>--params</code></td>
+					<td>JSON object passed verbatim to the parser (some plugins need extra parameters).</td>
+			</tr>
+			<tr>
+					<td><code>--timeline</code></td>
+					<td>If present, the parser is asked to emit timeline entries.</td>
+			</tr>
+			<tr>
+					<td><code>--include_empty</code></td>
+					<td>Keep empty fields in the final JSON output.</td>
+			</tr>
+			<tr>
+					<td><code>--library</code></td>
+					<td>optional, reference a <a href="/dfir-ogre-documentation/plugin-creation/custom_library/">custom plugin library</a></td>
+			</tr>
+	</tbody>
 </table>
 <p><em>Example</em></p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">

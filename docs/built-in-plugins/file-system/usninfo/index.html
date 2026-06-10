@@ -39,12 +39,12 @@ Description
 
 
 
-  <meta itemprop="name" content="Usninfo">
-  <meta itemprop="description" content="Data Type: usninfo Python Parser: USNInfo Description Parses the CSV export of the Windows USN Journal. It extracts metadata for every change to a file or directory. Each entry provides identifiers, timestamps, attribute flags and the reason for the change.">
-  <meta itemprop="wordCount" content="340">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Usninfo">
-  <meta name="twitter:description" content="Data Type: usninfo Python Parser: USNInfo Description Parses the CSV export of the Windows USN Journal. It extracts metadata for every change to a file or directory. Each entry provides identifiers, timestamps, attribute flags and the reason for the change.">
+	<meta itemprop="name" content="Usninfo">
+	<meta itemprop="description" content="Data Type: usninfo Python Parser: USNInfo Description Parses the CSV export of the Windows USN Journal. It extracts metadata for every change to a file or directory. Each entry provides identifiers, timestamps, attribute flags and the reason for the change.">
+	<meta itemprop="wordCount" content="340">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Usninfo">
+	<meta name="twitter:description" content="Data Type: usninfo Python Parser: USNInfo Description Parses the CSV export of the Windows USN Journal. It extracts metadata for every change to a file or directory. Each entry provides identifiers, timestamps, attribute flags and the reason for the change.">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
     <link href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" rel="stylesheet" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -1659,269 +1659,269 @@ Python Parser: <strong>USNInfo</strong></div>
 </ul>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Timeline Field</th>
-          <th>Data Field</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Description</td>
-          <td><code>file_path</code></td>
-      </tr>
-      <tr>
-          <td>Additional Description</td>
-          <td><code>sequence_number</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>record_number</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>parent_sequence_number</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>parent_record_number</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Timeline Field</th>
+					<th>Data Field</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Description</td>
+					<td><code>file_path</code></td>
+			</tr>
+			<tr>
+					<td>Additional Description</td>
+					<td><code>sequence_number</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>record_number</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>parent_sequence_number</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>parent_record_number</code></td>
+			</tr>
+	</tbody>
 </table>
 <h3>Fields<span class="hx:absolute hx:-mt-20" id="fields"></span>
     <a href="#fields" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Output Name</th>
-          <th>Data Type</th>
-          <th>Qualifier</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>computer_name</code></td>
-          <td>String</td>
-          <td></td>
-          <td>name of the host that generated the USN record</td>
-      </tr>
-      <tr>
-          <td><code>usn_number</code></td>
-          <td>IntRadix</td>
-          <td>FS_USN</td>
-          <td>USN (Update Sequence Number) in hexadecimal</td>
-      </tr>
-      <tr>
-          <td><code>sequence_number</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>sequence part of the FRN</td>
-      </tr>
-      <tr>
-          <td><code>record_number</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>record part of the FRN</td>
-      </tr>
-      <tr>
-          <td><code>FRN</code></td>
-          <td>Extension</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>parent_sequence_number</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>sequence part of the parent FRN</td>
-      </tr>
-      <tr>
-          <td><code>parent_record_number</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>record part of the parent FRN</td>
-      </tr>
-      <tr>
-          <td><code>ParentFRN</code></td>
-          <td>Extension</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>timestamp</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>timestamp of the change recorded in the USN journal</td>
-      </tr>
-      <tr>
-          <td><code>file</code></td>
-          <td>String</td>
-          <td>FILE_NAME</td>
-          <td>name of the file or directory (no path)</td>
-      </tr>
-      <tr>
-          <td><code>file_path</code></td>
-          <td>String</td>
-          <td>FILE_PATH</td>
-          <td>full path of the file or directory</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_archive</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>archive attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_no_scrub_data</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>no‑scrub‑data attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_compressed</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>compressed attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_directory</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>directory attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_encrypted</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>encrypted attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_hidden</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>hidden attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_not_content_indexed</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>not‑content‑indexed attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_reparse_point</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>reparse‑point attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_normal</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>normal attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_offline</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>offline attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_sparse_file</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>sparse‑file attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_readonly</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>read‑only attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_system</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>system attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_temporary</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>temporary attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_virtual</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>virtual attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_recall_on_data_access</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>recall‑on‑data‑access attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_device</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>device attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_ea</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>extended‑attributes (EA) attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_recall_on_open</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>recall‑on‑open attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_pinned</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>pinned attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_integrity_stream</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>integrity‑stream attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_unpinned</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>unpinned attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_name_flags</code></td>
-          <td>Extension</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>reason</code></td>
-          <td>Split</td>
-          <td></td>
-          <td>reason codes describing why the USN entry was generated</td>
-      </tr>
-      <tr>
-          <td><code>volume_id</code></td>
-          <td>String</td>
-          <td></td>
-          <td>identifier of the volume on which the change occurred</td>
-      </tr>
-      <tr>
-          <td><code>snapshot_id</code></td>
-          <td>String</td>
-          <td></td>
-          <td>identifier of the volume snapshot (if applicable)</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Output Name</th>
+					<th>Data Type</th>
+					<th>Qualifier</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>computer_name</code></td>
+					<td>String</td>
+					<td></td>
+					<td>name of the host that generated the USN record</td>
+			</tr>
+			<tr>
+					<td><code>usn_number</code></td>
+					<td>IntRadix</td>
+					<td>FS_USN</td>
+					<td>USN (Update Sequence Number) in hexadecimal</td>
+			</tr>
+			<tr>
+					<td><code>sequence_number</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>sequence part of the FRN</td>
+			</tr>
+			<tr>
+					<td><code>record_number</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>record part of the FRN</td>
+			</tr>
+			<tr>
+					<td><code>FRN</code></td>
+					<td>Extension</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>parent_sequence_number</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>sequence part of the parent FRN</td>
+			</tr>
+			<tr>
+					<td><code>parent_record_number</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>record part of the parent FRN</td>
+			</tr>
+			<tr>
+					<td><code>ParentFRN</code></td>
+					<td>Extension</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>timestamp</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>timestamp of the change recorded in the USN journal</td>
+			</tr>
+			<tr>
+					<td><code>file</code></td>
+					<td>String</td>
+					<td>FILE_NAME</td>
+					<td>name of the file or directory (no path)</td>
+			</tr>
+			<tr>
+					<td><code>file_path</code></td>
+					<td>String</td>
+					<td>FILE_PATH</td>
+					<td>full path of the file or directory</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_archive</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>archive attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_no_scrub_data</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>no‑scrub‑data attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_compressed</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>compressed attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_directory</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>directory attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_encrypted</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>encrypted attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_hidden</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>hidden attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_not_content_indexed</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>not‑content‑indexed attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_reparse_point</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>reparse‑point attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_normal</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>normal attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_offline</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>offline attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_sparse_file</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>sparse‑file attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_readonly</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>read‑only attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_system</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>system attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_temporary</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>temporary attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_virtual</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>virtual attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_recall_on_data_access</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>recall‑on‑data‑access attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_device</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>device attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_ea</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>extended‑attributes (EA) attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_recall_on_open</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>recall‑on‑open attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_pinned</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>pinned attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_integrity_stream</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>integrity‑stream attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_unpinned</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>unpinned attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_name_flags</code></td>
+					<td>Extension</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>reason</code></td>
+					<td>Split</td>
+					<td></td>
+					<td>reason codes describing why the USN entry was generated</td>
+			</tr>
+			<tr>
+					<td><code>volume_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>identifier of the volume on which the change occurred</td>
+			</tr>
+			<tr>
+					<td><code>snapshot_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>identifier of the volume snapshot (if applicable)</td>
+			</tr>
+	</tbody>
 </table>
 
         </div>

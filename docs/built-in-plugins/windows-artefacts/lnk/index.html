@@ -40,12 +40,12 @@ From a digital‑forensic perspective a shortcut can reveal:
 
 
 
-  <meta itemprop="name" content="Lnk">
-  <meta itemprop="description" content="Data Type: lnk Python Parser: LnkBatched Description Extracts every pieces of metadata that is stored in a Windows Shell Link file. From a digital‑forensic perspective a shortcut can reveal:">
-  <meta itemprop="wordCount" content="1992">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Lnk">
-  <meta name="twitter:description" content="Data Type: lnk Python Parser: LnkBatched Description Extracts every pieces of metadata that is stored in a Windows Shell Link file. From a digital‑forensic perspective a shortcut can reveal:">
+	<meta itemprop="name" content="Lnk">
+	<meta itemprop="description" content="Data Type: lnk Python Parser: LnkBatched Description Extracts every pieces of metadata that is stored in a Windows Shell Link file. From a digital‑forensic perspective a shortcut can reveal:">
+	<meta itemprop="wordCount" content="1992">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Lnk">
+	<meta name="twitter:description" content="Data Type: lnk Python Parser: LnkBatched Description Extracts every pieces of metadata that is stored in a Windows Shell Link file. From a digital‑forensic perspective a shortcut can reveal:">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
     <link href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" rel="stylesheet" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -1662,955 +1662,955 @@ From a digital‑forensic perspective a shortcut can reveal:</p>
 </ul>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Timeline Field</th>
-          <th>Data Field</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Description</td>
-          <td><code>link_info.local_base_path</code></td>
-      </tr>
-      <tr>
-          <td>Additional Description</td>
-          <td><code>header.file_size</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>header.windowstyle</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>header.link_flags</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Timeline Field</th>
+					<th>Data Field</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Description</td>
+					<td><code>link_info.local_base_path</code></td>
+			</tr>
+			<tr>
+					<td>Additional Description</td>
+					<td><code>header.file_size</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>header.windowstyle</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>header.link_flags</code></td>
+			</tr>
+	</tbody>
 </table>
 <h3>Fields<span class="hx:absolute hx:-mt-20" id="fields"></span>
     <a href="#fields" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Output Name</th>
-          <th>Data Type</th>
-          <th>Qualifier</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>file_creation_date</code></td>
-          <td>DateTime</td>
-          <td>DATE_CREATION</td>
-          <td>file creation date</td>
-      </tr>
-      <tr>
-          <td><code>file_modif_date</code></td>
-          <td>DateTime</td>
-          <td>DATE_MODIFICATION</td>
-          <td>file modification date</td>
-      </tr>
-      <tr>
-          <td><code>type</code></td>
-          <td>String</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>status</code></td>
-          <td>String</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>size</code></td>
-          <td>Int</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>modification_time</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>header</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>header.guid</code></td>
-          <td>StringToLower</td>
-          <td></td>
-          <td>LinkCLSID: class identifier (CLSID). This value MUST be {00021401-0000-0000-C000-000000000046}</td>
-      </tr>
-      <tr>
-          <td><code>header.link_flags[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td>LinkFlags: specifies information about the shell link and the presence of optional portions of the structure</td>
-      </tr>
-      <tr>
-          <td><code>header.file_flags[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td>FileAttributes: specifies information about the link target.</td>
-      </tr>
-      <tr>
-          <td><code>header.creation_time</code></td>
-          <td>DateTime</td>
-          <td>DATE_CREATION</td>
-          <td>Specifies the creation time of the link target in UTC (Coordinated Universal Time). If the value is zero, there is no creation time set on the link target.</td>
-      </tr>
-      <tr>
-          <td><code>header.access_time</code></td>
-          <td>DateTime</td>
-          <td>DATE_ACCESS</td>
-          <td>Specifies the access time of the link target in UTC (Coordinated Universal Time). If the value is zero, there is no access time set on the link target.</td>
-      </tr>
-      <tr>
-          <td><code>header.modification_time</code></td>
-          <td>DateTime</td>
-          <td>DATE_MODIFICATION</td>
-          <td>Specifies the write time of the link target in UTC (Coordinated Universal Time). If the value is zero, there is no write time set on the link target.</td>
-      </tr>
-      <tr>
-          <td><code>header.file_size</code></td>
-          <td>Int</td>
-          <td>FILE_SIZE</td>
-          <td>Specifies the size, in bytes, of the link target. If the link target file is larger than 0xFFFFFFFF, this value specifies the least significant 32 bits of the link target file size.</td>
-      </tr>
-      <tr>
-          <td><code>header.icon_index</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Specifies the index of an icon within a given icon location</td>
-      </tr>
-      <tr>
-          <td><code>header.windowstyle</code></td>
-          <td>String</td>
-          <td></td>
-          <td>ShowCommand: specifies the expected window state of an application launched by the link.</td>
-      </tr>
-      <tr>
-          <td><code>header.hotkey</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Specifies the keystrokes used to launch the application referenced by the shortcut key. This value is assigned to the application after it is launched, so that pressing the key activates that application.</td>
-      </tr>
-      <tr>
-          <td><code>header.reserved0</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>A value that MUST be zero</td>
-      </tr>
-      <tr>
-          <td><code>header.reserved1</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>A value that MUST be zero</td>
-      </tr>
-      <tr>
-          <td><code>header.reserved2</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>A value that MUST be zero</td>
-      </tr>
-      <tr>
-          <td><code>data</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>data.size</code></td>
-          <td>Int</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>data.description</code></td>
-          <td>String</td>
-          <td></td>
-          <td>NAME_STRING specifies a description of the shortcut that is displayed to end users to identify the purpose of the shell link.</td>
-      </tr>
-      <tr>
-          <td><code>data.relative_path</code></td>
-          <td>String</td>
-          <td>FILE_PATH</td>
-          <td>RELATIVE_PATH specifies the location of the link target relative to the file that contains the shell link. When specified, this string SHOULD be used when resolving the link.</td>
-      </tr>
-      <tr>
-          <td><code>data.working_directory</code></td>
-          <td>String</td>
-          <td>FILE_PATH</td>
-          <td>WORKING_DIR specifies the file system path of the working directory to be used when activating the link target.</td>
-      </tr>
-      <tr>
-          <td><code>data.command_line_arguments</code></td>
-          <td>String</td>
-          <td></td>
-          <td>COMMAND_LINE_ARGUMENTS stores the command-line arguments that are specified when activating the link target.</td>
-      </tr>
-      <tr>
-          <td><code>data.icon_location</code></td>
-          <td>String</td>
-          <td>FILE_PATH</td>
-          <td>ICON_LOCATION specifies the location of the icon to be used when displaying a shell link item in an icon view.</td>
-      </tr>
-      <tr>
-          <td><code>extra</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>extra.console_codepage</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Unsigned integer that specifies a code page language code identifier.</td>
-      </tr>
-      <tr>
-          <td><code>extra.icon_location</code></td>
-          <td>Object</td>
-          <td></td>
-          <td>Specifies the path to an icon. The path is encoded using environment variables, which makes it possible to find the icon across machines where the locations vary but are expressed using environment variables.</td>
-      </tr>
-      <tr>
-          <td><code>extra.icon_location.size</code></td>
-          <td>Int</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>extra.icon_location.target_ansi</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Defined by the system default code page, which specifies a path to environment variable information.</td>
-      </tr>
-      <tr>
-          <td><code>extra.icon_location.target_unicode</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Unicode string that specifies a path to environment variable information.</td>
-      </tr>
-      <tr>
-          <td><code>extra.environmental_variables_location</code></td>
-          <td>Object</td>
-          <td></td>
-          <td>Specifies a path to environment variable information when the link target refers to a location that has a corresponding environment variable.</td>
-      </tr>
-      <tr>
-          <td><code>extra.environmental_variables_location.size</code></td>
-          <td>Int</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>extra.environmental_variables_location.target_ansi</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Defined by the system default code page, which specifies a path to environment variable information.</td>
-      </tr>
-      <tr>
-          <td><code>extra.environmental_variables_location.target_unicode</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Unicode string that specifies a path to environment variable information.</td>
-      </tr>
-      <tr>
-          <td><code>extra.darwin_properties</code></td>
-          <td>Object</td>
-          <td></td>
-          <td>Specifies an application identifier that can be used instead of a link target IDList to install an application when a shell link is activated.</td>
-      </tr>
-      <tr>
-          <td><code>extra.darwin_properties.darwin_data_ansi</code></td>
-          <td>String</td>
-          <td></td>
-          <td>defined by the system default code page, which specifies an application identifier. This field SHOULD be ignored.</td>
-      </tr>
-      <tr>
-          <td><code>extra.darwin_properties.darwin_data_unicode</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Unicode string that specifies an application identifier.</td>
-      </tr>
-      <tr>
-          <td><code>extra.darwin_properties.product_code_id</code></td>
-          <td>StringToLower</td>
-          <td></td>
-          <td>Field created by the parser by interpreting the previous fields?</td>
-      </tr>
-      <tr>
-          <td><code>extra.darwin_properties.feature_name</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Field created by the parser by interpreting the previous fields?</td>
-      </tr>
-      <tr>
-          <td><code>extra.darwin_properties.component_id</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Field created by the parser by interpreting the previous fields?</td>
-      </tr>
-      <tr>
-          <td><code>extra.special_folder_location</code></td>
-          <td>Object</td>
-          <td></td>
-          <td>Specifies the location of a special folder. This data can be used when a link target is a special folder to keep track of the folder, so that the link target IDList can be translated when the link is loaded.</td>
-      </tr>
-      <tr>
-          <td><code>extra.special_folder_location.special_folder_id</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Unsigned integer that specifies the folder integer ID.</td>
-      </tr>
-      <tr>
-          <td><code>extra.special_folder_location.special_folder_name</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Translation of the special_folder_id value.</td>
-      </tr>
-      <tr>
-          <td><code>extra.known_folder_location</code></td>
-          <td>Object</td>
-          <td></td>
-          <td>Specifies the location of a known folder. This data can be used when a link target is a known folder to keep track of the folder so that the link target IDList can be translated when the link is loaded.</td>
-      </tr>
-      <tr>
-          <td><code>extra.known_folder_location.known_folder_id</code></td>
-          <td>StringToLower</td>
-          <td></td>
-          <td>GUID packet representation that specifies the folder GUID ID.</td>
-      </tr>
-      <tr>
-          <td><code>extra.metadata_properties</code></td>
-          <td>Object</td>
-          <td></td>
-          <td>PropertyStoreDataBlock specifies a set of properties that can be used by applications to store extra data in the shell link.</td>
-      </tr>
-      <tr>
-          <td><code>extra.metadata_properties.size</code></td>
-          <td>Int</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>extra.metadata_properties.property_store[]</code></td>
-          <td>Array[Object]</td>
-          <td></td>
-          <td>A serialized property storage structure</td>
-      </tr>
-      <tr>
-          <td><code>extra.metadata_properties.property_store[].version</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Has to be equal to 0x53505331.</td>
-      </tr>
-      <tr>
-          <td><code>extra.metadata_properties.property_store[].format_id</code></td>
-          <td>String</td>
-          <td></td>
-          <td>A GUID that specifies the semantics and expected usage of the properties contained in this Serialized Property Storage structure. It MUST be unique in the set of serialized property storage structures.</td>
-      </tr>
-      <tr>
-          <td><code>extra.metadata_properties.property_store[].serialized_property_values[]</code></td>
-          <td>Array[Object]</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>extra.metadata_properties.property_store[].serialized_property_values[].value_type</code></td>
-          <td>String</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>extra.metadata_properties.property_store[].serialized_property_values[].value</code></td>
-          <td>Dynamic</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>extra.metadata_properties.property_store[].serialized_property_values[].id</code></td>
-          <td>Int</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>extra.metadata_properties.property_store[].serialized_property_values[].name</code></td>
-          <td>String</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>extra.metadata_properties.property_store[].serialized_property_values[].name_size</code></td>
-          <td>Int</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>extra.shim_layer_properties</code></td>
-          <td>Object</td>
-          <td></td>
-          <td>Specifies the name of a shim that can be applied when activating a link target.</td>
-      </tr>
-      <tr>
-          <td><code>extra.shim_layer_properties.name</code></td>
-          <td>String</td>
-          <td></td>
-          <td>LayerName: unicode string that specifies the name of a shim layer to apply to a link target when it is being activated</td>
-      </tr>
-      <tr>
-          <td><code>extra.distributed_link_tracker</code></td>
-          <td>Object</td>
-          <td></td>
-          <td>Specifies data that can be used to resolve a link target if it is not found in its original location when the link is resolved. This data is passed to the Link Tracking service to find the link target.</td>
-      </tr>
-      <tr>
-          <td><code>extra.distributed_link_tracker.version</code></td>
-          <td>String</td>
-          <td></td>
-          <td>This value MUST be 0x00000000.</td>
-      </tr>
-      <tr>
-          <td><code>extra.distributed_link_tracker.machine_identifier</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Specifies the NetBIOS name of the machine where the link target was last known to reside.</td>
-      </tr>
-      <tr>
-          <td><code>extra.distributed_link_tracker.droid_volume_identifier</code></td>
-          <td>StringToLower</td>
-          <td>VOLUME_GUID</td>
-          <td>Two values (a priori droid_volume_identifier and droid_file_identifier) in GUID packet representation that are used to find the link target with the Link Tracking service.</td>
-      </tr>
-      <tr>
-          <td><code>extra.distributed_link_tracker.droid_file_identifier</code></td>
-          <td>StringToLower</td>
-          <td></td>
-          <td>Two values (a priori droid_volume_identifier and droid_file_identifier) in GUID packet representation that are used to find the link target with the Link Tracking service</td>
-      </tr>
-      <tr>
-          <td><code>extra.distributed_link_tracker.droid_file_mft_seq</code></td>
-          <td>Int</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>extra.distributed_link_tracker.droid_file_frn</code></td>
-          <td>IntToHex</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>extra.distributed_link_tracker.droid_file_sequence_number</code></td>
-          <td>Int</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>extra.distributed_link_tracker.droid_file_record_number</code></td>
-          <td>Int</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>extra.distributed_link_tracker.droid_file_mft_seq</code></td>
-          <td>Extension</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>extra.distributed_link_tracker.droid_file_frn_hex</code></td>
-          <td>Int</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>extra.distributed_link_tracker.droid_file_frn_split</code></td>
-          <td>String</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>extra.distributed_link_tracker.droid_file_timestamp</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>Information générée par le parseur grace à la résolution de droid_volume_identifier et droid_file_identifier ?</td>
-      </tr>
-      <tr>
-          <td><code>extra.distributed_link_tracker.droid_file_mac</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Information générée par le parseur grace à la résolution de droid_volume_identifier et droid_file_identifier ?</td>
-      </tr>
-      <tr>
-          <td><code>extra.distributed_link_tracker.droid_file_vendor</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Information générée par le parseur grace à la résolution de droid_volume_identifier et droid_file_identifier ?</td>
-      </tr>
-      <tr>
-          <td><code>extra.distributed_link_tracker.birth_droid_volume_identifier</code></td>
-          <td>StringToLower</td>
-          <td>VOLUME_GUID</td>
-          <td>Two values (a priori birth_droid_volume_identifier et birth_droid_file_identifier) in GUID packet representation that are used to find the link target with the Link Tracking service.</td>
-      </tr>
-      <tr>
-          <td><code>extra.distributed_link_tracker.birth_droid_file_identifier</code></td>
-          <td>StringToLower</td>
-          <td></td>
-          <td>Two values (a priori birth_droid_volume_identifier et birth_droid_file_identifier) in GUID packet representation that are used to find the link target with the Link Tracking service.</td>
-      </tr>
-      <tr>
-          <td><code>extra.distributed_link_tracker.birth_droid_file_mft_seq</code></td>
-          <td>Int</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>extra.distributed_link_tracker.birth_droid_file_frn</code></td>
-          <td>IntToHex</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>extra.distributed_link_tracker.birth_droid_file_sequence_number</code></td>
-          <td>Int</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>extra.distributed_link_tracker.birth_droid_file_record_number</code></td>
-          <td>Int</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>extra.distributed_link_tracker.birth_droid_file_mft_seq</code></td>
-          <td>Extension</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>extra.distributed_link_tracker.birth_droid_file_timestamp</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>Timestamp generated by the parser by resolving birth_droid_volume_identifier and birth_droid_file_identifier?</td>
-      </tr>
-      <tr>
-          <td><code>extra.distributed_link_tracker.birth_droid_file_mac</code></td>
-          <td>String</td>
-          <td></td>
-          <td>MAC address generated by the parser by resolving birth_droid_volume_identifier and birth_droid_file_identifier?</td>
-      </tr>
-      <tr>
-          <td><code>extra.distributed_link_tracker.birth_droid_file_vendor</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Vendor information generated by the parser by resolving birth_droid_volume_identifier and birth_droid_file_identifier?</td>
-      </tr>
-      <tr>
-          <td><code>extra.console_properties</code></td>
-          <td>Object</td>
-          <td></td>
-          <td>Specifies the display settings to use when a link target specifies an application that is run in a console window.</td>
-      </tr>
-      <tr>
-          <td><code>extra.console_properties.size</code></td>
-          <td>Int</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>extra.console_properties.fill_attributes</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Specifies the fill attributes that control the foreground and background text colors in the console window.</td>
-      </tr>
-      <tr>
-          <td><code>extra.console_properties.popup_fill_attributes</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>specifies the fill attributes that control the foreground and background text color in the console window popup. The values are the same as for the FillAttributes field.</td>
-      </tr>
-      <tr>
-          <td><code>extra.console_properties.screen_buffer_size_x</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Specifies the horizontal size (X axis), in characters, of the console window buffer.</td>
-      </tr>
-      <tr>
-          <td><code>extra.console_properties.screen_buffer_size_y</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Specifies the vertical size (Y axis), in characters, of the console window buffer.</td>
-      </tr>
-      <tr>
-          <td><code>extra.console_properties.window_size_x</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Specifies the horizontal size (X axis), in characters, of the console window.</td>
-      </tr>
-      <tr>
-          <td><code>extra.console_properties.window_size_y</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Specifies the vertical size (Y axis), in characters, of the console window.</td>
-      </tr>
-      <tr>
-          <td><code>extra.console_properties.window_origin_x</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Specifies the horizontal coordinate (X axis), in pixels, of the console window origin.</td>
-      </tr>
-      <tr>
-          <td><code>extra.console_properties.window_origin_y</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Specifies the vertical coordinate (Y axis), in pixels, of the console window origin.</td>
-      </tr>
-      <tr>
-          <td><code>extra.console_properties.font_size</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Specifies the size, in pixels, of the font used in the console window.</td>
-      </tr>
-      <tr>
-          <td><code>extra.console_properties.font_family</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Specifies the family of the font used in the console window. This value MUST be comprised of a font family and a font pitch. Voir le tableau de la doc pour interpréter.</td>
-      </tr>
-      <tr>
-          <td><code>extra.console_properties.font_weight</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Specifies the stroke weight of the font used in the console window. lower than 700: regular, greater than 700: bold.</td>
-      </tr>
-      <tr>
-          <td><code>extra.console_properties.face_name</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Specifies the face name of the font used in the console window</td>
-      </tr>
-      <tr>
-          <td><code>extra.console_properties.cursor_size</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Specifies the size of the cursor, in pixels, used in the console window. lower than 25: small, 25-50: normal, 51-100: large.</td>
-      </tr>
-      <tr>
-          <td><code>extra.console_properties.full_screen</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Specifies whether to open the console window in full-screen mode. 0: windows, other: fullscreen.</td>
-      </tr>
-      <tr>
-          <td><code>extra.console_properties.quick_edit</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Specifies whether to open the console window in QuikEdit mode. In QuickEdit mode, the mouse can be used to cut, copy, and paste text in the console window. 0: off, other: on.</td>
-      </tr>
-      <tr>
-          <td><code>extra.console_properties.insert_mode</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Specifies insert mode in the console window. 0: disabled, other: enabled.</td>
-      </tr>
-      <tr>
-          <td><code>extra.console_properties.auto_position</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Specifies auto-position mode of the console window. 0: false, other: true ; if false, origin x and y are used.</td>
-      </tr>
-      <tr>
-          <td><code>extra.console_properties.history_buffer_size</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Specifies the size, in characters, of the buffer that is used to store a history of user input into the console window.</td>
-      </tr>
-      <tr>
-          <td><code>extra.console_properties.number_of_history_buffers</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Specifies the number of history buffers to use.</td>
-      </tr>
-      <tr>
-          <td><code>extra.console_properties.history_no_dup</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Specifies whether to remove duplicates in the history buffer. 0: duplicates not allowed, other: duplicates allowed</td>
-      </tr>
-      <tr>
-          <td><code>extra.console_properties.color_table</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>specifying the RGB colors that are used for text in the console window. The values of the fill attribute fields FillAttributes and PopupFillAttributes are used as indexes into this table to specify the final foreground and background color for a character.</td>
-      </tr>
-      <tr>
-          <td><code>extra.shell_item_identifier</code></td>
-          <td>Object</td>
-          <td></td>
-          <td>The VistaAndAboveIDListDataBlock structure specifies an alternate IDList that can be used instead of the LinkTargetIDList structure on platforms that support it.</td>
-      </tr>
-      <tr>
-          <td><code>extra.shell_item_identifier.id_list[]</code></td>
-          <td>Array[Object]</td>
-          <td></td>
-          <td>An IDList structure</td>
-      </tr>
-      <tr>
-          <td><code>extra.terminal_properties</code></td>
-          <td>Object</td>
-          <td></td>
-          <td>A structure that indicates the end of the extra data section.</td>
-      </tr>
-      <tr>
-          <td><code>extra.terminal_properties.size</code></td>
-          <td>Int</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>extra.terminal_properties.appended_data_sha256</code></td>
-          <td>String</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>extra.terminal_properties.appended_data_base64</code></td>
-          <td>String</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>target</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>target.items[]</code></td>
-          <td>Array[Object]</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>target.items[].strings[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td>Strings extracted from identifiers by the in-house parser</td>
-      </tr>
-      <tr>
-          <td><code>target.items[].identifiers</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>target.items[].item_class</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Common to every item types (RootFolder, VolumeItem, FileEntry, Internet, ControlPanel, UsersFilesFolder, Unknown). Indicates the type of element (Root Folder, Volume Item, File entry, etc&hellip;).</td>
-      </tr>
-      <tr>
-          <td><code>target.items[].sort_index</code></td>
-          <td>String</td>
-          <td></td>
-          <td>For items type &lsquo;RootFolder&rsquo;, should contains the root of the link.</td>
-      </tr>
-      <tr>
-          <td><code>target.items[].guid</code></td>
-          <td>String</td>
-          <td></td>
-          <td>For items type &lsquo;RootFolder&rsquo;, should contains a ShellFolderID.</td>
-      </tr>
-      <tr>
-          <td><code>target.items[].class_type_indicator</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Raw form (int) of flags; verify and hide if correct</td>
-      </tr>
-      <tr>
-          <td><code>target.items[].flags</code></td>
-          <td>String</td>
-          <td></td>
-          <td>For items type &lsquo;VolumeItem&rsquo; and &lsquo;FileEntry&rsquo;, contains a flag, possibly as a string if interpreted by the parser (examples: Is directory, Is file) and an int/hex value otherwise.</td>
-      </tr>
-      <tr>
-          <td><code>target.items[].data</code></td>
-          <td>String</td>
-          <td></td>
-          <td>For items type &lsquo;VolumeItem&rsquo;, should contain the volume letter.</td>
-      </tr>
-      <tr>
-          <td><code>target.items[].size</code></td>
-          <td>Int</td>
-          <td>FILE_SIZE</td>
-          <td>For items type &lsquo;FileEntry&rsquo;, contains the size of the target file (and probably 0 for a directory).</td>
-      </tr>
-      <tr>
-          <td><code>target.items[].modification_time</code></td>
-          <td>DateTime</td>
-          <td>DATE_MODIFICATION</td>
-          <td>For items type &lsquo;FileEntry&rsquo;, last modification date of the target file?</td>
-      </tr>
-      <tr>
-          <td><code>target.items[].file_attribute_flags</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>For items type &lsquo;FileEntry&rsquo;, target file attributes; interpreted?</td>
-      </tr>
-      <tr>
-          <td><code>target.items[].primary_name</code></td>
-          <td>String</td>
-          <td></td>
-          <td>For items type &lsquo;FileEntry&rsquo;, name of a file or directory in the target path.</td>
-      </tr>
-      <tr>
-          <td><code>target.items[].item_identifier</code></td>
-          <td>String</td>
-          <td></td>
-          <td>For items type &lsquo;ControlPanel&rsquo;</td>
-      </tr>
-      <tr>
-          <td><code>target.items[].data_base64</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Base64 content for Unknown item_class values.</td>
-      </tr>
-      <tr>
-          <td><code>target.items[].data_sha256</code></td>
-          <td>String</td>
-          <td></td>
-          <td>SHA-256 of the content for Unknown item_class values.</td>
-      </tr>
-      <tr>
-          <td><code>target.target_path</code></td>
-          <td>String</td>
-          <td>FILE_PATH</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>link_info</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>link_info.local_base_path</code></td>
-          <td>String</td>
-          <td>FILE_PATH</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>link_info.common_path_suffix</code></td>
-          <td>String</td>
-          <td>FILE_PATH</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>link_info.location</code></td>
-          <td>String</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>link_info.location_info</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>link_info.location_info.r_drive_type</code></td>
-          <td>Int</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>link_info.location_info.drive_type</code></td>
-          <td>String</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>link_info.location_info.drive_serial_number</code></td>
-          <td>String</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>link_info.location_info.volume_label</code></td>
-          <td>String</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>link_info.location_info.volume_label_unicode</code></td>
-          <td>String</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>link_info.location_info.common_network_relative_link_flags</code></td>
-          <td>String</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>link_info.location_info.r_network_provider_type</code></td>
-          <td>String</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>link_info.location_info.network_provider_type</code></td>
-          <td>String</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>link_info.location_info.net_name</code></td>
-          <td>String</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>link_info.location_info.net_name_unicode</code></td>
-          <td>String</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>link_info.location_info.device_name</code></td>
-          <td>String</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>link_info.location_info.device_name_unicode</code></td>
-          <td>String</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>slack</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>slack.payload</code></td>
-          <td>String</td>
-          <td></td>
-          <td></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Output Name</th>
+					<th>Data Type</th>
+					<th>Qualifier</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>file_creation_date</code></td>
+					<td>DateTime</td>
+					<td>DATE_CREATION</td>
+					<td>file creation date</td>
+			</tr>
+			<tr>
+					<td><code>file_modif_date</code></td>
+					<td>DateTime</td>
+					<td>DATE_MODIFICATION</td>
+					<td>file modification date</td>
+			</tr>
+			<tr>
+					<td><code>type</code></td>
+					<td>String</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>status</code></td>
+					<td>String</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>size</code></td>
+					<td>Int</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>modification_time</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>header</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>header.guid</code></td>
+					<td>StringToLower</td>
+					<td></td>
+					<td>LinkCLSID: class identifier (CLSID). This value MUST be {00021401-0000-0000-C000-000000000046}</td>
+			</tr>
+			<tr>
+					<td><code>header.link_flags[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>LinkFlags: specifies information about the shell link and the presence of optional portions of the structure</td>
+			</tr>
+			<tr>
+					<td><code>header.file_flags[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>FileAttributes: specifies information about the link target.</td>
+			</tr>
+			<tr>
+					<td><code>header.creation_time</code></td>
+					<td>DateTime</td>
+					<td>DATE_CREATION</td>
+					<td>Specifies the creation time of the link target in UTC (Coordinated Universal Time). If the value is zero, there is no creation time set on the link target.</td>
+			</tr>
+			<tr>
+					<td><code>header.access_time</code></td>
+					<td>DateTime</td>
+					<td>DATE_ACCESS</td>
+					<td>Specifies the access time of the link target in UTC (Coordinated Universal Time). If the value is zero, there is no access time set on the link target.</td>
+			</tr>
+			<tr>
+					<td><code>header.modification_time</code></td>
+					<td>DateTime</td>
+					<td>DATE_MODIFICATION</td>
+					<td>Specifies the write time of the link target in UTC (Coordinated Universal Time). If the value is zero, there is no write time set on the link target.</td>
+			</tr>
+			<tr>
+					<td><code>header.file_size</code></td>
+					<td>Int</td>
+					<td>FILE_SIZE</td>
+					<td>Specifies the size, in bytes, of the link target. If the link target file is larger than 0xFFFFFFFF, this value specifies the least significant 32 bits of the link target file size.</td>
+			</tr>
+			<tr>
+					<td><code>header.icon_index</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Specifies the index of an icon within a given icon location</td>
+			</tr>
+			<tr>
+					<td><code>header.windowstyle</code></td>
+					<td>String</td>
+					<td></td>
+					<td>ShowCommand: specifies the expected window state of an application launched by the link.</td>
+			</tr>
+			<tr>
+					<td><code>header.hotkey</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Specifies the keystrokes used to launch the application referenced by the shortcut key. This value is assigned to the application after it is launched, so that pressing the key activates that application.</td>
+			</tr>
+			<tr>
+					<td><code>header.reserved0</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>A value that MUST be zero</td>
+			</tr>
+			<tr>
+					<td><code>header.reserved1</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>A value that MUST be zero</td>
+			</tr>
+			<tr>
+					<td><code>header.reserved2</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>A value that MUST be zero</td>
+			</tr>
+			<tr>
+					<td><code>data</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>data.size</code></td>
+					<td>Int</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>data.description</code></td>
+					<td>String</td>
+					<td></td>
+					<td>NAME_STRING specifies a description of the shortcut that is displayed to end users to identify the purpose of the shell link.</td>
+			</tr>
+			<tr>
+					<td><code>data.relative_path</code></td>
+					<td>String</td>
+					<td>FILE_PATH</td>
+					<td>RELATIVE_PATH specifies the location of the link target relative to the file that contains the shell link. When specified, this string SHOULD be used when resolving the link.</td>
+			</tr>
+			<tr>
+					<td><code>data.working_directory</code></td>
+					<td>String</td>
+					<td>FILE_PATH</td>
+					<td>WORKING_DIR specifies the file system path of the working directory to be used when activating the link target.</td>
+			</tr>
+			<tr>
+					<td><code>data.command_line_arguments</code></td>
+					<td>String</td>
+					<td></td>
+					<td>COMMAND_LINE_ARGUMENTS stores the command-line arguments that are specified when activating the link target.</td>
+			</tr>
+			<tr>
+					<td><code>data.icon_location</code></td>
+					<td>String</td>
+					<td>FILE_PATH</td>
+					<td>ICON_LOCATION specifies the location of the icon to be used when displaying a shell link item in an icon view.</td>
+			</tr>
+			<tr>
+					<td><code>extra</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>extra.console_codepage</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Unsigned integer that specifies a code page language code identifier.</td>
+			</tr>
+			<tr>
+					<td><code>extra.icon_location</code></td>
+					<td>Object</td>
+					<td></td>
+					<td>Specifies the path to an icon. The path is encoded using environment variables, which makes it possible to find the icon across machines where the locations vary but are expressed using environment variables.</td>
+			</tr>
+			<tr>
+					<td><code>extra.icon_location.size</code></td>
+					<td>Int</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>extra.icon_location.target_ansi</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Defined by the system default code page, which specifies a path to environment variable information.</td>
+			</tr>
+			<tr>
+					<td><code>extra.icon_location.target_unicode</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Unicode string that specifies a path to environment variable information.</td>
+			</tr>
+			<tr>
+					<td><code>extra.environmental_variables_location</code></td>
+					<td>Object</td>
+					<td></td>
+					<td>Specifies a path to environment variable information when the link target refers to a location that has a corresponding environment variable.</td>
+			</tr>
+			<tr>
+					<td><code>extra.environmental_variables_location.size</code></td>
+					<td>Int</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>extra.environmental_variables_location.target_ansi</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Defined by the system default code page, which specifies a path to environment variable information.</td>
+			</tr>
+			<tr>
+					<td><code>extra.environmental_variables_location.target_unicode</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Unicode string that specifies a path to environment variable information.</td>
+			</tr>
+			<tr>
+					<td><code>extra.darwin_properties</code></td>
+					<td>Object</td>
+					<td></td>
+					<td>Specifies an application identifier that can be used instead of a link target IDList to install an application when a shell link is activated.</td>
+			</tr>
+			<tr>
+					<td><code>extra.darwin_properties.darwin_data_ansi</code></td>
+					<td>String</td>
+					<td></td>
+					<td>defined by the system default code page, which specifies an application identifier. This field SHOULD be ignored.</td>
+			</tr>
+			<tr>
+					<td><code>extra.darwin_properties.darwin_data_unicode</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Unicode string that specifies an application identifier.</td>
+			</tr>
+			<tr>
+					<td><code>extra.darwin_properties.product_code_id</code></td>
+					<td>StringToLower</td>
+					<td></td>
+					<td>Field created by the parser by interpreting the previous fields?</td>
+			</tr>
+			<tr>
+					<td><code>extra.darwin_properties.feature_name</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Field created by the parser by interpreting the previous fields?</td>
+			</tr>
+			<tr>
+					<td><code>extra.darwin_properties.component_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Field created by the parser by interpreting the previous fields?</td>
+			</tr>
+			<tr>
+					<td><code>extra.special_folder_location</code></td>
+					<td>Object</td>
+					<td></td>
+					<td>Specifies the location of a special folder. This data can be used when a link target is a special folder to keep track of the folder, so that the link target IDList can be translated when the link is loaded.</td>
+			</tr>
+			<tr>
+					<td><code>extra.special_folder_location.special_folder_id</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Unsigned integer that specifies the folder integer ID.</td>
+			</tr>
+			<tr>
+					<td><code>extra.special_folder_location.special_folder_name</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Translation of the special_folder_id value.</td>
+			</tr>
+			<tr>
+					<td><code>extra.known_folder_location</code></td>
+					<td>Object</td>
+					<td></td>
+					<td>Specifies the location of a known folder. This data can be used when a link target is a known folder to keep track of the folder so that the link target IDList can be translated when the link is loaded.</td>
+			</tr>
+			<tr>
+					<td><code>extra.known_folder_location.known_folder_id</code></td>
+					<td>StringToLower</td>
+					<td></td>
+					<td>GUID packet representation that specifies the folder GUID ID.</td>
+			</tr>
+			<tr>
+					<td><code>extra.metadata_properties</code></td>
+					<td>Object</td>
+					<td></td>
+					<td>PropertyStoreDataBlock specifies a set of properties that can be used by applications to store extra data in the shell link.</td>
+			</tr>
+			<tr>
+					<td><code>extra.metadata_properties.size</code></td>
+					<td>Int</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>extra.metadata_properties.property_store[]</code></td>
+					<td>Array[Object]</td>
+					<td></td>
+					<td>A serialized property storage structure</td>
+			</tr>
+			<tr>
+					<td><code>extra.metadata_properties.property_store[].version</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Has to be equal to 0x53505331.</td>
+			</tr>
+			<tr>
+					<td><code>extra.metadata_properties.property_store[].format_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>A GUID that specifies the semantics and expected usage of the properties contained in this Serialized Property Storage structure. It MUST be unique in the set of serialized property storage structures.</td>
+			</tr>
+			<tr>
+					<td><code>extra.metadata_properties.property_store[].serialized_property_values[]</code></td>
+					<td>Array[Object]</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>extra.metadata_properties.property_store[].serialized_property_values[].value_type</code></td>
+					<td>String</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>extra.metadata_properties.property_store[].serialized_property_values[].value</code></td>
+					<td>Dynamic</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>extra.metadata_properties.property_store[].serialized_property_values[].id</code></td>
+					<td>Int</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>extra.metadata_properties.property_store[].serialized_property_values[].name</code></td>
+					<td>String</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>extra.metadata_properties.property_store[].serialized_property_values[].name_size</code></td>
+					<td>Int</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>extra.shim_layer_properties</code></td>
+					<td>Object</td>
+					<td></td>
+					<td>Specifies the name of a shim that can be applied when activating a link target.</td>
+			</tr>
+			<tr>
+					<td><code>extra.shim_layer_properties.name</code></td>
+					<td>String</td>
+					<td></td>
+					<td>LayerName: unicode string that specifies the name of a shim layer to apply to a link target when it is being activated</td>
+			</tr>
+			<tr>
+					<td><code>extra.distributed_link_tracker</code></td>
+					<td>Object</td>
+					<td></td>
+					<td>Specifies data that can be used to resolve a link target if it is not found in its original location when the link is resolved. This data is passed to the Link Tracking service to find the link target.</td>
+			</tr>
+			<tr>
+					<td><code>extra.distributed_link_tracker.version</code></td>
+					<td>String</td>
+					<td></td>
+					<td>This value MUST be 0x00000000.</td>
+			</tr>
+			<tr>
+					<td><code>extra.distributed_link_tracker.machine_identifier</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Specifies the NetBIOS name of the machine where the link target was last known to reside.</td>
+			</tr>
+			<tr>
+					<td><code>extra.distributed_link_tracker.droid_volume_identifier</code></td>
+					<td>StringToLower</td>
+					<td>VOLUME_GUID</td>
+					<td>Two values (a priori droid_volume_identifier and droid_file_identifier) in GUID packet representation that are used to find the link target with the Link Tracking service.</td>
+			</tr>
+			<tr>
+					<td><code>extra.distributed_link_tracker.droid_file_identifier</code></td>
+					<td>StringToLower</td>
+					<td></td>
+					<td>Two values (a priori droid_volume_identifier and droid_file_identifier) in GUID packet representation that are used to find the link target with the Link Tracking service</td>
+			</tr>
+			<tr>
+					<td><code>extra.distributed_link_tracker.droid_file_mft_seq</code></td>
+					<td>Int</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>extra.distributed_link_tracker.droid_file_frn</code></td>
+					<td>IntToHex</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>extra.distributed_link_tracker.droid_file_sequence_number</code></td>
+					<td>Int</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>extra.distributed_link_tracker.droid_file_record_number</code></td>
+					<td>Int</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>extra.distributed_link_tracker.droid_file_mft_seq</code></td>
+					<td>Extension</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>extra.distributed_link_tracker.droid_file_frn_hex</code></td>
+					<td>Int</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>extra.distributed_link_tracker.droid_file_frn_split</code></td>
+					<td>String</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>extra.distributed_link_tracker.droid_file_timestamp</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>Information générée par le parseur grace à la résolution de droid_volume_identifier et droid_file_identifier ?</td>
+			</tr>
+			<tr>
+					<td><code>extra.distributed_link_tracker.droid_file_mac</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Information générée par le parseur grace à la résolution de droid_volume_identifier et droid_file_identifier ?</td>
+			</tr>
+			<tr>
+					<td><code>extra.distributed_link_tracker.droid_file_vendor</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Information générée par le parseur grace à la résolution de droid_volume_identifier et droid_file_identifier ?</td>
+			</tr>
+			<tr>
+					<td><code>extra.distributed_link_tracker.birth_droid_volume_identifier</code></td>
+					<td>StringToLower</td>
+					<td>VOLUME_GUID</td>
+					<td>Two values (a priori birth_droid_volume_identifier et birth_droid_file_identifier) in GUID packet representation that are used to find the link target with the Link Tracking service.</td>
+			</tr>
+			<tr>
+					<td><code>extra.distributed_link_tracker.birth_droid_file_identifier</code></td>
+					<td>StringToLower</td>
+					<td></td>
+					<td>Two values (a priori birth_droid_volume_identifier et birth_droid_file_identifier) in GUID packet representation that are used to find the link target with the Link Tracking service.</td>
+			</tr>
+			<tr>
+					<td><code>extra.distributed_link_tracker.birth_droid_file_mft_seq</code></td>
+					<td>Int</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>extra.distributed_link_tracker.birth_droid_file_frn</code></td>
+					<td>IntToHex</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>extra.distributed_link_tracker.birth_droid_file_sequence_number</code></td>
+					<td>Int</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>extra.distributed_link_tracker.birth_droid_file_record_number</code></td>
+					<td>Int</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>extra.distributed_link_tracker.birth_droid_file_mft_seq</code></td>
+					<td>Extension</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>extra.distributed_link_tracker.birth_droid_file_timestamp</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>Timestamp generated by the parser by resolving birth_droid_volume_identifier and birth_droid_file_identifier?</td>
+			</tr>
+			<tr>
+					<td><code>extra.distributed_link_tracker.birth_droid_file_mac</code></td>
+					<td>String</td>
+					<td></td>
+					<td>MAC address generated by the parser by resolving birth_droid_volume_identifier and birth_droid_file_identifier?</td>
+			</tr>
+			<tr>
+					<td><code>extra.distributed_link_tracker.birth_droid_file_vendor</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Vendor information generated by the parser by resolving birth_droid_volume_identifier and birth_droid_file_identifier?</td>
+			</tr>
+			<tr>
+					<td><code>extra.console_properties</code></td>
+					<td>Object</td>
+					<td></td>
+					<td>Specifies the display settings to use when a link target specifies an application that is run in a console window.</td>
+			</tr>
+			<tr>
+					<td><code>extra.console_properties.size</code></td>
+					<td>Int</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>extra.console_properties.fill_attributes</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Specifies the fill attributes that control the foreground and background text colors in the console window.</td>
+			</tr>
+			<tr>
+					<td><code>extra.console_properties.popup_fill_attributes</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>specifies the fill attributes that control the foreground and background text color in the console window popup. The values are the same as for the FillAttributes field.</td>
+			</tr>
+			<tr>
+					<td><code>extra.console_properties.screen_buffer_size_x</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Specifies the horizontal size (X axis), in characters, of the console window buffer.</td>
+			</tr>
+			<tr>
+					<td><code>extra.console_properties.screen_buffer_size_y</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Specifies the vertical size (Y axis), in characters, of the console window buffer.</td>
+			</tr>
+			<tr>
+					<td><code>extra.console_properties.window_size_x</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Specifies the horizontal size (X axis), in characters, of the console window.</td>
+			</tr>
+			<tr>
+					<td><code>extra.console_properties.window_size_y</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Specifies the vertical size (Y axis), in characters, of the console window.</td>
+			</tr>
+			<tr>
+					<td><code>extra.console_properties.window_origin_x</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Specifies the horizontal coordinate (X axis), in pixels, of the console window origin.</td>
+			</tr>
+			<tr>
+					<td><code>extra.console_properties.window_origin_y</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Specifies the vertical coordinate (Y axis), in pixels, of the console window origin.</td>
+			</tr>
+			<tr>
+					<td><code>extra.console_properties.font_size</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Specifies the size, in pixels, of the font used in the console window.</td>
+			</tr>
+			<tr>
+					<td><code>extra.console_properties.font_family</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Specifies the family of the font used in the console window. This value MUST be comprised of a font family and a font pitch. Voir le tableau de la doc pour interpréter.</td>
+			</tr>
+			<tr>
+					<td><code>extra.console_properties.font_weight</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Specifies the stroke weight of the font used in the console window. lower than 700: regular, greater than 700: bold.</td>
+			</tr>
+			<tr>
+					<td><code>extra.console_properties.face_name</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Specifies the face name of the font used in the console window</td>
+			</tr>
+			<tr>
+					<td><code>extra.console_properties.cursor_size</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Specifies the size of the cursor, in pixels, used in the console window. lower than 25: small, 25-50: normal, 51-100: large.</td>
+			</tr>
+			<tr>
+					<td><code>extra.console_properties.full_screen</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Specifies whether to open the console window in full-screen mode. 0: windows, other: fullscreen.</td>
+			</tr>
+			<tr>
+					<td><code>extra.console_properties.quick_edit</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Specifies whether to open the console window in QuikEdit mode. In QuickEdit mode, the mouse can be used to cut, copy, and paste text in the console window. 0: off, other: on.</td>
+			</tr>
+			<tr>
+					<td><code>extra.console_properties.insert_mode</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Specifies insert mode in the console window. 0: disabled, other: enabled.</td>
+			</tr>
+			<tr>
+					<td><code>extra.console_properties.auto_position</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Specifies auto-position mode of the console window. 0: false, other: true ; if false, origin x and y are used.</td>
+			</tr>
+			<tr>
+					<td><code>extra.console_properties.history_buffer_size</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Specifies the size, in characters, of the buffer that is used to store a history of user input into the console window.</td>
+			</tr>
+			<tr>
+					<td><code>extra.console_properties.number_of_history_buffers</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Specifies the number of history buffers to use.</td>
+			</tr>
+			<tr>
+					<td><code>extra.console_properties.history_no_dup</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Specifies whether to remove duplicates in the history buffer. 0: duplicates not allowed, other: duplicates allowed</td>
+			</tr>
+			<tr>
+					<td><code>extra.console_properties.color_table</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>specifying the RGB colors that are used for text in the console window. The values of the fill attribute fields FillAttributes and PopupFillAttributes are used as indexes into this table to specify the final foreground and background color for a character.</td>
+			</tr>
+			<tr>
+					<td><code>extra.shell_item_identifier</code></td>
+					<td>Object</td>
+					<td></td>
+					<td>The VistaAndAboveIDListDataBlock structure specifies an alternate IDList that can be used instead of the LinkTargetIDList structure on platforms that support it.</td>
+			</tr>
+			<tr>
+					<td><code>extra.shell_item_identifier.id_list[]</code></td>
+					<td>Array[Object]</td>
+					<td></td>
+					<td>An IDList structure</td>
+			</tr>
+			<tr>
+					<td><code>extra.terminal_properties</code></td>
+					<td>Object</td>
+					<td></td>
+					<td>A structure that indicates the end of the extra data section.</td>
+			</tr>
+			<tr>
+					<td><code>extra.terminal_properties.size</code></td>
+					<td>Int</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>extra.terminal_properties.appended_data_sha256</code></td>
+					<td>String</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>extra.terminal_properties.appended_data_base64</code></td>
+					<td>String</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>target</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>target.items[]</code></td>
+					<td>Array[Object]</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>target.items[].strings[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>Strings extracted from identifiers by the in-house parser</td>
+			</tr>
+			<tr>
+					<td><code>target.items[].identifiers</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>target.items[].item_class</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Common to every item types (RootFolder, VolumeItem, FileEntry, Internet, ControlPanel, UsersFilesFolder, Unknown). Indicates the type of element (Root Folder, Volume Item, File entry, etc&hellip;).</td>
+			</tr>
+			<tr>
+					<td><code>target.items[].sort_index</code></td>
+					<td>String</td>
+					<td></td>
+					<td>For items type &lsquo;RootFolder&rsquo;, should contains the root of the link.</td>
+			</tr>
+			<tr>
+					<td><code>target.items[].guid</code></td>
+					<td>String</td>
+					<td></td>
+					<td>For items type &lsquo;RootFolder&rsquo;, should contains a ShellFolderID.</td>
+			</tr>
+			<tr>
+					<td><code>target.items[].class_type_indicator</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Raw form (int) of flags; verify and hide if correct</td>
+			</tr>
+			<tr>
+					<td><code>target.items[].flags</code></td>
+					<td>String</td>
+					<td></td>
+					<td>For items type &lsquo;VolumeItem&rsquo; and &lsquo;FileEntry&rsquo;, contains a flag, possibly as a string if interpreted by the parser (examples: Is directory, Is file) and an int/hex value otherwise.</td>
+			</tr>
+			<tr>
+					<td><code>target.items[].data</code></td>
+					<td>String</td>
+					<td></td>
+					<td>For items type &lsquo;VolumeItem&rsquo;, should contain the volume letter.</td>
+			</tr>
+			<tr>
+					<td><code>target.items[].size</code></td>
+					<td>Int</td>
+					<td>FILE_SIZE</td>
+					<td>For items type &lsquo;FileEntry&rsquo;, contains the size of the target file (and probably 0 for a directory).</td>
+			</tr>
+			<tr>
+					<td><code>target.items[].modification_time</code></td>
+					<td>DateTime</td>
+					<td>DATE_MODIFICATION</td>
+					<td>For items type &lsquo;FileEntry&rsquo;, last modification date of the target file?</td>
+			</tr>
+			<tr>
+					<td><code>target.items[].file_attribute_flags</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>For items type &lsquo;FileEntry&rsquo;, target file attributes; interpreted?</td>
+			</tr>
+			<tr>
+					<td><code>target.items[].primary_name</code></td>
+					<td>String</td>
+					<td></td>
+					<td>For items type &lsquo;FileEntry&rsquo;, name of a file or directory in the target path.</td>
+			</tr>
+			<tr>
+					<td><code>target.items[].item_identifier</code></td>
+					<td>String</td>
+					<td></td>
+					<td>For items type &lsquo;ControlPanel&rsquo;</td>
+			</tr>
+			<tr>
+					<td><code>target.items[].data_base64</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Base64 content for Unknown item_class values.</td>
+			</tr>
+			<tr>
+					<td><code>target.items[].data_sha256</code></td>
+					<td>String</td>
+					<td></td>
+					<td>SHA-256 of the content for Unknown item_class values.</td>
+			</tr>
+			<tr>
+					<td><code>target.target_path</code></td>
+					<td>String</td>
+					<td>FILE_PATH</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>link_info</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>link_info.local_base_path</code></td>
+					<td>String</td>
+					<td>FILE_PATH</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>link_info.common_path_suffix</code></td>
+					<td>String</td>
+					<td>FILE_PATH</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>link_info.location</code></td>
+					<td>String</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>link_info.location_info</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>link_info.location_info.r_drive_type</code></td>
+					<td>Int</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>link_info.location_info.drive_type</code></td>
+					<td>String</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>link_info.location_info.drive_serial_number</code></td>
+					<td>String</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>link_info.location_info.volume_label</code></td>
+					<td>String</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>link_info.location_info.volume_label_unicode</code></td>
+					<td>String</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>link_info.location_info.common_network_relative_link_flags</code></td>
+					<td>String</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>link_info.location_info.r_network_provider_type</code></td>
+					<td>String</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>link_info.location_info.network_provider_type</code></td>
+					<td>String</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>link_info.location_info.net_name</code></td>
+					<td>String</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>link_info.location_info.net_name_unicode</code></td>
+					<td>String</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>link_info.location_info.device_name</code></td>
+					<td>String</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>link_info.location_info.device_name_unicode</code></td>
+					<td>String</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>slack</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>slack.payload</code></td>
+					<td>String</td>
+					<td></td>
+					<td></td>
+			</tr>
+	</tbody>
 </table>
 
         </div>

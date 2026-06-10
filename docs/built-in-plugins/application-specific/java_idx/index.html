@@ -44,13 +44,13 @@ for downstream analysis.
 
 
 
-  <meta itemprop="name" content="Java Idx">
-  <meta itemprop="description" content="Data Type: java_idx Python Parser: JavaIdx Description Extracts metadata about each downloaded artifact, including its URL, server IP, size, timestamps and signing status.
+	<meta itemprop="name" content="Java Idx">
+	<meta itemprop="description" content="Data Type: java_idx Python Parser: JavaIdx Description Extracts metadata about each downloaded artifact, including its URL, server IP, size, timestamps and signing status.
 The parser interprets version‑specific structures, handling incomplete or busy downloads, and converts dates to UTC where possible. All extracted fields are emitted as a structured tuple for downstream analysis.">
-  <meta itemprop="wordCount" content="233">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Java Idx">
-  <meta name="twitter:description" content="Data Type: java_idx Python Parser: JavaIdx Description Extracts metadata about each downloaded artifact, including its URL, server IP, size, timestamps and signing status.
+	<meta itemprop="wordCount" content="233">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Java Idx">
+	<meta name="twitter:description" content="Data Type: java_idx Python Parser: JavaIdx Description Extracts metadata about each downloaded artifact, including its URL, server IP, size, timestamps and signing status.
 The parser interprets version‑specific structures, handling incomplete or busy downloads, and converts dates to UTC where possible. All extracted fields are emitted as a structured tuple for downstream analysis.">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -1671,129 +1671,129 @@ for downstream analysis.</p>
 </ul>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Timeline Field</th>
-          <th>Data Field</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Description</td>
-          <td><code>url</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>ip_address</code></td>
-      </tr>
-      <tr>
-          <td>Additional Description</td>
-          <td><code>is_incomplete</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>is_shortcut</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>content_length</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>signed</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Timeline Field</th>
+					<th>Data Field</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Description</td>
+					<td><code>url</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>ip_address</code></td>
+			</tr>
+			<tr>
+					<td>Additional Description</td>
+					<td><code>is_incomplete</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>is_shortcut</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>content_length</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>signed</code></td>
+			</tr>
+	</tbody>
 </table>
 <h3>Fields<span class="hx:absolute hx:-mt-20" id="fields"></span>
     <a href="#fields" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Output Name</th>
-          <th>Data Type</th>
-          <th>Qualifier</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>url</code></td>
-          <td>String</td>
-          <td></td>
-          <td>download URL of the file</td>
-      </tr>
-      <tr>
-          <td><code>ip_address</code></td>
-          <td>String</td>
-          <td></td>
-          <td>source IP address of the server</td>
-      </tr>
-      <tr>
-          <td><code>is_incomplete</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>true if the download was incomplete or still in progress</td>
-      </tr>
-      <tr>
-          <td><code>content_length</code></td>
-          <td>Int</td>
-          <td>FILE_SIZE</td>
-          <td>size of the downloaded file in bytes</td>
-      </tr>
-      <tr>
-          <td><code>is_shortcut</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>true if the entry represents a shortcut rather than the actual file</td>
-      </tr>
-      <tr>
-          <td><code>version_string</code></td>
-          <td>String</td>
-          <td></td>
-          <td>version string extracted from the IDX file</td>
-      </tr>
-      <tr>
-          <td><code>namespace</code></td>
-          <td>String</td>
-          <td></td>
-          <td>namespace associated with the download</td>
-      </tr>
-      <tr>
-          <td><code>signed</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>indicates whether the downloaded file is digitally signed</td>
-      </tr>
-      <tr>
-          <td><code>download_date</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>timestamp when the file was downloaded</td>
-      </tr>
-      <tr>
-          <td><code>last_modified_date</code></td>
-          <td>DateTime</td>
-          <td>DATE_MODIFICATION</td>
-          <td>last‑modified timestamp reported by the server</td>
-      </tr>
-      <tr>
-          <td><code>expiration_date</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>expiration timestamp of the file or associated resource</td>
-      </tr>
-      <tr>
-          <td><code>validation_date</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>validation timestamp (available in IDX 6.05 format)</td>
-      </tr>
-      <tr>
-          <td><code>request</code></td>
-          <td>Object</td>
-          <td></td>
-          <td>raw HTTP request metadata extracted from the IDX file</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Output Name</th>
+					<th>Data Type</th>
+					<th>Qualifier</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>url</code></td>
+					<td>String</td>
+					<td></td>
+					<td>download URL of the file</td>
+			</tr>
+			<tr>
+					<td><code>ip_address</code></td>
+					<td>String</td>
+					<td></td>
+					<td>source IP address of the server</td>
+			</tr>
+			<tr>
+					<td><code>is_incomplete</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>true if the download was incomplete or still in progress</td>
+			</tr>
+			<tr>
+					<td><code>content_length</code></td>
+					<td>Int</td>
+					<td>FILE_SIZE</td>
+					<td>size of the downloaded file in bytes</td>
+			</tr>
+			<tr>
+					<td><code>is_shortcut</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>true if the entry represents a shortcut rather than the actual file</td>
+			</tr>
+			<tr>
+					<td><code>version_string</code></td>
+					<td>String</td>
+					<td></td>
+					<td>version string extracted from the IDX file</td>
+			</tr>
+			<tr>
+					<td><code>namespace</code></td>
+					<td>String</td>
+					<td></td>
+					<td>namespace associated with the download</td>
+			</tr>
+			<tr>
+					<td><code>signed</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>indicates whether the downloaded file is digitally signed</td>
+			</tr>
+			<tr>
+					<td><code>download_date</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>timestamp when the file was downloaded</td>
+			</tr>
+			<tr>
+					<td><code>last_modified_date</code></td>
+					<td>DateTime</td>
+					<td>DATE_MODIFICATION</td>
+					<td>last‑modified timestamp reported by the server</td>
+			</tr>
+			<tr>
+					<td><code>expiration_date</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>expiration timestamp of the file or associated resource</td>
+			</tr>
+			<tr>
+					<td><code>validation_date</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>validation timestamp (available in IDX 6.05 format)</td>
+			</tr>
+			<tr>
+					<td><code>request</code></td>
+					<td>Object</td>
+					<td></td>
+					<td>raw HTTP request metadata extracted from the IDX file</td>
+			</tr>
+	</tbody>
 </table>
 
         </div>

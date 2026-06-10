@@ -40,12 +40,12 @@ The plugin queries the Containers and Container_X tables to retrieve URL visits 
 
 
 
-  <meta itemprop="name" content="Ie Webcache History">
-  <meta itemprop="description" content="Data Type: ie_webcache_history Python Parser: IeWebCache Description Extracts browsing history records from Internet Explorer 10&#43; WebCache databases (WebCacheV01.dat). The plugin queries the Containers and Container_X tables to retrieve URL visits with metadata.">
-  <meta itemprop="wordCount" content="224">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Ie Webcache History">
-  <meta name="twitter:description" content="Data Type: ie_webcache_history Python Parser: IeWebCache Description Extracts browsing history records from Internet Explorer 10&#43; WebCache databases (WebCacheV01.dat). The plugin queries the Containers and Container_X tables to retrieve URL visits with metadata.">
+	<meta itemprop="name" content="Ie Webcache History">
+	<meta itemprop="description" content="Data Type: ie_webcache_history Python Parser: IeWebCache Description Extracts browsing history records from Internet Explorer 10&#43; WebCache databases (WebCacheV01.dat). The plugin queries the Containers and Container_X tables to retrieve URL visits with metadata.">
+	<meta itemprop="wordCount" content="224">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Ie Webcache History">
+	<meta name="twitter:description" content="Data Type: ie_webcache_history Python Parser: IeWebCache Description Extracts browsing history records from Internet Explorer 10&#43; WebCache databases (WebCacheV01.dat). The plugin queries the Containers and Container_X tables to retrieve URL visits with metadata.">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
     <link href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" rel="stylesheet" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -1662,157 +1662,157 @@ The plugin queries the Containers and Container_X tables to retrieve URL visits 
 </ul>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Timeline Field</th>
-          <th>Data Field</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Description</td>
-          <td><code>url</code></td>
-      </tr>
-      <tr>
-          <td>Additional Description</td>
-          <td><code>file_name</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>access_count</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>file_size</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Timeline Field</th>
+					<th>Data Field</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Description</td>
+					<td><code>url</code></td>
+			</tr>
+			<tr>
+					<td>Additional Description</td>
+					<td><code>file_name</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>access_count</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>file_size</code></td>
+			</tr>
+	</tbody>
 </table>
 <h3>Fields<span class="hx:absolute hx:-mt-20" id="fields"></span>
     <a href="#fields" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Output Name</th>
-          <th>Data Type</th>
-          <th>Qualifier</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>file_size</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Size of the cached file in bytes</td>
-      </tr>
-      <tr>
-          <td><code>type</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Record type identifier from WebCache</td>
-      </tr>
-      <tr>
-          <td><code>flags</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Flags associated with the cache entry</td>
-      </tr>
-      <tr>
-          <td><code>access_count</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Number of times this URL was accessed</td>
-      </tr>
-      <tr>
-          <td><code>sync_count</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Number of synchronization operations for this entry</td>
-      </tr>
-      <tr>
-          <td><code>exemption_delta</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Time offset exemption delta in seconds</td>
-      </tr>
-      <tr>
-          <td><code>url</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Visited URL</td>
-      </tr>
-      <tr>
-          <td><code>filename</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Cached file name (if applicable)</td>
-      </tr>
-      <tr>
-          <td><code>file_extension</code></td>
-          <td>String</td>
-          <td></td>
-          <td>File extension of the cached resource</td>
-      </tr>
-      <tr>
-          <td><code>redirect_url</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Redirect target URL (if any)</td>
-      </tr>
-      <tr>
-          <td><code>request_headers</code></td>
-          <td>String</td>
-          <td></td>
-          <td>HTTP request headers (hex encoded)</td>
-      </tr>
-      <tr>
-          <td><code>response_headers</code></td>
-          <td>String</td>
-          <td></td>
-          <td>HTTP response headers (hex encoded)</td>
-      </tr>
-      <tr>
-          <td><code>group</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Cache group identifier (hex encoded)</td>
-      </tr>
-      <tr>
-          <td><code>sync_time</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>Last synchronization time in UTC</td>
-      </tr>
-      <tr>
-          <td><code>creation_time</code></td>
-          <td>DateTime</td>
-          <td>DATE_CREATION</td>
-          <td>Entry creation timestamp in UTC</td>
-      </tr>
-      <tr>
-          <td><code>expiry_time</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>Expiration timestamp in UTC</td>
-      </tr>
-      <tr>
-          <td><code>modified_time</code></td>
-          <td>DateTime</td>
-          <td>DATE_MODIFICATION</td>
-          <td>Last modification timestamp in UTC</td>
-      </tr>
-      <tr>
-          <td><code>accessed_time</code></td>
-          <td>DateTime</td>
-          <td>DATE_ACCESS</td>
-          <td>Last access timestamp in UTC</td>
-      </tr>
-      <tr>
-          <td><code>post_check_time</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>Time of last post-check validation in UTC</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Output Name</th>
+					<th>Data Type</th>
+					<th>Qualifier</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>file_size</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Size of the cached file in bytes</td>
+			</tr>
+			<tr>
+					<td><code>type</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Record type identifier from WebCache</td>
+			</tr>
+			<tr>
+					<td><code>flags</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Flags associated with the cache entry</td>
+			</tr>
+			<tr>
+					<td><code>access_count</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Number of times this URL was accessed</td>
+			</tr>
+			<tr>
+					<td><code>sync_count</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Number of synchronization operations for this entry</td>
+			</tr>
+			<tr>
+					<td><code>exemption_delta</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Time offset exemption delta in seconds</td>
+			</tr>
+			<tr>
+					<td><code>url</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Visited URL</td>
+			</tr>
+			<tr>
+					<td><code>filename</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Cached file name (if applicable)</td>
+			</tr>
+			<tr>
+					<td><code>file_extension</code></td>
+					<td>String</td>
+					<td></td>
+					<td>File extension of the cached resource</td>
+			</tr>
+			<tr>
+					<td><code>redirect_url</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Redirect target URL (if any)</td>
+			</tr>
+			<tr>
+					<td><code>request_headers</code></td>
+					<td>String</td>
+					<td></td>
+					<td>HTTP request headers (hex encoded)</td>
+			</tr>
+			<tr>
+					<td><code>response_headers</code></td>
+					<td>String</td>
+					<td></td>
+					<td>HTTP response headers (hex encoded)</td>
+			</tr>
+			<tr>
+					<td><code>group</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Cache group identifier (hex encoded)</td>
+			</tr>
+			<tr>
+					<td><code>sync_time</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>Last synchronization time in UTC</td>
+			</tr>
+			<tr>
+					<td><code>creation_time</code></td>
+					<td>DateTime</td>
+					<td>DATE_CREATION</td>
+					<td>Entry creation timestamp in UTC</td>
+			</tr>
+			<tr>
+					<td><code>expiry_time</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>Expiration timestamp in UTC</td>
+			</tr>
+			<tr>
+					<td><code>modified_time</code></td>
+					<td>DateTime</td>
+					<td>DATE_MODIFICATION</td>
+					<td>Last modification timestamp in UTC</td>
+			</tr>
+			<tr>
+					<td><code>accessed_time</code></td>
+					<td>DateTime</td>
+					<td>DATE_ACCESS</td>
+					<td>Last access timestamp in UTC</td>
+			</tr>
+			<tr>
+					<td><code>post_check_time</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>Time of last post-check validation in UTC</td>
+			</tr>
+	</tbody>
 </table>
 
         </div>

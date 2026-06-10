@@ -42,12 +42,12 @@ time.
 
 
 
-  <meta itemprop="name" content="Browser History Lite">
-  <meta itemprop="description" content="Data Type: browser_history Python Parser: SQLite Description Extracts navigation records from a Firefox places sqlite database. It records each visited URL together with its title, visit timestamp, visit count, and the referring page (if any). Each row corresponds to a single page visit, allowing reconstruction of browsing activity over time.">
-  <meta itemprop="wordCount" content="150">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Browser History Lite">
-  <meta name="twitter:description" content="Data Type: browser_history Python Parser: SQLite Description Extracts navigation records from a Firefox places sqlite database. It records each visited URL together with its title, visit timestamp, visit count, and the referring page (if any). Each row corresponds to a single page visit, allowing reconstruction of browsing activity over time.">
+	<meta itemprop="name" content="Browser History Lite">
+	<meta itemprop="description" content="Data Type: browser_history Python Parser: SQLite Description Extracts navigation records from a Firefox places sqlite database. It records each visited URL together with its title, visit timestamp, visit count, and the referring page (if any). Each row corresponds to a single page visit, allowing reconstruction of browsing activity over time.">
+	<meta itemprop="wordCount" content="150">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Browser History Lite">
+	<meta name="twitter:description" content="Data Type: browser_history Python Parser: SQLite Description Extracts navigation records from a Firefox places sqlite database. It records each visited URL together with its title, visit timestamp, visit count, and the referring page (if any). Each row corresponds to a single page visit, allowing reconstruction of browsing activity over time.">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
     <link href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" rel="stylesheet" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -1666,79 +1666,79 @@ time.</p>
 </ul>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Timeline Field</th>
-          <th>Data Field</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Description</td>
-          <td><code>url</code></td>
-      </tr>
-      <tr>
-          <td>Additional Description</td>
-          <td><code>title</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>visit_count</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>referer</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Timeline Field</th>
+					<th>Data Field</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Description</td>
+					<td><code>url</code></td>
+			</tr>
+			<tr>
+					<td>Additional Description</td>
+					<td><code>title</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>visit_count</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>referer</code></td>
+			</tr>
+	</tbody>
 </table>
 <h3>Fields<span class="hx:absolute hx:-mt-20" id="fields"></span>
     <a href="#fields" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Output Name</th>
-          <th>Data Type</th>
-          <th>Qualifier</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>url</code></td>
-          <td>String</td>
-          <td></td>
-          <td>URL of the visited page</td>
-      </tr>
-      <tr>
-          <td><code>title</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Title of the visited page</td>
-      </tr>
-      <tr>
-          <td><code>visit_date</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>Timestamp when the page was visited</td>
-      </tr>
-      <tr>
-          <td><code>visit_count</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Number of times the page has been visited</td>
-      </tr>
-      <tr>
-          <td><code>referer</code></td>
-          <td>String</td>
-          <td></td>
-          <td>URL of the referring page, if any</td>
-      </tr>
-      <tr>
-          <td><code>hidden</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Flag indicating whether the entry is hidden from history (1 = hidden)</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Output Name</th>
+					<th>Data Type</th>
+					<th>Qualifier</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>url</code></td>
+					<td>String</td>
+					<td></td>
+					<td>URL of the visited page</td>
+			</tr>
+			<tr>
+					<td><code>title</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Title of the visited page</td>
+			</tr>
+			<tr>
+					<td><code>visit_date</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>Timestamp when the page was visited</td>
+			</tr>
+			<tr>
+					<td><code>visit_count</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Number of times the page has been visited</td>
+			</tr>
+			<tr>
+					<td><code>referer</code></td>
+					<td>String</td>
+					<td></td>
+					<td>URL of the referring page, if any</td>
+			</tr>
+			<tr>
+					<td><code>hidden</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Flag indicating whether the entry is hidden from history (1 = hidden)</td>
+			</tr>
+	</tbody>
 </table>
 
         </div>

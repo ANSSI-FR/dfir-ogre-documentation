@@ -45,64 +45,64 @@ Timeline
 
 Fields
     
-  
-      
-          Output Name
-          Data Type
-          Qualifier
-          Description
-      
-  
-  
-      
-          computer_name
-          String
-          
-          Host name that produced the GetObjInfo report
-      
-      
-          operating_system
-          String
-          
-          Operating system version string (e.g., &lsquo;Windows Server 2016 Standard Edition&rsquo;)
-      
-      
-          object_type
-          String
-          
-          Type of Windows object (Mutant, Type, Directory, SymbolicLink, etc.)
-      
-      
-          object_name
-          String
-          
-          Name of the Windows object in the namespace
-      
-      
-          object_path
-          String
-          
-          Full path of the object in the object manager namespace
-      
-      
-          link_target
-          String
-          
-          Target path that a symbolic link points to (empty if not applicable)
-      
-      
-          link_creation_time
-          DateTime
-          
-          Timestamp when the link was created
-      
-      
-          description
-          String
-          
-          Additional description or metadata about the object
-      
-  
+	
+			
+					Output Name
+					Data Type
+					Qualifier
+					Description
+			
+	
+	
+			
+					computer_name
+					String
+					
+					Host name that produced the GetObjInfo report
+			
+			
+					operating_system
+					String
+					
+					Operating system version string (e.g., &lsquo;Windows Server 2016 Standard Edition&rsquo;)
+			
+			
+					object_type
+					String
+					
+					Type of Windows object (Mutant, Type, Directory, SymbolicLink, etc.)
+			
+			
+					object_name
+					String
+					
+					Name of the Windows object in the namespace
+			
+			
+					object_path
+					String
+					
+					Full path of the object in the object manager namespace
+			
+			
+					link_target
+					String
+					
+					Target path that a symbolic link points to (empty if not applicable)
+			
+			
+					link_creation_time
+					DateTime
+					
+					Timestamp when the link was created
+			
+			
+					description
+					String
+					
+					Additional description or metadata about the object
+			
+	
 
     
   ">
@@ -116,13 +116,13 @@ Fields
 
 
 
-  <meta itemprop="name" content="Objinfo">
-  <meta itemprop="description" content="Data Type: objinfo Python Parser: Csv Description Parses files produced by the GetObjInfo utility, extracting Windows object information from the object manager namespace.
+	<meta itemprop="name" content="Objinfo">
+	<meta itemprop="description" content="Data Type: objinfo Python Parser: Csv Description Parses files produced by the GetObjInfo utility, extracting Windows object information from the object manager namespace.
 Object type indicates whether the entry is a directory, mutex, symbolic link, etc. Object name and path uniquely identify each object in the namespace. Link target shows where a symbolic link points to when present. Creation time records when a link was established. Timeline This plugin does not contains timestamped data and cannot be used to create a timeline Fields Output Name Data Type Qualifier Description computer_name String Host name that produced the GetObjInfo report operating_system String Operating system version string (e.g., ‘Windows Server 2016 Standard Edition’) object_type String Type of Windows object (Mutant, Type, Directory, SymbolicLink, etc.) object_name String Name of the Windows object in the namespace object_path String Full path of the object in the object manager namespace link_target String Target path that a symbolic link points to (empty if not applicable) link_creation_time DateTime Timestamp when the link was created description String Additional description or metadata about the object">
-  <meta itemprop="wordCount" content="174">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Objinfo">
-  <meta name="twitter:description" content="Data Type: objinfo Python Parser: Csv Description Parses files produced by the GetObjInfo utility, extracting Windows object information from the object manager namespace.
+	<meta itemprop="wordCount" content="174">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Objinfo">
+	<meta name="twitter:description" content="Data Type: objinfo Python Parser: Csv Description Parses files produced by the GetObjInfo utility, extracting Windows object information from the object manager namespace.
 Object type indicates whether the entry is a directory, mutex, symbolic link, etc. Object name and path uniquely identify each object in the namespace. Link target shows where a symbolic link points to when present. Creation time records when a link was established. Timeline This plugin does not contains timestamped data and cannot be used to create a timeline Fields Output Name Data Type Qualifier Description computer_name String Host name that produced the GetObjInfo report operating_system String Operating system version string (e.g., ‘Windows Server 2016 Standard Edition’) object_type String Type of Windows object (Mutant, Type, Directory, SymbolicLink, etc.) object_name String Name of the Windows object in the namespace object_path String Full path of the object in the object manager namespace link_target String Target path that a symbolic link points to (empty if not applicable) link_creation_time DateTime Timestamp when the link was created description String Additional description or metadata about the object">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -1748,64 +1748,64 @@ Python Parser: <strong>Csv</strong></div>
 
 <h3>Fields<span class="hx:absolute hx:-mt-20" id="fields"></span>
     <a href="#fields" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Output Name</th>
-          <th>Data Type</th>
-          <th>Qualifier</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>computer_name</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Host name that produced the GetObjInfo report</td>
-      </tr>
-      <tr>
-          <td><code>operating_system</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Operating system version string (e.g., &lsquo;Windows Server 2016 Standard Edition&rsquo;)</td>
-      </tr>
-      <tr>
-          <td><code>object_type</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Type of Windows object (Mutant, Type, Directory, SymbolicLink, etc.)</td>
-      </tr>
-      <tr>
-          <td><code>object_name</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Name of the Windows object in the namespace</td>
-      </tr>
-      <tr>
-          <td><code>object_path</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Full path of the object in the object manager namespace</td>
-      </tr>
-      <tr>
-          <td><code>link_target</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Target path that a symbolic link points to (empty if not applicable)</td>
-      </tr>
-      <tr>
-          <td><code>link_creation_time</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>Timestamp when the link was created</td>
-      </tr>
-      <tr>
-          <td><code>description</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Additional description or metadata about the object</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Output Name</th>
+					<th>Data Type</th>
+					<th>Qualifier</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>computer_name</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Host name that produced the GetObjInfo report</td>
+			</tr>
+			<tr>
+					<td><code>operating_system</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Operating system version string (e.g., &lsquo;Windows Server 2016 Standard Edition&rsquo;)</td>
+			</tr>
+			<tr>
+					<td><code>object_type</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Type of Windows object (Mutant, Type, Directory, SymbolicLink, etc.)</td>
+			</tr>
+			<tr>
+					<td><code>object_name</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Name of the Windows object in the namespace</td>
+			</tr>
+			<tr>
+					<td><code>object_path</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Full path of the object in the object manager namespace</td>
+			</tr>
+			<tr>
+					<td><code>link_target</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Target path that a symbolic link points to (empty if not applicable)</td>
+			</tr>
+			<tr>
+					<td><code>link_creation_time</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>Timestamp when the link was created</td>
+			</tr>
+			<tr>
+					<td><code>description</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Additional description or metadata about the object</td>
+			</tr>
+	</tbody>
 </table>
 
         </div>

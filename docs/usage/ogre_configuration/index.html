@@ -56,15 +56,15 @@ Overview
 
 
 
-  <meta itemprop="name" content="Configuration guide">
-  <meta itemprop="description" content="Most of DFIR-OGRE commands relies on a ogre.yaml configuration file, It tells the CLI where to write outputs, how the generated records should be formatted and which plugins to run on which file.
+	<meta itemprop="name" content="Configuration guide">
+	<meta itemprop="description" content="Most of DFIR-OGRE commands relies on a ogre.yaml configuration file, It tells the CLI where to write outputs, how the generated records should be formatted and which plugins to run on which file.
 Ready to use ogre.yaml files are provided in the dfir-ogre/configuration/ folder. The configuration files for the default plugins are available in the dfir-ogre-plugin-windows/configuration/ folder. Overview Here is a example of a configuration file.">
-  <meta itemprop="datePublished" content="2026-01-06T15:52:05+01:00">
-  <meta itemprop="dateModified" content="2026-01-06T15:52:05+01:00">
-  <meta itemprop="wordCount" content="753">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Configuration guide">
-  <meta name="twitter:description" content="Most of DFIR-OGRE commands relies on a ogre.yaml configuration file, It tells the CLI where to write outputs, how the generated records should be formatted and which plugins to run on which file.
+	<meta itemprop="datePublished" content="2026-01-06T15:52:05+01:00">
+	<meta itemprop="dateModified" content="2026-01-06T15:52:05+01:00">
+	<meta itemprop="wordCount" content="928">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Configuration guide">
+	<meta name="twitter:description" content="Most of DFIR-OGRE commands relies on a ogre.yaml configuration file, It tells the CLI where to write outputs, how the generated records should be formatted and which plugins to run on which file.
 Ready to use ogre.yaml files are provided in the dfir-ogre/configuration/ folder. The configuration files for the default plugins are available in the dfir-ogre-plugin-windows/configuration/ folder. Overview Here is a example of a configuration file.">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -1659,6 +1659,22 @@ Ready to use ogre.yaml files are provided in the dfir-ogre/configuration/ folder
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
         <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#example-1">Example
         </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#logging-configuration">Logging Configuration
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#overview-1">Overview
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#default-no-file-logging">Default (No File Logging)
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#file-logging">File Logging
+        </a>
       </li></ul>
       <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400">
         <button id="backToTop" tabindex="-1" onClick="scrollUp();" class="hx:cursor-pointer hx:transition-all hx:duration-75 hx:opacity-0 hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
@@ -1718,6 +1734,13 @@ Ready to use ogre.yaml files are provided in the dfir-ogre/configuration/ folder
 </span></span></span><span class="line"><span class="cl"><span class="nt">inner_archive_password</span><span class="p">:</span><span class="w"> </span><span class="l">avproof</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="nt">plugin_folder</span><span class="p">:</span><span class="w"> </span><span class="l">dfir-ogre-plugin-windows/configuration/ </span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c"># Optionnal log configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c"># log_file_path: ./</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c"># log_file_name: dfir-ogre.log</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c"># log_level: INFO # ERROR DEBUG</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c"># log_max_bytes: 5242880 #1024*1024*5 (5Mb)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c"># log_backup_count: 3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="nt">output</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">timeline</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">gzip</span><span class="w">
@@ -1776,42 +1799,42 @@ Ready to use ogre.yaml files are provided in the dfir-ogre/configuration/ folder
 <h2>Place‑holder Variables<span class="hx:absolute hx:-mt-20" id="placeholder-variables"></span>
     <a href="#placeholder-variables" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The configuration file uses a few <strong>runtime placeholders</strong> that are substituted during the parsing:</p>
 <table>
-  <thead>
-      <tr>
-          <th>Placeholder</th>
-          <th>What it expands to</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>$output_folder</code></td>
-          <td>The global <code>output_folder</code> defined at the top of the file (with <code>$case</code> already replaced).</td>
-      </tr>
-      <tr>
-          <td><code>$plugin_folder</code></td>
-          <td>The global &lsquo;plugin_folder&rsquo; defined at the top of the file</td>
-      </tr>
-      <tr>
-          <td><code>$case</code></td>
-          <td>The global &lsquo;case&rsquo; name defined at the top of the file</td>
-      </tr>
-      <tr>
-          <td><code>$computer_name</code></td>
-          <td>The computer name extracted from the ORC metadata.</td>
-      </tr>
-      <tr>
-          <td><code>$mapping_label</code></td>
-          <td>The <code>mapping_label</code> of the <em>current</em> mapping entry.</td>
-      </tr>
-      <tr>
-          <td><code>$file_name</code></td>
-          <td>Base name of the extracted source file (without extension).</td>
-      </tr>
-      <tr>
-          <td><code>$dir_tree</code></td>
-          <td>Directory tree defined when using the CLI whith json parameters</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Placeholder</th>
+					<th>What it expands to</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>$output_folder</code></td>
+					<td>The global <code>output_folder</code> defined at the top of the file (with <code>$case</code> already replaced).</td>
+			</tr>
+			<tr>
+					<td><code>$plugin_folder</code></td>
+					<td>The global &lsquo;plugin_folder&rsquo; defined at the top of the file</td>
+			</tr>
+			<tr>
+					<td><code>$case</code></td>
+					<td>The global &lsquo;case&rsquo; name defined at the top of the file</td>
+			</tr>
+			<tr>
+					<td><code>$computer_name</code></td>
+					<td>The computer name extracted from the ORC metadata.</td>
+			</tr>
+			<tr>
+					<td><code>$mapping_label</code></td>
+					<td>The <code>mapping_label</code> of the <em>current</em> mapping entry.</td>
+			</tr>
+			<tr>
+					<td><code>$file_name</code></td>
+					<td>Base name of the extracted source file (without extension).</td>
+			</tr>
+			<tr>
+					<td><code>$dir_tree</code></td>
+					<td>Directory tree defined when using the CLI whith json parameters</td>
+			</tr>
+	</tbody>
 </table>
 <h2>Output Section: how to write extracted artefacts<span class="hx:absolute hx:-mt-20" id="output-section-how-to-write-extracted-artefacts"></span>
     <a href="#output-section-how-to-write-extracted-artefacts" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The <code>output</code> block defines output &ldquo;templates&rdquo;,
@@ -1920,6 +1943,88 @@ each entry can be referenced in the <code>mapping</code> section via the <code>o
 <li>launch the plugin defined in <code>activity_cache.xml</code></li>
 <li>write result using the <code>timeline</code> output template</li>
 </ol>
+<h2>Logging Configuration<span class="hx:absolute hx:-mt-20" id="logging-configuration"></span>
+    <a href="#logging-configuration" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Overview<span class="hx:absolute hx:-mt-20" id="overview-1"></span>
+    <a href="#overview-1" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>DFIR-OGRE supports two logging modes: <strong>stdout-only</strong> (default) and <strong>file + stdout</strong> (optional, configured via <code>ogre.yaml</code>).</p>
+<p>Logs use this format:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><pre><code>YYYY-MM-DD HH:MM:SS,mmm - LEVEL - Message</code></pre></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+    aria-label="Copy code"
+    data-copied-label="Copied!"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Default (No File Logging)<span class="hx:absolute hx:-mt-20" id="default-no-file-logging"></span>
+    <a href="#default-no-file-logging" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>If no config file is provided, or the config file lacks log settings, dfir-ogre outputs to <strong>stdout only</strong> at <code>INFO</code> level. No log files are created.</p>
+<h3>File Logging<span class="hx:absolute hx:-mt-20" id="file-logging"></span>
+    <a href="#file-logging" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>To enable log rotation to a file, uncomment and set the <code>log_*</code> options in <code>configuration/ogre.yaml</code>:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div class="hextra-code-filename not-prose" dir="auto">configuration/ogre.yaml</div><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">log_file_name</span><span class="p">:</span><span class="w"> </span><span class="l">dfir-ogre.log</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">log_file_path</span><span class="p">:</span><span class="w"> </span><span class="l">./</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">log_level</span><span class="p">:</span><span class="w"> </span><span class="l">INFO</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">log_max_bytes</span><span class="p">:</span><span class="w"> </span><span class="m">5242880</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">log_backup_count</span><span class="p">:</span><span class="w"> </span><span class="m">3</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-8">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+    aria-label="Copy code"
+    data-copied-label="Copied!"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<table>
+	<thead>
+			<tr>
+					<th>Option</th>
+					<th>Type</th>
+					<th>Default</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>log_file_name</code></td>
+					<td>string</td>
+					<td><em>(none)</em></td>
+					<td>Log file name. <strong>Required</strong> — if omitted, file logging is disabled entirely.</td>
+			</tr>
+			<tr>
+					<td><code>log_file_path</code></td>
+					<td>string</td>
+					<td><code>./</code></td>
+					<td>Directory for the log file. Created automatically if missing.</td>
+			</tr>
+			<tr>
+					<td><code>log_level</code></td>
+					<td>string</td>
+					<td><code>INFO</code></td>
+					<td>Minimum level: <code>DEBUG</code>, <code>INFO</code>, <code>WARNING</code>, <code>ERROR</code>, <code>CRITICAL</code></td>
+			</tr>
+			<tr>
+					<td><code>log_max_bytes</code></td>
+					<td>int</td>
+					<td><code>5242880</code> (5 MB)</td>
+					<td>Max size per log file before rotation.</td>
+			</tr>
+			<tr>
+					<td><code>log_backup_count</code></td>
+					<td>int</td>
+					<td><code>3</code></td>
+					<td>Number of rotated <code>.1</code>, <code>.2</code>, <code>.3</code> backup files to keep.</td>
+			</tr>
+	</tbody>
+</table>
 
         </div>
         <div class="hx:mt-16"></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a

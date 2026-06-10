@@ -34,159 +34,159 @@ Provides DHCP‑derived addresses and DNS when enabled.
 
 Timeline
     
-  
-      
-          Timeline Field
-          Data Field
-      
-  
-  
-      
-          Related User
-          key_security.owner_sid
-      
-      
-          Description
-          ip_address
-      
-      
-          
-          dns_suffix
-      
-      
-          
-          dhcp
-      
-      
-          Additional Description
-          network_mask
-      
-      
-          
-          gateway
-      
-  
+	
+			
+					Timeline Field
+					Data Field
+			
+	
+	
+			
+					Related User
+					key_security.owner_sid
+			
+			
+					Description
+					ip_address
+			
+			
+					
+					dns_suffix
+			
+			
+					
+					dhcp
+			
+			
+					Additional Description
+					network_mask
+			
+			
+					
+					gateway
+			
+	
 
 Fields
     
-  
-      
-          Output Name
-          Data Type
-          Qualifier
-          Description
-      
-  
-  
-      
-          ip_address
-          String
-          IP_ADDRESS
-          IP address assigned to the network interface
-      
-      
-          network_mask
-          String
-          
-          Subnet mask associated with the IP address
-      
-      
-          dhcp
-          Bool
-          
-          
-      
-      
-          dhcp_server
-          String
-          
-          Address of the DHCP server that provided the configuration
-      
-      
-          dns_suffix
-          String
-          
-          DNS suffix (domain) applied to the interface
-      
-      
-          name_servers
-          String
-          
-          Comma‑separated list of DNS name‑server addresses
-      
-      
-          gateway
-          String
-          
-          Default gateway IP address for the interface
-      
-      
-          key_path
-          String
-          KEY_PATH
-          full registry key name
-      
-      
-          key_modif_time
-          DateTime
-          DATE_MODIFICATION
-          last modification timestamp of the registry key
-      
-      
-          key_security
-          Object
-          
-          
-      
-      
-          key_security.owner_sid
-          String
-          USER_SID
-          SID of the user that owns the registry key
-      
-      
-          key_security.group_sid
-          String
-          
-          SID of the group that owns the registry key
-      
-      
-          key_security.control_flags[]
-          Array[String]
-          
-          security descriptor control flags for the key
-      
-      
-          key_security.dacl_ace
-          Object
-          
-          
-      
-      
-          key_security.dacl_ace.ace_type
-          String
-          
-          type of ACE (e.g., allow, deny)
-      
-      
-          key_security.dacl_ace.account_sid
-          String
-          
-          SID of the account the ACE applies to
-      
-      
-          key_security.dacl_ace.ace_flags[]
-          Array[String]
-          
-          ACE flags that modify inheritance or behavior
-      
-      
-          key_security.dacl_ace.rights[]
-          Array[String]
-          
-          permissions granted or denied by the ACE
-      
-  
+	
+			
+					Output Name
+					Data Type
+					Qualifier
+					Description
+			
+	
+	
+			
+					ip_address
+					String
+					IP_ADDRESS
+					IP address assigned to the network interface
+			
+			
+					network_mask
+					String
+					
+					Subnet mask associated with the IP address
+			
+			
+					dhcp
+					Bool
+					
+					
+			
+			
+					dhcp_server
+					String
+					
+					Address of the DHCP server that provided the configuration
+			
+			
+					dns_suffix
+					String
+					
+					DNS suffix (domain) applied to the interface
+			
+			
+					name_servers
+					String
+					
+					Comma‑separated list of DNS name‑server addresses
+			
+			
+					gateway
+					String
+					
+					Default gateway IP address for the interface
+			
+			
+					key_path
+					String
+					KEY_PATH
+					full registry key name
+			
+			
+					key_modif_time
+					DateTime
+					DATE_MODIFICATION
+					last modification timestamp of the registry key
+			
+			
+					key_security
+					Object
+					
+					
+			
+			
+					key_security.owner_sid
+					String
+					USER_SID
+					SID of the user that owns the registry key
+			
+			
+					key_security.group_sid
+					String
+					
+					SID of the group that owns the registry key
+			
+			
+					key_security.control_flags[]
+					Array[String]
+					
+					security descriptor control flags for the key
+			
+			
+					key_security.dacl_ace
+					Object
+					
+					
+			
+			
+					key_security.dacl_ace.ace_type
+					String
+					
+					type of ACE (e.g., allow, deny)
+			
+			
+					key_security.dacl_ace.account_sid
+					String
+					
+					SID of the account the ACE applies to
+			
+			
+					key_security.dacl_ace.ace_flags[]
+					Array[String]
+					
+					ACE flags that modify inheritance or behavior
+			
+			
+					key_security.dacl_ace.rights[]
+					Array[String]
+					
+					permissions granted or denied by the ACE
+			
+	
 
     
   ">
@@ -200,13 +200,13 @@ Fields
 
 
 
-  <meta itemprop="name" content="Network Config">
-  <meta itemprop="description" content="Data Type: network_config Python Parser: RegNetworkConfig Description Extracts network settings from the Windows System hive.
+	<meta itemprop="name" content="Network Config">
+	<meta itemprop="description" content="Data Type: network_config Python Parser: RegNetworkConfig Description Extracts network settings from the Windows System hive.
 Shows static IP assignments when DHCP is disabled. Provides DHCP‑derived addresses and DNS when enabled. Timeline Timeline Field Data Field Related User key_security.owner_sid Description ip_address dns_suffix dhcp Additional Description network_mask gateway Fields Output Name Data Type Qualifier Description ip_address String IP_ADDRESS IP address assigned to the network interface network_mask String Subnet mask associated with the IP address dhcp Bool dhcp_server String Address of the DHCP server that provided the configuration dns_suffix String DNS suffix (domain) applied to the interface name_servers String Comma‑separated list of DNS name‑server addresses gateway String Default gateway IP address for the interface key_path String KEY_PATH full registry key name key_modif_time DateTime DATE_MODIFICATION last modification timestamp of the registry key key_security Object key_security.owner_sid String USER_SID SID of the user that owns the registry key key_security.group_sid String SID of the group that owns the registry key key_security.control_flags[] Array[String] security descriptor control flags for the key key_security.dacl_ace Object key_security.dacl_ace.ace_type String type of ACE (e.g., allow, deny) key_security.dacl_ace.account_sid String SID of the account the ACE applies to key_security.dacl_ace.ace_flags[] Array[String] ACE flags that modify inheritance or behavior key_security.dacl_ace.rights[] Array[String] permissions granted or denied by the ACE">
-  <meta itemprop="wordCount" content="200">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Network Config">
-  <meta name="twitter:description" content="Data Type: network_config Python Parser: RegNetworkConfig Description Extracts network settings from the Windows System hive.
+	<meta itemprop="wordCount" content="200">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Network Config">
+	<meta name="twitter:description" content="Data Type: network_config Python Parser: RegNetworkConfig Description Extracts network settings from the Windows System hive.
 Shows static IP assignments when DHCP is disabled. Provides DHCP‑derived addresses and DNS when enabled. Timeline Timeline Field Data Field Related User key_security.owner_sid Description ip_address dns_suffix dhcp Additional Description network_mask gateway Fields Output Name Data Type Qualifier Description ip_address String IP_ADDRESS IP address assigned to the network interface network_mask String Subnet mask associated with the IP address dhcp Bool dhcp_server String Address of the DHCP server that provided the configuration dns_suffix String DNS suffix (domain) applied to the interface name_servers String Comma‑separated list of DNS name‑server addresses gateway String Default gateway IP address for the interface key_path String KEY_PATH full registry key name key_modif_time DateTime DATE_MODIFICATION last modification timestamp of the registry key key_security Object key_security.owner_sid String USER_SID SID of the user that owns the registry key key_security.group_sid String SID of the group that owns the registry key key_security.control_flags[] Array[String] security descriptor control flags for the key key_security.dacl_ace Object key_security.dacl_ace.ace_type String type of ACE (e.g., allow, deny) key_security.dacl_ace.account_sid String SID of the account the ACE applies to key_security.dacl_ace.ace_flags[] Array[String] ACE flags that modify inheritance or behavior key_security.dacl_ace.rights[] Array[String] permissions granted or denied by the ACE">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -1821,159 +1821,159 @@ Python Parser: <strong>RegNetworkConfig</strong></div>
 </ul>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Timeline Field</th>
-          <th>Data Field</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Related User</td>
-          <td><code>key_security.owner_sid</code></td>
-      </tr>
-      <tr>
-          <td>Description</td>
-          <td><code>ip_address</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>dns_suffix</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>dhcp</code></td>
-      </tr>
-      <tr>
-          <td>Additional Description</td>
-          <td><code>network_mask</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>gateway</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Timeline Field</th>
+					<th>Data Field</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Related User</td>
+					<td><code>key_security.owner_sid</code></td>
+			</tr>
+			<tr>
+					<td>Description</td>
+					<td><code>ip_address</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>dns_suffix</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>dhcp</code></td>
+			</tr>
+			<tr>
+					<td>Additional Description</td>
+					<td><code>network_mask</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>gateway</code></td>
+			</tr>
+	</tbody>
 </table>
 <h3>Fields<span class="hx:absolute hx:-mt-20" id="fields"></span>
     <a href="#fields" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Output Name</th>
-          <th>Data Type</th>
-          <th>Qualifier</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>ip_address</code></td>
-          <td>String</td>
-          <td>IP_ADDRESS</td>
-          <td>IP address assigned to the network interface</td>
-      </tr>
-      <tr>
-          <td><code>network_mask</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Subnet mask associated with the IP address</td>
-      </tr>
-      <tr>
-          <td><code>dhcp</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>dhcp_server</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Address of the DHCP server that provided the configuration</td>
-      </tr>
-      <tr>
-          <td><code>dns_suffix</code></td>
-          <td>String</td>
-          <td></td>
-          <td>DNS suffix (domain) applied to the interface</td>
-      </tr>
-      <tr>
-          <td><code>name_servers</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Comma‑separated list of DNS name‑server addresses</td>
-      </tr>
-      <tr>
-          <td><code>gateway</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Default gateway IP address for the interface</td>
-      </tr>
-      <tr>
-          <td><code>key_path</code></td>
-          <td>String</td>
-          <td>KEY_PATH</td>
-          <td>full registry key name</td>
-      </tr>
-      <tr>
-          <td><code>key_modif_time</code></td>
-          <td>DateTime</td>
-          <td>DATE_MODIFICATION</td>
-          <td>last modification timestamp of the registry key</td>
-      </tr>
-      <tr>
-          <td><code>key_security</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>key_security.owner_sid</code></td>
-          <td>String</td>
-          <td>USER_SID</td>
-          <td>SID of the user that owns the registry key</td>
-      </tr>
-      <tr>
-          <td><code>key_security.group_sid</code></td>
-          <td>String</td>
-          <td></td>
-          <td>SID of the group that owns the registry key</td>
-      </tr>
-      <tr>
-          <td><code>key_security.control_flags[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td>security descriptor control flags for the key</td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace.ace_type</code></td>
-          <td>String</td>
-          <td></td>
-          <td>type of ACE (e.g., allow, deny)</td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace.account_sid</code></td>
-          <td>String</td>
-          <td></td>
-          <td>SID of the account the ACE applies to</td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace.ace_flags[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td>ACE flags that modify inheritance or behavior</td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace.rights[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td>permissions granted or denied by the ACE</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Output Name</th>
+					<th>Data Type</th>
+					<th>Qualifier</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>ip_address</code></td>
+					<td>String</td>
+					<td>IP_ADDRESS</td>
+					<td>IP address assigned to the network interface</td>
+			</tr>
+			<tr>
+					<td><code>network_mask</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Subnet mask associated with the IP address</td>
+			</tr>
+			<tr>
+					<td><code>dhcp</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>dhcp_server</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Address of the DHCP server that provided the configuration</td>
+			</tr>
+			<tr>
+					<td><code>dns_suffix</code></td>
+					<td>String</td>
+					<td></td>
+					<td>DNS suffix (domain) applied to the interface</td>
+			</tr>
+			<tr>
+					<td><code>name_servers</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Comma‑separated list of DNS name‑server addresses</td>
+			</tr>
+			<tr>
+					<td><code>gateway</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Default gateway IP address for the interface</td>
+			</tr>
+			<tr>
+					<td><code>key_path</code></td>
+					<td>String</td>
+					<td>KEY_PATH</td>
+					<td>full registry key name</td>
+			</tr>
+			<tr>
+					<td><code>key_modif_time</code></td>
+					<td>DateTime</td>
+					<td>DATE_MODIFICATION</td>
+					<td>last modification timestamp of the registry key</td>
+			</tr>
+			<tr>
+					<td><code>key_security</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>key_security.owner_sid</code></td>
+					<td>String</td>
+					<td>USER_SID</td>
+					<td>SID of the user that owns the registry key</td>
+			</tr>
+			<tr>
+					<td><code>key_security.group_sid</code></td>
+					<td>String</td>
+					<td></td>
+					<td>SID of the group that owns the registry key</td>
+			</tr>
+			<tr>
+					<td><code>key_security.control_flags[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>security descriptor control flags for the key</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace.ace_type</code></td>
+					<td>String</td>
+					<td></td>
+					<td>type of ACE (e.g., allow, deny)</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace.account_sid</code></td>
+					<td>String</td>
+					<td></td>
+					<td>SID of the account the ACE applies to</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace.ace_flags[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>ACE flags that modify inheritance or behavior</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace.rights[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>permissions granted or denied by the ACE</td>
+			</tr>
+	</tbody>
 </table>
 
         </div>

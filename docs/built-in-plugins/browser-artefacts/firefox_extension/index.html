@@ -41,12 +41,12 @@ permissions.
 
 
 
-  <meta itemprop="name" content="Firefox Extension">
-  <meta itemprop="description" content="Data Type: firefox_extension Python Parser: FirefoxExtension Description Extracts metadata from Firefox browser add‑ons (version 26&#43;). It parses each extension’s manifest to retrieve identifiers, version information, installation path and declared permissions.">
-  <meta itemprop="wordCount" content="191">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Firefox Extension">
-  <meta name="twitter:description" content="Data Type: firefox_extension Python Parser: FirefoxExtension Description Extracts metadata from Firefox browser add‑ons (version 26&#43;). It parses each extension’s manifest to retrieve identifiers, version information, installation path and declared permissions.">
+	<meta itemprop="name" content="Firefox Extension">
+	<meta itemprop="description" content="Data Type: firefox_extension Python Parser: FirefoxExtension Description Extracts metadata from Firefox browser add‑ons (version 26&#43;). It parses each extension’s manifest to retrieve identifiers, version information, installation path and declared permissions.">
+	<meta itemprop="wordCount" content="191">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Firefox Extension">
+	<meta name="twitter:description" content="Data Type: firefox_extension Python Parser: FirefoxExtension Description Extracts metadata from Firefox browser add‑ons (version 26&#43;). It parses each extension’s manifest to retrieve identifiers, version information, installation path and declared permissions.">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
     <link href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" rel="stylesheet" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -1664,195 +1664,195 @@ permissions.</p>
 </ul>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Timeline Field</th>
-          <th>Data Field</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Description</td>
-          <td><code>name</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>browser</code></td>
-      </tr>
-      <tr>
-          <td>Additional Description</td>
-          <td><code>description</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>path</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>update_url</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>source_uri</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Timeline Field</th>
+					<th>Data Field</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Description</td>
+					<td><code>name</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>browser</code></td>
+			</tr>
+			<tr>
+					<td>Additional Description</td>
+					<td><code>description</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>path</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>update_url</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>source_uri</code></td>
+			</tr>
+	</tbody>
 </table>
 <h3>Fields<span class="hx:absolute hx:-mt-20" id="fields"></span>
     <a href="#fields" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Output Name</th>
-          <th>Data Type</th>
-          <th>Qualifier</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>name</code></td>
-          <td>String</td>
-          <td></td>
-          <td>display name of the Firefox add‑on</td>
-      </tr>
-      <tr>
-          <td><code>browser</code></td>
-          <td>String</td>
-          <td></td>
-          <td>browser name (always &lsquo;firefox&rsquo;)</td>
-      </tr>
-      <tr>
-          <td><code>type</code></td>
-          <td>String</td>
-          <td></td>
-          <td>type/category of the add‑on (e.g., extension, theme)</td>
-      </tr>
-      <tr>
-          <td><code>description</code></td>
-          <td>String</td>
-          <td></td>
-          <td>human‑readable description of the add‑on</td>
-      </tr>
-      <tr>
-          <td><code>id</code></td>
-          <td>String</td>
-          <td></td>
-          <td>unique identifier of the add‑on</td>
-      </tr>
-      <tr>
-          <td><code>version</code></td>
-          <td>String</td>
-          <td></td>
-          <td>version string of the add‑on</td>
-      </tr>
-      <tr>
-          <td><code>path</code></td>
-          <td>String</td>
-          <td></td>
-          <td>filesystem path where the add‑on is installed</td>
-      </tr>
-      <tr>
-          <td><code>update_url</code></td>
-          <td>String</td>
-          <td></td>
-          <td>URL used by the add‑on to check for updates</td>
-      </tr>
-      <tr>
-          <td><code>source_uri</code></td>
-          <td>String</td>
-          <td></td>
-          <td>original source URI from which the add‑on was obtained</td>
-      </tr>
-      <tr>
-          <td><code>root_uri</code></td>
-          <td>String</td>
-          <td></td>
-          <td>root URI of the add‑on package</td>
-      </tr>
-      <tr>
-          <td><code>user_permissions</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>user_permissions.permissions[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>user_permissions.origins[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>user_permissions.data_collection[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>optional_permissions</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>optional_permissions.permissions[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>optional_permissions.origins[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>optional_permissions.data_collection[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>requested_permissions</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>requested_permissions.permissions[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>requested_permissions.origins[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>requested_permissions.data_collection[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>install_date</code></td>
-          <td>DateTime</td>
-          <td>DATE_INSTALLATION</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>update_date</code></td>
-          <td>DateTime</td>
-          <td>DATE_MODIFICATION</td>
-          <td></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Output Name</th>
+					<th>Data Type</th>
+					<th>Qualifier</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>name</code></td>
+					<td>String</td>
+					<td></td>
+					<td>display name of the Firefox add‑on</td>
+			</tr>
+			<tr>
+					<td><code>browser</code></td>
+					<td>String</td>
+					<td></td>
+					<td>browser name (always &lsquo;firefox&rsquo;)</td>
+			</tr>
+			<tr>
+					<td><code>type</code></td>
+					<td>String</td>
+					<td></td>
+					<td>type/category of the add‑on (e.g., extension, theme)</td>
+			</tr>
+			<tr>
+					<td><code>description</code></td>
+					<td>String</td>
+					<td></td>
+					<td>human‑readable description of the add‑on</td>
+			</tr>
+			<tr>
+					<td><code>id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>unique identifier of the add‑on</td>
+			</tr>
+			<tr>
+					<td><code>version</code></td>
+					<td>String</td>
+					<td></td>
+					<td>version string of the add‑on</td>
+			</tr>
+			<tr>
+					<td><code>path</code></td>
+					<td>String</td>
+					<td></td>
+					<td>filesystem path where the add‑on is installed</td>
+			</tr>
+			<tr>
+					<td><code>update_url</code></td>
+					<td>String</td>
+					<td></td>
+					<td>URL used by the add‑on to check for updates</td>
+			</tr>
+			<tr>
+					<td><code>source_uri</code></td>
+					<td>String</td>
+					<td></td>
+					<td>original source URI from which the add‑on was obtained</td>
+			</tr>
+			<tr>
+					<td><code>root_uri</code></td>
+					<td>String</td>
+					<td></td>
+					<td>root URI of the add‑on package</td>
+			</tr>
+			<tr>
+					<td><code>user_permissions</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>user_permissions.permissions[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>user_permissions.origins[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>user_permissions.data_collection[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>optional_permissions</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>optional_permissions.permissions[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>optional_permissions.origins[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>optional_permissions.data_collection[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>requested_permissions</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>requested_permissions.permissions[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>requested_permissions.origins[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>requested_permissions.data_collection[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>install_date</code></td>
+					<td>DateTime</td>
+					<td>DATE_INSTALLATION</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>update_date</code></td>
+					<td>DateTime</td>
+					<td>DATE_MODIFICATION</td>
+					<td></td>
+			</tr>
+	</tbody>
 </table>
 
         </div>

@@ -39,12 +39,12 @@ Description
 
 
 
-  <meta itemprop="name" content="Pending Rename">
-  <meta itemprop="description" content="Data Type: pending_rename Python Parser: RegPendingRename Description Extracts entries from the PendingFileRenameOperations value in the System hive. It lists file rename operations that Windows will perform on the next reboot, capturing the original and target paths.">
-  <meta itemprop="wordCount" content="173">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Pending Rename">
-  <meta name="twitter:description" content="Data Type: pending_rename Python Parser: RegPendingRename Description Extracts entries from the PendingFileRenameOperations value in the System hive. It lists file rename operations that Windows will perform on the next reboot, capturing the original and target paths.">
+	<meta itemprop="name" content="Pending Rename">
+	<meta itemprop="description" content="Data Type: pending_rename Python Parser: RegPendingRename Description Extracts entries from the PendingFileRenameOperations value in the System hive. It lists file rename operations that Windows will perform on the next reboot, capturing the original and target paths.">
+	<meta itemprop="wordCount" content="173">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Pending Rename">
+	<meta name="twitter:description" content="Data Type: pending_rename Python Parser: RegPendingRename Description Extracts entries from the PendingFileRenameOperations value in the System hive. It lists file rename operations that Windows will perform on the next reboot, capturing the original and target paths.">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
     <link href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" rel="stylesheet" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -1657,117 +1657,117 @@ Python Parser: <strong>RegPendingRename</strong></div>
 </ul>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Timeline Field</th>
-          <th>Data Field</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Related User</td>
-          <td><code>key_security.owner_sid</code></td>
-      </tr>
-      <tr>
-          <td>Description</td>
-          <td><code>old_name</code></td>
-      </tr>
-      <tr>
-          <td>Additional Description</td>
-          <td><code>new_name</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Timeline Field</th>
+					<th>Data Field</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Related User</td>
+					<td><code>key_security.owner_sid</code></td>
+			</tr>
+			<tr>
+					<td>Description</td>
+					<td><code>old_name</code></td>
+			</tr>
+			<tr>
+					<td>Additional Description</td>
+					<td><code>new_name</code></td>
+			</tr>
+	</tbody>
 </table>
 <h3>Fields<span class="hx:absolute hx:-mt-20" id="fields"></span>
     <a href="#fields" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Output Name</th>
-          <th>Data Type</th>
-          <th>Qualifier</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>old_name</code></td>
-          <td>String</td>
-          <td></td>
-          <td>original file path scheduled for rename at next reboot</td>
-      </tr>
-      <tr>
-          <td><code>new_name</code></td>
-          <td>String</td>
-          <td></td>
-          <td>target file path after rename operation</td>
-      </tr>
-      <tr>
-          <td><code>key_path</code></td>
-          <td>String</td>
-          <td>KEY_PATH</td>
-          <td>full registry key name</td>
-      </tr>
-      <tr>
-          <td><code>key_modif_time</code></td>
-          <td>DateTime</td>
-          <td>DATE_MODIFICATION</td>
-          <td>last modification timestamp of the registry key</td>
-      </tr>
-      <tr>
-          <td><code>key_security</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>key_security.owner_sid</code></td>
-          <td>String</td>
-          <td>USER_SID</td>
-          <td>SID of the user that owns the registry key</td>
-      </tr>
-      <tr>
-          <td><code>key_security.group_sid</code></td>
-          <td>String</td>
-          <td></td>
-          <td>SID of the group that owns the registry key</td>
-      </tr>
-      <tr>
-          <td><code>key_security.control_flags[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td>security descriptor control flags for the key</td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace.ace_type</code></td>
-          <td>String</td>
-          <td></td>
-          <td>type of ACE (e.g., allow, deny)</td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace.account_sid</code></td>
-          <td>String</td>
-          <td></td>
-          <td>SID of the account the ACE applies to</td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace.ace_flags[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td>ACE flags that modify inheritance or behavior</td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace.rights[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td>permissions granted or denied by the ACE</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Output Name</th>
+					<th>Data Type</th>
+					<th>Qualifier</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>old_name</code></td>
+					<td>String</td>
+					<td></td>
+					<td>original file path scheduled for rename at next reboot</td>
+			</tr>
+			<tr>
+					<td><code>new_name</code></td>
+					<td>String</td>
+					<td></td>
+					<td>target file path after rename operation</td>
+			</tr>
+			<tr>
+					<td><code>key_path</code></td>
+					<td>String</td>
+					<td>KEY_PATH</td>
+					<td>full registry key name</td>
+			</tr>
+			<tr>
+					<td><code>key_modif_time</code></td>
+					<td>DateTime</td>
+					<td>DATE_MODIFICATION</td>
+					<td>last modification timestamp of the registry key</td>
+			</tr>
+			<tr>
+					<td><code>key_security</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>key_security.owner_sid</code></td>
+					<td>String</td>
+					<td>USER_SID</td>
+					<td>SID of the user that owns the registry key</td>
+			</tr>
+			<tr>
+					<td><code>key_security.group_sid</code></td>
+					<td>String</td>
+					<td></td>
+					<td>SID of the group that owns the registry key</td>
+			</tr>
+			<tr>
+					<td><code>key_security.control_flags[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>security descriptor control flags for the key</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace.ace_type</code></td>
+					<td>String</td>
+					<td></td>
+					<td>type of ACE (e.g., allow, deny)</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace.account_sid</code></td>
+					<td>String</td>
+					<td></td>
+					<td>SID of the account the ACE applies to</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace.ace_flags[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>ACE flags that modify inheritance or behavior</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace.rights[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>permissions granted or denied by the ACE</td>
+			</tr>
+	</tbody>
 </table>
 
         </div>

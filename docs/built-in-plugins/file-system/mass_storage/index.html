@@ -39,12 +39,12 @@ Description
 
 
 
-  <meta itemprop="name" content="Mass Storage">
-  <meta itemprop="description" content="Data Type: mass_storage Python Parser: RegMassStorageSystem Description Extracts information about every USB (or other) mass‑storage device ever connected to a Windows system, using data from the System hive. It parses several registry locations (USBSTOR, DeviceClasses, USB, MountedDevices) and consolidates the results into a unified device view.">
-  <meta itemprop="wordCount" content="408">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Mass Storage">
-  <meta name="twitter:description" content="Data Type: mass_storage Python Parser: RegMassStorageSystem Description Extracts information about every USB (or other) mass‑storage device ever connected to a Windows system, using data from the System hive. It parses several registry locations (USBSTOR, DeviceClasses, USB, MountedDevices) and consolidates the results into a unified device view.">
+	<meta itemprop="name" content="Mass Storage">
+	<meta itemprop="description" content="Data Type: mass_storage Python Parser: RegMassStorageSystem Description Extracts information about every USB (or other) mass‑storage device ever connected to a Windows system, using data from the System hive. It parses several registry locations (USBSTOR, DeviceClasses, USB, MountedDevices) and consolidates the results into a unified device view.">
+	<meta itemprop="wordCount" content="408">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Mass Storage">
+	<meta name="twitter:description" content="Data Type: mass_storage Python Parser: RegMassStorageSystem Description Extracts information about every USB (or other) mass‑storage device ever connected to a Windows system, using data from the System hive. It parses several registry locations (USBSTOR, DeviceClasses, USB, MountedDevices) and consolidates the results into a unified device view.">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
     <link href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" rel="stylesheet" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -1658,261 +1658,261 @@ Python Parser: <strong>RegMassStorageSystem</strong></div>
 </ul>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Timeline Field</th>
-          <th>Data Field</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Related User</td>
-          <td><code>users</code></td>
-      </tr>
-      <tr>
-          <td>Description</td>
-          <td><code>type</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>vendor</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>product</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>instance_id</code></td>
-      </tr>
-      <tr>
-          <td>Additional Description</td>
-          <td><code>class_id</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Timeline Field</th>
+					<th>Data Field</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Related User</td>
+					<td><code>users</code></td>
+			</tr>
+			<tr>
+					<td>Description</td>
+					<td><code>type</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>vendor</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>product</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>instance_id</code></td>
+			</tr>
+			<tr>
+					<td>Additional Description</td>
+					<td><code>class_id</code></td>
+			</tr>
+	</tbody>
 </table>
 <h3>Fields<span class="hx:absolute hx:-mt-20" id="fields"></span>
     <a href="#fields" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Output Name</th>
-          <th>Data Type</th>
-          <th>Qualifier</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>class_id</code></td>
-          <td>String</td>
-          <td></td>
-          <td>class identifier of the device (e.g., USBSTOR class ID)</td>
-      </tr>
-      <tr>
-          <td><code>friendly_names[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td>list of friendly display names for the device</td>
-      </tr>
-      <tr>
-          <td><code>controlset</code></td>
-          <td>String</td>
-          <td></td>
-          <td>registry control set (e.g., ControlSet001) where the device information resides</td>
-      </tr>
-      <tr>
-          <td><code>parent_id</code></td>
-          <td>String</td>
-          <td></td>
-          <td>parent identifier linking to a related device entry</td>
-      </tr>
-      <tr>
-          <td><code>volume_guid</code></td>
-          <td>String</td>
-          <td></td>
-          <td>GUID of the volume associated with the device</td>
-      </tr>
-      <tr>
-          <td><code>driver</code></td>
-          <td>String</td>
-          <td></td>
-          <td>driver name or path handling the device</td>
-      </tr>
-      <tr>
-          <td><code>type</code></td>
-          <td>String</td>
-          <td></td>
-          <td>type of the device</td>
-      </tr>
-      <tr>
-          <td><code>vendor</code></td>
-          <td>String</td>
-          <td></td>
-          <td>vendor name extracted from the device class ID</td>
-      </tr>
-      <tr>
-          <td><code>product</code></td>
-          <td>String</td>
-          <td></td>
-          <td>product name extracted from the device class ID</td>
-      </tr>
-      <tr>
-          <td><code>instance_id</code></td>
-          <td>String</td>
-          <td></td>
-          <td>unique instance ID of the device</td>
-      </tr>
-      <tr>
-          <td><code>revision</code></td>
-          <td>String</td>
-          <td></td>
-          <td>hardware revision of the device</td>
-      </tr>
-      <tr>
-          <td><code>silo</code></td>
-          <td>String</td>
-          <td></td>
-          <td>silo/segment identifier for the device</td>
-      </tr>
-      <tr>
-          <td><code>vendor_id</code></td>
-          <td>String</td>
-          <td></td>
-          <td>USB vendor ID (VID)</td>
-      </tr>
-      <tr>
-          <td><code>product_id</code></td>
-          <td>String</td>
-          <td></td>
-          <td>USB product ID (PID)</td>
-      </tr>
-      <tr>
-          <td><code>volume_letter</code></td>
-          <td>String</td>
-          <td></td>
-          <td>assigned drive letter (e.g., C:)</td>
-      </tr>
-      <tr>
-          <td><code>volume_label</code></td>
-          <td>String</td>
-          <td></td>
-          <td>label of the volume</td>
-      </tr>
-      <tr>
-          <td><code>volume_sn</code></td>
-          <td>String</td>
-          <td></td>
-          <td>serial number of the volume</td>
-      </tr>
-      <tr>
-          <td><code>capacity</code></td>
-          <td>String</td>
-          <td></td>
-          <td>storage capacity of the volume</td>
-      </tr>
-      <tr>
-          <td><code>attributes1</code></td>
-          <td>String</td>
-          <td></td>
-          <td>raw attribute string 1 from device metadata</td>
-      </tr>
-      <tr>
-          <td><code>attributes2</code></td>
-          <td>String</td>
-          <td></td>
-          <td>raw attribute string 2 from device metadata</td>
-      </tr>
-      <tr>
-          <td><code>attributes3</code></td>
-          <td>String</td>
-          <td></td>
-          <td>raw attribute string 3 from device metadata</td>
-      </tr>
-      <tr>
-          <td><code>reason</code></td>
-          <td>String</td>
-          <td></td>
-          <td>reason string associated with device install or removal events</td>
-      </tr>
-      <tr>
-          <td><code>registry_path</code></td>
-          <td>String</td>
-          <td></td>
-          <td>registry key paths that contributed to this device record</td>
-      </tr>
-      <tr>
-          <td><code>setupapi_sample_path</code></td>
-          <td>String</td>
-          <td></td>
-          <td>path to the SetupAPI sample file used for this record</td>
-      </tr>
-      <tr>
-          <td><code>users</code></td>
-          <td>String</td>
-          <td></td>
-          <td>owner SID(s) of the registry entries</td>
-      </tr>
-      <tr>
-          <td><code>setupapi_first_seen</code></td>
-          <td>DateTime</td>
-          <td>DATE_INSTALLATION</td>
-          <td>first timestamp the device appeared in SetupAPI (installation)</td>
-      </tr>
-      <tr>
-          <td><code>setupapi_last_seen</code></td>
-          <td>DateTime</td>
-          <td>DATE_UNINSTALL</td>
-          <td>last timestamp the device appeared in SetupAPI (removal)</td>
-      </tr>
-      <tr>
-          <td><code>usbstor_last_modified</code></td>
-          <td>DateTime</td>
-          <td>DATE_MODIFICATION</td>
-          <td>last modification timestamp of the USBSTOR registry key</td>
-      </tr>
-      <tr>
-          <td><code>device_classes_last_modified</code></td>
-          <td>DateTime</td>
-          <td>DATE_MODIFICATION</td>
-          <td>last modification timestamp of the DeviceClasses registry key</td>
-      </tr>
-      <tr>
-          <td><code>usb_last_modified</code></td>
-          <td>DateTime</td>
-          <td>DATE_MODIFICATION</td>
-          <td>last modification timestamp of the USB enumeration key</td>
-      </tr>
-      <tr>
-          <td><code>emdmgmt_last_modified</code></td>
-          <td>DateTime</td>
-          <td>DATE_MODIFICATION</td>
-          <td>last modification timestamp of the EMDMGMT registry key</td>
-      </tr>
-      <tr>
-          <td><code>usbstor_first_install</code></td>
-          <td>DateTime</td>
-          <td>DATE_CREATION</td>
-          <td>first install timestamp from USBSTOR properties</td>
-      </tr>
-      <tr>
-          <td><code>usbstor_install</code></td>
-          <td>DateTime</td>
-          <td>DATE_CREATION</td>
-          <td>install timestamp of the USBSTOR device</td>
-      </tr>
-      <tr>
-          <td><code>usbstor_last_arrival</code></td>
-          <td>DateTime</td>
-          <td>DATE_CREATION</td>
-          <td>timestamp of the most recent device arrival</td>
-      </tr>
-      <tr>
-          <td><code>usbstor_last_removal</code></td>
-          <td>DateTime</td>
-          <td>DATE_UNINSTALL</td>
-          <td>timestamp of the most recent device removal</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Output Name</th>
+					<th>Data Type</th>
+					<th>Qualifier</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>class_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>class identifier of the device (e.g., USBSTOR class ID)</td>
+			</tr>
+			<tr>
+					<td><code>friendly_names[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>list of friendly display names for the device</td>
+			</tr>
+			<tr>
+					<td><code>controlset</code></td>
+					<td>String</td>
+					<td></td>
+					<td>registry control set (e.g., ControlSet001) where the device information resides</td>
+			</tr>
+			<tr>
+					<td><code>parent_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>parent identifier linking to a related device entry</td>
+			</tr>
+			<tr>
+					<td><code>volume_guid</code></td>
+					<td>String</td>
+					<td></td>
+					<td>GUID of the volume associated with the device</td>
+			</tr>
+			<tr>
+					<td><code>driver</code></td>
+					<td>String</td>
+					<td></td>
+					<td>driver name or path handling the device</td>
+			</tr>
+			<tr>
+					<td><code>type</code></td>
+					<td>String</td>
+					<td></td>
+					<td>type of the device</td>
+			</tr>
+			<tr>
+					<td><code>vendor</code></td>
+					<td>String</td>
+					<td></td>
+					<td>vendor name extracted from the device class ID</td>
+			</tr>
+			<tr>
+					<td><code>product</code></td>
+					<td>String</td>
+					<td></td>
+					<td>product name extracted from the device class ID</td>
+			</tr>
+			<tr>
+					<td><code>instance_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>unique instance ID of the device</td>
+			</tr>
+			<tr>
+					<td><code>revision</code></td>
+					<td>String</td>
+					<td></td>
+					<td>hardware revision of the device</td>
+			</tr>
+			<tr>
+					<td><code>silo</code></td>
+					<td>String</td>
+					<td></td>
+					<td>silo/segment identifier for the device</td>
+			</tr>
+			<tr>
+					<td><code>vendor_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>USB vendor ID (VID)</td>
+			</tr>
+			<tr>
+					<td><code>product_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>USB product ID (PID)</td>
+			</tr>
+			<tr>
+					<td><code>volume_letter</code></td>
+					<td>String</td>
+					<td></td>
+					<td>assigned drive letter (e.g., C:)</td>
+			</tr>
+			<tr>
+					<td><code>volume_label</code></td>
+					<td>String</td>
+					<td></td>
+					<td>label of the volume</td>
+			</tr>
+			<tr>
+					<td><code>volume_sn</code></td>
+					<td>String</td>
+					<td></td>
+					<td>serial number of the volume</td>
+			</tr>
+			<tr>
+					<td><code>capacity</code></td>
+					<td>String</td>
+					<td></td>
+					<td>storage capacity of the volume</td>
+			</tr>
+			<tr>
+					<td><code>attributes1</code></td>
+					<td>String</td>
+					<td></td>
+					<td>raw attribute string 1 from device metadata</td>
+			</tr>
+			<tr>
+					<td><code>attributes2</code></td>
+					<td>String</td>
+					<td></td>
+					<td>raw attribute string 2 from device metadata</td>
+			</tr>
+			<tr>
+					<td><code>attributes3</code></td>
+					<td>String</td>
+					<td></td>
+					<td>raw attribute string 3 from device metadata</td>
+			</tr>
+			<tr>
+					<td><code>reason</code></td>
+					<td>String</td>
+					<td></td>
+					<td>reason string associated with device install or removal events</td>
+			</tr>
+			<tr>
+					<td><code>registry_path</code></td>
+					<td>String</td>
+					<td></td>
+					<td>registry key paths that contributed to this device record</td>
+			</tr>
+			<tr>
+					<td><code>setupapi_sample_path</code></td>
+					<td>String</td>
+					<td></td>
+					<td>path to the SetupAPI sample file used for this record</td>
+			</tr>
+			<tr>
+					<td><code>users</code></td>
+					<td>String</td>
+					<td></td>
+					<td>owner SID(s) of the registry entries</td>
+			</tr>
+			<tr>
+					<td><code>setupapi_first_seen</code></td>
+					<td>DateTime</td>
+					<td>DATE_INSTALLATION</td>
+					<td>first timestamp the device appeared in SetupAPI (installation)</td>
+			</tr>
+			<tr>
+					<td><code>setupapi_last_seen</code></td>
+					<td>DateTime</td>
+					<td>DATE_UNINSTALL</td>
+					<td>last timestamp the device appeared in SetupAPI (removal)</td>
+			</tr>
+			<tr>
+					<td><code>usbstor_last_modified</code></td>
+					<td>DateTime</td>
+					<td>DATE_MODIFICATION</td>
+					<td>last modification timestamp of the USBSTOR registry key</td>
+			</tr>
+			<tr>
+					<td><code>device_classes_last_modified</code></td>
+					<td>DateTime</td>
+					<td>DATE_MODIFICATION</td>
+					<td>last modification timestamp of the DeviceClasses registry key</td>
+			</tr>
+			<tr>
+					<td><code>usb_last_modified</code></td>
+					<td>DateTime</td>
+					<td>DATE_MODIFICATION</td>
+					<td>last modification timestamp of the USB enumeration key</td>
+			</tr>
+			<tr>
+					<td><code>emdmgmt_last_modified</code></td>
+					<td>DateTime</td>
+					<td>DATE_MODIFICATION</td>
+					<td>last modification timestamp of the EMDMGMT registry key</td>
+			</tr>
+			<tr>
+					<td><code>usbstor_first_install</code></td>
+					<td>DateTime</td>
+					<td>DATE_CREATION</td>
+					<td>first install timestamp from USBSTOR properties</td>
+			</tr>
+			<tr>
+					<td><code>usbstor_install</code></td>
+					<td>DateTime</td>
+					<td>DATE_CREATION</td>
+					<td>install timestamp of the USBSTOR device</td>
+			</tr>
+			<tr>
+					<td><code>usbstor_last_arrival</code></td>
+					<td>DateTime</td>
+					<td>DATE_CREATION</td>
+					<td>timestamp of the most recent device arrival</td>
+			</tr>
+			<tr>
+					<td><code>usbstor_last_removal</code></td>
+					<td>DateTime</td>
+					<td>DATE_UNINSTALL</td>
+					<td>timestamp of the most recent device removal</td>
+			</tr>
+	</tbody>
 </table>
 
         </div>

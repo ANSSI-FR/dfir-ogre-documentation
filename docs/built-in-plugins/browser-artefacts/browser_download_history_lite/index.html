@@ -41,12 +41,12 @@ timestamps for the start and end of the download.
 
 
 
-  <meta itemprop="name" content="Browser Download History Lite">
-  <meta itemprop="description" content="Data Type: browser_download_history Python Parser: SQLite Description Extracts records from the places sqlite database that Firefox uses to store download metadata. Each row contains the path of the saved file, the source URL, file size and timestamps for the start and end of the download.">
-  <meta itemprop="wordCount" content="163">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Browser Download History Lite">
-  <meta name="twitter:description" content="Data Type: browser_download_history Python Parser: SQLite Description Extracts records from the places sqlite database that Firefox uses to store download metadata. Each row contains the path of the saved file, the source URL, file size and timestamps for the start and end of the download.">
+	<meta itemprop="name" content="Browser Download History Lite">
+	<meta itemprop="description" content="Data Type: browser_download_history Python Parser: SQLite Description Extracts records from the places sqlite database that Firefox uses to store download metadata. Each row contains the path of the saved file, the source URL, file size and timestamps for the start and end of the download.">
+	<meta itemprop="wordCount" content="163">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Browser Download History Lite">
+	<meta name="twitter:description" content="Data Type: browser_download_history Python Parser: SQLite Description Extracts records from the places sqlite database that Firefox uses to store download metadata. Each row contains the path of the saved file, the source URL, file size and timestamps for the start and end of the download.">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
     <link href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" rel="stylesheet" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -1663,81 +1663,81 @@ timestamps for the start and end of the download.</p>
 </ul>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Timeline Field</th>
-          <th>Data Field</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Description</td>
-          <td><code>url</code></td>
-      </tr>
-      <tr>
-          <td>Additional Description</td>
-          <td><code>total_bytes</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>deleted</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Timeline Field</th>
+					<th>Data Field</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Description</td>
+					<td><code>url</code></td>
+			</tr>
+			<tr>
+					<td>Additional Description</td>
+					<td><code>total_bytes</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>deleted</code></td>
+			</tr>
+	</tbody>
 </table>
 <h3>Fields<span class="hx:absolute hx:-mt-20" id="fields"></span>
     <a href="#fields" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Output Name</th>
-          <th>Data Type</th>
-          <th>Qualifier</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>target_path</code></td>
-          <td>String</td>
-          <td></td>
-          <td>local file system path where the downloaded file was saved</td>
-      </tr>
-      <tr>
-          <td><code>url</code></td>
-          <td>String</td>
-          <td></td>
-          <td>source URL from which the file was downloaded</td>
-      </tr>
-      <tr>
-          <td><code>total_bytes</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>total size of the downloaded file in bytes</td>
-      </tr>
-      <tr>
-          <td><code>start_time</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>timestamp when the download started</td>
-      </tr>
-      <tr>
-          <td><code>end_time</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>timestamp when the download finished</td>
-      </tr>
-      <tr>
-          <td><code>state</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>numeric code representing the download state (e.g., completed, cancelled, in‑progress)</td>
-      </tr>
-      <tr>
-          <td><code>deleted</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>boolean flag indicating whether the download entry has been marked as deleted</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Output Name</th>
+					<th>Data Type</th>
+					<th>Qualifier</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>target_path</code></td>
+					<td>String</td>
+					<td></td>
+					<td>local file system path where the downloaded file was saved</td>
+			</tr>
+			<tr>
+					<td><code>url</code></td>
+					<td>String</td>
+					<td></td>
+					<td>source URL from which the file was downloaded</td>
+			</tr>
+			<tr>
+					<td><code>total_bytes</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>total size of the downloaded file in bytes</td>
+			</tr>
+			<tr>
+					<td><code>start_time</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>timestamp when the download started</td>
+			</tr>
+			<tr>
+					<td><code>end_time</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>timestamp when the download finished</td>
+			</tr>
+			<tr>
+					<td><code>state</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>numeric code representing the download state (e.g., completed, cancelled, in‑progress)</td>
+			</tr>
+			<tr>
+					<td><code>deleted</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>boolean flag indicating whether the download entry has been marked as deleted</td>
+			</tr>
+	</tbody>
 </table>
 
         </div>

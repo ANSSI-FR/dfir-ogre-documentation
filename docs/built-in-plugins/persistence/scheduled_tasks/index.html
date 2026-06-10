@@ -35,399 +35,399 @@ Extracts security information, including owner SID and ACLs.
 
 Timeline
     
-  
-      
-          Timeline Field
-          Data Field
-      
-  
-  
-      
-          Related User
-          key_security.owner_sid
-      
-      
-          Description
-          task
-      
-      
-          Additional Description
-          actions.action_type
-      
-      
-          
-          actions.exec_command
-      
-      
-          
-          actions.exec_arguments
-      
-      
-          
-          actions.com_data
-      
-  
+	
+			
+					Timeline Field
+					Data Field
+			
+	
+	
+			
+					Related User
+					key_security.owner_sid
+			
+			
+					Description
+					task
+			
+			
+					Additional Description
+					actions.action_type
+			
+			
+					
+					actions.exec_command
+			
+			
+					
+					actions.exec_arguments
+			
+			
+					
+					actions.com_data
+			
+	
 
 Fields
     
-  
-      
-          Output Name
-          Data Type
-          Qualifier
-          Description
-      
-  
-  
-      
-          guid
-          String
-          SCHTASK_GUID
-          unique identifier (GUID) of the scheduled task
-      
-      
-          uri
-          String
-          SCHTASK_URI
-          URI associated with the scheduled task
-      
-      
-          task
-          String
-          
-          full registry path of the scheduled task definition
-      
-      
-          task_description
-          String
-          
-          human‑readable description of the task
-      
-      
-          source
-          String
-          
-          origin source of the task
-      
-      
-          author
-          String
-          
-          author or creator of the scheduled task
-      
-      
-          data
-          String
-          
-          raw data blob stored for the task
-      
-      
-          documentation
-          String
-          
-          documentation URL or text linked to the task
-      
-      
-          hash
-          String
-          
-          hex‑encoded hash of the task definition
-      
-      
-          schema
-          Int
-          
-          schema version number of the task definition
-      
-      
-          trigger
-          String
-          
-          trigger configuration that defines when the task runs
-      
-      
-          version
-          String
-          
-          version string of the scheduled task
-      
-      
-          actions[]
-          Array[Object]
-          
-          
-      
-      
-          actions[].action_id
-          String
-          
-          identifier of the action within the task
-      
-      
-          actions[].action_type
-          String
-          
-          type of action (e.g., Exec, ComHandler, SendEmail, ShowMessage)
-      
-      
-          actions[].exec_command
-          String
-          
-          executable command to run for Exec actions
-      
-      
-          actions[].exec_arguments
-          String
-          
-          command‑line arguments for the executable
-      
-      
-          actions[].exec_working_dir
-          String
-          
-          working directory used when executing the command
-      
-      
-          actions[].com_classid
-          String
-          
-          COM class identifier (CLSID) for ComHandler actions
-      
-      
-          actions[].com_data
-          String
-          
-          additional data passed to the COM handler
-      
-      
-          actions[].email_from
-          String
-          
-          sender address for SendEmail actions
-      
-      
-          actions[].email_to
-          String
-          
-          recipient address(es) for SendEmail actions
-      
-      
-          actions[].email_cc
-          String
-          
-          CC address(es) for SendEmail actions
-      
-      
-          actions[].email_bcc
-          String
-          
-          BCC address(es) for SendEmail actions
-      
-      
-          actions[].email_replyto
-          String
-          
-          Reply‑To address for SendEmail actions
-      
-      
-          actions[].email_server
-          String
-          
-          SMTP server used for SendEmail actions
-      
-      
-          actions[].email_subject
-          String
-          
-          subject line of the email
-      
-      
-          actions[].email_body
-          String
-          
-          body content of the email
-      
-      
-          actions[].email_attachments
-          String
-          
-          list of attachment filenames for the email
-      
-      
-          actions[].message_body
-          String
-          
-          text displayed in the message box for ShowMessage actions
-      
-      
-          actions[].message_title
-          String
-          
-          title of the message box for ShowMessage actions
-      
-      
-          security_descriptor
-          Object
-          
-          
-      
-      
-          boot
-          Object
-          
-          
-      
-      
-          boot.mtime
-          DateTime
-          DATE_MODIFICATION
-          modification timestamp of the boot sub‑key for the task
-      
-      
-          logon
-          Object
-          
-          
-      
-      
-          logon.mtime
-          DateTime
-          DATE_MODIFICATION
-          modification timestamp of the logon sub‑key for the task
-      
-      
-          maintenance
-          Object
-          
-          
-      
-      
-          maintenance.mtime
-          DateTime
-          DATE_MODIFICATION
-          modification timestamp of the maintenance sub‑key for the task
-      
-      
-          plain
-          Object
-          
-          
-      
-      
-          plain.mtime
-          DateTime
-          DATE_MODIFICATION
-          modification timestamp of the plain sub‑key for the task
-      
-      
-          tree
-          Object
-          
-          
-      
-      
-          tree.mtime
-          DateTime
-          DATE_MODIFICATION
-          modification timestamp of the tree sub‑key for the task
-      
-      
-          creation_date
-          String
-          DATE_CREATION
-          timestamp when the scheduled task was initially created
-      
-      
-          last_run_launch_date
-          DateTime
-          DATE_LAST_RUN
-          timestamp of the most recent task launch
-      
-      
-          last_run_exit_code
-          Int
-          EXIT_CODE
-          exit code returned by the latest execution of the task
-      
-      
-          last_run_exit_date
-          DateTime
-          DATE_LAST_RUN
-          timestamp when the latest task execution completed
-      
-      
-          registration_date_local
-          DateTime
-          DATE_CREATION
-          date the task was registered
-      
-      
-          key_path
-          String
-          KEY_PATH
-          full registry key name
-      
-      
-          key_modif_time
-          DateTime
-          DATE_MODIFICATION
-          last modification timestamp of the registry key
-      
-      
-          key_security
-          Object
-          
-          
-      
-      
-          key_security.owner_sid
-          String
-          USER_SID
-          SID of the user that owns the registry key
-      
-      
-          key_security.group_sid
-          String
-          
-          SID of the group that owns the registry key
-      
-      
-          key_security.control_flags[]
-          Array[String]
-          
-          security descriptor control flags for the key
-      
-      
-          key_security.dacl_ace
-          Object
-          
-          
-      
-      
-          key_security.dacl_ace.ace_type
-          String
-          
-          type of ACE (e.g., allow, deny)
-      
-      
-          key_security.dacl_ace.account_sid
-          String
-          
-          SID of the account the ACE applies to
-      
-      
-          key_security.dacl_ace.ace_flags[]
-          Array[String]
-          
-          ACE flags that modify inheritance or behavior
-      
-      
-          key_security.dacl_ace.rights[]
-          Array[String]
-          
-          permissions granted or denied by the ACE
-      
-  
+	
+			
+					Output Name
+					Data Type
+					Qualifier
+					Description
+			
+	
+	
+			
+					guid
+					String
+					SCHTASK_GUID
+					unique identifier (GUID) of the scheduled task
+			
+			
+					uri
+					String
+					SCHTASK_URI
+					URI associated with the scheduled task
+			
+			
+					task
+					String
+					
+					full registry path of the scheduled task definition
+			
+			
+					task_description
+					String
+					
+					human‑readable description of the task
+			
+			
+					source
+					String
+					
+					origin source of the task
+			
+			
+					author
+					String
+					
+					author or creator of the scheduled task
+			
+			
+					data
+					String
+					
+					raw data blob stored for the task
+			
+			
+					documentation
+					String
+					
+					documentation URL or text linked to the task
+			
+			
+					hash
+					String
+					
+					hex‑encoded hash of the task definition
+			
+			
+					schema
+					Int
+					
+					schema version number of the task definition
+			
+			
+					trigger
+					String
+					
+					trigger configuration that defines when the task runs
+			
+			
+					version
+					String
+					
+					version string of the scheduled task
+			
+			
+					actions[]
+					Array[Object]
+					
+					
+			
+			
+					actions[].action_id
+					String
+					
+					identifier of the action within the task
+			
+			
+					actions[].action_type
+					String
+					
+					type of action (e.g., Exec, ComHandler, SendEmail, ShowMessage)
+			
+			
+					actions[].exec_command
+					String
+					
+					executable command to run for Exec actions
+			
+			
+					actions[].exec_arguments
+					String
+					
+					command‑line arguments for the executable
+			
+			
+					actions[].exec_working_dir
+					String
+					
+					working directory used when executing the command
+			
+			
+					actions[].com_classid
+					String
+					
+					COM class identifier (CLSID) for ComHandler actions
+			
+			
+					actions[].com_data
+					String
+					
+					additional data passed to the COM handler
+			
+			
+					actions[].email_from
+					String
+					
+					sender address for SendEmail actions
+			
+			
+					actions[].email_to
+					String
+					
+					recipient address(es) for SendEmail actions
+			
+			
+					actions[].email_cc
+					String
+					
+					CC address(es) for SendEmail actions
+			
+			
+					actions[].email_bcc
+					String
+					
+					BCC address(es) for SendEmail actions
+			
+			
+					actions[].email_replyto
+					String
+					
+					Reply‑To address for SendEmail actions
+			
+			
+					actions[].email_server
+					String
+					
+					SMTP server used for SendEmail actions
+			
+			
+					actions[].email_subject
+					String
+					
+					subject line of the email
+			
+			
+					actions[].email_body
+					String
+					
+					body content of the email
+			
+			
+					actions[].email_attachments
+					String
+					
+					list of attachment filenames for the email
+			
+			
+					actions[].message_body
+					String
+					
+					text displayed in the message box for ShowMessage actions
+			
+			
+					actions[].message_title
+					String
+					
+					title of the message box for ShowMessage actions
+			
+			
+					security_descriptor
+					Object
+					
+					
+			
+			
+					boot
+					Object
+					
+					
+			
+			
+					boot.mtime
+					DateTime
+					DATE_MODIFICATION
+					modification timestamp of the boot sub‑key for the task
+			
+			
+					logon
+					Object
+					
+					
+			
+			
+					logon.mtime
+					DateTime
+					DATE_MODIFICATION
+					modification timestamp of the logon sub‑key for the task
+			
+			
+					maintenance
+					Object
+					
+					
+			
+			
+					maintenance.mtime
+					DateTime
+					DATE_MODIFICATION
+					modification timestamp of the maintenance sub‑key for the task
+			
+			
+					plain
+					Object
+					
+					
+			
+			
+					plain.mtime
+					DateTime
+					DATE_MODIFICATION
+					modification timestamp of the plain sub‑key for the task
+			
+			
+					tree
+					Object
+					
+					
+			
+			
+					tree.mtime
+					DateTime
+					DATE_MODIFICATION
+					modification timestamp of the tree sub‑key for the task
+			
+			
+					creation_date
+					String
+					DATE_CREATION
+					timestamp when the scheduled task was initially created
+			
+			
+					last_run_launch_date
+					DateTime
+					DATE_LAST_RUN
+					timestamp of the most recent task launch
+			
+			
+					last_run_exit_code
+					Int
+					EXIT_CODE
+					exit code returned by the latest execution of the task
+			
+			
+					last_run_exit_date
+					DateTime
+					DATE_LAST_RUN
+					timestamp when the latest task execution completed
+			
+			
+					registration_date_local
+					DateTime
+					DATE_CREATION
+					date the task was registered
+			
+			
+					key_path
+					String
+					KEY_PATH
+					full registry key name
+			
+			
+					key_modif_time
+					DateTime
+					DATE_MODIFICATION
+					last modification timestamp of the registry key
+			
+			
+					key_security
+					Object
+					
+					
+			
+			
+					key_security.owner_sid
+					String
+					USER_SID
+					SID of the user that owns the registry key
+			
+			
+					key_security.group_sid
+					String
+					
+					SID of the group that owns the registry key
+			
+			
+					key_security.control_flags[]
+					Array[String]
+					
+					security descriptor control flags for the key
+			
+			
+					key_security.dacl_ace
+					Object
+					
+					
+			
+			
+					key_security.dacl_ace.ace_type
+					String
+					
+					type of ACE (e.g., allow, deny)
+			
+			
+					key_security.dacl_ace.account_sid
+					String
+					
+					SID of the account the ACE applies to
+			
+			
+					key_security.dacl_ace.ace_flags[]
+					Array[String]
+					
+					ACE flags that modify inheritance or behavior
+			
+			
+					key_security.dacl_ace.rights[]
+					Array[String]
+					
+					permissions granted or denied by the ACE
+			
+	
 
     
   ">
@@ -441,13 +441,13 @@ Fields
 
 
 
-  <meta itemprop="name" content="Scheduled Tasks">
-  <meta itemprop="description" content="Data Type: scheduled_tasks Python Parser: RegScheduledTask Description Extracts metadata for Windows scheduled tasks stored in the Software hive.
+	<meta itemprop="name" content="Scheduled Tasks">
+	<meta itemprop="description" content="Data Type: scheduled_tasks Python Parser: RegScheduledTask Description Extracts metadata for Windows scheduled tasks stored in the Software hive.
 Retrieves task identifiers, authors, creation/registration dates and version. Decodes action blocks (command, arguments, COM data) and links to boot, logon, maintenance and plain sub‑keys. Extracts security information, including owner SID and ACLs. Timeline Timeline Field Data Field Related User key_security.owner_sid Description task Additional Description actions.action_type actions.exec_command actions.exec_arguments actions.com_data Fields Output Name Data Type Qualifier Description guid String SCHTASK_GUID unique identifier (GUID) of the scheduled task uri String SCHTASK_URI URI associated with the scheduled task task String full registry path of the scheduled task definition task_description String human‑readable description of the task source String origin source of the task author String author or creator of the scheduled task data String raw data blob stored for the task documentation String documentation URL or text linked to the task hash String hex‑encoded hash of the task definition schema Int schema version number of the task definition trigger String trigger configuration that defines when the task runs version String version string of the scheduled task actions[] Array[Object] actions[].action_id String identifier of the action within the task actions[].action_type String type of action (e.g., Exec, ComHandler, SendEmail, ShowMessage) actions[].exec_command String executable command to run for Exec actions actions[].exec_arguments String command‑line arguments for the executable actions[].exec_working_dir String working directory used when executing the command actions[].com_classid String COM class identifier (CLSID) for ComHandler actions actions[].com_data String additional data passed to the COM handler actions[].email_from String sender address for SendEmail actions actions[].email_to String recipient address(es) for SendEmail actions actions[].email_cc String CC address(es) for SendEmail actions actions[].email_bcc String BCC address(es) for SendEmail actions actions[].email_replyto String Reply‑To address for SendEmail actions actions[].email_server String SMTP server used for SendEmail actions actions[].email_subject String subject line of the email actions[].email_body String body content of the email actions[].email_attachments String list of attachment filenames for the email actions[].message_body String text displayed in the message box for ShowMessage actions actions[].message_title String title of the message box for ShowMessage actions security_descriptor Object boot Object boot.mtime DateTime DATE_MODIFICATION modification timestamp of the boot sub‑key for the task logon Object logon.mtime DateTime DATE_MODIFICATION modification timestamp of the logon sub‑key for the task maintenance Object maintenance.mtime DateTime DATE_MODIFICATION modification timestamp of the maintenance sub‑key for the task plain Object plain.mtime DateTime DATE_MODIFICATION modification timestamp of the plain sub‑key for the task tree Object tree.mtime DateTime DATE_MODIFICATION modification timestamp of the tree sub‑key for the task creation_date String DATE_CREATION timestamp when the scheduled task was initially created last_run_launch_date DateTime DATE_LAST_RUN timestamp of the most recent task launch last_run_exit_code Int EXIT_CODE exit code returned by the latest execution of the task last_run_exit_date DateTime DATE_LAST_RUN timestamp when the latest task execution completed registration_date_local DateTime DATE_CREATION date the task was registered key_path String KEY_PATH full registry key name key_modif_time DateTime DATE_MODIFICATION last modification timestamp of the registry key key_security Object key_security.owner_sid String USER_SID SID of the user that owns the registry key key_security.group_sid String SID of the group that owns the registry key key_security.control_flags[] Array[String] security descriptor control flags for the key key_security.dacl_ace Object key_security.dacl_ace.ace_type String type of ACE (e.g., allow, deny) key_security.dacl_ace.account_sid String SID of the account the ACE applies to key_security.dacl_ace.ace_flags[] Array[String] ACE flags that modify inheritance or behavior key_security.dacl_ace.rights[] Array[String] permissions granted or denied by the ACE">
-  <meta itemprop="wordCount" content="543">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Scheduled Tasks">
-  <meta name="twitter:description" content="Data Type: scheduled_tasks Python Parser: RegScheduledTask Description Extracts metadata for Windows scheduled tasks stored in the Software hive.
+	<meta itemprop="wordCount" content="543">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Scheduled Tasks">
+	<meta name="twitter:description" content="Data Type: scheduled_tasks Python Parser: RegScheduledTask Description Extracts metadata for Windows scheduled tasks stored in the Software hive.
 Retrieves task identifiers, authors, creation/registration dates and version. Decodes action blocks (command, arguments, COM data) and links to boot, logon, maintenance and plain sub‑keys. Extracts security information, including owner SID and ACLs. Timeline Timeline Field Data Field Related User key_security.owner_sid Description task Additional Description actions.action_type actions.exec_command actions.exec_arguments actions.com_data Fields Output Name Data Type Qualifier Description guid String SCHTASK_GUID unique identifier (GUID) of the scheduled task uri String SCHTASK_URI URI associated with the scheduled task task String full registry path of the scheduled task definition task_description String human‑readable description of the task source String origin source of the task author String author or creator of the scheduled task data String raw data blob stored for the task documentation String documentation URL or text linked to the task hash String hex‑encoded hash of the task definition schema Int schema version number of the task definition trigger String trigger configuration that defines when the task runs version String version string of the scheduled task actions[] Array[Object] actions[].action_id String identifier of the action within the task actions[].action_type String type of action (e.g., Exec, ComHandler, SendEmail, ShowMessage) actions[].exec_command String executable command to run for Exec actions actions[].exec_arguments String command‑line arguments for the executable actions[].exec_working_dir String working directory used when executing the command actions[].com_classid String COM class identifier (CLSID) for ComHandler actions actions[].com_data String additional data passed to the COM handler actions[].email_from String sender address for SendEmail actions actions[].email_to String recipient address(es) for SendEmail actions actions[].email_cc String CC address(es) for SendEmail actions actions[].email_bcc String BCC address(es) for SendEmail actions actions[].email_replyto String Reply‑To address for SendEmail actions actions[].email_server String SMTP server used for SendEmail actions actions[].email_subject String subject line of the email actions[].email_body String body content of the email actions[].email_attachments String list of attachment filenames for the email actions[].message_body String text displayed in the message box for ShowMessage actions actions[].message_title String title of the message box for ShowMessage actions security_descriptor Object boot Object boot.mtime DateTime DATE_MODIFICATION modification timestamp of the boot sub‑key for the task logon Object logon.mtime DateTime DATE_MODIFICATION modification timestamp of the logon sub‑key for the task maintenance Object maintenance.mtime DateTime DATE_MODIFICATION modification timestamp of the maintenance sub‑key for the task plain Object plain.mtime DateTime DATE_MODIFICATION modification timestamp of the plain sub‑key for the task tree Object tree.mtime DateTime DATE_MODIFICATION modification timestamp of the tree sub‑key for the task creation_date String DATE_CREATION timestamp when the scheduled task was initially created last_run_launch_date DateTime DATE_LAST_RUN timestamp of the most recent task launch last_run_exit_code Int EXIT_CODE exit code returned by the latest execution of the task last_run_exit_date DateTime DATE_LAST_RUN timestamp when the latest task execution completed registration_date_local DateTime DATE_CREATION date the task was registered key_path String KEY_PATH full registry key name key_modif_time DateTime DATE_MODIFICATION last modification timestamp of the registry key key_security Object key_security.owner_sid String USER_SID SID of the user that owns the registry key key_security.group_sid String SID of the group that owns the registry key key_security.control_flags[] Array[String] security descriptor control flags for the key key_security.dacl_ace Object key_security.dacl_ace.ace_type String type of ACE (e.g., allow, deny) key_security.dacl_ace.account_sid String SID of the account the ACE applies to key_security.dacl_ace.ace_flags[] Array[String] ACE flags that modify inheritance or behavior key_security.dacl_ace.rights[] Array[String] permissions granted or denied by the ACE">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -2063,399 +2063,399 @@ Python Parser: <strong>RegScheduledTask</strong></div>
 </ul>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Timeline Field</th>
-          <th>Data Field</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Related User</td>
-          <td><code>key_security.owner_sid</code></td>
-      </tr>
-      <tr>
-          <td>Description</td>
-          <td><code>task</code></td>
-      </tr>
-      <tr>
-          <td>Additional Description</td>
-          <td><code>actions.action_type</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>actions.exec_command</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>actions.exec_arguments</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>actions.com_data</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Timeline Field</th>
+					<th>Data Field</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Related User</td>
+					<td><code>key_security.owner_sid</code></td>
+			</tr>
+			<tr>
+					<td>Description</td>
+					<td><code>task</code></td>
+			</tr>
+			<tr>
+					<td>Additional Description</td>
+					<td><code>actions.action_type</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>actions.exec_command</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>actions.exec_arguments</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>actions.com_data</code></td>
+			</tr>
+	</tbody>
 </table>
 <h3>Fields<span class="hx:absolute hx:-mt-20" id="fields"></span>
     <a href="#fields" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Output Name</th>
-          <th>Data Type</th>
-          <th>Qualifier</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>guid</code></td>
-          <td>String</td>
-          <td>SCHTASK_GUID</td>
-          <td>unique identifier (GUID) of the scheduled task</td>
-      </tr>
-      <tr>
-          <td><code>uri</code></td>
-          <td>String</td>
-          <td>SCHTASK_URI</td>
-          <td>URI associated with the scheduled task</td>
-      </tr>
-      <tr>
-          <td><code>task</code></td>
-          <td>String</td>
-          <td></td>
-          <td>full registry path of the scheduled task definition</td>
-      </tr>
-      <tr>
-          <td><code>task_description</code></td>
-          <td>String</td>
-          <td></td>
-          <td>human‑readable description of the task</td>
-      </tr>
-      <tr>
-          <td><code>source</code></td>
-          <td>String</td>
-          <td></td>
-          <td>origin source of the task</td>
-      </tr>
-      <tr>
-          <td><code>author</code></td>
-          <td>String</td>
-          <td></td>
-          <td>author or creator of the scheduled task</td>
-      </tr>
-      <tr>
-          <td><code>data</code></td>
-          <td>String</td>
-          <td></td>
-          <td>raw data blob stored for the task</td>
-      </tr>
-      <tr>
-          <td><code>documentation</code></td>
-          <td>String</td>
-          <td></td>
-          <td>documentation URL or text linked to the task</td>
-      </tr>
-      <tr>
-          <td><code>hash</code></td>
-          <td>String</td>
-          <td></td>
-          <td>hex‑encoded hash of the task definition</td>
-      </tr>
-      <tr>
-          <td><code>schema</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>schema version number of the task definition</td>
-      </tr>
-      <tr>
-          <td><code>trigger</code></td>
-          <td>String</td>
-          <td></td>
-          <td>trigger configuration that defines when the task runs</td>
-      </tr>
-      <tr>
-          <td><code>version</code></td>
-          <td>String</td>
-          <td></td>
-          <td>version string of the scheduled task</td>
-      </tr>
-      <tr>
-          <td><code>actions[]</code></td>
-          <td>Array[Object]</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>actions[].action_id</code></td>
-          <td>String</td>
-          <td></td>
-          <td>identifier of the action within the task</td>
-      </tr>
-      <tr>
-          <td><code>actions[].action_type</code></td>
-          <td>String</td>
-          <td></td>
-          <td>type of action (e.g., Exec, ComHandler, SendEmail, ShowMessage)</td>
-      </tr>
-      <tr>
-          <td><code>actions[].exec_command</code></td>
-          <td>String</td>
-          <td></td>
-          <td>executable command to run for Exec actions</td>
-      </tr>
-      <tr>
-          <td><code>actions[].exec_arguments</code></td>
-          <td>String</td>
-          <td></td>
-          <td>command‑line arguments for the executable</td>
-      </tr>
-      <tr>
-          <td><code>actions[].exec_working_dir</code></td>
-          <td>String</td>
-          <td></td>
-          <td>working directory used when executing the command</td>
-      </tr>
-      <tr>
-          <td><code>actions[].com_classid</code></td>
-          <td>String</td>
-          <td></td>
-          <td>COM class identifier (CLSID) for ComHandler actions</td>
-      </tr>
-      <tr>
-          <td><code>actions[].com_data</code></td>
-          <td>String</td>
-          <td></td>
-          <td>additional data passed to the COM handler</td>
-      </tr>
-      <tr>
-          <td><code>actions[].email_from</code></td>
-          <td>String</td>
-          <td></td>
-          <td>sender address for SendEmail actions</td>
-      </tr>
-      <tr>
-          <td><code>actions[].email_to</code></td>
-          <td>String</td>
-          <td></td>
-          <td>recipient address(es) for SendEmail actions</td>
-      </tr>
-      <tr>
-          <td><code>actions[].email_cc</code></td>
-          <td>String</td>
-          <td></td>
-          <td>CC address(es) for SendEmail actions</td>
-      </tr>
-      <tr>
-          <td><code>actions[].email_bcc</code></td>
-          <td>String</td>
-          <td></td>
-          <td>BCC address(es) for SendEmail actions</td>
-      </tr>
-      <tr>
-          <td><code>actions[].email_replyto</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Reply‑To address for SendEmail actions</td>
-      </tr>
-      <tr>
-          <td><code>actions[].email_server</code></td>
-          <td>String</td>
-          <td></td>
-          <td>SMTP server used for SendEmail actions</td>
-      </tr>
-      <tr>
-          <td><code>actions[].email_subject</code></td>
-          <td>String</td>
-          <td></td>
-          <td>subject line of the email</td>
-      </tr>
-      <tr>
-          <td><code>actions[].email_body</code></td>
-          <td>String</td>
-          <td></td>
-          <td>body content of the email</td>
-      </tr>
-      <tr>
-          <td><code>actions[].email_attachments</code></td>
-          <td>String</td>
-          <td></td>
-          <td>list of attachment filenames for the email</td>
-      </tr>
-      <tr>
-          <td><code>actions[].message_body</code></td>
-          <td>String</td>
-          <td></td>
-          <td>text displayed in the message box for ShowMessage actions</td>
-      </tr>
-      <tr>
-          <td><code>actions[].message_title</code></td>
-          <td>String</td>
-          <td></td>
-          <td>title of the message box for ShowMessage actions</td>
-      </tr>
-      <tr>
-          <td><code>security_descriptor</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>boot</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>boot.mtime</code></td>
-          <td>DateTime</td>
-          <td>DATE_MODIFICATION</td>
-          <td>modification timestamp of the boot sub‑key for the task</td>
-      </tr>
-      <tr>
-          <td><code>logon</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>logon.mtime</code></td>
-          <td>DateTime</td>
-          <td>DATE_MODIFICATION</td>
-          <td>modification timestamp of the logon sub‑key for the task</td>
-      </tr>
-      <tr>
-          <td><code>maintenance</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>maintenance.mtime</code></td>
-          <td>DateTime</td>
-          <td>DATE_MODIFICATION</td>
-          <td>modification timestamp of the maintenance sub‑key for the task</td>
-      </tr>
-      <tr>
-          <td><code>plain</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>plain.mtime</code></td>
-          <td>DateTime</td>
-          <td>DATE_MODIFICATION</td>
-          <td>modification timestamp of the plain sub‑key for the task</td>
-      </tr>
-      <tr>
-          <td><code>tree</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>tree.mtime</code></td>
-          <td>DateTime</td>
-          <td>DATE_MODIFICATION</td>
-          <td>modification timestamp of the tree sub‑key for the task</td>
-      </tr>
-      <tr>
-          <td><code>creation_date</code></td>
-          <td>String</td>
-          <td>DATE_CREATION</td>
-          <td>timestamp when the scheduled task was initially created</td>
-      </tr>
-      <tr>
-          <td><code>last_run_launch_date</code></td>
-          <td>DateTime</td>
-          <td>DATE_LAST_RUN</td>
-          <td>timestamp of the most recent task launch</td>
-      </tr>
-      <tr>
-          <td><code>last_run_exit_code</code></td>
-          <td>Int</td>
-          <td>EXIT_CODE</td>
-          <td>exit code returned by the latest execution of the task</td>
-      </tr>
-      <tr>
-          <td><code>last_run_exit_date</code></td>
-          <td>DateTime</td>
-          <td>DATE_LAST_RUN</td>
-          <td>timestamp when the latest task execution completed</td>
-      </tr>
-      <tr>
-          <td><code>registration_date_local</code></td>
-          <td>DateTime</td>
-          <td>DATE_CREATION</td>
-          <td>date the task was registered</td>
-      </tr>
-      <tr>
-          <td><code>key_path</code></td>
-          <td>String</td>
-          <td>KEY_PATH</td>
-          <td>full registry key name</td>
-      </tr>
-      <tr>
-          <td><code>key_modif_time</code></td>
-          <td>DateTime</td>
-          <td>DATE_MODIFICATION</td>
-          <td>last modification timestamp of the registry key</td>
-      </tr>
-      <tr>
-          <td><code>key_security</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>key_security.owner_sid</code></td>
-          <td>String</td>
-          <td>USER_SID</td>
-          <td>SID of the user that owns the registry key</td>
-      </tr>
-      <tr>
-          <td><code>key_security.group_sid</code></td>
-          <td>String</td>
-          <td></td>
-          <td>SID of the group that owns the registry key</td>
-      </tr>
-      <tr>
-          <td><code>key_security.control_flags[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td>security descriptor control flags for the key</td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace.ace_type</code></td>
-          <td>String</td>
-          <td></td>
-          <td>type of ACE (e.g., allow, deny)</td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace.account_sid</code></td>
-          <td>String</td>
-          <td></td>
-          <td>SID of the account the ACE applies to</td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace.ace_flags[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td>ACE flags that modify inheritance or behavior</td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace.rights[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td>permissions granted or denied by the ACE</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Output Name</th>
+					<th>Data Type</th>
+					<th>Qualifier</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>guid</code></td>
+					<td>String</td>
+					<td>SCHTASK_GUID</td>
+					<td>unique identifier (GUID) of the scheduled task</td>
+			</tr>
+			<tr>
+					<td><code>uri</code></td>
+					<td>String</td>
+					<td>SCHTASK_URI</td>
+					<td>URI associated with the scheduled task</td>
+			</tr>
+			<tr>
+					<td><code>task</code></td>
+					<td>String</td>
+					<td></td>
+					<td>full registry path of the scheduled task definition</td>
+			</tr>
+			<tr>
+					<td><code>task_description</code></td>
+					<td>String</td>
+					<td></td>
+					<td>human‑readable description of the task</td>
+			</tr>
+			<tr>
+					<td><code>source</code></td>
+					<td>String</td>
+					<td></td>
+					<td>origin source of the task</td>
+			</tr>
+			<tr>
+					<td><code>author</code></td>
+					<td>String</td>
+					<td></td>
+					<td>author or creator of the scheduled task</td>
+			</tr>
+			<tr>
+					<td><code>data</code></td>
+					<td>String</td>
+					<td></td>
+					<td>raw data blob stored for the task</td>
+			</tr>
+			<tr>
+					<td><code>documentation</code></td>
+					<td>String</td>
+					<td></td>
+					<td>documentation URL or text linked to the task</td>
+			</tr>
+			<tr>
+					<td><code>hash</code></td>
+					<td>String</td>
+					<td></td>
+					<td>hex‑encoded hash of the task definition</td>
+			</tr>
+			<tr>
+					<td><code>schema</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>schema version number of the task definition</td>
+			</tr>
+			<tr>
+					<td><code>trigger</code></td>
+					<td>String</td>
+					<td></td>
+					<td>trigger configuration that defines when the task runs</td>
+			</tr>
+			<tr>
+					<td><code>version</code></td>
+					<td>String</td>
+					<td></td>
+					<td>version string of the scheduled task</td>
+			</tr>
+			<tr>
+					<td><code>actions[]</code></td>
+					<td>Array[Object]</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>actions[].action_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>identifier of the action within the task</td>
+			</tr>
+			<tr>
+					<td><code>actions[].action_type</code></td>
+					<td>String</td>
+					<td></td>
+					<td>type of action (e.g., Exec, ComHandler, SendEmail, ShowMessage)</td>
+			</tr>
+			<tr>
+					<td><code>actions[].exec_command</code></td>
+					<td>String</td>
+					<td></td>
+					<td>executable command to run for Exec actions</td>
+			</tr>
+			<tr>
+					<td><code>actions[].exec_arguments</code></td>
+					<td>String</td>
+					<td></td>
+					<td>command‑line arguments for the executable</td>
+			</tr>
+			<tr>
+					<td><code>actions[].exec_working_dir</code></td>
+					<td>String</td>
+					<td></td>
+					<td>working directory used when executing the command</td>
+			</tr>
+			<tr>
+					<td><code>actions[].com_classid</code></td>
+					<td>String</td>
+					<td></td>
+					<td>COM class identifier (CLSID) for ComHandler actions</td>
+			</tr>
+			<tr>
+					<td><code>actions[].com_data</code></td>
+					<td>String</td>
+					<td></td>
+					<td>additional data passed to the COM handler</td>
+			</tr>
+			<tr>
+					<td><code>actions[].email_from</code></td>
+					<td>String</td>
+					<td></td>
+					<td>sender address for SendEmail actions</td>
+			</tr>
+			<tr>
+					<td><code>actions[].email_to</code></td>
+					<td>String</td>
+					<td></td>
+					<td>recipient address(es) for SendEmail actions</td>
+			</tr>
+			<tr>
+					<td><code>actions[].email_cc</code></td>
+					<td>String</td>
+					<td></td>
+					<td>CC address(es) for SendEmail actions</td>
+			</tr>
+			<tr>
+					<td><code>actions[].email_bcc</code></td>
+					<td>String</td>
+					<td></td>
+					<td>BCC address(es) for SendEmail actions</td>
+			</tr>
+			<tr>
+					<td><code>actions[].email_replyto</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Reply‑To address for SendEmail actions</td>
+			</tr>
+			<tr>
+					<td><code>actions[].email_server</code></td>
+					<td>String</td>
+					<td></td>
+					<td>SMTP server used for SendEmail actions</td>
+			</tr>
+			<tr>
+					<td><code>actions[].email_subject</code></td>
+					<td>String</td>
+					<td></td>
+					<td>subject line of the email</td>
+			</tr>
+			<tr>
+					<td><code>actions[].email_body</code></td>
+					<td>String</td>
+					<td></td>
+					<td>body content of the email</td>
+			</tr>
+			<tr>
+					<td><code>actions[].email_attachments</code></td>
+					<td>String</td>
+					<td></td>
+					<td>list of attachment filenames for the email</td>
+			</tr>
+			<tr>
+					<td><code>actions[].message_body</code></td>
+					<td>String</td>
+					<td></td>
+					<td>text displayed in the message box for ShowMessage actions</td>
+			</tr>
+			<tr>
+					<td><code>actions[].message_title</code></td>
+					<td>String</td>
+					<td></td>
+					<td>title of the message box for ShowMessage actions</td>
+			</tr>
+			<tr>
+					<td><code>security_descriptor</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>boot</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>boot.mtime</code></td>
+					<td>DateTime</td>
+					<td>DATE_MODIFICATION</td>
+					<td>modification timestamp of the boot sub‑key for the task</td>
+			</tr>
+			<tr>
+					<td><code>logon</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>logon.mtime</code></td>
+					<td>DateTime</td>
+					<td>DATE_MODIFICATION</td>
+					<td>modification timestamp of the logon sub‑key for the task</td>
+			</tr>
+			<tr>
+					<td><code>maintenance</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>maintenance.mtime</code></td>
+					<td>DateTime</td>
+					<td>DATE_MODIFICATION</td>
+					<td>modification timestamp of the maintenance sub‑key for the task</td>
+			</tr>
+			<tr>
+					<td><code>plain</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>plain.mtime</code></td>
+					<td>DateTime</td>
+					<td>DATE_MODIFICATION</td>
+					<td>modification timestamp of the plain sub‑key for the task</td>
+			</tr>
+			<tr>
+					<td><code>tree</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>tree.mtime</code></td>
+					<td>DateTime</td>
+					<td>DATE_MODIFICATION</td>
+					<td>modification timestamp of the tree sub‑key for the task</td>
+			</tr>
+			<tr>
+					<td><code>creation_date</code></td>
+					<td>String</td>
+					<td>DATE_CREATION</td>
+					<td>timestamp when the scheduled task was initially created</td>
+			</tr>
+			<tr>
+					<td><code>last_run_launch_date</code></td>
+					<td>DateTime</td>
+					<td>DATE_LAST_RUN</td>
+					<td>timestamp of the most recent task launch</td>
+			</tr>
+			<tr>
+					<td><code>last_run_exit_code</code></td>
+					<td>Int</td>
+					<td>EXIT_CODE</td>
+					<td>exit code returned by the latest execution of the task</td>
+			</tr>
+			<tr>
+					<td><code>last_run_exit_date</code></td>
+					<td>DateTime</td>
+					<td>DATE_LAST_RUN</td>
+					<td>timestamp when the latest task execution completed</td>
+			</tr>
+			<tr>
+					<td><code>registration_date_local</code></td>
+					<td>DateTime</td>
+					<td>DATE_CREATION</td>
+					<td>date the task was registered</td>
+			</tr>
+			<tr>
+					<td><code>key_path</code></td>
+					<td>String</td>
+					<td>KEY_PATH</td>
+					<td>full registry key name</td>
+			</tr>
+			<tr>
+					<td><code>key_modif_time</code></td>
+					<td>DateTime</td>
+					<td>DATE_MODIFICATION</td>
+					<td>last modification timestamp of the registry key</td>
+			</tr>
+			<tr>
+					<td><code>key_security</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>key_security.owner_sid</code></td>
+					<td>String</td>
+					<td>USER_SID</td>
+					<td>SID of the user that owns the registry key</td>
+			</tr>
+			<tr>
+					<td><code>key_security.group_sid</code></td>
+					<td>String</td>
+					<td></td>
+					<td>SID of the group that owns the registry key</td>
+			</tr>
+			<tr>
+					<td><code>key_security.control_flags[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>security descriptor control flags for the key</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace.ace_type</code></td>
+					<td>String</td>
+					<td></td>
+					<td>type of ACE (e.g., allow, deny)</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace.account_sid</code></td>
+					<td>String</td>
+					<td></td>
+					<td>SID of the account the ACE applies to</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace.ace_flags[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>ACE flags that modify inheritance or behavior</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace.rights[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>permissions granted or denied by the ACE</td>
+			</tr>
+	</tbody>
 </table>
 
         </div>

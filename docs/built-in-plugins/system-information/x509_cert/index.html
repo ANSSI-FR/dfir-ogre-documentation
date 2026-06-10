@@ -39,12 +39,12 @@ Description
 
 
 
-  <meta itemprop="name" content="X509 Cert">
-  <meta itemprop="description" content="Data Type: x509_cert Python Parser: RegSystemCertificates Description Parses the Windows Software registry hive to collect system‑wide X509 certificates stored in the Software hive. It reads the binary certificate blobs, decodes them, and extracts key certificate attributes.">
-  <meta itemprop="wordCount" content="257">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="X509 Cert">
-  <meta name="twitter:description" content="Data Type: x509_cert Python Parser: RegSystemCertificates Description Parses the Windows Software registry hive to collect system‑wide X509 certificates stored in the Software hive. It reads the binary certificate blobs, decodes them, and extracts key certificate attributes.">
+	<meta itemprop="name" content="X509 Cert">
+	<meta itemprop="description" content="Data Type: x509_cert Python Parser: RegSystemCertificates Description Parses the Windows Software registry hive to collect system‑wide X509 certificates stored in the Software hive. It reads the binary certificate blobs, decodes them, and extracts key certificate attributes.">
+	<meta itemprop="wordCount" content="257">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="X509 Cert">
+	<meta name="twitter:description" content="Data Type: x509_cert Python Parser: RegSystemCertificates Description Parses the Windows Software registry hive to collect system‑wide X509 certificates stored in the Software hive. It reads the binary certificate blobs, decodes them, and extracts key certificate attributes.">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
     <link href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" rel="stylesheet" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -1657,189 +1657,189 @@ Python Parser: <strong>RegSystemCertificates</strong></div>
 </ul>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Timeline Field</th>
-          <th>Data Field</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Related User</td>
-          <td><code>key_security.owner_sid</code></td>
-      </tr>
-      <tr>
-          <td>Description</td>
-          <td><code>subject</code></td>
-      </tr>
-      <tr>
-          <td>Additional Description</td>
-          <td><code>issuer</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Timeline Field</th>
+					<th>Data Field</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Related User</td>
+					<td><code>key_security.owner_sid</code></td>
+			</tr>
+			<tr>
+					<td>Description</td>
+					<td><code>subject</code></td>
+			</tr>
+			<tr>
+					<td>Additional Description</td>
+					<td><code>issuer</code></td>
+			</tr>
+	</tbody>
 </table>
 <h3>Fields<span class="hx:absolute hx:-mt-20" id="fields"></span>
     <a href="#fields" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Output Name</th>
-          <th>Data Type</th>
-          <th>Qualifier</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>subject</code></td>
-          <td>String</td>
-          <td></td>
-          <td>certificate subject distinguished name (RFC 4514 format)</td>
-      </tr>
-      <tr>
-          <td><code>issuer</code></td>
-          <td>String</td>
-          <td></td>
-          <td>certificate issuer distinguished name (RFC 4514 format)</td>
-      </tr>
-      <tr>
-          <td><code>not_valid_before</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>certificate start‑of‑validity timestamp (not before)</td>
-      </tr>
-      <tr>
-          <td><code>not_valid_after</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>certificate end‑of‑validity timestamp (not after)</td>
-      </tr>
-      <tr>
-          <td><code>pub_key_algo</code></td>
-          <td>String</td>
-          <td></td>
-          <td>public‑key algorithm name (e.g., rsaEncryption)</td>
-      </tr>
-      <tr>
-          <td><code>pub_key_algo_oid</code></td>
-          <td>String</td>
-          <td></td>
-          <td>OID of the public‑key algorithm</td>
-      </tr>
-      <tr>
-          <td><code>fingerprint_sha256</code></td>
-          <td>String</td>
-          <td></td>
-          <td>SHA‑256 fingerprint of the certificate (hex string)</td>
-      </tr>
-      <tr>
-          <td><code>version</code></td>
-          <td>String</td>
-          <td></td>
-          <td>X.509 certificate version</td>
-      </tr>
-      <tr>
-          <td><code>serial_number</code></td>
-          <td>String</td>
-          <td></td>
-          <td>certificate serial number (decimal string)</td>
-      </tr>
-      <tr>
-          <td><code>extensions[]</code></td>
-          <td>Array[Object]</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>extensions[].name</code></td>
-          <td>String</td>
-          <td></td>
-          <td>human‑readable name of the extension</td>
-      </tr>
-      <tr>
-          <td><code>extensions[].oid</code></td>
-          <td>String</td>
-          <td></td>
-          <td>object identifier (OID) of the extension</td>
-      </tr>
-      <tr>
-          <td><code>extensions[].critical</code></td>
-          <td>String</td>
-          <td></td>
-          <td>whether the extension is marked critical (true/false)</td>
-      </tr>
-      <tr>
-          <td><code>extensions[].value</code></td>
-          <td>String</td>
-          <td></td>
-          <td>string representation of the extension value</td>
-      </tr>
-      <tr>
-          <td><code>key_path</code></td>
-          <td>String</td>
-          <td>KEY_PATH</td>
-          <td>full registry key name</td>
-      </tr>
-      <tr>
-          <td><code>key_modif_time</code></td>
-          <td>DateTime</td>
-          <td>DATE_MODIFICATION</td>
-          <td>last modification timestamp of the registry key</td>
-      </tr>
-      <tr>
-          <td><code>key_security</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>key_security.owner_sid</code></td>
-          <td>String</td>
-          <td>USER_SID</td>
-          <td>SID of the user that owns the registry key</td>
-      </tr>
-      <tr>
-          <td><code>key_security.group_sid</code></td>
-          <td>String</td>
-          <td></td>
-          <td>SID of the group that owns the registry key</td>
-      </tr>
-      <tr>
-          <td><code>key_security.control_flags[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td>security descriptor control flags for the key</td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace.ace_type</code></td>
-          <td>String</td>
-          <td></td>
-          <td>type of ACE (e.g., allow, deny)</td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace.account_sid</code></td>
-          <td>String</td>
-          <td></td>
-          <td>SID of the account the ACE applies to</td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace.ace_flags[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td>ACE flags that modify inheritance or behavior</td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace.rights[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td>permissions granted or denied by the ACE</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Output Name</th>
+					<th>Data Type</th>
+					<th>Qualifier</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>subject</code></td>
+					<td>String</td>
+					<td></td>
+					<td>certificate subject distinguished name (RFC 4514 format)</td>
+			</tr>
+			<tr>
+					<td><code>issuer</code></td>
+					<td>String</td>
+					<td></td>
+					<td>certificate issuer distinguished name (RFC 4514 format)</td>
+			</tr>
+			<tr>
+					<td><code>not_valid_before</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>certificate start‑of‑validity timestamp (not before)</td>
+			</tr>
+			<tr>
+					<td><code>not_valid_after</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>certificate end‑of‑validity timestamp (not after)</td>
+			</tr>
+			<tr>
+					<td><code>pub_key_algo</code></td>
+					<td>String</td>
+					<td></td>
+					<td>public‑key algorithm name (e.g., rsaEncryption)</td>
+			</tr>
+			<tr>
+					<td><code>pub_key_algo_oid</code></td>
+					<td>String</td>
+					<td></td>
+					<td>OID of the public‑key algorithm</td>
+			</tr>
+			<tr>
+					<td><code>fingerprint_sha256</code></td>
+					<td>String</td>
+					<td></td>
+					<td>SHA‑256 fingerprint of the certificate (hex string)</td>
+			</tr>
+			<tr>
+					<td><code>version</code></td>
+					<td>String</td>
+					<td></td>
+					<td>X.509 certificate version</td>
+			</tr>
+			<tr>
+					<td><code>serial_number</code></td>
+					<td>String</td>
+					<td></td>
+					<td>certificate serial number (decimal string)</td>
+			</tr>
+			<tr>
+					<td><code>extensions[]</code></td>
+					<td>Array[Object]</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>extensions[].name</code></td>
+					<td>String</td>
+					<td></td>
+					<td>human‑readable name of the extension</td>
+			</tr>
+			<tr>
+					<td><code>extensions[].oid</code></td>
+					<td>String</td>
+					<td></td>
+					<td>object identifier (OID) of the extension</td>
+			</tr>
+			<tr>
+					<td><code>extensions[].critical</code></td>
+					<td>String</td>
+					<td></td>
+					<td>whether the extension is marked critical (true/false)</td>
+			</tr>
+			<tr>
+					<td><code>extensions[].value</code></td>
+					<td>String</td>
+					<td></td>
+					<td>string representation of the extension value</td>
+			</tr>
+			<tr>
+					<td><code>key_path</code></td>
+					<td>String</td>
+					<td>KEY_PATH</td>
+					<td>full registry key name</td>
+			</tr>
+			<tr>
+					<td><code>key_modif_time</code></td>
+					<td>DateTime</td>
+					<td>DATE_MODIFICATION</td>
+					<td>last modification timestamp of the registry key</td>
+			</tr>
+			<tr>
+					<td><code>key_security</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>key_security.owner_sid</code></td>
+					<td>String</td>
+					<td>USER_SID</td>
+					<td>SID of the user that owns the registry key</td>
+			</tr>
+			<tr>
+					<td><code>key_security.group_sid</code></td>
+					<td>String</td>
+					<td></td>
+					<td>SID of the group that owns the registry key</td>
+			</tr>
+			<tr>
+					<td><code>key_security.control_flags[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>security descriptor control flags for the key</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace.ace_type</code></td>
+					<td>String</td>
+					<td></td>
+					<td>type of ACE (e.g., allow, deny)</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace.account_sid</code></td>
+					<td>String</td>
+					<td></td>
+					<td>SID of the account the ACE applies to</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace.ace_flags[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>ACE flags that modify inheritance or behavior</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace.rights[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>permissions granted or denied by the ACE</td>
+			</tr>
+	</tbody>
 </table>
 
         </div>

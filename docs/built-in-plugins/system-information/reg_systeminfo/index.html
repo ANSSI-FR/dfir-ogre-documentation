@@ -30,245 +30,245 @@ Description
     Extracts various system information from the SYSTEM and SOFTWARE hives
 Timeline
     
-  
-      
-          Timeline Field
-          Data Field
-      
-  
-  
-      
-          Description
-          product_name
-      
-      
-          Additional Description
-          os_version
-      
-      
-          
-          build_number
-      
-      
-          
-          architecture
-      
-      
-          
-          timezone_iana
-      
-  
+	
+			
+					Timeline Field
+					Data Field
+			
+	
+	
+			
+					Description
+					product_name
+			
+			
+					Additional Description
+					os_version
+			
+			
+					
+					build_number
+			
+			
+					
+					architecture
+			
+			
+					
+					timezone_iana
+			
+	
 
 Fields
     
-  
-      
-          Output Name
-          Data Type
-          Qualifier
-          Description
-      
-  
-  
-      
-          computer_name
-          String
-          
-          Name of the computer
-      
-      
-          product_name
-          String
-          
-          Windows product name (e.g., Windows 10 Pro)
-      
-      
-          os_version
-          String
-          
-          Windows version number (major.minor
-      
-      
-          build_number
-          String
-          
-          Windows build number
-      
-      
-          install_date
-          DateTime
-          
-          UTC timestamp when Windows was installed
-      
-      
-          shutdown_date
-          DateTime
-          
-          Last recorded shutdown time in UTC
-      
-      
-          domain
-          String
-          
-          Domain the computer is joined to (if any)
-      
-      
-          system_root
-          String
-          
-          Windows system directory path (typically C:\Windows)
-      
-      
-          architecture
-          String
-          
-          Processor architecture (e.g., AMD64, x86)
-      
-      
-          has_emet
-          Bool
-          
-          True if EMET (Enhanced Mitigation Experience Toolkit) is installed
-      
-      
-          is_dc
-          Bool
-          
-          True if this computer is a Domain Controller
-      
-      
-          is_pki
-          Bool
-          
-          True if this computer has the PKI role
-      
-      
-          is_ias
-          Bool
-          
-          True if this computer has the IAS role
-      
-      
-          app_whitelisting
-          String
-          
-          Application whitelisting policy in use (AppLocker, SRP, or empty)
-      
-      
-          timezone_windows
-          String
-          
-          Windows timezone key name from registry
-      
-      
-          timezone_iana
-          String
-          
-          IANA timezone identifier converted from Windows timezone
-      
-      
-          wu_last_check
-          DateTime
-          
-          Last successful Windows Update detection scan time
-      
-      
-          wu_last_download
-          DateTime
-          
-          Last successful Windows Update download time
-      
-      
-          wu_last_install
-          DateTime
-          
-          Last successful Windows Update installation time
-      
-      
-          install_date_local
-          String
-          
-          Local timezone timestamp when Windows was installed
-      
-      
-          control_set
-          String
-          
-          Active ControlSet currently in use (ControlSet001, ControlSet002, etc.)
-      
-      
-          interfaces[]
-          Array[Object]
-          
-          
-      
-      
-          interfaces[].guid
-          String
-          
-          Unique identifier for the network interface
-      
-      
-          interfaces[].name
-          String
-          
-          Network interface name as shown in Windows
-      
-      
-          interfaces[].description
-          String
-          
-          Network interface description
-      
-      
-          interfaces[].mac
-          String
-          
-          Physical MAC address of the interface
-      
-      
-          interfaces[].ipv4
-          String
-          
-          IPv4 addresses assigned to the interface
-      
-      
-          interfaces[].dhcp_enabled
-          String
-          
-          Whether DHCP is enabled for this interfac
-      
-      
-          interfaces[].dhcp_ipv4
-          String
-          
-          Current IPv4 address obtained via DHCP
-      
-      
-          interfaces[].dhcp_ipv4_server
-          String
-          
-          DHCP server that provided the IPv4 address
-      
-      
-          interfaces[].ipv6
-          String
-          
-          IPv6 addresses assigned to the interface
-      
-      
-          interfaces[].dhcp_ipv6
-          String
-          
-          Current IPv6 address obtained via DHCP
-      
-      
-          interfaces[].dhcp_ipv6_server
-          String
-          
-          DHCP server that provided the IPv6 address
-      
-  
+	
+			
+					Output Name
+					Data Type
+					Qualifier
+					Description
+			
+	
+	
+			
+					computer_name
+					String
+					
+					Name of the computer
+			
+			
+					product_name
+					String
+					
+					Windows product name (e.g., Windows 10 Pro)
+			
+			
+					os_version
+					String
+					
+					Windows version number (major.minor
+			
+			
+					build_number
+					String
+					
+					Windows build number
+			
+			
+					install_date
+					DateTime
+					
+					UTC timestamp when Windows was installed
+			
+			
+					shutdown_date
+					DateTime
+					
+					Last recorded shutdown time in UTC
+			
+			
+					domain
+					String
+					
+					Domain the computer is joined to (if any)
+			
+			
+					system_root
+					String
+					
+					Windows system directory path (typically C:\Windows)
+			
+			
+					architecture
+					String
+					
+					Processor architecture (e.g., AMD64, x86)
+			
+			
+					has_emet
+					Bool
+					
+					True if EMET (Enhanced Mitigation Experience Toolkit) is installed
+			
+			
+					is_dc
+					Bool
+					
+					True if this computer is a Domain Controller
+			
+			
+					is_pki
+					Bool
+					
+					True if this computer has the PKI role
+			
+			
+					is_ias
+					Bool
+					
+					True if this computer has the IAS role
+			
+			
+					app_whitelisting
+					String
+					
+					Application whitelisting policy in use (AppLocker, SRP, or empty)
+			
+			
+					timezone_windows
+					String
+					
+					Windows timezone key name from registry
+			
+			
+					timezone_iana
+					String
+					
+					IANA timezone identifier converted from Windows timezone
+			
+			
+					wu_last_check
+					DateTime
+					
+					Last successful Windows Update detection scan time
+			
+			
+					wu_last_download
+					DateTime
+					
+					Last successful Windows Update download time
+			
+			
+					wu_last_install
+					DateTime
+					
+					Last successful Windows Update installation time
+			
+			
+					install_date_local
+					String
+					
+					Local timezone timestamp when Windows was installed
+			
+			
+					control_set
+					String
+					
+					Active ControlSet currently in use (ControlSet001, ControlSet002, etc.)
+			
+			
+					interfaces[]
+					Array[Object]
+					
+					
+			
+			
+					interfaces[].guid
+					String
+					
+					Unique identifier for the network interface
+			
+			
+					interfaces[].name
+					String
+					
+					Network interface name as shown in Windows
+			
+			
+					interfaces[].description
+					String
+					
+					Network interface description
+			
+			
+					interfaces[].mac
+					String
+					
+					Physical MAC address of the interface
+			
+			
+					interfaces[].ipv4
+					String
+					
+					IPv4 addresses assigned to the interface
+			
+			
+					interfaces[].dhcp_enabled
+					String
+					
+					Whether DHCP is enabled for this interfac
+			
+			
+					interfaces[].dhcp_ipv4
+					String
+					
+					Current IPv4 address obtained via DHCP
+			
+			
+					interfaces[].dhcp_ipv4_server
+					String
+					
+					DHCP server that provided the IPv4 address
+			
+			
+					interfaces[].ipv6
+					String
+					
+					IPv6 addresses assigned to the interface
+			
+			
+					interfaces[].dhcp_ipv6
+					String
+					
+					Current IPv6 address obtained via DHCP
+			
+			
+					interfaces[].dhcp_ipv6_server
+					String
+					
+					DHCP server that provided the IPv6 address
+			
+	
 
     
   ">
@@ -282,13 +282,13 @@ Fields
 
 
 
-  <meta itemprop="name" content="Reg Systeminfo">
-  <meta itemprop="description" content="Data Type: reg_systeminfo Python Parser: RegSystemInfo Description Extracts various system information from the SYSTEM and SOFTWARE hives
+	<meta itemprop="name" content="Reg Systeminfo">
+	<meta itemprop="description" content="Data Type: reg_systeminfo Python Parser: RegSystemInfo Description Extracts various system information from the SYSTEM and SOFTWARE hives
 Timeline Timeline Field Data Field Description product_name Additional Description os_version build_number architecture timezone_iana Fields Output Name Data Type Qualifier Description computer_name String Name of the computer product_name String Windows product name (e.g., Windows 10 Pro) os_version String Windows version number (major.minor build_number String Windows build number install_date DateTime UTC timestamp when Windows was installed shutdown_date DateTime Last recorded shutdown time in UTC domain String Domain the computer is joined to (if any) system_root String Windows system directory path (typically C:\Windows) architecture String Processor architecture (e.g., AMD64, x86) has_emet Bool True if EMET (Enhanced Mitigation Experience Toolkit) is installed is_dc Bool True if this computer is a Domain Controller is_pki Bool True if this computer has the PKI role is_ias Bool True if this computer has the IAS role app_whitelisting String Application whitelisting policy in use (AppLocker, SRP, or empty) timezone_windows String Windows timezone key name from registry timezone_iana String IANA timezone identifier converted from Windows timezone wu_last_check DateTime Last successful Windows Update detection scan time wu_last_download DateTime Last successful Windows Update download time wu_last_install DateTime Last successful Windows Update installation time install_date_local String Local timezone timestamp when Windows was installed control_set String Active ControlSet currently in use (ControlSet001, ControlSet002, etc.) interfaces[] Array[Object] interfaces[].guid String Unique identifier for the network interface interfaces[].name String Network interface name as shown in Windows interfaces[].description String Network interface description interfaces[].mac String Physical MAC address of the interface interfaces[].ipv4 String IPv4 addresses assigned to the interface interfaces[].dhcp_enabled String Whether DHCP is enabled for this interfac interfaces[].dhcp_ipv4 String Current IPv4 address obtained via DHCP interfaces[].dhcp_ipv4_server String DHCP server that provided the IPv4 address interfaces[].ipv6 String IPv6 addresses assigned to the interface interfaces[].dhcp_ipv6 String Current IPv6 address obtained via DHCP interfaces[].dhcp_ipv6_server String DHCP server that provided the IPv6 address">
-  <meta itemprop="wordCount" content="308">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Reg Systeminfo">
-  <meta name="twitter:description" content="Data Type: reg_systeminfo Python Parser: RegSystemInfo Description Extracts various system information from the SYSTEM and SOFTWARE hives
+	<meta itemprop="wordCount" content="308">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Reg Systeminfo">
+	<meta name="twitter:description" content="Data Type: reg_systeminfo Python Parser: RegSystemInfo Description Extracts various system information from the SYSTEM and SOFTWARE hives
 Timeline Timeline Field Data Field Description product_name Additional Description os_version build_number architecture timezone_iana Fields Output Name Data Type Qualifier Description computer_name String Name of the computer product_name String Windows product name (e.g., Windows 10 Pro) os_version String Windows version number (major.minor build_number String Windows build number install_date DateTime UTC timestamp when Windows was installed shutdown_date DateTime Last recorded shutdown time in UTC domain String Domain the computer is joined to (if any) system_root String Windows system directory path (typically C:\Windows) architecture String Processor architecture (e.g., AMD64, x86) has_emet Bool True if EMET (Enhanced Mitigation Experience Toolkit) is installed is_dc Bool True if this computer is a Domain Controller is_pki Bool True if this computer has the PKI role is_ias Bool True if this computer has the IAS role app_whitelisting String Application whitelisting policy in use (AppLocker, SRP, or empty) timezone_windows String Windows timezone key name from registry timezone_iana String IANA timezone identifier converted from Windows timezone wu_last_check DateTime Last successful Windows Update detection scan time wu_last_download DateTime Last successful Windows Update download time wu_last_install DateTime Last successful Windows Update installation time install_date_local String Local timezone timestamp when Windows was installed control_set String Active ControlSet currently in use (ControlSet001, ControlSet002, etc.) interfaces[] Array[Object] interfaces[].guid String Unique identifier for the network interface interfaces[].name String Network interface name as shown in Windows interfaces[].description String Network interface description interfaces[].mac String Physical MAC address of the interface interfaces[].ipv4 String IPv4 addresses assigned to the interface interfaces[].dhcp_enabled String Whether DHCP is enabled for this interfac interfaces[].dhcp_ipv4 String Current IPv4 address obtained via DHCP interfaces[].dhcp_ipv4_server String DHCP server that provided the IPv4 address interfaces[].ipv6 String IPv6 addresses assigned to the interface interfaces[].dhcp_ipv6 String Current IPv6 address obtained via DHCP interfaces[].dhcp_ipv6_server String DHCP server that provided the IPv6 address">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -1899,245 +1899,245 @@ Python Parser: <strong>RegSystemInfo</strong></div>
     <a href="#description" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Extracts various system information from the SYSTEM and SOFTWARE hives</p>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Timeline Field</th>
-          <th>Data Field</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Description</td>
-          <td><code>product_name</code></td>
-      </tr>
-      <tr>
-          <td>Additional Description</td>
-          <td><code>os_version</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>build_number</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>architecture</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>timezone_iana</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Timeline Field</th>
+					<th>Data Field</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Description</td>
+					<td><code>product_name</code></td>
+			</tr>
+			<tr>
+					<td>Additional Description</td>
+					<td><code>os_version</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>build_number</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>architecture</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>timezone_iana</code></td>
+			</tr>
+	</tbody>
 </table>
 <h3>Fields<span class="hx:absolute hx:-mt-20" id="fields"></span>
     <a href="#fields" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Output Name</th>
-          <th>Data Type</th>
-          <th>Qualifier</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>computer_name</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Name of the computer</td>
-      </tr>
-      <tr>
-          <td><code>product_name</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Windows product name (e.g., Windows 10 Pro)</td>
-      </tr>
-      <tr>
-          <td><code>os_version</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Windows version number (major.minor</td>
-      </tr>
-      <tr>
-          <td><code>build_number</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Windows build number</td>
-      </tr>
-      <tr>
-          <td><code>install_date</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>UTC timestamp when Windows was installed</td>
-      </tr>
-      <tr>
-          <td><code>shutdown_date</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>Last recorded shutdown time in UTC</td>
-      </tr>
-      <tr>
-          <td><code>domain</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Domain the computer is joined to (if any)</td>
-      </tr>
-      <tr>
-          <td><code>system_root</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Windows system directory path (typically C:\Windows)</td>
-      </tr>
-      <tr>
-          <td><code>architecture</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Processor architecture (e.g., AMD64, x86)</td>
-      </tr>
-      <tr>
-          <td><code>has_emet</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>True if EMET (Enhanced Mitigation Experience Toolkit) is installed</td>
-      </tr>
-      <tr>
-          <td><code>is_dc</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>True if this computer is a Domain Controller</td>
-      </tr>
-      <tr>
-          <td><code>is_pki</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>True if this computer has the PKI role</td>
-      </tr>
-      <tr>
-          <td><code>is_ias</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>True if this computer has the IAS role</td>
-      </tr>
-      <tr>
-          <td><code>app_whitelisting</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Application whitelisting policy in use (AppLocker, SRP, or empty)</td>
-      </tr>
-      <tr>
-          <td><code>timezone_windows</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Windows timezone key name from registry</td>
-      </tr>
-      <tr>
-          <td><code>timezone_iana</code></td>
-          <td>String</td>
-          <td></td>
-          <td>IANA timezone identifier converted from Windows timezone</td>
-      </tr>
-      <tr>
-          <td><code>wu_last_check</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>Last successful Windows Update detection scan time</td>
-      </tr>
-      <tr>
-          <td><code>wu_last_download</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>Last successful Windows Update download time</td>
-      </tr>
-      <tr>
-          <td><code>wu_last_install</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>Last successful Windows Update installation time</td>
-      </tr>
-      <tr>
-          <td><code>install_date_local</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Local timezone timestamp when Windows was installed</td>
-      </tr>
-      <tr>
-          <td><code>control_set</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Active ControlSet currently in use (ControlSet001, ControlSet002, etc.)</td>
-      </tr>
-      <tr>
-          <td><code>interfaces[]</code></td>
-          <td>Array[Object]</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>interfaces[].guid</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Unique identifier for the network interface</td>
-      </tr>
-      <tr>
-          <td><code>interfaces[].name</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Network interface name as shown in Windows</td>
-      </tr>
-      <tr>
-          <td><code>interfaces[].description</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Network interface description</td>
-      </tr>
-      <tr>
-          <td><code>interfaces[].mac</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Physical MAC address of the interface</td>
-      </tr>
-      <tr>
-          <td><code>interfaces[].ipv4</code></td>
-          <td>String</td>
-          <td></td>
-          <td>IPv4 addresses assigned to the interface</td>
-      </tr>
-      <tr>
-          <td><code>interfaces[].dhcp_enabled</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Whether DHCP is enabled for this interfac</td>
-      </tr>
-      <tr>
-          <td><code>interfaces[].dhcp_ipv4</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Current IPv4 address obtained via DHCP</td>
-      </tr>
-      <tr>
-          <td><code>interfaces[].dhcp_ipv4_server</code></td>
-          <td>String</td>
-          <td></td>
-          <td>DHCP server that provided the IPv4 address</td>
-      </tr>
-      <tr>
-          <td><code>interfaces[].ipv6</code></td>
-          <td>String</td>
-          <td></td>
-          <td>IPv6 addresses assigned to the interface</td>
-      </tr>
-      <tr>
-          <td><code>interfaces[].dhcp_ipv6</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Current IPv6 address obtained via DHCP</td>
-      </tr>
-      <tr>
-          <td><code>interfaces[].dhcp_ipv6_server</code></td>
-          <td>String</td>
-          <td></td>
-          <td>DHCP server that provided the IPv6 address</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Output Name</th>
+					<th>Data Type</th>
+					<th>Qualifier</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>computer_name</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Name of the computer</td>
+			</tr>
+			<tr>
+					<td><code>product_name</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Windows product name (e.g., Windows 10 Pro)</td>
+			</tr>
+			<tr>
+					<td><code>os_version</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Windows version number (major.minor</td>
+			</tr>
+			<tr>
+					<td><code>build_number</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Windows build number</td>
+			</tr>
+			<tr>
+					<td><code>install_date</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>UTC timestamp when Windows was installed</td>
+			</tr>
+			<tr>
+					<td><code>shutdown_date</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>Last recorded shutdown time in UTC</td>
+			</tr>
+			<tr>
+					<td><code>domain</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Domain the computer is joined to (if any)</td>
+			</tr>
+			<tr>
+					<td><code>system_root</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Windows system directory path (typically C:\Windows)</td>
+			</tr>
+			<tr>
+					<td><code>architecture</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Processor architecture (e.g., AMD64, x86)</td>
+			</tr>
+			<tr>
+					<td><code>has_emet</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>True if EMET (Enhanced Mitigation Experience Toolkit) is installed</td>
+			</tr>
+			<tr>
+					<td><code>is_dc</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>True if this computer is a Domain Controller</td>
+			</tr>
+			<tr>
+					<td><code>is_pki</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>True if this computer has the PKI role</td>
+			</tr>
+			<tr>
+					<td><code>is_ias</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>True if this computer has the IAS role</td>
+			</tr>
+			<tr>
+					<td><code>app_whitelisting</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Application whitelisting policy in use (AppLocker, SRP, or empty)</td>
+			</tr>
+			<tr>
+					<td><code>timezone_windows</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Windows timezone key name from registry</td>
+			</tr>
+			<tr>
+					<td><code>timezone_iana</code></td>
+					<td>String</td>
+					<td></td>
+					<td>IANA timezone identifier converted from Windows timezone</td>
+			</tr>
+			<tr>
+					<td><code>wu_last_check</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>Last successful Windows Update detection scan time</td>
+			</tr>
+			<tr>
+					<td><code>wu_last_download</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>Last successful Windows Update download time</td>
+			</tr>
+			<tr>
+					<td><code>wu_last_install</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>Last successful Windows Update installation time</td>
+			</tr>
+			<tr>
+					<td><code>install_date_local</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Local timezone timestamp when Windows was installed</td>
+			</tr>
+			<tr>
+					<td><code>control_set</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Active ControlSet currently in use (ControlSet001, ControlSet002, etc.)</td>
+			</tr>
+			<tr>
+					<td><code>interfaces[]</code></td>
+					<td>Array[Object]</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>interfaces[].guid</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Unique identifier for the network interface</td>
+			</tr>
+			<tr>
+					<td><code>interfaces[].name</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Network interface name as shown in Windows</td>
+			</tr>
+			<tr>
+					<td><code>interfaces[].description</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Network interface description</td>
+			</tr>
+			<tr>
+					<td><code>interfaces[].mac</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Physical MAC address of the interface</td>
+			</tr>
+			<tr>
+					<td><code>interfaces[].ipv4</code></td>
+					<td>String</td>
+					<td></td>
+					<td>IPv4 addresses assigned to the interface</td>
+			</tr>
+			<tr>
+					<td><code>interfaces[].dhcp_enabled</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Whether DHCP is enabled for this interfac</td>
+			</tr>
+			<tr>
+					<td><code>interfaces[].dhcp_ipv4</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Current IPv4 address obtained via DHCP</td>
+			</tr>
+			<tr>
+					<td><code>interfaces[].dhcp_ipv4_server</code></td>
+					<td>String</td>
+					<td></td>
+					<td>DHCP server that provided the IPv4 address</td>
+			</tr>
+			<tr>
+					<td><code>interfaces[].ipv6</code></td>
+					<td>String</td>
+					<td></td>
+					<td>IPv6 addresses assigned to the interface</td>
+			</tr>
+			<tr>
+					<td><code>interfaces[].dhcp_ipv6</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Current IPv6 address obtained via DHCP</td>
+			</tr>
+			<tr>
+					<td><code>interfaces[].dhcp_ipv6_server</code></td>
+					<td>String</td>
+					<td></td>
+					<td>DHCP server that provided the IPv6 address</td>
+			</tr>
+	</tbody>
 </table>
 
         </div>

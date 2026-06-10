@@ -39,12 +39,12 @@ Description
 
 
 
-  <meta itemprop="name" content="Shellbags">
-  <meta itemprop="description" content="Data Type: shellbags Python Parser: RegShellBag Description Extracts the contents of Shell Bag structures stored in the UsrClass hive. These structures record directories and items that a user has browsed with Windows Explorer.">
-  <meta itemprop="wordCount" content="300">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Shellbags">
-  <meta name="twitter:description" content="Data Type: shellbags Python Parser: RegShellBag Description Extracts the contents of Shell Bag structures stored in the UsrClass hive. These structures record directories and items that a user has browsed with Windows Explorer.">
+	<meta itemprop="name" content="Shellbags">
+	<meta itemprop="description" content="Data Type: shellbags Python Parser: RegShellBag Description Extracts the contents of Shell Bag structures stored in the UsrClass hive. These structures record directories and items that a user has browsed with Windows Explorer.">
+	<meta itemprop="wordCount" content="300">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Shellbags">
+	<meta name="twitter:description" content="Data Type: shellbags Python Parser: RegShellBag Description Extracts the contents of Shell Bag structures stored in the UsrClass hive. These structures record directories and items that a user has browsed with Windows Explorer.">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
     <link href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" rel="stylesheet" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -1659,169 +1659,169 @@ Python Parser: <strong>RegShellBag</strong></div>
 </ul>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Timeline Field</th>
-          <th>Data Field</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Related User</td>
-          <td><code>key_security.owner_sid</code></td>
-      </tr>
-      <tr>
-          <td>Description</td>
-          <td><code>path</code></td>
-      </tr>
-      <tr>
-          <td>Additional Description</td>
-          <td><code>type</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>name</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Timeline Field</th>
+					<th>Data Field</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Related User</td>
+					<td><code>key_security.owner_sid</code></td>
+			</tr>
+			<tr>
+					<td>Description</td>
+					<td><code>path</code></td>
+			</tr>
+			<tr>
+					<td>Additional Description</td>
+					<td><code>type</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>name</code></td>
+			</tr>
+	</tbody>
 </table>
 <h3>Fields<span class="hx:absolute hx:-mt-20" id="fields"></span>
     <a href="#fields" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Output Name</th>
-          <th>Data Type</th>
-          <th>Qualifier</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>name</code></td>
-          <td>String</td>
-          <td></td>
-          <td>displayed name of the shell item (folder, file, volume, etc.)</td>
-      </tr>
-      <tr>
-          <td><code>type</code></td>
-          <td>String</td>
-          <td></td>
-          <td>type identifier of the shell item (e.g., control_panel_category, network_location, file_entry)</td>
-      </tr>
-      <tr>
-          <td><code>localized_name</code></td>
-          <td>String</td>
-          <td></td>
-          <td>localized (human‑readable) name of a file entry, if present in the extension block</td>
-      </tr>
-      <tr>
-          <td><code>file_reference</code></td>
-          <td>String</td>
-          <td></td>
-          <td>NTFS file reference (MFT entry) of the file, formatted as &lsquo;MFT‑Sequence‑Index&rsquo;</td>
-      </tr>
-      <tr>
-          <td><code>path</code></td>
-          <td>String</td>
-          <td></td>
-          <td>reconstructed hierarchical path derived from the shell bag entry</td>
-      </tr>
-      <tr>
-          <td><code>description</code></td>
-          <td>String</td>
-          <td></td>
-          <td>textual description associated with a network location item</td>
-      </tr>
-      <tr>
-          <td><code>comments</code></td>
-          <td>String</td>
-          <td></td>
-          <td>user‑defined comments attached to a network location item</td>
-      </tr>
-      <tr>
-          <td><code>modification_time</code></td>
-          <td>DateTime</td>
-          <td>DATE_MODIFICATION</td>
-          <td>last modification timestamp of the underlying file</td>
-      </tr>
-      <tr>
-          <td><code>access_time</code></td>
-          <td>DateTime</td>
-          <td>DATE_ACCESS</td>
-          <td>last access timestamp of the underlying file</td>
-      </tr>
-      <tr>
-          <td><code>creation_time</code></td>
-          <td>DateTime</td>
-          <td>DATE_CREATION</td>
-          <td>creation timestamp of the underlying file</td>
-      </tr>
-      <tr>
-          <td><code>key_path</code></td>
-          <td>String</td>
-          <td>KEY_PATH</td>
-          <td>full registry key name</td>
-      </tr>
-      <tr>
-          <td><code>key_modif_time</code></td>
-          <td>DateTime</td>
-          <td>DATE_MODIFICATION</td>
-          <td>last modification timestamp of the registry key</td>
-      </tr>
-      <tr>
-          <td><code>key_security</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>key_security.owner_sid</code></td>
-          <td>String</td>
-          <td>USER_SID</td>
-          <td>SID of the user that owns the registry key</td>
-      </tr>
-      <tr>
-          <td><code>key_security.group_sid</code></td>
-          <td>String</td>
-          <td></td>
-          <td>SID of the group that owns the registry key</td>
-      </tr>
-      <tr>
-          <td><code>key_security.control_flags[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td>security descriptor control flags for the key</td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace.ace_type</code></td>
-          <td>String</td>
-          <td></td>
-          <td>type of ACE (e.g., allow, deny)</td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace.account_sid</code></td>
-          <td>String</td>
-          <td></td>
-          <td>SID of the account the ACE applies to</td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace.ace_flags[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td>ACE flags that modify inheritance or behavior</td>
-      </tr>
-      <tr>
-          <td><code>key_security.dacl_ace.rights[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td>permissions granted or denied by the ACE</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Output Name</th>
+					<th>Data Type</th>
+					<th>Qualifier</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>name</code></td>
+					<td>String</td>
+					<td></td>
+					<td>displayed name of the shell item (folder, file, volume, etc.)</td>
+			</tr>
+			<tr>
+					<td><code>type</code></td>
+					<td>String</td>
+					<td></td>
+					<td>type identifier of the shell item (e.g., control_panel_category, network_location, file_entry)</td>
+			</tr>
+			<tr>
+					<td><code>localized_name</code></td>
+					<td>String</td>
+					<td></td>
+					<td>localized (human‑readable) name of a file entry, if present in the extension block</td>
+			</tr>
+			<tr>
+					<td><code>file_reference</code></td>
+					<td>String</td>
+					<td></td>
+					<td>NTFS file reference (MFT entry) of the file, formatted as &lsquo;MFT‑Sequence‑Index&rsquo;</td>
+			</tr>
+			<tr>
+					<td><code>path</code></td>
+					<td>String</td>
+					<td></td>
+					<td>reconstructed hierarchical path derived from the shell bag entry</td>
+			</tr>
+			<tr>
+					<td><code>description</code></td>
+					<td>String</td>
+					<td></td>
+					<td>textual description associated with a network location item</td>
+			</tr>
+			<tr>
+					<td><code>comments</code></td>
+					<td>String</td>
+					<td></td>
+					<td>user‑defined comments attached to a network location item</td>
+			</tr>
+			<tr>
+					<td><code>modification_time</code></td>
+					<td>DateTime</td>
+					<td>DATE_MODIFICATION</td>
+					<td>last modification timestamp of the underlying file</td>
+			</tr>
+			<tr>
+					<td><code>access_time</code></td>
+					<td>DateTime</td>
+					<td>DATE_ACCESS</td>
+					<td>last access timestamp of the underlying file</td>
+			</tr>
+			<tr>
+					<td><code>creation_time</code></td>
+					<td>DateTime</td>
+					<td>DATE_CREATION</td>
+					<td>creation timestamp of the underlying file</td>
+			</tr>
+			<tr>
+					<td><code>key_path</code></td>
+					<td>String</td>
+					<td>KEY_PATH</td>
+					<td>full registry key name</td>
+			</tr>
+			<tr>
+					<td><code>key_modif_time</code></td>
+					<td>DateTime</td>
+					<td>DATE_MODIFICATION</td>
+					<td>last modification timestamp of the registry key</td>
+			</tr>
+			<tr>
+					<td><code>key_security</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>key_security.owner_sid</code></td>
+					<td>String</td>
+					<td>USER_SID</td>
+					<td>SID of the user that owns the registry key</td>
+			</tr>
+			<tr>
+					<td><code>key_security.group_sid</code></td>
+					<td>String</td>
+					<td></td>
+					<td>SID of the group that owns the registry key</td>
+			</tr>
+			<tr>
+					<td><code>key_security.control_flags[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>security descriptor control flags for the key</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace.ace_type</code></td>
+					<td>String</td>
+					<td></td>
+					<td>type of ACE (e.g., allow, deny)</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace.account_sid</code></td>
+					<td>String</td>
+					<td></td>
+					<td>SID of the account the ACE applies to</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace.ace_flags[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>ACE flags that modify inheritance or behavior</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_ace.rights[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>permissions granted or denied by the ACE</td>
+			</tr>
+	</tbody>
 </table>
 
         </div>

@@ -30,69 +30,69 @@ Description
     Parses CSV files that list Volume Shadow Copy (VSS) snapshots.
 Timeline
     
-  
-      
-          Timeline Field
-          Data Field
-      
-  
-  
-      
-          Description
-          volume_name
-      
-      
-          Additional Description
-          device_instance
-      
-      
-          
-          snapshot_id
-      
-  
+	
+			
+					Timeline Field
+					Data Field
+			
+	
+	
+			
+					Description
+					volume_name
+			
+			
+					Additional Description
+					device_instance
+			
+			
+					
+					snapshot_id
+			
+	
 
 Fields
     
-  
-      
-          Output Name
-          Data Type
-          Qualifier
-          Description
-      
-  
-  
-      
-          snapshot_id
-          String
-          
-          GUID identifying the VSS snapshot
-      
-      
-          device_instance
-          String
-          
-          Device path of the shadow copy (e.g. \?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1)
-      
-      
-          volume_name
-          String
-          
-          Original volume that the snapshot belongs to
-      
-      
-          creation_time
-          DateTime
-          
-          Timestamp when the snapshot was created
-      
-      
-          attributes
-          Split
-          
-          Combined VSS attribute flags (e.g. VSS_VOLSNAP_ATTR_PERSISTENT
-      
-  
+	
+			
+					Output Name
+					Data Type
+					Qualifier
+					Description
+			
+	
+	
+			
+					snapshot_id
+					String
+					
+					GUID identifying the VSS snapshot
+			
+			
+					device_instance
+					String
+					
+					Device path of the shadow copy (e.g. \?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1)
+			
+			
+					volume_name
+					String
+					
+					Original volume that the snapshot belongs to
+			
+			
+					creation_time
+					DateTime
+					
+					Timestamp when the snapshot was created
+			
+			
+					attributes
+					Split
+					
+					Combined VSS attribute flags (e.g. VSS_VOLSNAP_ATTR_PERSISTENT
+			
+	
 
     
   ">
@@ -106,13 +106,13 @@ Fields
 
 
 
-  <meta itemprop="name" content="Vss Snapshot">
-  <meta itemprop="description" content="Data Type: vss_snapshot Python Parser: Csv Description Parses CSV files that list Volume Shadow Copy (VSS) snapshots.
+	<meta itemprop="name" content="Vss Snapshot">
+	<meta itemprop="description" content="Data Type: vss_snapshot Python Parser: Csv Description Parses CSV files that list Volume Shadow Copy (VSS) snapshots.
 Timeline Timeline Field Data Field Description volume_name Additional Description device_instance snapshot_id Fields Output Name Data Type Qualifier Description snapshot_id String GUID identifying the VSS snapshot device_instance String Device path of the shadow copy (e.g. \?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1) volume_name String Original volume that the snapshot belongs to creation_time DateTime Timestamp when the snapshot was created attributes Split Combined VSS attribute flags (e.g. VSS_VOLSNAP_ATTR_PERSISTENT">
-  <meta itemprop="wordCount" content="77">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Vss Snapshot">
-  <meta name="twitter:description" content="Data Type: vss_snapshot Python Parser: Csv Description Parses CSV files that list Volume Shadow Copy (VSS) snapshots.
+	<meta itemprop="wordCount" content="77">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Vss Snapshot">
+	<meta name="twitter:description" content="Data Type: vss_snapshot Python Parser: Csv Description Parses CSV files that list Volume Shadow Copy (VSS) snapshots.
 Timeline Timeline Field Data Field Description volume_name Additional Description device_instance snapshot_id Fields Output Name Data Type Qualifier Description snapshot_id String GUID identifying the VSS snapshot device_instance String Device path of the shadow copy (e.g. \?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1) volume_name String Original volume that the snapshot belongs to creation_time DateTime Timestamp when the snapshot was created attributes Split Combined VSS attribute flags (e.g. VSS_VOLSNAP_ATTR_PERSISTENT">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -1723,69 +1723,69 @@ Python Parser: <strong>Csv</strong></div>
     <a href="#description" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Parses CSV files that list Volume Shadow Copy (VSS) snapshots.</p>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Timeline Field</th>
-          <th>Data Field</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Description</td>
-          <td><code>volume_name</code></td>
-      </tr>
-      <tr>
-          <td>Additional Description</td>
-          <td><code>device_instance</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>snapshot_id</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Timeline Field</th>
+					<th>Data Field</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Description</td>
+					<td><code>volume_name</code></td>
+			</tr>
+			<tr>
+					<td>Additional Description</td>
+					<td><code>device_instance</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>snapshot_id</code></td>
+			</tr>
+	</tbody>
 </table>
 <h3>Fields<span class="hx:absolute hx:-mt-20" id="fields"></span>
     <a href="#fields" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Output Name</th>
-          <th>Data Type</th>
-          <th>Qualifier</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>snapshot_id</code></td>
-          <td>String</td>
-          <td></td>
-          <td>GUID identifying the VSS snapshot</td>
-      </tr>
-      <tr>
-          <td><code>device_instance</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Device path of the shadow copy (e.g. \?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1)</td>
-      </tr>
-      <tr>
-          <td><code>volume_name</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Original volume that the snapshot belongs to</td>
-      </tr>
-      <tr>
-          <td><code>creation_time</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>Timestamp when the snapshot was created</td>
-      </tr>
-      <tr>
-          <td><code>attributes</code></td>
-          <td>Split</td>
-          <td></td>
-          <td>Combined VSS attribute flags (e.g. VSS_VOLSNAP_ATTR_PERSISTENT</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Output Name</th>
+					<th>Data Type</th>
+					<th>Qualifier</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>snapshot_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>GUID identifying the VSS snapshot</td>
+			</tr>
+			<tr>
+					<td><code>device_instance</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Device path of the shadow copy (e.g. \?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1)</td>
+			</tr>
+			<tr>
+					<td><code>volume_name</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Original volume that the snapshot belongs to</td>
+			</tr>
+			<tr>
+					<td><code>creation_time</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>Timestamp when the snapshot was created</td>
+			</tr>
+			<tr>
+					<td><code>attributes</code></td>
+					<td>Split</td>
+					<td></td>
+					<td>Combined VSS attribute flags (e.g. VSS_VOLSNAP_ATTR_PERSISTENT</td>
+			</tr>
+	</tbody>
 </table>
 
         </div>

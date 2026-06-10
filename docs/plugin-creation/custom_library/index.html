@@ -25,26 +25,26 @@ This guide describes how to create a separate project to develop a private plugi
 
 Check Prerequisites
     
-  
-      
-          Item
-          Minimum version
-      
-  
-  
-      
-          Python
-           3.10 or newer
-      
-      
-          git
-           any recent version
-      
-      
-          uv
-           ≥ 0.4 (installable with pip)
-      
-  
+	
+			
+					Item
+					Minimum version
+			
+	
+	
+			
+					Python
+					 3.10 or newer
+			
+			
+					git
+					 any recent version
+			
+			
+					uv
+					 ≥ 0.4 (installable with pip)
+			
+	
 
 Initialize project
     
@@ -98,17 +98,17 @@ After this step the layout should looks like:
 
 
 
-  <meta itemprop="name" content="Creating a custom library">
-  <meta itemprop="description" content="While we strongly encourage you to contribute to DFIR‑OGRE by submitting new plugins, we recognize that some plugins may need to remain private.
+	<meta itemprop="name" content="Creating a custom library">
+	<meta itemprop="description" content="While we strongly encourage you to contribute to DFIR‑OGRE by submitting new plugins, we recognize that some plugins may need to remain private.
 A custom library makes sense if you need to create custom Python parsers that you don’t want to share.
 This guide describes how to create a separate project to develop a private plugin library.
 Check Prerequisites Item Minimum version Python 3.10 or newer git any recent version uv ≥ 0.4 (installable with pip) Initialize project uv init --package my-secret-plugins cd my-secret-plugins # add the dfir-ogre-common dependency uv add &#34;dfir-ogre-common @ git&#43;ssh://git@github.com/ANSSI-FR/dfir-ogre-common.git&#34; # create folder that will contains the XML descriptors # it is the same as the one defined in dfir-ogre-plugin-windows mkdir configuration # create the same test folder as the one defined in dfir-ogre-plugin-windows mkdir tests # install ogre to be able to test your plugins git clone git@github.com/ANSSI-FR/dfir-ogre.git uv pip install ./dfir-ogre The installation takes some time because it compiles some Rust and C code. After this step the layout should looks like:">
-  <meta itemprop="datePublished" content="2026-01-06T15:54:09+01:00">
-  <meta itemprop="dateModified" content="2026-01-06T15:54:09+01:00">
-  <meta itemprop="wordCount" content="276">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Creating a custom library">
-  <meta name="twitter:description" content="While we strongly encourage you to contribute to DFIR‑OGRE by submitting new plugins, we recognize that some plugins may need to remain private.
+	<meta itemprop="datePublished" content="2026-01-06T15:54:09+01:00">
+	<meta itemprop="dateModified" content="2026-01-06T15:54:09+01:00">
+	<meta itemprop="wordCount" content="276">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Creating a custom library">
+	<meta name="twitter:description" content="While we strongly encourage you to contribute to DFIR‑OGRE by submitting new plugins, we recognize that some plugins may need to remain private.
 A custom library makes sense if you need to create custom Python parsers that you don’t want to share.
 This guide describes how to create a separate project to develop a private plugin library.
 Check Prerequisites Item Minimum version Python 3.10 or newer git any recent version uv ≥ 0.4 (installable with pip) Initialize project uv init --package my-secret-plugins cd my-secret-plugins # add the dfir-ogre-common dependency uv add &#34;dfir-ogre-common @ git&#43;ssh://git@github.com/ANSSI-FR/dfir-ogre-common.git&#34; # create folder that will contains the XML descriptors # it is the same as the one defined in dfir-ogre-plugin-windows mkdir configuration # create the same test folder as the one defined in dfir-ogre-plugin-windows mkdir tests # install ogre to be able to test your plugins git clone git@github.com/ANSSI-FR/dfir-ogre.git uv pip install ./dfir-ogre The installation takes some time because it compiles some Rust and C code. After this step the layout should looks like:">
@@ -1723,26 +1723,26 @@ Check Prerequisites Item Minimum version Python 3.10 or newer git any recent v
 <div class="hextra-steps hx:ml-4 hx:mb-12 hx:ltr:border-l hx:rtl:border-r hx:border-gray-200 hx:ltr:pl-6 hx:rtl:pr-6 hx:dark:border-neutral-800 [counter-reset:step]">
 <h2>Check Prerequisites<span class="hx:absolute hx:-mt-20" id="check-prerequisites"></span>
     <a href="#check-prerequisites" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><table>
-  <thead>
-      <tr>
-          <th>Item</th>
-          <th>Minimum version</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>Python</strong></td>
-          <td> 3.10 or newer</td>
-      </tr>
-      <tr>
-          <td><strong>git</strong></td>
-          <td> any recent version</td>
-      </tr>
-      <tr>
-          <td><strong>uv</strong></td>
-          <td> ≥ 0.4 (installable with <code>pip</code>)</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Item</th>
+					<th>Minimum version</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>Python</strong></td>
+					<td> 3.10 or newer</td>
+			</tr>
+			<tr>
+					<td><strong>git</strong></td>
+					<td> any recent version</td>
+			</tr>
+			<tr>
+					<td><strong>uv</strong></td>
+					<td> ≥ 0.4 (installable with <code>pip</code>)</td>
+			</tr>
+	</tbody>
 </table>
 <h2>Initialize project<span class="hx:absolute hx:-mt-20" id="initialize-project"></span>
     <a href="#initialize-project" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">

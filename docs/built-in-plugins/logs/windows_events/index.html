@@ -30,213 +30,213 @@ Description
     Parses windows evtx logs.
 Timeline
     
-  
-      
-          Timeline Field
-          Data Field
-      
-  
-  
-      
-          Related User
-          system.security.user_id
-      
-      
-          Description
-          system.provider.provider_name
-      
-      
-          
-          system.event_id
-      
-      
-          Additional Description
-          event_data.device_instance_id
-      
-      
-          
-          event_data.driver_name
-      
-      
-          
-          user_data.event_processing_failure.publisher_id
-      
-      
-          
-          user_data.event_processing_failure.error_code
-      
-      
-          
-          user_data.event_processing_failure.event_id
-      
-      
-          
-          event_data.pua_policy_id
-      
-      
-          
-          event_data.param1
-      
-      
-          
-          event_data.param2
-      
-      
-          
-          event_data
-      
-      
-          
-          user_data
-      
-      
-          
-          debug_data
-      
-      
-          
-          processing_error_data
-      
-  
+	
+			
+					Timeline Field
+					Data Field
+			
+	
+	
+			
+					Related User
+					system.security.user_id
+			
+			
+					Description
+					system.provider.provider_name
+			
+			
+					
+					system.event_id
+			
+			
+					Additional Description
+					event_data.device_instance_id
+			
+			
+					
+					event_data.driver_name
+			
+			
+					
+					user_data.event_processing_failure.publisher_id
+			
+			
+					
+					user_data.event_processing_failure.error_code
+			
+			
+					
+					user_data.event_processing_failure.event_id
+			
+			
+					
+					event_data.pua_policy_id
+			
+			
+					
+					event_data.param1
+			
+			
+					
+					event_data.param2
+			
+			
+					
+					event_data
+			
+			
+					
+					user_data
+			
+			
+					
+					debug_data
+			
+			
+					
+					processing_error_data
+			
+	
 
 Fields
     
-  
-      
-          Output Name
-          Data Type
-          Qualifier
-          Description
-      
-  
-  
-      
-          timestamp
-          DateTime
-          DATE_CREATION
-          timestamp of when the event was generated
-      
-      
-          system
-          Object
-          
-          
-      
-      
-          system.security
-          Object
-          
-          
-      
-      
-          system.security.user_id
-          String
-          USER_ID
-          SID of the account that generated the event
-      
-      
-          system.time_created
-          Object
-          
-          
-      
-      
-          system.time_created.system_time
-          DateTime
-          DATE_CREATION
-          system time recorded for the event
-      
-      
-          system.provider
-          Object
-          
-          
-      
-      
-          system.provider.provider_name
-          String
-          
-          name of the event provider
-      
-      
-          system.provider.guid
-          String
-          
-          GUID of the event provider
-      
-      
-          system.execution
-          Object
-          
-          
-      
-      
-          system.execution.process_id
-          String
-          
-          process identifier that generated the event
-      
-      
-          system.execution.thread_id
-          String
-          
-          thread identifier that generated the event
-      
-      
-          system.event_record_id
-          String
-          
-          unique record identifier for the event
-      
-      
-          system.computer
-          String
-          
-          name of the computer that logged the event
-      
-      
-          system.event_id
-          String
-          
-          numeric identifier of the event type
-      
-      
-          event_data
-          Object
-          
-          
-      
-      
-          user_data
-          Object
-          
-          
-      
-      
-          debug_data
-          Object
-          
-          
-      
-      
-          binary_event_data
-          Object
-          
-          
-      
-      
-          processing_error_data
-          Object
-          
-          
-      
-      
-          rendering_info
-          Object
-          
-          
-      
-  
+	
+			
+					Output Name
+					Data Type
+					Qualifier
+					Description
+			
+	
+	
+			
+					timestamp
+					DateTime
+					DATE_CREATION
+					timestamp of when the event was generated
+			
+			
+					system
+					Object
+					
+					
+			
+			
+					system.security
+					Object
+					
+					
+			
+			
+					system.security.user_id
+					String
+					USER_ID
+					SID of the account that generated the event
+			
+			
+					system.time_created
+					Object
+					
+					
+			
+			
+					system.time_created.system_time
+					DateTime
+					DATE_CREATION
+					system time recorded for the event
+			
+			
+					system.provider
+					Object
+					
+					
+			
+			
+					system.provider.provider_name
+					String
+					
+					name of the event provider
+			
+			
+					system.provider.guid
+					String
+					
+					GUID of the event provider
+			
+			
+					system.execution
+					Object
+					
+					
+			
+			
+					system.execution.process_id
+					String
+					
+					process identifier that generated the event
+			
+			
+					system.execution.thread_id
+					String
+					
+					thread identifier that generated the event
+			
+			
+					system.event_record_id
+					String
+					
+					unique record identifier for the event
+			
+			
+					system.computer
+					String
+					
+					name of the computer that logged the event
+			
+			
+					system.event_id
+					String
+					
+					numeric identifier of the event type
+			
+			
+					event_data
+					Object
+					
+					
+			
+			
+					user_data
+					Object
+					
+					
+			
+			
+					debug_data
+					Object
+					
+					
+			
+			
+					binary_event_data
+					Object
+					
+					
+			
+			
+					processing_error_data
+					Object
+					
+					
+			
+			
+					rendering_info
+					Object
+					
+					
+			
+	
 
     
   ">
@@ -250,13 +250,13 @@ Fields
 
 
 
-  <meta itemprop="name" content="Windows Events">
-  <meta itemprop="description" content="Data Type: windows_events Python Parser: Evtx Description Parses windows evtx logs.
+	<meta itemprop="name" content="Windows Events">
+	<meta itemprop="description" content="Data Type: windows_events Python Parser: Evtx Description Parses windows evtx logs.
 Timeline Timeline Field Data Field Related User system.security.user_id Description system.provider.provider_name system.event_id Additional Description event_data.device_instance_id event_data.driver_name user_data.event_processing_failure.publisher_id user_data.event_processing_failure.error_code user_data.event_processing_failure.event_id event_data.pua_policy_id event_data.param1 event_data.param2 event_data user_data debug_data processing_error_data Fields Output Name Data Type Qualifier Description timestamp DateTime DATE_CREATION timestamp of when the event was generated system Object system.security Object system.security.user_id String USER_ID SID of the account that generated the event system.time_created Object system.time_created.system_time DateTime DATE_CREATION system time recorded for the event system.provider Object system.provider.provider_name String name of the event provider system.provider.guid String GUID of the event provider system.execution Object system.execution.process_id String process identifier that generated the event system.execution.thread_id String thread identifier that generated the event system.event_record_id String unique record identifier for the event system.computer String name of the computer that logged the event system.event_id String numeric identifier of the event type event_data Object user_data Object debug_data Object binary_event_data Object processing_error_data Object rendering_info Object">
-  <meta itemprop="wordCount" content="151">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Windows Events">
-  <meta name="twitter:description" content="Data Type: windows_events Python Parser: Evtx Description Parses windows evtx logs.
+	<meta itemprop="wordCount" content="151">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Windows Events">
+	<meta name="twitter:description" content="Data Type: windows_events Python Parser: Evtx Description Parses windows evtx logs.
 Timeline Timeline Field Data Field Related User system.security.user_id Description system.provider.provider_name system.event_id Additional Description event_data.device_instance_id event_data.driver_name user_data.event_processing_failure.publisher_id user_data.event_processing_failure.error_code user_data.event_processing_failure.event_id event_data.pua_policy_id event_data.param1 event_data.param2 event_data user_data debug_data processing_error_data Fields Output Name Data Type Qualifier Description timestamp DateTime DATE_CREATION timestamp of when the event was generated system Object system.security Object system.security.user_id String USER_ID SID of the account that generated the event system.time_created Object system.time_created.system_time DateTime DATE_CREATION system time recorded for the event system.provider Object system.provider.provider_name String name of the event provider system.provider.guid String GUID of the event provider system.execution Object system.execution.process_id String process identifier that generated the event system.execution.thread_id String thread identifier that generated the event system.event_record_id String unique record identifier for the event system.computer String name of the computer that logged the event system.event_id String numeric identifier of the event type event_data Object user_data Object debug_data Object binary_event_data Object processing_error_data Object rendering_info Object">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -1867,213 +1867,213 @@ Python Parser: <strong>Evtx</strong></div>
     <a href="#description" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Parses windows evtx logs.</p>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Timeline Field</th>
-          <th>Data Field</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Related User</td>
-          <td><code>system.security.user_id</code></td>
-      </tr>
-      <tr>
-          <td>Description</td>
-          <td><code>system.provider.provider_name</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>system.event_id</code></td>
-      </tr>
-      <tr>
-          <td>Additional Description</td>
-          <td><code>event_data.device_instance_id</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>event_data.driver_name</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>user_data.event_processing_failure.publisher_id</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>user_data.event_processing_failure.error_code</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>user_data.event_processing_failure.event_id</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>event_data.pua_policy_id</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>event_data.param1</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>event_data.param2</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>event_data</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>user_data</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>debug_data</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>processing_error_data</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Timeline Field</th>
+					<th>Data Field</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Related User</td>
+					<td><code>system.security.user_id</code></td>
+			</tr>
+			<tr>
+					<td>Description</td>
+					<td><code>system.provider.provider_name</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>system.event_id</code></td>
+			</tr>
+			<tr>
+					<td>Additional Description</td>
+					<td><code>event_data.device_instance_id</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>event_data.driver_name</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>user_data.event_processing_failure.publisher_id</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>user_data.event_processing_failure.error_code</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>user_data.event_processing_failure.event_id</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>event_data.pua_policy_id</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>event_data.param1</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>event_data.param2</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>event_data</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>user_data</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>debug_data</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>processing_error_data</code></td>
+			</tr>
+	</tbody>
 </table>
 <h3>Fields<span class="hx:absolute hx:-mt-20" id="fields"></span>
     <a href="#fields" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Output Name</th>
-          <th>Data Type</th>
-          <th>Qualifier</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>timestamp</code></td>
-          <td>DateTime</td>
-          <td>DATE_CREATION</td>
-          <td>timestamp of when the event was generated</td>
-      </tr>
-      <tr>
-          <td><code>system</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>system.security</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>system.security.user_id</code></td>
-          <td>String</td>
-          <td>USER_ID</td>
-          <td>SID of the account that generated the event</td>
-      </tr>
-      <tr>
-          <td><code>system.time_created</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>system.time_created.system_time</code></td>
-          <td>DateTime</td>
-          <td>DATE_CREATION</td>
-          <td>system time recorded for the event</td>
-      </tr>
-      <tr>
-          <td><code>system.provider</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>system.provider.provider_name</code></td>
-          <td>String</td>
-          <td></td>
-          <td>name of the event provider</td>
-      </tr>
-      <tr>
-          <td><code>system.provider.guid</code></td>
-          <td>String</td>
-          <td></td>
-          <td>GUID of the event provider</td>
-      </tr>
-      <tr>
-          <td><code>system.execution</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>system.execution.process_id</code></td>
-          <td>String</td>
-          <td></td>
-          <td>process identifier that generated the event</td>
-      </tr>
-      <tr>
-          <td><code>system.execution.thread_id</code></td>
-          <td>String</td>
-          <td></td>
-          <td>thread identifier that generated the event</td>
-      </tr>
-      <tr>
-          <td><code>system.event_record_id</code></td>
-          <td>String</td>
-          <td></td>
-          <td>unique record identifier for the event</td>
-      </tr>
-      <tr>
-          <td><code>system.computer</code></td>
-          <td>String</td>
-          <td></td>
-          <td>name of the computer that logged the event</td>
-      </tr>
-      <tr>
-          <td><code>system.event_id</code></td>
-          <td>String</td>
-          <td></td>
-          <td>numeric identifier of the event type</td>
-      </tr>
-      <tr>
-          <td><code>event_data</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>user_data</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>debug_data</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>binary_event_data</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>processing_error_data</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>rendering_info</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Output Name</th>
+					<th>Data Type</th>
+					<th>Qualifier</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>timestamp</code></td>
+					<td>DateTime</td>
+					<td>DATE_CREATION</td>
+					<td>timestamp of when the event was generated</td>
+			</tr>
+			<tr>
+					<td><code>system</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>system.security</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>system.security.user_id</code></td>
+					<td>String</td>
+					<td>USER_ID</td>
+					<td>SID of the account that generated the event</td>
+			</tr>
+			<tr>
+					<td><code>system.time_created</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>system.time_created.system_time</code></td>
+					<td>DateTime</td>
+					<td>DATE_CREATION</td>
+					<td>system time recorded for the event</td>
+			</tr>
+			<tr>
+					<td><code>system.provider</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>system.provider.provider_name</code></td>
+					<td>String</td>
+					<td></td>
+					<td>name of the event provider</td>
+			</tr>
+			<tr>
+					<td><code>system.provider.guid</code></td>
+					<td>String</td>
+					<td></td>
+					<td>GUID of the event provider</td>
+			</tr>
+			<tr>
+					<td><code>system.execution</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>system.execution.process_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>process identifier that generated the event</td>
+			</tr>
+			<tr>
+					<td><code>system.execution.thread_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>thread identifier that generated the event</td>
+			</tr>
+			<tr>
+					<td><code>system.event_record_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>unique record identifier for the event</td>
+			</tr>
+			<tr>
+					<td><code>system.computer</code></td>
+					<td>String</td>
+					<td></td>
+					<td>name of the computer that logged the event</td>
+			</tr>
+			<tr>
+					<td><code>system.event_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>numeric identifier of the event type</td>
+			</tr>
+			<tr>
+					<td><code>event_data</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>user_data</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>debug_data</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>binary_event_data</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>processing_error_data</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>rendering_info</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+	</tbody>
 </table>
 
         </div>

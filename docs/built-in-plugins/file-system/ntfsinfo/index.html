@@ -36,419 +36,419 @@ Supplies cryptographic hashes (MD5, SHA‑1, SHA‑256) and PE‑specific metada
 
 Timeline
     
-  
-      
-          Timeline Field
-          Data Field
-      
-  
-  
-      
-          Description
-          file_path
-      
-      
-          Additional Description
-          file_size
-      
-  
+	
+			
+					Timeline Field
+					Data Field
+			
+	
+	
+			
+					Description
+					file_path
+			
+			
+					Additional Description
+					file_size
+			
+	
 
 Fields
     
-  
-      
-          Output Name
-          Data Type
-          Qualifier
-          Description
-      
-  
-  
-      
-          snapshot_id
-          String
-          
-          
-      
-      
-          parent
-          String
-          
-          full parent directory path of the entry
-      
-      
-          file_name
-          String
-          
-          name of the file without path
-      
-      
-          extension
-          String
-          
-          file extension (e.g., .txt, .exe)
-      
-      
-          file_size
-          Int
-          FILE_SIZE
-          size of the file in bytes
-      
-      
-          file_in_use
-          Bool
-          
-          flag indicating whether the MFT record is allocated (true) or free (false)
-      
-      
-          sequence_number
-          Int
-          
-          sequence number part of the File Reference Number (FRN)
-      
-      
-          record_number
-          Int
-          
-          record/index part of the File Reference Number (FRN)
-      
-      
-          FRN
-          Extension
-          
-          
-      
-      
-          file_attributes_archive
-          Bool
-          
-          archive attribute flag
-      
-      
-          file_attributes_no_scrub_data
-          Bool
-          
-          no‑scrub‑data attribute flag
-      
-      
-          file_attributes_compressed
-          Bool
-          
-          compressed attribute flag
-      
-      
-          file_attributes_directory
-          Bool
-          
-          directory attribute flag
-      
-      
-          file_attributes_encrypted
-          Bool
-          
-          encrypted attribute flag
-      
-      
-          file_attributes_hidden
-          Bool
-          
-          hidden attribute flag
-      
-      
-          file_attributes_not_content_indexed
-          Bool
-          
-          not‑content‑indexed attribute flag
-      
-      
-          file_attributes_reparse_point
-          Bool
-          
-          reparse‑point attribute flag
-      
-      
-          file_attributes_normal
-          Bool
-          
-          normal attribute flag
-      
-      
-          file_attributes_offline
-          Bool
-          
-          offline attribute flag
-      
-      
-          file_attributes_sparse_file
-          Bool
-          
-          sparse‑file attribute flag
-      
-      
-          file_attributes_readonly
-          Bool
-          
-          read‑only attribute flag
-      
-      
-          file_attributes_system
-          Bool
-          
-          system attribute flag
-      
-      
-          file_attributes_temporary
-          Bool
-          
-          temporary attribute flag
-      
-      
-          file_attributes_virtual
-          Bool
-          
-          virtual attribute flag
-      
-      
-          file_attributes_recall_on_data_access
-          Bool
-          
-          recall‑on‑data‑access attribute flag
-      
-      
-          file_attributes_device
-          Bool
-          
-          device attribute flag
-      
-      
-          file_attributes_ea
-          Bool
-          
-          extended‑attributes (EA) attribute flag
-      
-      
-          file_attributes_recall_on_open
-          Bool
-          
-          recall‑on‑open attribute flag
-      
-      
-          file_attributes_pinned
-          Bool
-          
-          pinned attribute flag
-      
-      
-          file_attributes_integrity_stream
-          Bool
-          
-          integrity‑stream attribute flag
-      
-      
-          file_attributes_unpinned
-          Bool
-          
-          unpinned attribute flag
-      
-      
-          Attributes
-          Extension
-          
-          
-      
-      
-          usn_number
-          IntRadix
-          FS_USN
-          USN journal sequence number (hexadecimal)
-      
-      
-          file_name_flags
-          Int
-          
-          flags associated with the filename entry
-      
-      
-          fn_creation_date
-          DateTime
-          DATE_CREATION
-          creation timestamp of the filename entry
-      
-      
-          fn_lastmod_date
-          DateTime
-          DATE_MODIFICATION
-          last modification timestamp of the filename entry
-      
-      
-          fn_lastaccess_date
-          DateTime
-          DATE_ACCESS
-          last access timestamp of the filename entry
-      
-      
-          fn_lastchange_date
-          DateTime
-          DATE_CHANGE
-          timestamp of the last attribute change for the filename entry
-      
-      
-          si_creation_date
-          DateTime
-          DATE_CREATION
-          creation timestamp of the file
-      
-      
-          si_lastmod_date
-          DateTime
-          DATE_MODIFICATION
-          last modification timestamp of the file
-      
-      
-          si_lastaccess_date
-          DateTime
-          DATE_ACCESS
-          last access timestamp of the file
-      
-      
-          si_lastchange_date
-          DateTime
-          DATE_MODIFICATION
-          timestamp of the last attribute change for the file
-      
-      
-          md5
-          String
-          FILE_MD5
-          MD5 hash of the file content
-      
-      
-          sha1
-          String
-          FILE_SHA1
-          SHA‑1 hash of the file content
-      
-      
-          sha256
-          String
-          FILE_SHA256
-          SHA‑256 hash of the file content
-      
-      
-          orc_pe_md5
-          String
-          PE_MD5
-          MD5 hash of the PE executable (if file is a PE)
-      
-      
-          orc_pe_sha1
-          String
-          PE_SHA1
-          SHA‑1 hash of the PE executable (if file is a PE)
-      
-      
-          orc_pe_sha256
-          String
-          PE_SHA256
-          SHA‑256 hash of the PE executable (if file is a PE)
-      
-      
-          file_pe_md5
-          String
-          PE_MD5
-          MD5 hash extracted from the Authenticode‑signed PE file
-      
-      
-          file_pe_sha1
-          String
-          PE_SHA1
-          SHA‑1 hash extracted from the Authenticode‑signed PE file
-      
-      
-          file_pe_sha256
-          String
-          PE_SHA256
-          SHA‑256 hash extracted from the Authenticode‑signed PE file
-      
-      
-          SignedHash
-          Extension
-          
-          
-      
-      
-          authenticode_signer
-          String
-          
-          subject name of the Authenticode signing certificate
-      
-      
-          authenticode_signer_thumbprint
-          Split
-          
-          thumbprint(s) of the Authenticode signing certificate
-      
-      
-          authenticode_ca
-          String
-          
-          certificate authority that issued the signing certificate
-      
-      
-          authenticode_ca_thumbprint
-          Split
-          
-          thumbprint(s) of the signing certificate authority
-      
-      
-          authenticode_status
-          String
-          
-          verification status of the Authenticode signature (e.g., valid, invalid)
-      
-      
-          pe_version
-          String
-          PE_VERSION
-          version string of the PE file (FileVersion)
-      
-      
-          pe_companyname
-          String
-          COMPANY
-          company name embedded in the PE metadata
-      
-      
-          pe_productname
-          String
-          PRODUCT
-          product name embedded in the PE metadata
-      
-      
-          pe_original_filename
-          String
-          FILE_NAME
-          original filename stored in the PE metadata
-      
-      
-          pe_platform
-          String
-          PE_ARCH
-          target platform/architecture of the PE (e.g., x86, x64)
-      
-      
-          pe_compilation_date
-          DateTime
-          DATE_COMPILATION
-          compilation timestamp of the PE executable
-      
-      
-          pe_subsystem
-          String
-          PE_SUBSYSTEM
-          subsystem type defined in the PE header (e.g., GUI, Console)
-      
-  
+	
+			
+					Output Name
+					Data Type
+					Qualifier
+					Description
+			
+	
+	
+			
+					snapshot_id
+					String
+					
+					
+			
+			
+					parent
+					String
+					
+					full parent directory path of the entry
+			
+			
+					file_name
+					String
+					
+					name of the file without path
+			
+			
+					extension
+					String
+					
+					file extension (e.g., .txt, .exe)
+			
+			
+					file_size
+					Int
+					FILE_SIZE
+					size of the file in bytes
+			
+			
+					file_in_use
+					Bool
+					
+					flag indicating whether the MFT record is allocated (true) or free (false)
+			
+			
+					sequence_number
+					Int
+					
+					sequence number part of the File Reference Number (FRN)
+			
+			
+					record_number
+					Int
+					
+					record/index part of the File Reference Number (FRN)
+			
+			
+					FRN
+					Extension
+					
+					
+			
+			
+					file_attributes_archive
+					Bool
+					
+					archive attribute flag
+			
+			
+					file_attributes_no_scrub_data
+					Bool
+					
+					no‑scrub‑data attribute flag
+			
+			
+					file_attributes_compressed
+					Bool
+					
+					compressed attribute flag
+			
+			
+					file_attributes_directory
+					Bool
+					
+					directory attribute flag
+			
+			
+					file_attributes_encrypted
+					Bool
+					
+					encrypted attribute flag
+			
+			
+					file_attributes_hidden
+					Bool
+					
+					hidden attribute flag
+			
+			
+					file_attributes_not_content_indexed
+					Bool
+					
+					not‑content‑indexed attribute flag
+			
+			
+					file_attributes_reparse_point
+					Bool
+					
+					reparse‑point attribute flag
+			
+			
+					file_attributes_normal
+					Bool
+					
+					normal attribute flag
+			
+			
+					file_attributes_offline
+					Bool
+					
+					offline attribute flag
+			
+			
+					file_attributes_sparse_file
+					Bool
+					
+					sparse‑file attribute flag
+			
+			
+					file_attributes_readonly
+					Bool
+					
+					read‑only attribute flag
+			
+			
+					file_attributes_system
+					Bool
+					
+					system attribute flag
+			
+			
+					file_attributes_temporary
+					Bool
+					
+					temporary attribute flag
+			
+			
+					file_attributes_virtual
+					Bool
+					
+					virtual attribute flag
+			
+			
+					file_attributes_recall_on_data_access
+					Bool
+					
+					recall‑on‑data‑access attribute flag
+			
+			
+					file_attributes_device
+					Bool
+					
+					device attribute flag
+			
+			
+					file_attributes_ea
+					Bool
+					
+					extended‑attributes (EA) attribute flag
+			
+			
+					file_attributes_recall_on_open
+					Bool
+					
+					recall‑on‑open attribute flag
+			
+			
+					file_attributes_pinned
+					Bool
+					
+					pinned attribute flag
+			
+			
+					file_attributes_integrity_stream
+					Bool
+					
+					integrity‑stream attribute flag
+			
+			
+					file_attributes_unpinned
+					Bool
+					
+					unpinned attribute flag
+			
+			
+					Attributes
+					Extension
+					
+					
+			
+			
+					usn_number
+					IntRadix
+					FS_USN
+					USN journal sequence number (hexadecimal)
+			
+			
+					file_name_flags
+					Int
+					
+					flags associated with the filename entry
+			
+			
+					fn_creation_date
+					DateTime
+					DATE_CREATION
+					creation timestamp of the filename entry
+			
+			
+					fn_lastmod_date
+					DateTime
+					DATE_MODIFICATION
+					last modification timestamp of the filename entry
+			
+			
+					fn_lastaccess_date
+					DateTime
+					DATE_ACCESS
+					last access timestamp of the filename entry
+			
+			
+					fn_lastchange_date
+					DateTime
+					DATE_CHANGE
+					timestamp of the last attribute change for the filename entry
+			
+			
+					si_creation_date
+					DateTime
+					DATE_CREATION
+					creation timestamp of the file
+			
+			
+					si_lastmod_date
+					DateTime
+					DATE_MODIFICATION
+					last modification timestamp of the file
+			
+			
+					si_lastaccess_date
+					DateTime
+					DATE_ACCESS
+					last access timestamp of the file
+			
+			
+					si_lastchange_date
+					DateTime
+					DATE_MODIFICATION
+					timestamp of the last attribute change for the file
+			
+			
+					md5
+					String
+					FILE_MD5
+					MD5 hash of the file content
+			
+			
+					sha1
+					String
+					FILE_SHA1
+					SHA‑1 hash of the file content
+			
+			
+					sha256
+					String
+					FILE_SHA256
+					SHA‑256 hash of the file content
+			
+			
+					orc_pe_md5
+					String
+					PE_MD5
+					MD5 hash of the PE executable (if file is a PE)
+			
+			
+					orc_pe_sha1
+					String
+					PE_SHA1
+					SHA‑1 hash of the PE executable (if file is a PE)
+			
+			
+					orc_pe_sha256
+					String
+					PE_SHA256
+					SHA‑256 hash of the PE executable (if file is a PE)
+			
+			
+					file_pe_md5
+					String
+					PE_MD5
+					MD5 hash extracted from the Authenticode‑signed PE file
+			
+			
+					file_pe_sha1
+					String
+					PE_SHA1
+					SHA‑1 hash extracted from the Authenticode‑signed PE file
+			
+			
+					file_pe_sha256
+					String
+					PE_SHA256
+					SHA‑256 hash extracted from the Authenticode‑signed PE file
+			
+			
+					SignedHash
+					Extension
+					
+					
+			
+			
+					authenticode_signer
+					String
+					
+					subject name of the Authenticode signing certificate
+			
+			
+					authenticode_signer_thumbprint
+					Split
+					
+					thumbprint(s) of the Authenticode signing certificate
+			
+			
+					authenticode_ca
+					String
+					
+					certificate authority that issued the signing certificate
+			
+			
+					authenticode_ca_thumbprint
+					Split
+					
+					thumbprint(s) of the signing certificate authority
+			
+			
+					authenticode_status
+					String
+					
+					verification status of the Authenticode signature (e.g., valid, invalid)
+			
+			
+					pe_version
+					String
+					PE_VERSION
+					version string of the PE file (FileVersion)
+			
+			
+					pe_companyname
+					String
+					COMPANY
+					company name embedded in the PE metadata
+			
+			
+					pe_productname
+					String
+					PRODUCT
+					product name embedded in the PE metadata
+			
+			
+					pe_original_filename
+					String
+					FILE_NAME
+					original filename stored in the PE metadata
+			
+			
+					pe_platform
+					String
+					PE_ARCH
+					target platform/architecture of the PE (e.g., x86, x64)
+			
+			
+					pe_compilation_date
+					DateTime
+					DATE_COMPILATION
+					compilation timestamp of the PE executable
+			
+			
+					pe_subsystem
+					String
+					PE_SUBSYSTEM
+					subsystem type defined in the PE header (e.g., GUI, Console)
+			
+	
 
     
   ">
@@ -462,13 +462,13 @@ Fields
 
 
 
-  <meta itemprop="name" content="Ntfsinfo">
-  <meta itemprop="description" content="Data Type: ntfsinfo Python Parser: NTFSInfo Description Extract NTFS’s Master File Table (MFT) from an ORC‑generated CSV file.
+	<meta itemprop="name" content="Ntfsinfo">
+	<meta itemprop="description" content="Data Type: ntfsinfo Python Parser: NTFSInfo Description Extract NTFS’s Master File Table (MFT) from an ORC‑generated CSV file.
 Reconstructs exact file‑system hierarchy. Provides creation, modification, access, and change timestamps. Exposes NTFS attributes and USN information for change‑tracking. Supplies cryptographic hashes (MD5, SHA‑1, SHA‑256) and PE‑specific metadata (version, company, compilation date). Timeline Timeline Field Data Field Description file_path Additional Description file_size Fields Output Name Data Type Qualifier Description snapshot_id String parent String full parent directory path of the entry file_name String name of the file without path extension String file extension (e.g., .txt, .exe) file_size Int FILE_SIZE size of the file in bytes file_in_use Bool flag indicating whether the MFT record is allocated (true) or free (false) sequence_number Int sequence number part of the File Reference Number (FRN) record_number Int record/index part of the File Reference Number (FRN) FRN Extension file_attributes_archive Bool archive attribute flag file_attributes_no_scrub_data Bool no‑scrub‑data attribute flag file_attributes_compressed Bool compressed attribute flag file_attributes_directory Bool directory attribute flag file_attributes_encrypted Bool encrypted attribute flag file_attributes_hidden Bool hidden attribute flag file_attributes_not_content_indexed Bool not‑content‑indexed attribute flag file_attributes_reparse_point Bool reparse‑point attribute flag file_attributes_normal Bool normal attribute flag file_attributes_offline Bool offline attribute flag file_attributes_sparse_file Bool sparse‑file attribute flag file_attributes_readonly Bool read‑only attribute flag file_attributes_system Bool system attribute flag file_attributes_temporary Bool temporary attribute flag file_attributes_virtual Bool virtual attribute flag file_attributes_recall_on_data_access Bool recall‑on‑data‑access attribute flag file_attributes_device Bool device attribute flag file_attributes_ea Bool extended‑attributes (EA) attribute flag file_attributes_recall_on_open Bool recall‑on‑open attribute flag file_attributes_pinned Bool pinned attribute flag file_attributes_integrity_stream Bool integrity‑stream attribute flag file_attributes_unpinned Bool unpinned attribute flag Attributes Extension usn_number IntRadix FS_USN USN journal sequence number (hexadecimal) file_name_flags Int flags associated with the filename entry fn_creation_date DateTime DATE_CREATION creation timestamp of the filename entry fn_lastmod_date DateTime DATE_MODIFICATION last modification timestamp of the filename entry fn_lastaccess_date DateTime DATE_ACCESS last access timestamp of the filename entry fn_lastchange_date DateTime DATE_CHANGE timestamp of the last attribute change for the filename entry si_creation_date DateTime DATE_CREATION creation timestamp of the file si_lastmod_date DateTime DATE_MODIFICATION last modification timestamp of the file si_lastaccess_date DateTime DATE_ACCESS last access timestamp of the file si_lastchange_date DateTime DATE_MODIFICATION timestamp of the last attribute change for the file md5 String FILE_MD5 MD5 hash of the file content sha1 String FILE_SHA1 SHA‑1 hash of the file content sha256 String FILE_SHA256 SHA‑256 hash of the file content orc_pe_md5 String PE_MD5 MD5 hash of the PE executable (if file is a PE) orc_pe_sha1 String PE_SHA1 SHA‑1 hash of the PE executable (if file is a PE) orc_pe_sha256 String PE_SHA256 SHA‑256 hash of the PE executable (if file is a PE) file_pe_md5 String PE_MD5 MD5 hash extracted from the Authenticode‑signed PE file file_pe_sha1 String PE_SHA1 SHA‑1 hash extracted from the Authenticode‑signed PE file file_pe_sha256 String PE_SHA256 SHA‑256 hash extracted from the Authenticode‑signed PE file SignedHash Extension authenticode_signer String subject name of the Authenticode signing certificate authenticode_signer_thumbprint Split thumbprint(s) of the Authenticode signing certificate authenticode_ca String certificate authority that issued the signing certificate authenticode_ca_thumbprint Split thumbprint(s) of the signing certificate authority authenticode_status String verification status of the Authenticode signature (e.g., valid, invalid) pe_version String PE_VERSION version string of the PE file (FileVersion) pe_companyname String COMPANY company name embedded in the PE metadata pe_productname String PRODUCT product name embedded in the PE metadata pe_original_filename String FILE_NAME original filename stored in the PE metadata pe_platform String PE_ARCH target platform/architecture of the PE (e.g., x86, x64) pe_compilation_date DateTime DATE_COMPILATION compilation timestamp of the PE executable pe_subsystem String PE_SUBSYSTEM subsystem type defined in the PE header (e.g., GUI, Console)">
-  <meta itemprop="wordCount" content="570">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Ntfsinfo">
-  <meta name="twitter:description" content="Data Type: ntfsinfo Python Parser: NTFSInfo Description Extract NTFS’s Master File Table (MFT) from an ORC‑generated CSV file.
+	<meta itemprop="wordCount" content="570">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Ntfsinfo">
+	<meta name="twitter:description" content="Data Type: ntfsinfo Python Parser: NTFSInfo Description Extract NTFS’s Master File Table (MFT) from an ORC‑generated CSV file.
 Reconstructs exact file‑system hierarchy. Provides creation, modification, access, and change timestamps. Exposes NTFS attributes and USN information for change‑tracking. Supplies cryptographic hashes (MD5, SHA‑1, SHA‑256) and PE‑specific metadata (version, company, compilation date). Timeline Timeline Field Data Field Description file_path Additional Description file_size Fields Output Name Data Type Qualifier Description snapshot_id String parent String full parent directory path of the entry file_name String name of the file without path extension String file extension (e.g., .txt, .exe) file_size Int FILE_SIZE size of the file in bytes file_in_use Bool flag indicating whether the MFT record is allocated (true) or free (false) sequence_number Int sequence number part of the File Reference Number (FRN) record_number Int record/index part of the File Reference Number (FRN) FRN Extension file_attributes_archive Bool archive attribute flag file_attributes_no_scrub_data Bool no‑scrub‑data attribute flag file_attributes_compressed Bool compressed attribute flag file_attributes_directory Bool directory attribute flag file_attributes_encrypted Bool encrypted attribute flag file_attributes_hidden Bool hidden attribute flag file_attributes_not_content_indexed Bool not‑content‑indexed attribute flag file_attributes_reparse_point Bool reparse‑point attribute flag file_attributes_normal Bool normal attribute flag file_attributes_offline Bool offline attribute flag file_attributes_sparse_file Bool sparse‑file attribute flag file_attributes_readonly Bool read‑only attribute flag file_attributes_system Bool system attribute flag file_attributes_temporary Bool temporary attribute flag file_attributes_virtual Bool virtual attribute flag file_attributes_recall_on_data_access Bool recall‑on‑data‑access attribute flag file_attributes_device Bool device attribute flag file_attributes_ea Bool extended‑attributes (EA) attribute flag file_attributes_recall_on_open Bool recall‑on‑open attribute flag file_attributes_pinned Bool pinned attribute flag file_attributes_integrity_stream Bool integrity‑stream attribute flag file_attributes_unpinned Bool unpinned attribute flag Attributes Extension usn_number IntRadix FS_USN USN journal sequence number (hexadecimal) file_name_flags Int flags associated with the filename entry fn_creation_date DateTime DATE_CREATION creation timestamp of the filename entry fn_lastmod_date DateTime DATE_MODIFICATION last modification timestamp of the filename entry fn_lastaccess_date DateTime DATE_ACCESS last access timestamp of the filename entry fn_lastchange_date DateTime DATE_CHANGE timestamp of the last attribute change for the filename entry si_creation_date DateTime DATE_CREATION creation timestamp of the file si_lastmod_date DateTime DATE_MODIFICATION last modification timestamp of the file si_lastaccess_date DateTime DATE_ACCESS last access timestamp of the file si_lastchange_date DateTime DATE_MODIFICATION timestamp of the last attribute change for the file md5 String FILE_MD5 MD5 hash of the file content sha1 String FILE_SHA1 SHA‑1 hash of the file content sha256 String FILE_SHA256 SHA‑256 hash of the file content orc_pe_md5 String PE_MD5 MD5 hash of the PE executable (if file is a PE) orc_pe_sha1 String PE_SHA1 SHA‑1 hash of the PE executable (if file is a PE) orc_pe_sha256 String PE_SHA256 SHA‑256 hash of the PE executable (if file is a PE) file_pe_md5 String PE_MD5 MD5 hash extracted from the Authenticode‑signed PE file file_pe_sha1 String PE_SHA1 SHA‑1 hash extracted from the Authenticode‑signed PE file file_pe_sha256 String PE_SHA256 SHA‑256 hash extracted from the Authenticode‑signed PE file SignedHash Extension authenticode_signer String subject name of the Authenticode signing certificate authenticode_signer_thumbprint Split thumbprint(s) of the Authenticode signing certificate authenticode_ca String certificate authority that issued the signing certificate authenticode_ca_thumbprint Split thumbprint(s) of the signing certificate authority authenticode_status String verification status of the Authenticode signature (e.g., valid, invalid) pe_version String PE_VERSION version string of the PE file (FileVersion) pe_companyname String COMPANY company name embedded in the PE metadata pe_productname String PRODUCT product name embedded in the PE metadata pe_original_filename String FILE_NAME original filename stored in the PE metadata pe_platform String PE_ARCH target platform/architecture of the PE (e.g., x86, x64) pe_compilation_date DateTime DATE_COMPILATION compilation timestamp of the PE executable pe_subsystem String PE_SUBSYSTEM subsystem type defined in the PE header (e.g., GUI, Console)">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -2085,419 +2085,419 @@ Python Parser: <strong>NTFSInfo</strong></div>
 </ul>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Timeline Field</th>
-          <th>Data Field</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Description</td>
-          <td><code>file_path</code></td>
-      </tr>
-      <tr>
-          <td>Additional Description</td>
-          <td><code>file_size</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Timeline Field</th>
+					<th>Data Field</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Description</td>
+					<td><code>file_path</code></td>
+			</tr>
+			<tr>
+					<td>Additional Description</td>
+					<td><code>file_size</code></td>
+			</tr>
+	</tbody>
 </table>
 <h3>Fields<span class="hx:absolute hx:-mt-20" id="fields"></span>
     <a href="#fields" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Output Name</th>
-          <th>Data Type</th>
-          <th>Qualifier</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>snapshot_id</code></td>
-          <td>String</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>parent</code></td>
-          <td>String</td>
-          <td></td>
-          <td>full parent directory path of the entry</td>
-      </tr>
-      <tr>
-          <td><code>file_name</code></td>
-          <td>String</td>
-          <td></td>
-          <td>name of the file without path</td>
-      </tr>
-      <tr>
-          <td><code>extension</code></td>
-          <td>String</td>
-          <td></td>
-          <td>file extension (e.g., .txt, .exe)</td>
-      </tr>
-      <tr>
-          <td><code>file_size</code></td>
-          <td>Int</td>
-          <td>FILE_SIZE</td>
-          <td>size of the file in bytes</td>
-      </tr>
-      <tr>
-          <td><code>file_in_use</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>flag indicating whether the MFT record is allocated (true) or free (false)</td>
-      </tr>
-      <tr>
-          <td><code>sequence_number</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>sequence number part of the File Reference Number (FRN)</td>
-      </tr>
-      <tr>
-          <td><code>record_number</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>record/index part of the File Reference Number (FRN)</td>
-      </tr>
-      <tr>
-          <td><code>FRN</code></td>
-          <td>Extension</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_archive</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>archive attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_no_scrub_data</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>no‑scrub‑data attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_compressed</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>compressed attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_directory</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>directory attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_encrypted</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>encrypted attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_hidden</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>hidden attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_not_content_indexed</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>not‑content‑indexed attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_reparse_point</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>reparse‑point attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_normal</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>normal attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_offline</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>offline attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_sparse_file</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>sparse‑file attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_readonly</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>read‑only attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_system</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>system attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_temporary</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>temporary attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_virtual</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>virtual attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_recall_on_data_access</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>recall‑on‑data‑access attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_device</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>device attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_ea</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>extended‑attributes (EA) attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_recall_on_open</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>recall‑on‑open attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_pinned</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>pinned attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_integrity_stream</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>integrity‑stream attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>file_attributes_unpinned</code></td>
-          <td>Bool</td>
-          <td></td>
-          <td>unpinned attribute flag</td>
-      </tr>
-      <tr>
-          <td><code>Attributes</code></td>
-          <td>Extension</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>usn_number</code></td>
-          <td>IntRadix</td>
-          <td>FS_USN</td>
-          <td>USN journal sequence number (hexadecimal)</td>
-      </tr>
-      <tr>
-          <td><code>file_name_flags</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>flags associated with the filename entry</td>
-      </tr>
-      <tr>
-          <td><code>fn_creation_date</code></td>
-          <td>DateTime</td>
-          <td>DATE_CREATION</td>
-          <td>creation timestamp of the filename entry</td>
-      </tr>
-      <tr>
-          <td><code>fn_lastmod_date</code></td>
-          <td>DateTime</td>
-          <td>DATE_MODIFICATION</td>
-          <td>last modification timestamp of the filename entry</td>
-      </tr>
-      <tr>
-          <td><code>fn_lastaccess_date</code></td>
-          <td>DateTime</td>
-          <td>DATE_ACCESS</td>
-          <td>last access timestamp of the filename entry</td>
-      </tr>
-      <tr>
-          <td><code>fn_lastchange_date</code></td>
-          <td>DateTime</td>
-          <td>DATE_CHANGE</td>
-          <td>timestamp of the last attribute change for the filename entry</td>
-      </tr>
-      <tr>
-          <td><code>si_creation_date</code></td>
-          <td>DateTime</td>
-          <td>DATE_CREATION</td>
-          <td>creation timestamp of the file</td>
-      </tr>
-      <tr>
-          <td><code>si_lastmod_date</code></td>
-          <td>DateTime</td>
-          <td>DATE_MODIFICATION</td>
-          <td>last modification timestamp of the file</td>
-      </tr>
-      <tr>
-          <td><code>si_lastaccess_date</code></td>
-          <td>DateTime</td>
-          <td>DATE_ACCESS</td>
-          <td>last access timestamp of the file</td>
-      </tr>
-      <tr>
-          <td><code>si_lastchange_date</code></td>
-          <td>DateTime</td>
-          <td>DATE_MODIFICATION</td>
-          <td>timestamp of the last attribute change for the file</td>
-      </tr>
-      <tr>
-          <td><code>md5</code></td>
-          <td>String</td>
-          <td>FILE_MD5</td>
-          <td>MD5 hash of the file content</td>
-      </tr>
-      <tr>
-          <td><code>sha1</code></td>
-          <td>String</td>
-          <td>FILE_SHA1</td>
-          <td>SHA‑1 hash of the file content</td>
-      </tr>
-      <tr>
-          <td><code>sha256</code></td>
-          <td>String</td>
-          <td>FILE_SHA256</td>
-          <td>SHA‑256 hash of the file content</td>
-      </tr>
-      <tr>
-          <td><code>orc_pe_md5</code></td>
-          <td>String</td>
-          <td>PE_MD5</td>
-          <td>MD5 hash of the PE executable (if file is a PE)</td>
-      </tr>
-      <tr>
-          <td><code>orc_pe_sha1</code></td>
-          <td>String</td>
-          <td>PE_SHA1</td>
-          <td>SHA‑1 hash of the PE executable (if file is a PE)</td>
-      </tr>
-      <tr>
-          <td><code>orc_pe_sha256</code></td>
-          <td>String</td>
-          <td>PE_SHA256</td>
-          <td>SHA‑256 hash of the PE executable (if file is a PE)</td>
-      </tr>
-      <tr>
-          <td><code>file_pe_md5</code></td>
-          <td>String</td>
-          <td>PE_MD5</td>
-          <td>MD5 hash extracted from the Authenticode‑signed PE file</td>
-      </tr>
-      <tr>
-          <td><code>file_pe_sha1</code></td>
-          <td>String</td>
-          <td>PE_SHA1</td>
-          <td>SHA‑1 hash extracted from the Authenticode‑signed PE file</td>
-      </tr>
-      <tr>
-          <td><code>file_pe_sha256</code></td>
-          <td>String</td>
-          <td>PE_SHA256</td>
-          <td>SHA‑256 hash extracted from the Authenticode‑signed PE file</td>
-      </tr>
-      <tr>
-          <td><code>SignedHash</code></td>
-          <td>Extension</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>authenticode_signer</code></td>
-          <td>String</td>
-          <td></td>
-          <td>subject name of the Authenticode signing certificate</td>
-      </tr>
-      <tr>
-          <td><code>authenticode_signer_thumbprint</code></td>
-          <td>Split</td>
-          <td></td>
-          <td>thumbprint(s) of the Authenticode signing certificate</td>
-      </tr>
-      <tr>
-          <td><code>authenticode_ca</code></td>
-          <td>String</td>
-          <td></td>
-          <td>certificate authority that issued the signing certificate</td>
-      </tr>
-      <tr>
-          <td><code>authenticode_ca_thumbprint</code></td>
-          <td>Split</td>
-          <td></td>
-          <td>thumbprint(s) of the signing certificate authority</td>
-      </tr>
-      <tr>
-          <td><code>authenticode_status</code></td>
-          <td>String</td>
-          <td></td>
-          <td>verification status of the Authenticode signature (e.g., valid, invalid)</td>
-      </tr>
-      <tr>
-          <td><code>pe_version</code></td>
-          <td>String</td>
-          <td>PE_VERSION</td>
-          <td>version string of the PE file (FileVersion)</td>
-      </tr>
-      <tr>
-          <td><code>pe_companyname</code></td>
-          <td>String</td>
-          <td>COMPANY</td>
-          <td>company name embedded in the PE metadata</td>
-      </tr>
-      <tr>
-          <td><code>pe_productname</code></td>
-          <td>String</td>
-          <td>PRODUCT</td>
-          <td>product name embedded in the PE metadata</td>
-      </tr>
-      <tr>
-          <td><code>pe_original_filename</code></td>
-          <td>String</td>
-          <td>FILE_NAME</td>
-          <td>original filename stored in the PE metadata</td>
-      </tr>
-      <tr>
-          <td><code>pe_platform</code></td>
-          <td>String</td>
-          <td>PE_ARCH</td>
-          <td>target platform/architecture of the PE (e.g., x86, x64)</td>
-      </tr>
-      <tr>
-          <td><code>pe_compilation_date</code></td>
-          <td>DateTime</td>
-          <td>DATE_COMPILATION</td>
-          <td>compilation timestamp of the PE executable</td>
-      </tr>
-      <tr>
-          <td><code>pe_subsystem</code></td>
-          <td>String</td>
-          <td>PE_SUBSYSTEM</td>
-          <td>subsystem type defined in the PE header (e.g., GUI, Console)</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Output Name</th>
+					<th>Data Type</th>
+					<th>Qualifier</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>snapshot_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>parent</code></td>
+					<td>String</td>
+					<td></td>
+					<td>full parent directory path of the entry</td>
+			</tr>
+			<tr>
+					<td><code>file_name</code></td>
+					<td>String</td>
+					<td></td>
+					<td>name of the file without path</td>
+			</tr>
+			<tr>
+					<td><code>extension</code></td>
+					<td>String</td>
+					<td></td>
+					<td>file extension (e.g., .txt, .exe)</td>
+			</tr>
+			<tr>
+					<td><code>file_size</code></td>
+					<td>Int</td>
+					<td>FILE_SIZE</td>
+					<td>size of the file in bytes</td>
+			</tr>
+			<tr>
+					<td><code>file_in_use</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>flag indicating whether the MFT record is allocated (true) or free (false)</td>
+			</tr>
+			<tr>
+					<td><code>sequence_number</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>sequence number part of the File Reference Number (FRN)</td>
+			</tr>
+			<tr>
+					<td><code>record_number</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>record/index part of the File Reference Number (FRN)</td>
+			</tr>
+			<tr>
+					<td><code>FRN</code></td>
+					<td>Extension</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_archive</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>archive attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_no_scrub_data</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>no‑scrub‑data attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_compressed</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>compressed attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_directory</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>directory attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_encrypted</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>encrypted attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_hidden</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>hidden attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_not_content_indexed</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>not‑content‑indexed attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_reparse_point</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>reparse‑point attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_normal</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>normal attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_offline</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>offline attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_sparse_file</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>sparse‑file attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_readonly</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>read‑only attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_system</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>system attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_temporary</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>temporary attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_virtual</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>virtual attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_recall_on_data_access</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>recall‑on‑data‑access attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_device</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>device attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_ea</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>extended‑attributes (EA) attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_recall_on_open</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>recall‑on‑open attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_pinned</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>pinned attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_integrity_stream</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>integrity‑stream attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>file_attributes_unpinned</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>unpinned attribute flag</td>
+			</tr>
+			<tr>
+					<td><code>Attributes</code></td>
+					<td>Extension</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>usn_number</code></td>
+					<td>IntRadix</td>
+					<td>FS_USN</td>
+					<td>USN journal sequence number (hexadecimal)</td>
+			</tr>
+			<tr>
+					<td><code>file_name_flags</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>flags associated with the filename entry</td>
+			</tr>
+			<tr>
+					<td><code>fn_creation_date</code></td>
+					<td>DateTime</td>
+					<td>DATE_CREATION</td>
+					<td>creation timestamp of the filename entry</td>
+			</tr>
+			<tr>
+					<td><code>fn_lastmod_date</code></td>
+					<td>DateTime</td>
+					<td>DATE_MODIFICATION</td>
+					<td>last modification timestamp of the filename entry</td>
+			</tr>
+			<tr>
+					<td><code>fn_lastaccess_date</code></td>
+					<td>DateTime</td>
+					<td>DATE_ACCESS</td>
+					<td>last access timestamp of the filename entry</td>
+			</tr>
+			<tr>
+					<td><code>fn_lastchange_date</code></td>
+					<td>DateTime</td>
+					<td>DATE_CHANGE</td>
+					<td>timestamp of the last attribute change for the filename entry</td>
+			</tr>
+			<tr>
+					<td><code>si_creation_date</code></td>
+					<td>DateTime</td>
+					<td>DATE_CREATION</td>
+					<td>creation timestamp of the file</td>
+			</tr>
+			<tr>
+					<td><code>si_lastmod_date</code></td>
+					<td>DateTime</td>
+					<td>DATE_MODIFICATION</td>
+					<td>last modification timestamp of the file</td>
+			</tr>
+			<tr>
+					<td><code>si_lastaccess_date</code></td>
+					<td>DateTime</td>
+					<td>DATE_ACCESS</td>
+					<td>last access timestamp of the file</td>
+			</tr>
+			<tr>
+					<td><code>si_lastchange_date</code></td>
+					<td>DateTime</td>
+					<td>DATE_MODIFICATION</td>
+					<td>timestamp of the last attribute change for the file</td>
+			</tr>
+			<tr>
+					<td><code>md5</code></td>
+					<td>String</td>
+					<td>FILE_MD5</td>
+					<td>MD5 hash of the file content</td>
+			</tr>
+			<tr>
+					<td><code>sha1</code></td>
+					<td>String</td>
+					<td>FILE_SHA1</td>
+					<td>SHA‑1 hash of the file content</td>
+			</tr>
+			<tr>
+					<td><code>sha256</code></td>
+					<td>String</td>
+					<td>FILE_SHA256</td>
+					<td>SHA‑256 hash of the file content</td>
+			</tr>
+			<tr>
+					<td><code>orc_pe_md5</code></td>
+					<td>String</td>
+					<td>PE_MD5</td>
+					<td>MD5 hash of the PE executable (if file is a PE)</td>
+			</tr>
+			<tr>
+					<td><code>orc_pe_sha1</code></td>
+					<td>String</td>
+					<td>PE_SHA1</td>
+					<td>SHA‑1 hash of the PE executable (if file is a PE)</td>
+			</tr>
+			<tr>
+					<td><code>orc_pe_sha256</code></td>
+					<td>String</td>
+					<td>PE_SHA256</td>
+					<td>SHA‑256 hash of the PE executable (if file is a PE)</td>
+			</tr>
+			<tr>
+					<td><code>file_pe_md5</code></td>
+					<td>String</td>
+					<td>PE_MD5</td>
+					<td>MD5 hash extracted from the Authenticode‑signed PE file</td>
+			</tr>
+			<tr>
+					<td><code>file_pe_sha1</code></td>
+					<td>String</td>
+					<td>PE_SHA1</td>
+					<td>SHA‑1 hash extracted from the Authenticode‑signed PE file</td>
+			</tr>
+			<tr>
+					<td><code>file_pe_sha256</code></td>
+					<td>String</td>
+					<td>PE_SHA256</td>
+					<td>SHA‑256 hash extracted from the Authenticode‑signed PE file</td>
+			</tr>
+			<tr>
+					<td><code>SignedHash</code></td>
+					<td>Extension</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>authenticode_signer</code></td>
+					<td>String</td>
+					<td></td>
+					<td>subject name of the Authenticode signing certificate</td>
+			</tr>
+			<tr>
+					<td><code>authenticode_signer_thumbprint</code></td>
+					<td>Split</td>
+					<td></td>
+					<td>thumbprint(s) of the Authenticode signing certificate</td>
+			</tr>
+			<tr>
+					<td><code>authenticode_ca</code></td>
+					<td>String</td>
+					<td></td>
+					<td>certificate authority that issued the signing certificate</td>
+			</tr>
+			<tr>
+					<td><code>authenticode_ca_thumbprint</code></td>
+					<td>Split</td>
+					<td></td>
+					<td>thumbprint(s) of the signing certificate authority</td>
+			</tr>
+			<tr>
+					<td><code>authenticode_status</code></td>
+					<td>String</td>
+					<td></td>
+					<td>verification status of the Authenticode signature (e.g., valid, invalid)</td>
+			</tr>
+			<tr>
+					<td><code>pe_version</code></td>
+					<td>String</td>
+					<td>PE_VERSION</td>
+					<td>version string of the PE file (FileVersion)</td>
+			</tr>
+			<tr>
+					<td><code>pe_companyname</code></td>
+					<td>String</td>
+					<td>COMPANY</td>
+					<td>company name embedded in the PE metadata</td>
+			</tr>
+			<tr>
+					<td><code>pe_productname</code></td>
+					<td>String</td>
+					<td>PRODUCT</td>
+					<td>product name embedded in the PE metadata</td>
+			</tr>
+			<tr>
+					<td><code>pe_original_filename</code></td>
+					<td>String</td>
+					<td>FILE_NAME</td>
+					<td>original filename stored in the PE metadata</td>
+			</tr>
+			<tr>
+					<td><code>pe_platform</code></td>
+					<td>String</td>
+					<td>PE_ARCH</td>
+					<td>target platform/architecture of the PE (e.g., x86, x64)</td>
+			</tr>
+			<tr>
+					<td><code>pe_compilation_date</code></td>
+					<td>DateTime</td>
+					<td>DATE_COMPILATION</td>
+					<td>compilation timestamp of the PE executable</td>
+			</tr>
+			<tr>
+					<td><code>pe_subsystem</code></td>
+					<td>String</td>
+					<td>PE_SUBSYSTEM</td>
+					<td>subsystem type defined in the PE header (e.g., GUI, Console)</td>
+			</tr>
+	</tbody>
 </table>
 
         </div>

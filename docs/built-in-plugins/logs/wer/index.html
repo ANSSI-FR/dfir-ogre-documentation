@@ -40,12 +40,12 @@ hangs, and other failure events reported by the operating system.
 
 
 
-  <meta itemprop="name" content="Wer">
-  <meta itemprop="description" content="Data Type: wer Python Parser: WER Description ParsesWindows Error Reporting files (WER), extracting metadata about crashes, hangs, and other failure events reported by the operating system.">
-  <meta itemprop="wordCount" content="523">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Wer">
-  <meta name="twitter:description" content="Data Type: wer Python Parser: WER Description ParsesWindows Error Reporting files (WER), extracting metadata about crashes, hangs, and other failure events reported by the operating system.">
+	<meta itemprop="name" content="Wer">
+	<meta itemprop="description" content="Data Type: wer Python Parser: WER Description ParsesWindows Error Reporting files (WER), extracting metadata about crashes, hangs, and other failure events reported by the operating system.">
+	<meta itemprop="wordCount" content="523">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Wer">
+	<meta name="twitter:description" content="Data Type: wer Python Parser: WER Description ParsesWindows Error Reporting files (WER), extracting metadata about crashes, hangs, and other failure events reported by the operating system.">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
     <link href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" rel="stylesheet" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -1656,373 +1656,373 @@ Python Parser: <strong>WER</strong></div>
 hangs, and other failure events reported by the operating system.</p>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Timeline Field</th>
-          <th>Data Field</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Description</td>
-          <td><code>app_path</code></td>
-      </tr>
-      <tr>
-          <td>Additional Description</td>
-          <td><code>event_type</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>original_file_name</code></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td><code>ns_app_name</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Timeline Field</th>
+					<th>Data Field</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Description</td>
+					<td><code>app_path</code></td>
+			</tr>
+			<tr>
+					<td>Additional Description</td>
+					<td><code>event_type</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>original_file_name</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>ns_app_name</code></td>
+			</tr>
+	</tbody>
 </table>
 <h3>Fields<span class="hx:absolute hx:-mt-20" id="fields"></span>
     <a href="#fields" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Output Name</th>
-          <th>Data Type</th>
-          <th>Qualifier</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>version</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Version of the Windows Error Reporting file format</td>
-      </tr>
-      <tr>
-          <td><code>event_type</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Type of event that generated the report (e.g., crash, hang)</td>
-      </tr>
-      <tr>
-          <td><code>event_time</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>Timestamp when the event occurred</td>
-      </tr>
-      <tr>
-          <td><code>report_type</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Numeric identifier of the report category</td>
-      </tr>
-      <tr>
-          <td><code>consent</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>User‑provided consent flag for sending the report</td>
-      </tr>
-      <tr>
-          <td><code>upload_time</code></td>
-          <td>DateTime</td>
-          <td></td>
-          <td>Timestamp when the report was uploaded to Microsoft</td>
-      </tr>
-      <tr>
-          <td><code>report_status</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Current processing status of the report</td>
-      </tr>
-      <tr>
-          <td><code>boot_id</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Identifier of the boot session during which the event happened</td>
-      </tr>
-      <tr>
-          <td><code>target_as_id</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Identifier of the target application session</td>
-      </tr>
-      <tr>
-          <td><code>user_impact_vector</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Severity/impact rating of the failure event</td>
-      </tr>
-      <tr>
-          <td><code>etw_non_collect_reason</code></td>
-          <td>Int</td>
-          <td></td>
-          <td>Reason code why ETW data was not collected</td>
-      </tr>
-      <tr>
-          <td><code>metadata_hash</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Hash of the report metadata for integrity verification</td>
-      </tr>
-      <tr>
-          <td><code>application_identity</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Unique identifier of the reported application</td>
-      </tr>
-      <tr>
-          <td><code>report_identifier</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Globally unique identifier for this WER report</td>
-      </tr>
-      <tr>
-          <td><code>wow64_host</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Indicates if the report originated from a WoW64 (32‑bit on 64‑bit) process</td>
-      </tr>
-      <tr>
-          <td><code>ns_app_name</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Namespace‑scoped name of the application</td>
-      </tr>
-      <tr>
-          <td><code>original_filename</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Original file name of the crashed executable</td>
-      </tr>
-      <tr>
-          <td><code>app_session_guid</code></td>
-          <td>String</td>
-          <td></td>
-          <td>GUID of the application session that generated the report</td>
-      </tr>
-      <tr>
-          <td><code>target_app_id</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Identifier of the target application</td>
-      </tr>
-      <tr>
-          <td><code>target_app_ver</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Version of the target application</td>
-      </tr>
-      <tr>
-          <td><code>app_path</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Full file‑system path to the application executable</td>
-      </tr>
-      <tr>
-          <td><code>app_name</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Human‑readable name of the application</td>
-      </tr>
-      <tr>
-          <td><code>is_fatal</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Flag indicating whether the failure was fatal</td>
-      </tr>
-      <tr>
-          <td><code>friendly_event_name</code></td>
-          <td>String</td>
-          <td></td>
-          <td>User‑friendly description of the event type</td>
-      </tr>
-      <tr>
-          <td><code>consent_key</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Registry or configuration key associated with user consent</td>
-      </tr>
-      <tr>
-          <td><code>report_description</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Textual description supplied with the report</td>
-      </tr>
-      <tr>
-          <td><code>ns_partner</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Namespace partner identifier related to the application</td>
-      </tr>
-      <tr>
-          <td><code>ns_group</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Namespace group identifier related to the application</td>
-      </tr>
-      <tr>
-          <td><code>response_bucket_id</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Identifier of the bucket used for response classification</td>
-      </tr>
-      <tr>
-          <td><code>response_bucket_table</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Name of the bucket table associated with the response</td>
-      </tr>
-      <tr>
-          <td><code>response_legacy_bucket_id</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Legacy bucket identifier for backward‑compatible processing</td>
-      </tr>
-      <tr>
-          <td><code>response_type</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Type/category of the response generated for the report</td>
-      </tr>
-      <tr>
-          <td><code>loaded_module[]</code></td>
-          <td>Array[String]</td>
-          <td></td>
-          <td>Name of a module that was loaded in the process at crash time</td>
-      </tr>
-      <tr>
-          <td><code>files[]</code></td>
-          <td>Array[Object]</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>files[].CabName</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Name of the cabinet file containing the crash artifacts</td>
-      </tr>
-      <tr>
-          <td><code>files[].Path</code></td>
-          <td>String</td>
-          <td></td>
-          <td>File system path of the reported file</td>
-      </tr>
-      <tr>
-          <td><code>files[].Flags</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Flags describing properties of the file</td>
-      </tr>
-      <tr>
-          <td><code>files[].Type</code></td>
-          <td>String</td>
-          <td></td>
-          <td>File type/category (e.g., dump, log, cab)</td>
-      </tr>
-      <tr>
-          <td><code>files[].Original</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Original filename before it was packaged</td>
-      </tr>
-      <tr>
-          <td><code>sig</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>sig.os_version</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Operating‑system version recorded in the static signature</td>
-      </tr>
-      <tr>
-          <td><code>sig.locale_id</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Locale identifier (LCID) of the system at the time of the crash</td>
-      </tr>
-      <tr>
-          <td><code>dynamic_sig</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>dynamic_sig.stack_version</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Version of the stack information included in the dynamic signature</td>
-      </tr>
-      <tr>
-          <td><code>dynamic_sig.package</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Package name associated with the dynamic signature</td>
-      </tr>
-      <tr>
-          <td><code>dynamic_sig.version</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Version of the package referenced in the dynamic signature</td>
-      </tr>
-      <tr>
-          <td><code>dynamic_sig.architecture</code></td>
-          <td>String</td>
-          <td></td>
-          <td>CPU architecture (e.g., x86, x64) reported in the dynamic signature</td>
-      </tr>
-      <tr>
-          <td><code>dynamic_sig.culture</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Culture/language code of the package</td>
-      </tr>
-      <tr>
-          <td><code>dynamic_sig.status</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Status flag of the dynamic signature</td>
-      </tr>
-      <tr>
-          <td><code>dynamic_sig.failure_source</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Source component that caused the failure</td>
-      </tr>
-      <tr>
-          <td><code>dynamic_sig.start_state</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Application state before the failure occurred</td>
-      </tr>
-      <tr>
-          <td><code>dynamic_sig.target_state</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Application state targeted after the failure</td>
-      </tr>
-      <tr>
-          <td><code>dynamic_sig.client_id</code></td>
-          <td>String</td>
-          <td></td>
-          <td>Identifier of the client that generated the dynamic signature</td>
-      </tr>
-      <tr>
-          <td><code>os_info</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><code>state</code></td>
-          <td>Object</td>
-          <td></td>
-          <td></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Output Name</th>
+					<th>Data Type</th>
+					<th>Qualifier</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>version</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Version of the Windows Error Reporting file format</td>
+			</tr>
+			<tr>
+					<td><code>event_type</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Type of event that generated the report (e.g., crash, hang)</td>
+			</tr>
+			<tr>
+					<td><code>event_time</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>Timestamp when the event occurred</td>
+			</tr>
+			<tr>
+					<td><code>report_type</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Numeric identifier of the report category</td>
+			</tr>
+			<tr>
+					<td><code>consent</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>User‑provided consent flag for sending the report</td>
+			</tr>
+			<tr>
+					<td><code>upload_time</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>Timestamp when the report was uploaded to Microsoft</td>
+			</tr>
+			<tr>
+					<td><code>report_status</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Current processing status of the report</td>
+			</tr>
+			<tr>
+					<td><code>boot_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Identifier of the boot session during which the event happened</td>
+			</tr>
+			<tr>
+					<td><code>target_as_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Identifier of the target application session</td>
+			</tr>
+			<tr>
+					<td><code>user_impact_vector</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Severity/impact rating of the failure event</td>
+			</tr>
+			<tr>
+					<td><code>etw_non_collect_reason</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Reason code why ETW data was not collected</td>
+			</tr>
+			<tr>
+					<td><code>metadata_hash</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Hash of the report metadata for integrity verification</td>
+			</tr>
+			<tr>
+					<td><code>application_identity</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Unique identifier of the reported application</td>
+			</tr>
+			<tr>
+					<td><code>report_identifier</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Globally unique identifier for this WER report</td>
+			</tr>
+			<tr>
+					<td><code>wow64_host</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Indicates if the report originated from a WoW64 (32‑bit on 64‑bit) process</td>
+			</tr>
+			<tr>
+					<td><code>ns_app_name</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Namespace‑scoped name of the application</td>
+			</tr>
+			<tr>
+					<td><code>original_filename</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Original file name of the crashed executable</td>
+			</tr>
+			<tr>
+					<td><code>app_session_guid</code></td>
+					<td>String</td>
+					<td></td>
+					<td>GUID of the application session that generated the report</td>
+			</tr>
+			<tr>
+					<td><code>target_app_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Identifier of the target application</td>
+			</tr>
+			<tr>
+					<td><code>target_app_ver</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Version of the target application</td>
+			</tr>
+			<tr>
+					<td><code>app_path</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Full file‑system path to the application executable</td>
+			</tr>
+			<tr>
+					<td><code>app_name</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Human‑readable name of the application</td>
+			</tr>
+			<tr>
+					<td><code>is_fatal</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Flag indicating whether the failure was fatal</td>
+			</tr>
+			<tr>
+					<td><code>friendly_event_name</code></td>
+					<td>String</td>
+					<td></td>
+					<td>User‑friendly description of the event type</td>
+			</tr>
+			<tr>
+					<td><code>consent_key</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Registry or configuration key associated with user consent</td>
+			</tr>
+			<tr>
+					<td><code>report_description</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Textual description supplied with the report</td>
+			</tr>
+			<tr>
+					<td><code>ns_partner</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Namespace partner identifier related to the application</td>
+			</tr>
+			<tr>
+					<td><code>ns_group</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Namespace group identifier related to the application</td>
+			</tr>
+			<tr>
+					<td><code>response_bucket_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Identifier of the bucket used for response classification</td>
+			</tr>
+			<tr>
+					<td><code>response_bucket_table</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Name of the bucket table associated with the response</td>
+			</tr>
+			<tr>
+					<td><code>response_legacy_bucket_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Legacy bucket identifier for backward‑compatible processing</td>
+			</tr>
+			<tr>
+					<td><code>response_type</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Type/category of the response generated for the report</td>
+			</tr>
+			<tr>
+					<td><code>loaded_module[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>Name of a module that was loaded in the process at crash time</td>
+			</tr>
+			<tr>
+					<td><code>files[]</code></td>
+					<td>Array[Object]</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>files[].CabName</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Name of the cabinet file containing the crash artifacts</td>
+			</tr>
+			<tr>
+					<td><code>files[].Path</code></td>
+					<td>String</td>
+					<td></td>
+					<td>File system path of the reported file</td>
+			</tr>
+			<tr>
+					<td><code>files[].Flags</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Flags describing properties of the file</td>
+			</tr>
+			<tr>
+					<td><code>files[].Type</code></td>
+					<td>String</td>
+					<td></td>
+					<td>File type/category (e.g., dump, log, cab)</td>
+			</tr>
+			<tr>
+					<td><code>files[].Original</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Original filename before it was packaged</td>
+			</tr>
+			<tr>
+					<td><code>sig</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>sig.os_version</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Operating‑system version recorded in the static signature</td>
+			</tr>
+			<tr>
+					<td><code>sig.locale_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Locale identifier (LCID) of the system at the time of the crash</td>
+			</tr>
+			<tr>
+					<td><code>dynamic_sig</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>dynamic_sig.stack_version</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Version of the stack information included in the dynamic signature</td>
+			</tr>
+			<tr>
+					<td><code>dynamic_sig.package</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Package name associated with the dynamic signature</td>
+			</tr>
+			<tr>
+					<td><code>dynamic_sig.version</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Version of the package referenced in the dynamic signature</td>
+			</tr>
+			<tr>
+					<td><code>dynamic_sig.architecture</code></td>
+					<td>String</td>
+					<td></td>
+					<td>CPU architecture (e.g., x86, x64) reported in the dynamic signature</td>
+			</tr>
+			<tr>
+					<td><code>dynamic_sig.culture</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Culture/language code of the package</td>
+			</tr>
+			<tr>
+					<td><code>dynamic_sig.status</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Status flag of the dynamic signature</td>
+			</tr>
+			<tr>
+					<td><code>dynamic_sig.failure_source</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Source component that caused the failure</td>
+			</tr>
+			<tr>
+					<td><code>dynamic_sig.start_state</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Application state before the failure occurred</td>
+			</tr>
+			<tr>
+					<td><code>dynamic_sig.target_state</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Application state targeted after the failure</td>
+			</tr>
+			<tr>
+					<td><code>dynamic_sig.client_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Identifier of the client that generated the dynamic signature</td>
+			</tr>
+			<tr>
+					<td><code>os_info</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>state</code></td>
+					<td>Object</td>
+					<td></td>
+					<td></td>
+			</tr>
+	</tbody>
 </table>
 
         </div>

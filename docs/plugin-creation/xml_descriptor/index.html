@@ -77,15 +77,15 @@ Quick Example
 
 
 
-  <meta itemprop="name" content="XML Descriptor documentation">
-  <meta itemprop="description" content="Overview The DFIR-OGRE plugin configuration is an XML file that defines how a parser plugin should read, transform, and structure data from various file formats (CSV, JSON, EVTX, Hive, SQLite, logs, etc.). It maps raw input fields to typed output fields, applies transformations, and optionally defines timeline display behavior.
+	<meta itemprop="name" content="XML Descriptor documentation">
+	<meta itemprop="description" content="Overview The DFIR-OGRE plugin configuration is an XML file that defines how a parser plugin should read, transform, and structure data from various file formats (CSV, JSON, EVTX, Hive, SQLite, logs, etc.). It maps raw input fields to typed output fields, applies transformations, and optionally defines timeline display behavior.
 Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;plugin parser=&#34;Csv&#34; file_encoding=&#34;UTF-8&#34;&gt; &lt;mapping data_type=&#34;ntfs_info&#34;&gt; &lt;description&gt;Parse data from the NTFS Info csv file&lt;/description&gt; &lt;default_parser value=&#34;Ignore&#34; /&gt; &lt;default_date_pattern value=&#34;iso&#34; /&gt; &lt;csv_delimiter value=&#34;,&#34; /&gt; &lt;timeline&gt; &lt;timeline_type value=&#34;Normal&#34; /&gt; &lt;description&gt; &lt;output_name value=&#34;snapshot_id&#34; /&gt; &lt;/description&gt; &lt;additional_description&gt; &lt;output_name value=&#34;file_size&#34; /&gt; &lt;/additional_description&gt; &lt;/timeline&gt; &lt;fields&gt; &lt;field input=&#34;SnapshotID&#34; output=&#34;snapshot_id&#34; parser=&#34;String&#34; /&gt; &lt;field input=&#34;FileNameCreationDate&#34; output=&#34;fn_creation_date&#34; parser=&#34;DateTime&#34; /&gt; &lt;field input=&#34;SizeInBytes&#34; output=&#34;file_size&#34; parser=&#34;Int&#34;/&gt; &lt;/fields&gt; &lt;/mapping&gt; &lt;/plugin&gt; 1. Root Element: &lt;plugin&gt; The root element must be named plugin and carries two attributes:">
-  <meta itemprop="datePublished" content="2026-01-06T15:55:36+01:00">
-  <meta itemprop="dateModified" content="2026-01-06T15:55:36+01:00">
-  <meta itemprop="wordCount" content="1525">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="XML Descriptor documentation">
-  <meta name="twitter:description" content="Overview The DFIR-OGRE plugin configuration is an XML file that defines how a parser plugin should read, transform, and structure data from various file formats (CSV, JSON, EVTX, Hive, SQLite, logs, etc.). It maps raw input fields to typed output fields, applies transformations, and optionally defines timeline display behavior.
+	<meta itemprop="datePublished" content="2026-01-06T15:55:36+01:00">
+	<meta itemprop="dateModified" content="2026-01-06T15:55:36+01:00">
+	<meta itemprop="wordCount" content="1525">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="XML Descriptor documentation">
+	<meta name="twitter:description" content="Overview The DFIR-OGRE plugin configuration is an XML file that defines how a parser plugin should read, transform, and structure data from various file formats (CSV, JSON, EVTX, Hive, SQLite, logs, etc.). It maps raw input fields to typed output fields, applies transformations, and optionally defines timeline display behavior.
 Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;plugin parser=&#34;Csv&#34; file_encoding=&#34;UTF-8&#34;&gt; &lt;mapping data_type=&#34;ntfs_info&#34;&gt; &lt;description&gt;Parse data from the NTFS Info csv file&lt;/description&gt; &lt;default_parser value=&#34;Ignore&#34; /&gt; &lt;default_date_pattern value=&#34;iso&#34; /&gt; &lt;csv_delimiter value=&#34;,&#34; /&gt; &lt;timeline&gt; &lt;timeline_type value=&#34;Normal&#34; /&gt; &lt;description&gt; &lt;output_name value=&#34;snapshot_id&#34; /&gt; &lt;/description&gt; &lt;additional_description&gt; &lt;output_name value=&#34;file_size&#34; /&gt; &lt;/additional_description&gt; &lt;/timeline&gt; &lt;fields&gt; &lt;field input=&#34;SnapshotID&#34; output=&#34;snapshot_id&#34; parser=&#34;String&#34; /&gt; &lt;field input=&#34;FileNameCreationDate&#34; output=&#34;fn_creation_date&#34; parser=&#34;DateTime&#34; /&gt; &lt;field input=&#34;SizeInBytes&#34; output=&#34;file_size&#34; parser=&#34;Int&#34;/&gt; &lt;/fields&gt; &lt;/mapping&gt; &lt;/plugin&gt; 1. Root Element: &lt;plugin&gt; The root element must be named plugin and carries two attributes:">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -1814,28 +1814,28 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
 <h2>1. Root Element: <code>&lt;plugin&gt;</code><span class="hx:absolute hx:-mt-20" id="1-root-element-plugin"></span>
     <a href="#1-root-element-plugin" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The root element must be named <code>plugin</code> and carries two attributes:</p>
 <table>
-  <thead>
-      <tr>
-          <th>Attribute</th>
-          <th>Required</th>
-          <th>Default</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>parser</code></td>
-          <td><strong>Yes</strong></td>
-          <td>-</td>
-          <td>Name of the parser associated with this plugin (e.g., <code>&quot;Csv&quot;</code>, <code>&quot;Json&quot;</code>, <code>&quot;Evtx&quot;</code>)</td>
-      </tr>
-      <tr>
-          <td><code>file_encoding</code></td>
-          <td>No</td>
-          <td><code>&quot;UTF_8&quot;</code></td>
-          <td>Character encoding for reading the source data files</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Attribute</th>
+					<th>Required</th>
+					<th>Default</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>parser</code></td>
+					<td><strong>Yes</strong></td>
+					<td>-</td>
+					<td>Name of the parser associated with this plugin (e.g., <code>&quot;Csv&quot;</code>, <code>&quot;Json&quot;</code>, <code>&quot;Evtx&quot;</code>)</td>
+			</tr>
+			<tr>
+					<td><code>file_encoding</code></td>
+					<td>No</td>
+					<td><code>&quot;UTF_8&quot;</code></td>
+					<td>Character encoding for reading the source data files</td>
+			</tr>
+	</tbody>
 </table>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
@@ -1885,62 +1885,62 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
 <h2>2. <code>&lt;mapping&gt;</code> Element<span class="hx:absolute hx:-mt-20" id="2-mapping-element"></span>
     <a href="#2-mapping-element" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>One or more <code>&lt;mapping&gt;</code> elements define how a specific data type is parsed.</p>
 <table>
-  <thead>
-      <tr>
-          <th>Attribute</th>
-          <th>Required</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>data_type</code></td>
-          <td><strong>Yes</strong></td>
-          <td>Name of the data type this mapping describes</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Attribute</th>
+					<th>Required</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>data_type</code></td>
+					<td><strong>Yes</strong></td>
+					<td>Name of the data type this mapping describes</td>
+			</tr>
+	</tbody>
 </table>
 <p>Inside <code>&lt;mapping&gt;</code>, the following child elements are supported:</p>
 <table>
-  <thead>
-      <tr>
-          <th>Element</th>
-          <th>Cardinality</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>&lt;description&gt;</code></td>
-          <td>0 or 1</td>
-          <td>Human-readable description of the mapping</td>
-      </tr>
-      <tr>
-          <td><code>&lt;default_parser&gt;</code></td>
-          <td>0 or 1</td>
-          <td>Default parser applied to unmapped fields</td>
-      </tr>
-      <tr>
-          <td><code>&lt;default_date_pattern&gt;</code></td>
-          <td>0 or 1</td>
-          <td>Default date parsing codec for <code>DateTime</code> fields</td>
-      </tr>
-      <tr>
-          <td><code>&lt;timeline&gt;</code></td>
-          <td>0 or 1</td>
-          <td>Timeline configuration for visualizing records</td>
-      </tr>
-      <tr>
-          <td><code>&lt;fields&gt;</code></td>
-          <td>0 or 1</td>
-          <td>Container for field definitions</td>
-      </tr>
-      <tr>
-          <td>Any other element</td>
-          <td>0..N</td>
-          <td>Treated as a <strong>parameter</strong> stored in the <a href="/dfir-ogre-documentation/plugin-creation/api_documentation/#datatypemapping"><code>DataTypeMapping.params</code></a> attribute</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Element</th>
+					<th>Cardinality</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>&lt;description&gt;</code></td>
+					<td>0 or 1</td>
+					<td>Human-readable description of the mapping</td>
+			</tr>
+			<tr>
+					<td><code>&lt;default_parser&gt;</code></td>
+					<td>0 or 1</td>
+					<td>Default parser applied to unmapped fields</td>
+			</tr>
+			<tr>
+					<td><code>&lt;default_date_pattern&gt;</code></td>
+					<td>0 or 1</td>
+					<td>Default date parsing codec for <code>DateTime</code> fields</td>
+			</tr>
+			<tr>
+					<td><code>&lt;timeline&gt;</code></td>
+					<td>0 or 1</td>
+					<td>Timeline configuration for visualizing records</td>
+			</tr>
+			<tr>
+					<td><code>&lt;fields&gt;</code></td>
+					<td>0 or 1</td>
+					<td>Container for field definitions</td>
+			</tr>
+			<tr>
+					<td>Any other element</td>
+					<td>0..N</td>
+					<td>Treated as a <strong>parameter</strong> stored in the <a href="/dfir-ogre-documentation/plugin-creation/api_documentation/#datatypemapping"><code>DataTypeMapping.params</code></a> attribute</td>
+			</tr>
+	</tbody>
 </table>
 <hr>
 <h3>2a. <code>&lt;description&gt;</code><span class="hx:absolute hx:-mt-20" id="2a-description"></span>
@@ -1963,22 +1963,22 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
 <h3>2b. <code>&lt;default_parser&gt;</code><span class="hx:absolute hx:-mt-20" id="2b-default_parser"></span>
     <a href="#2b-default_parser" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Specifies which parser to use when an input line does not have a matching field.</p>
 <table>
-  <thead>
-      <tr>
-          <th>Attribute</th>
-          <th>Required</th>
-          <th>Default</th>
-          <th>Allowed Values</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>value</code></td>
-          <td>No</td>
-          <td><code>&quot;Ignore&quot;</code></td>
-          <td><code>&quot;String&quot;</code> or <code>&quot;Ignore&quot;</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Attribute</th>
+					<th>Required</th>
+					<th>Default</th>
+					<th>Allowed Values</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>value</code></td>
+					<td>No</td>
+					<td><code>&quot;Ignore&quot;</code></td>
+					<td><code>&quot;String&quot;</code> or <code>&quot;Ignore&quot;</code></td>
+			</tr>
+	</tbody>
 </table>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
@@ -1998,22 +1998,22 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
 <h3>2c. <code>&lt;default_date_pattern&gt;</code><span class="hx:absolute hx:-mt-20" id="2c-default_date_pattern"></span>
     <a href="#2c-default_date_pattern" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Specifies the default date/time parsing codec when no explicit qualifier is given.</p>
 <table>
-  <thead>
-      <tr>
-          <th>Attribute</th>
-          <th>Required</th>
-          <th>Default</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>value</code></td>
-          <td>No</td>
-          <td><code>&quot;iso&quot;</code></td>
-          <td>Date format specification</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Attribute</th>
+					<th>Required</th>
+					<th>Default</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>value</code></td>
+					<td>No</td>
+					<td><code>&quot;iso&quot;</code></td>
+					<td>Date format specification</td>
+			</tr>
+	</tbody>
 </table>
 <p>Allowed values (from <code>DateInputCodec::from_str</code>):</p>
 <ul>
@@ -2062,93 +2062,93 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
 </div>
 <p>Supported child elements inside <code>&lt;fields&gt;</code>:</p>
 <table>
-  <thead>
-      <tr>
-          <th>Element</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>&lt;field&gt;</code></td>
-          <td>A single-field mapping</td>
-      </tr>
-      <tr>
-          <td><code>&lt;array&gt;</code></td>
-          <td>An array (repeating) of fields</td>
-      </tr>
-      <tr>
-          <td><code>&lt;object&gt;</code></td>
-          <td>A nested object containing sub-fields</td>
-      </tr>
-      <tr>
-          <td><code>&lt;multi_input&gt;</code></td>
-          <td>Joins multiple fields into one output field</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Element</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>&lt;field&gt;</code></td>
+					<td>A single-field mapping</td>
+			</tr>
+			<tr>
+					<td><code>&lt;array&gt;</code></td>
+					<td>An array (repeating) of fields</td>
+			</tr>
+			<tr>
+					<td><code>&lt;object&gt;</code></td>
+					<td>A nested object containing sub-fields</td>
+			</tr>
+			<tr>
+					<td><code>&lt;multi_input&gt;</code></td>
+					<td>Joins multiple fields into one output field</td>
+			</tr>
+	</tbody>
 </table>
 <hr>
 <h4>2d-i. <code>&lt;field&gt;</code> — Single Field<span class="hx:absolute hx:-mt-20" id="2d-i-field--single-field"></span>
     <a href="#2d-i-field--single-field" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>Maps a single input column/element to an output field.</p>
 <table>
-  <thead>
-      <tr>
-          <th>Attribute</th>
-          <th>Required</th>
-          <th>Default</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>input</code></td>
-          <td><strong>Yes</strong></td>
-          <td>-</td>
-          <td>Name of the input field (CSV column, JSON key, etc.)</td>
-      </tr>
-      <tr>
-          <td><code>output</code></td>
-          <td>No</td>
-          <td>Same as <code>input</code></td>
-          <td>Name of the output field. If omitted, defaults to the input name</td>
-      </tr>
-      <tr>
-          <td><code>parser</code></td>
-          <td><strong>Yes</strong></td>
-          <td>-</td>
-          <td>Name of the parser to apply</td>
-      </tr>
-      <tr>
-          <td><code>qualifier</code></td>
-          <td>No</td>
-          <td>-</td>
-          <td>A qualifier name that maps to specific parsing behavior</td>
-      </tr>
-      <tr>
-          <td><code>display_name</code></td>
-          <td>No</td>
-          <td>-</td>
-          <td>Human-readable display name for the field</td>
-      </tr>
-      <tr>
-          <td><code>description</code></td>
-          <td>No</td>
-          <td>-</td>
-          <td>Additional description of the field</td>
-      </tr>
-      <tr>
-          <td><code>primary_key</code></td>
-          <td>No</td>
-          <td><code>false</code></td>
-          <td>Marks this field as part of a unique identifier</td>
-      </tr>
-      <tr>
-          <td><code>default_value</code></td>
-          <td>No</td>
-          <td>-</td>
-          <td>Fallback value if the parser returns empty/null</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Attribute</th>
+					<th>Required</th>
+					<th>Default</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>input</code></td>
+					<td><strong>Yes</strong></td>
+					<td>-</td>
+					<td>Name of the input field (CSV column, JSON key, etc.)</td>
+			</tr>
+			<tr>
+					<td><code>output</code></td>
+					<td>No</td>
+					<td>Same as <code>input</code></td>
+					<td>Name of the output field. If omitted, defaults to the input name</td>
+			</tr>
+			<tr>
+					<td><code>parser</code></td>
+					<td><strong>Yes</strong></td>
+					<td>-</td>
+					<td>Name of the parser to apply</td>
+			</tr>
+			<tr>
+					<td><code>qualifier</code></td>
+					<td>No</td>
+					<td>-</td>
+					<td>A qualifier name that maps to specific parsing behavior</td>
+			</tr>
+			<tr>
+					<td><code>display_name</code></td>
+					<td>No</td>
+					<td>-</td>
+					<td>Human-readable display name for the field</td>
+			</tr>
+			<tr>
+					<td><code>description</code></td>
+					<td>No</td>
+					<td>-</td>
+					<td>Additional description of the field</td>
+			</tr>
+			<tr>
+					<td><code>primary_key</code></td>
+					<td>No</td>
+					<td><code>false</code></td>
+					<td>Marks this field as part of a unique identifier</td>
+			</tr>
+			<tr>
+					<td><code>default_value</code></td>
+					<td>No</td>
+					<td>-</td>
+					<td>Fallback value if the parser returns empty/null</td>
+			</tr>
+	</tbody>
 </table>
 <p><strong>Example:</strong></p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
@@ -2174,85 +2174,85 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
 <hr>
 <h4>Supported Built-in Parsers<span class="hx:absolute hx:-mt-20" id="supported-built-in-parsers"></span>
     <a href="#supported-built-in-parsers" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><table>
-  <thead>
-      <tr>
-          <th>Parser</th>
-          <th>Description</th>
-          <th>Additional Attributes</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>Ignore</code></td>
-          <td>Skips the field</td>
-          <td>-</td>
-      </tr>
-      <tr>
-          <td><code>String</code></td>
-          <td>Returns the raw string value</td>
-          <td>-</td>
-      </tr>
-      <tr>
-          <td><code>StringToUpper</code></td>
-          <td>Converts to uppercase</td>
-          <td>-</td>
-      </tr>
-      <tr>
-          <td><code>StringToLower</code></td>
-          <td>Converts to lowercase</td>
-          <td>-</td>
-      </tr>
-      <tr>
-          <td><code>Int</code></td>
-          <td>Parses as 64-bit integer</td>
-          <td>-</td>
-      </tr>
-      <tr>
-          <td><code>Float</code></td>
-          <td>Parses as floating-point number</td>
-          <td>-</td>
-      </tr>
-      <tr>
-          <td><code>Bool</code></td>
-          <td>Parses as boolean</td>
-          <td>-</td>
-      </tr>
-      <tr>
-          <td><code>IntRadix</code></td>
-          <td>Parses as integer with explicit radix</td>
-          <td><code>radix</code> (unsigned int, e.g. <code>&quot;16&quot;</code>)</td>
-      </tr>
-      <tr>
-          <td><code>IntToHex</code></td>
-          <td>Formats an integer as hexadecimal</td>
-          <td><code>width</code> (unsigned int, default <code>&quot;0&quot;</code>)</td>
-      </tr>
-      <tr>
-          <td><code>DateTime</code></td>
-          <td>Parses a date/time string</td>
-          <td>-</td>
-      </tr>
-      <tr>
-          <td><code>Dynamic</code></td>
-          <td>Tries multiple parsers in sequence</td>
-          <td>See below</td>
-      </tr>
-      <tr>
-          <td><code>Split</code></td>
-          <td>Splits a string by a delimiter</td>
-          <td><code>split_by</code> (e.g., <code>&quot;;&quot;</code>)</td>
-      </tr>
-      <tr>
-          <td><code>Extension</code></td>
-          <td>Uses a custom Rust extension parser</td>
-          <td>-</td>
-      </tr>
-      <tr>
-          <td><code>PyParser</code></td>
-          <td>Uses a Python parser extension</td>
-          <td>-</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Parser</th>
+					<th>Description</th>
+					<th>Additional Attributes</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>Ignore</code></td>
+					<td>Skips the field</td>
+					<td>-</td>
+			</tr>
+			<tr>
+					<td><code>String</code></td>
+					<td>Returns the raw string value</td>
+					<td>-</td>
+			</tr>
+			<tr>
+					<td><code>StringToUpper</code></td>
+					<td>Converts to uppercase</td>
+					<td>-</td>
+			</tr>
+			<tr>
+					<td><code>StringToLower</code></td>
+					<td>Converts to lowercase</td>
+					<td>-</td>
+			</tr>
+			<tr>
+					<td><code>Int</code></td>
+					<td>Parses as 64-bit integer</td>
+					<td>-</td>
+			</tr>
+			<tr>
+					<td><code>Float</code></td>
+					<td>Parses as floating-point number</td>
+					<td>-</td>
+			</tr>
+			<tr>
+					<td><code>Bool</code></td>
+					<td>Parses as boolean</td>
+					<td>-</td>
+			</tr>
+			<tr>
+					<td><code>IntRadix</code></td>
+					<td>Parses as integer with explicit radix</td>
+					<td><code>radix</code> (unsigned int, e.g. <code>&quot;16&quot;</code>)</td>
+			</tr>
+			<tr>
+					<td><code>IntToHex</code></td>
+					<td>Formats an integer as hexadecimal</td>
+					<td><code>width</code> (unsigned int, default <code>&quot;0&quot;</code>)</td>
+			</tr>
+			<tr>
+					<td><code>DateTime</code></td>
+					<td>Parses a date/time string</td>
+					<td>-</td>
+			</tr>
+			<tr>
+					<td><code>Dynamic</code></td>
+					<td>Tries multiple parsers in sequence</td>
+					<td>See below</td>
+			</tr>
+			<tr>
+					<td><code>Split</code></td>
+					<td>Splits a string by a delimiter</td>
+					<td><code>split_by</code> (e.g., <code>&quot;;&quot;</code>)</td>
+			</tr>
+			<tr>
+					<td><code>Extension</code></td>
+					<td>Uses a custom Rust extension parser</td>
+					<td>-</td>
+			</tr>
+			<tr>
+					<td><code>PyParser</code></td>
+					<td>Uses a Python parser extension</td>
+					<td>-</td>
+			</tr>
+	</tbody>
 </table>
 <hr>
 <h4>2d-ii. <code>&lt;field&gt;</code> with Dynamic Parsers<span class="hx:absolute hx:-mt-20" id="2d-ii-field-with-dynamic-parsers"></span>
@@ -2308,52 +2308,52 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
 <h4>2d-iv. <code>&lt;object&gt;</code> - Nested Objects<span class="hx:absolute hx:-mt-20" id="2d-iv-object---nested-objects"></span>
     <a href="#2d-iv-object---nested-objects" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>Groups multiple fields into a structured/nested output.</p>
 <table>
-  <thead>
-      <tr>
-          <th>Attribute</th>
-          <th>Required</th>
-          <th>Default</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>input</code></td>
-          <td><strong>Yes</strong></td>
-          <td>-</td>
-          <td>Input name prefix or path</td>
-      </tr>
-      <tr>
-          <td><code>output</code></td>
-          <td>No</td>
-          <td>Same as <code>input</code></td>
-          <td>Output path prefix</td>
-      </tr>
-      <tr>
-          <td><code>qualifier</code></td>
-          <td>No</td>
-          <td>-</td>
-          <td>Qualifier for the object</td>
-      </tr>
-      <tr>
-          <td><code>display_name</code></td>
-          <td>No</td>
-          <td>-</td>
-          <td>Display name</td>
-      </tr>
-      <tr>
-          <td><code>description</code></td>
-          <td>No</td>
-          <td>-</td>
-          <td>Description</td>
-      </tr>
-      <tr>
-          <td><code>ignore</code></td>
-          <td>No</td>
-          <td><code>&quot;false&quot;</code></td>
-          <td>If <code>&quot;true&quot;</code>, skip all fields inside this object</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Attribute</th>
+					<th>Required</th>
+					<th>Default</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>input</code></td>
+					<td><strong>Yes</strong></td>
+					<td>-</td>
+					<td>Input name prefix or path</td>
+			</tr>
+			<tr>
+					<td><code>output</code></td>
+					<td>No</td>
+					<td>Same as <code>input</code></td>
+					<td>Output path prefix</td>
+			</tr>
+			<tr>
+					<td><code>qualifier</code></td>
+					<td>No</td>
+					<td>-</td>
+					<td>Qualifier for the object</td>
+			</tr>
+			<tr>
+					<td><code>display_name</code></td>
+					<td>No</td>
+					<td>-</td>
+					<td>Display name</td>
+			</tr>
+			<tr>
+					<td><code>description</code></td>
+					<td>No</td>
+					<td>-</td>
+					<td>Description</td>
+			</tr>
+			<tr>
+					<td><code>ignore</code></td>
+					<td>No</td>
+					<td><code>&quot;false&quot;</code></td>
+					<td>If <code>&quot;true&quot;</code>, skip all fields inside this object</td>
+			</tr>
+	</tbody>
 </table>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
@@ -2378,58 +2378,58 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
 <h4>2d-v. <code>&lt;multi_input&gt;</code> - Joining Multiple Inputs<span class="hx:absolute hx:-mt-20" id="2d-v-multi_input---joining-multiple-inputs"></span>
     <a href="#2d-v-multi_input---joining-multiple-inputs" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>Combines multiple input fields into a single output field, using a specified join behavior.</p>
 <table>
-  <thead>
-      <tr>
-          <th>Attribute</th>
-          <th>Required</th>
-          <th>Default</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>output</code></td>
-          <td><strong>Yes</strong></td>
-          <td>-</td>
-          <td>Output field name</td>
-      </tr>
-      <tr>
-          <td><code>parser</code></td>
-          <td><strong>Yes</strong></td>
-          <td>-</td>
-          <td>Must be <code>&quot;Join&quot;</code></td>
-      </tr>
-      <tr>
-          <td><code>separator</code></td>
-          <td><strong>Yes</strong></td>
-          <td>-</td>
-          <td>String to join the values with (e.g., <code>&quot;\\&quot;</code>)</td>
-      </tr>
-      <tr>
-          <td><code>avoid_separator_duplication</code></td>
-          <td>No</td>
-          <td><code>&quot;true&quot;</code></td>
-          <td>When <code>true</code>, collapses consecutive separator characters</td>
-      </tr>
-      <tr>
-          <td><code>qualifier</code></td>
-          <td>No</td>
-          <td>-</td>
-          <td>Qualifier name</td>
-      </tr>
-      <tr>
-          <td><code>display_name</code></td>
-          <td>No</td>
-          <td>-</td>
-          <td>Display name</td>
-      </tr>
-      <tr>
-          <td><code>description</code></td>
-          <td>No</td>
-          <td>-</td>
-          <td>Description</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Attribute</th>
+					<th>Required</th>
+					<th>Default</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>output</code></td>
+					<td><strong>Yes</strong></td>
+					<td>-</td>
+					<td>Output field name</td>
+			</tr>
+			<tr>
+					<td><code>parser</code></td>
+					<td><strong>Yes</strong></td>
+					<td>-</td>
+					<td>Must be <code>&quot;Join&quot;</code></td>
+			</tr>
+			<tr>
+					<td><code>separator</code></td>
+					<td><strong>Yes</strong></td>
+					<td>-</td>
+					<td>String to join the values with (e.g., <code>&quot;\\&quot;</code>)</td>
+			</tr>
+			<tr>
+					<td><code>avoid_separator_duplication</code></td>
+					<td>No</td>
+					<td><code>&quot;true&quot;</code></td>
+					<td>When <code>true</code>, collapses consecutive separator characters</td>
+			</tr>
+			<tr>
+					<td><code>qualifier</code></td>
+					<td>No</td>
+					<td>-</td>
+					<td>Qualifier name</td>
+			</tr>
+			<tr>
+					<td><code>display_name</code></td>
+					<td>No</td>
+					<td>-</td>
+					<td>Display name</td>
+			</tr>
+			<tr>
+					<td><code>description</code></td>
+					<td>No</td>
+					<td>-</td>
+					<td>Description</td>
+			</tr>
+	</tbody>
 </table>
 <p>Children are field definitions whose values get joined.</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
@@ -2487,57 +2487,57 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
 </div>
 </div>
 <table>
-  <thead>
-      <tr>
-          <th>Element</th>
-          <th>Cardinality</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>&lt;timeline_type&gt;</code></td>
-          <td><strong>1</strong></td>
-          <td>Type of timeline rendering</td>
-      </tr>
-      <tr>
-          <td><code>&lt;max_date_meaning&gt;</code></td>
-          <td>0 or 1</td>
-          <td>number of different &lsquo;date meaning&rsquo; displayed when several fields are at the same date</td>
-      </tr>
-      <tr>
-          <td><code>&lt;related_user&gt;</code></td>
-          <td>0 or 1</td>
-          <td>Related user output path</td>
-      </tr>
-      <tr>
-          <td><code>&lt;description&gt;</code></td>
-          <td>0 or 1</td>
-          <td>Primary description fields</td>
-      </tr>
-      <tr>
-          <td><code>&lt;additional_description&gt;</code></td>
-          <td>0 or 1</td>
-          <td>Secondary description with conditional logic</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Element</th>
+					<th>Cardinality</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>&lt;timeline_type&gt;</code></td>
+					<td><strong>1</strong></td>
+					<td>Type of timeline rendering</td>
+			</tr>
+			<tr>
+					<td><code>&lt;max_date_meaning&gt;</code></td>
+					<td>0 or 1</td>
+					<td>number of different &lsquo;date meaning&rsquo; displayed when several fields are at the same date</td>
+			</tr>
+			<tr>
+					<td><code>&lt;related_user&gt;</code></td>
+					<td>0 or 1</td>
+					<td>Related user output path</td>
+			</tr>
+			<tr>
+					<td><code>&lt;description&gt;</code></td>
+					<td>0 or 1</td>
+					<td>Primary description fields</td>
+			</tr>
+			<tr>
+					<td><code>&lt;additional_description&gt;</code></td>
+					<td>0 or 1</td>
+					<td>Secondary description with conditional logic</td>
+			</tr>
+	</tbody>
 </table>
 <h3>3a. <code>&lt;timeline_type&gt;</code><span class="hx:absolute hx:-mt-20" id="3a-timeline_type"></span>
     <a href="#3a-timeline_type" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Attribute</th>
-          <th>Required</th>
-          <th>Allowed Values</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>value</code></td>
-          <td><strong>Yes</strong></td>
-          <td><code>&quot;Standard&quot;</code> or <code>&quot;MacbMacb&quot;</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Attribute</th>
+					<th>Required</th>
+					<th>Allowed Values</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>value</code></td>
+					<td><strong>Yes</strong></td>
+					<td><code>&quot;Standard&quot;</code> or <code>&quot;MacbMacb&quot;</code></td>
+			</tr>
+	</tbody>
 </table>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
@@ -2567,20 +2567,20 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
 </ul>
 <h3>3b. <code>&lt;max_date_meaning&gt;</code><span class="hx:absolute hx:-mt-20" id="3b-max_date_meaning"></span>
     <a href="#3b-max_date_meaning" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Attribute</th>
-          <th>Required</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>value</code></td>
-          <td><strong>No</strong></td>
-          <td>number of different &lsquo;date meaning&rsquo; displayed when several fields are at the same date</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Attribute</th>
+					<th>Required</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>value</code></td>
+					<td><strong>No</strong></td>
+					<td>number of different &lsquo;date meaning&rsquo; displayed when several fields are at the same date</td>
+			</tr>
+	</tbody>
 </table>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
@@ -2617,28 +2617,28 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
 <h3>3d. <code>&lt;description&gt;</code><span class="hx:absolute hx:-mt-20" id="3d-description"></span>
     <a href="#3d-description" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Defines the primary description shown for each timeline entry.</p>
 <table>
-  <thead>
-      <tr>
-          <th>Attribute</th>
-          <th>Required</th>
-          <th>Default</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>include_field_name</code></td>
-          <td>No</td>
-          <td><code>&quot;true&quot;</code></td>
-          <td>Whether to include the field name in output</td>
-      </tr>
-      <tr>
-          <td><code>field_separator</code></td>
-          <td>No</td>
-          <td><code>&quot; - &quot;</code></td>
-          <td>Separator between field name and value</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Attribute</th>
+					<th>Required</th>
+					<th>Default</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>include_field_name</code></td>
+					<td>No</td>
+					<td><code>&quot;true&quot;</code></td>
+					<td>Whether to include the field name in output</td>
+			</tr>
+			<tr>
+					<td><code>field_separator</code></td>
+					<td>No</td>
+					<td><code>&quot; - &quot;</code></td>
+					<td>Separator between field name and value</td>
+			</tr>
+	</tbody>
 </table>
 <p>Children: zero or more <code>&lt;output_name&gt;</code> elements.</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
@@ -2661,55 +2661,55 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
 <h3>3f. <code>&lt;additional_description&gt;</code><span class="hx:absolute hx:-mt-20" id="3f-additional_description"></span>
     <a href="#3f-additional_description" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Defines secondary description fields with optional conditional logic.</p>
 <table>
-  <thead>
-      <tr>
-          <th>Attribute</th>
-          <th>Required</th>
-          <th>Default</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>include_field_name</code></td>
-          <td>No</td>
-          <td><code>&quot;true&quot;</code></td>
-          <td>Whether to include field names</td>
-      </tr>
-      <tr>
-          <td><code>field_separator</code></td>
-          <td>No</td>
-          <td><code>&quot; - &quot;</code></td>
-          <td>Separator between field name and value</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Attribute</th>
+					<th>Required</th>
+					<th>Default</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>include_field_name</code></td>
+					<td>No</td>
+					<td><code>&quot;true&quot;</code></td>
+					<td>Whether to include field names</td>
+			</tr>
+			<tr>
+					<td><code>field_separator</code></td>
+					<td>No</td>
+					<td><code>&quot; - &quot;</code></td>
+					<td>Separator between field name and value</td>
+			</tr>
+	</tbody>
 </table>
 <p>Supported children:</p>
 <table>
-  <thead>
-      <tr>
-          <th>Element</th>
-          <th>Cardinality</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>&lt;output_name&gt;</code></td>
-          <td>0..N</td>
-          <td>Always-included additional description field</td>
-      </tr>
-      <tr>
-          <td><code>&lt;conditional&gt;</code></td>
-          <td>0..N</td>
-          <td>Conditional additional description</td>
-      </tr>
-      <tr>
-          <td><code>&lt;otherwise&gt;</code></td>
-          <td>0 or 1</td>
-          <td>Fallback additional description</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Element</th>
+					<th>Cardinality</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>&lt;output_name&gt;</code></td>
+					<td>0..N</td>
+					<td>Always-included additional description field</td>
+			</tr>
+			<tr>
+					<td><code>&lt;conditional&gt;</code></td>
+					<td>0..N</td>
+					<td>Conditional additional description</td>
+			</tr>
+			<tr>
+					<td><code>&lt;otherwise&gt;</code></td>
+					<td>0 or 1</td>
+					<td>Fallback additional description</td>
+			</tr>
+	</tbody>
 </table>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
@@ -2744,30 +2744,30 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
 <h4><code>&lt;conditional&gt;</code><span class="hx:absolute hx:-mt-20" id="conditional"></span>
     <a href="#conditional" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>Contains one or more <code>&lt;condition&gt;</code> elements. The additional description fields within are only shown when <strong>all</strong> conditions match.</p>
 <table>
-  <thead>
-      <tr>
-          <th>Attribute</th>
-          <th>Required</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>path</code></td>
-          <td><strong>Yes</strong></td>
-          <td>Full dotted output path for the field being checked</td>
-      </tr>
-      <tr>
-          <td><code>value</code></td>
-          <td><strong>Yes</strong></td>
-          <td>Expected value(s), pipe-separated for OR logic</td>
-      </tr>
-      <tr>
-          <td><code>parser</code></td>
-          <td><strong>Yes</strong></td>
-          <td>Parser to use for value comparison</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Attribute</th>
+					<th>Required</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>path</code></td>
+					<td><strong>Yes</strong></td>
+					<td>Full dotted output path for the field being checked</td>
+			</tr>
+			<tr>
+					<td><code>value</code></td>
+					<td><strong>Yes</strong></td>
+					<td>Expected value(s), pipe-separated for OR logic</td>
+			</tr>
+			<tr>
+					<td><code>parser</code></td>
+					<td><strong>Yes</strong></td>
+					<td>Parser to use for value comparison</td>
+			</tr>
+	</tbody>
 </table>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
