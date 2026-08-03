@@ -9,7 +9,7 @@
 <link rel="apple-touch-icon" href="/dfir-ogre-documentation/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/dfir-ogre-documentation/site.webmanifest" rel="manifest" />
 <title>Activity Cache – DFIR-OGRE documentation</title>
-  <meta name="description" content=" Data Type: activity_cache Python Parser: SQLite Description Extracts rows from the Activity SQLite table that records Windows 10 Timeline events. Each row represents a user‑initiated action, linking an application to a time span and optional payload data." /><link rel="canonical" href="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/activity_cache/" itemprop="url" />
+  <meta name="description" content=" Data Type: activity_cache Python Parser: ActivityCache Description Extracts normalized records from the Activity and ActivityOperation tables used by Windows Activities Cache across schema versions. Matching logical versions are combined without collapsing distinct queued operations, and each result records its table provenance." /><link rel="canonical" href="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/activity_cache/" itemprop="url" />
 
 <meta property="og:title" content="Activity Cache">
 <meta
@@ -21,12 +21,12 @@
 
   
     Data Type: activity_cache 
-Python Parser: SQLite
+Python Parser: ActivityCache
   
 
 
 Description
-    Extracts rows from the Activity SQLite table that records Windows 10 Timeline events. Each row represents a user‑initiated action, linking an application to a time span and optional payload data.
+    Extracts normalized records from the Activity and ActivityOperation tables used by Windows Activities Cache across schema versions. Matching logical versions are combined without collapsing distinct queued operations, and each result records its table provenance.
     
   ">
 <meta
@@ -40,11 +40,11 @@ Description
 
 
 	<meta itemprop="name" content="Activity Cache">
-	<meta itemprop="description" content="Data Type: activity_cache Python Parser: SQLite Description Extracts rows from the Activity SQLite table that records Windows 10 Timeline events. Each row represents a user‑initiated action, linking an application to a time span and optional payload data.">
-	<meta itemprop="wordCount" content="185">
+	<meta itemprop="description" content="Data Type: activity_cache Python Parser: ActivityCache Description Extracts normalized records from the Activity and ActivityOperation tables used by Windows Activities Cache across schema versions. Matching logical versions are combined without collapsing distinct queued operations, and each result records its table provenance.">
+	<meta itemprop="wordCount" content="384">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Activity Cache">
-	<meta name="twitter:description" content="Data Type: activity_cache Python Parser: SQLite Description Extracts rows from the Activity SQLite table that records Windows 10 Timeline events. Each row represents a user‑initiated action, linking an application to a time span and optional payload data.">
+	<meta name="twitter:description" content="Data Type: activity_cache Python Parser: ActivityCache Description Extracts normalized records from the Activity and ActivityOperation tables used by Windows Activities Cache across schema versions. Matching logical versions are combined without collapsing distinct queued operations, and each result records its table provenance.">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
     <link href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" rel="stylesheet" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -353,6 +353,18 @@ Description
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/dfir-ogre-documentation/built-in-plugins/application-specific/explorer_search_history/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Explorer Search History</span>
+    </a>
+  </div>
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
       href="/dfir-ogre-documentation/built-in-plugins/application-specific/java_idx/"
       
     >
@@ -546,6 +558,18 @@ Description
       
     >
       <span class="hx:min-w-0 [word-break:break-word]">Getthis</span>
+    </a>
+  </div>
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/dfir-ogre-documentation/built-in-plugins/file-system/i30info/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">I30Info</span>
     </a>
   </div>
               
@@ -1352,6 +1376,18 @@ Description
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/dfir-ogre-documentation/built-in-plugins/windows-artefacts/hive/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Hive</span>
+    </a>
+  </div>
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
       href="/dfir-ogre-documentation/built-in-plugins/windows-artefacts/lnk/"
       
     >
@@ -1368,18 +1404,6 @@ Description
       
     >
       <span class="hx:min-w-0 [word-break:break-word]">Objinfo</span>
-    </a>
-  </div>
-              
-            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
-    <a
-      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
-      hx:hextra-focus-visible-inset
-        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/windows-artefacts/reg_keys/"
-      
-    >
-      <span class="hx:min-w-0 [word-break:break-word]">Reg Keys</span>
     </a>
   </div>
               
@@ -1646,16 +1670,16 @@ Description
 
   <div class="hx:w-full hx:min-w-0 hx:leading-7">
     <div class="hx:mt-6 hx:leading-7 hx:first:mt-0">Data Type: <strong>activity_cache</strong> <br>
-Python Parser: <strong>SQLite</strong></div>
+Python Parser: <strong>ActivityCache</strong></div>
   </div>
 </div>
 
 <h3>Description<span class="hx:absolute hx:-mt-20" id="description"></span>
-    <a href="#description" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Extracts rows from the <em>Activity</em> SQLite table that records Windows 10 Timeline events. Each row represents a user‑initiated action, linking an application to a time span and optional payload data.</p>
+    <a href="#description" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Extracts normalized records from the <em>Activity</em> and <em>ActivityOperation</em> tables used by Windows Activities Cache across schema versions. Matching logical versions are combined without collapsing distinct queued operations, and each result records its table provenance.</p>
 <ul>
-<li>Provides a chronological view of user activity across applications.</li>
-<li>Captures start / end timestamps for precise temporal analysis.</li>
-<li>Stores raw payload for deeper forensic investigation of the activity context.</li>
+<li>Detects legacy, modern, and partial layouts from available table columns.</li>
+<li>Uses the native start time when present and explicitly marks a last-modified fallback.</li>
+<li>Preserves payload evidence while emitting stable typed fields for analysis and timelines.</li>
 </ul>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
@@ -1696,64 +1720,274 @@ Python Parser: <strong>SQLite</strong></div>
 	</thead>
 	<tbody>
 			<tr>
+					<td><code>record_source</code></td>
+					<td>String</td>
+					<td></td>
+					<td>source table or merged source tables for this logical version</td>
+			</tr>
+			<tr>
+					<td><code>database_user_version</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>SQLite PRAGMA user_version recorded for schema provenance</td>
+			</tr>
+			<tr>
+					<td><code>start_time_source</code></td>
+					<td>String</td>
+					<td></td>
+					<td>native start_time, last_modified_time fallback, or unavailable</td>
+			</tr>
+			<tr>
+					<td><code>id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>binary-safe activity identifier</td>
+			</tr>
+			<tr>
 					<td><code>app_id</code></td>
 					<td>String</td>
 					<td></td>
-					<td>identifier of the application that generated the activity</td>
+					<td>application identity definitions associated with the activity</td>
+			</tr>
+			<tr>
+					<td><code>package_id_hash</code></td>
+					<td>String</td>
+					<td></td>
+					<td>package identity hash</td>
 			</tr>
 			<tr>
 					<td><code>app_activity_id</code></td>
 					<td>String</td>
 					<td></td>
-					<td>unique identifier for the specific activity event</td>
+					<td>application-defined activity identifier</td>
 			</tr>
 			<tr>
-					<td><code>group</code></td>
+					<td><code>activity_type</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>numeric activity type</td>
+			</tr>
+			<tr>
+					<td><code>activity_status</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>persisted activity status</td>
+			</tr>
+			<tr>
+					<td><code>parent_activity_id</code></td>
 					<td>String</td>
 					<td></td>
-					<td>grouping value used to categorize related activities</td>
+					<td>identifier of the parent activity</td>
 			</tr>
 			<tr>
 					<td><code>tag</code></td>
 					<td>String</td>
 					<td></td>
-					<td>optional tag associated with the activity</td>
+					<td>application-defined activity tag</td>
+			</tr>
+			<tr>
+					<td><code>group</code></td>
+					<td>String</td>
+					<td></td>
+					<td>activity grouping value</td>
+			</tr>
+			<tr>
+					<td><code>match_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>activity matching identifier</td>
+			</tr>
+			<tr>
+					<td><code>last_modified_time</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>last modification time stored by the service</td>
+			</tr>
+			<tr>
+					<td><code>expiration_time</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>activity expiration time</td>
 			</tr>
 			<tr>
 					<td><code>payload</code></td>
 					<td>String</td>
 					<td></td>
-					<td>raw payload data (e.g., JSON) containing additional activity details</td>
+					<td>encoded activity payload</td>
+			</tr>
+			<tr>
+					<td><code>priority</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>activity priority</td>
+			</tr>
+			<tr>
+					<td><code>originating_device</code></td>
+					<td>String</td>
+					<td></td>
+					<td>legacy originating device value</td>
+			</tr>
+			<tr>
+					<td><code>is_local_only</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>whether the activity is restricted to the local device</td>
+			</tr>
+			<tr>
+					<td><code>platform_device_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>platform device identifier</td>
+			</tr>
+			<tr>
+					<td><code>dds_device_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>Connected Devices Platform device identifier</td>
 			</tr>
 			<tr>
 					<td><code>created_in_cloud</code></td>
 					<td>DateTime</td>
 					<td></td>
-					<td>timestamp when the activity was created or synced in the cloud</td>
+					<td>cloud creation time</td>
 			</tr>
 			<tr>
 					<td><code>start_time</code></td>
 					<td>DateTime</td>
-					<td></td>
-					<td>timestamp marking the start of the activity</td>
+					<td>DATE_START</td>
+					<td>native or explicitly identified fallback start time</td>
 			</tr>
 			<tr>
 					<td><code>end_time</code></td>
 					<td>DateTime</td>
 					<td></td>
-					<td>timestamp marking the end of the activity</td>
+					<td>activity end time</td>
 			</tr>
 			<tr>
 					<td><code>last_modified_on_client</code></td>
 					<td>DateTime</td>
 					<td></td>
-					<td>local client timestamp of the last modification to the activity record</td>
+					<td>last client modification time</td>
+			</tr>
+			<tr>
+					<td><code>group_app_activity_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>application activity identifier for the group</td>
+			</tr>
+			<tr>
+					<td><code>clipboard_payload</code></td>
+					<td>String</td>
+					<td></td>
+					<td>encoded clipboard payload</td>
+			</tr>
+			<tr>
+					<td><code>enterprise_id</code></td>
+					<td>String</td>
+					<td></td>
+					<td>enterprise scope identifier</td>
+			</tr>
+			<tr>
+					<td><code>original_payload</code></td>
+					<td>String</td>
+					<td></td>
+					<td>encoded original activity payload</td>
+			</tr>
+			<tr>
+					<td><code>user_action_state</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>numeric user action state</td>
+			</tr>
+			<tr>
+					<td><code>is_read</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>whether the activity has been read</td>
 			</tr>
 			<tr>
 					<td><code>original_last_modified_on_client</code></td>
 					<td>DateTime</td>
 					<td></td>
-					<td>original client timestamp before any subsequent modifications</td>
+					<td>original client modification time</td>
+			</tr>
+			<tr>
+					<td><code>group_items</code></td>
+					<td>String</td>
+					<td></td>
+					<td>serialized activity group items</td>
+			</tr>
+			<tr>
+					<td><code>local_expiration_time</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>local activity expiration time</td>
+			</tr>
+			<tr>
+					<td><code>e_tag</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>logical activity version tag</td>
+			</tr>
+			<tr>
+					<td><code>operation_order</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>ordered ActivityOperation sequence number</td>
+			</tr>
+			<tr>
+					<td><code>operation_type</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>numeric queued operation type</td>
+			</tr>
+			<tr>
+					<td><code>created_time</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>queued operation creation time</td>
+			</tr>
+			<tr>
+					<td><code>attachments</code></td>
+					<td>String</td>
+					<td></td>
+					<td>legacy serialized operation attachments</td>
+			</tr>
+			<tr>
+					<td><code>operation_expiration_time</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>queued operation expiration time</td>
+			</tr>
+			<tr>
+					<td><code>correlation_vector</code></td>
+					<td>String</td>
+					<td></td>
+					<td>operation correlation vector</td>
+			</tr>
+			<tr>
+					<td><code>upload_allowed_by_policy</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td>whether policy permits uploading the operation</td>
+			</tr>
+			<tr>
+					<td><code>patch_fields</code></td>
+					<td>String</td>
+					<td></td>
+					<td>encoded operation patch fields</td>
+			</tr>
+			<tr>
+					<td><code>throttle_release_time</code></td>
+					<td>DateTime</td>
+					<td></td>
+					<td>time at which operation throttling is released</td>
+			</tr>
+			<tr>
+					<td><code>publish_process_status</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>numeric operation publishing status</td>
 			</tr>
 	</tbody>
 </table>

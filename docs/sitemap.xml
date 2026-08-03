@@ -116,6 +116,8 @@
   </url><url>
     <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/logs/evt/</loc>
   </url><url>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/application-specific/explorer_search_history/</loc>
+  </url><url>
     <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/fast-find/</loc>
   </url><url>
     <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/fast-find/fastfind_file/</loc>
@@ -129,6 +131,10 @@
     <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_extension/</loc>
   </url><url>
     <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/getthis/</loc>
+  </url><url>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/hive/</loc>
+  </url><url>
+    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/i30info/</loc>
   </url><url>
     <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/ie_webcache_history/</loc>
   </url><url>
@@ -177,8 +183,6 @@
     <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/reg_autoruns_software/</loc>
   </url><url>
     <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/reg_autoruns_system/</loc>
-  </url><url>
-    <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/reg_keys/</loc>
   </url><url>
     <loc>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/system-information/reg_systeminfo/</loc>
   </url><url>

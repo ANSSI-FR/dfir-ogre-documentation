@@ -9,8 +9,8 @@
 <link rel="apple-touch-icon" href="/dfir-ogre-documentation/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/dfir-ogre-documentation/site.webmanifest" rel="manifest" />
 <title>Acmru – DFIR-OGRE documentation</title>
-  <meta name="description" content=" Data Type: acmru Python Parser: RegAcMru Description Extracts Search Assistant entries from NTUser hive. .
-Retrieves search queries entered in the Windows Search Assistant. Provides the chronological order of the queries via order_index. Timeline Timeline Field Data Field Related User key_security.owner_sid Description search_request Fields Output Name Data Type Qualifier Description search_request String search query entered in the Windows Search Assistant order_index String position of the query in the MRU list (chronological order) key_path String KEY_PATH full registry key name key_modif_time DateTime DATE_MODIFICATION last modification timestamp of the registry key key_security Object key_security.owner_sid String USER_SID SID of the user that owns the registry key key_security.group_sid String SID of the group that owns the registry key key_security.control_flags[] Array[String] security descriptor control flags for the key key_security.dacl_ace Object key_security.dacl_ace.ace_type String type of ACE (e.g., allow, deny) key_security.dacl_ace.account_sid String SID of the account the ACE applies to key_security.dacl_ace.ace_flags[] Array[String] ACE flags that modify inheritance or behavior key_security.dacl_ace.rights[] Array[String] permissions granted or denied by the ACE " /><link rel="canonical" href="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/application-specific/acmru/" itemprop="url" />
+  <meta name="description" content=" Data Type: acmru Python Parser: RegAcMru Description Extracts Windows XP Search Assistant entries from the NTUSER.DAT hive.
+Retrieves search queries from category subkeys such as 5603 and 5604. Emits entries in deterministic most-recent-first numeric order. Associates the category key LastWrite time only with index 000. Timeline Timeline Field Data Field Related User key_security.owner_sid Description search_request Fields Output Name Data Type Qualifier Description search_request String search query entered in the Windows Search Assistant order_index Int Zero-based position of the query in the category MRU category String Windows XP Search Assistant category identifier key_path String KEY_PATH full registry key name key_modif_time DateTime DATE_MODIFICATION last modification timestamp of the registry key key_security Object key_security.owner_sid String USER_SID SID of the user that owns the registry key key_security.group_sid String SID of the group that owns the registry key key_security.control_flags[] Array[String] security descriptor control flags for the key key_security.sacl_aces[] Array[Object] key_security.sacl_aces[].ace_type String type of ACE (e.g., allow, deny) key_security.sacl_aces[].ace_flags[] Array[String] ACE flags that modify inheritance or behavior key_security.sacl_aces[].rights[] Array[String] permissions granted or denied by the ACE key_security.sacl_aces[].account_sid String SID of the account the ACE applies to key_security.sacl_aces[].ace_size Int declared ACE size in bytes key_security.sacl_aces[].object_type_guid String GUID identifying the object type governed by the ACE key_security.sacl_aces[].inherited_object_type_guid String GUID identifying the inherited object type governed by the ACE key_security.sacl_aces[].raw_hex String raw ACE bytes preserved as hexadecimal key_security.dacl_aces[] Array[Object] key_security.dacl_aces[].ace_type String type of ACE (e.g., allow, deny) key_security.dacl_aces[].ace_flags[] Array[String] ACE flags that modify inheritance or behavior key_security.dacl_aces[].rights[] Array[String] permissions granted or denied by the ACE key_security.dacl_aces[].account_sid String SID of the account the ACE applies to key_security.dacl_aces[].ace_size Int declared ACE size in bytes key_security.dacl_aces[].object_type_guid String GUID identifying the object type governed by the ACE key_security.dacl_aces[].inherited_object_type_guid String GUID identifying the inherited object type governed by the ACE key_security.dacl_aces[].raw_hex String raw ACE bytes preserved as hexadecimal " /><link rel="canonical" href="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/application-specific/acmru/" itemprop="url" />
 
 <meta property="og:title" content="Acmru">
 <meta
@@ -27,10 +27,11 @@ Python Parser: RegAcMru
 
 
 Description
-    Extracts Search Assistant  entries from NTUser hive. .
+    Extracts Windows XP Search Assistant entries from the NTUSER.DAT hive.
 
-Retrieves search queries entered in the Windows Search Assistant.
-Provides the chronological order of the queries via order_index.
+Retrieves search queries from category subkeys such as 5603 and 5604.
+Emits entries in deterministic most-recent-first numeric order.
+Associates the category key LastWrite time only with index 000.
 
 Timeline
     
@@ -70,9 +71,15 @@ Fields
 			
 			
 					order_index
+					Int
+					
+					Zero-based position of the query in the category MRU
+			
+			
+					category
 					String
 					
-					position of the query in the MRU list (chronological order)
+					Windows XP Search Assistant category identifier
 			
 			
 					key_path
@@ -111,34 +118,112 @@ Fields
 					security descriptor control flags for the key
 			
 			
-					key_security.dacl_ace
-					Object
+					key_security.sacl_aces[]
+					Array[Object]
 					
 					
 			
 			
-					key_security.dacl_ace.ace_type
+					key_security.sacl_aces[].ace_type
 					String
 					
 					type of ACE (e.g., allow, deny)
 			
 			
-					key_security.dacl_ace.account_sid
-					String
-					
-					SID of the account the ACE applies to
-			
-			
-					key_security.dacl_ace.ace_flags[]
+					key_security.sacl_aces[].ace_flags[]
 					Array[String]
 					
 					ACE flags that modify inheritance or behavior
 			
 			
-					key_security.dacl_ace.rights[]
+					key_security.sacl_aces[].rights[]
 					Array[String]
 					
 					permissions granted or denied by the ACE
+			
+			
+					key_security.sacl_aces[].account_sid
+					String
+					
+					SID of the account the ACE applies to
+			
+			
+					key_security.sacl_aces[].ace_size
+					Int
+					
+					declared ACE size in bytes
+			
+			
+					key_security.sacl_aces[].object_type_guid
+					String
+					
+					GUID identifying the object type governed by the ACE
+			
+			
+					key_security.sacl_aces[].inherited_object_type_guid
+					String
+					
+					GUID identifying the inherited object type governed by the ACE
+			
+			
+					key_security.sacl_aces[].raw_hex
+					String
+					
+					raw ACE bytes preserved as hexadecimal
+			
+			
+					key_security.dacl_aces[]
+					Array[Object]
+					
+					
+			
+			
+					key_security.dacl_aces[].ace_type
+					String
+					
+					type of ACE (e.g., allow, deny)
+			
+			
+					key_security.dacl_aces[].ace_flags[]
+					Array[String]
+					
+					ACE flags that modify inheritance or behavior
+			
+			
+					key_security.dacl_aces[].rights[]
+					Array[String]
+					
+					permissions granted or denied by the ACE
+			
+			
+					key_security.dacl_aces[].account_sid
+					String
+					
+					SID of the account the ACE applies to
+			
+			
+					key_security.dacl_aces[].ace_size
+					Int
+					
+					declared ACE size in bytes
+			
+			
+					key_security.dacl_aces[].object_type_guid
+					String
+					
+					GUID identifying the object type governed by the ACE
+			
+			
+					key_security.dacl_aces[].inherited_object_type_guid
+					String
+					
+					GUID identifying the inherited object type governed by the ACE
+			
+			
+					key_security.dacl_aces[].raw_hex
+					String
+					
+					raw ACE bytes preserved as hexadecimal
 			
 	
 
@@ -155,13 +240,13 @@ Fields
 
 
 	<meta itemprop="name" content="Acmru">
-	<meta itemprop="description" content="Data Type: acmru Python Parser: RegAcMru Description Extracts Search Assistant entries from NTUser hive. .
-Retrieves search queries entered in the Windows Search Assistant. Provides the chronological order of the queries via order_index. Timeline Timeline Field Data Field Related User key_security.owner_sid Description search_request Fields Output Name Data Type Qualifier Description search_request String search query entered in the Windows Search Assistant order_index String position of the query in the MRU list (chronological order) key_path String KEY_PATH full registry key name key_modif_time DateTime DATE_MODIFICATION last modification timestamp of the registry key key_security Object key_security.owner_sid String USER_SID SID of the user that owns the registry key key_security.group_sid String SID of the group that owns the registry key key_security.control_flags[] Array[String] security descriptor control flags for the key key_security.dacl_ace Object key_security.dacl_ace.ace_type String type of ACE (e.g., allow, deny) key_security.dacl_ace.account_sid String SID of the account the ACE applies to key_security.dacl_ace.ace_flags[] Array[String] ACE flags that modify inheritance or behavior key_security.dacl_ace.rights[] Array[String] permissions granted or denied by the ACE">
-	<meta itemprop="wordCount" content="161">
+	<meta itemprop="description" content="Data Type: acmru Python Parser: RegAcMru Description Extracts Windows XP Search Assistant entries from the NTUSER.DAT hive.
+Retrieves search queries from category subkeys such as 5603 and 5604. Emits entries in deterministic most-recent-first numeric order. Associates the category key LastWrite time only with index 000. Timeline Timeline Field Data Field Related User key_security.owner_sid Description search_request Fields Output Name Data Type Qualifier Description search_request String search query entered in the Windows Search Assistant order_index Int Zero-based position of the query in the category MRU category String Windows XP Search Assistant category identifier key_path String KEY_PATH full registry key name key_modif_time DateTime DATE_MODIFICATION last modification timestamp of the registry key key_security Object key_security.owner_sid String USER_SID SID of the user that owns the registry key key_security.group_sid String SID of the group that owns the registry key key_security.control_flags[] Array[String] security descriptor control flags for the key key_security.sacl_aces[] Array[Object] key_security.sacl_aces[].ace_type String type of ACE (e.g., allow, deny) key_security.sacl_aces[].ace_flags[] Array[String] ACE flags that modify inheritance or behavior key_security.sacl_aces[].rights[] Array[String] permissions granted or denied by the ACE key_security.sacl_aces[].account_sid String SID of the account the ACE applies to key_security.sacl_aces[].ace_size Int declared ACE size in bytes key_security.sacl_aces[].object_type_guid String GUID identifying the object type governed by the ACE key_security.sacl_aces[].inherited_object_type_guid String GUID identifying the inherited object type governed by the ACE key_security.sacl_aces[].raw_hex String raw ACE bytes preserved as hexadecimal key_security.dacl_aces[] Array[Object] key_security.dacl_aces[].ace_type String type of ACE (e.g., allow, deny) key_security.dacl_aces[].ace_flags[] Array[String] ACE flags that modify inheritance or behavior key_security.dacl_aces[].rights[] Array[String] permissions granted or denied by the ACE key_security.dacl_aces[].account_sid String SID of the account the ACE applies to key_security.dacl_aces[].ace_size Int declared ACE size in bytes key_security.dacl_aces[].object_type_guid String GUID identifying the object type governed by the ACE key_security.dacl_aces[].inherited_object_type_guid String GUID identifying the inherited object type governed by the ACE key_security.dacl_aces[].raw_hex String raw ACE bytes preserved as hexadecimal">
+	<meta itemprop="wordCount" content="294">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Acmru">
-	<meta name="twitter:description" content="Data Type: acmru Python Parser: RegAcMru Description Extracts Search Assistant entries from NTUser hive. .
-Retrieves search queries entered in the Windows Search Assistant. Provides the chronological order of the queries via order_index. Timeline Timeline Field Data Field Related User key_security.owner_sid Description search_request Fields Output Name Data Type Qualifier Description search_request String search query entered in the Windows Search Assistant order_index String position of the query in the MRU list (chronological order) key_path String KEY_PATH full registry key name key_modif_time DateTime DATE_MODIFICATION last modification timestamp of the registry key key_security Object key_security.owner_sid String USER_SID SID of the user that owns the registry key key_security.group_sid String SID of the group that owns the registry key key_security.control_flags[] Array[String] security descriptor control flags for the key key_security.dacl_ace Object key_security.dacl_ace.ace_type String type of ACE (e.g., allow, deny) key_security.dacl_ace.account_sid String SID of the account the ACE applies to key_security.dacl_ace.ace_flags[] Array[String] ACE flags that modify inheritance or behavior key_security.dacl_ace.rights[] Array[String] permissions granted or denied by the ACE">
+	<meta name="twitter:description" content="Data Type: acmru Python Parser: RegAcMru Description Extracts Windows XP Search Assistant entries from the NTUSER.DAT hive.
+Retrieves search queries from category subkeys such as 5603 and 5604. Emits entries in deterministic most-recent-first numeric order. Associates the category key LastWrite time only with index 000. Timeline Timeline Field Data Field Related User key_security.owner_sid Description search_request Fields Output Name Data Type Qualifier Description search_request String search query entered in the Windows Search Assistant order_index Int Zero-based position of the query in the category MRU category String Windows XP Search Assistant category identifier key_path String KEY_PATH full registry key name key_modif_time DateTime DATE_MODIFICATION last modification timestamp of the registry key key_security Object key_security.owner_sid String USER_SID SID of the user that owns the registry key key_security.group_sid String SID of the group that owns the registry key key_security.control_flags[] Array[String] security descriptor control flags for the key key_security.sacl_aces[] Array[Object] key_security.sacl_aces[].ace_type String type of ACE (e.g., allow, deny) key_security.sacl_aces[].ace_flags[] Array[String] ACE flags that modify inheritance or behavior key_security.sacl_aces[].rights[] Array[String] permissions granted or denied by the ACE key_security.sacl_aces[].account_sid String SID of the account the ACE applies to key_security.sacl_aces[].ace_size Int declared ACE size in bytes key_security.sacl_aces[].object_type_guid String GUID identifying the object type governed by the ACE key_security.sacl_aces[].inherited_object_type_guid String GUID identifying the inherited object type governed by the ACE key_security.sacl_aces[].raw_hex String raw ACE bytes preserved as hexadecimal key_security.dacl_aces[] Array[Object] key_security.dacl_aces[].ace_type String type of ACE (e.g., allow, deny) key_security.dacl_aces[].ace_flags[] Array[String] ACE flags that modify inheritance or behavior key_security.dacl_aces[].rights[] Array[String] permissions granted or denied by the ACE key_security.dacl_aces[].account_sid String SID of the account the ACE applies to key_security.dacl_aces[].ace_size Int declared ACE size in bytes key_security.dacl_aces[].object_type_guid String GUID identifying the object type governed by the ACE key_security.dacl_aces[].inherited_object_type_guid String GUID identifying the inherited object type governed by the ACE key_security.dacl_aces[].raw_hex String raw ACE bytes preserved as hexadecimal">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
     <link href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" rel="stylesheet" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -470,6 +555,18 @@ Retrieves search queries entered in the Windows Search Assistant. Provides the c
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/dfir-ogre-documentation/built-in-plugins/application-specific/explorer_search_history/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Explorer Search History</span>
+    </a>
+  </div>
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
       href="/dfir-ogre-documentation/built-in-plugins/application-specific/java_idx/"
       
     >
@@ -663,6 +760,18 @@ Retrieves search queries entered in the Windows Search Assistant. Provides the c
       
     >
       <span class="hx:min-w-0 [word-break:break-word]">Getthis</span>
+    </a>
+  </div>
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/dfir-ogre-documentation/built-in-plugins/file-system/i30info/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">I30Info</span>
     </a>
   </div>
               
@@ -1469,6 +1578,18 @@ Retrieves search queries entered in the Windows Search Assistant. Provides the c
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/dfir-ogre-documentation/built-in-plugins/windows-artefacts/hive/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Hive</span>
+    </a>
+  </div>
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
       href="/dfir-ogre-documentation/built-in-plugins/windows-artefacts/lnk/"
       
     >
@@ -1485,18 +1606,6 @@ Retrieves search queries entered in the Windows Search Assistant. Provides the c
       
     >
       <span class="hx:min-w-0 [word-break:break-word]">Objinfo</span>
-    </a>
-  </div>
-              
-            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
-    <a
-      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
-      hx:hextra-focus-visible-inset
-        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/windows-artefacts/reg_keys/"
-      
-    >
-      <span class="hx:min-w-0 [word-break:break-word]">Reg Keys</span>
     </a>
   </div>
               
@@ -1768,10 +1877,11 @@ Python Parser: <strong>RegAcMru</strong></div>
 </div>
 
 <h3>Description<span class="hx:absolute hx:-mt-20" id="description"></span>
-    <a href="#description" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Extracts Search Assistant  entries from <code>NTUser</code> hive. .</p>
+    <a href="#description" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Extracts Windows XP Search Assistant entries from the <code>NTUSER.DAT</code> hive.</p>
 <ul>
-<li>Retrieves search queries entered in the Windows Search Assistant.</li>
-<li>Provides the chronological order of the queries via <code>order_index</code>.</li>
+<li>Retrieves search queries from category subkeys such as 5603 and 5604.</li>
+<li>Emits entries in deterministic most-recent-first numeric order.</li>
+<li>Associates the category key LastWrite time only with index 000.</li>
 </ul>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
@@ -1811,9 +1921,15 @@ Python Parser: <strong>RegAcMru</strong></div>
 			</tr>
 			<tr>
 					<td><code>order_index</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>Zero-based position of the query in the category MRU</td>
+			</tr>
+			<tr>
+					<td><code>category</code></td>
 					<td>String</td>
 					<td></td>
-					<td>position of the query in the MRU list (chronological order)</td>
+					<td>Windows XP Search Assistant category identifier</td>
 			</tr>
 			<tr>
 					<td><code>key_path</code></td>
@@ -1852,34 +1968,112 @@ Python Parser: <strong>RegAcMru</strong></div>
 					<td>security descriptor control flags for the key</td>
 			</tr>
 			<tr>
-					<td><code>key_security.dacl_ace</code></td>
-					<td>Object</td>
+					<td><code>key_security.sacl_aces[]</code></td>
+					<td>Array[Object]</td>
 					<td></td>
 					<td></td>
 			</tr>
 			<tr>
-					<td><code>key_security.dacl_ace.ace_type</code></td>
+					<td><code>key_security.sacl_aces[].ace_type</code></td>
 					<td>String</td>
 					<td></td>
 					<td>type of ACE (e.g., allow, deny)</td>
 			</tr>
 			<tr>
-					<td><code>key_security.dacl_ace.account_sid</code></td>
-					<td>String</td>
-					<td></td>
-					<td>SID of the account the ACE applies to</td>
-			</tr>
-			<tr>
-					<td><code>key_security.dacl_ace.ace_flags[]</code></td>
+					<td><code>key_security.sacl_aces[].ace_flags[]</code></td>
 					<td>Array[String]</td>
 					<td></td>
 					<td>ACE flags that modify inheritance or behavior</td>
 			</tr>
 			<tr>
-					<td><code>key_security.dacl_ace.rights[]</code></td>
+					<td><code>key_security.sacl_aces[].rights[]</code></td>
 					<td>Array[String]</td>
 					<td></td>
 					<td>permissions granted or denied by the ACE</td>
+			</tr>
+			<tr>
+					<td><code>key_security.sacl_aces[].account_sid</code></td>
+					<td>String</td>
+					<td></td>
+					<td>SID of the account the ACE applies to</td>
+			</tr>
+			<tr>
+					<td><code>key_security.sacl_aces[].ace_size</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>declared ACE size in bytes</td>
+			</tr>
+			<tr>
+					<td><code>key_security.sacl_aces[].object_type_guid</code></td>
+					<td>String</td>
+					<td></td>
+					<td>GUID identifying the object type governed by the ACE</td>
+			</tr>
+			<tr>
+					<td><code>key_security.sacl_aces[].inherited_object_type_guid</code></td>
+					<td>String</td>
+					<td></td>
+					<td>GUID identifying the inherited object type governed by the ACE</td>
+			</tr>
+			<tr>
+					<td><code>key_security.sacl_aces[].raw_hex</code></td>
+					<td>String</td>
+					<td></td>
+					<td>raw ACE bytes preserved as hexadecimal</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_aces[]</code></td>
+					<td>Array[Object]</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_aces[].ace_type</code></td>
+					<td>String</td>
+					<td></td>
+					<td>type of ACE (e.g., allow, deny)</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_aces[].ace_flags[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>ACE flags that modify inheritance or behavior</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_aces[].rights[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td>permissions granted or denied by the ACE</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_aces[].account_sid</code></td>
+					<td>String</td>
+					<td></td>
+					<td>SID of the account the ACE applies to</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_aces[].ace_size</code></td>
+					<td>Int</td>
+					<td></td>
+					<td>declared ACE size in bytes</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_aces[].object_type_guid</code></td>
+					<td>String</td>
+					<td></td>
+					<td>GUID identifying the object type governed by the ACE</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_aces[].inherited_object_type_guid</code></td>
+					<td>String</td>
+					<td></td>
+					<td>GUID identifying the inherited object type governed by the ACE</td>
+			</tr>
+			<tr>
+					<td><code>key_security.dacl_aces[].raw_hex</code></td>
+					<td>String</td>
+					<td></td>
+					<td>raw ACE bytes preserved as hexadecimal</td>
 			</tr>
 	</tbody>
 </table>

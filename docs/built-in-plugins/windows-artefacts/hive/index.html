@@ -8,11 +8,11 @@
 <link rel="icon" href="/dfir-ogre-documentation/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/dfir-ogre-documentation/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/dfir-ogre-documentation/site.webmanifest" rel="manifest" />
-<title>Ntfsinfo – DFIR-OGRE documentation</title>
-  <meta name="description" content=" Data Type: ntfsinfo Python Parser: NTFSInfo Description Extract NTFS’s Master File Table (MFT) from an ORC‑generated CSV file.
-Reconstructs exact file‑system hierarchy. Provides creation, modification, access, and change timestamps. Exposes NTFS attributes and USN information for change‑tracking. Supplies cryptographic hashes (MD5, SHA‑1, SHA‑256) and PE‑specific metadata (version, company, compilation date). Timeline Timeline Field Data Field Description file_path Additional Description file_size Fields Output Name Data Type Qualifier Description snapshot_id Python parent String full parent directory path of the entry file_name String name of the file without path extension String file extension (e.g., .txt, .exe) file_size Int FILE_SIZE size of the file in bytes file_in_use Bool flag indicating whether the MFT record is allocated (true) or free (false) sequence_number Int sequence number part of the File Reference Number (FRN) record_number Int record/index part of the File Reference Number (FRN) FRN Extension file_attributes_archive Bool archive attribute flag file_attributes_no_scrub_data Bool no‑scrub‑data attribute flag file_attributes_compressed Bool compressed attribute flag file_attributes_directory Bool directory attribute flag file_attributes_encrypted Bool encrypted attribute flag file_attributes_hidden Bool hidden attribute flag file_attributes_not_content_indexed Bool not‑content‑indexed attribute flag file_attributes_reparse_point Bool reparse‑point attribute flag file_attributes_normal Bool normal attribute flag file_attributes_offline Bool offline attribute flag file_attributes_sparse_file Bool sparse‑file attribute flag file_attributes_readonly Bool read‑only attribute flag file_attributes_system Bool system attribute flag file_attributes_temporary Bool temporary attribute flag file_attributes_virtual Bool virtual attribute flag file_attributes_recall_on_data_access Bool recall‑on‑data‑access attribute flag file_attributes_device Bool device attribute flag file_attributes_ea Bool extended‑attributes (EA) attribute flag file_attributes_recall_on_open Bool recall‑on‑open attribute flag file_attributes_pinned Bool pinned attribute flag file_attributes_integrity_stream Bool integrity‑stream attribute flag file_attributes_unpinned Bool unpinned attribute flag Attributes Extension usn_number IntRadix FS_USN USN journal sequence number (hexadecimal) file_name_flags Int flags associated with the filename entry fn_creation_date DateTime DATE_CREATION creation timestamp of the filename entry fn_lastmod_date DateTime DATE_MODIFICATION last modification timestamp of the filename entry fn_lastaccess_date DateTime DATE_ACCESS last access timestamp of the filename entry fn_lastchange_date DateTime DATE_CHANGE timestamp of the last attribute change for the filename entry si_creation_date DateTime DATE_CREATION creation timestamp of the file si_lastmod_date DateTime DATE_MODIFICATION last modification timestamp of the file si_lastaccess_date DateTime DATE_ACCESS last access timestamp of the file si_lastchange_date DateTime DATE_MODIFICATION timestamp of the last attribute change for the file md5 String FILE_MD5 MD5 hash of the file content sha1 String FILE_SHA1 SHA‑1 hash of the file content sha256 String FILE_SHA256 SHA‑256 hash of the file content orc_pe_md5 String PE_MD5 MD5 hash of the PE executable (if file is a PE) orc_pe_sha1 String PE_SHA1 SHA‑1 hash of the PE executable (if file is a PE) orc_pe_sha256 String PE_SHA256 SHA‑256 hash of the PE executable (if file is a PE) file_pe_md5 String PE_MD5 MD5 hash extracted from the Authenticode‑signed PE file file_pe_sha1 String PE_SHA1 SHA‑1 hash extracted from the Authenticode‑signed PE file file_pe_sha256 String PE_SHA256 SHA‑256 hash extracted from the Authenticode‑signed PE file SignedHash Extension authenticode_signer String subject name of the Authenticode signing certificate authenticode_signer_thumbprint Split thumbprint(s) of the Authenticode signing certificate authenticode_ca String certificate authority that issued the signing certificate authenticode_ca_thumbprint Split thumbprint(s) of the signing certificate authority authenticode_status String verification status of the Authenticode signature (e.g., valid, invalid) pe_version String PE_VERSION version string of the PE file (FileVersion) pe_companyname String COMPANY company name embedded in the PE metadata pe_productname String PRODUCT product name embedded in the PE metadata pe_original_filename String FILE_NAME original filename stored in the PE metadata pe_platform String PE_ARCH target platform/architecture of the PE (e.g., x86, x64) pe_compilation_date DateTime DATE_COMPILATION compilation timestamp of the PE executable pe_subsystem String PE_SUBSYSTEM subsystem type defined in the PE header (e.g., GUI, Console) " /><link rel="canonical" href="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/ntfsinfo/" itemprop="url" />
+<title>Hive – DFIR-OGRE documentation</title>
+  <meta name="description" content=" Data Type: hive Python Parser: HiveKey Description Parse Windows Registry hive values
+Timeline Timeline Field Data Field Related User security_descriptor.owner_sid Description path name Fields Output Name Data Type Qualifier Description path String KEY_PATH mtime DateTime DATE_MODIFICATION security_descriptor Object security_descriptor.owner_sid String USER_SID security_descriptor.group_sid String security_descriptor.control_flags[] Array[String] security_descriptor.sacl_aces[] Array[Object] security_descriptor.sacl_aces[].ace_type String security_descriptor.sacl_aces[].ace_flags[] Array[String] security_descriptor.sacl_aces[].rights[] Array[String] security_descriptor.sacl_aces[].account_sid String security_descriptor.sacl_aces[].ace_size Int security_descriptor.sacl_aces[].object_type_guid String security_descriptor.sacl_aces[].inherited_object_type_guid String security_descriptor.sacl_aces[].raw_hex String security_descriptor.dacl_aces[] Array[Object] security_descriptor.dacl_aces[].ace_type String security_descriptor.dacl_aces[].ace_flags[] Array[String] security_descriptor.dacl_aces[].rights[] Array[String] security_descriptor.dacl_aces[].account_sid String security_descriptor.dacl_aces[].ace_size Int security_descriptor.dacl_aces[].object_type_guid String security_descriptor.dacl_aces[].inherited_object_type_guid String security_descriptor.dacl_aces[].raw_hex String name String VALUE_NAME data String type String size Int is_placeholder Bool invalid_signature Bool error String " /><link rel="canonical" href="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/hive/" itemprop="url" />
 
-<meta property="og:title" content="Ntfsinfo">
+<meta property="og:title" content="Hive">
 <meta
   property="og:description"
   content="
@@ -21,19 +21,13 @@ Reconstructs exact file‑system hierarchy. Provides creation, modification, acc
   
 
   
-    Data Type: ntfsinfo 
-Python Parser: NTFSInfo
+    Data Type: hive 
+Python Parser: HiveKey
   
 
 
 Description
-    Extract NTFS&rsquo;s Master File Table (MFT) from an ORC‑generated CSV file.
-
-Reconstructs exact file‑system hierarchy.
-Provides creation, modification, access, and change timestamps.
-Exposes NTFS attributes and USN information for change‑tracking.
-Supplies cryptographic hashes (MD5, SHA‑1, SHA‑256) and PE‑specific metadata (version, company, compilation date).
-
+    Parse Windows Registry hive values
 Timeline
     
 	
@@ -44,12 +38,16 @@ Timeline
 	
 	
 			
+					Related User
+					security_descriptor.owner_sid
+			
+			
 					Description
-					file_path
+					path
 			
 			
-					Additional Description
-					file_size
+					
+					name
 			
 	
 
@@ -65,388 +63,190 @@ Fields
 	
 	
 			
-					snapshot_id
-					Python
-					
-					
-			
-			
-					parent
+					path
 					String
-					
-					full parent directory path of the entry
-			
-			
-					file_name
-					String
-					
-					name of the file without path
-			
-			
-					extension
-					String
-					
-					file extension (e.g., .txt, .exe)
-			
-			
-					file_size
-					Int
-					FILE_SIZE
-					size of the file in bytes
-			
-			
-					file_in_use
-					Bool
-					
-					flag indicating whether the MFT record is allocated (true) or free (false)
-			
-			
-					sequence_number
-					Int
-					
-					sequence number part of the File Reference Number (FRN)
-			
-			
-					record_number
-					Int
-					
-					record/index part of the File Reference Number (FRN)
-			
-			
-					FRN
-					Extension
-					
+					KEY_PATH
 					
 			
 			
-					file_attributes_archive
-					Bool
-					
-					archive attribute flag
-			
-			
-					file_attributes_no_scrub_data
-					Bool
-					
-					no‑scrub‑data attribute flag
-			
-			
-					file_attributes_compressed
-					Bool
-					
-					compressed attribute flag
-			
-			
-					file_attributes_directory
-					Bool
-					
-					directory attribute flag
-			
-			
-					file_attributes_encrypted
-					Bool
-					
-					encrypted attribute flag
-			
-			
-					file_attributes_hidden
-					Bool
-					
-					hidden attribute flag
-			
-			
-					file_attributes_not_content_indexed
-					Bool
-					
-					not‑content‑indexed attribute flag
-			
-			
-					file_attributes_reparse_point
-					Bool
-					
-					reparse‑point attribute flag
-			
-			
-					file_attributes_normal
-					Bool
-					
-					normal attribute flag
-			
-			
-					file_attributes_offline
-					Bool
-					
-					offline attribute flag
-			
-			
-					file_attributes_sparse_file
-					Bool
-					
-					sparse‑file attribute flag
-			
-			
-					file_attributes_readonly
-					Bool
-					
-					read‑only attribute flag
-			
-			
-					file_attributes_system
-					Bool
-					
-					system attribute flag
-			
-			
-					file_attributes_temporary
-					Bool
-					
-					temporary attribute flag
-			
-			
-					file_attributes_virtual
-					Bool
-					
-					virtual attribute flag
-			
-			
-					file_attributes_recall_on_data_access
-					Bool
-					
-					recall‑on‑data‑access attribute flag
-			
-			
-					file_attributes_device
-					Bool
-					
-					device attribute flag
-			
-			
-					file_attributes_ea
-					Bool
-					
-					extended‑attributes (EA) attribute flag
-			
-			
-					file_attributes_recall_on_open
-					Bool
-					
-					recall‑on‑open attribute flag
-			
-			
-					file_attributes_pinned
-					Bool
-					
-					pinned attribute flag
-			
-			
-					file_attributes_integrity_stream
-					Bool
-					
-					integrity‑stream attribute flag
-			
-			
-					file_attributes_unpinned
-					Bool
-					
-					unpinned attribute flag
-			
-			
-					Attributes
-					Extension
-					
-					
-			
-			
-					usn_number
-					IntRadix
-					FS_USN
-					USN journal sequence number (hexadecimal)
-			
-			
-					file_name_flags
-					Int
-					
-					flags associated with the filename entry
-			
-			
-					fn_creation_date
-					DateTime
-					DATE_CREATION
-					creation timestamp of the filename entry
-			
-			
-					fn_lastmod_date
+					mtime
 					DateTime
 					DATE_MODIFICATION
-					last modification timestamp of the filename entry
+					
 			
 			
-					fn_lastaccess_date
-					DateTime
-					DATE_ACCESS
-					last access timestamp of the filename entry
-			
-			
-					fn_lastchange_date
-					DateTime
-					DATE_CHANGE
-					timestamp of the last attribute change for the filename entry
-			
-			
-					si_creation_date
-					DateTime
-					DATE_CREATION
-					creation timestamp of the file
-			
-			
-					si_lastmod_date
-					DateTime
-					DATE_MODIFICATION
-					last modification timestamp of the file
-			
-			
-					si_lastaccess_date
-					DateTime
-					DATE_ACCESS
-					last access timestamp of the file
-			
-			
-					si_lastchange_date
-					DateTime
-					DATE_MODIFICATION
-					timestamp of the last attribute change for the file
-			
-			
-					md5
-					String
-					FILE_MD5
-					MD5 hash of the file content
-			
-			
-					sha1
-					String
-					FILE_SHA1
-					SHA‑1 hash of the file content
-			
-			
-					sha256
-					String
-					FILE_SHA256
-					SHA‑256 hash of the file content
-			
-			
-					orc_pe_md5
-					String
-					PE_MD5
-					MD5 hash of the PE executable (if file is a PE)
-			
-			
-					orc_pe_sha1
-					String
-					PE_SHA1
-					SHA‑1 hash of the PE executable (if file is a PE)
-			
-			
-					orc_pe_sha256
-					String
-					PE_SHA256
-					SHA‑256 hash of the PE executable (if file is a PE)
-			
-			
-					file_pe_md5
-					String
-					PE_MD5
-					MD5 hash extracted from the Authenticode‑signed PE file
-			
-			
-					file_pe_sha1
-					String
-					PE_SHA1
-					SHA‑1 hash extracted from the Authenticode‑signed PE file
-			
-			
-					file_pe_sha256
-					String
-					PE_SHA256
-					SHA‑256 hash extracted from the Authenticode‑signed PE file
-			
-			
-					SignedHash
-					Extension
+					security_descriptor
+					Object
 					
 					
 			
 			
-					authenticode_signer
+					security_descriptor.owner_sid
+					String
+					USER_SID
+					
+			
+			
+					security_descriptor.group_sid
 					String
 					
-					subject name of the Authenticode signing certificate
-			
-			
-					authenticode_signer_thumbprint
-					Split
 					
-					thumbprint(s) of the Authenticode signing certificate
 			
 			
-					authenticode_ca
-					String
+					security_descriptor.control_flags[]
+					Array[String]
 					
-					certificate authority that issued the signing certificate
-			
-			
-					authenticode_ca_thumbprint
-					Split
 					
-					thumbprint(s) of the signing certificate authority
 			
 			
-					authenticode_status
+					security_descriptor.sacl_aces[]
+					Array[Object]
+					
+					
+			
+			
+					security_descriptor.sacl_aces[].ace_type
 					String
 					
-					verification status of the Authenticode signature (e.g., valid, invalid)
+					
 			
 			
-					pe_version
+					security_descriptor.sacl_aces[].ace_flags[]
+					Array[String]
+					
+					
+			
+			
+					security_descriptor.sacl_aces[].rights[]
+					Array[String]
+					
+					
+			
+			
+					security_descriptor.sacl_aces[].account_sid
 					String
-					PE_VERSION
-					version string of the PE file (FileVersion)
+					
+					
 			
 			
-					pe_companyname
+					security_descriptor.sacl_aces[].ace_size
+					Int
+					
+					
+			
+			
+					security_descriptor.sacl_aces[].object_type_guid
 					String
-					COMPANY
-					company name embedded in the PE metadata
+					
+					
 			
 			
-					pe_productname
+					security_descriptor.sacl_aces[].inherited_object_type_guid
 					String
-					PRODUCT
-					product name embedded in the PE metadata
+					
+					
 			
 			
-					pe_original_filename
+					security_descriptor.sacl_aces[].raw_hex
 					String
-					FILE_NAME
-					original filename stored in the PE metadata
+					
+					
 			
 			
-					pe_platform
+					security_descriptor.dacl_aces[]
+					Array[Object]
+					
+					
+			
+			
+					security_descriptor.dacl_aces[].ace_type
 					String
-					PE_ARCH
-					target platform/architecture of the PE (e.g., x86, x64)
+					
+					
 			
 			
-					pe_compilation_date
-					DateTime
-					DATE_COMPILATION
-					compilation timestamp of the PE executable
+					security_descriptor.dacl_aces[].ace_flags[]
+					Array[String]
+					
+					
 			
 			
-					pe_subsystem
+					security_descriptor.dacl_aces[].rights[]
+					Array[String]
+					
+					
+			
+			
+					security_descriptor.dacl_aces[].account_sid
 					String
-					PE_SUBSYSTEM
-					subsystem type defined in the PE header (e.g., GUI, Console)
+					
+					
+			
+			
+					security_descriptor.dacl_aces[].ace_size
+					Int
+					
+					
+			
+			
+					security_descriptor.dacl_aces[].object_type_guid
+					String
+					
+					
+			
+			
+					security_descriptor.dacl_aces[].inherited_object_type_guid
+					String
+					
+					
+			
+			
+					security_descriptor.dacl_aces[].raw_hex
+					String
+					
+					
+			
+			
+					name
+					String
+					VALUE_NAME
+					
+			
+			
+					data
+					String
+					
+					
+			
+			
+					type
+					String
+					
+					
+			
+			
+					size
+					Int
+					
+					
+			
+			
+					is_placeholder
+					Bool
+					
+					
+			
+			
+					invalid_signature
+					Bool
+					
+					
+			
+			
+					error
+					String
+					
+					
 			
 	
 
@@ -457,19 +257,19 @@ Fields
   content="
     article
   ">
-<meta property="og:url" content="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/ntfsinfo/"><meta property="article:section" content="built-in-plugins">
+<meta property="og:url" content="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/hive/"><meta property="article:section" content="built-in-plugins">
 
 
 
 
-	<meta itemprop="name" content="Ntfsinfo">
-	<meta itemprop="description" content="Data Type: ntfsinfo Python Parser: NTFSInfo Description Extract NTFS’s Master File Table (MFT) from an ORC‑generated CSV file.
-Reconstructs exact file‑system hierarchy. Provides creation, modification, access, and change timestamps. Exposes NTFS attributes and USN information for change‑tracking. Supplies cryptographic hashes (MD5, SHA‑1, SHA‑256) and PE‑specific metadata (version, company, compilation date). Timeline Timeline Field Data Field Description file_path Additional Description file_size Fields Output Name Data Type Qualifier Description snapshot_id Python parent String full parent directory path of the entry file_name String name of the file without path extension String file extension (e.g., .txt, .exe) file_size Int FILE_SIZE size of the file in bytes file_in_use Bool flag indicating whether the MFT record is allocated (true) or free (false) sequence_number Int sequence number part of the File Reference Number (FRN) record_number Int record/index part of the File Reference Number (FRN) FRN Extension file_attributes_archive Bool archive attribute flag file_attributes_no_scrub_data Bool no‑scrub‑data attribute flag file_attributes_compressed Bool compressed attribute flag file_attributes_directory Bool directory attribute flag file_attributes_encrypted Bool encrypted attribute flag file_attributes_hidden Bool hidden attribute flag file_attributes_not_content_indexed Bool not‑content‑indexed attribute flag file_attributes_reparse_point Bool reparse‑point attribute flag file_attributes_normal Bool normal attribute flag file_attributes_offline Bool offline attribute flag file_attributes_sparse_file Bool sparse‑file attribute flag file_attributes_readonly Bool read‑only attribute flag file_attributes_system Bool system attribute flag file_attributes_temporary Bool temporary attribute flag file_attributes_virtual Bool virtual attribute flag file_attributes_recall_on_data_access Bool recall‑on‑data‑access attribute flag file_attributes_device Bool device attribute flag file_attributes_ea Bool extended‑attributes (EA) attribute flag file_attributes_recall_on_open Bool recall‑on‑open attribute flag file_attributes_pinned Bool pinned attribute flag file_attributes_integrity_stream Bool integrity‑stream attribute flag file_attributes_unpinned Bool unpinned attribute flag Attributes Extension usn_number IntRadix FS_USN USN journal sequence number (hexadecimal) file_name_flags Int flags associated with the filename entry fn_creation_date DateTime DATE_CREATION creation timestamp of the filename entry fn_lastmod_date DateTime DATE_MODIFICATION last modification timestamp of the filename entry fn_lastaccess_date DateTime DATE_ACCESS last access timestamp of the filename entry fn_lastchange_date DateTime DATE_CHANGE timestamp of the last attribute change for the filename entry si_creation_date DateTime DATE_CREATION creation timestamp of the file si_lastmod_date DateTime DATE_MODIFICATION last modification timestamp of the file si_lastaccess_date DateTime DATE_ACCESS last access timestamp of the file si_lastchange_date DateTime DATE_MODIFICATION timestamp of the last attribute change for the file md5 String FILE_MD5 MD5 hash of the file content sha1 String FILE_SHA1 SHA‑1 hash of the file content sha256 String FILE_SHA256 SHA‑256 hash of the file content orc_pe_md5 String PE_MD5 MD5 hash of the PE executable (if file is a PE) orc_pe_sha1 String PE_SHA1 SHA‑1 hash of the PE executable (if file is a PE) orc_pe_sha256 String PE_SHA256 SHA‑256 hash of the PE executable (if file is a PE) file_pe_md5 String PE_MD5 MD5 hash extracted from the Authenticode‑signed PE file file_pe_sha1 String PE_SHA1 SHA‑1 hash extracted from the Authenticode‑signed PE file file_pe_sha256 String PE_SHA256 SHA‑256 hash extracted from the Authenticode‑signed PE file SignedHash Extension authenticode_signer String subject name of the Authenticode signing certificate authenticode_signer_thumbprint Split thumbprint(s) of the Authenticode signing certificate authenticode_ca String certificate authority that issued the signing certificate authenticode_ca_thumbprint Split thumbprint(s) of the signing certificate authority authenticode_status String verification status of the Authenticode signature (e.g., valid, invalid) pe_version String PE_VERSION version string of the PE file (FileVersion) pe_companyname String COMPANY company name embedded in the PE metadata pe_productname String PRODUCT product name embedded in the PE metadata pe_original_filename String FILE_NAME original filename stored in the PE metadata pe_platform String PE_ARCH target platform/architecture of the PE (e.g., x86, x64) pe_compilation_date DateTime DATE_COMPILATION compilation timestamp of the PE executable pe_subsystem String PE_SUBSYSTEM subsystem type defined in the PE header (e.g., GUI, Console)">
-	<meta itemprop="wordCount" content="570">
+	<meta itemprop="name" content="Hive">
+	<meta itemprop="description" content="Data Type: hive Python Parser: HiveKey Description Parse Windows Registry hive values
+Timeline Timeline Field Data Field Related User security_descriptor.owner_sid Description path name Fields Output Name Data Type Qualifier Description path String KEY_PATH mtime DateTime DATE_MODIFICATION security_descriptor Object security_descriptor.owner_sid String USER_SID security_descriptor.group_sid String security_descriptor.control_flags[] Array[String] security_descriptor.sacl_aces[] Array[Object] security_descriptor.sacl_aces[].ace_type String security_descriptor.sacl_aces[].ace_flags[] Array[String] security_descriptor.sacl_aces[].rights[] Array[String] security_descriptor.sacl_aces[].account_sid String security_descriptor.sacl_aces[].ace_size Int security_descriptor.sacl_aces[].object_type_guid String security_descriptor.sacl_aces[].inherited_object_type_guid String security_descriptor.sacl_aces[].raw_hex String security_descriptor.dacl_aces[] Array[Object] security_descriptor.dacl_aces[].ace_type String security_descriptor.dacl_aces[].ace_flags[] Array[String] security_descriptor.dacl_aces[].rights[] Array[String] security_descriptor.dacl_aces[].account_sid String security_descriptor.dacl_aces[].ace_size Int security_descriptor.dacl_aces[].object_type_guid String security_descriptor.dacl_aces[].inherited_object_type_guid String security_descriptor.dacl_aces[].raw_hex String name String VALUE_NAME data String type String size Int is_placeholder Bool invalid_signature Bool error String">
+	<meta itemprop="wordCount" content="96">
 	<meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="Ntfsinfo">
-	<meta name="twitter:description" content="Data Type: ntfsinfo Python Parser: NTFSInfo Description Extract NTFS’s Master File Table (MFT) from an ORC‑generated CSV file.
-Reconstructs exact file‑system hierarchy. Provides creation, modification, access, and change timestamps. Exposes NTFS attributes and USN information for change‑tracking. Supplies cryptographic hashes (MD5, SHA‑1, SHA‑256) and PE‑specific metadata (version, company, compilation date). Timeline Timeline Field Data Field Description file_path Additional Description file_size Fields Output Name Data Type Qualifier Description snapshot_id Python parent String full parent directory path of the entry file_name String name of the file without path extension String file extension (e.g., .txt, .exe) file_size Int FILE_SIZE size of the file in bytes file_in_use Bool flag indicating whether the MFT record is allocated (true) or free (false) sequence_number Int sequence number part of the File Reference Number (FRN) record_number Int record/index part of the File Reference Number (FRN) FRN Extension file_attributes_archive Bool archive attribute flag file_attributes_no_scrub_data Bool no‑scrub‑data attribute flag file_attributes_compressed Bool compressed attribute flag file_attributes_directory Bool directory attribute flag file_attributes_encrypted Bool encrypted attribute flag file_attributes_hidden Bool hidden attribute flag file_attributes_not_content_indexed Bool not‑content‑indexed attribute flag file_attributes_reparse_point Bool reparse‑point attribute flag file_attributes_normal Bool normal attribute flag file_attributes_offline Bool offline attribute flag file_attributes_sparse_file Bool sparse‑file attribute flag file_attributes_readonly Bool read‑only attribute flag file_attributes_system Bool system attribute flag file_attributes_temporary Bool temporary attribute flag file_attributes_virtual Bool virtual attribute flag file_attributes_recall_on_data_access Bool recall‑on‑data‑access attribute flag file_attributes_device Bool device attribute flag file_attributes_ea Bool extended‑attributes (EA) attribute flag file_attributes_recall_on_open Bool recall‑on‑open attribute flag file_attributes_pinned Bool pinned attribute flag file_attributes_integrity_stream Bool integrity‑stream attribute flag file_attributes_unpinned Bool unpinned attribute flag Attributes Extension usn_number IntRadix FS_USN USN journal sequence number (hexadecimal) file_name_flags Int flags associated with the filename entry fn_creation_date DateTime DATE_CREATION creation timestamp of the filename entry fn_lastmod_date DateTime DATE_MODIFICATION last modification timestamp of the filename entry fn_lastaccess_date DateTime DATE_ACCESS last access timestamp of the filename entry fn_lastchange_date DateTime DATE_CHANGE timestamp of the last attribute change for the filename entry si_creation_date DateTime DATE_CREATION creation timestamp of the file si_lastmod_date DateTime DATE_MODIFICATION last modification timestamp of the file si_lastaccess_date DateTime DATE_ACCESS last access timestamp of the file si_lastchange_date DateTime DATE_MODIFICATION timestamp of the last attribute change for the file md5 String FILE_MD5 MD5 hash of the file content sha1 String FILE_SHA1 SHA‑1 hash of the file content sha256 String FILE_SHA256 SHA‑256 hash of the file content orc_pe_md5 String PE_MD5 MD5 hash of the PE executable (if file is a PE) orc_pe_sha1 String PE_SHA1 SHA‑1 hash of the PE executable (if file is a PE) orc_pe_sha256 String PE_SHA256 SHA‑256 hash of the PE executable (if file is a PE) file_pe_md5 String PE_MD5 MD5 hash extracted from the Authenticode‑signed PE file file_pe_sha1 String PE_SHA1 SHA‑1 hash extracted from the Authenticode‑signed PE file file_pe_sha256 String PE_SHA256 SHA‑256 hash extracted from the Authenticode‑signed PE file SignedHash Extension authenticode_signer String subject name of the Authenticode signing certificate authenticode_signer_thumbprint Split thumbprint(s) of the Authenticode signing certificate authenticode_ca String certificate authority that issued the signing certificate authenticode_ca_thumbprint Split thumbprint(s) of the signing certificate authority authenticode_status String verification status of the Authenticode signature (e.g., valid, invalid) pe_version String PE_VERSION version string of the PE file (FileVersion) pe_companyname String COMPANY company name embedded in the PE metadata pe_productname String PRODUCT product name embedded in the PE metadata pe_original_filename String FILE_NAME original filename stored in the PE metadata pe_platform String PE_ARCH target platform/architecture of the PE (e.g., x86, x64) pe_compilation_date DateTime DATE_COMPILATION compilation timestamp of the PE executable pe_subsystem String PE_SUBSYSTEM subsystem type defined in the PE header (e.g., GUI, Console)">
+	<meta name="twitter:title" content="Hive">
+	<meta name="twitter:description" content="Data Type: hive Python Parser: HiveKey Description Parse Windows Registry hive values
+Timeline Timeline Field Data Field Related User security_descriptor.owner_sid Description path name Fields Output Name Data Type Qualifier Description path String KEY_PATH mtime DateTime DATE_MODIFICATION security_descriptor Object security_descriptor.owner_sid String USER_SID security_descriptor.group_sid String security_descriptor.control_flags[] Array[String] security_descriptor.sacl_aces[] Array[Object] security_descriptor.sacl_aces[].ace_type String security_descriptor.sacl_aces[].ace_flags[] Array[String] security_descriptor.sacl_aces[].rights[] Array[String] security_descriptor.sacl_aces[].account_sid String security_descriptor.sacl_aces[].ace_size Int security_descriptor.sacl_aces[].object_type_guid String security_descriptor.sacl_aces[].inherited_object_type_guid String security_descriptor.sacl_aces[].raw_hex String security_descriptor.dacl_aces[] Array[Object] security_descriptor.dacl_aces[].ace_type String security_descriptor.dacl_aces[].ace_flags[] Array[String] security_descriptor.dacl_aces[].rights[] Array[String] security_descriptor.dacl_aces[].account_sid String security_descriptor.dacl_aces[].ace_size Int security_descriptor.dacl_aces[].object_type_guid String security_descriptor.dacl_aces[].inherited_object_type_guid String security_descriptor.dacl_aces[].raw_hex String name String VALUE_NAME data String type String size Int is_placeholder Bool invalid_signature Bool error String">
 
     <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
     <link href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" rel="stylesheet" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
@@ -949,7 +749,7 @@ Reconstructs exact file‑system hierarchy. Provides creation, modification, acc
               
             </li></ul>
       </div>
-            </li><li class="hx:flex hx:flex-col open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:ltr:pr-8 hx:rtl:pl-8
       hx:hextra-focus-visible-inset
@@ -959,7 +759,7 @@ Reconstructs exact file‑system hierarchy. Provides creation, modification, acc
     >
       <span class="hx:min-w-0 [word-break:break-word]">File System</span>
     </a>
-      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
+      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="false"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
   </div>
               <div class="hextra-sidebar-children hx:ltr:pr-0 hx:rtl:pl-0 hx:overflow-hidden">
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
@@ -1022,11 +822,11 @@ Reconstructs exact file‑system hierarchy. Provides creation, modification, acc
     </a>
   </div>
               
-            </li><li class="hx:flex hx:flex-col open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="true">
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
-        hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
       href="/dfir-ogre-documentation/built-in-plugins/file-system/ntfsinfo/"
       
     >
@@ -1759,7 +1559,7 @@ Reconstructs exact file‑system hierarchy. Provides creation, modification, acc
               
             </li></ul>
       </div>
-            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+            </li><li class="hx:flex hx:flex-col open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:ltr:pr-8 hx:rtl:pl-8
       hx:hextra-focus-visible-inset
@@ -1769,7 +1569,7 @@ Reconstructs exact file‑system hierarchy. Provides creation, modification, acc
     >
       <span class="hx:min-w-0 [word-break:break-word]">Windows Artefacts</span>
     </a>
-      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="false"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
+      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
   </div>
               <div class="hextra-sidebar-children hx:ltr:pr-0 hx:rtl:pl-0 hx:overflow-hidden">
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
@@ -1796,11 +1596,11 @@ Reconstructs exact file‑system hierarchy. Provides creation, modification, acc
     </a>
   </div>
               
-            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+            </li><li class="hx:flex hx:flex-col open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="true">
     <a
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
-        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+        hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
       href="/dfir-ogre-documentation/built-in-plugins/windows-artefacts/hive/"
       
     >
@@ -2086,7 +1886,7 @@ Reconstructs exact file‑system hierarchy. Provides creation, modification, acc
         <div class="content">
           
           <div class="hx:flex hx:flex-col hx:sm:flex-row hx:items-start hx:sm:items-center hx:sm:justify-between hx:gap-4 hx:mb-4">
-            <h1 class="hx:mb-0">Ntfsinfo</h1>
+            <h1 class="hx:mb-0">Hive</h1>
             
           </div>
           
@@ -2094,19 +1894,13 @@ Reconstructs exact file‑system hierarchy. Provides creation, modification, acc
   <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
 
   <div class="hx:w-full hx:min-w-0 hx:leading-7">
-    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0">Data Type: <strong>ntfsinfo</strong> <br>
-Python Parser: <strong>NTFSInfo</strong></div>
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0">Data Type: <strong>hive</strong> <br>
+Python Parser: <strong>HiveKey</strong></div>
   </div>
 </div>
 
 <h3>Description<span class="hx:absolute hx:-mt-20" id="description"></span>
-    <a href="#description" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Extract NTFS&rsquo;s Master File Table (MFT) from an ORC‑generated CSV file.</p>
-<ul>
-<li>Reconstructs exact file‑system hierarchy.</li>
-<li>Provides creation, modification, access, and change timestamps.</li>
-<li>Exposes NTFS attributes and USN information for change‑tracking.</li>
-<li>Supplies cryptographic hashes (MD5, SHA‑1, SHA‑256) and PE‑specific metadata (version, company, compilation date).</li>
-</ul>
+    <a href="#description" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Parse Windows Registry hive values</p>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
 	<thead>
@@ -2117,12 +1911,16 @@ Python Parser: <strong>NTFSInfo</strong></div>
 	</thead>
 	<tbody>
 			<tr>
-					<td>Description</td>
-					<td><code>file_path</code></td>
+					<td>Related User</td>
+					<td><code>security_descriptor.owner_sid</code></td>
 			</tr>
 			<tr>
-					<td>Additional Description</td>
-					<td><code>file_size</code></td>
+					<td>Description</td>
+					<td><code>path</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td><code>name</code></td>
 			</tr>
 	</tbody>
 </table>
@@ -2138,402 +1936,204 @@ Python Parser: <strong>NTFSInfo</strong></div>
 	</thead>
 	<tbody>
 			<tr>
-					<td><code>snapshot_id</code></td>
-					<td>Python</td>
-					<td></td>
-					<td></td>
-			</tr>
-			<tr>
-					<td><code>parent</code></td>
+					<td><code>path</code></td>
 					<td>String</td>
-					<td></td>
-					<td>full parent directory path of the entry</td>
-			</tr>
-			<tr>
-					<td><code>file_name</code></td>
-					<td>String</td>
-					<td></td>
-					<td>name of the file without path</td>
-			</tr>
-			<tr>
-					<td><code>extension</code></td>
-					<td>String</td>
-					<td></td>
-					<td>file extension (e.g., .txt, .exe)</td>
-			</tr>
-			<tr>
-					<td><code>file_size</code></td>
-					<td>Int</td>
-					<td>FILE_SIZE</td>
-					<td>size of the file in bytes</td>
-			</tr>
-			<tr>
-					<td><code>file_in_use</code></td>
-					<td>Bool</td>
-					<td></td>
-					<td>flag indicating whether the MFT record is allocated (true) or free (false)</td>
-			</tr>
-			<tr>
-					<td><code>sequence_number</code></td>
-					<td>Int</td>
-					<td></td>
-					<td>sequence number part of the File Reference Number (FRN)</td>
-			</tr>
-			<tr>
-					<td><code>record_number</code></td>
-					<td>Int</td>
-					<td></td>
-					<td>record/index part of the File Reference Number (FRN)</td>
-			</tr>
-			<tr>
-					<td><code>FRN</code></td>
-					<td>Extension</td>
-					<td></td>
+					<td>KEY_PATH</td>
 					<td></td>
 			</tr>
 			<tr>
-					<td><code>file_attributes_archive</code></td>
-					<td>Bool</td>
-					<td></td>
-					<td>archive attribute flag</td>
-			</tr>
-			<tr>
-					<td><code>file_attributes_no_scrub_data</code></td>
-					<td>Bool</td>
-					<td></td>
-					<td>no‑scrub‑data attribute flag</td>
-			</tr>
-			<tr>
-					<td><code>file_attributes_compressed</code></td>
-					<td>Bool</td>
-					<td></td>
-					<td>compressed attribute flag</td>
-			</tr>
-			<tr>
-					<td><code>file_attributes_directory</code></td>
-					<td>Bool</td>
-					<td></td>
-					<td>directory attribute flag</td>
-			</tr>
-			<tr>
-					<td><code>file_attributes_encrypted</code></td>
-					<td>Bool</td>
-					<td></td>
-					<td>encrypted attribute flag</td>
-			</tr>
-			<tr>
-					<td><code>file_attributes_hidden</code></td>
-					<td>Bool</td>
-					<td></td>
-					<td>hidden attribute flag</td>
-			</tr>
-			<tr>
-					<td><code>file_attributes_not_content_indexed</code></td>
-					<td>Bool</td>
-					<td></td>
-					<td>not‑content‑indexed attribute flag</td>
-			</tr>
-			<tr>
-					<td><code>file_attributes_reparse_point</code></td>
-					<td>Bool</td>
-					<td></td>
-					<td>reparse‑point attribute flag</td>
-			</tr>
-			<tr>
-					<td><code>file_attributes_normal</code></td>
-					<td>Bool</td>
-					<td></td>
-					<td>normal attribute flag</td>
-			</tr>
-			<tr>
-					<td><code>file_attributes_offline</code></td>
-					<td>Bool</td>
-					<td></td>
-					<td>offline attribute flag</td>
-			</tr>
-			<tr>
-					<td><code>file_attributes_sparse_file</code></td>
-					<td>Bool</td>
-					<td></td>
-					<td>sparse‑file attribute flag</td>
-			</tr>
-			<tr>
-					<td><code>file_attributes_readonly</code></td>
-					<td>Bool</td>
-					<td></td>
-					<td>read‑only attribute flag</td>
-			</tr>
-			<tr>
-					<td><code>file_attributes_system</code></td>
-					<td>Bool</td>
-					<td></td>
-					<td>system attribute flag</td>
-			</tr>
-			<tr>
-					<td><code>file_attributes_temporary</code></td>
-					<td>Bool</td>
-					<td></td>
-					<td>temporary attribute flag</td>
-			</tr>
-			<tr>
-					<td><code>file_attributes_virtual</code></td>
-					<td>Bool</td>
-					<td></td>
-					<td>virtual attribute flag</td>
-			</tr>
-			<tr>
-					<td><code>file_attributes_recall_on_data_access</code></td>
-					<td>Bool</td>
-					<td></td>
-					<td>recall‑on‑data‑access attribute flag</td>
-			</tr>
-			<tr>
-					<td><code>file_attributes_device</code></td>
-					<td>Bool</td>
-					<td></td>
-					<td>device attribute flag</td>
-			</tr>
-			<tr>
-					<td><code>file_attributes_ea</code></td>
-					<td>Bool</td>
-					<td></td>
-					<td>extended‑attributes (EA) attribute flag</td>
-			</tr>
-			<tr>
-					<td><code>file_attributes_recall_on_open</code></td>
-					<td>Bool</td>
-					<td></td>
-					<td>recall‑on‑open attribute flag</td>
-			</tr>
-			<tr>
-					<td><code>file_attributes_pinned</code></td>
-					<td>Bool</td>
-					<td></td>
-					<td>pinned attribute flag</td>
-			</tr>
-			<tr>
-					<td><code>file_attributes_integrity_stream</code></td>
-					<td>Bool</td>
-					<td></td>
-					<td>integrity‑stream attribute flag</td>
-			</tr>
-			<tr>
-					<td><code>file_attributes_unpinned</code></td>
-					<td>Bool</td>
-					<td></td>
-					<td>unpinned attribute flag</td>
-			</tr>
-			<tr>
-					<td><code>Attributes</code></td>
-					<td>Extension</td>
-					<td></td>
-					<td></td>
-			</tr>
-			<tr>
-					<td><code>usn_number</code></td>
-					<td>IntRadix</td>
-					<td>FS_USN</td>
-					<td>USN journal sequence number (hexadecimal)</td>
-			</tr>
-			<tr>
-					<td><code>file_name_flags</code></td>
-					<td>Int</td>
-					<td></td>
-					<td>flags associated with the filename entry</td>
-			</tr>
-			<tr>
-					<td><code>fn_creation_date</code></td>
-					<td>DateTime</td>
-					<td>DATE_CREATION</td>
-					<td>creation timestamp of the filename entry</td>
-			</tr>
-			<tr>
-					<td><code>fn_lastmod_date</code></td>
+					<td><code>mtime</code></td>
 					<td>DateTime</td>
 					<td>DATE_MODIFICATION</td>
-					<td>last modification timestamp of the filename entry</td>
+					<td></td>
 			</tr>
 			<tr>
-					<td><code>fn_lastaccess_date</code></td>
-					<td>DateTime</td>
-					<td>DATE_ACCESS</td>
-					<td>last access timestamp of the filename entry</td>
-			</tr>
-			<tr>
-					<td><code>fn_lastchange_date</code></td>
-					<td>DateTime</td>
-					<td>DATE_CHANGE</td>
-					<td>timestamp of the last attribute change for the filename entry</td>
-			</tr>
-			<tr>
-					<td><code>si_creation_date</code></td>
-					<td>DateTime</td>
-					<td>DATE_CREATION</td>
-					<td>creation timestamp of the file</td>
-			</tr>
-			<tr>
-					<td><code>si_lastmod_date</code></td>
-					<td>DateTime</td>
-					<td>DATE_MODIFICATION</td>
-					<td>last modification timestamp of the file</td>
-			</tr>
-			<tr>
-					<td><code>si_lastaccess_date</code></td>
-					<td>DateTime</td>
-					<td>DATE_ACCESS</td>
-					<td>last access timestamp of the file</td>
-			</tr>
-			<tr>
-					<td><code>si_lastchange_date</code></td>
-					<td>DateTime</td>
-					<td>DATE_MODIFICATION</td>
-					<td>timestamp of the last attribute change for the file</td>
-			</tr>
-			<tr>
-					<td><code>md5</code></td>
-					<td>String</td>
-					<td>FILE_MD5</td>
-					<td>MD5 hash of the file content</td>
-			</tr>
-			<tr>
-					<td><code>sha1</code></td>
-					<td>String</td>
-					<td>FILE_SHA1</td>
-					<td>SHA‑1 hash of the file content</td>
-			</tr>
-			<tr>
-					<td><code>sha256</code></td>
-					<td>String</td>
-					<td>FILE_SHA256</td>
-					<td>SHA‑256 hash of the file content</td>
-			</tr>
-			<tr>
-					<td><code>orc_pe_md5</code></td>
-					<td>String</td>
-					<td>PE_MD5</td>
-					<td>MD5 hash of the PE executable (if file is a PE)</td>
-			</tr>
-			<tr>
-					<td><code>orc_pe_sha1</code></td>
-					<td>String</td>
-					<td>PE_SHA1</td>
-					<td>SHA‑1 hash of the PE executable (if file is a PE)</td>
-			</tr>
-			<tr>
-					<td><code>orc_pe_sha256</code></td>
-					<td>String</td>
-					<td>PE_SHA256</td>
-					<td>SHA‑256 hash of the PE executable (if file is a PE)</td>
-			</tr>
-			<tr>
-					<td><code>file_pe_md5</code></td>
-					<td>String</td>
-					<td>PE_MD5</td>
-					<td>MD5 hash extracted from the Authenticode‑signed PE file</td>
-			</tr>
-			<tr>
-					<td><code>file_pe_sha1</code></td>
-					<td>String</td>
-					<td>PE_SHA1</td>
-					<td>SHA‑1 hash extracted from the Authenticode‑signed PE file</td>
-			</tr>
-			<tr>
-					<td><code>file_pe_sha256</code></td>
-					<td>String</td>
-					<td>PE_SHA256</td>
-					<td>SHA‑256 hash extracted from the Authenticode‑signed PE file</td>
-			</tr>
-			<tr>
-					<td><code>SignedHash</code></td>
-					<td>Extension</td>
+					<td><code>security_descriptor</code></td>
+					<td>Object</td>
 					<td></td>
 					<td></td>
 			</tr>
 			<tr>
-					<td><code>authenticode_signer</code></td>
+					<td><code>security_descriptor.owner_sid</code></td>
+					<td>String</td>
+					<td>USER_SID</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>security_descriptor.group_sid</code></td>
 					<td>String</td>
 					<td></td>
-					<td>subject name of the Authenticode signing certificate</td>
-			</tr>
-			<tr>
-					<td><code>authenticode_signer_thumbprint</code></td>
-					<td>Split</td>
 					<td></td>
-					<td>thumbprint(s) of the Authenticode signing certificate</td>
 			</tr>
 			<tr>
-					<td><code>authenticode_ca</code></td>
-					<td>String</td>
+					<td><code>security_descriptor.control_flags[]</code></td>
+					<td>Array[String]</td>
 					<td></td>
-					<td>certificate authority that issued the signing certificate</td>
-			</tr>
-			<tr>
-					<td><code>authenticode_ca_thumbprint</code></td>
-					<td>Split</td>
 					<td></td>
-					<td>thumbprint(s) of the signing certificate authority</td>
 			</tr>
 			<tr>
-					<td><code>authenticode_status</code></td>
+					<td><code>security_descriptor.sacl_aces[]</code></td>
+					<td>Array[Object]</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>security_descriptor.sacl_aces[].ace_type</code></td>
 					<td>String</td>
 					<td></td>
-					<td>verification status of the Authenticode signature (e.g., valid, invalid)</td>
+					<td></td>
 			</tr>
 			<tr>
-					<td><code>pe_version</code></td>
+					<td><code>security_descriptor.sacl_aces[].ace_flags[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>security_descriptor.sacl_aces[].rights[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>security_descriptor.sacl_aces[].account_sid</code></td>
 					<td>String</td>
-					<td>PE_VERSION</td>
-					<td>version string of the PE file (FileVersion)</td>
+					<td></td>
+					<td></td>
 			</tr>
 			<tr>
-					<td><code>pe_companyname</code></td>
+					<td><code>security_descriptor.sacl_aces[].ace_size</code></td>
+					<td>Int</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>security_descriptor.sacl_aces[].object_type_guid</code></td>
 					<td>String</td>
-					<td>COMPANY</td>
-					<td>company name embedded in the PE metadata</td>
+					<td></td>
+					<td></td>
 			</tr>
 			<tr>
-					<td><code>pe_productname</code></td>
+					<td><code>security_descriptor.sacl_aces[].inherited_object_type_guid</code></td>
 					<td>String</td>
-					<td>PRODUCT</td>
-					<td>product name embedded in the PE metadata</td>
+					<td></td>
+					<td></td>
 			</tr>
 			<tr>
-					<td><code>pe_original_filename</code></td>
+					<td><code>security_descriptor.sacl_aces[].raw_hex</code></td>
 					<td>String</td>
-					<td>FILE_NAME</td>
-					<td>original filename stored in the PE metadata</td>
+					<td></td>
+					<td></td>
 			</tr>
 			<tr>
-					<td><code>pe_platform</code></td>
+					<td><code>security_descriptor.dacl_aces[]</code></td>
+					<td>Array[Object]</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>security_descriptor.dacl_aces[].ace_type</code></td>
 					<td>String</td>
-					<td>PE_ARCH</td>
-					<td>target platform/architecture of the PE (e.g., x86, x64)</td>
+					<td></td>
+					<td></td>
 			</tr>
 			<tr>
-					<td><code>pe_compilation_date</code></td>
-					<td>DateTime</td>
-					<td>DATE_COMPILATION</td>
-					<td>compilation timestamp of the PE executable</td>
+					<td><code>security_descriptor.dacl_aces[].ace_flags[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td></td>
 			</tr>
 			<tr>
-					<td><code>pe_subsystem</code></td>
+					<td><code>security_descriptor.dacl_aces[].rights[]</code></td>
+					<td>Array[String]</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>security_descriptor.dacl_aces[].account_sid</code></td>
 					<td>String</td>
-					<td>PE_SUBSYSTEM</td>
-					<td>subsystem type defined in the PE header (e.g., GUI, Console)</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>security_descriptor.dacl_aces[].ace_size</code></td>
+					<td>Int</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>security_descriptor.dacl_aces[].object_type_guid</code></td>
+					<td>String</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>security_descriptor.dacl_aces[].inherited_object_type_guid</code></td>
+					<td>String</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>security_descriptor.dacl_aces[].raw_hex</code></td>
+					<td>String</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>name</code></td>
+					<td>String</td>
+					<td>VALUE_NAME</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>data</code></td>
+					<td>String</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>type</code></td>
+					<td>String</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>size</code></td>
+					<td>Int</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>is_placeholder</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>invalid_signature</code></td>
+					<td>Bool</td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>error</code></td>
+					<td>String</td>
+					<td></td>
+					<td></td>
 			</tr>
 	</tbody>
 </table>
 
         </div>
         <div class="hx:mt-16"></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
-        href="/dfir-ogre-documentation/built-in-plugins/file-system/merge_file/"
-        title="Merge File"
+        href="/dfir-ogre-documentation/built-in-plugins/windows-artefacts/clsid_software/"
+        title="Clsid Software"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
-      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Merge File</a><a
-        href="/dfir-ogre-documentation/built-in-plugins/file-system/pending_rename/"
-        title="Pending Rename"
+      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Clsid Software</a><a
+        href="/dfir-ogre-documentation/built-in-plugins/windows-artefacts/lnk/"
+        title="Lnk"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:ml-auto hx:ltr:pl-4 hx:ltr:text-right hx:rtl:mr-auto hx:rtl:pr-4 hx:rtl:text-left"
-      >Pending Rename<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+      >Lnk<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
       </main>
     </article>
   </div>
