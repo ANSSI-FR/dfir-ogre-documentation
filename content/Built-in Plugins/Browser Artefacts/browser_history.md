@@ -24,7 +24,7 @@ visited, and the referer URL if available.
 |Description    | `url`   |
 |Additional Description    | `title`   |
 |    | `visit_count`   |
-|    | `origin`   |
+|    | `referer`   |
 
 ### Fields 
 

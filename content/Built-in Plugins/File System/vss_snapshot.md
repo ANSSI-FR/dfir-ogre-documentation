@@ -23,7 +23,7 @@ Parses CSV files that list Volume Shadow Copy (VSS) snapshots.
 
 | Output Name | Data Type | Qualifier | Description |
 |---|---|---|---|
-| `snapshot_id` | String |  | GUID identifying the VSS snapshot |
+| `snapshot_id` | Python |  | GUID identifying the VSS snapshot |
 | `device_instance` | String |  | Device path of the shadow copy (e.g. \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1) |
 | `volume_name` | String |  | Original volume that the snapshot belongs to |
 | `creation_time` | DateTime |  | Timestamp when the snapshot was created |

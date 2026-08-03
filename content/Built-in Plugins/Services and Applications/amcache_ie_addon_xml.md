@@ -18,7 +18,7 @@ List internet explorer addons from different xml report files
 
 | Output Name | Data Type | Qualifier | Description |
 |---|---|---|---|
-| `id` | String | APP_ID | Program identifier |
+| `id` | Python | APP_ID | Program identifier |
 | `name` | String | APP_NAME | Program name |
-| `type` | String | PE_VERSION | AddOn type |
+| `type` | String |  | AddOn type |
 | `publisher` | String | PUBLISHER | Program publisher |

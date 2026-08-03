@@ -22,7 +22,7 @@ Parses CSV files produced by ORC that enumerate running processes. It extracts e
 | Timeline Field | Data Field |
 |---|---|
 |Description    | `name`   |
-|Additional Description    | `command_line`   |
+|Additional Description    | `process_id`   |
 |    | `executable_path`   |
 
 ### Fields 

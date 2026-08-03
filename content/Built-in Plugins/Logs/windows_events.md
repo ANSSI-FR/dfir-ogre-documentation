@@ -43,7 +43,7 @@ Parses windows evtx logs.
 | `system.time_created.system_time` | DateTime | DATE_CREATION | system time recorded for the event |
 | `system.provider` | Object |  |  |
 | `system.provider.provider_name` | String |  | name of the event provider |
-| `system.provider.guid` | String |  | GUID of the event provider |
+| `system.provider.guid` | Python |  | GUID of the event provider |
 | `system.execution` | Object |  |  |
 | `system.execution.process_id` | String |  | process identifier that generated the event |
 | `system.execution.thread_id` | String |  | thread identifier that generated the event |
@@ -51,6 +51,7 @@ Parses windows evtx logs.
 | `system.computer` | String |  | name of the computer that logged the event |
 | `system.event_id` | String |  | numeric identifier of the event type |
 | `event_data` | Object |  |  |
+| `event_data.class_guid` | Python |  | GUID of the device setup class |
 | `user_data` | Object |  |  |
 | `debug_data` | Object |  |  |
 | `binary_event_data` | Object |  |  |

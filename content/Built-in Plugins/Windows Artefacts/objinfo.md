@@ -18,7 +18,11 @@ Parses files produced by the GetObjInfo utility, extracting Windows object infor
 
 ### Timeline 
 
-{{< callout type="warning" >}}This plugin does not contains timestamped data and cannot be used to create a timeline{{< /callout >}}
+| Timeline Field | Data Field |
+|---|---|
+|Description    | `object_name`   |
+|Additional Description    | `object_path`   |
+
 ### Fields 
 
 | Output Name | Data Type | Qualifier | Description |

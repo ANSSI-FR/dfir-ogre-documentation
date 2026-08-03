@@ -108,6 +108,7 @@ timeline:
     format: jsonl
     date_format: iso_utc
     with_timeline: true
+    timeline_include_undated: true
     include_empty_field: false
     output_folder: $output_folder/timeline_data/$mapping_label/$computer_name
     base_file_name: $file_name
@@ -134,6 +135,8 @@ This example defines an output template named `timeline` that will write JSONL t
   - *utc_naive*: Simple UTC format without timezone (some downstream systems may prefer this incomplete format). Example: *1978-04-16 08:31:42.123456*.
 
 - **with_timeline**: Indicates whether a timeline format should be included. During parsing, an error will be raised if the plugin does not support timeline generation.
+
+**timeline_include_undated** with **with\_timeline: true** indicate whether to emit timeline records even if there is no valid date for an entry. Records are inserted with **timestamp: null** and **timestamp_meaning: "empty placeholder"** 
 
 - **include_empty_field**: Indicates whether empty fields should be included in the output.
 

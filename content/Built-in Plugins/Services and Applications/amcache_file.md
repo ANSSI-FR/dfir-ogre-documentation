@@ -11,7 +11,7 @@
 Retrieves cached executable file metadata from the Windows `AmCache` hive.
 
 - Expose what the OS stores for quick access to recently used files.
-- Extracts file name, path, size, SHA‑1 hash, program identifiers, version info, timestamps, and security descriptors for forensic examination.
+- Extracts file name, path, size, raw Amcache file ID, normalized SHA‑1 hash, program identifiers, version info, timestamps, and security descriptors for forensic examination.
 
 
 ### Timeline 
@@ -33,7 +33,8 @@ Retrieves cached executable file metadata from the Windows `AmCache` hive.
 | `path` | String | FILE_PATH | file path |
 | `size` | Int | FILE_SIZE | size in bytes |
 | `program_id` | String | APP_ID | program ID, if it exists |
-| `sha1` | String | FILE_SHA1 | SHA-1 hash of the file |
+| `file_id` | String |  | raw Amcache FileId or legacy value 101 |
+| `sha1` | String | FILE_SHA1 | normalized 40-hex SHA-1 hash of the file |
 | `product_name` | String | PRODUCT | Product name |
 | `company_name` | String | COMPANY | Company name |
 | `product_version` | String | PE_VERSION | Product version |
@@ -59,8 +60,21 @@ Retrieves cached executable file metadata from the Windows `AmCache` hive.
 | `key_security.owner_sid` | String | USER_SID | SID of the user that owns the registry key |
 | `key_security.group_sid` | String |  | SID of the group that owns the registry key |
 | `key_security.control_flags[]` | Array[String] |  | security descriptor control flags for the key |
-| `key_security.dacl_ace` | Object |  |  |
-| `key_security.dacl_ace.ace_type` | String |  | type of ACE (e.g., allow, deny) |
-| `key_security.dacl_ace.account_sid` | String |  | SID of the account the ACE applies to |
-| `key_security.dacl_ace.ace_flags[]` | Array[String] |  | ACE flags that modify inheritance or behavior |
-| `key_security.dacl_ace.rights[]` | Array[String] |  | permissions granted or denied by the ACE |
+| `key_security.sacl_aces[]` | Array[Object] |  |  |
+| `key_security.sacl_aces[].ace_type` | String |  | type of ACE (e.g., allow, deny) |
+| `key_security.sacl_aces[].ace_flags[]` | Array[String] |  | ACE flags that modify inheritance or behavior |
+| `key_security.sacl_aces[].rights[]` | Array[String] |  | permissions granted or denied by the ACE |
+| `key_security.sacl_aces[].account_sid` | String |  | SID of the account the ACE applies to |
+| `key_security.sacl_aces[].ace_size` | Int |  | declared ACE size in bytes |
+| `key_security.sacl_aces[].object_type_guid` | String |  | GUID identifying the object type governed by the ACE |
+| `key_security.sacl_aces[].inherited_object_type_guid` | String |  | GUID identifying the inherited object type governed by the ACE |
+| `key_security.sacl_aces[].raw_hex` | String |  | raw ACE bytes preserved as hexadecimal |
+| `key_security.dacl_aces[]` | Array[Object] |  |  |
+| `key_security.dacl_aces[].ace_type` | String |  | type of ACE (e.g., allow, deny) |
+| `key_security.dacl_aces[].ace_flags[]` | Array[String] |  | ACE flags that modify inheritance or behavior |
+| `key_security.dacl_aces[].rights[]` | Array[String] |  | permissions granted or denied by the ACE |
+| `key_security.dacl_aces[].account_sid` | String |  | SID of the account the ACE applies to |
+| `key_security.dacl_aces[].ace_size` | Int |  | declared ACE size in bytes |
+| `key_security.dacl_aces[].object_type_guid` | String |  | GUID identifying the object type governed by the ACE |
+| `key_security.dacl_aces[].inherited_object_type_guid` | String |  | GUID identifying the inherited object type governed by the ACE |
+| `key_security.dacl_aces[].raw_hex` | String |  | raw ACE bytes preserved as hexadecimal |

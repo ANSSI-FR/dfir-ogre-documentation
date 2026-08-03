@@ -16,6 +16,8 @@ From a digital‑forensic perspective a shortcut can reveal:
 - **command‑line arguments, working directory, icon information, hot‑key, window style** – all useful for reconstructing the user’s workflow.
 - **Link‑flags, file‑attributes, and extra data blocks** (e.g., Distributed Link Tracker, Shim layer, console properties) that can indicate the presence of shims, virtualisation, or relocation attempts.
 
+Each LNK or Jump List is paired with the SYSTEM hive from the same VSS snapshot. DOS/FAT timestamps embedded in target ID lists are local wall-clock values and are converted to UTC using that hive; FILETIME values in the LNK header remain unchanged.
+
 
 ### Timeline 
 
@@ -82,7 +84,7 @@ From a digital‑forensic perspective a shortcut can reveal:
 | `extra.metadata_properties.size` | Int |  |  |
 | `extra.metadata_properties.property_store[]` | Array[Object] |  | A serialized property storage structure |
 | `extra.metadata_properties.property_store[].version` | String |  | Has to be equal to 0x53505331. |
-| `extra.metadata_properties.property_store[].format_id` | String |  | A GUID that specifies the semantics and expected usage of the properties contained in this Serialized Property Storage structure. It MUST be unique in the set of serialized property storage structures. |
+| `extra.metadata_properties.property_store[].format_id` | StringToLower |  | A GUID that specifies the semantics and expected usage of the properties contained in this Serialized Property Storage structure. It MUST be unique in the set of serialized property storage structures. |
 | `extra.metadata_properties.property_store[].serialized_property_values[]` | Array[Object] |  |  |
 | `extra.metadata_properties.property_store[].serialized_property_values[].value_type` | String |  |  |
 | `extra.metadata_properties.property_store[].serialized_property_values[].value` | Dynamic |  |  |
@@ -151,12 +153,12 @@ From a digital‑forensic perspective a shortcut can reveal:
 | `target.items[].identifiers` | Object |  |  |
 | `target.items[].item_class` | String |  | Common to every item types (RootFolder, VolumeItem, FileEntry, Internet, ControlPanel, UsersFilesFolder, Unknown). Indicates the type of element (Root Folder, Volume Item, File entry, etc...). |
 | `target.items[].sort_index` | String |  | For items type 'RootFolder', should contains the root of the link. |
-| `target.items[].guid` | String |  | For items type 'RootFolder', should contains a ShellFolderID. |
+| `target.items[].guid` | StringToLower |  | For items type 'RootFolder', should contains a ShellFolderID. |
 | `target.items[].class_type_indicator` | Int |  | Raw form (int) of flags; verify and hide if correct |
 | `target.items[].flags` | String |  | For items type 'VolumeItem' and 'FileEntry', contains a flag, possibly as a string if interpreted by the parser (examples: Is directory, Is file) and an int/hex value otherwise. |
 | `target.items[].data` | String |  | For items type 'VolumeItem', should contain the volume letter. |
 | `target.items[].size` | Int | FILE_SIZE | For items type 'FileEntry', contains the size of the target file (and probably 0 for a directory). |
-| `target.items[].modification_time` | DateTime | DATE_MODIFICATION | For items type 'FileEntry', last modification date of the target file? |
+| `target.items[].modification_time` | DateTime | DATE_MODIFICATION | For FileEntry items, UTC last-modification timestamp converted from the embedded DOS/FAT local time using the matching SYSTEM hive |
 | `target.items[].file_attribute_flags` | Int |  | For items type 'FileEntry', target file attributes; interpreted? |
 | `target.items[].primary_name` | String |  | For items type 'FileEntry', name of a file or directory in the target path. |
 | `target.items[].item_identifier` | String |  | For items type 'ControlPanel' |

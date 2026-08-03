@@ -4,15 +4,15 @@
 
 
 {{< callout type="important" >}}Data Type: **activity_cache** \
-	Python Parser: **SQLite**{{< /callout >}}
+	Python Parser: **ActivityCache**{{< /callout >}}
 
 ### Description 
 
-Extracts rows from the *Activity* SQLite table that records Windows 10 Timeline events. Each row represents a user‑initiated action, linking an application to a time span and optional payload data.
+Extracts normalized records from the *Activity* and *ActivityOperation* tables used by Windows Activities Cache across schema versions. Matching logical versions are combined without collapsing distinct queued operations, and each result records its table provenance.
 
-- Provides a chronological view of user activity across applications.
-- Captures start / end timestamps for precise temporal analysis.
-- Stores raw payload for deeper forensic investigation of the activity context.
+- Detects legacy, modern, and partial layouts from available table columns.
+- Uses the native start time when present and explicitly marks a last-modified fallback.
+- Preserves payload evidence while emitting stable typed fields for analysis and timelines.
 
 
 ### Timeline 
@@ -28,13 +28,48 @@ Extracts rows from the *Activity* SQLite table that records Windows 10 Timelin
 
 | Output Name | Data Type | Qualifier | Description |
 |---|---|---|---|
-| `app_id` | String |  | identifier of the application that generated the activity |
-| `app_activity_id` | String |  | unique identifier for the specific activity event |
-| `group` | String |  | grouping value used to categorize related activities |
-| `tag` | String |  | optional tag associated with the activity |
-| `payload` | String |  | raw payload data (e.g., JSON) containing additional activity details |
-| `created_in_cloud` | DateTime |  | timestamp when the activity was created or synced in the cloud |
-| `start_time` | DateTime |  | timestamp marking the start of the activity |
-| `end_time` | DateTime |  | timestamp marking the end of the activity |
-| `last_modified_on_client` | DateTime |  | local client timestamp of the last modification to the activity record |
-| `original_last_modified_on_client` | DateTime |  | original client timestamp before any subsequent modifications |
+| `record_source` | String |  | source table or merged source tables for this logical version |
+| `database_user_version` | Int |  | SQLite PRAGMA user_version recorded for schema provenance |
+| `start_time_source` | String |  | native start_time, last_modified_time fallback, or unavailable |
+| `id` | String |  | binary-safe activity identifier |
+| `app_id` | String |  | application identity definitions associated with the activity |
+| `package_id_hash` | String |  | package identity hash |
+| `app_activity_id` | String |  | application-defined activity identifier |
+| `activity_type` | Int |  | numeric activity type |
+| `activity_status` | Int |  | persisted activity status |
+| `parent_activity_id` | String |  | identifier of the parent activity |
+| `tag` | String |  | application-defined activity tag |
+| `group` | String |  | activity grouping value |
+| `match_id` | String |  | activity matching identifier |
+| `last_modified_time` | DateTime |  | last modification time stored by the service |
+| `expiration_time` | DateTime |  | activity expiration time |
+| `payload` | String |  | encoded activity payload |
+| `priority` | Int |  | activity priority |
+| `originating_device` | String |  | legacy originating device value |
+| `is_local_only` | Bool |  | whether the activity is restricted to the local device |
+| `platform_device_id` | String |  | platform device identifier |
+| `dds_device_id` | String |  | Connected Devices Platform device identifier |
+| `created_in_cloud` | DateTime |  | cloud creation time |
+| `start_time` | DateTime | DATE_START | native or explicitly identified fallback start time |
+| `end_time` | DateTime |  | activity end time |
+| `last_modified_on_client` | DateTime |  | last client modification time |
+| `group_app_activity_id` | String |  | application activity identifier for the group |
+| `clipboard_payload` | String |  | encoded clipboard payload |
+| `enterprise_id` | String |  | enterprise scope identifier |
+| `original_payload` | String |  | encoded original activity payload |
+| `user_action_state` | Int |  | numeric user action state |
+| `is_read` | Bool |  | whether the activity has been read |
+| `original_last_modified_on_client` | DateTime |  | original client modification time |
+| `group_items` | String |  | serialized activity group items |
+| `local_expiration_time` | DateTime |  | local activity expiration time |
+| `e_tag` | Int |  | logical activity version tag |
+| `operation_order` | Int |  | ordered ActivityOperation sequence number |
+| `operation_type` | Int |  | numeric queued operation type |
+| `created_time` | DateTime |  | queued operation creation time |
+| `attachments` | String |  | legacy serialized operation attachments |
+| `operation_expiration_time` | DateTime |  | queued operation expiration time |
+| `correlation_vector` | String |  | operation correlation vector |
+| `upload_allowed_by_policy` | Bool |  | whether policy permits uploading the operation |
+| `patch_fields` | String |  | encoded operation patch fields |
+| `throttle_release_time` | DateTime |  | time at which operation throttling is released |
+| `publish_process_status` | Int |  | numeric operation publishing status |

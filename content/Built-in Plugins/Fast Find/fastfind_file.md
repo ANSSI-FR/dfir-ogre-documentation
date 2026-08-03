@@ -4,7 +4,7 @@
 
 
 {{< callout type="important" >}}Data Type: **fastfind_file** \
-	Python Parser: **FastFindFile**{{< /callout >}}
+	Python Parser: **FastFind**{{< /callout >}}
 
 ### Description 
 

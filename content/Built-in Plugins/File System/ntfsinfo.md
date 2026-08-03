@@ -27,7 +27,7 @@ Extract NTFS's Master File Table (MFT) from an ORC‑generated CSV file.
 
 | Output Name | Data Type | Qualifier | Description |
 |---|---|---|---|
-| `snapshot_id` | String |  |  |
+| `snapshot_id` | Python |  |  |
 | `parent` | String |  | full parent directory path of the entry |
 | `file_name` | String |  | name of the file without path |
 | `extension` | String |  | file extension (e.g., .txt, .exe) |

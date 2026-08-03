@@ -18,7 +18,7 @@ ParsesWindows Error Reporting files (WER), extracting metadata about crashes,
 |---|---|
 |Description    | `app_path`   |
 |Additional Description    | `event_type`   |
-|    | `original_file_name`   |
+|    | `original_filename`   |
 |    | `ns_app_name`   |
 
 ### Fields 
@@ -38,11 +38,12 @@ ParsesWindows Error Reporting files (WER), extracting metadata about crashes,
 | `etw_non_collect_reason` | Int |  | Reason code why ETW data was not collected |
 | `metadata_hash` | String |  | Hash of the report metadata for integrity verification |
 | `application_identity` | String |  | Unique identifier of the reported application |
-| `report_identifier` | String |  | Globally unique identifier for this WER report |
+| `report_identifier` | Python |  | Globally unique identifier for this WER report |
+| `integrator_report_identifier` | Python |  | Globally unique identifier assigned by the report integrator |
 | `wow64_host` | String |  | Indicates if the report originated from a WoW64 (32‑bit on 64‑bit) process |
 | `ns_app_name` | String |  | Namespace‑scoped name of the application |
 | `original_filename` | String |  | Original file name of the crashed executable |
-| `app_session_guid` | String |  | GUID of the application session that generated the report |
+| `app_session_guid` | Python |  | GUID of the application session that generated the report |
 | `target_app_id` | String |  | Identifier of the target application |
 | `target_app_ver` | String |  | Version of the target application |
 | `app_path` | String |  | Full file‑system path to the application executable |

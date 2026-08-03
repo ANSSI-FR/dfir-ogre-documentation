@@ -28,7 +28,11 @@ Parse the `GetThis` files produced by Orc and retrieve information about the
 | Output Name | Data Type | Qualifier | Description |
 |---|---|---|---|
 | `volume_id` | String |  | identifier of the volume that contains the file |
+| `parent_sequence_number` | Int |  | sequence part of the parent FRN |
+| `parent_record_number` | Int |  | record part of the parent FRN |
 | `ParentFRN` | Extension |  | file reference number (FRN) of the parent directory |
+| `sequence_number` | Int |  | sequence part of the FRN |
+| `record_number` | Int |  | record part of the FRN |
 | `FRN` | Extension |  | file reference number (FRN) of the file itself |
 | `full_name` | String |  | full absolute path of the collected file |
 | `sample_name` | String |  | name of the sample or collection set the file belongs to |
@@ -50,7 +54,7 @@ Parse the `GetThis` files produced by Orc and retrieve information about the
 | `attr_type` | String |  | type of the NTFS attribute |
 | `attr_name` | String |  | name of the NTFS attribute |
 | `attr_id` | Int |  | numeric identifier of the NTFS attribute |
-| `snapshot_id` | String |  | identifier of the snapshot from which the file was extracted |
+| `snapshot_id` | Python |  | identifier of the snapshot from which the file was extracted |
 | `ss_deep` | String |  | ssdeep fuzzy hash of the file |
 | `tlsh` | String |  | TLSH hash of the file |
 | `yara_rules` | String |  | YARA rule(s) that matched the file |

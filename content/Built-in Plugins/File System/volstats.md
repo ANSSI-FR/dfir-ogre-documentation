@@ -30,7 +30,7 @@ Parses a Windows volume‑statistics csv file. Each line describes:.
 | `volume_type` | String |  | File system type (FAT, NTFS, etc.) |
 | `is_parsed` | Bool |  |  |
 | `mount_point` | String |  | Path where the volume is mounted |
-| `shadow_copy` | String |  | Identifier of the associated VSS snapshot, if any |
+| `shadow_copy` | Python |  | Identifier of the associated VSS snapshot, if any |
 | `fileinfo` | String |  | raw file‑information from the volume |
 | `i30info` | String |  | directory index ($I30) information for the volume |
 | `attrinfo` | String |  | NTFS attribute information for the volume |

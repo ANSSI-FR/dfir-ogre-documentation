@@ -4,7 +4,7 @@
 
 
 {{< callout type="important" >}}Data Type: **autoruns** \
-	Python Parser: **Csv**{{< /callout >}}
+	Python Parser: **Autoruns**{{< /callout >}}
 
 ### Description 
 
@@ -30,7 +30,7 @@ Parses CSV files produced by the Windows Autoruns utility, extracting entries 
 
 | Output Name | Data Type | Qualifier | Description |
 |---|---|---|---|
-| `time` | DateTime |  | timestamp of the autorun entry |
+| `time` | Python |  | timestamp of the autorun entry |
 | `entry_location` | String | KEY_PATH | registry key path where the autorun entry is stored |
 | `entry_name` | String | KEY_NAME | name of the registry value representing the autorun entry |
 | `enabled` | Bool |  | indicates whether the autorun entry is enabled (active) |

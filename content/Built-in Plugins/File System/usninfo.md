@@ -65,4 +65,4 @@ Parses the CSV export of the Windows USN Journal. It extracts metadata for eve
 | `file_name_flags` | Extension |  |  |
 | `reason` | Split |  | reason codes describing why the USN entry was generated |
 | `volume_id` | String |  | identifier of the volume on which the change occurred |
-| `snapshot_id` | String |  | identifier of the volume snapshot (if applicable) |
+| `snapshot_id` | Python |  | identifier of the volume snapshot (if applicable) |
