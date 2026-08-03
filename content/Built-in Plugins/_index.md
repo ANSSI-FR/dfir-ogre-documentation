@@ -48,12 +48,12 @@ The plugins are located in dfir-ogre-plugin-windows/configuration folder
  {{< card link="windows-artefacts/clsid_software" title="Clsid Software" subtitle="Extracts every CLSID registration stored in the machine‑wide `Software` hive" tag="Windows Artefacts" tagColor="amber">}}
  {{< card link="logs/evt" title="Evt" subtitle="Parse Windows EventLog (EVT) files and emit one record per event" tag="Logs" tagColor="purple">}}
  {{< card link="application-specific/explorer_search_history" title="Explorer Search History" subtitle="Extracts Windows 7 and later Explorer search history from WordWheelQuery in the `NTUSER" tag="Application Specific" tagColor="green">}}
- {{< card link="fast-find/fastfind_file" title="Fastfind File" subtitle="Parse the filesystem results of the fastfind tool" tag="Fast Find" tagColor="amber">}}
- {{< card link="fast-find/fastfind_obj" title="Fastfind Obj" subtitle="Parse the object result of the fastfind tool" tag="Fast Find" tagColor="amber">}}
- {{< card link="fast-find/fastfind_reg" title="Fastfind Reg" subtitle="Parse the registry results of the fastfind tool" tag="Fast Find" tagColor="amber">}}
+ {{< card link="fast-find/fastfind_file" title="Fastfind File" subtitle="Parse the filesystem results of the fastfind tool" tag="Fast Find" tagColor="yellow">}}
+ {{< card link="fast-find/fastfind_obj" title="Fastfind Obj" subtitle="Parse the object result of the fastfind tool" tag="Fast Find" tagColor="yellow">}}
+ {{< card link="fast-find/fastfind_reg" title="Fastfind Reg" subtitle="Parse the registry results of the fastfind tool" tag="Fast Find" tagColor="yellow">}}
  {{< card link="browser-artefacts/firefox_extension" title="Firefox Extension" subtitle="Extracts metadata from Firefox browser add‑ons (version 26+)" tag="Browser Artefacts" tagColor="red">}}
  {{< card link="file-system/getthis" title="Getthis" subtitle="Parse the `GetThis` files produced by Orc and retrieve information about the       collected files" tag="File System" tagColor="yellow">}}
- {{< card link="/hive" title="Hive" subtitle="Parse Windows Registry hive values" tag="" tagColor="purple">}}
+ {{< card link="windows-artefacts/hive" title="Hive" subtitle="Parse Windows Registry hive values" tag="Windows Artefacts" tagColor="amber">}}
  {{< card link="file-system/i30info" title="I30Info" subtitle="Extract NTFS's $i30 informations from an ORC‑generated CSV file" tag="File System" tagColor="yellow">}}
  {{< card link="browser-artefacts/ie_webcache_history" title="Ie Webcache History" subtitle="Extracts browsing history records from Internet Explorer 10+ WebCache databases (WebCacheV01" tag="Browser Artefacts" tagColor="red">}}
  {{< card link="application-specific/java_idx" title="Java Idx" subtitle="Extracts metadata about each downloaded artifact, including its URL, server IP, size, timestamps and signing status" tag="Application Specific" tagColor="green">}}
@@ -87,10 +87,10 @@ The plugins are located in dfir-ogre-plugin-windows/configuration folder
  {{< card link="services-and-applications/srum_energy_estimation" title="Srum Energy Estimation" subtitle="Parse data from srum" tag="Services and Applications" tagColor="blue">}}
  {{< card link="windows-artefacts/srum_energy_usage" title="Srum Energy Usage" subtitle="Srum table that tracks stores the per‑process estimates of how much electrical       energy Windows thinks each component has consumed over time" tag="Windows Artefacts" tagColor="amber">}}
  {{< card link="windows-artefacts/srum_energy_usage_long_term" title="Srum Energy Usage Long Term" subtitle="Srum table that tracks long term, per‑process estimates of how much electrical       energy Windows thinks each component has consumed over time" tag="Windows Artefacts" tagColor="amber">}}
- {{< card link="network/srum_network_connectivity_usage" title="Srum Network Connectivity Usage" subtitle="Srum table that tracks network connection time statistics per interface" tag="Network" tagColor="amber">}}
- {{< card link="network/srum_network_data_usage" title="Srum Network Data Usage" subtitle="SRUM table that tracks how much network traffic each installed app consumes" tag="Network" tagColor="amber">}}
+ {{< card link="network/srum_network_connectivity_usage" title="Srum Network Connectivity Usage" subtitle="Srum table that tracks network connection time statistics per interface" tag="Network" tagColor="yellow">}}
+ {{< card link="network/srum_network_data_usage" title="Srum Network Data Usage" subtitle="SRUM table that tracks how much network traffic each installed app consumes" tag="Network" tagColor="yellow">}}
  {{< card link="services-and-applications/srum_sdp_cpu" title="Srum Sdp Cpu" subtitle="Srum table for windows server 2022 that tracks cpu time" tag="Services and Applications" tagColor="blue">}}
- {{< card link="network/srum_sdp_network" title="Srum Sdp Network" subtitle="Srum table for windows server 2022 that tracks network activity" tag="Network" tagColor="amber">}}
+ {{< card link="network/srum_sdp_network" title="Srum Sdp Network" subtitle="Srum table for windows server 2022 that tracks network activity" tag="Network" tagColor="yellow">}}
  {{< card link="file-system/srum_sdp_physical_disk" title="Srum Sdp Physical Disk" subtitle="Srum table for windows server 2022 that tracks physical drive information" tag="File System" tagColor="yellow">}}
  {{< card link="file-system/srum_sdp_volume" title="Srum Sdp Volume" subtitle="Srum table for windows server 2022 that tracks storage volumes information" tag="File System" tagColor="yellow">}}
  {{< card link="windows-artefacts/srum_tagged_energy" title="Srum Tagged Energy" subtitle="Parse data from Srum `tagged_energy` table       ```{B6D82AF1-F780-4E17-8077-6CB9AD8A6FC4}```       ()" tag="Windows Artefacts" tagColor="amber">}}
@@ -98,7 +98,7 @@ The plugins are located in dfir-ogre-plugin-windows/configuration folder
  {{< card link="windows-artefacts/srum_wpn_provider" title="Srum Wpn Provider" subtitle="Srum table that tracks telemetry that Windows collects about the Windows Push       Notification (WPN) service – i" tag="Windows Artefacts" tagColor="amber">}}
  {{< card link="services-and-applications/subject_interface_package" title="Subject Interface Package" subtitle="Extracts Subject Interface Package (SIP) records from the Windows `Software` hive" tag="Services and Applications" tagColor="blue">}}
  {{< card link="system-information/systeminfo" title="Systeminfo" subtitle="Parses the Windows SystemInfo CSV file generated by the `systeminfo` command" tag="System Information" tagColor="indigo">}}
- {{< card link="network/tcpvcon" title="Tcpvcon" subtitle="Parse a TCPView “Tcpvcon" tag="Network" tagColor="amber">}}
+ {{< card link="network/tcpvcon" title="Tcpvcon" subtitle="Parse a TCPView “Tcpvcon" tag="Network" tagColor="yellow">}}
  {{< card link="services-and-applications/user_assist" title="User Assist" subtitle="Extracts execution data stored in the `NTUser` hive" tag="Services and Applications" tagColor="blue">}}
  {{< card link="system-information/user_profile" title="User Profile" subtitle="Extracts data about Windows user profiles from the `Software` hive" tag="System Information" tagColor="indigo">}}
  {{< card link="file-system/usninfo" title="Usninfo" subtitle="Parses the CSV export of the Windows USN Journal" tag="File System" tagColor="yellow">}}
