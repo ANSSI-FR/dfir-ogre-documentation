@@ -50,7 +50,7 @@ This manual installation method is intended for debugging or custom plugin devel
 	<meta itemprop="description" content="DFIR-OGRE has only been tested on Debian systems and does not work on Windows. A Docker installation procedure is available to ensure better portability. This manual installation method is intended for debugging or custom plugin development, as it offers less control over resource usage compared to the Docker‑based installation.">
 	<meta itemprop="datePublished" content="2026-01-06T15:52:05+01:00">
 	<meta itemprop="dateModified" content="2026-01-06T15:52:05+01:00">
-	<meta itemprop="wordCount" content="191">
+	<meta itemprop="wordCount" content="197">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Manual Installation">
 	<meta name="twitter:description" content="DFIR-OGRE has only been tested on Debian systems and does not work on Windows. A Docker installation procedure is available to ensure better portability. This manual installation method is intended for debugging or custom plugin development, as it offers less control over resource usage compared to the Docker‑based installation.">
@@ -1720,8 +1720,8 @@ A <a href="/dfir-ogre-documentation/getting-started/docker_installation/"title="
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Choose a location where you keep all the sources</span>
 </span></span><span class="line"><span class="cl">mkdir -p ~/dfir-ogre <span class="o">&amp;&amp;</span> <span class="nb">cd</span> ~/dfir-ogre
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">git clone https://github.com/ANSSI-FR/dfir-ogre-plugin-windows.git
-</span></span><span class="line"><span class="cl">git clone https://github.com/ANSSI-FR/dfir-ogre.git
+</span></span><span class="line"><span class="cl">git clone --branch 2.0.0-beta2 --single-branch https://github.com/ANSSI-FR/dfir-ogre-plugin-windows.git
+</span></span><span class="line"><span class="cl">git clone --branch 2.0.0-beta2 --single-branch https://github.com/ANSSI-FR/dfir-ogre.git
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">#create the virtual environment</span>
 </span></span><span class="line"><span class="cl">uv venv 

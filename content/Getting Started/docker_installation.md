@@ -13,7 +13,7 @@ This is the recommended way to use **DFIR-OGRE** as it allows for finer control 
 
 Run the following command to create a `dfir-ogre:latest` image
 ```bash
-git clone https://github.com/ANSSI-FR/dfir-ogre.git
+git clone --branch 2.0.0-beta2 --single-branch https://github.com/ANSSI-FR/dfir-ogre.git
 cd dfir-ogre/docker
 ./build.sh
 ```

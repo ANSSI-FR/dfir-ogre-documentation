@@ -30,8 +30,8 @@ This manual installation method is intended for debugging or custom plugin devel
 # Choose a location where you keep all the sources
 mkdir -p ~/dfir-ogre && cd ~/dfir-ogre
 
-git clone https://github.com/ANSSI-FR/dfir-ogre-plugin-windows.git
-git clone https://github.com/ANSSI-FR/dfir-ogre.git
+git clone --branch 2.0.0-beta2 --single-branch https://github.com/ANSSI-FR/dfir-ogre-plugin-windows.git
+git clone --branch 2.0.0-beta2 --single-branch https://github.com/ANSSI-FR/dfir-ogre.git
 
 #create the virtual environment
 uv venv 
