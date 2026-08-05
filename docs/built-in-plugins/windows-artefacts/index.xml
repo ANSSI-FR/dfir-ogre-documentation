@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DFIR-OGRE documentation – Windows Artefacts</title>
-    <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/</link>
+    <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/</link>
     <description>Recent content in Windows Artefacts on DFIR-OGRE documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>CLSID Software</title>
-      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/clsid_software/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/clsid_software/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/clsid_software/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/clsid_software/</guid>
       <description>
         
         
@@ -219,10 +219,10 @@ Python Parser: &lt;strong&gt;RegClsIdSoftware&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>CLSID Users</title>
-      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/clsid_users/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/clsid_users/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/clsid_users/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/clsid_users/</guid>
       <description>
         
         
@@ -422,10 +422,10 @@ Python Parser: &lt;strong&gt;RegClsIdIUser&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Hive</title>
-      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/hive/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/hive/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/hive/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/hive/</guid>
       <description>
         
         
@@ -476,12 +476,12 @@ Python Parser: &lt;strong&gt;HiveKey&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;path&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Full path of the registry key&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;mtime&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Last write (modification) time of the registry key&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;security_descriptor&lt;/code&gt;&lt;/td&gt;
@@ -491,17 +491,17 @@ Python Parser: &lt;strong&gt;HiveKey&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;security_descriptor.owner_sid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;SID of the key owner&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;security_descriptor.group_sid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;SID of the primary group of the key&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;security_descriptor.control_flags[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Security descriptor control flags (e.g., SE_DACL_PRESENT)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;security_descriptor.sacl_aces[]&lt;/code&gt;&lt;/td&gt;
@@ -511,42 +511,42 @@ Python Parser: &lt;strong&gt;HiveKey&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;security_descriptor.sacl_aces[].ace_type&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Type of ACE (e.g., ACCESS_ALLOWED, ACCESS_DENIED)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;security_descriptor.sacl_aces[].ace_flags[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;ACE flags that modify inheritance or behavior&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;security_descriptor.sacl_aces[].rights[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Access rights granted or denied by the ACE&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;security_descriptor.sacl_aces[].account_sid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;SID of the account the ACE applies to&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;security_descriptor.sacl_aces[].ace_size&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Size of the ACE structure in bytes&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;security_descriptor.sacl_aces[].object_type_guid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;GUID identifying the ACE object type&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;security_descriptor.sacl_aces[].inherited_object_type_guid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;GUID identifying the inherited object type&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;security_descriptor.sacl_aces[].raw_hex&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Raw ACE bytes as hexadecimal&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;security_descriptor.dacl_aces[]&lt;/code&gt;&lt;/td&gt;
@@ -556,77 +556,77 @@ Python Parser: &lt;strong&gt;HiveKey&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;security_descriptor.dacl_aces[].ace_type&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Type of ACE (e.g., ACCESS_ALLOWED, ACCESS_DENIED)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;security_descriptor.dacl_aces[].ace_flags[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;ACE flags that modify inheritance or behavior&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;security_descriptor.dacl_aces[].rights[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Access rights granted or denied by the ACE&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;security_descriptor.dacl_aces[].account_sid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;SID of the account the ACE applies to&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;security_descriptor.dacl_aces[].ace_size&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Size of the ACE structure in bytes&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;security_descriptor.dacl_aces[].object_type_guid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;GUID identifying the ACE object type&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;security_descriptor.dacl_aces[].inherited_object_type_guid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;GUID identifying the inherited object type&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;security_descriptor.dacl_aces[].raw_hex&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Raw ACE bytes as hexadecimal&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;name&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Name of the registry value&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;data&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Data stored in the registry value&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;type&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Registry value type (REG_*)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;size&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Size of the value data in bytes&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;is_placeholder&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Bool&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Whether the value is a placeholder&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;invalid_signature&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Bool&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Whether the value has an invalid signature&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;error&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Parse error message, if any&lt;/td&gt;
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
@@ -636,10 +636,10 @@ Python Parser: &lt;strong&gt;HiveKey&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Lnk</title>
-      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/lnk/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/lnk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/lnk/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/lnk/</guid>
       <description>
         
         
@@ -704,22 +704,22 @@ Python Parser: &lt;strong&gt;LnkBatched&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;type&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Type of the shell link record&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;status&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Parsing status of the .lnk record&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;size&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Size of the .lnk record in bytes&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;modification_time&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Modification time of the .lnk file&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;header&lt;/code&gt;&lt;/td&gt;
@@ -799,7 +799,7 @@ Python Parser: &lt;strong&gt;LnkBatched&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;data.size&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Size of the link data block in bytes&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;data.description&lt;/code&gt;&lt;/td&gt;
@@ -844,7 +844,7 @@ Python Parser: &lt;strong&gt;LnkBatched&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.icon_location.size&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Size of the icon location data block&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.icon_location.target_ansi&lt;/code&gt;&lt;/td&gt;
@@ -864,7 +864,7 @@ Python Parser: &lt;strong&gt;LnkBatched&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.environmental_variables_location.size&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Size of the environment variables data block&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.environmental_variables_location.target_ansi&lt;/code&gt;&lt;/td&gt;
@@ -894,17 +894,17 @@ Python Parser: &lt;strong&gt;LnkBatched&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.darwin_properties.product_code_id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;StringToLower&lt;/td&gt;
-					&lt;td&gt;Field created by the parser by interpreting the previous fields?&lt;/td&gt;
+					&lt;td&gt;Product code (GUID) of the MSI product&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.darwin_properties.feature_name&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;Field created by the parser by interpreting the previous fields?&lt;/td&gt;
+					&lt;td&gt;Feature name of the MSI product&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.darwin_properties.component_id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;Field created by the parser by interpreting the previous fields?&lt;/td&gt;
+					&lt;td&gt;Component identifier of the MSI product&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.special_folder_location&lt;/code&gt;&lt;/td&gt;
@@ -939,7 +939,7 @@ Python Parser: &lt;strong&gt;LnkBatched&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.metadata_properties.size&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Size of the metadata properties data block&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.metadata_properties.property_store[]&lt;/code&gt;&lt;/td&gt;
@@ -964,27 +964,27 @@ Python Parser: &lt;strong&gt;LnkBatched&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.metadata_properties.property_store[].serialized_property_values[].value_type&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Type identifier of the property value&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.metadata_properties.property_store[].serialized_property_values[].value&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Dynamic&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Decoded serialized property value&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.metadata_properties.property_store[].serialized_property_values[].id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Property identifier&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.metadata_properties.property_store[].serialized_property_values[].name&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Property name&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.metadata_properties.property_store[].serialized_property_values[].name_size&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Length of the property name string&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.shim_layer_properties&lt;/code&gt;&lt;/td&gt;
@@ -1014,112 +1014,112 @@ Python Parser: &lt;strong&gt;LnkBatched&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.distributed_link_tracker.droid_volume_identifier&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;StringToLower&lt;/td&gt;
-					&lt;td&gt;Two values (a priori droid_volume_identifier and droid_file_identifier) in GUID packet representation that are used to find the link target with the Link Tracking service.&lt;/td&gt;
+					&lt;td&gt;GUID volume identifier used by link tracking to locate the target&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.distributed_link_tracker.droid_file_identifier&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;StringToLower&lt;/td&gt;
-					&lt;td&gt;Two values (a priori droid_volume_identifier and droid_file_identifier) in GUID packet representation that are used to find the link target with the Link Tracking service&lt;/td&gt;
+					&lt;td&gt;GUID file identifier used by link tracking to locate the target&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.distributed_link_tracker.droid_file_mft_seq&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;MFT sequence number of the target file&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.distributed_link_tracker.droid_file_frn&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;IntToHex&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Target file FRN (droid file identifier) as hexadecimal&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.distributed_link_tracker.droid_file_sequence_number&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Sequence number of the target file MFT record&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.distributed_link_tracker.droid_file_record_number&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Record number of the target file MFT entry&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.distributed_link_tracker.droid_file_mft_seq&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Extension&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Target file FRN split into record and sequence number components&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.distributed_link_tracker.droid_file_frn_hex&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Target file FRN (droid file identifier) as hexadecimal&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.distributed_link_tracker.droid_file_frn_split&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Target file FRN as record/sequence string&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.distributed_link_tracker.droid_file_timestamp&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;Information générée par le parseur grace à la résolution de droid_volume_identifier et droid_file_identifier ?&lt;/td&gt;
+					&lt;td&gt;Timestamp resolved by the parser from the droid volume and file identifiers&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.distributed_link_tracker.droid_file_mac&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;Information générée par le parseur grace à la résolution de droid_volume_identifier et droid_file_identifier ?&lt;/td&gt;
+					&lt;td&gt;MAC address resolved by the parser from the droid volume and file identifiers&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.distributed_link_tracker.droid_file_vendor&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;Information générée par le parseur grace à la résolution de droid_volume_identifier et droid_file_identifier ?&lt;/td&gt;
+					&lt;td&gt;Vendor resolved by the parser from the droid volume and file identifiers&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.distributed_link_tracker.birth_droid_volume_identifier&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;StringToLower&lt;/td&gt;
-					&lt;td&gt;Two values (a priori birth_droid_volume_identifier et birth_droid_file_identifier) in GUID packet representation that are used to find the link target with the Link Tracking service.&lt;/td&gt;
+					&lt;td&gt;GUID volume identifier of the original (birth) file for link tracking&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.distributed_link_tracker.birth_droid_file_identifier&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;StringToLower&lt;/td&gt;
-					&lt;td&gt;Two values (a priori birth_droid_volume_identifier et birth_droid_file_identifier) in GUID packet representation that are used to find the link target with the Link Tracking service.&lt;/td&gt;
+					&lt;td&gt;GUID file identifier of the original (birth) file for link tracking&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.distributed_link_tracker.birth_droid_file_mft_seq&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;MFT sequence number of the birth (original) file&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.distributed_link_tracker.birth_droid_file_frn&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;IntToHex&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Birth (original) file FRN as hexadecimal&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.distributed_link_tracker.birth_droid_file_sequence_number&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Sequence number of the birth (original) file MFT record&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.distributed_link_tracker.birth_droid_file_record_number&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Record number of the birth (original) file MFT entry&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.distributed_link_tracker.birth_droid_file_mft_seq&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Extension&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Birth (original) file FRN split into record and sequence components&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.distributed_link_tracker.birth_droid_file_timestamp&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;Timestamp generated by the parser by resolving birth_droid_volume_identifier and birth_droid_file_identifier?&lt;/td&gt;
+					&lt;td&gt;Timestamp resolved by the parser from the birth droid identifiers&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.distributed_link_tracker.birth_droid_file_mac&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;MAC address generated by the parser by resolving birth_droid_volume_identifier and birth_droid_file_identifier?&lt;/td&gt;
+					&lt;td&gt;MAC address resolved by the parser from the birth droid identifiers&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.distributed_link_tracker.birth_droid_file_vendor&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;Vendor information generated by the parser by resolving birth_droid_volume_identifier and birth_droid_file_identifier?&lt;/td&gt;
+					&lt;td&gt;Vendor resolved by the parser from the birth droid identifiers&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.console_properties&lt;/code&gt;&lt;/td&gt;
@@ -1129,7 +1129,7 @@ Python Parser: &lt;strong&gt;LnkBatched&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.console_properties.size&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Size of the console properties data block&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.console_properties.fill_attributes&lt;/code&gt;&lt;/td&gt;
@@ -1179,7 +1179,7 @@ Python Parser: &lt;strong&gt;LnkBatched&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.console_properties.font_family&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;Specifies the family of the font used in the console window. This value MUST be comprised of a font family and a font pitch. Voir le tableau de la doc pour interpréter.&lt;/td&gt;
+					&lt;td&gt;Specifies the family of the font used in the console window. This value MUST be comprised of a font family and a font pitch. See the documentation table for interpretation.&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.console_properties.font_weight&lt;/code&gt;&lt;/td&gt;
@@ -1254,17 +1254,17 @@ Python Parser: &lt;strong&gt;LnkBatched&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.terminal_properties.size&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Size of the terminal block&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.terminal_properties.appended_data_sha256&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;SHA-256 of the appended data block&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extra.terminal_properties.appended_data_base64&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Appended data block as base64&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;target&lt;/code&gt;&lt;/td&gt;
@@ -1284,7 +1284,7 @@ Python Parser: &lt;strong&gt;LnkBatched&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;target.items[].identifiers&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Object&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Identifiers of the shell item (item class and associated data)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;target.items[].item_class&lt;/code&gt;&lt;/td&gt;
@@ -1329,7 +1329,7 @@ Python Parser: &lt;strong&gt;LnkBatched&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;target.items[].file_attribute_flags&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;For items type &amp;lsquo;FileEntry&amp;rsquo;, target file attributes; interpreted?&lt;/td&gt;
+					&lt;td&gt;Target file attribute flags (for FileEntry items)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;target.items[].primary_name&lt;/code&gt;&lt;/td&gt;
@@ -1354,7 +1354,7 @@ Python Parser: &lt;strong&gt;LnkBatched&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;target.target_path&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Full path of the link target&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;link_info&lt;/code&gt;&lt;/td&gt;
@@ -1364,17 +1364,17 @@ Python Parser: &lt;strong&gt;LnkBatched&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;link_info.local_base_path&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Local base path of the target from the LinkInfo&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;link_info.common_path_suffix&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Common path suffix appended to the base path&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;link_info.location&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Location of the link target (drive or UNC)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;link_info.location_info&lt;/code&gt;&lt;/td&gt;
@@ -1384,62 +1384,62 @@ Python Parser: &lt;strong&gt;LnkBatched&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;link_info.location_info.r_drive_type&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Raw drive type value (e.g., DRIVE_FIXED)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;link_info.location_info.drive_type&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Drive type of the link target&amp;rsquo;s volume&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;link_info.location_info.drive_serial_number&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Serial number of the link target volume&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;link_info.location_info.volume_label&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Volume label of the link target volume&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;link_info.location_info.volume_label_unicode&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Volume label of the link target volume (Unicode)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;link_info.location_info.common_network_relative_link_flags&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Flags of the CommonNetworkRelativeLink structure&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;link_info.location_info.r_network_provider_type&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Raw network provider type value&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;link_info.location_info.network_provider_type&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Network provider type of the link target&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;link_info.location_info.net_name&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;UNC network path of the link target&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;link_info.location_info.net_name_unicode&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;UNC network path of the link target (Unicode)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;link_info.location_info.device_name&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Device/computer name of the link target on the network&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;link_info.location_info.device_name_unicode&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Device/computer name of the link target (Unicode)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;slack&lt;/code&gt;&lt;/td&gt;
@@ -1449,7 +1449,7 @@ Python Parser: &lt;strong&gt;LnkBatched&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;slack.payload&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Payload bytes recovered from slack or extra space&lt;/td&gt;
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
@@ -1459,10 +1459,10 @@ Python Parser: &lt;strong&gt;LnkBatched&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Object Info</title>
-      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/object_info/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/object_info/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/object_info/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/object_info/</guid>
       <description>
         
         
@@ -1554,10 +1554,10 @@ Python Parser: &lt;strong&gt;Csv&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Srum Energy Usage</title>
-      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_energy_usage/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_energy_usage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_energy_usage/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_energy_usage/</guid>
       <description>
         
         
@@ -1604,22 +1604,22 @@ Python Parser: &lt;strong&gt;Srum&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;incremental_id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Auto-increment identifier of the SRUM record&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;timestamp&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Timestamp of the SRUM record&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;app_id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Identifier of the application&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;user_id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Identifier (SID) of the user&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;EventTimestamp&lt;/code&gt;&lt;/td&gt;
@@ -1664,10 +1664,10 @@ Python Parser: &lt;strong&gt;Srum&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Srum Energy Usage Long Term</title>
-      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_energy_usage_long_term/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_energy_usage_long_term/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_energy_usage_long_term/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_energy_usage_long_term/</guid>
       <description>
         
         
@@ -1714,22 +1714,22 @@ Python Parser: &lt;strong&gt;Srum&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;incremental_id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Auto-increment identifier of the SRUM record&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;timestamp&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Timestamp of the SRUM record&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;app_id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Identifier of the application&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;user_id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Identifier (SID) of the user&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;active_ac_time&lt;/code&gt;&lt;/td&gt;
@@ -1799,10 +1799,10 @@ Python Parser: &lt;strong&gt;Srum&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Srum Tagged Energy</title>
-      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_tagged_energy/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_tagged_energy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_tagged_energy/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_tagged_energy/</guid>
       <description>
         
         
@@ -1849,22 +1849,22 @@ Python Parser: &lt;strong&gt;Srum&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;incremental_id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Auto-increment identifier of the SRUM record&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;timestamp&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Timestamp of the SRUM record&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;app_id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Identifier of the application&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;user_id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Identifier (SID) of the user&lt;/td&gt;
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
@@ -1874,10 +1874,10 @@ Python Parser: &lt;strong&gt;Srum&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Srum Vfuprov</title>
-      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_vfuprov/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_vfuprov/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_vfuprov/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_vfuprov/</guid>
       <description>
         
         
@@ -1924,22 +1924,22 @@ Python Parser: &lt;strong&gt;Srum&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;incremental_id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Auto-increment identifier of the SRUM record&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;timestamp&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Timestamp of the SRUM record&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;app_id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Identifier of the application&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;user_id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Identifier (SID) of the user&lt;/td&gt;
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
@@ -1949,10 +1949,10 @@ Python Parser: &lt;strong&gt;Srum&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Srum Wpn Provider</title>
-      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_wpn_provider/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_wpn_provider/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_wpn_provider/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/srum_wpn_provider/</guid>
       <description>
         
         
@@ -1999,22 +1999,22 @@ Python Parser: &lt;strong&gt;Srum&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;incremental_id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Auto-increment identifier of the SRUM record&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;timestamp&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Timestamp of the SRUM record&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;app_id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Identifier of the application&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;user_id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Identifier (SID) of the user&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;notification_type&lt;/code&gt;&lt;/td&gt;

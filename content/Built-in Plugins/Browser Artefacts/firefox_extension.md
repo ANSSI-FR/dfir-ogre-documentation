@@ -37,16 +37,16 @@ Each row describes a Firefox add-on, including identity, version, install path, 
 | `source_uri` | String | original source URI from which the add‑on was obtained |
 | `root_uri` | String | root URI of the add‑on package |
 | `user_permissions` | Object |  |
-| `user_permissions.permissions[]` | Array[String] |  |
-| `user_permissions.origins[]` | Array[String] |  |
-| `user_permissions.data_collection[]` | Array[String] |  |
+| `user_permissions.permissions[]` | Array[String] | Permission (API) requested or granted to the add-on |
+| `user_permissions.origins[]` | Array[String] | Origin or match pattern the permission applies to |
+| `user_permissions.data_collection[]` | Array[String] | Kind of data the permission allows collecting |
 | `optional_permissions` | Object |  |
-| `optional_permissions.permissions[]` | Array[String] |  |
-| `optional_permissions.origins[]` | Array[String] |  |
-| `optional_permissions.data_collection[]` | Array[String] |  |
+| `optional_permissions.permissions[]` | Array[String] | Permission (API) requested or granted to the add-on |
+| `optional_permissions.origins[]` | Array[String] | Origin or match pattern the permission applies to |
+| `optional_permissions.data_collection[]` | Array[String] | Kind of data the permission allows collecting |
 | `requested_permissions` | Object |  |
-| `requested_permissions.permissions[]` | Array[String] |  |
-| `requested_permissions.origins[]` | Array[String] |  |
-| `requested_permissions.data_collection[]` | Array[String] |  |
-| `install_date` | DateTime |  |
-| `update_date` | DateTime |  |
+| `requested_permissions.permissions[]` | Array[String] | Permission (API) requested or granted to the add-on |
+| `requested_permissions.origins[]` | Array[String] | Origin or match pattern the permission applies to |
+| `requested_permissions.data_collection[]` | Array[String] | Kind of data the permission allows collecting |
+| `install_date` | DateTime | Date the add-on was installed |
+| `update_date` | DateTime | Date the add-on was last updated |

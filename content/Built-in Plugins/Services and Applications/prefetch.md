@@ -23,7 +23,7 @@ Each row describes a Windows Prefetch file for an executable, with executable na
 | Output Name | Data Type | Description |
 |---|---|---|
 | `executable` | String | executable file name |
-| `version` | String | version |
+| `version` | String | Prefetch file version |
 | `prefetch_hash` | Int | hash identifier of the prefetch file |
 | `run_count` | Int | number of times the executable was run |
 | `run_date` | DateTime | timestamp of the most recent execution |

@@ -29,7 +29,7 @@ Each row describes a volume observed by ORC, with host, volume identifier, mount
 | `volumeid` | String | Unique identifier (GUID) of the volume |
 | `location` | String | Physical location or drive letter of the volume |
 | `volume_type` | String | File system type (FAT, NTFS, etc.) |
-| `is_parsed` | Bool |  |
+| `is_parsed` | Bool | Whether the volume was successfully parsed |
 | `mount_point` | String | Path where the volume is mounted |
 | `shadow_copy` | Python | Identifier of the associated VSS snapshot, if any |
 | `fileinfo` | String | raw file‑information from the volume |

@@ -23,19 +23,19 @@ Each row is a filesystem match returned by FastFind, with volume and snapshot co
 
 | Output Name | Data Type | Description |
 |---|---|---|
-| `fn_fullname` | String |  |
-| `i30_fullname` | String |  |
-| `description` | String |  |
-| `volume_id` | String |  |
-| `snapshot_id` | String |  |
-| `sequence_number` | Int |  |
-| `record_number` | Int |  |
+| `fn_fullname` | String | Full path from the NTFS filename attribute |
+| `i30_fullname` | String | Full path from the NTFS i30 index entry |
+| `description` | String | FastFind match description |
+| `volume_id` | String | Volume identifier of the collected file |
+| `snapshot_id` | String | Snapshot identifier of the collected file |
+| `sequence_number` | Int | Sequence number of the file MFT record |
+| `record_number` | Int | Record number of the file MFT entry |
 | `@frn` | Extension |  |
-| `fn_parent_sequence_number` | Int |  |
-| `fn_parent_record_number` | Int |  |
+| `fn_parent_sequence_number` | Int | Sequence number of the filename attribute parent record |
+| `fn_parent_record_number` | Int | Record number of the filename attribute parent entry |
 | `filename/@parentfrn` | Extension |  |
-| `i30_parent_sequence_number` | Int |  |
-| `i30_parent_record_number` | Int |  |
+| `i30_parent_sequence_number` | Int | Sequence number of the i30 index parent record |
+| `i30_parent_record_number` | Int | Record number of the i30 index parent entry |
 | `i30/@parentfrn` | Extension |  |
 | `file_attributes_archive` | Bool | archive attribute flag |
 | `file_attributes_no_scrub_data` | Bool | no‑scrub‑data attribute flag |
@@ -60,21 +60,21 @@ Each row is a filesystem match returned by FastFind, with volume and snapshot co
 | `file_attributes_integrity_stream` | Bool | integrity‑stream attribute flag |
 | `file_attributes_unpinned` | Bool | unpinned attribute flag |
 | `file_name_flags` | Extension |  |
-| `si_creation_date` | DateTime |  |
-| `si_lastmod_date` | DateTime |  |
-| `si_lastaccess_date` | DateTime |  |
-| `si_lastchange_date` | DateTime |  |
-| `fn_creation_date` | DateTime |  |
-| `fn_lastmod_date` | DateTime |  |
-| `fn_lastaccess_date` | DateTime |  |
-| `fn_lastchange_date` | DateTime |  |
-| `i30_creation` | DateTime |  |
-| `i30_lastmodification` | DateTime |  |
-| `i30_lastaccess` | DateTime |  |
-| `i30_lastentrychange` | DateTime |  |
+| `si_creation_date` | DateTime | File creation time from the standard information attribute |
+| `si_lastmod_date` | DateTime | Last modification time from the standard information attribute |
+| `si_lastaccess_date` | DateTime | Last access time from the standard information attribute |
+| `si_lastchange_date` | DateTime | Last entry-change (MFT) time from the standard information attribute |
+| `fn_creation_date` | DateTime | File creation time from the NTFS filename attribute |
+| `fn_lastmod_date` | DateTime | Last modification time from the NTFS filename attribute |
+| `fn_lastaccess_date` | DateTime | Last access time from the NTFS filename attribute |
+| `fn_lastchange_date` | DateTime | Last entry-change time from the NTFS filename attribute |
+| `i30_creation` | DateTime | File creation time from the NTFS i30 index entry |
+| `i30_lastmodification` | DateTime | Last modification time from the NTFS i30 index entry |
+| `i30_lastaccess` | DateTime | Last access time from the NTFS i30 index entry |
+| `i30_lastentrychange` | DateTime | Last entry-change time from the NTFS i30 index entry |
 | `data[]` | Array[Object] |  |
-| `data[].name` | String |  |
-| `data[].filesize` | Int |  |
-| `data[].md5` | String |  |
-| `data[].sha1` | String |  |
-| `data[].sha256` | String |  |
+| `data[].name` | String | File name |
+| `data[].filesize` | Int | File size in bytes |
+| `data[].md5` | String | MD5 hash of the file |
+| `data[].sha1` | String | SHA-1 hash of the file |
+| `data[].sha256` | String | SHA-256 hash of the file |

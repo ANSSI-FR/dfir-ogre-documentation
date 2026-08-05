@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DFIR-OGRE documentation – Browser Artefacts</title>
-    <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/</link>
+    <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/</link>
     <description>Recent content in Browser Artefacts on DFIR-OGRE documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Chrome Download History</title>
-      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_download_history/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_download_history/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_download_history/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_download_history/</guid>
       <description>
         
         
@@ -125,10 +125,10 @@ Python Parser: &lt;strong&gt;SQLite&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Chrome Extension</title>
-      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_extension/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_extension/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_extension/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_extension/</guid>
       <description>
         
         
@@ -382,10 +382,10 @@ Python Parser: &lt;strong&gt;ChromeExtension&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Chrome History</title>
-      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_history/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_history/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_history/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_history/</guid>
       <description>
         
         
@@ -475,10 +475,10 @@ Python Parser: &lt;strong&gt;SQLite&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Firefox Download History</title>
-      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_download_history/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_download_history/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_download_history/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_download_history/</guid>
       <description>
         
         
@@ -569,10 +569,10 @@ Python Parser: &lt;strong&gt;SQLite&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Firefox Extension</title>
-      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_extension/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_extension/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_extension/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_extension/</guid>
       <description>
         
         
@@ -690,17 +690,17 @@ Python Parser: &lt;strong&gt;FirefoxExtension&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;user_permissions.permissions[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Permission (API) requested or granted to the add-on&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;user_permissions.origins[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Origin or match pattern the permission applies to&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;user_permissions.data_collection[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Kind of data the permission allows collecting&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;optional_permissions&lt;/code&gt;&lt;/td&gt;
@@ -710,17 +710,17 @@ Python Parser: &lt;strong&gt;FirefoxExtension&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;optional_permissions.permissions[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Permission (API) requested or granted to the add-on&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;optional_permissions.origins[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Origin or match pattern the permission applies to&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;optional_permissions.data_collection[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Kind of data the permission allows collecting&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;requested_permissions&lt;/code&gt;&lt;/td&gt;
@@ -730,27 +730,27 @@ Python Parser: &lt;strong&gt;FirefoxExtension&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;requested_permissions.permissions[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Permission (API) requested or granted to the add-on&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;requested_permissions.origins[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Origin or match pattern the permission applies to&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;requested_permissions.data_collection[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Kind of data the permission allows collecting&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;install_date&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Date the add-on was installed&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;update_date&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Date the add-on was last updated&lt;/td&gt;
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
@@ -760,10 +760,10 @@ Python Parser: &lt;strong&gt;FirefoxExtension&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Firefox History</title>
-      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_history/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_history/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_history/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_history/</guid>
       <description>
         
         
@@ -853,10 +853,10 @@ Python Parser: &lt;strong&gt;SQLite&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Ie Webcache History</title>
-      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/ie_webcache_history/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/ie_webcache_history/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/ie_webcache_history/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/ie_webcache_history/</guid>
       <description>
         
         

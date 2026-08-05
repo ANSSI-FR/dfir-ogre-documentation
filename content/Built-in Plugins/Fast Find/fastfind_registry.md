@@ -22,18 +22,18 @@ Each row is a Registry match returned by FastFind, with hive, key and value path
 
 | Output Name | Data Type | Description |
 |---|---|---|
-| `volume_id` | String |  |
-| `snapshot_id` | String |  |
-| `hive_path` | String |  |
-| `description` | String |  |
+| `volume_id` | String | Volume identifier of the hive source |
+| `snapshot_id` | String | Snapshot identifier the hive was read from |
+| `hive_path` | String | Path to the registry hive |
+| `description` | String | Match description returned by FastFind |
 | `key[]` | Array[Object] |  |
-| `key[].key` | String |  |
-| `key[].subkeys_count` | Int |  |
-| `key[].values_count` | Int |  |
-| `key[].lastmodified_key` | DateTime |  |
+| `key[].key` | String | Full registry key path |
+| `key[].subkeys_count` | Int | Number of subkeys in the key |
+| `key[].values_count` | Int | Number of values in the key |
+| `key[].lastmodified_key` | DateTime | Key last-write timestamp (UTC) |
 | `value[]` | Array[Object] |  |
-| `value[].key` | String |  |
-| `value[].value` | String |  |
-| `value[].type` | String |  |
-| `value[].data_size` | Int |  |
-| `value[].lastmodified_key` | DateTime |  |
+| `value[].key` | String | Full registry key path |
+| `value[].value` | String | Name of the registry value |
+| `value[].type` | String | Registry value data type (e.g., REG_SZ) |
+| `value[].data_size` | Int | Size of the value data in bytes |
+| `value[].lastmodified_key` | DateTime | Key last-write timestamp (UTC) |

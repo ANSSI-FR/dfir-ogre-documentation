@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr"><head><script src="/dfir-ogre-documentation/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=dfir-ogre-documentation/livereload" data-no-instant defer></script>
+<html lang="en" dir="ltr"><head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="noindex, nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="index, follow" />
   <link rel="icon shortcut" href="/dfir-ogre-documentation/favicon.ico" sizes="32x32" />
 <link rel="icon" href="/dfir-ogre-documentation/favicon.svg" type="image/svg+xml" id="favicon-svg" />
 <link rel="icon" href="/dfir-ogre-documentation/favicon-16x16.png" type="image/png" sizes="16x16" />
@@ -9,7 +9,7 @@
 <link rel="apple-touch-icon" href="/dfir-ogre-documentation/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/dfir-ogre-documentation/site.webmanifest" rel="manifest" />
 <title>Fastfind File – DFIR-OGRE documentation</title>
-  <meta name="description" content=" Data Type: fastfind_file Python Parser: FastFind Description Each row is a filesystem match returned by FastFind, with volume and snapshot context, path, NTFS identifiers, timestamps, attributes, hashes, and match details. Use it to pivot from search criteria to matching files and correlate records across snapshots. Results reflect the configured search and collected volumes, not a complete filesystem inventory." /><link rel="canonical" href="http://localhost:1313/dfir-ogre-documentation/built-in-plugins/fast-find/fastfind_file/" itemprop="url" />
+  <meta name="description" content=" Data Type: fastfind_file Python Parser: FastFind Description Each row is a filesystem match returned by FastFind, with volume and snapshot context, path, NTFS identifiers, timestamps, attributes, hashes, and match details. Use it to pivot from search criteria to matching files and correlate records across snapshots. Results reflect the configured search and collected volumes, not a complete filesystem inventory." /><link rel="canonical" href="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/fast-find/fastfind_file/" itemprop="url" />
 
 <meta property="og:title" content="Fastfind File">
 <meta
@@ -34,23 +34,29 @@ Description
   content="
     article
   ">
-<meta property="og:url" content="http://localhost:1313/dfir-ogre-documentation/built-in-plugins/fast-find/fastfind_file/"><meta property="article:section" content="built-in-plugins">
+<meta property="og:url" content="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/fast-find/fastfind_file/"><meta property="article:section" content="built-in-plugins">
 
 
 
 
 	<meta itemprop="name" content="Fastfind File">
 	<meta itemprop="description" content="Data Type: fastfind_file Python Parser: FastFind Description Each row is a filesystem match returned by FastFind, with volume and snapshot context, path, NTFS identifiers, timestamps, attributes, hashes, and match details. Use it to pivot from search criteria to matching files and correlate records across snapshots. Results reflect the configured search and collected volumes, not a complete filesystem inventory.">
-	<meta itemprop="wordCount" content="252">
+	<meta itemprop="wordCount" content="450">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Fastfind File">
 	<meta name="twitter:description" content="Data Type: fastfind_file Python Parser: FastFind Description Each row is a filesystem match returned by FastFind, with volume and snapshot context, path, NTFS identifiers, timestamps, attributes, hashes, and match details. Use it to pivot from search criteria to matching files and correlate records across snapshots. Results reflect the configured search and collected volumes, not a complete filesystem inventory.">
-<link href="/dfir-ogre-documentation/css/compiled/main.css" rel="stylesheet" />
-    <link href="/dfir-ogre-documentation/css/variables.css" rel="stylesheet" />
-    <link href="/dfir-ogre-documentation/css/custom.css" rel="stylesheet" />
+
+    <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
+    <link href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" rel="stylesheet" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
 
   
-<script src="/dfir-ogre-documentation/js/main-head.js" integrity=""></script>
+
+
+
+
+
+
+<script src="/dfir-ogre-documentation/js/main-head.min.2375b7265ea066ecb314226ce5ff17478453df5f350d34d830b3fc96fba21672.js" integrity="sha256-I3W3Jl6gZuyzFCJs5f8XR4RT3181DTTYMLP8lvuiFnI="></script>
 
   
   
@@ -1718,37 +1724,37 @@ Python Parser: <strong>FastFind</strong></div>
 			<tr>
 					<td><code>fn_fullname</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Full path from the NTFS filename attribute</td>
 			</tr>
 			<tr>
 					<td><code>i30_fullname</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Full path from the NTFS i30 index entry</td>
 			</tr>
 			<tr>
 					<td><code>description</code></td>
 					<td>String</td>
-					<td></td>
+					<td>FastFind match description</td>
 			</tr>
 			<tr>
 					<td><code>volume_id</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Volume identifier of the collected file</td>
 			</tr>
 			<tr>
 					<td><code>snapshot_id</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Snapshot identifier of the collected file</td>
 			</tr>
 			<tr>
 					<td><code>sequence_number</code></td>
 					<td>Int</td>
-					<td></td>
+					<td>Sequence number of the file MFT record</td>
 			</tr>
 			<tr>
 					<td><code>record_number</code></td>
 					<td>Int</td>
-					<td></td>
+					<td>Record number of the file MFT entry</td>
 			</tr>
 			<tr>
 					<td><code>@frn</code></td>
@@ -1758,12 +1764,12 @@ Python Parser: <strong>FastFind</strong></div>
 			<tr>
 					<td><code>fn_parent_sequence_number</code></td>
 					<td>Int</td>
-					<td></td>
+					<td>Sequence number of the filename attribute parent record</td>
 			</tr>
 			<tr>
 					<td><code>fn_parent_record_number</code></td>
 					<td>Int</td>
-					<td></td>
+					<td>Record number of the filename attribute parent entry</td>
 			</tr>
 			<tr>
 					<td><code>filename/@parentfrn</code></td>
@@ -1773,12 +1779,12 @@ Python Parser: <strong>FastFind</strong></div>
 			<tr>
 					<td><code>i30_parent_sequence_number</code></td>
 					<td>Int</td>
-					<td></td>
+					<td>Sequence number of the i30 index parent record</td>
 			</tr>
 			<tr>
 					<td><code>i30_parent_record_number</code></td>
 					<td>Int</td>
-					<td></td>
+					<td>Record number of the i30 index parent entry</td>
 			</tr>
 			<tr>
 					<td><code>i30/@parentfrn</code></td>
@@ -1903,62 +1909,62 @@ Python Parser: <strong>FastFind</strong></div>
 			<tr>
 					<td><code>si_creation_date</code></td>
 					<td>DateTime</td>
-					<td></td>
+					<td>File creation time from the standard information attribute</td>
 			</tr>
 			<tr>
 					<td><code>si_lastmod_date</code></td>
 					<td>DateTime</td>
-					<td></td>
+					<td>Last modification time from the standard information attribute</td>
 			</tr>
 			<tr>
 					<td><code>si_lastaccess_date</code></td>
 					<td>DateTime</td>
-					<td></td>
+					<td>Last access time from the standard information attribute</td>
 			</tr>
 			<tr>
 					<td><code>si_lastchange_date</code></td>
 					<td>DateTime</td>
-					<td></td>
+					<td>Last entry-change (MFT) time from the standard information attribute</td>
 			</tr>
 			<tr>
 					<td><code>fn_creation_date</code></td>
 					<td>DateTime</td>
-					<td></td>
+					<td>File creation time from the NTFS filename attribute</td>
 			</tr>
 			<tr>
 					<td><code>fn_lastmod_date</code></td>
 					<td>DateTime</td>
-					<td></td>
+					<td>Last modification time from the NTFS filename attribute</td>
 			</tr>
 			<tr>
 					<td><code>fn_lastaccess_date</code></td>
 					<td>DateTime</td>
-					<td></td>
+					<td>Last access time from the NTFS filename attribute</td>
 			</tr>
 			<tr>
 					<td><code>fn_lastchange_date</code></td>
 					<td>DateTime</td>
-					<td></td>
+					<td>Last entry-change time from the NTFS filename attribute</td>
 			</tr>
 			<tr>
 					<td><code>i30_creation</code></td>
 					<td>DateTime</td>
-					<td></td>
+					<td>File creation time from the NTFS i30 index entry</td>
 			</tr>
 			<tr>
 					<td><code>i30_lastmodification</code></td>
 					<td>DateTime</td>
-					<td></td>
+					<td>Last modification time from the NTFS i30 index entry</td>
 			</tr>
 			<tr>
 					<td><code>i30_lastaccess</code></td>
 					<td>DateTime</td>
-					<td></td>
+					<td>Last access time from the NTFS i30 index entry</td>
 			</tr>
 			<tr>
 					<td><code>i30_lastentrychange</code></td>
 					<td>DateTime</td>
-					<td></td>
+					<td>Last entry-change time from the NTFS i30 index entry</td>
 			</tr>
 			<tr>
 					<td><code>data[]</code></td>
@@ -1968,27 +1974,27 @@ Python Parser: <strong>FastFind</strong></div>
 			<tr>
 					<td><code>data[].name</code></td>
 					<td>String</td>
-					<td></td>
+					<td>File name</td>
 			</tr>
 			<tr>
 					<td><code>data[].filesize</code></td>
 					<td>Int</td>
-					<td></td>
+					<td>File size in bytes</td>
 			</tr>
 			<tr>
 					<td><code>data[].md5</code></td>
 					<td>String</td>
-					<td></td>
+					<td>MD5 hash of the file</td>
 			</tr>
 			<tr>
 					<td><code>data[].sha1</code></td>
 					<td>String</td>
-					<td></td>
+					<td>SHA-1 hash of the file</td>
 			</tr>
 			<tr>
 					<td><code>data[].sha256</code></td>
 					<td>String</td>
-					<td></td>
+					<td>SHA-256 hash of the file</td>
 			</tr>
 	</tbody>
 </table>
@@ -2030,7 +2036,7 @@ Python Parser: <strong>FastFind</strong></div>
   </a></div></div>
     </div></footer>
     
-    <script defer src="/dfir-ogre-documentation/js/main.js" integrity=""></script>
-<script defer src="/dfir-ogre-documentation/js/flexsearch.9f5b5908f93ae86f1ecd4b043b799f580c2d1654e703dd9357d568ac41b2547a.js" integrity="sha256-n1tZCPk66G8ezUsEO3mfWAwtFlTnA92TV9VorEGyVHo=" crossorigin="anonymous"></script><script defer src="/dfir-ogre-documentation/en.search.js" integrity=""></script>
+    <script defer src="/dfir-ogre-documentation/js/main.min.e6ec223dd3472e6949081d081ee4fc56c7e7f90951c40b4ae16c7db05d6213ee.js" integrity="sha256-5uwiPdNHLmlJCB0IHuT8Vsfn&#43;QlRxAtK4Wx9sF1iE&#43;4="></script>
+<script defer src="/dfir-ogre-documentation/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script><script defer src="/dfir-ogre-documentation/en.search.min.e501b4d6f6d74bd60ef5a7c41d513847c5d12b886fd68b45186fb216c3de1de4.js" integrity="sha256-5QG01vbXS9YO9afEHVE4R8XRK4hv1otFGG&#43;yFsPeHeQ="></script>
   </body>
 </html>

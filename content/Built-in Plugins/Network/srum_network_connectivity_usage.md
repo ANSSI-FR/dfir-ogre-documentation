@@ -24,10 +24,10 @@ Each row is an SRUM network-connectivity interval associated with an application
 
 | Output Name | Data Type | Description |
 |---|---|---|
-| `incremental_id` | Int |  |
-| `timestamp` | DateTime |  |
-| `app_id` | String |  |
-| `user_id` | String |  |
+| `incremental_id` | Int | Auto-increment identifier of the SRUM record |
+| `timestamp` | DateTime | Timestamp of the SRUM record |
+| `app_id` | String | Identifier of the application |
+| `user_id` | String | Identifier (SID) of the user |
 | `interface_luid` | Int |  |
 | `connect_start_time` | DateTime |  |
 | `connected_time` | Int |  |

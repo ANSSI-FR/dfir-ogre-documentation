@@ -23,14 +23,14 @@ Each row is a driver inventory entry extracted from an Amcache XML report, with 
 
 | Output Name | Data Type | Description |
 |---|---|---|
-| `sha1` | String |  |
-| `name` | String |  |
-| `type` | String |  |
-| `version` | String |  |
-| `compilation_date` | DateTime |  |
-| `checksum` | String |  |
-| `image_size` | IntRadix |  |
-| `company` | String |  |
-| `product` | String |  |
-| `product_version` | String |  |
-| `wdf_version` | String |  |
+| `sha1` | String | SHA-1 hash of the driver binary |
+| `name` | String | Driver name |
+| `type` | String | Driver type (e.g. Kernel, File System) |
+| `version` | String | Driver version |
+| `compilation_date` | DateTime | Driver compilation/link timestamp |
+| `checksum` | String | Driver image checksum |
+| `image_size` | IntRadix | Driver binary size in bytes |
+| `company` | String | Driver vendor/company name |
+| `product` | String | Driver product name |
+| `product_version` | String | Driver product version |
+| `wdf_version` | String | Windows Driver Framework version |

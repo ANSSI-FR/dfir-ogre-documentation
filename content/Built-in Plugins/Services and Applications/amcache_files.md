@@ -26,9 +26,9 @@ Each row is a file inventory record from the Amcache hive, with path, normalized
 
 | Output Name | Data Type | Description |
 |---|---|---|
-| `name` | String | filename |
-| `path` | String | file path |
-| `size` | Int | size in bytes |
+| `name` | String | File name |
+| `path` | String | Full file path |
+| `size` | Int | File size in bytes |
 | `program_id` | String | program ID, if it exists |
 | `file_id` | String | raw Amcache FileId or legacy value 101 |
 | `sha1` | String | normalized 40-hex SHA-1 hash of the file |
@@ -40,17 +40,17 @@ Each row is a file inventory record from the Amcache hive, with path, normalized
 | `original_filename` | String | Original FileName field of the PE header |
 | `file_version` | String | File version |
 | `image_size` | Int | 'SizeOfImage' field of the PE header |
-| `file_description` | String | file description |
+| `file_description` | String | File description |
 | `linker_version` | String | combination of the 'MajorLinkerVersion' and 'MinorLinkerVersion' fields of the PE header |
-| `link_date` | DateTime | Compilation date |
-| `binary_type` | String | 32BIT or 64BIT |
-| `creation_date` | DateTime |  |
-| `modification_date` | DateTime |  |
+| `link_date` | DateTime | PE link (compilation) date |
+| `binary_type` | String | 32BIT or 64BIT binary |
+| `creation_date` | DateTime | File creation timestamp |
+| `modification_date` | DateTime | File modification timestamp |
 | `long_path_hash` | String | SHA-1 of the complete lowercase file path in UTF-16 |
 | `unique_id` | String | identifies the file location if it is in a program installation directory |
 | `volume_guid` | String | identifier of the volume where the file is located |
-| `is_pe_file` | Bool |  |
-| `is_os_component` | Bool |  |
+| `is_pe_file` | Bool | Whether the file is a PE executable |
+| `is_os_component` | Bool | Whether the file is a Windows OS component |
 | `key_path` | String | full registry key name |
 | `key_modif_time` | DateTime | last modification timestamp of the registry key |
 | `key_security` | Object |  |

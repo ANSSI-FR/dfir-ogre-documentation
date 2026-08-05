@@ -25,6 +25,6 @@ Each row identifies an Internet Explorer add-on found in an Amcache XML report, 
 | Output Name | Data Type | Description |
 |---|---|---|
 | `id` | Python | Program identifier |
-| `name` | String | Program name |
-| `type` | String | AddOn type |
-| `publisher` | String | Program publisher |
+| `name` | String | Add-on name |
+| `type` | String | IE add-on type (e.g., Toolbar, BrowserExtension) |
+| `publisher` | String | Add-on publisher name |

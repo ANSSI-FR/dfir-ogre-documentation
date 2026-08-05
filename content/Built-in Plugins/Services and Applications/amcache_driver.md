@@ -27,20 +27,20 @@ Each row is a driver inventory record from the Amcache hive, with driver name an
 
 | Output Name | Data Type | Description |
 |---|---|---|
-| `name` | String | file name |
-| `path` | String | file path |
-| `size` | Int | file size |
+| `name` | String | Driver file name |
+| `path` | String | Driver file path on disk |
+| `size` | Int | Driver file size in bytes |
 | `inf` | String | name of the associated .inf file |
 | `package_name` | String | name of the driver's package |
 | `service` | String | name of the service installed by the driver |
-| `version` | String | driver's version |
+| `version` | String | Driver version |
 | `product` | String | name of the product |
-| `product_version` | String | product's version |
+| `product_version` | String | Product version |
 | `company` | String | company providing the driver |
-| `driver_type` | Int |  |
-| `compilation_date` | DateTime | compilation date |
+| `driver_type` | Int | Driver load type (e.g., boot, kernel, filter) |
+| `compilation_date` | DateTime | Driver compilation date |
 | `image_size` | Int | equivalent to 'SizeOfImage' field of the PE header |
-| `checksum` | Int | driver's checksum |
+| `checksum` | Int | Driver image checksum |
 | `wdf_version` | String | Windows Driver Framework version |
 | `driver_id` | String | raw Amcache driver identifier |
 | `sha1` | String | normalized 40-hex SHA-1 hash of the driver |

@@ -32,11 +32,11 @@ Each row is a program inventory record from the Amcache hive, with program ident
 | `publisher` | String | Program publisher |
 | `source` | String | Installation method ('MSI', 'AppxPackage', 'AddRemoveProgram') |
 | `install_date` | DateTime | Installation date, present if the program is installed via MSI, the time is always 00:00:00 |
-| `uninstall_date` | DateTime | Uninstall date |
+| `uninstall_date` | DateTime | Date the program was uninstalled |
 | `msi_product_code` | String | Product code, present if the program is installed via MSI |
 | `msi_package_code` | String | Package code, present if the program is installed via MSI  |
 | `instance_id` | String | Equivalent of the 'ProgramInstanceId', hash of the file identifier |
-| `inbox_modern_app` | Bool |  |
+| `inbox_modern_app` | Bool | Whether the program is an inbox modern (UWP) app |
 | `os_at_install` | String | 4 bytes of the operating‑system version during program installation. |
 | `install_dir` | String | Path of the program installation directory. |
 | `key_path` | String | full registry key name |

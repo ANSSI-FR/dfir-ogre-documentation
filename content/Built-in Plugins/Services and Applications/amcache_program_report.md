@@ -30,24 +30,24 @@ Each row is a program inventory entry from a FullCompatReport, with program iden
 | `publisher` | String | Program publisher |
 | `source` | String | Installation method ('MSI', 'AppxPackage', 'AddRemoveProgram') |
 | `indicators[]` | Array[Object] |  |
-| `indicators[].name` | String |  |
-| `indicators[].file` | String |  |
-| `indicators[].run` | String |  |
+| `indicators[].name` | String | File name |
+| `indicators[].file` | String | File path from the static property |
+| `indicators[].run` | String | Registry key/value that launched the program |
 | `files[]` | Array[Object] |  |
-| `files[].name` | String |  |
-| `files[].sha1` | String |  |
-| `files[].size` | IntRadix |  |
-| `files[].product` | String |  |
-| `files[].company` | String |  |
-| `files[].product_version` | String |  |
-| `files[].version_language` | String |  |
-| `files[].file_version` | String |  |
-| `files[].image_size` | IntRadix |  |
-| `files[].file_description` | String |  |
-| `files[].linker_version` | String |  |
-| `files[].link_date` | DateTime |  |
-| `files[].binary_type` | String |  |
-| `files[].created` | DateTime |  |
-| `files[].modified` | DateTime |  |
-| `files[].long_path_hash` | String |  |
-| `files[].unique_id` | String |  |
+| `files[].name` | String | File name |
+| `files[].sha1` | String | SHA-1 hash of the file |
+| `files[].size` | IntRadix | File size in bytes |
+| `files[].product` | String | Product name |
+| `files[].company` | String | Company (vendor) name |
+| `files[].product_version` | String | Product version |
+| `files[].version_language` | String | Language code of the file |
+| `files[].file_version` | String | File version number |
+| `files[].image_size` | IntRadix | Size of the executable image in bytes |
+| `files[].file_description` | String | File description string |
+| `files[].linker_version` | String | PE linker version |
+| `files[].link_date` | DateTime | PE link (compilation) date |
+| `files[].binary_type` | String | PE binary type (exe, dll, driver) |
+| `files[].created` | DateTime | File creation timestamp |
+| `files[].modified` | DateTime | File modification timestamp |
+| `files[].long_path_hash` | String | Hash of the long path storing the file |
+| `files[].unique_id` | String | Unique identifier of the file entry |

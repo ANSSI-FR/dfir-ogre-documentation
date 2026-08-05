@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DFIR-OGRE documentation – Network</title>
-    <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/network/</link>
+    <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/network/</link>
     <description>Recent content in Network on DFIR-OGRE documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="http://localhost:1313/dfir-ogre-documentation/built-in-plugins/network/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/network/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Srum Network Connectivity Usage</title>
-      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/network/srum_network_connectivity_usage/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/network/srum_network_connectivity_usage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/network/srum_network_connectivity_usage/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/network/srum_network_connectivity_usage/</guid>
       <description>
         
         
@@ -74,22 +74,22 @@ Python Parser: &lt;strong&gt;Srum&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;incremental_id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Auto-increment identifier of the SRUM record&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;timestamp&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Timestamp of the SRUM record&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;app_id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Identifier of the application&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;user_id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Identifier (SID) of the user&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;interface_luid&lt;/code&gt;&lt;/td&gt;
@@ -124,10 +124,10 @@ Python Parser: &lt;strong&gt;Srum&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Srum Network Data Usage</title>
-      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/network/srum_network_data_usage/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/network/srum_network_data_usage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/network/srum_network_data_usage/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/network/srum_network_data_usage/</guid>
       <description>
         
         
@@ -182,22 +182,22 @@ Python Parser: &lt;strong&gt;Srum&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;incremental_id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Auto-increment identifier of the SRUM record&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;timestamp&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Timestamp of the SRUM record&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;app_id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Identifier of the application&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;user_id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Identifier (SID) of the user&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;interface_luid&lt;/code&gt;&lt;/td&gt;
@@ -232,10 +232,10 @@ Python Parser: &lt;strong&gt;Srum&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Srum Sdp Network</title>
-      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/network/srum_sdp_network/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/network/srum_sdp_network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/network/srum_sdp_network/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/network/srum_sdp_network/</guid>
       <description>
         
         
@@ -282,22 +282,22 @@ Python Parser: &lt;strong&gt;Srum&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;incremental_id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Auto-increment identifier of the SRUM record&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;timestamp&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Timestamp of the SRUM record&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;app_id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Identifier of the application&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;user_id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;Identifier (SID) of the user&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;bytes_in_bound&lt;/code&gt;&lt;/td&gt;
@@ -322,10 +322,10 @@ Python Parser: &lt;strong&gt;Srum&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Tcp Connections</title>
-      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/network/tcp_connections/</link>
+      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/network/tcp_connections/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/network/tcp_connections/</guid>
+      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/network/tcp_connections/</guid>
       <description>
         
         
@@ -389,7 +389,7 @@ Python Parser: &lt;strong&gt;TCPConn&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;pid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;PID&lt;/td&gt;
+					&lt;td&gt;Process identifier (PID)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;protocol&lt;/code&gt;&lt;/td&gt;
@@ -404,12 +404,12 @@ Python Parser: &lt;strong&gt;TCPConn&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;local_adress&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;local addres&lt;/td&gt;
+					&lt;td&gt;Local IP address&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;remote_adress&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;remote address&lt;/td&gt;
+					&lt;td&gt;Remote IP address&lt;/td&gt;
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;

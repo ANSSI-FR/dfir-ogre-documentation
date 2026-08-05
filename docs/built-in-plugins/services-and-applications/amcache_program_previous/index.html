@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr"><head><script src="/dfir-ogre-documentation/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=dfir-ogre-documentation/livereload" data-no-instant defer></script>
+<html lang="en" dir="ltr"><head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="noindex, nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="index, follow" />
   <link rel="icon shortcut" href="/dfir-ogre-documentation/favicon.ico" sizes="32x32" />
 <link rel="icon" href="/dfir-ogre-documentation/favicon.svg" type="image/svg+xml" id="favicon-svg" />
 <link rel="icon" href="/dfir-ogre-documentation/favicon-16x16.png" type="image/png" sizes="16x16" />
@@ -9,7 +9,7 @@
 <link rel="apple-touch-icon" href="/dfir-ogre-documentation/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/dfir-ogre-documentation/site.webmanifest" rel="manifest" />
 <title>Amcache Program Previous – DFIR-OGRE documentation</title>
-  <meta name="description" content=" Data Type: amcache_program_xml Python Parser: XML Description Each row is a program inventory entry from an AEINV PREVIOUS report, with program identity, version, publisher, source, paths, and related executable hashes where available. Use it to recover earlier inventory and correlate software across reports. Presence in the report does not by itself prove execution." /><link rel="canonical" href="http://localhost:1313/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_program_previous/" itemprop="url" />
+  <meta name="description" content=" Data Type: amcache_program_xml Python Parser: XML Description Each row is a program inventory entry from an AEINV PREVIOUS report, with program identity, version, publisher, source, paths, and related executable hashes where available. Use it to recover earlier inventory and correlate software across reports. Presence in the report does not by itself prove execution." /><link rel="canonical" href="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_program_previous/" itemprop="url" />
 
 <meta property="og:title" content="Amcache Program Previous">
 <meta
@@ -34,23 +34,29 @@ Description
   content="
     article
   ">
-<meta property="og:url" content="http://localhost:1313/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_program_previous/"><meta property="article:section" content="built-in-plugins">
+<meta property="og:url" content="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_program_previous/"><meta property="article:section" content="built-in-plugins">
 
 
 
 
 	<meta itemprop="name" content="Amcache Program Previous">
 	<meta itemprop="description" content="Data Type: amcache_program_xml Python Parser: XML Description Each row is a program inventory entry from an AEINV PREVIOUS report, with program identity, version, publisher, source, paths, and related executable hashes where available. Use it to recover earlier inventory and correlate software across reports. Presence in the report does not by itself prove execution.">
-	<meta itemprop="wordCount" content="138">
+	<meta itemprop="wordCount" content="221">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Amcache Program Previous">
 	<meta name="twitter:description" content="Data Type: amcache_program_xml Python Parser: XML Description Each row is a program inventory entry from an AEINV PREVIOUS report, with program identity, version, publisher, source, paths, and related executable hashes where available. Use it to recover earlier inventory and correlate software across reports. Presence in the report does not by itself prove execution.">
-<link href="/dfir-ogre-documentation/css/compiled/main.css" rel="stylesheet" />
-    <link href="/dfir-ogre-documentation/css/variables.css" rel="stylesheet" />
-    <link href="/dfir-ogre-documentation/css/custom.css" rel="stylesheet" />
+
+    <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
+    <link href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" rel="stylesheet" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
 
   
-<script src="/dfir-ogre-documentation/js/main-head.js" integrity=""></script>
+
+
+
+
+
+
+<script src="/dfir-ogre-documentation/js/main-head.min.2375b7265ea066ecb314226ce5ff17478453df5f350d34d830b3fc96fba21672.js" integrity="sha256-I3W3Jl6gZuyzFCJs5f8XR4RT3181DTTYMLP8lvuiFnI="></script>
 
   
   
@@ -1752,17 +1758,17 @@ Python Parser: <strong>XML</strong></div>
 			<tr>
 					<td><code>indicators[].name</code></td>
 					<td>String</td>
-					<td></td>
+					<td>File name</td>
 			</tr>
 			<tr>
 					<td><code>indicators[].file</code></td>
 					<td>String</td>
-					<td></td>
+					<td>File path from the static property</td>
 			</tr>
 			<tr>
 					<td><code>indicators[].run</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Registry key/value that launched the program</td>
 			</tr>
 			<tr>
 					<td><code>files[]</code></td>
@@ -1772,87 +1778,87 @@ Python Parser: <strong>XML</strong></div>
 			<tr>
 					<td><code>files[].name</code></td>
 					<td>String</td>
-					<td></td>
+					<td>File name</td>
 			</tr>
 			<tr>
 					<td><code>files[].sha1</code></td>
 					<td>String</td>
-					<td></td>
+					<td>SHA-1 hash of the file</td>
 			</tr>
 			<tr>
 					<td><code>files[].size</code></td>
 					<td>IntRadix</td>
-					<td></td>
+					<td>File size in bytes</td>
 			</tr>
 			<tr>
 					<td><code>files[].product</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Product name</td>
 			</tr>
 			<tr>
 					<td><code>files[].company</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Company (vendor) name</td>
 			</tr>
 			<tr>
 					<td><code>files[].product_version</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Product version</td>
 			</tr>
 			<tr>
 					<td><code>files[].version_language</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Language code of the file</td>
 			</tr>
 			<tr>
 					<td><code>files[].file_version</code></td>
 					<td>String</td>
-					<td></td>
+					<td>File version number</td>
 			</tr>
 			<tr>
 					<td><code>files[].image_size</code></td>
 					<td>IntRadix</td>
-					<td></td>
+					<td>Size of the executable image in bytes</td>
 			</tr>
 			<tr>
 					<td><code>files[].file_description</code></td>
 					<td>String</td>
-					<td></td>
+					<td>File description string</td>
 			</tr>
 			<tr>
 					<td><code>files[].linker_version</code></td>
 					<td>String</td>
-					<td></td>
+					<td>PE linker version</td>
 			</tr>
 			<tr>
 					<td><code>files[].link_date</code></td>
 					<td>DateTime</td>
-					<td></td>
+					<td>PE link (compilation) date</td>
 			</tr>
 			<tr>
 					<td><code>files[].binary_type</code></td>
 					<td>String</td>
-					<td></td>
+					<td>PE binary type (exe, dll, driver)</td>
 			</tr>
 			<tr>
 					<td><code>files[].created</code></td>
 					<td>DateTime</td>
-					<td></td>
+					<td>File creation timestamp</td>
 			</tr>
 			<tr>
 					<td><code>files[].modified</code></td>
 					<td>DateTime</td>
-					<td></td>
+					<td>File modification timestamp</td>
 			</tr>
 			<tr>
 					<td><code>files[].long_path_hash</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Hash of the long path storing the file</td>
 			</tr>
 			<tr>
 					<td><code>files[].unique_id</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Unique identifier of the file entry</td>
 			</tr>
 	</tbody>
 </table>
@@ -1898,7 +1904,7 @@ Python Parser: <strong>XML</strong></div>
   </a></div></div>
     </div></footer>
     
-    <script defer src="/dfir-ogre-documentation/js/main.js" integrity=""></script>
-<script defer src="/dfir-ogre-documentation/js/flexsearch.9f5b5908f93ae86f1ecd4b043b799f580c2d1654e703dd9357d568ac41b2547a.js" integrity="sha256-n1tZCPk66G8ezUsEO3mfWAwtFlTnA92TV9VorEGyVHo=" crossorigin="anonymous"></script><script defer src="/dfir-ogre-documentation/en.search.js" integrity=""></script>
+    <script defer src="/dfir-ogre-documentation/js/main.min.e6ec223dd3472e6949081d081ee4fc56c7e7f90951c40b4ae16c7db05d6213ee.js" integrity="sha256-5uwiPdNHLmlJCB0IHuT8Vsfn&#43;QlRxAtK4Wx9sF1iE&#43;4="></script>
+<script defer src="/dfir-ogre-documentation/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script><script defer src="/dfir-ogre-documentation/en.search.min.e501b4d6f6d74bd60ef5a7c41d513847c5d12b886fd68b45186fb216c3de1de4.js" integrity="sha256-5QG01vbXS9YO9afEHVE4R8XRK4hv1otFGG&#43;yFsPeHeQ="></script>
   </body>
 </html>

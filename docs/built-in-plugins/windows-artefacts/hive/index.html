@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr"><head><script src="/dfir-ogre-documentation/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=dfir-ogre-documentation/livereload" data-no-instant defer></script>
+<html lang="en" dir="ltr"><head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="noindex, nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="index, follow" />
   <link rel="icon shortcut" href="/dfir-ogre-documentation/favicon.ico" sizes="32x32" />
 <link rel="icon" href="/dfir-ogre-documentation/favicon.svg" type="image/svg+xml" id="favicon-svg" />
 <link rel="icon" href="/dfir-ogre-documentation/favicon-16x16.png" type="image/png" sizes="16x16" />
@@ -9,7 +9,7 @@
 <link rel="apple-touch-icon" href="/dfir-ogre-documentation/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/dfir-ogre-documentation/site.webmanifest" rel="manifest" />
 <title>Hive – DFIR-OGRE documentation</title>
-  <meta name="description" content=" Data Type: hive Python Parser: HiveKey Description Each row exposes a raw Windows Registry value with hive and key path, value name, type, data, key LastWrite time, security metadata, and parse errors where present. Use it for low-level configuration and provenance analysis when no specialized mapping applies. LastWrite is key-level, not a timestamp for each individual value." /><link rel="canonical" href="http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/hive/" itemprop="url" />
+  <meta name="description" content=" Data Type: hive Python Parser: HiveKey Description Each row exposes a raw Windows Registry value with hive and key path, value name, type, data, key LastWrite time, security metadata, and parse errors where present. Use it for low-level configuration and provenance analysis when no specialized mapping applies. LastWrite is key-level, not a timestamp for each individual value." /><link rel="canonical" href="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/hive/" itemprop="url" />
 
 <meta property="og:title" content="Hive">
 <meta
@@ -34,23 +34,29 @@ Description
   content="
     article
   ">
-<meta property="og:url" content="http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/hive/"><meta property="article:section" content="built-in-plugins">
+<meta property="og:url" content="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/hive/"><meta property="article:section" content="built-in-plugins">
 
 
 
 
 	<meta itemprop="name" content="Hive">
 	<meta itemprop="description" content="Data Type: hive Python Parser: HiveKey Description Each row exposes a raw Windows Registry value with hive and key path, value name, type, data, key LastWrite time, security metadata, and parse errors where present. Use it for low-level configuration and provenance analysis when no specialized mapping applies. LastWrite is key-level, not a timestamp for each individual value.">
-	<meta itemprop="wordCount" content="136">
+	<meta itemprop="wordCount" content="315">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Hive">
 	<meta name="twitter:description" content="Data Type: hive Python Parser: HiveKey Description Each row exposes a raw Windows Registry value with hive and key path, value name, type, data, key LastWrite time, security metadata, and parse errors where present. Use it for low-level configuration and provenance analysis when no specialized mapping applies. LastWrite is key-level, not a timestamp for each individual value.">
-<link href="/dfir-ogre-documentation/css/compiled/main.css" rel="stylesheet" />
-    <link href="/dfir-ogre-documentation/css/variables.css" rel="stylesheet" />
-    <link href="/dfir-ogre-documentation/css/custom.css" rel="stylesheet" />
+
+    <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
+    <link href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" rel="stylesheet" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
 
   
-<script src="/dfir-ogre-documentation/js/main-head.js" integrity=""></script>
+
+
+
+
+
+
+<script src="/dfir-ogre-documentation/js/main-head.min.2375b7265ea066ecb314226ce5ff17478453df5f350d34d830b3fc96fba21672.js" integrity="sha256-I3W3Jl6gZuyzFCJs5f8XR4RT3181DTTYMLP8lvuiFnI="></script>
 
   
   
@@ -1718,12 +1724,12 @@ Python Parser: <strong>HiveKey</strong></div>
 			<tr>
 					<td><code>path</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Full path of the registry key</td>
 			</tr>
 			<tr>
 					<td><code>mtime</code></td>
 					<td>DateTime</td>
-					<td></td>
+					<td>Last write (modification) time of the registry key</td>
 			</tr>
 			<tr>
 					<td><code>security_descriptor</code></td>
@@ -1733,17 +1739,17 @@ Python Parser: <strong>HiveKey</strong></div>
 			<tr>
 					<td><code>security_descriptor.owner_sid</code></td>
 					<td>String</td>
-					<td></td>
+					<td>SID of the key owner</td>
 			</tr>
 			<tr>
 					<td><code>security_descriptor.group_sid</code></td>
 					<td>String</td>
-					<td></td>
+					<td>SID of the primary group of the key</td>
 			</tr>
 			<tr>
 					<td><code>security_descriptor.control_flags[]</code></td>
 					<td>Array[String]</td>
-					<td></td>
+					<td>Security descriptor control flags (e.g., SE_DACL_PRESENT)</td>
 			</tr>
 			<tr>
 					<td><code>security_descriptor.sacl_aces[]</code></td>
@@ -1753,42 +1759,42 @@ Python Parser: <strong>HiveKey</strong></div>
 			<tr>
 					<td><code>security_descriptor.sacl_aces[].ace_type</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Type of ACE (e.g., ACCESS_ALLOWED, ACCESS_DENIED)</td>
 			</tr>
 			<tr>
 					<td><code>security_descriptor.sacl_aces[].ace_flags[]</code></td>
 					<td>Array[String]</td>
-					<td></td>
+					<td>ACE flags that modify inheritance or behavior</td>
 			</tr>
 			<tr>
 					<td><code>security_descriptor.sacl_aces[].rights[]</code></td>
 					<td>Array[String]</td>
-					<td></td>
+					<td>Access rights granted or denied by the ACE</td>
 			</tr>
 			<tr>
 					<td><code>security_descriptor.sacl_aces[].account_sid</code></td>
 					<td>String</td>
-					<td></td>
+					<td>SID of the account the ACE applies to</td>
 			</tr>
 			<tr>
 					<td><code>security_descriptor.sacl_aces[].ace_size</code></td>
 					<td>Int</td>
-					<td></td>
+					<td>Size of the ACE structure in bytes</td>
 			</tr>
 			<tr>
 					<td><code>security_descriptor.sacl_aces[].object_type_guid</code></td>
 					<td>String</td>
-					<td></td>
+					<td>GUID identifying the ACE object type</td>
 			</tr>
 			<tr>
 					<td><code>security_descriptor.sacl_aces[].inherited_object_type_guid</code></td>
 					<td>String</td>
-					<td></td>
+					<td>GUID identifying the inherited object type</td>
 			</tr>
 			<tr>
 					<td><code>security_descriptor.sacl_aces[].raw_hex</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Raw ACE bytes as hexadecimal</td>
 			</tr>
 			<tr>
 					<td><code>security_descriptor.dacl_aces[]</code></td>
@@ -1798,77 +1804,77 @@ Python Parser: <strong>HiveKey</strong></div>
 			<tr>
 					<td><code>security_descriptor.dacl_aces[].ace_type</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Type of ACE (e.g., ACCESS_ALLOWED, ACCESS_DENIED)</td>
 			</tr>
 			<tr>
 					<td><code>security_descriptor.dacl_aces[].ace_flags[]</code></td>
 					<td>Array[String]</td>
-					<td></td>
+					<td>ACE flags that modify inheritance or behavior</td>
 			</tr>
 			<tr>
 					<td><code>security_descriptor.dacl_aces[].rights[]</code></td>
 					<td>Array[String]</td>
-					<td></td>
+					<td>Access rights granted or denied by the ACE</td>
 			</tr>
 			<tr>
 					<td><code>security_descriptor.dacl_aces[].account_sid</code></td>
 					<td>String</td>
-					<td></td>
+					<td>SID of the account the ACE applies to</td>
 			</tr>
 			<tr>
 					<td><code>security_descriptor.dacl_aces[].ace_size</code></td>
 					<td>Int</td>
-					<td></td>
+					<td>Size of the ACE structure in bytes</td>
 			</tr>
 			<tr>
 					<td><code>security_descriptor.dacl_aces[].object_type_guid</code></td>
 					<td>String</td>
-					<td></td>
+					<td>GUID identifying the ACE object type</td>
 			</tr>
 			<tr>
 					<td><code>security_descriptor.dacl_aces[].inherited_object_type_guid</code></td>
 					<td>String</td>
-					<td></td>
+					<td>GUID identifying the inherited object type</td>
 			</tr>
 			<tr>
 					<td><code>security_descriptor.dacl_aces[].raw_hex</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Raw ACE bytes as hexadecimal</td>
 			</tr>
 			<tr>
 					<td><code>name</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Name of the registry value</td>
 			</tr>
 			<tr>
 					<td><code>data</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Data stored in the registry value</td>
 			</tr>
 			<tr>
 					<td><code>type</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Registry value type (REG_*)</td>
 			</tr>
 			<tr>
 					<td><code>size</code></td>
 					<td>Int</td>
-					<td></td>
+					<td>Size of the value data in bytes</td>
 			</tr>
 			<tr>
 					<td><code>is_placeholder</code></td>
 					<td>Bool</td>
-					<td></td>
+					<td>Whether the value is a placeholder</td>
 			</tr>
 			<tr>
 					<td><code>invalid_signature</code></td>
 					<td>Bool</td>
-					<td></td>
+					<td>Whether the value has an invalid signature</td>
 			</tr>
 			<tr>
 					<td><code>error</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Parse error message, if any</td>
 			</tr>
 	</tbody>
 </table>
@@ -1914,7 +1920,7 @@ Python Parser: <strong>HiveKey</strong></div>
   </a></div></div>
     </div></footer>
     
-    <script defer src="/dfir-ogre-documentation/js/main.js" integrity=""></script>
-<script defer src="/dfir-ogre-documentation/js/flexsearch.9f5b5908f93ae86f1ecd4b043b799f580c2d1654e703dd9357d568ac41b2547a.js" integrity="sha256-n1tZCPk66G8ezUsEO3mfWAwtFlTnA92TV9VorEGyVHo=" crossorigin="anonymous"></script><script defer src="/dfir-ogre-documentation/en.search.js" integrity=""></script>
+    <script defer src="/dfir-ogre-documentation/js/main.min.e6ec223dd3472e6949081d081ee4fc56c7e7f90951c40b4ae16c7db05d6213ee.js" integrity="sha256-5uwiPdNHLmlJCB0IHuT8Vsfn&#43;QlRxAtK4Wx9sF1iE&#43;4="></script>
+<script defer src="/dfir-ogre-documentation/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script><script defer src="/dfir-ogre-documentation/en.search.min.e501b4d6f6d74bd60ef5a7c41d513847c5d12b886fd68b45186fb216c3de1de4.js" integrity="sha256-5QG01vbXS9YO9afEHVE4R8XRK4hv1otFGG&#43;yFsPeHeQ="></script>
   </body>
 </html>

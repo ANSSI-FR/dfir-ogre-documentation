@@ -21,8 +21,8 @@ Each row is a Windows object-manager match returned by FastFind, with object typ
 
 | Output Name | Data Type | Description |
 |---|---|---|
-| `description` | String |  |
+| `description` | String | Match description returned by FastFind |
 | `object[]` | Array[Object] |  |
-| `object[].type` | String |  |
-| `object[].name` | String |  |
-| `object[].path` | String |  |
+| `object[].type` | String | Object type (e.g., file, folder) |
+| `object[].name` | String | Object name |
+| `object[].path` | String | Path to the object |

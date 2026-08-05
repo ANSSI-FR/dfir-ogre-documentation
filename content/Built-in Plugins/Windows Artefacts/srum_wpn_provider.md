@@ -22,10 +22,10 @@ Each row is Windows Push Notification telemetry from SRUM, associated with an ap
 
 | Output Name | Data Type | Description |
 |---|---|---|
-| `incremental_id` | Int |  |
-| `timestamp` | DateTime |  |
-| `app_id` | String |  |
-| `user_id` | String |  |
+| `incremental_id` | Int | Auto-increment identifier of the SRUM record |
+| `timestamp` | DateTime | Timestamp of the SRUM record |
+| `app_id` | String | Identifier of the application |
+| `user_id` | String | Identifier (SID) of the user |
 | `notification_type` | Int |  |
 | `payload_size` | Int |  |
 | `network_type` | Int |  |

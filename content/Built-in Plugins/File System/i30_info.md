@@ -33,7 +33,7 @@ Each row represents a current or carved NTFS directory-index entry, with name, r
 | `parent_record_number` | Int | record/index part of the File Reference Number (FRN) |
 | `ParentFRN` | Extension |  |
 | `volume_id` | String | Volume identifier |
-| `snapshot_id` | Python |  |
+| `snapshot_id` | Python | Volume snapshot the entry was collected from |
 | `fn_creation_date` | DateTime | creation timestamp of the filename entry |
 | `fn_lastmod_date` | DateTime | last modification timestamp of the filename entry |
 | `fn_lastaccess_date` | DateTime | last access timestamp of the filename entry |

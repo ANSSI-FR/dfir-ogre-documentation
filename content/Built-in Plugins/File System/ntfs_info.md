@@ -22,7 +22,7 @@ Each row represents an NTFS Master File Table record exported by ORC, with path,
 
 | Output Name | Data Type | Description |
 |---|---|---|
-| `snapshot_id` | Python |  |
+| `snapshot_id` | Python | Volume snapshot the file was collected from |
 | `parent` | String | full parent directory path of the entry |
 | `file_name` | String | name of the file without path |
 | `extension` | String | file extension (e.g., .txt, .exe) |

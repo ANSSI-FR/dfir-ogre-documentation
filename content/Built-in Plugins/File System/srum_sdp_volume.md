@@ -22,9 +22,9 @@ Each row is Windows Server SRUM SDP volume telemetry with timestamp and total or
 
 | Output Name | Data Type | Description |
 |---|---|---|
-| `incremental_id` | Int |  |
-| `timestamp` | DateTime |  |
-| `app_id` | String |  |
-| `user_id` | String |  |
+| `incremental_id` | Int | Auto-increment identifier of the SRUM record |
+| `timestamp` | DateTime | Timestamp of the SRUM record |
+| `app_id` | String | Identifier of the application |
+| `user_id` | String | Identifier (SID) of the user |
 | `total` | Int |  |
 | `used` | Int |  |

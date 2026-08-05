@@ -28,7 +28,7 @@ Each row describes a Windows network-interface configuration from the SYSTEM hiv
 |---|---|---|
 | `ip_address` | String | IP address assigned to the network interface |
 | `network_mask` | String | Subnet mask associated with the IP address |
-| `dhcp` | Bool |  |
+| `dhcp` | Bool | Indicates whether the interface obtains its configuration via DHCP (true = DHCP enabled) |
 | `dhcp_server` | String | Address of the DHCP server that provided the configuration |
 | `dns_suffix` | String | DNS suffix (domain) applied to the interface |
 | `name_servers` | String | Comma‑separated list of DNS name‑server addresses |

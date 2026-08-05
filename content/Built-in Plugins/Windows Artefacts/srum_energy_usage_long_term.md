@@ -22,10 +22,10 @@ Each row is an SRUM long-term power summary, with active or connected-standby ti
 
 | Output Name | Data Type | Description |
 |---|---|---|
-| `incremental_id` | Int |  |
-| `timestamp` | DateTime |  |
-| `app_id` | String |  |
-| `user_id` | String |  |
+| `incremental_id` | Int | Auto-increment identifier of the SRUM record |
+| `timestamp` | DateTime | Timestamp of the SRUM record |
+| `app_id` | String | Identifier of the application |
+| `user_id` | String | Identifier (SID) of the user |
 | `active_ac_time` | Int |  |
 | `cs_ac_time` | Int |  |
 | `active_dc_time` | Int |  |

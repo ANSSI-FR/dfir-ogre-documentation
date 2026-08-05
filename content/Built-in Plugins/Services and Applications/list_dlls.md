@@ -25,7 +25,7 @@ Each row is a module listed by Sysinternals ListDLLs for a process observed at c
 | Output Name | Data Type | Description |
 |---|---|---|
 | `process_name` | String | Process name |
-| `pid` | String | PID |
+| `pid` | String | Process identifier (PID) |
 | `command_line` | String | Full command line used to start the process |
 | `base_addr` | String | Base address in memory where the DLL is loaded (hexadecimal) |
 | `size` | String | Size of the DLL module in memory  |

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr"><head><script src="/dfir-ogre-documentation/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=dfir-ogre-documentation/livereload" data-no-instant defer></script>
+<html lang="en" dir="ltr"><head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="noindex, nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="index, follow" />
   <link rel="icon shortcut" href="/dfir-ogre-documentation/favicon.ico" sizes="32x32" />
 <link rel="icon" href="/dfir-ogre-documentation/favicon.svg" type="image/svg+xml" id="favicon-svg" />
 <link rel="icon" href="/dfir-ogre-documentation/favicon-16x16.png" type="image/png" sizes="16x16" />
@@ -9,7 +9,7 @@
 <link rel="apple-touch-icon" href="/dfir-ogre-documentation/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/dfir-ogre-documentation/site.webmanifest" rel="manifest" />
 <title>Lnk – DFIR-OGRE documentation</title>
-  <meta name="description" content=" Data Type: lnk Python Parser: LnkBatched Description Each row describes a Windows Shell Link or Jump List shortcut, preserving target paths, arguments, working directory, target metadata, volume and tracker identifiers, link flags, and extra data. Use it to infer access or launch context and correlate files, devices, shares, and hosts, but shortcut creation alone does not prove the target was opened. Local DOS or FAT times are normalized with the matching SYSTEM hive; header FILETIME values remain unchanged." /><link rel="canonical" href="http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/lnk/" itemprop="url" />
+  <meta name="description" content=" Data Type: lnk Python Parser: LnkBatched Description Each row describes a Windows Shell Link or Jump List shortcut, preserving target paths, arguments, working directory, target metadata, volume and tracker identifiers, link flags, and extra data. Use it to infer access or launch context and correlate files, devices, shares, and hosts, but shortcut creation alone does not prove the target was opened. Local DOS or FAT times are normalized with the matching SYSTEM hive; header FILETIME values remain unchanged." /><link rel="canonical" href="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/lnk/" itemprop="url" />
 
 <meta property="og:title" content="Lnk">
 <meta
@@ -34,23 +34,29 @@ Description
   content="
     article
   ">
-<meta property="og:url" content="http://localhost:1313/dfir-ogre-documentation/built-in-plugins/windows-artefacts/lnk/"><meta property="article:section" content="built-in-plugins">
+<meta property="og:url" content="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/windows-artefacts/lnk/"><meta property="article:section" content="built-in-plugins">
 
 
 
 
 	<meta itemprop="name" content="Lnk">
 	<meta itemprop="description" content="Data Type: lnk Python Parser: LnkBatched Description Each row describes a Windows Shell Link or Jump List shortcut, preserving target paths, arguments, working directory, target metadata, volume and tracker identifiers, link flags, and extra data. Use it to infer access or launch context and correlate files, devices, shares, and hosts, but shortcut creation alone does not prove the target was opened. Local DOS or FAT times are normalized with the matching SYSTEM hive; header FILETIME values remain unchanged.">
-	<meta itemprop="wordCount" content="1960">
+	<meta itemprop="wordCount" content="2214">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Lnk">
 	<meta name="twitter:description" content="Data Type: lnk Python Parser: LnkBatched Description Each row describes a Windows Shell Link or Jump List shortcut, preserving target paths, arguments, working directory, target metadata, volume and tracker identifiers, link flags, and extra data. Use it to infer access or launch context and correlate files, devices, shares, and hosts, but shortcut creation alone does not prove the target was opened. Local DOS or FAT times are normalized with the matching SYSTEM hive; header FILETIME values remain unchanged.">
-<link href="/dfir-ogre-documentation/css/compiled/main.css" rel="stylesheet" />
-    <link href="/dfir-ogre-documentation/css/variables.css" rel="stylesheet" />
-    <link href="/dfir-ogre-documentation/css/custom.css" rel="stylesheet" />
+
+    <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
+    <link href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" rel="stylesheet" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
 
   
-<script src="/dfir-ogre-documentation/js/main-head.js" integrity=""></script>
+
+
+
+
+
+
+<script src="/dfir-ogre-documentation/js/main-head.min.2375b7265ea066ecb314226ce5ff17478453df5f350d34d830b3fc96fba21672.js" integrity="sha256-I3W3Jl6gZuyzFCJs5f8XR4RT3181DTTYMLP8lvuiFnI="></script>
 
   
   
@@ -1732,22 +1738,22 @@ Python Parser: <strong>LnkBatched</strong></div>
 			<tr>
 					<td><code>type</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Type of the shell link record</td>
 			</tr>
 			<tr>
 					<td><code>status</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Parsing status of the .lnk record</td>
 			</tr>
 			<tr>
 					<td><code>size</code></td>
 					<td>Int</td>
-					<td></td>
+					<td>Size of the .lnk record in bytes</td>
 			</tr>
 			<tr>
 					<td><code>modification_time</code></td>
 					<td>DateTime</td>
-					<td></td>
+					<td>Modification time of the .lnk file</td>
 			</tr>
 			<tr>
 					<td><code>header</code></td>
@@ -1827,7 +1833,7 @@ Python Parser: <strong>LnkBatched</strong></div>
 			<tr>
 					<td><code>data.size</code></td>
 					<td>Int</td>
-					<td></td>
+					<td>Size of the link data block in bytes</td>
 			</tr>
 			<tr>
 					<td><code>data.description</code></td>
@@ -1872,7 +1878,7 @@ Python Parser: <strong>LnkBatched</strong></div>
 			<tr>
 					<td><code>extra.icon_location.size</code></td>
 					<td>Int</td>
-					<td></td>
+					<td>Size of the icon location data block</td>
 			</tr>
 			<tr>
 					<td><code>extra.icon_location.target_ansi</code></td>
@@ -1892,7 +1898,7 @@ Python Parser: <strong>LnkBatched</strong></div>
 			<tr>
 					<td><code>extra.environmental_variables_location.size</code></td>
 					<td>Int</td>
-					<td></td>
+					<td>Size of the environment variables data block</td>
 			</tr>
 			<tr>
 					<td><code>extra.environmental_variables_location.target_ansi</code></td>
@@ -1922,17 +1928,17 @@ Python Parser: <strong>LnkBatched</strong></div>
 			<tr>
 					<td><code>extra.darwin_properties.product_code_id</code></td>
 					<td>StringToLower</td>
-					<td>Field created by the parser by interpreting the previous fields?</td>
+					<td>Product code (GUID) of the MSI product</td>
 			</tr>
 			<tr>
 					<td><code>extra.darwin_properties.feature_name</code></td>
 					<td>String</td>
-					<td>Field created by the parser by interpreting the previous fields?</td>
+					<td>Feature name of the MSI product</td>
 			</tr>
 			<tr>
 					<td><code>extra.darwin_properties.component_id</code></td>
 					<td>String</td>
-					<td>Field created by the parser by interpreting the previous fields?</td>
+					<td>Component identifier of the MSI product</td>
 			</tr>
 			<tr>
 					<td><code>extra.special_folder_location</code></td>
@@ -1967,7 +1973,7 @@ Python Parser: <strong>LnkBatched</strong></div>
 			<tr>
 					<td><code>extra.metadata_properties.size</code></td>
 					<td>Int</td>
-					<td></td>
+					<td>Size of the metadata properties data block</td>
 			</tr>
 			<tr>
 					<td><code>extra.metadata_properties.property_store[]</code></td>
@@ -1992,27 +1998,27 @@ Python Parser: <strong>LnkBatched</strong></div>
 			<tr>
 					<td><code>extra.metadata_properties.property_store[].serialized_property_values[].value_type</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Type identifier of the property value</td>
 			</tr>
 			<tr>
 					<td><code>extra.metadata_properties.property_store[].serialized_property_values[].value</code></td>
 					<td>Dynamic</td>
-					<td></td>
+					<td>Decoded serialized property value</td>
 			</tr>
 			<tr>
 					<td><code>extra.metadata_properties.property_store[].serialized_property_values[].id</code></td>
 					<td>Int</td>
-					<td></td>
+					<td>Property identifier</td>
 			</tr>
 			<tr>
 					<td><code>extra.metadata_properties.property_store[].serialized_property_values[].name</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Property name</td>
 			</tr>
 			<tr>
 					<td><code>extra.metadata_properties.property_store[].serialized_property_values[].name_size</code></td>
 					<td>Int</td>
-					<td></td>
+					<td>Length of the property name string</td>
 			</tr>
 			<tr>
 					<td><code>extra.shim_layer_properties</code></td>
@@ -2042,112 +2048,112 @@ Python Parser: <strong>LnkBatched</strong></div>
 			<tr>
 					<td><code>extra.distributed_link_tracker.droid_volume_identifier</code></td>
 					<td>StringToLower</td>
-					<td>Two values (a priori droid_volume_identifier and droid_file_identifier) in GUID packet representation that are used to find the link target with the Link Tracking service.</td>
+					<td>GUID volume identifier used by link tracking to locate the target</td>
 			</tr>
 			<tr>
 					<td><code>extra.distributed_link_tracker.droid_file_identifier</code></td>
 					<td>StringToLower</td>
-					<td>Two values (a priori droid_volume_identifier and droid_file_identifier) in GUID packet representation that are used to find the link target with the Link Tracking service</td>
+					<td>GUID file identifier used by link tracking to locate the target</td>
 			</tr>
 			<tr>
 					<td><code>extra.distributed_link_tracker.droid_file_mft_seq</code></td>
 					<td>Int</td>
-					<td></td>
+					<td>MFT sequence number of the target file</td>
 			</tr>
 			<tr>
 					<td><code>extra.distributed_link_tracker.droid_file_frn</code></td>
 					<td>IntToHex</td>
-					<td></td>
+					<td>Target file FRN (droid file identifier) as hexadecimal</td>
 			</tr>
 			<tr>
 					<td><code>extra.distributed_link_tracker.droid_file_sequence_number</code></td>
 					<td>Int</td>
-					<td></td>
+					<td>Sequence number of the target file MFT record</td>
 			</tr>
 			<tr>
 					<td><code>extra.distributed_link_tracker.droid_file_record_number</code></td>
 					<td>Int</td>
-					<td></td>
+					<td>Record number of the target file MFT entry</td>
 			</tr>
 			<tr>
 					<td><code>extra.distributed_link_tracker.droid_file_mft_seq</code></td>
 					<td>Extension</td>
-					<td></td>
+					<td>Target file FRN split into record and sequence number components</td>
 			</tr>
 			<tr>
 					<td><code>extra.distributed_link_tracker.droid_file_frn_hex</code></td>
 					<td>Int</td>
-					<td></td>
+					<td>Target file FRN (droid file identifier) as hexadecimal</td>
 			</tr>
 			<tr>
 					<td><code>extra.distributed_link_tracker.droid_file_frn_split</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Target file FRN as record/sequence string</td>
 			</tr>
 			<tr>
 					<td><code>extra.distributed_link_tracker.droid_file_timestamp</code></td>
 					<td>DateTime</td>
-					<td>Information générée par le parseur grace à la résolution de droid_volume_identifier et droid_file_identifier ?</td>
+					<td>Timestamp resolved by the parser from the droid volume and file identifiers</td>
 			</tr>
 			<tr>
 					<td><code>extra.distributed_link_tracker.droid_file_mac</code></td>
 					<td>String</td>
-					<td>Information générée par le parseur grace à la résolution de droid_volume_identifier et droid_file_identifier ?</td>
+					<td>MAC address resolved by the parser from the droid volume and file identifiers</td>
 			</tr>
 			<tr>
 					<td><code>extra.distributed_link_tracker.droid_file_vendor</code></td>
 					<td>String</td>
-					<td>Information générée par le parseur grace à la résolution de droid_volume_identifier et droid_file_identifier ?</td>
+					<td>Vendor resolved by the parser from the droid volume and file identifiers</td>
 			</tr>
 			<tr>
 					<td><code>extra.distributed_link_tracker.birth_droid_volume_identifier</code></td>
 					<td>StringToLower</td>
-					<td>Two values (a priori birth_droid_volume_identifier et birth_droid_file_identifier) in GUID packet representation that are used to find the link target with the Link Tracking service.</td>
+					<td>GUID volume identifier of the original (birth) file for link tracking</td>
 			</tr>
 			<tr>
 					<td><code>extra.distributed_link_tracker.birth_droid_file_identifier</code></td>
 					<td>StringToLower</td>
-					<td>Two values (a priori birth_droid_volume_identifier et birth_droid_file_identifier) in GUID packet representation that are used to find the link target with the Link Tracking service.</td>
+					<td>GUID file identifier of the original (birth) file for link tracking</td>
 			</tr>
 			<tr>
 					<td><code>extra.distributed_link_tracker.birth_droid_file_mft_seq</code></td>
 					<td>Int</td>
-					<td></td>
+					<td>MFT sequence number of the birth (original) file</td>
 			</tr>
 			<tr>
 					<td><code>extra.distributed_link_tracker.birth_droid_file_frn</code></td>
 					<td>IntToHex</td>
-					<td></td>
+					<td>Birth (original) file FRN as hexadecimal</td>
 			</tr>
 			<tr>
 					<td><code>extra.distributed_link_tracker.birth_droid_file_sequence_number</code></td>
 					<td>Int</td>
-					<td></td>
+					<td>Sequence number of the birth (original) file MFT record</td>
 			</tr>
 			<tr>
 					<td><code>extra.distributed_link_tracker.birth_droid_file_record_number</code></td>
 					<td>Int</td>
-					<td></td>
+					<td>Record number of the birth (original) file MFT entry</td>
 			</tr>
 			<tr>
 					<td><code>extra.distributed_link_tracker.birth_droid_file_mft_seq</code></td>
 					<td>Extension</td>
-					<td></td>
+					<td>Birth (original) file FRN split into record and sequence components</td>
 			</tr>
 			<tr>
 					<td><code>extra.distributed_link_tracker.birth_droid_file_timestamp</code></td>
 					<td>DateTime</td>
-					<td>Timestamp generated by the parser by resolving birth_droid_volume_identifier and birth_droid_file_identifier?</td>
+					<td>Timestamp resolved by the parser from the birth droid identifiers</td>
 			</tr>
 			<tr>
 					<td><code>extra.distributed_link_tracker.birth_droid_file_mac</code></td>
 					<td>String</td>
-					<td>MAC address generated by the parser by resolving birth_droid_volume_identifier and birth_droid_file_identifier?</td>
+					<td>MAC address resolved by the parser from the birth droid identifiers</td>
 			</tr>
 			<tr>
 					<td><code>extra.distributed_link_tracker.birth_droid_file_vendor</code></td>
 					<td>String</td>
-					<td>Vendor information generated by the parser by resolving birth_droid_volume_identifier and birth_droid_file_identifier?</td>
+					<td>Vendor resolved by the parser from the birth droid identifiers</td>
 			</tr>
 			<tr>
 					<td><code>extra.console_properties</code></td>
@@ -2157,7 +2163,7 @@ Python Parser: <strong>LnkBatched</strong></div>
 			<tr>
 					<td><code>extra.console_properties.size</code></td>
 					<td>Int</td>
-					<td></td>
+					<td>Size of the console properties data block</td>
 			</tr>
 			<tr>
 					<td><code>extra.console_properties.fill_attributes</code></td>
@@ -2207,7 +2213,7 @@ Python Parser: <strong>LnkBatched</strong></div>
 			<tr>
 					<td><code>extra.console_properties.font_family</code></td>
 					<td>Int</td>
-					<td>Specifies the family of the font used in the console window. This value MUST be comprised of a font family and a font pitch. Voir le tableau de la doc pour interpréter.</td>
+					<td>Specifies the family of the font used in the console window. This value MUST be comprised of a font family and a font pitch. See the documentation table for interpretation.</td>
 			</tr>
 			<tr>
 					<td><code>extra.console_properties.font_weight</code></td>
@@ -2282,17 +2288,17 @@ Python Parser: <strong>LnkBatched</strong></div>
 			<tr>
 					<td><code>extra.terminal_properties.size</code></td>
 					<td>Int</td>
-					<td></td>
+					<td>Size of the terminal block</td>
 			</tr>
 			<tr>
 					<td><code>extra.terminal_properties.appended_data_sha256</code></td>
 					<td>String</td>
-					<td></td>
+					<td>SHA-256 of the appended data block</td>
 			</tr>
 			<tr>
 					<td><code>extra.terminal_properties.appended_data_base64</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Appended data block as base64</td>
 			</tr>
 			<tr>
 					<td><code>target</code></td>
@@ -2312,7 +2318,7 @@ Python Parser: <strong>LnkBatched</strong></div>
 			<tr>
 					<td><code>target.items[].identifiers</code></td>
 					<td>Object</td>
-					<td></td>
+					<td>Identifiers of the shell item (item class and associated data)</td>
 			</tr>
 			<tr>
 					<td><code>target.items[].item_class</code></td>
@@ -2357,7 +2363,7 @@ Python Parser: <strong>LnkBatched</strong></div>
 			<tr>
 					<td><code>target.items[].file_attribute_flags</code></td>
 					<td>Int</td>
-					<td>For items type &lsquo;FileEntry&rsquo;, target file attributes; interpreted?</td>
+					<td>Target file attribute flags (for FileEntry items)</td>
 			</tr>
 			<tr>
 					<td><code>target.items[].primary_name</code></td>
@@ -2382,7 +2388,7 @@ Python Parser: <strong>LnkBatched</strong></div>
 			<tr>
 					<td><code>target.target_path</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Full path of the link target</td>
 			</tr>
 			<tr>
 					<td><code>link_info</code></td>
@@ -2392,17 +2398,17 @@ Python Parser: <strong>LnkBatched</strong></div>
 			<tr>
 					<td><code>link_info.local_base_path</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Local base path of the target from the LinkInfo</td>
 			</tr>
 			<tr>
 					<td><code>link_info.common_path_suffix</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Common path suffix appended to the base path</td>
 			</tr>
 			<tr>
 					<td><code>link_info.location</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Location of the link target (drive or UNC)</td>
 			</tr>
 			<tr>
 					<td><code>link_info.location_info</code></td>
@@ -2412,62 +2418,62 @@ Python Parser: <strong>LnkBatched</strong></div>
 			<tr>
 					<td><code>link_info.location_info.r_drive_type</code></td>
 					<td>Int</td>
-					<td></td>
+					<td>Raw drive type value (e.g., DRIVE_FIXED)</td>
 			</tr>
 			<tr>
 					<td><code>link_info.location_info.drive_type</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Drive type of the link target&rsquo;s volume</td>
 			</tr>
 			<tr>
 					<td><code>link_info.location_info.drive_serial_number</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Serial number of the link target volume</td>
 			</tr>
 			<tr>
 					<td><code>link_info.location_info.volume_label</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Volume label of the link target volume</td>
 			</tr>
 			<tr>
 					<td><code>link_info.location_info.volume_label_unicode</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Volume label of the link target volume (Unicode)</td>
 			</tr>
 			<tr>
 					<td><code>link_info.location_info.common_network_relative_link_flags</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Flags of the CommonNetworkRelativeLink structure</td>
 			</tr>
 			<tr>
 					<td><code>link_info.location_info.r_network_provider_type</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Raw network provider type value</td>
 			</tr>
 			<tr>
 					<td><code>link_info.location_info.network_provider_type</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Network provider type of the link target</td>
 			</tr>
 			<tr>
 					<td><code>link_info.location_info.net_name</code></td>
 					<td>String</td>
-					<td></td>
+					<td>UNC network path of the link target</td>
 			</tr>
 			<tr>
 					<td><code>link_info.location_info.net_name_unicode</code></td>
 					<td>String</td>
-					<td></td>
+					<td>UNC network path of the link target (Unicode)</td>
 			</tr>
 			<tr>
 					<td><code>link_info.location_info.device_name</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Device/computer name of the link target on the network</td>
 			</tr>
 			<tr>
 					<td><code>link_info.location_info.device_name_unicode</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Device/computer name of the link target (Unicode)</td>
 			</tr>
 			<tr>
 					<td><code>slack</code></td>
@@ -2477,7 +2483,7 @@ Python Parser: <strong>LnkBatched</strong></div>
 			<tr>
 					<td><code>slack.payload</code></td>
 					<td>String</td>
-					<td></td>
+					<td>Payload bytes recovered from slack or extra space</td>
 			</tr>
 	</tbody>
 </table>
@@ -2523,7 +2529,7 @@ Python Parser: <strong>LnkBatched</strong></div>
   </a></div></div>
     </div></footer>
     
-    <script defer src="/dfir-ogre-documentation/js/main.js" integrity=""></script>
-<script defer src="/dfir-ogre-documentation/js/flexsearch.9f5b5908f93ae86f1ecd4b043b799f580c2d1654e703dd9357d568ac41b2547a.js" integrity="sha256-n1tZCPk66G8ezUsEO3mfWAwtFlTnA92TV9VorEGyVHo=" crossorigin="anonymous"></script><script defer src="/dfir-ogre-documentation/en.search.js" integrity=""></script>
+    <script defer src="/dfir-ogre-documentation/js/main.min.e6ec223dd3472e6949081d081ee4fc56c7e7f90951c40b4ae16c7db05d6213ee.js" integrity="sha256-5uwiPdNHLmlJCB0IHuT8Vsfn&#43;QlRxAtK4Wx9sF1iE&#43;4="></script>
+<script defer src="/dfir-ogre-documentation/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script><script defer src="/dfir-ogre-documentation/en.search.min.e501b4d6f6d74bd60ef5a7c41d513847c5d12b886fd68b45186fb216c3de1de4.js" integrity="sha256-5QG01vbXS9YO9afEHVE4R8XRK4hv1otFGG&#43;yFsPeHeQ="></script>
   </body>
 </html>
