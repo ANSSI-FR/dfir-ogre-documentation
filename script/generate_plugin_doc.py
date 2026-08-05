@@ -258,10 +258,17 @@ def main() -> None:
             if category is not None and category.text is not None:
                 cat_text = category.text
 
-            description = mapping.find("./description")
-            descr_text = ""
-            if description is not None and description.text:
-                descr_text = description.text.split(".")[0]
+            name_elem = mapping.find("./name")
+            name = (
+                name_elem.text.strip()
+                if name_elem is not None and name_elem.text
+                else data_type
+            )
+
+            short_elem = mapping.find("./short_description")
+            subtitle = ""
+            if short_elem is not None and short_elem.text:
+                subtitle = short_elem.text.replace("\n", " ").strip()
 
             md = parse_description(mapping, parser, data_type)
             md += "\n### Timeline \n\n"
@@ -269,7 +276,7 @@ def main() -> None:
             md += "\n### Fields \n\n"
             md += parse_fields(mapping)
 
-            doc = Document(parser, data_type, cat_text, descr_text, md)
+            doc = Document(parser, data_type, cat_text, name, subtitle, md)
             api_tree.add(doc)
             # print(md)
 
@@ -288,7 +295,8 @@ class Document:
     parser: str
     data_type: str
     category: str
-    description: str
+    name: str
+    subtitle: str
     content: str
 
 
@@ -305,20 +313,15 @@ class APITree:
 
     def write_doc(self, folder_path: str):
         every_cards: List[Card] = []
-        link_set = set()
+        used_links = set()
         for folder, docs in self.map.items():
             doc_folder_path = os.path.join(folder_path, folder)
             os.makedirs(doc_folder_path, exist_ok=True)
             cards: List[Card] = []
             for doc in docs:
-                title = doc.data_type.replace("win_", "").replace("_", " ").title()
-                link = doc.data_type
-                if link in link_set:
-                    last_parser_word = last_camel_case_word(doc.parser)
-                    link += "_" + last_parser_word.lower()
-                    title += " " + last_parser_word
-                link_set.add(link)
-                subtitle = doc.description.strip().replace("\n", " ")
+                link = resolve_link(slugify_name(doc.name), used_links)
+                title = doc.name
+                subtitle = doc.subtitle
 
                 card = Card(doc.category, doc.parser, link, title, subtitle)
                 cards.append(card)
@@ -458,10 +461,6 @@ def list_files_in_directory(directory: Path) -> List[str]:
             file_list.append(os.path.join(root, file))
 
     return file_list
-
-
-def last_camel_case_word(str: str) -> str:
-    return re.findall(r"[A-Z](?:[a-z]+|[A-Z]*(?=[A-Z]|$))", str).pop()
 
 
 def slugify_name(name: str) -> str:
