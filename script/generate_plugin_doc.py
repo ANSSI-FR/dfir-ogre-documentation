@@ -464,5 +464,24 @@ def last_camel_case_word(str: str) -> str:
     return re.findall(r"[A-Z](?:[a-z]+|[A-Z]*(?=[A-Z]|$))", str).pop()
 
 
+def slugify_name(name: str) -> str:
+    """Lowercase the name and convert every run of non-alphanumerics to one '_'."""
+    return re.sub(r"[^a-z0-9]+", "_", name.lower()).strip("_")
+
+
+def resolve_link(candidate: str, used_links: "set[str]") -> str:
+    """Return a link derived from candidate that is unique within used_links.
+
+    If candidate is taken, append a number; never silently overwrite an existing link.
+    """
+    link = candidate
+    n = 2
+    while link in used_links:
+        link = f"{candidate}-{n}"
+        n += 1
+    used_links.add(link)
+    return link
+
+
 if __name__ == "__main__":
     main()
