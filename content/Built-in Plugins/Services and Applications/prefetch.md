@@ -20,23 +20,23 @@ Each row describes a Windows Prefetch file for an executable, with executable na
 
 ### Fields 
 
-| Output Name | Data Type | Qualifier | Description |
-|---|---|---|---|
-| `executable` | String | FILE_NAME | executable file name |
-| `version` | String |  | version |
-| `prefetch_hash` | Int |  | hash identifier of the prefetch file |
-| `run_count` | Int |  | number of times the executable was run |
-| `run_date` | DateTime | DATE_LAST_RUN | timestamp of the most recent execution |
-| `file_count` | Int |  | count of file entries referenced by the prefetch |
-| `files[]` | Array[Object] |  |  |
-| `files[].index` | Int |  | index of the file entry |
-| `files[].path` | String | FILE_PATH | full path of a referenced file |
-| `files[].frn` | String |  | file reference number (FRN) in hexadecimal |
-| `files[].sequence_number` | Int | MFT_SEQUENCE | sequence component of the FRN |
-| `files[].record_number` | Int | FS_INODE | record/inode component of the FRN |
-| `volume_count` | Int |  | number of volumes referenced |
-| `volumes[]` | Array[Object] |  |  |
-| `volumes[].path` | String |  | device path of the volume |
-| `volumes[].serial_number` | Int |  | volume serial number |
-| `volumes[].creation_time` | DateTime |  | creation timestamp of the volume |
-| `path_hints[]` | Array[String] |  | relative paths within volumes that hint at additional artefacts |
+| Output Name | Data Type | Description |
+|---|---|---|
+| `executable` | String | executable file name |
+| `version` | String | version |
+| `prefetch_hash` | Int | hash identifier of the prefetch file |
+| `run_count` | Int | number of times the executable was run |
+| `run_date` | DateTime | timestamp of the most recent execution |
+| `file_count` | Int | count of file entries referenced by the prefetch |
+| `files[]` | Array[Object] |  |
+| `files[].index` | Int | index of the file entry |
+| `files[].path` | String | full path of a referenced file |
+| `files[].frn` | String | file reference number (FRN) in hexadecimal |
+| `files[].sequence_number` | Int | sequence component of the FRN |
+| `files[].record_number` | Int | record/inode component of the FRN |
+| `volume_count` | Int | number of volumes referenced |
+| `volumes[]` | Array[Object] |  |
+| `volumes[].path` | String | device path of the volume |
+| `volumes[].serial_number` | Int | volume serial number |
+| `volumes[].creation_time` | DateTime | creation timestamp of the volume |
+| `path_hints[]` | Array[String] | relative paths within volumes that hint at additional artefacts |

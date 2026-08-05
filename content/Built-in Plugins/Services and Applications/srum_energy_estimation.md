@@ -20,10 +20,10 @@ Each row preserves an SRUM energy-estimation record with timestamp, application 
 
 ### Fields 
 
-| Output Name | Data Type | Qualifier | Description |
-|---|---|---|---|
-| `incremental_id` | Int |  |  |
-| `timestamp` | DateTime |  |  |
-| `app_id` | String | APP_ID |  |
-| `user_id` | String | USER_ID |  |
-| `binary_data` | String |  |  |
+| Output Name | Data Type | Description |
+|---|---|---|
+| `incremental_id` | Int |  |
+| `timestamp` | DateTime |  |
+| `app_id` | String |  |
+| `user_id` | String |  |
+| `binary_data` | String |  |

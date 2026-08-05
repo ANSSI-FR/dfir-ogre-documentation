@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DFIR-OGRE documentation – Application Specific</title>
-    <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/application-specific/</link>
+    <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/application-specific/</link>
     <description>Recent content in Application Specific on DFIR-OGRE documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/application-specific/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:1313/dfir-ogre-documentation/built-in-plugins/application-specific/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Acmru</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/application-specific/acmru/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/application-specific/acmru/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/application-specific/acmru/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/application-specific/acmru/</guid>
       <description>
         
         
@@ -33,12 +33,7 @@ Python Parser: &lt;strong&gt;RegAcMru&lt;/strong&gt;&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;h3&gt;Description&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;description&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Extracts Windows XP Search Assistant entries from the &lt;code&gt;NTUSER.DAT&lt;/code&gt; hive.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Retrieves search queries from category subkeys such as 5603 and 5604.&lt;/li&gt;
-&lt;li&gt;Emits entries in deterministic most-recent-first numeric order.&lt;/li&gt;
-&lt;li&gt;Associates the category key LastWrite time only with index 000.&lt;/li&gt;
-&lt;/ul&gt;
+    &lt;a href=&#34;#description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Each row is a Windows XP Search Assistant query recovered from a per-user hive, with search category, query text, MRU order, registry provenance, and key LastWrite time. Use it to reconstruct user search intent and pivot on filenames, hosts, or terms. Only the newest indexed entry is associated with the category key time; other queries have no individual timestamp.&lt;/p&gt;
 &lt;h3&gt;Timeline&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;timeline&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#timeline&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
 	&lt;thead&gt;
@@ -64,7 +59,6 @@ Python Parser: &lt;strong&gt;RegAcMru&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;th&gt;Output Name&lt;/th&gt;
 					&lt;th&gt;Data Type&lt;/th&gt;
-					&lt;th&gt;Qualifier&lt;/th&gt;
 					&lt;th&gt;Description&lt;/th&gt;
 			&lt;/tr&gt;
 	&lt;/thead&gt;
@@ -72,163 +66,136 @@ Python Parser: &lt;strong&gt;RegAcMru&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;search_request&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;search query entered in the Windows Search Assistant&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;order_index&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Zero-based position of the query in the category MRU&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;category&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Windows XP Search Assistant category identifier&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_path&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;KEY_PATH&lt;/td&gt;
 					&lt;td&gt;full registry key name&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_modif_time&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;DATE_MODIFICATION&lt;/td&gt;
 					&lt;td&gt;last modification timestamp of the registry key&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Object&lt;/td&gt;
 					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.owner_sid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;USER_SID&lt;/td&gt;
 					&lt;td&gt;SID of the user that owns the registry key&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.group_sid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;SID of the group that owns the registry key&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.control_flags[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;security descriptor control flags for the key&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.sacl_aces[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[Object]&lt;/td&gt;
 					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.sacl_aces[].ace_type&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;type of ACE (e.g., allow, deny)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.sacl_aces[].ace_flags[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;ACE flags that modify inheritance or behavior&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.sacl_aces[].rights[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;permissions granted or denied by the ACE&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.sacl_aces[].account_sid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;SID of the account the ACE applies to&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.sacl_aces[].ace_size&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;declared ACE size in bytes&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.sacl_aces[].object_type_guid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;GUID identifying the object type governed by the ACE&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.sacl_aces[].inherited_object_type_guid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;GUID identifying the inherited object type governed by the ACE&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.sacl_aces[].raw_hex&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;raw ACE bytes preserved as hexadecimal&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.dacl_aces[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[Object]&lt;/td&gt;
 					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.dacl_aces[].ace_type&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;type of ACE (e.g., allow, deny)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.dacl_aces[].ace_flags[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;ACE flags that modify inheritance or behavior&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.dacl_aces[].rights[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;permissions granted or denied by the ACE&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.dacl_aces[].account_sid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;SID of the account the ACE applies to&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.dacl_aces[].ace_size&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;declared ACE size in bytes&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.dacl_aces[].object_type_guid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;GUID identifying the object type governed by the ACE&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.dacl_aces[].inherited_object_type_guid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;GUID identifying the inherited object type governed by the ACE&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.dacl_aces[].raw_hex&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;raw ACE bytes preserved as hexadecimal&lt;/td&gt;
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
@@ -239,10 +206,10 @@ Python Parser: &lt;strong&gt;RegAcMru&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Antifishing File</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/application-specific/antifishing_file/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/application-specific/antifishing_file/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/application-specific/antifishing_file/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/application-specific/antifishing_file/</guid>
       <description>
         
         
@@ -256,10 +223,7 @@ Python Parser: &lt;strong&gt;RegAntifishingFile&lt;/strong&gt;&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;h3&gt;Description&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;description&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Extracts the Internet Explorer anti‑phishing registry hive under &lt;code&gt;NTUser&lt;/code&gt; hive.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Extracts the &lt;code&gt;UserFile&lt;/code&gt; value and the key’s security descriptor, exposing the file used for IE’s anti‑phishing feature and the owning user.&lt;/li&gt;
-&lt;/ul&gt;
+    &lt;a href=&#34;#description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Each row exposes the Internet Explorer anti-phishing UserFile registry setting for a user, with its configured value, key path, LastWrite time, owner, and access controls. Use it to locate related browser-protection data and assess unexpected configuration changes. The setting alone does not describe the file contents or prove that Internet Explorer consumed it.&lt;/p&gt;
 &lt;h3&gt;Timeline&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;timeline&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#timeline&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
 	&lt;thead&gt;
@@ -289,7 +253,6 @@ Python Parser: &lt;strong&gt;RegAntifishingFile&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;th&gt;Output Name&lt;/th&gt;
 					&lt;th&gt;Data Type&lt;/th&gt;
-					&lt;th&gt;Qualifier&lt;/th&gt;
 					&lt;th&gt;Description&lt;/th&gt;
 			&lt;/tr&gt;
 	&lt;/thead&gt;
@@ -297,151 +260,126 @@ Python Parser: &lt;strong&gt;RegAntifishingFile&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;user_file&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;FILE_PATH&lt;/td&gt;
 					&lt;td&gt;Path to the file used by Internet Explorer&amp;rsquo;s anti‑phishing feature&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_path&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;KEY_PATH&lt;/td&gt;
 					&lt;td&gt;full registry key name&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_modif_time&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;DATE_MODIFICATION&lt;/td&gt;
 					&lt;td&gt;last modification timestamp of the registry key&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Object&lt;/td&gt;
 					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.owner_sid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;USER_SID&lt;/td&gt;
 					&lt;td&gt;SID of the user that owns the registry key&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.group_sid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;SID of the group that owns the registry key&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.control_flags[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;security descriptor control flags for the key&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.sacl_aces[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[Object]&lt;/td&gt;
 					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.sacl_aces[].ace_type&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;type of ACE (e.g., allow, deny)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.sacl_aces[].ace_flags[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;ACE flags that modify inheritance or behavior&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.sacl_aces[].rights[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;permissions granted or denied by the ACE&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.sacl_aces[].account_sid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;SID of the account the ACE applies to&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.sacl_aces[].ace_size&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;declared ACE size in bytes&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.sacl_aces[].object_type_guid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;GUID identifying the object type governed by the ACE&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.sacl_aces[].inherited_object_type_guid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;GUID identifying the inherited object type governed by the ACE&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.sacl_aces[].raw_hex&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;raw ACE bytes preserved as hexadecimal&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.dacl_aces[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[Object]&lt;/td&gt;
 					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.dacl_aces[].ace_type&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;type of ACE (e.g., allow, deny)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.dacl_aces[].ace_flags[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;ACE flags that modify inheritance or behavior&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.dacl_aces[].rights[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;permissions granted or denied by the ACE&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.dacl_aces[].account_sid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;SID of the account the ACE applies to&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.dacl_aces[].ace_size&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;declared ACE size in bytes&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.dacl_aces[].object_type_guid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;GUID identifying the object type governed by the ACE&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.dacl_aces[].inherited_object_type_guid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;GUID identifying the inherited object type governed by the ACE&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.dacl_aces[].raw_hex&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;raw ACE bytes preserved as hexadecimal&lt;/td&gt;
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
@@ -452,10 +390,10 @@ Python Parser: &lt;strong&gt;RegAntifishingFile&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Explorer Search History</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/application-specific/explorer_search_history/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/application-specific/explorer_search_history/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/application-specific/explorer_search_history/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/application-specific/explorer_search_history/</guid>
       <description>
         
         
@@ -469,13 +407,7 @@ Python Parser: &lt;strong&gt;RegExplorerSearchHistory&lt;/strong&gt;&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;h3&gt;Description&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;description&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Extracts Windows 7 and later Explorer search history from WordWheelQuery in
-the &lt;code&gt;NTUSER.DAT&lt;/code&gt; hive.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Decodes UTF-16LE registry values.&lt;/li&gt;
-&lt;li&gt;Uses MRUListEx to emit most-recent-first search order.&lt;/li&gt;
-&lt;li&gt;Associates the key LastWrite time only with the newest search.&lt;/li&gt;
-&lt;/ul&gt;
+    &lt;a href=&#34;#description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Each row is a Windows Explorer search query from WordWheelQuery, with decoded query text, MRU order, value index, user and registry provenance, and key LastWrite time. Use it to reconstruct search intent and pivot on filenames or terms. Only the newest query is associated with the key time; remaining entries have relative order but no individual timestamp.&lt;/p&gt;
 &lt;h3&gt;Timeline&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;timeline&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#timeline&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
 	&lt;thead&gt;
@@ -501,7 +433,6 @@ the &lt;code&gt;NTUSER.DAT&lt;/code&gt; hive.&lt;/p&gt;
 			&lt;tr&gt;
 					&lt;th&gt;Output Name&lt;/th&gt;
 					&lt;th&gt;Data Type&lt;/th&gt;
-					&lt;th&gt;Qualifier&lt;/th&gt;
 					&lt;th&gt;Description&lt;/th&gt;
 			&lt;/tr&gt;
 	&lt;/thead&gt;
@@ -509,163 +440,136 @@ the &lt;code&gt;NTUSER.DAT&lt;/code&gt; hive.&lt;/p&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;search_request&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Search query entered in Windows Explorer&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;order_index&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Zero-based position in MRUListEx, where zero is newest&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;value_index&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Registry value identifier referenced by MRUListEx&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_path&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;KEY_PATH&lt;/td&gt;
 					&lt;td&gt;full registry key name&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_modif_time&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;DATE_MODIFICATION&lt;/td&gt;
 					&lt;td&gt;last modification timestamp of the registry key&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Object&lt;/td&gt;
 					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.owner_sid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;USER_SID&lt;/td&gt;
 					&lt;td&gt;SID of the user that owns the registry key&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.group_sid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;SID of the group that owns the registry key&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.control_flags[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;security descriptor control flags for the key&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.sacl_aces[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[Object]&lt;/td&gt;
 					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.sacl_aces[].ace_type&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;type of ACE (e.g., allow, deny)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.sacl_aces[].ace_flags[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;ACE flags that modify inheritance or behavior&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.sacl_aces[].rights[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;permissions granted or denied by the ACE&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.sacl_aces[].account_sid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;SID of the account the ACE applies to&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.sacl_aces[].ace_size&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;declared ACE size in bytes&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.sacl_aces[].object_type_guid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;GUID identifying the object type governed by the ACE&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.sacl_aces[].inherited_object_type_guid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;GUID identifying the inherited object type governed by the ACE&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.sacl_aces[].raw_hex&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;raw ACE bytes preserved as hexadecimal&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.dacl_aces[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[Object]&lt;/td&gt;
 					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.dacl_aces[].ace_type&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;type of ACE (e.g., allow, deny)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.dacl_aces[].ace_flags[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;ACE flags that modify inheritance or behavior&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.dacl_aces[].rights[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;permissions granted or denied by the ACE&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.dacl_aces[].account_sid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;SID of the account the ACE applies to&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.dacl_aces[].ace_size&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;declared ACE size in bytes&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.dacl_aces[].object_type_guid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;GUID identifying the object type governed by the ACE&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.dacl_aces[].inherited_object_type_guid&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;GUID identifying the inherited object type governed by the ACE&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;key_security.dacl_aces[].raw_hex&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;raw ACE bytes preserved as hexadecimal&lt;/td&gt;
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
@@ -676,10 +580,10 @@ the &lt;code&gt;NTUSER.DAT&lt;/code&gt; hive.&lt;/p&gt;
     
     <item>
       <title>Java Idx</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/application-specific/java_idx/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/application-specific/java_idx/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/application-specific/java_idx/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/application-specific/java_idx/</guid>
       <description>
         
         
@@ -693,17 +597,7 @@ Python Parser: &lt;strong&gt;JavaIdx&lt;/strong&gt;&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;h3&gt;Description&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;description&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Extracts metadata about each downloaded artifact, including its URL, server IP, size,
-timestamps and signing status.&lt;/p&gt;
-&lt;p&gt;The parser interprets version‑specific structures, handling incomplete or busy downloads, and
-converts dates to UTC where possible. All extracted fields are emitted as a structured tuple
-for downstream analysis.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Provides the original download URL and originating IP address.&lt;/li&gt;
-&lt;li&gt;Indicates whether the entry is a shortcut or an incomplete download.&lt;/li&gt;
-&lt;li&gt;Reports file size, last‑modified, expiration and optional signing flag.&lt;/li&gt;
-&lt;li&gt;Normalises timestamps to UTC for reliable chronology.&lt;/li&gt;
-&lt;/ul&gt;
+    &lt;a href=&#34;#description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Each row describes an artifact recorded in a Java deployment cache index, with source URL, server IP, size, cache state, signing flag, request data, and modification or expiry times. Use it to trace Java-delivered content and correlate cached files with network or execution evidence. Cache presence and a signing flag do not prove successful execution or trustworthiness.&lt;/p&gt;
 &lt;h3&gt;Timeline&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;timeline&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#timeline&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
 	&lt;thead&gt;
@@ -745,7 +639,6 @@ for downstream analysis.&lt;/p&gt;
 			&lt;tr&gt;
 					&lt;th&gt;Output Name&lt;/th&gt;
 					&lt;th&gt;Data Type&lt;/th&gt;
-					&lt;th&gt;Qualifier&lt;/th&gt;
 					&lt;th&gt;Description&lt;/th&gt;
 			&lt;/tr&gt;
 	&lt;/thead&gt;
@@ -753,79 +646,66 @@ for downstream analysis.&lt;/p&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;url&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;download URL of the file&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;ip_address&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;source IP address of the server&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;is_incomplete&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Bool&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;true if the download was incomplete or still in progress&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;content_length&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;FILE_SIZE&lt;/td&gt;
 					&lt;td&gt;size of the downloaded file in bytes&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;is_shortcut&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Bool&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;true if the entry represents a shortcut rather than the actual file&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;version_string&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;version string extracted from the IDX file&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;namespace&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;namespace associated with the download&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;signed&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Bool&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;indicates whether the downloaded file is digitally signed&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;download_date&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;timestamp when the file was downloaded&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;last_modified_date&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;DATE_MODIFICATION&lt;/td&gt;
 					&lt;td&gt;last‑modified timestamp reported by the server&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;expiration_date&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;expiration timestamp of the file or associated resource&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;validation_date&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;validation timestamp (available in IDX 6.05 format)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;request&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Object&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;raw HTTP request metadata extracted from the IDX file&lt;/td&gt;
 			&lt;/tr&gt;
 	&lt;/tbody&gt;

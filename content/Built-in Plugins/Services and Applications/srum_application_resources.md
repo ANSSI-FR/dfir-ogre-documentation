@@ -21,24 +21,24 @@ Each row is a Windows SRUM resource-usage interval for an application and user, 
 
 ### Fields 
 
-| Output Name | Data Type | Qualifier | Description |
-|---|---|---|---|
-| `incremental_id` | Int |  |  |
-| `timestamp` | DateTime |  |  |
-| `app_id` | String | APP_ID |  |
-| `user_id` | String | USER_ID |  |
-| `face_time` | Int |  |  |
-| `foreground_cycle_time` | Int |  |  |
-| `background_cycle_time` | Int |  |  |
-| `foreground_context_switches` | Int |  |  |
-| `background_context_switches` | Int |  |  |
-| `foreground_bytes_read` | Int |  |  |
-| `background_bytes_read` | Int |  |  |
-| `foreground_bytes_written` | Int |  |  |
-| `background_bytes_written` | Int |  |  |
-| `foreground_num_read_operations` | Int |  |  |
-| `background_num_read_operations` | Int |  |  |
-| `foreground_num_write_operations` | Int |  |  |
-| `background_num_write_operations` | Int |  |  |
-| `foreground_number_of_flushes` | Int |  |  |
-| `background_number_of_flushes` | Int |  |  |
+| Output Name | Data Type | Description |
+|---|---|---|
+| `incremental_id` | Int |  |
+| `timestamp` | DateTime |  |
+| `app_id` | String |  |
+| `user_id` | String |  |
+| `face_time` | Int |  |
+| `foreground_cycle_time` | Int |  |
+| `background_cycle_time` | Int |  |
+| `foreground_context_switches` | Int |  |
+| `background_context_switches` | Int |  |
+| `foreground_bytes_read` | Int |  |
+| `background_bytes_read` | Int |  |
+| `foreground_bytes_written` | Int |  |
+| `background_bytes_written` | Int |  |
+| `foreground_num_read_operations` | Int |  |
+| `background_num_read_operations` | Int |  |
+| `foreground_num_write_operations` | Int |  |
+| `background_num_write_operations` | Int |  |
+| `foreground_number_of_flushes` | Int |  |
+| `background_number_of_flushes` | Int |  |

@@ -20,10 +20,10 @@ Each row is Windows Server SRUM SDP physical-disk telemetry with timestamp and d
 
 ### Fields 
 
-| Output Name | Data Type | Qualifier | Description |
-|---|---|---|---|
-| `incremental_id` | Int |  |  |
-| `timestamp` | DateTime |  |  |
-| `app_id` | String | APP_ID |  |
-| `user_id` | String | USER_ID |  |
-| `size_in_bytes` | Int |  |  |
+| Output Name | Data Type | Description |
+|---|---|---|
+| `incremental_id` | Int |  |
+| `timestamp` | DateTime |  |
+| `app_id` | String |  |
+| `user_id` | String |  |
+| `size_in_bytes` | Int |  |

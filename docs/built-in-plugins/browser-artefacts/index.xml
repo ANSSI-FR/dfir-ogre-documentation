@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DFIR-OGRE documentation – Browser Artefacts</title>
-    <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/</link>
+    <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/</link>
     <description>Recent content in Browser Artefacts on DFIR-OGRE documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,11 +15,11 @@
     
     
     <item>
-      <title>Browser Download History</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_download_history/</link>
+      <title>Chrome Download History</title>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_download_history/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_download_history/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_download_history/</guid>
       <description>
         
         
@@ -33,13 +33,7 @@ Python Parser: &lt;strong&gt;SQLite&lt;/strong&gt;&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;h3&gt;Description&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;description&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Parses the download history database of a Chrome profile (typically &lt;code&gt;*/Default/History&lt;/code&gt;). It enables analysts to reconstruct what files a user obtained from the web, when the download started and finished, how much data was transferred, and whether the file was opened or flagged as dangerous.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;URL of the downloaded resource.&lt;/li&gt;
-&lt;li&gt;Local path where Chrome saved the file.&lt;/li&gt;
-&lt;li&gt;Byte counts: received vs. total size.&lt;/li&gt;
-&lt;li&gt;Start/end timestamps, download state, danger type, interruption reason and whether the file was opened.&lt;/li&gt;
-&lt;/ul&gt;
+    &lt;a href=&#34;#description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Each row represents a Chrome download record, linking the source URL to the saved path, start and end times, byte counts, state, interruption or danger status, and opened flag. Use it to trace file acquisition and correlate downloads with filesystem or execution evidence. A record can describe an interrupted, removed, or otherwise incomplete download.&lt;/p&gt;
 &lt;h3&gt;Timeline&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;timeline&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#timeline&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
 	&lt;thead&gt;
@@ -69,7 +63,6 @@ Python Parser: &lt;strong&gt;SQLite&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;th&gt;Output Name&lt;/th&gt;
 					&lt;th&gt;Data Type&lt;/th&gt;
-					&lt;th&gt;Qualifier&lt;/th&gt;
 					&lt;th&gt;Description&lt;/th&gt;
 			&lt;/tr&gt;
 	&lt;/thead&gt;
@@ -77,61 +70,51 @@ Python Parser: &lt;strong&gt;SQLite&lt;/strong&gt;&lt;/div&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;target_path&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;local filesystem path where Chrome saved the downloaded file&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;url&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;original URL of the downloaded resource&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;received_bytes&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;number of bytes actually received for the download&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;total_bytes&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;expected total size of the downloaded file in bytes&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;start_time&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;timestamp when the download started&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;end_time&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;timestamp when the download finished or was interrupted&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;state&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;numeric code representing the download&amp;rsquo;s state (e.g., in‑progress, completed)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;danger_type&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;numeric identifier indicating if the download was flagged as dangerous&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;interrupt_reason&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;code describing why the download was interrupted&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;opened&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;flag (0/1) indicating whether the downloaded file was opened by the user&lt;/td&gt;
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
@@ -141,336 +124,11 @@ Python Parser: &lt;strong&gt;SQLite&lt;/strong&gt;&lt;/div&gt;
     </item>
     
     <item>
-      <title>Browser Download History Lite</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_download_history_lite/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_download_history_lite/</guid>
-      <description>
-        
-        
-        &lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-purple-200 hx:bg-purple-100 hx:text-purple-900 hx:dark:border-purple-200/30 hx:dark:bg-purple-900/30 hx:dark:text-purple-200&#34;&gt;
-  &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;svg height=1.2em class=&#34;hx:inline-block hx:align-middle&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;
-
-  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;Data Type: &lt;strong&gt;browser_download_history&lt;/strong&gt; &lt;br&gt;
-Python Parser: &lt;strong&gt;SQLite&lt;/strong&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h3&gt;Description&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;description&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Extracts records from the &lt;code&gt;places&lt;/code&gt; sqlite database that Firefox uses to store download
-metadata. Each row contains the path of the saved file, the source URL, file size and
-timestamps for the start and end of the download.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Reveals which URLs were downloaded and where they were saved.&lt;/li&gt;
-&lt;li&gt;Provides the total byte count of each download.&lt;/li&gt;
-&lt;li&gt;Indicates whether a download entry has been removed (deleted flag).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Timeline&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;timeline&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#timeline&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
-	&lt;thead&gt;
-			&lt;tr&gt;
-					&lt;th&gt;Timeline Field&lt;/th&gt;
-					&lt;th&gt;Data Field&lt;/th&gt;
-			&lt;/tr&gt;
-	&lt;/thead&gt;
-	&lt;tbody&gt;
-			&lt;tr&gt;
-					&lt;td&gt;Description&lt;/td&gt;
-					&lt;td&gt;&lt;code&gt;url&lt;/code&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;Additional Description&lt;/td&gt;
-					&lt;td&gt;&lt;code&gt;total_bytes&lt;/code&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;&lt;code&gt;deleted&lt;/code&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-	&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3&gt;Fields&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;fields&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#fields&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
-	&lt;thead&gt;
-			&lt;tr&gt;
-					&lt;th&gt;Output Name&lt;/th&gt;
-					&lt;th&gt;Data Type&lt;/th&gt;
-					&lt;th&gt;Qualifier&lt;/th&gt;
-					&lt;th&gt;Description&lt;/th&gt;
-			&lt;/tr&gt;
-	&lt;/thead&gt;
-	&lt;tbody&gt;
-			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;target_path&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;local file system path where the downloaded file was saved&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;url&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;source URL from which the file was downloaded&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;total_bytes&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;total size of the downloaded file in bytes&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;start_time&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;timestamp when the download started&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;end_time&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;timestamp when the download finished&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;state&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;numeric code representing the download state (e.g., completed, cancelled, in‑progress)&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;deleted&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;Bool&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;boolean flag indicating whether the download entry has been marked as deleted&lt;/td&gt;
-			&lt;/tr&gt;
-	&lt;/tbody&gt;
-&lt;/table&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Browser History</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_history/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_history/</guid>
-      <description>
-        
-        
-        &lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-purple-200 hx:bg-purple-100 hx:text-purple-900 hx:dark:border-purple-200/30 hx:dark:bg-purple-900/30 hx:dark:text-purple-200&#34;&gt;
-  &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;svg height=1.2em class=&#34;hx:inline-block hx:align-middle&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;
-
-  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;Data Type: &lt;strong&gt;browser_history&lt;/strong&gt; &lt;br&gt;
-Python Parser: &lt;strong&gt;SQLite&lt;/strong&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h3&gt;Description&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;description&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Parses the browsing hisory database of a Chrome profile (typically &lt;code&gt;*/Default/History&lt;/code&gt;). It
-extracts each recorded URL, its page title, visit timestamps, the number of times the URL was
-visited, and the referer URL if available.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Shows which web resources a user accessed.&lt;/li&gt;
-&lt;li&gt;Provides visit frequency, helping gauge the relevance of each site.&lt;/li&gt;
-&lt;li&gt;Captures the referer, offering context about navigation paths.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Timeline&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;timeline&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#timeline&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
-	&lt;thead&gt;
-			&lt;tr&gt;
-					&lt;th&gt;Timeline Field&lt;/th&gt;
-					&lt;th&gt;Data Field&lt;/th&gt;
-			&lt;/tr&gt;
-	&lt;/thead&gt;
-	&lt;tbody&gt;
-			&lt;tr&gt;
-					&lt;td&gt;Description&lt;/td&gt;
-					&lt;td&gt;&lt;code&gt;url&lt;/code&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;Additional Description&lt;/td&gt;
-					&lt;td&gt;&lt;code&gt;title&lt;/code&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;&lt;code&gt;visit_count&lt;/code&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;&lt;code&gt;referer&lt;/code&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-	&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3&gt;Fields&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;fields&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#fields&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
-	&lt;thead&gt;
-			&lt;tr&gt;
-					&lt;th&gt;Output Name&lt;/th&gt;
-					&lt;th&gt;Data Type&lt;/th&gt;
-					&lt;th&gt;Qualifier&lt;/th&gt;
-					&lt;th&gt;Description&lt;/th&gt;
-			&lt;/tr&gt;
-	&lt;/thead&gt;
-	&lt;tbody&gt;
-			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;url&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;web address that was visited&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;title&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;title of the visited webpage&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;visit_date&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;timestamp of the visit&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;visit_count&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;total number of times the URL was visited&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;referer&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;URL of the page that referred to this visit, if available&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;hidden&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;flag indicating whether the entry is hidden (1) or not (0)&lt;/td&gt;
-			&lt;/tr&gt;
-	&lt;/tbody&gt;
-&lt;/table&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Browser History Lite</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_history_lite/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_history_lite/</guid>
-      <description>
-        
-        
-        &lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-purple-200 hx:bg-purple-100 hx:text-purple-900 hx:dark:border-purple-200/30 hx:dark:bg-purple-900/30 hx:dark:text-purple-200&#34;&gt;
-  &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;svg height=1.2em class=&#34;hx:inline-block hx:align-middle&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;
-
-  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;Data Type: &lt;strong&gt;browser_history&lt;/strong&gt; &lt;br&gt;
-Python Parser: &lt;strong&gt;SQLite&lt;/strong&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h3&gt;Description&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;description&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Extracts navigation records from a Firefox &lt;code&gt;places&lt;/code&gt; sqlite database. It records each visited
-URL together with its title, visit timestamp, visit count, and the referring page (if any).
-Each row corresponds to a single page visit, allowing reconstruction of browsing activity over
-time.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;URL and page title provide the content accessed.&lt;/li&gt;
-&lt;li&gt;Visit timestamp indicates when the page was opened.&lt;/li&gt;
-&lt;li&gt;Visit count shows frequency of access.&lt;/li&gt;
-&lt;li&gt;Referrer reveals navigation paths.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Timeline&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;timeline&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#timeline&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
-	&lt;thead&gt;
-			&lt;tr&gt;
-					&lt;th&gt;Timeline Field&lt;/th&gt;
-					&lt;th&gt;Data Field&lt;/th&gt;
-			&lt;/tr&gt;
-	&lt;/thead&gt;
-	&lt;tbody&gt;
-			&lt;tr&gt;
-					&lt;td&gt;Description&lt;/td&gt;
-					&lt;td&gt;&lt;code&gt;url&lt;/code&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;Additional Description&lt;/td&gt;
-					&lt;td&gt;&lt;code&gt;title&lt;/code&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;&lt;code&gt;visit_count&lt;/code&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;&lt;code&gt;referer&lt;/code&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-	&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3&gt;Fields&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;fields&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#fields&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
-	&lt;thead&gt;
-			&lt;tr&gt;
-					&lt;th&gt;Output Name&lt;/th&gt;
-					&lt;th&gt;Data Type&lt;/th&gt;
-					&lt;th&gt;Qualifier&lt;/th&gt;
-					&lt;th&gt;Description&lt;/th&gt;
-			&lt;/tr&gt;
-	&lt;/thead&gt;
-	&lt;tbody&gt;
-			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;url&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;URL of the visited page&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;title&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;Title of the visited page&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;visit_date&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;Timestamp when the page was visited&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;visit_count&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;Number of times the page has been visited&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;referer&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;URL of the referring page, if any&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;hidden&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;Flag indicating whether the entry is hidden from history (1 = hidden)&lt;/td&gt;
-			&lt;/tr&gt;
-	&lt;/tbody&gt;
-&lt;/table&gt;
-
-      </description>
-    </item>
-    
-    <item>
       <title>Chrome Extension</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_extension/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_extension/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_extension/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_extension/</guid>
       <description>
         
         
@@ -484,30 +142,44 @@ Python Parser: &lt;strong&gt;ChromeExtension&lt;/strong&gt;&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;h3&gt;Description&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;description&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Extracts identity, provenance, security policy and execution metadata from Manifest V2 and
-Manifest V3 Chrome-based browser extensions.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Identifies the extension, installed version directory and source manifest.&lt;/li&gt;
-&lt;li&gt;Captures declared API, host and optional permissions.&lt;/li&gt;
-&lt;li&gt;Records content-script targets, background code and externally accessible resources.&lt;/li&gt;
-&lt;li&gt;Preserves both Manifest V2 string and Manifest V3 object content-security policies.&lt;/li&gt;
-&lt;/ul&gt;
+    &lt;a href=&#34;#description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Each row describes an installed Chrome extension manifest, including identity, version, source, update URL, declared permissions, content scripts, background code, accessible resources, and security policy. Use it to assess extension capability and provenance or hunt risky permissions and injected origins. Declared capability is not proof that code ran, and the snapshot can miss removed versions.&lt;/p&gt;
 &lt;h3&gt;Timeline&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;timeline&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#timeline&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200&#34;&gt;
-  &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;svg height=1.2em class=&#34;hx:inline-block hx:align-middle&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;
-
-  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;This plugin does not contains timestamped data and cannot be used to create a timeline&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
+    &lt;a href=&#34;#timeline&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Timeline Field&lt;/th&gt;
+					&lt;th&gt;Data Field&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Description&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;name&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;browser&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Additional Description&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;extension_id&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;version&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;manifest_path&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;h3&gt;Fields&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;fields&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#fields&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
 	&lt;thead&gt;
 			&lt;tr&gt;
 					&lt;th&gt;Output Name&lt;/th&gt;
 					&lt;th&gt;Data Type&lt;/th&gt;
-					&lt;th&gt;Qualifier&lt;/th&gt;
 					&lt;th&gt;Description&lt;/th&gt;
 			&lt;/tr&gt;
 	&lt;/thead&gt;
@@ -515,229 +187,191 @@ Manifest V3 Chrome-based browser extensions.&lt;/p&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;browser&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;browser family that owns the extension manifest&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extension_id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Chrome extension ID inferred from the standard Extensions directory path&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extension_type&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;manifest type: extension, app or theme&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;manifest_path&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;filesystem path of the parsed manifest&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;manifest_sha256&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;SHA-256 hash of the parsed manifest file&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;manifest_version&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Chrome manifest format version&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;version_directory&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;installed extension version directory inferred from the manifest path&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;name&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;localized display name of the Chrome extension when available&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;short_name&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;short display name declared by the extension&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;version&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;extension version declared by the manifest&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;version_name&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;human-readable extension version label&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;author&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;extension author declared by the manifest&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;default_locale&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;default locale identifier for the extension&amp;rsquo;s resources&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;description&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;localized human-readable extension description when available&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;homepage_url&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;homepage URL declared by the extension&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;update_url&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;URL from which the extension receives updates&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;minimum_chrome_version&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;oldest compatible Chrome version declared by the extension&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;incognito&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;declared incognito-mode behavior&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;offline_enabled&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Bool&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;whether the extension declares offline operation&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;extension_pages&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;CSP for extension pages, including the complete Manifest V2 policy&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;sandbox_pages&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Manifest V3 CSP for sandboxed extension pages&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;background_service_worker&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Manifest V3 background service-worker script&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;background_page&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Manifest V2 background page&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;background_persistent&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Bool&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;whether a Manifest V2 background context is persistent&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;background_scripts[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Manifest V2 background scripts&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;permissions[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;required permissions exactly as declared by the extension&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;host_permissions[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;normalized host access, including Manifest V2 permission URL patterns&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;optional_permissions[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;optional permissions exactly as declared by the extension&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;optional_host_permissions[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;normalized optional host access across Manifest V2 and V3&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;content_script_matches[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;URL patterns on which extension content scripts execute&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;content_script_exclude_matches[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;URL patterns excluded from content-script execution&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;content_script_javascript[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;JavaScript files injected by content scripts&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;content_script_stylesheets[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;stylesheets injected by content scripts&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;externally_connectable_matches[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;web origins allowed to connect to the extension&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;externally_connectable_ids[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;other extension IDs allowed to connect to the extension&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;web_accessible_resources[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;extension resources exposed outside the extension&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;web_accessible_matches[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Manifest V3 web origins allowed to access exposed resources&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;web_accessible_extension_ids[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Manifest V3 extension IDs allowed to access exposed resources&lt;/td&gt;
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
@@ -747,11 +381,198 @@ Manifest V3 Chrome-based browser extensions.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Firefox Extension</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_extension/</link>
+      <title>Chrome History</title>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_history/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_extension/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_history/</guid>
+      <description>
+        
+        
+        &lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-purple-200 hx:bg-purple-100 hx:text-purple-900 hx:dark:border-purple-200/30 hx:dark:bg-purple-900/30 hx:dark:text-purple-200&#34;&gt;
+  &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;svg height=1.2em class=&#34;hx:inline-block hx:align-middle&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;Data Type: &lt;strong&gt;browser_history&lt;/strong&gt; &lt;br&gt;
+Python Parser: &lt;strong&gt;SQLite&lt;/strong&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3&gt;Description&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;description&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Each row represents a Chrome visit, with URL, page title, visit time, visit count, referrer, and hidden state where available. Use it to reconstruct navigation and correlate web activity with downloads, authentication, or endpoint events. Browser history can be incomplete because of deletion, private browsing, retention, or profile selection.&lt;/p&gt;
+&lt;h3&gt;Timeline&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;timeline&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#timeline&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Timeline Field&lt;/th&gt;
+					&lt;th&gt;Data Field&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Description&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;url&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Additional Description&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;title&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;visit_count&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;referer&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;Fields&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;fields&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#fields&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Output Name&lt;/th&gt;
+					&lt;th&gt;Data Type&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;url&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;web address that was visited&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;title&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;title of the visited webpage&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;visit_date&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;DateTime&lt;/td&gt;
+					&lt;td&gt;timestamp of the visit&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;visit_count&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Int&lt;/td&gt;
+					&lt;td&gt;total number of times the URL was visited&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;referer&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;URL of the page that referred to this visit, if available&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;hidden&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Int&lt;/td&gt;
+					&lt;td&gt;flag indicating whether the entry is hidden (1) or not (0)&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Firefox Download History</title>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_download_history/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_download_history/</guid>
+      <description>
+        
+        
+        &lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-purple-200 hx:bg-purple-100 hx:text-purple-900 hx:dark:border-purple-200/30 hx:dark:bg-purple-900/30 hx:dark:text-purple-200&#34;&gt;
+  &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;svg height=1.2em class=&#34;hx:inline-block hx:align-middle&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;Data Type: &lt;strong&gt;browser_download_history&lt;/strong&gt; &lt;br&gt;
+Python Parser: &lt;strong&gt;SQLite&lt;/strong&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3&gt;Description&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;description&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Each row represents Firefox download metadata recovered from the Places database, linking a source URL to a saved path, byte count, start and end times, state, and deletion flag where available. Use it to trace acquisition and correlate files with later activity. A history row does not guarantee the transfer completed or that the file was opened.&lt;/p&gt;
+&lt;h3&gt;Timeline&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;timeline&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#timeline&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Timeline Field&lt;/th&gt;
+					&lt;th&gt;Data Field&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Description&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;url&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Additional Description&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;total_bytes&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;deleted&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;Fields&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;fields&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#fields&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Output Name&lt;/th&gt;
+					&lt;th&gt;Data Type&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;target_path&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;local file system path where the downloaded file was saved&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;url&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;source URL from which the file was downloaded&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;total_bytes&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Int&lt;/td&gt;
+					&lt;td&gt;total size of the downloaded file in bytes&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;start_time&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;DateTime&lt;/td&gt;
+					&lt;td&gt;timestamp when the download started&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;end_time&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;DateTime&lt;/td&gt;
+					&lt;td&gt;timestamp when the download finished&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;state&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Int&lt;/td&gt;
+					&lt;td&gt;numeric code representing the download state (e.g., completed, cancelled, in‑progress)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;deleted&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Bool&lt;/td&gt;
+					&lt;td&gt;boolean flag indicating whether the download entry has been marked as deleted&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Firefox Extension</title>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_extension/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_extension/</guid>
       <description>
         
         
@@ -765,15 +586,7 @@ Python Parser: &lt;strong&gt;FirefoxExtension&lt;/strong&gt;&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;h3&gt;Description&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;description&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Extracts metadata from Firefox browser add‑ons (version 26+). It parses each extension’s
-manifest to retrieve identifiers, version information, installation path and declared
-permissions.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Reveals which extensions are present on a system.&lt;/li&gt;
-&lt;li&gt;Provides version and source details for each add‑on.&lt;/li&gt;
-&lt;li&gt;Lists required, optional and user‑granted permissions.&lt;/li&gt;
-&lt;li&gt;Includes installation and update timestamps.&lt;/li&gt;
-&lt;/ul&gt;
+    &lt;a href=&#34;#description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Each row describes a Firefox add-on, including identity, version, install path, source, declared permissions or origins, and install or update times. Use it to assess extension provenance and capability or hunt for risky permissions and unexpected installation sources. Declared capability is not observed behavior, and the snapshot can miss removed add-ons.&lt;/p&gt;
 &lt;h3&gt;Timeline&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;timeline&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#timeline&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
 	&lt;thead&gt;
@@ -815,7 +628,6 @@ permissions.&lt;/p&gt;
 			&lt;tr&gt;
 					&lt;th&gt;Output Name&lt;/th&gt;
 					&lt;th&gt;Data Type&lt;/th&gt;
-					&lt;th&gt;Qualifier&lt;/th&gt;
 					&lt;th&gt;Description&lt;/th&gt;
 			&lt;/tr&gt;
 	&lt;/thead&gt;
@@ -823,145 +635,121 @@ permissions.&lt;/p&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;name&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;display name of the Firefox add‑on&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;browser&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;browser name (always &amp;lsquo;firefox&amp;rsquo;)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;type&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;type/category of the add‑on (e.g., extension, theme)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;description&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;human‑readable description of the add‑on&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;unique identifier of the add‑on&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;version&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;version string of the add‑on&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;path&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;filesystem path where the add‑on is installed&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;update_url&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;URL used by the add‑on to check for updates&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;source_uri&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;original source URI from which the add‑on was obtained&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;root_uri&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;root URI of the add‑on package&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;user_permissions&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Object&lt;/td&gt;
 					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;user_permissions.permissions[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;user_permissions.origins[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
 					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;user_permissions.data_collection[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;optional_permissions&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Object&lt;/td&gt;
 					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;optional_permissions.permissions[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;optional_permissions.origins[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
 					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;optional_permissions.data_collection[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;requested_permissions&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Object&lt;/td&gt;
 					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;requested_permissions.permissions[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;requested_permissions.origins[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
 					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;requested_permissions.data_collection[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[String]&lt;/td&gt;
 					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;install_date&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;DATE_INSTALLATION&lt;/td&gt;
 					&lt;td&gt;&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;update_date&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;DATE_MODIFICATION&lt;/td&gt;
 					&lt;td&gt;&lt;/td&gt;
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
@@ -971,11 +759,104 @@ permissions.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Ie Webcache History</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/ie_webcache_history/</link>
+      <title>Firefox History</title>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_history/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/ie_webcache_history/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_history/</guid>
+      <description>
+        
+        
+        &lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-purple-200 hx:bg-purple-100 hx:text-purple-900 hx:dark:border-purple-200/30 hx:dark:bg-purple-900/30 hx:dark:text-purple-200&#34;&gt;
+  &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;svg height=1.2em class=&#34;hx:inline-block hx:align-middle&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;Data Type: &lt;strong&gt;browser_history&lt;/strong&gt; &lt;br&gt;
+Python Parser: &lt;strong&gt;SQLite&lt;/strong&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3&gt;Description&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;description&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Each row represents a Firefox page visit, with URL, title, visit time, visit count, referrer, and hidden state where available. Use it to reconstruct navigation and correlate browsing with downloads, credentials, or endpoint events. History can be incomplete because of deletion, private browsing, retention, synchronization, or profile selection.&lt;/p&gt;
+&lt;h3&gt;Timeline&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;timeline&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#timeline&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Timeline Field&lt;/th&gt;
+					&lt;th&gt;Data Field&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Description&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;url&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Additional Description&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;title&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;visit_count&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;referer&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;Fields&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;fields&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#fields&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Output Name&lt;/th&gt;
+					&lt;th&gt;Data Type&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;url&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;URL of the visited page&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;title&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;Title of the visited page&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;visit_date&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;DateTime&lt;/td&gt;
+					&lt;td&gt;Timestamp when the page was visited&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;visit_count&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Int&lt;/td&gt;
+					&lt;td&gt;Number of times the page has been visited&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;referer&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;URL of the referring page, if any&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;hidden&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Int&lt;/td&gt;
+					&lt;td&gt;Flag indicating whether the entry is hidden from history (1 = hidden)&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Ie Webcache History</title>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/ie_webcache_history/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/ie_webcache_history/</guid>
       <description>
         
         
@@ -989,14 +870,7 @@ Python Parser: &lt;strong&gt;IeWebCache&lt;/strong&gt;&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;h3&gt;Description&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;description&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Extracts browsing history records from Internet Explorer 10+ WebCache databases (WebCacheV01.dat).
-The plugin queries the Containers and Container_X tables to retrieve URL visits with metadata.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Url provides the visited web address.&lt;/li&gt;
-&lt;li&gt;Filename and FileExtension indicate cached file details.&lt;/li&gt;
-&lt;li&gt;Timestamps (SyncTime, CreationTime, ExpiryTime, ModifiedTime, AccessedTime) show activity timeline.&lt;/li&gt;
-&lt;li&gt;AccessCount and SyncCount reveal frequency and synchronization patterns.&lt;/li&gt;
-&lt;/ul&gt;
+    &lt;a href=&#34;#description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Each row is an Internet Explorer or legacy WebCache container record, with URL, cached filename, request or response properties, access counts, and creation, access, modification, synchronization, or expiry times. Use it to reconstruct browsing and cached-resource activity. Cache records may arise from redirects or background content, and timestamp meaning varies by container.&lt;/p&gt;
 &lt;h3&gt;Timeline&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;timeline&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#timeline&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
 	&lt;thead&gt;
@@ -1030,7 +904,6 @@ The plugin queries the Containers and Container_X tables to retrieve URL visits 
 			&lt;tr&gt;
 					&lt;th&gt;Output Name&lt;/th&gt;
 					&lt;th&gt;Data Type&lt;/th&gt;
-					&lt;th&gt;Qualifier&lt;/th&gt;
 					&lt;th&gt;Description&lt;/th&gt;
 			&lt;/tr&gt;
 	&lt;/thead&gt;
@@ -1038,169 +911,141 @@ The plugin queries the Containers and Container_X tables to retrieve URL visits 
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;file_size&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Size of the cached file in bytes&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;type&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Record type identifier from WebCache&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;flags&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Flags associated with the cache entry&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;access_count&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Number of times this URL was accessed&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;sync_count&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Number of synchronization operations for this entry&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;exemption_delta&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Time offset exemption delta in seconds&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;url&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Visited URL&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;filename&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Cached file name (if applicable)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;file_extension&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;File extension of the cached resource&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;redirect_url&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Redirect target URL (if any)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;request_headers&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;HTTP request headers (hex encoded)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;response_properties[]&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Array[Object]&lt;/td&gt;
 					&lt;td&gt;&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;response_properties[].store_index&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Zero-based serialized property store index&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;response_properties[].storage_index&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Zero-based property storage index within the store&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;response_properties[].format_id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Property set format identifier (FMTID)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;response_properties[].id&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Int&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Property identifier within the property set&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;response_properties[].name&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Known symbolic property name, when available&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;response_properties[].value_type&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Windows variant property type&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;response_properties[].value&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Decoded property value represented as a string&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;response_properties_raw&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Original serialized response properties (hex encoded)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;response_properties_parse_error&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Non-fatal errors encountered while decoding response properties&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;group&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;String&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Cache group identifier (hex encoded)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;sync_date&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Last synchronization time in UTC&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;creation_date&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;DATE_CREATION&lt;/td&gt;
 					&lt;td&gt;Entry creation timestamp in UTC&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;expiry_date&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Expiration timestamp in UTC&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;modified_date&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;DATE_MODIFICATION&lt;/td&gt;
 					&lt;td&gt;Last modification timestamp in UTC&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;accessed_date&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;DATE_ACCESS&lt;/td&gt;
 					&lt;td&gt;Last access timestamp in UTC&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;post_check_date&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;DateTime&lt;/td&gt;
-					&lt;td&gt;&lt;/td&gt;
 					&lt;td&gt;Time of last post-check validation in UTC&lt;/td&gt;
 			&lt;/tr&gt;
 	&lt;/tbody&gt;

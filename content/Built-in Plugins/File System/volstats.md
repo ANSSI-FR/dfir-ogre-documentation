@@ -23,17 +23,17 @@ Each row describes a volume observed by ORC, with host, volume identifier, mount
 
 ### Fields 
 
-| Output Name | Data Type | Qualifier | Description |
-|---|---|---|---|
-| `computer_name` | String |  | Host name that produced the volstat report |
-| `volumeid` | String |  | Unique identifier (GUID) of the volume |
-| `location` | String |  | Physical location or drive letter of the volume |
-| `volume_type` | String |  | File system type (FAT, NTFS, etc.) |
-| `is_parsed` | Bool |  |  |
-| `mount_point` | String |  | Path where the volume is mounted |
-| `shadow_copy` | Python |  | Identifier of the associated VSS snapshot, if any |
-| `fileinfo` | String |  | raw file‑information from the volume |
-| `i30info` | String |  | directory index ($I30) information for the volume |
-| `attrinfo` | String |  | NTFS attribute information for the volume |
-| `timeline` | String |  | timeline metadata (e.g., timestamps) associated with the volume |
-| `secdescr` | String |  | security descriptor data for the volume |
+| Output Name | Data Type | Description |
+|---|---|---|
+| `computer_name` | String | Host name that produced the volstat report |
+| `volumeid` | String | Unique identifier (GUID) of the volume |
+| `location` | String | Physical location or drive letter of the volume |
+| `volume_type` | String | File system type (FAT, NTFS, etc.) |
+| `is_parsed` | Bool |  |
+| `mount_point` | String | Path where the volume is mounted |
+| `shadow_copy` | Python | Identifier of the associated VSS snapshot, if any |
+| `fileinfo` | String | raw file‑information from the volume |
+| `i30info` | String | directory index ($I30) information for the volume |
+| `attrinfo` | String | NTFS attribute information for the volume |
+| `timeline` | String | timeline metadata (e.g., timestamps) associated with the volume |
+| `secdescr` | String | security descriptor data for the volume |

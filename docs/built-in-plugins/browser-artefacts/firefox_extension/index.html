@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr"><head>
+<html lang="en" dir="ltr"><head><script src="/dfir-ogre-documentation/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=dfir-ogre-documentation/livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="noindex, nofollow" />
   <link rel="icon shortcut" href="/dfir-ogre-documentation/favicon.ico" sizes="32x32" />
 <link rel="icon" href="/dfir-ogre-documentation/favicon.svg" type="image/svg+xml" id="favicon-svg" />
 <link rel="icon" href="/dfir-ogre-documentation/favicon-16x16.png" type="image/png" sizes="16x16" />
@@ -9,7 +9,7 @@
 <link rel="apple-touch-icon" href="/dfir-ogre-documentation/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/dfir-ogre-documentation/site.webmanifest" rel="manifest" />
 <title>Firefox Extension – DFIR-OGRE documentation</title>
-  <meta name="description" content=" Data Type: firefox_extension Python Parser: FirefoxExtension Description Extracts metadata from Firefox browser add‑ons (version 26&#43;). It parses each extension’s manifest to retrieve identifiers, version information, installation path and declared permissions." /><link rel="canonical" href="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_extension/" itemprop="url" />
+  <meta name="description" content=" Data Type: firefox_extension Python Parser: FirefoxExtension Description Each row describes a Firefox add-on, including identity, version, install path, source, declared permissions or origins, and install or update times. Use it to assess extension provenance and capability or hunt for risky permissions and unexpected installation sources. Declared capability is not observed behavior, and the snapshot can miss removed add-ons." /><link rel="canonical" href="http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_extension/" itemprop="url" />
 
 <meta property="og:title" content="Firefox Extension">
 <meta
@@ -26,9 +26,7 @@ Python Parser: FirefoxExtension
 
 
 Description
-    Extracts metadata from Firefox browser add‑ons (version 26&#43;). It parses each extension’s
-manifest to retrieve identifiers, version information, installation path and declared
-permissions.
+    Each row describes a Firefox add-on, including identity, version, install path, source, declared permissions or origins, and install or update times. Use it to assess extension provenance and capability or hunt for risky permissions and unexpected installation sources. Declared capability is not observed behavior, and the snapshot can miss removed add-ons.
     
   ">
 <meta
@@ -36,29 +34,23 @@ permissions.
   content="
     article
   ">
-<meta property="og:url" content="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_extension/"><meta property="article:section" content="built-in-plugins">
+<meta property="og:url" content="http://localhost:1313/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_extension/"><meta property="article:section" content="built-in-plugins">
 
 
 
 
 	<meta itemprop="name" content="Firefox Extension">
-	<meta itemprop="description" content="Data Type: firefox_extension Python Parser: FirefoxExtension Description Extracts metadata from Firefox browser add‑ons (version 26&#43;). It parses each extension’s manifest to retrieve identifiers, version information, installation path and declared permissions.">
-	<meta itemprop="wordCount" content="191">
+	<meta itemprop="description" content="Data Type: firefox_extension Python Parser: FirefoxExtension Description Each row describes a Firefox add-on, including identity, version, install path, source, declared permissions or origins, and install or update times. Use it to assess extension provenance and capability or hunt for risky permissions and unexpected installation sources. Declared capability is not observed behavior, and the snapshot can miss removed add-ons.">
+	<meta itemprop="wordCount" content="189">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Firefox Extension">
-	<meta name="twitter:description" content="Data Type: firefox_extension Python Parser: FirefoxExtension Description Extracts metadata from Firefox browser add‑ons (version 26&#43;). It parses each extension’s manifest to retrieve identifiers, version information, installation path and declared permissions.">
-
-    <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
-    <link href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" rel="stylesheet" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
+	<meta name="twitter:description" content="Data Type: firefox_extension Python Parser: FirefoxExtension Description Each row describes a Firefox add-on, including identity, version, install path, source, declared permissions or origins, and install or update times. Use it to assess extension provenance and capability or hunt for risky permissions and unexpected installation sources. Declared capability is not observed behavior, and the snapshot can miss removed add-ons.">
+<link href="/dfir-ogre-documentation/css/compiled/main.css" rel="stylesheet" />
+    <link href="/dfir-ogre-documentation/css/variables.css" rel="stylesheet" />
+    <link href="/dfir-ogre-documentation/css/custom.css" rel="stylesheet" />
 
   
-
-
-
-
-
-
-<script src="/dfir-ogre-documentation/js/main-head.min.2375b7265ea066ecb314226ce5ff17478453df5f350d34d830b3fc96fba21672.js" integrity="sha256-I3W3Jl6gZuyzFCJs5f8XR4RT3181DTTYMLP8lvuiFnI="></script>
+<script src="/dfir-ogre-documentation/js/main-head.js" integrity=""></script>
 
   
   
@@ -394,46 +386,10 @@ permissions.
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_download_history/"
+      href="/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_download_history/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Browser Download History</span>
-    </a>
-  </div>
-              
-            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
-    <a
-      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
-      hx:hextra-focus-visible-inset
-        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_download_history_lite/"
-      
-    >
-      <span class="hx:min-w-0 [word-break:break-word]">Browser Download History Lite</span>
-    </a>
-  </div>
-              
-            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
-    <a
-      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
-      hx:hextra-focus-visible-inset
-        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_history/"
-      
-    >
-      <span class="hx:min-w-0 [word-break:break-word]">Browser History</span>
-    </a>
-  </div>
-              
-            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
-    <a
-      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
-      hx:hextra-focus-visible-inset
-        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_history_lite/"
-      
-    >
-      <span class="hx:min-w-0 [word-break:break-word]">Browser History Lite</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Chrome Download History</span>
     </a>
   </div>
               
@@ -449,6 +405,30 @@ permissions.
     </a>
   </div>
               
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_history/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Chrome History</span>
+    </a>
+  </div>
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_download_history/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Firefox Download History</span>
+    </a>
+  </div>
+              
             </li><li class="hx:flex hx:flex-col open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="true">
     <a
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
@@ -458,6 +438,18 @@ permissions.
       
     >
       <span class="hx:min-w-0 [word-break:break-word]">Firefox Extension</span>
+    </a>
+  </div>
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_history/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Firefox History</span>
     </a>
   </div>
               
@@ -505,10 +497,10 @@ permissions.
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/fast-find/fastfind_obj/"
+      href="/dfir-ogre-documentation/built-in-plugins/fast-find/fastfind_object/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Fastfind Obj</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Fastfind Object</span>
     </a>
   </div>
               
@@ -517,10 +509,10 @@ permissions.
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/fast-find/fastfind_reg/"
+      href="/dfir-ogre-documentation/built-in-plugins/fast-find/fastfind_registry/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Fastfind Reg</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Fastfind Registry</span>
     </a>
   </div>
               
@@ -568,10 +560,10 @@ permissions.
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/file-system/i30info/"
+      href="/dfir-ogre-documentation/built-in-plugins/file-system/i30_info/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">I30Info</span>
+      <span class="hx:min-w-0 [word-break:break-word]">I30 info</span>
     </a>
   </div>
               
@@ -604,10 +596,10 @@ permissions.
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/file-system/ntfsinfo/"
+      href="/dfir-ogre-documentation/built-in-plugins/file-system/ntfs_info/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Ntfsinfo</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Ntfs Info</span>
     </a>
   </div>
               
@@ -676,10 +668,10 @@ permissions.
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/file-system/usninfo/"
+      href="/dfir-ogre-documentation/built-in-plugins/file-system/usn_info/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Usninfo</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Usn Info</span>
     </a>
   </div>
               
@@ -763,10 +755,10 @@ permissions.
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/logs/wer/"
+      href="/dfir-ogre-documentation/built-in-plugins/logs/wer_reports/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Wer</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Wer Reports</span>
     </a>
   </div>
               
@@ -838,10 +830,10 @@ permissions.
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/network/tcpvcon/"
+      href="/dfir-ogre-documentation/built-in-plugins/network/tcp_connections/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Tcpvcon</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Tcp Connections</span>
     </a>
   </div>
               
@@ -877,10 +869,10 @@ permissions.
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/persistence/reg_autoruns/"
+      href="/dfir-ogre-documentation/built-in-plugins/persistence/autoruns_reg_software/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Reg Autoruns</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Autoruns Reg Software</span>
     </a>
   </div>
               
@@ -889,10 +881,10 @@ permissions.
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/persistence/reg_autoruns_software/"
+      href="/dfir-ogre-documentation/built-in-plugins/persistence/autoruns_reg_system/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Reg Autoruns Software</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Autoruns Reg System</span>
     </a>
   </div>
               
@@ -901,10 +893,10 @@ permissions.
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/persistence/reg_autoruns_system/"
+      href="/dfir-ogre-documentation/built-in-plugins/persistence/autoruns_reg_user/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Reg Autoruns System</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Autoruns Reg User</span>
     </a>
   </div>
               
@@ -988,10 +980,10 @@ permissions.
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_file/"
+      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_files/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Amcache File</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Amcache Files</span>
     </a>
   </div>
               
@@ -1036,10 +1028,10 @@ permissions.
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_program_xml/"
+      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_program_previous/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Amcache Program Xml</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Amcache Program Previous</span>
     </a>
   </div>
               
@@ -1048,10 +1040,22 @@ permissions.
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_program_xml_xml/"
+      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_program_report/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Amcache Program Xml XML</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Amcache Program Report</span>
+    </a>
+  </div>
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_program_wer/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Amcache Program Wer</span>
     </a>
   </div>
               
@@ -1084,10 +1088,10 @@ permissions.
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/listdlls/"
+      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/list_dlls/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Listdlls</span>
+      <span class="hx:min-w-0 [word-break:break-word]">List Dlls</span>
     </a>
   </div>
               
@@ -1120,10 +1124,10 @@ permissions.
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/processes_orc/"
+      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/processes_orc_v1/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Processes Orc</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Processes Orc V1</span>
     </a>
   </div>
               
@@ -1132,10 +1136,10 @@ permissions.
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/processes_orc_csv/"
+      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/processes_orc_v2/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Processes Orc Csv</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Processes Orc V2</span>
     </a>
   </div>
               
@@ -1168,10 +1172,10 @@ permissions.
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/shim_db/"
+      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/shim_database/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Shim Db</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Shim Database</span>
     </a>
   </div>
               
@@ -1267,10 +1271,10 @@ permissions.
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/system-information/network_config/"
+      href="/dfir-ogre-documentation/built-in-plugins/system-information/network_configuration/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Network Config</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Network Configuration</span>
     </a>
   </div>
               
@@ -1279,10 +1283,10 @@ permissions.
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/system-information/reg_systeminfo/"
+      href="/dfir-ogre-documentation/built-in-plugins/system-information/system_info_reg/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Reg Systeminfo</span>
+      <span class="hx:min-w-0 [word-break:break-word]">System Info Reg</span>
     </a>
   </div>
               
@@ -1315,10 +1319,10 @@ permissions.
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/system-information/x509_cert/"
+      href="/dfir-ogre-documentation/built-in-plugins/system-information/x509_certificates_users/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">X509 Cert</span>
+      <span class="hx:min-w-0 [word-break:break-word]">X509 Certificates Users</span>
     </a>
   </div>
               
@@ -1327,10 +1331,10 @@ permissions.
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/system-information/x509_cert_certificates/"
+      href="/dfir-ogre-documentation/built-in-plugins/system-information/x509cert_software/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">X509 Cert Certificates</span>
+      <span class="hx:min-w-0 [word-break:break-word]">X509Cert Software</span>
     </a>
   </div>
               
@@ -1354,10 +1358,10 @@ permissions.
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/windows-artefacts/clsid/"
+      href="/dfir-ogre-documentation/built-in-plugins/windows-artefacts/clsid_software/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Clsid</span>
+      <span class="hx:min-w-0 [word-break:break-word]">CLSID Software</span>
     </a>
   </div>
               
@@ -1366,10 +1370,10 @@ permissions.
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/windows-artefacts/clsid_software/"
+      href="/dfir-ogre-documentation/built-in-plugins/windows-artefacts/clsid_users/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Clsid Software</span>
+      <span class="hx:min-w-0 [word-break:break-word]">CLSID Users</span>
     </a>
   </div>
               
@@ -1402,10 +1406,10 @@ permissions.
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/windows-artefacts/objinfo/"
+      href="/dfir-ogre-documentation/built-in-plugins/windows-artefacts/object_info/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Objinfo</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Object Info</span>
     </a>
   </div>
               
@@ -1677,15 +1681,7 @@ Python Parser: <strong>FirefoxExtension</strong></div>
 </div>
 
 <h3>Description<span class="hx:absolute hx:-mt-20" id="description"></span>
-    <a href="#description" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Extracts metadata from Firefox browser add‑ons (version 26+). It parses each extension’s
-manifest to retrieve identifiers, version information, installation path and declared
-permissions.</p>
-<ul>
-<li>Reveals which extensions are present on a system.</li>
-<li>Provides version and source details for each add‑on.</li>
-<li>Lists required, optional and user‑granted permissions.</li>
-<li>Includes installation and update timestamps.</li>
-</ul>
+    <a href="#description" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Each row describes a Firefox add-on, including identity, version, install path, source, declared permissions or origins, and install or update times. Use it to assess extension provenance and capability or hunt for risky permissions and unexpected installation sources. Declared capability is not observed behavior, and the snapshot can miss removed add-ons.</p>
 <h3>Timeline<span class="hx:absolute hx:-mt-20" id="timeline"></span>
     <a href="#timeline" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
 	<thead>
@@ -1727,7 +1723,6 @@ permissions.</p>
 			<tr>
 					<th>Output Name</th>
 					<th>Data Type</th>
-					<th>Qualifier</th>
 					<th>Description</th>
 			</tr>
 	</thead>
@@ -1735,145 +1730,121 @@ permissions.</p>
 			<tr>
 					<td><code>name</code></td>
 					<td>String</td>
-					<td></td>
 					<td>display name of the Firefox add‑on</td>
 			</tr>
 			<tr>
 					<td><code>browser</code></td>
 					<td>String</td>
-					<td></td>
 					<td>browser name (always &lsquo;firefox&rsquo;)</td>
 			</tr>
 			<tr>
 					<td><code>type</code></td>
 					<td>String</td>
-					<td></td>
 					<td>type/category of the add‑on (e.g., extension, theme)</td>
 			</tr>
 			<tr>
 					<td><code>description</code></td>
 					<td>String</td>
-					<td></td>
 					<td>human‑readable description of the add‑on</td>
 			</tr>
 			<tr>
 					<td><code>id</code></td>
 					<td>String</td>
-					<td></td>
 					<td>unique identifier of the add‑on</td>
 			</tr>
 			<tr>
 					<td><code>version</code></td>
 					<td>String</td>
-					<td></td>
 					<td>version string of the add‑on</td>
 			</tr>
 			<tr>
 					<td><code>path</code></td>
 					<td>String</td>
-					<td></td>
 					<td>filesystem path where the add‑on is installed</td>
 			</tr>
 			<tr>
 					<td><code>update_url</code></td>
 					<td>String</td>
-					<td></td>
 					<td>URL used by the add‑on to check for updates</td>
 			</tr>
 			<tr>
 					<td><code>source_uri</code></td>
 					<td>String</td>
-					<td></td>
 					<td>original source URI from which the add‑on was obtained</td>
 			</tr>
 			<tr>
 					<td><code>root_uri</code></td>
 					<td>String</td>
-					<td></td>
 					<td>root URI of the add‑on package</td>
 			</tr>
 			<tr>
 					<td><code>user_permissions</code></td>
 					<td>Object</td>
 					<td></td>
-					<td></td>
 			</tr>
 			<tr>
 					<td><code>user_permissions.permissions[]</code></td>
 					<td>Array[String]</td>
-					<td></td>
 					<td></td>
 			</tr>
 			<tr>
 					<td><code>user_permissions.origins[]</code></td>
 					<td>Array[String]</td>
 					<td></td>
-					<td></td>
 			</tr>
 			<tr>
 					<td><code>user_permissions.data_collection[]</code></td>
 					<td>Array[String]</td>
-					<td></td>
 					<td></td>
 			</tr>
 			<tr>
 					<td><code>optional_permissions</code></td>
 					<td>Object</td>
 					<td></td>
-					<td></td>
 			</tr>
 			<tr>
 					<td><code>optional_permissions.permissions[]</code></td>
 					<td>Array[String]</td>
-					<td></td>
 					<td></td>
 			</tr>
 			<tr>
 					<td><code>optional_permissions.origins[]</code></td>
 					<td>Array[String]</td>
 					<td></td>
-					<td></td>
 			</tr>
 			<tr>
 					<td><code>optional_permissions.data_collection[]</code></td>
 					<td>Array[String]</td>
-					<td></td>
 					<td></td>
 			</tr>
 			<tr>
 					<td><code>requested_permissions</code></td>
 					<td>Object</td>
 					<td></td>
-					<td></td>
 			</tr>
 			<tr>
 					<td><code>requested_permissions.permissions[]</code></td>
 					<td>Array[String]</td>
-					<td></td>
 					<td></td>
 			</tr>
 			<tr>
 					<td><code>requested_permissions.origins[]</code></td>
 					<td>Array[String]</td>
 					<td></td>
-					<td></td>
 			</tr>
 			<tr>
 					<td><code>requested_permissions.data_collection[]</code></td>
 					<td>Array[String]</td>
 					<td></td>
-					<td></td>
 			</tr>
 			<tr>
 					<td><code>install_date</code></td>
 					<td>DateTime</td>
-					<td>DATE_INSTALLATION</td>
 					<td></td>
 			</tr>
 			<tr>
 					<td><code>update_date</code></td>
 					<td>DateTime</td>
-					<td>DATE_MODIFICATION</td>
 					<td></td>
 			</tr>
 	</tbody>
@@ -1881,14 +1852,14 @@ permissions.</p>
 
         </div>
         <div class="hx:mt-16"></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
-        href="/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_extension/"
-        title="Chrome Extension"
+        href="/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_download_history/"
+        title="Firefox Download History"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
-      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Chrome Extension</a><a
-        href="/dfir-ogre-documentation/built-in-plugins/browser-artefacts/ie_webcache_history/"
-        title="Ie Webcache History"
+      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Firefox Download History</a><a
+        href="/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_history/"
+        title="Firefox History"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:ml-auto hx:ltr:pl-4 hx:ltr:text-right hx:rtl:mr-auto hx:rtl:pr-4 hx:rtl:text-left"
-      >Ie Webcache History<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+      >Firefox History<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
       </main>
     </article>
   </div>
@@ -1920,7 +1891,7 @@ permissions.</p>
   </a></div></div>
     </div></footer>
     
-    <script defer src="/dfir-ogre-documentation/js/main.min.e6ec223dd3472e6949081d081ee4fc56c7e7f90951c40b4ae16c7db05d6213ee.js" integrity="sha256-5uwiPdNHLmlJCB0IHuT8Vsfn&#43;QlRxAtK4Wx9sF1iE&#43;4="></script>
-<script defer src="/dfir-ogre-documentation/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script><script defer src="/dfir-ogre-documentation/en.search.min.e501b4d6f6d74bd60ef5a7c41d513847c5d12b886fd68b45186fb216c3de1de4.js" integrity="sha256-5QG01vbXS9YO9afEHVE4R8XRK4hv1otFGG&#43;yFsPeHeQ="></script>
+    <script defer src="/dfir-ogre-documentation/js/main.js" integrity=""></script>
+<script defer src="/dfir-ogre-documentation/js/flexsearch.9f5b5908f93ae86f1ecd4b043b799f580c2d1654e703dd9357d568ac41b2547a.js" integrity="sha256-n1tZCPk66G8ezUsEO3mfWAwtFlTnA92TV9VorEGyVHo=" crossorigin="anonymous"></script><script defer src="/dfir-ogre-documentation/en.search.js" integrity=""></script>
   </body>
 </html>

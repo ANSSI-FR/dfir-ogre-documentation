@@ -21,16 +21,16 @@ Each row is a driver inventory entry extracted from an Amcache XML report, with 
 
 ### Fields 
 
-| Output Name | Data Type | Qualifier | Description |
-|---|---|---|---|
-| `sha1` | String |  |  |
-| `name` | String |  |  |
-| `type` | String |  |  |
-| `version` | String |  |  |
-| `compilation_date` | DateTime |  |  |
-| `checksum` | String |  |  |
-| `image_size` | IntRadix |  |  |
-| `company` | String |  |  |
-| `product` | String |  |  |
-| `product_version` | String |  |  |
-| `wdf_version` | String |  |  |
+| Output Name | Data Type | Description |
+|---|---|---|
+| `sha1` | String |  |
+| `name` | String |  |
+| `type` | String |  |
+| `version` | String |  |
+| `compilation_date` | DateTime |  |
+| `checksum` | String |  |
+| `image_size` | IntRadix |  |
+| `company` | String |  |
+| `product` | String |  |
+| `product_version` | String |  |
+| `wdf_version` | String |  |

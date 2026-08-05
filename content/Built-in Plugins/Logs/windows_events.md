@@ -33,27 +33,27 @@ Each row represents a Windows EVTX event, preserving system metadata and structu
 
 ### Fields 
 
-| Output Name | Data Type | Qualifier | Description |
-|---|---|---|---|
-| `timestamp` | DateTime | DATE_CREATION | timestamp of when the event was generated |
-| `system` | Object |  |  |
-| `system.security` | Object |  |  |
-| `system.security.user_id` | String | USER_ID | SID of the account that generated the event |
-| `system.time_created` | Object |  |  |
-| `system.time_created.system_time` | DateTime | DATE_CREATION | system time recorded for the event |
-| `system.provider` | Object |  |  |
-| `system.provider.provider_name` | String |  | name of the event provider |
-| `system.provider.guid` | Python |  | GUID of the event provider |
-| `system.execution` | Object |  |  |
-| `system.execution.process_id` | String |  | process identifier that generated the event |
-| `system.execution.thread_id` | String |  | thread identifier that generated the event |
-| `system.event_record_id` | String |  | unique record identifier for the event |
-| `system.computer` | String |  | name of the computer that logged the event |
-| `system.event_id` | String |  | numeric identifier of the event type |
-| `event_data` | Object |  |  |
-| `event_data.class_guid` | Python |  | GUID of the device setup class |
-| `user_data` | Object |  |  |
-| `debug_data` | Object |  |  |
-| `binary_event_data` | Object |  |  |
-| `processing_error_data` | Object |  |  |
-| `rendering_info` | Object |  |  |
+| Output Name | Data Type | Description |
+|---|---|---|
+| `timestamp` | DateTime | timestamp of when the event was generated |
+| `system` | Object |  |
+| `system.security` | Object |  |
+| `system.security.user_id` | String | SID of the account that generated the event |
+| `system.time_created` | Object |  |
+| `system.time_created.system_time` | DateTime | system time recorded for the event |
+| `system.provider` | Object |  |
+| `system.provider.provider_name` | String | name of the event provider |
+| `system.provider.guid` | Python | GUID of the event provider |
+| `system.execution` | Object |  |
+| `system.execution.process_id` | String | process identifier that generated the event |
+| `system.execution.thread_id` | String | thread identifier that generated the event |
+| `system.event_record_id` | String | unique record identifier for the event |
+| `system.computer` | String | name of the computer that logged the event |
+| `system.event_id` | String | numeric identifier of the event type |
+| `event_data` | Object |  |
+| `event_data.class_guid` | Python | GUID of the device setup class |
+| `user_data` | Object |  |
+| `debug_data` | Object |  |
+| `binary_event_data` | Object |  |
+| `processing_error_data` | Object |  |
+| `rendering_info` | Object |  |

@@ -19,10 +19,10 @@ Each row is a Windows object-manager match returned by FastFind, with object typ
 
 ### Fields 
 
-| Output Name | Data Type | Qualifier | Description |
-|---|---|---|---|
-| `description` | String |  |  |
-| `object[]` | Array[Object] |  |  |
-| `object[].type` | String |  |  |
-| `object[].name` | String |  |  |
-| `object[].path` | String |  |  |
+| Output Name | Data Type | Description |
+|---|---|---|
+| `description` | String |  |
+| `object[]` | Array[Object] |  |
+| `object[].type` | String |  |
+| `object[].name` | String |  |
+| `object[].path` | String |  |

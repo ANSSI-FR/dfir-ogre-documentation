@@ -22,11 +22,11 @@ Each row represents a Chrome visit, with URL, page title, visit time, visit coun
 
 ### Fields 
 
-| Output Name | Data Type | Qualifier | Description |
-|---|---|---|---|
-| `url` | String |  | web address that was visited |
-| `title` | String |  | title of the visited webpage |
-| `visit_date` | DateTime |  | timestamp of the visit |
-| `visit_count` | Int |  | total number of times the URL was visited |
-| `referer` | String |  | URL of the page that referred to this visit, if available |
-| `hidden` | Int |  | flag indicating whether the entry is hidden (1) or not (0) |
+| Output Name | Data Type | Description |
+|---|---|---|
+| `url` | String | web address that was visited |
+| `title` | String | title of the visited webpage |
+| `visit_date` | DateTime | timestamp of the visit |
+| `visit_count` | Int | total number of times the URL was visited |
+| `referer` | String | URL of the page that referred to this visit, if available |
+| `hidden` | Int | flag indicating whether the entry is hidden (1) or not (0) |

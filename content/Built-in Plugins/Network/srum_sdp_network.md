@@ -20,12 +20,12 @@ Each row is Windows Server SRUM SDP network telemetry with timestamp and inbound
 
 ### Fields 
 
-| Output Name | Data Type | Qualifier | Description |
-|---|---|---|---|
-| `incremental_id` | Int |  |  |
-| `timestamp` | DateTime |  |  |
-| `app_id` | String | APP_ID |  |
-| `user_id` | String | USER_ID |  |
-| `bytes_in_bound` | Int |  |  |
-| `bytes_out_bound` | Int |  |  |
-| `bytes_total` | Int |  |  |
+| Output Name | Data Type | Description |
+|---|---|---|
+| `incremental_id` | Int |  |
+| `timestamp` | DateTime |  |
+| `app_id` | String |  |
+| `user_id` | String |  |
+| `bytes_in_bound` | Int |  |
+| `bytes_out_bound` | Int |  |
+| `bytes_total` | Int |  |

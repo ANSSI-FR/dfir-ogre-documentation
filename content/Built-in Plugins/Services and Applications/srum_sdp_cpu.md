@@ -20,10 +20,10 @@ Each row is Windows Server SRUM SDP processor telemetry with timestamp and accum
 
 ### Fields 
 
-| Output Name | Data Type | Qualifier | Description |
-|---|---|---|---|
-| `incremental_id` | Int |  |  |
-| `timestamp` | DateTime |  |  |
-| `app_id` | String | APP_ID |  |
-| `user_id` | String | USER_ID |  |
-| `processor_time` | Int |  |  |
+| Output Name | Data Type | Description |
+|---|---|---|
+| `incremental_id` | Int |  |
+| `timestamp` | DateTime |  |
+| `app_id` | String |  |
+| `user_id` | String |  |
+| `processor_time` | Int |  |

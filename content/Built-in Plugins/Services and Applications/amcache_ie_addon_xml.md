@@ -22,9 +22,9 @@ Each row identifies an Internet Explorer add-on found in an Amcache XML report, 
 
 ### Fields 
 
-| Output Name | Data Type | Qualifier | Description |
-|---|---|---|---|
-| `id` | Python | APP_ID | Program identifier |
-| `name` | String | APP_NAME | Program name |
-| `type` | String |  | AddOn type |
-| `publisher` | String | PUBLISHER | Program publisher |
+| Output Name | Data Type | Description |
+|---|---|---|
+| `id` | Python | Program identifier |
+| `name` | String | Program name |
+| `type` | String | AddOn type |
+| `publisher` | String | Program publisher |

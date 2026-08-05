@@ -19,7 +19,7 @@ Each row is an application launch recorded by the Windows Program Compatibility 
 
 ### Fields 
 
-| Output Name | Data Type | Qualifier | Description |
-|---|---|---|---|
-| `timestamp` | DateTime |  | timestamp of the application launch |
-| `executable_path` | String | FILE_PATH | full path of the executable launched via PCA |
+| Output Name | Data Type | Description |
+|---|---|---|
+| `timestamp` | DateTime | timestamp of the application launch |
+| `executable_path` | String | full path of the executable launched via PCA |

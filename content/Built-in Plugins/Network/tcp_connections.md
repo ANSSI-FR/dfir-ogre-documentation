@@ -23,11 +23,11 @@ Each row is a TCP or UDP endpoint from a Sysinternals Tcpvcon snapshot, with own
 
 ### Fields 
 
-| Output Name | Data Type | Qualifier | Description |
-|---|---|---|---|
-| `process_name` | String |  | Process name |
-| `pid` | String |  | PID |
-| `protocol` | String |  | Protocol.  e.g. TCP, UDP, TCPV6, UDPV6 |
-| `state` | String |  | LISTENING, ESTABLISHED, … (can be empty for UDP) |
-| `local_adress` | String |  | local addres |
-| `remote_adress` | String |  | remote address |
+| Output Name | Data Type | Description |
+|---|---|---|
+| `process_name` | String | Process name |
+| `pid` | String | PID |
+| `protocol` | String | Protocol.  e.g. TCP, UDP, TCPV6, UDPV6 |
+| `state` | String | LISTENING, ESTABLISHED, … (can be empty for UDP) |
+| `local_adress` | String | local addres |
+| `remote_adress` | String | remote address |

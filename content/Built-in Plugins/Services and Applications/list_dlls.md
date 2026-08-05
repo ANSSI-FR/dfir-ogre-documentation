@@ -22,11 +22,11 @@ Each row is a module listed by Sysinternals ListDLLs for a process observed at c
 
 ### Fields 
 
-| Output Name | Data Type | Qualifier | Description |
-|---|---|---|---|
-| `process_name` | String |  | Process name |
-| `pid` | String |  | PID |
-| `command_line` | String |  | Full command line used to start the process |
-| `base_addr` | String |  | Base address in memory where the DLL is loaded (hexadecimal) |
-| `size` | String |  | Size of the DLL module in memory  |
-| `path` | String |  |  Full path to the DLL file on disk |
+| Output Name | Data Type | Description |
+|---|---|---|
+| `process_name` | String | Process name |
+| `pid` | String | PID |
+| `command_line` | String | Full command line used to start the process |
+| `base_addr` | String | Base address in memory where the DLL is loaded (hexadecimal) |
+| `size` | String | Size of the DLL module in memory  |
+| `path` | String |  Full path to the DLL file on disk |

@@ -41,7 +41,7 @@ class FieldRow:
             name += "[]"
 
         return (
-            f"| `{name}` | {self.data_type} | {self.qualifier} | {self.description} |"
+            f"| `{name}` | {self.data_type} | {self.description} |"
         )
 
 
@@ -214,8 +214,8 @@ def parse_fields(root: ET.Element) -> str:
         parse_field_elem(child, root_field)
 
     rows = root_field.flatten([])
-    md = "| Output Name | Data Type | Qualifier | Description |\n"
-    md += "|---|---|---|---|\n"
+    md = "| Output Name | Data Type | Description |\n"
+    md += "|---|---|---|\n"
     for row in rows:
         serialized = row.to_md()
         if serialized:

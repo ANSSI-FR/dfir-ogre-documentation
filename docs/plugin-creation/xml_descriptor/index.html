@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr"><head>
+<html lang="en" dir="ltr"><head><script src="/dfir-ogre-documentation/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=dfir-ogre-documentation/livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="noindex, nofollow" />
   <link rel="icon shortcut" href="/dfir-ogre-documentation/favicon.ico" sizes="32x32" />
 <link rel="icon" href="/dfir-ogre-documentation/favicon.svg" type="image/svg+xml" id="favicon-svg" />
 <link rel="icon" href="/dfir-ogre-documentation/favicon-16x16.png" type="image/png" sizes="16x16" />
@@ -10,7 +10,7 @@
 <link fetchpriority="low" href="/dfir-ogre-documentation/site.webmanifest" rel="manifest" />
 <title>XML Descriptor documentation – DFIR-OGRE documentation</title>
   <meta name="description" content="Overview The DFIR-OGRE plugin configuration is an XML file that defines how a parser plugin should read, transform, and structure data from various file formats (CSV, JSON, EVTX, Hive, SQLite, logs, etc.). It maps raw input fields to typed output fields, applies transformations, and optionally defines timeline display behavior.
-Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;plugin parser=&#34;Csv&#34; file_encoding=&#34;UTF-8&#34;&gt; &lt;mapping data_type=&#34;ntfs_info&#34;&gt; &lt;description&gt;Parse data from the NTFS Info csv file&lt;/description&gt; &lt;default_parser value=&#34;Ignore&#34; /&gt; &lt;default_date_pattern value=&#34;iso&#34; /&gt; &lt;csv_delimiter value=&#34;,&#34; /&gt; &lt;timeline&gt; &lt;timeline_type value=&#34;Normal&#34; /&gt; &lt;description&gt; &lt;output_name value=&#34;snapshot_id&#34; /&gt; &lt;/description&gt; &lt;additional_description&gt; &lt;output_name value=&#34;file_size&#34; /&gt; &lt;/additional_description&gt; &lt;/timeline&gt; &lt;fields&gt; &lt;field input=&#34;SnapshotID&#34; output=&#34;snapshot_id&#34; parser=&#34;String&#34; /&gt; &lt;field input=&#34;FileNameCreationDate&#34; output=&#34;fn_creation_date&#34; parser=&#34;DateTime&#34; /&gt; &lt;field input=&#34;SizeInBytes&#34; output=&#34;file_size&#34; parser=&#34;Int&#34;/&gt; &lt;/fields&gt; &lt;/mapping&gt; &lt;/plugin&gt; 1. Root Element: &lt;plugin&gt; The root element must be named plugin and carries two attributes:" /><link rel="canonical" href="https://anssi-fr.github.io/dfir-ogre-documentation/plugin-creation/xml_descriptor/" itemprop="url" />
+Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;plugin parser=&#34;Csv&#34; file_encoding=&#34;UTF-8&#34;&gt; &lt;mapping data_type=&#34;ntfs_info&#34;&gt; &lt;description&gt;Parse data from the NTFS Info csv file&lt;/description&gt; &lt;default_parser value=&#34;Ignore&#34; /&gt; &lt;default_date_pattern value=&#34;iso&#34; /&gt; &lt;csv_delimiter value=&#34;,&#34; /&gt; &lt;timeline&gt; &lt;timeline_type value=&#34;Normal&#34; /&gt; &lt;description&gt; &lt;output_name value=&#34;snapshot_id&#34; /&gt; &lt;/description&gt; &lt;additional_description&gt; &lt;output_name value=&#34;file_size&#34; /&gt; &lt;/additional_description&gt; &lt;/timeline&gt; &lt;fields&gt; &lt;field input=&#34;SnapshotID&#34; output=&#34;snapshot_id&#34; parser=&#34;String&#34; /&gt; &lt;field input=&#34;FileNameCreationDate&#34; output=&#34;fn_creation_date&#34; parser=&#34;DateTime&#34; /&gt; &lt;field input=&#34;SizeInBytes&#34; output=&#34;file_size&#34; parser=&#34;Int&#34;/&gt; &lt;/fields&gt; &lt;/mapping&gt; &lt;/plugin&gt; 1. Root Element: &lt;plugin&gt; The root element must be named plugin and carries two attributes:" /><link rel="canonical" href="http://localhost:1313/dfir-ogre-documentation/plugin-creation/xml_descriptor/" itemprop="url" />
 
 <meta property="og:title" content="XML Descriptor documentation">
 <meta
@@ -64,7 +64,7 @@ Quick Example
   content="
     article
   ">
-<meta property="og:url" content="https://anssi-fr.github.io/dfir-ogre-documentation/plugin-creation/xml_descriptor/"><meta property="article:section" content="plugin-creation">
+<meta property="og:url" content="http://localhost:1313/dfir-ogre-documentation/plugin-creation/xml_descriptor/"><meta property="article:section" content="plugin-creation">
 
 <meta
   property="article:published_time"
@@ -87,18 +87,12 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
 	<meta name="twitter:title" content="XML Descriptor documentation">
 	<meta name="twitter:description" content="Overview The DFIR-OGRE plugin configuration is an XML file that defines how a parser plugin should read, transform, and structure data from various file formats (CSV, JSON, EVTX, Hive, SQLite, logs, etc.). It maps raw input fields to typed output fields, applies transformations, and optionally defines timeline display behavior.
 Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;plugin parser=&#34;Csv&#34; file_encoding=&#34;UTF-8&#34;&gt; &lt;mapping data_type=&#34;ntfs_info&#34;&gt; &lt;description&gt;Parse data from the NTFS Info csv file&lt;/description&gt; &lt;default_parser value=&#34;Ignore&#34; /&gt; &lt;default_date_pattern value=&#34;iso&#34; /&gt; &lt;csv_delimiter value=&#34;,&#34; /&gt; &lt;timeline&gt; &lt;timeline_type value=&#34;Normal&#34; /&gt; &lt;description&gt; &lt;output_name value=&#34;snapshot_id&#34; /&gt; &lt;/description&gt; &lt;additional_description&gt; &lt;output_name value=&#34;file_size&#34; /&gt; &lt;/additional_description&gt; &lt;/timeline&gt; &lt;fields&gt; &lt;field input=&#34;SnapshotID&#34; output=&#34;snapshot_id&#34; parser=&#34;String&#34; /&gt; &lt;field input=&#34;FileNameCreationDate&#34; output=&#34;fn_creation_date&#34; parser=&#34;DateTime&#34; /&gt; &lt;field input=&#34;SizeInBytes&#34; output=&#34;file_size&#34; parser=&#34;Int&#34;/&gt; &lt;/fields&gt; &lt;/mapping&gt; &lt;/plugin&gt; 1. Root Element: &lt;plugin&gt; The root element must be named plugin and carries two attributes:">
-
-    <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
-    <link href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" rel="stylesheet" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
+<link href="/dfir-ogre-documentation/css/compiled/main.css" rel="stylesheet" />
+    <link href="/dfir-ogre-documentation/css/variables.css" rel="stylesheet" />
+    <link href="/dfir-ogre-documentation/css/custom.css" rel="stylesheet" />
 
   
-
-
-
-
-
-
-<script src="/dfir-ogre-documentation/js/main-head.min.2375b7265ea066ecb314226ce5ff17478453df5f350d34d830b3fc96fba21672.js" integrity="sha256-I3W3Jl6gZuyzFCJs5f8XR4RT3181DTTYMLP8lvuiFnI="></script>
+<script src="/dfir-ogre-documentation/js/main-head.js" integrity=""></script>
 
   
   
@@ -434,46 +428,10 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_download_history/"
+      href="/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_download_history/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Browser Download History</span>
-    </a>
-  </div>
-              
-            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
-    <a
-      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
-      hx:hextra-focus-visible-inset
-        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_download_history_lite/"
-      
-    >
-      <span class="hx:min-w-0 [word-break:break-word]">Browser Download History Lite</span>
-    </a>
-  </div>
-              
-            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
-    <a
-      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
-      hx:hextra-focus-visible-inset
-        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_history/"
-      
-    >
-      <span class="hx:min-w-0 [word-break:break-word]">Browser History</span>
-    </a>
-  </div>
-              
-            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
-    <a
-      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
-      hx:hextra-focus-visible-inset
-        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/browser-artefacts/browser_history_lite/"
-      
-    >
-      <span class="hx:min-w-0 [word-break:break-word]">Browser History Lite</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Chrome Download History</span>
     </a>
   </div>
               
@@ -494,10 +452,46 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/dfir-ogre-documentation/built-in-plugins/browser-artefacts/chrome_history/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Chrome History</span>
+    </a>
+  </div>
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_download_history/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Firefox Download History</span>
+    </a>
+  </div>
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
       href="/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_extension/"
       
     >
       <span class="hx:min-w-0 [word-break:break-word]">Firefox Extension</span>
+    </a>
+  </div>
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/dfir-ogre-documentation/built-in-plugins/browser-artefacts/firefox_history/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Firefox History</span>
     </a>
   </div>
               
@@ -545,10 +539,10 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/fast-find/fastfind_obj/"
+      href="/dfir-ogre-documentation/built-in-plugins/fast-find/fastfind_object/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Fastfind Obj</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Fastfind Object</span>
     </a>
   </div>
               
@@ -557,10 +551,10 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/fast-find/fastfind_reg/"
+      href="/dfir-ogre-documentation/built-in-plugins/fast-find/fastfind_registry/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Fastfind Reg</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Fastfind Registry</span>
     </a>
   </div>
               
@@ -608,10 +602,10 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/file-system/i30info/"
+      href="/dfir-ogre-documentation/built-in-plugins/file-system/i30_info/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">I30Info</span>
+      <span class="hx:min-w-0 [word-break:break-word]">I30 info</span>
     </a>
   </div>
               
@@ -644,10 +638,10 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/file-system/ntfsinfo/"
+      href="/dfir-ogre-documentation/built-in-plugins/file-system/ntfs_info/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Ntfsinfo</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Ntfs Info</span>
     </a>
   </div>
               
@@ -716,10 +710,10 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/file-system/usninfo/"
+      href="/dfir-ogre-documentation/built-in-plugins/file-system/usn_info/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Usninfo</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Usn Info</span>
     </a>
   </div>
               
@@ -803,10 +797,10 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/logs/wer/"
+      href="/dfir-ogre-documentation/built-in-plugins/logs/wer_reports/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Wer</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Wer Reports</span>
     </a>
   </div>
               
@@ -878,10 +872,10 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/network/tcpvcon/"
+      href="/dfir-ogre-documentation/built-in-plugins/network/tcp_connections/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Tcpvcon</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Tcp Connections</span>
     </a>
   </div>
               
@@ -917,10 +911,10 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/persistence/reg_autoruns/"
+      href="/dfir-ogre-documentation/built-in-plugins/persistence/autoruns_reg_software/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Reg Autoruns</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Autoruns Reg Software</span>
     </a>
   </div>
               
@@ -929,10 +923,10 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/persistence/reg_autoruns_software/"
+      href="/dfir-ogre-documentation/built-in-plugins/persistence/autoruns_reg_system/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Reg Autoruns Software</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Autoruns Reg System</span>
     </a>
   </div>
               
@@ -941,10 +935,10 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/persistence/reg_autoruns_system/"
+      href="/dfir-ogre-documentation/built-in-plugins/persistence/autoruns_reg_user/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Reg Autoruns System</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Autoruns Reg User</span>
     </a>
   </div>
               
@@ -1028,10 +1022,10 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_file/"
+      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_files/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Amcache File</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Amcache Files</span>
     </a>
   </div>
               
@@ -1076,10 +1070,10 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_program_xml/"
+      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_program_previous/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Amcache Program Xml</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Amcache Program Previous</span>
     </a>
   </div>
               
@@ -1088,10 +1082,22 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_program_xml_xml/"
+      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_program_report/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Amcache Program Xml XML</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Amcache Program Report</span>
+    </a>
+  </div>
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/amcache_program_wer/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Amcache Program Wer</span>
     </a>
   </div>
               
@@ -1124,10 +1130,10 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/listdlls/"
+      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/list_dlls/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Listdlls</span>
+      <span class="hx:min-w-0 [word-break:break-word]">List Dlls</span>
     </a>
   </div>
               
@@ -1160,10 +1166,10 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/processes_orc/"
+      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/processes_orc_v1/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Processes Orc</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Processes Orc V1</span>
     </a>
   </div>
               
@@ -1172,10 +1178,10 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/processes_orc_csv/"
+      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/processes_orc_v2/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Processes Orc Csv</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Processes Orc V2</span>
     </a>
   </div>
               
@@ -1208,10 +1214,10 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/shim_db/"
+      href="/dfir-ogre-documentation/built-in-plugins/services-and-applications/shim_database/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Shim Db</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Shim Database</span>
     </a>
   </div>
               
@@ -1307,10 +1313,10 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/system-information/network_config/"
+      href="/dfir-ogre-documentation/built-in-plugins/system-information/network_configuration/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Network Config</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Network Configuration</span>
     </a>
   </div>
               
@@ -1319,10 +1325,10 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/system-information/reg_systeminfo/"
+      href="/dfir-ogre-documentation/built-in-plugins/system-information/system_info_reg/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Reg Systeminfo</span>
+      <span class="hx:min-w-0 [word-break:break-word]">System Info Reg</span>
     </a>
   </div>
               
@@ -1355,10 +1361,10 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/system-information/x509_cert/"
+      href="/dfir-ogre-documentation/built-in-plugins/system-information/x509_certificates_users/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">X509 Cert</span>
+      <span class="hx:min-w-0 [word-break:break-word]">X509 Certificates Users</span>
     </a>
   </div>
               
@@ -1367,10 +1373,10 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/system-information/x509_cert_certificates/"
+      href="/dfir-ogre-documentation/built-in-plugins/system-information/x509cert_software/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">X509 Cert Certificates</span>
+      <span class="hx:min-w-0 [word-break:break-word]">X509Cert Software</span>
     </a>
   </div>
               
@@ -1394,10 +1400,10 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/windows-artefacts/clsid/"
+      href="/dfir-ogre-documentation/built-in-plugins/windows-artefacts/clsid_software/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Clsid</span>
+      <span class="hx:min-w-0 [word-break:break-word]">CLSID Software</span>
     </a>
   </div>
               
@@ -1406,10 +1412,10 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/windows-artefacts/clsid_software/"
+      href="/dfir-ogre-documentation/built-in-plugins/windows-artefacts/clsid_users/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Clsid Software</span>
+      <span class="hx:min-w-0 [word-break:break-word]">CLSID Users</span>
     </a>
   </div>
               
@@ -1442,10 +1448,10 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-      href="/dfir-ogre-documentation/built-in-plugins/windows-artefacts/objinfo/"
+      href="/dfir-ogre-documentation/built-in-plugins/windows-artefacts/object_info/"
       
     >
-      <span class="hx:min-w-0 [word-break:break-word]">Objinfo</span>
+      <span class="hx:min-w-0 [word-break:break-word]">Object Info</span>
     </a>
   </div>
               
@@ -2900,7 +2906,7 @@ Quick Example &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;p
   </a></div></div>
     </div></footer>
     
-    <script defer src="/dfir-ogre-documentation/js/main.min.e6ec223dd3472e6949081d081ee4fc56c7e7f90951c40b4ae16c7db05d6213ee.js" integrity="sha256-5uwiPdNHLmlJCB0IHuT8Vsfn&#43;QlRxAtK4Wx9sF1iE&#43;4="></script>
-<script defer src="/dfir-ogre-documentation/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script><script defer src="/dfir-ogre-documentation/en.search.min.e501b4d6f6d74bd60ef5a7c41d513847c5d12b886fd68b45186fb216c3de1de4.js" integrity="sha256-5QG01vbXS9YO9afEHVE4R8XRK4hv1otFGG&#43;yFsPeHeQ="></script>
+    <script defer src="/dfir-ogre-documentation/js/main.js" integrity=""></script>
+<script defer src="/dfir-ogre-documentation/js/flexsearch.9f5b5908f93ae86f1ecd4b043b799f580c2d1654e703dd9357d568ac41b2547a.js" integrity="sha256-n1tZCPk66G8ezUsEO3mfWAwtFlTnA92TV9VorEGyVHo=" crossorigin="anonymous"></script><script defer src="/dfir-ogre-documentation/en.search.js" integrity=""></script>
   </body>
 </html>

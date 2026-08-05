@@ -22,14 +22,14 @@ Each row is an SRUM network-connectivity interval associated with an application
 
 ### Fields 
 
-| Output Name | Data Type | Qualifier | Description |
-|---|---|---|---|
-| `incremental_id` | Int |  |  |
-| `timestamp` | DateTime |  |  |
-| `app_id` | String | APP_ID |  |
-| `user_id` | String | USER_ID |  |
-| `interface_luid` | Int |  |  |
-| `connect_start_time` | DateTime |  |  |
-| `connected_time` | Int |  |  |
-| `l2_profile_id` | Int |  |  |
-| `l2_profile_flags` | Int |  |  |
+| Output Name | Data Type | Description |
+|---|---|---|
+| `incremental_id` | Int |  |
+| `timestamp` | DateTime |  |
+| `app_id` | String |  |
+| `user_id` | String |  |
+| `interface_luid` | Int |  |
+| `connect_start_time` | DateTime |  |
+| `connected_time` | Int |  |
+| `l2_profile_id` | Int |  |
+| `l2_profile_flags` | Int |  |

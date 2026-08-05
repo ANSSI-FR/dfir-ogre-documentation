@@ -20,13 +20,13 @@ Each row represents a Windows object-manager namespace entry captured by GetObjI
 
 ### Fields 
 
-| Output Name | Data Type | Qualifier | Description |
-|---|---|---|---|
-| `computer_name` | String |  | Host name that produced the GetObjInfo report |
-| `operating_system` | String |  | Operating system version string (e.g., 'Windows Server 2016 Standard Edition') |
-| `object_type` | String |  | Type of Windows object (Mutant, Type, Directory, SymbolicLink, etc.) |
-| `object_name` | String |  | Name of the Windows object in the namespace |
-| `object_path` | String |  | Full path of the object in the object manager namespace |
-| `link_target` | String |  | Target path that a symbolic link points to (empty if not applicable) |
-| `link_creation_time` | DateTime |  | Timestamp when the link was created |
-| `description` | String |  | Additional description or metadata about the object |
+| Output Name | Data Type | Description |
+|---|---|---|
+| `computer_name` | String | Host name that produced the GetObjInfo report |
+| `operating_system` | String | Operating system version string (e.g., 'Windows Server 2016 Standard Edition') |
+| `object_type` | String | Type of Windows object (Mutant, Type, Directory, SymbolicLink, etc.) |
+| `object_name` | String | Name of the Windows object in the namespace |
+| `object_path` | String | Full path of the object in the object manager namespace |
+| `link_target` | String | Target path that a symbolic link points to (empty if not applicable) |
+| `link_creation_time` | DateTime | Timestamp when the link was created |
+| `description` | String | Additional description or metadata about the object |

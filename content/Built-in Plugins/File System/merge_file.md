@@ -16,5 +16,5 @@ Each row is the complete text of one multiline input artifact after its lines ar
 {{< callout type="warning" >}}This plugin does not contains timestamped data and cannot be used to create a timeline{{< /callout >}}
 ### Fields 
 
-| Output Name | Data Type | Qualifier | Description |
-|---|---|---|---|
+| Output Name | Data Type | Description |
+|---|---|---|

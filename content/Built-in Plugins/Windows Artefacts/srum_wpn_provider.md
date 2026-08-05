@@ -20,12 +20,12 @@ Each row is Windows Push Notification telemetry from SRUM, associated with an ap
 
 ### Fields 
 
-| Output Name | Data Type | Qualifier | Description |
-|---|---|---|---|
-| `incremental_id` | Int |  |  |
-| `timestamp` | DateTime |  |  |
-| `app_id` | String | APP_ID |  |
-| `user_id` | String | USER_ID |  |
-| `notification_type` | Int |  |  |
-| `payload_size` | Int |  |  |
-| `network_type` | Int |  |  |
+| Output Name | Data Type | Description |
+|---|---|---|
+| `incremental_id` | Int |  |
+| `timestamp` | DateTime |  |
+| `app_id` | String |  |
+| `user_id` | String |  |
+| `notification_type` | Int |  |
+| `payload_size` | Int |  |
+| `network_type` | Int |  |

@@ -20,21 +20,21 @@ Each row is an SRUM long-term power summary, with active or connected-standby ti
 
 ### Fields 
 
-| Output Name | Data Type | Qualifier | Description |
-|---|---|---|---|
-| `incremental_id` | Int |  |  |
-| `timestamp` | DateTime |  |  |
-| `app_id` | String | APP_ID |  |
-| `user_id` | String | USER_ID |  |
-| `active_ac_time` | Int |  |  |
-| `cs_ac_time` | Int |  |  |
-| `active_dc_time` | Int |  |  |
-| `cs_dc_time` | Int |  |  |
-| `active_discharge_time` | Int |  |  |
-| `cs_discharge_time` | Int |  |  |
-| `active_energy` | Int |  |  |
-| `cs_energy` | Int |  |  |
-| `designed_capacity` | Int |  |  |
-| `full_charged_capacity` | Int |  |  |
-| `cycle_count` | Int |  |  |
-| `configuration_hash` | Int |  |  |
+| Output Name | Data Type | Description |
+|---|---|---|
+| `incremental_id` | Int |  |
+| `timestamp` | DateTime |  |
+| `app_id` | String |  |
+| `user_id` | String |  |
+| `active_ac_time` | Int |  |
+| `cs_ac_time` | Int |  |
+| `active_dc_time` | Int |  |
+| `cs_dc_time` | Int |  |
+| `active_discharge_time` | Int |  |
+| `cs_discharge_time` | Int |  |
+| `active_energy` | Int |  |
+| `cs_energy` | Int |  |
+| `designed_capacity` | Int |  |
+| `full_charged_capacity` | Int |  |
+| `cycle_count` | Int |  |
+| `configuration_hash` | Int |  |

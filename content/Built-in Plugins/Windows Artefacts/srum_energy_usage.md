@@ -20,16 +20,16 @@ Each row is an SRUM battery or power-state event, with timestamp, state transiti
 
 ### Fields 
 
-| Output Name | Data Type | Qualifier | Description |
-|---|---|---|---|
-| `incremental_id` | Int |  |  |
-| `timestamp` | DateTime |  |  |
-| `app_id` | String | APP_ID |  |
-| `user_id` | String | USER_ID |  |
-| `EventTimestamp` | Int |  |  |
-| `StateTransition` | Int |  |  |
-| `DesignedCapacity` | Int |  |  |
-| `FullChargedCapacity` | Int |  |  |
-| `ChargeLevel` | Int |  |  |
-| `CycleCount` | Int |  |  |
-| `ConfigurationHash` | Int |  |  |
+| Output Name | Data Type | Description |
+|---|---|---|
+| `incremental_id` | Int |  |
+| `timestamp` | DateTime |  |
+| `app_id` | String |  |
+| `user_id` | String |  |
+| `EventTimestamp` | Int |  |
+| `StateTransition` | Int |  |
+| `DesignedCapacity` | Int |  |
+| `FullChargedCapacity` | Int |  |
+| `ChargeLevel` | Int |  |
+| `CycleCount` | Int |  |
+| `ConfigurationHash` | Int |  |

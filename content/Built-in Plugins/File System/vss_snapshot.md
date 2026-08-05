@@ -21,10 +21,10 @@ Each row describes a Volume Shadow Copy snapshot, with snapshot identifier, sour
 
 ### Fields 
 
-| Output Name | Data Type | Qualifier | Description |
-|---|---|---|---|
-| `snapshot_id` | Python |  | GUID identifying the VSS snapshot |
-| `device_instance` | String |  | Device path of the shadow copy (e.g. \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1) |
-| `volume_name` | String |  | Original volume that the snapshot belongs to |
-| `creation_time` | DateTime |  | Timestamp when the snapshot was created |
-| `attributes` | Split |  | Combined VSS attribute flags (e.g. VSS_VOLSNAP_ATTR_PERSISTENT|…) |
+| Output Name | Data Type | Description |
+|---|---|---|
+| `snapshot_id` | Python | GUID identifying the VSS snapshot |
+| `device_instance` | String | Device path of the shadow copy (e.g. \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1) |
+| `volume_name` | String | Original volume that the snapshot belongs to |
+| `creation_time` | DateTime | Timestamp when the snapshot was created |
+| `attributes` | Split | Combined VSS attribute flags (e.g. VSS_VOLSNAP_ATTR_PERSISTENT|…) |
