@@ -8,7 +8,7 @@
 
 ### Description 
 
-Parses windows evtx logs.
+Each row represents a Windows EVTX event, preserving system metadata and structured event, user, and message data with its timestamp, provider, event identifier, host, user, and process context. Use event-specific semantics and cross-log correlation to build timelines. Log retention, clearing, collection filters, and missing provider resources can limit interpretation.
 
 
 ### Timeline 

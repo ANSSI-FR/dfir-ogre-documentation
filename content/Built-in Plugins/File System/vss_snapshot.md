@@ -8,7 +8,7 @@
 
 ### Description 
 
-Parses CSV files that list Volume Shadow Copy (VSS) snapshots.
+Each row describes a Volume Shadow Copy snapshot, with snapshot identifier, source volume, device path, creation time, and snapshot attributes. Use it to anchor historical artifact versions and correlate records to a specific snapshot. Snapshot metadata does not guarantee that every file or artifact was retained, readable, or collected.
 
 
 ### Timeline 

@@ -8,7 +8,7 @@
 
 ### Description 
 
-Parse Windows Registry hive values
+Each row exposes a raw Windows Registry value with hive and key path, value name, type, data, key LastWrite time, security metadata, and parse errors where present. Use it for low-level configuration and provenance analysis when no specialized mapping applies. LastWrite is key-level, not a timestamp for each individual value.
 
 
 ### Timeline 

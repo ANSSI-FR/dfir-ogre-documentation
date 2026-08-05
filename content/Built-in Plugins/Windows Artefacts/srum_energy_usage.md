@@ -8,8 +8,7 @@
 
 ### Description 
 
-Srum table that tracks stores the per‑process estimates of how much electrical
-      energy Windows thinks each component has consumed over time.
+Each row is an SRUM battery or power-state event, with timestamp, state transition, designed or full capacity, charge level, cycle count, and configuration hash. Use it to reconstruct device power conditions around user or system activity. These are system energy-state records, not per-process consumption measurements.
 
 
 ### Timeline 

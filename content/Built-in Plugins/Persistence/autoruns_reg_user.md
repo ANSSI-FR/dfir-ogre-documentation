@@ -1,16 +1,14 @@
 ---
- title: 'X509 Cert Certificates'
+ title: 'Autoruns Reg User'
 ---
 
 
-{{< callout type="important" >}}Data Type: **x509_cert** \
-	Python Parser: **RegUserCertificates**{{< /callout >}}
+{{< callout type="important" >}}Data Type: **reg_autoruns** \
+	Python Parser: **RegAutorunsUser**{{< /callout >}}
 
 ### Description 
 
-Extracts X509 certificates stored in a user’s `NTUser` hive. It parses certificate blobs, decodes DER data, and outputs detailed certificate fields together with the originating registry key information.
-
-- Retrieves certificate subject, issuer, validity dates, public key algorithm and fingerprint, etc.
+Each row is a per-user auto-start value found in a known user-hive persistence location, with persistence type, key and value, command data, LastWrite time, owner, and permissions. Use it to attribute configured persistence to a profile and correlate commands with files. Configuration does not prove execution, and LastWrite applies to the key rather than an individual value.
 
 
 ### Timeline 
@@ -18,27 +16,16 @@ Extracts X509 certificates stored in a user’s `NTUser` hive. It parses certifi
 | Timeline Field | Data Field |
 |---|---|
 |Related User    | `key_security.owner_sid`   |
-|Description    | `subject`   |
-|Additional Description    | `issuer`   |
+|Description    | `type`   |
+|    | `key_path`   |
+|Additional Description    | `values`   |
 
 ### Fields 
 
 | Output Name | Data Type | Qualifier | Description |
 |---|---|---|---|
-| `subject` | String |  | certificate subject distinguished name (RFC 4514 format) |
-| `issuer` | String |  | certificate issuer distinguished name (RFC 4514 format) |
-| `not_valid_before` | DateTime |  | certificate start‑of‑validity timestamp (not before) |
-| `not_valid_after` | DateTime |  | certificate end‑of‑validity timestamp (not after) |
-| `pub_key_algo` | String |  | public‑key algorithm name (e.g., rsaEncryption) |
-| `pub_key_algo_oid` | String |  | OID of the public‑key algorithm |
-| `fingerprint_sha256` | String |  | SHA‑256 fingerprint of the certificate (hex string) |
-| `version` | String |  | X.509 certificate version |
-| `serial_number` | String |  | certificate serial number (decimal string) |
-| `extensions[]` | Array[Object] |  |  |
-| `extensions[].name` | String |  | human‑readable name of the extension |
-| `extensions[].oid` | String |  | object identifier (OID) of the extension |
-| `extensions[].critical` | String |  | whether the extension is marked critical (true/false) |
-| `extensions[].value` | String |  | string representation of the extension value |
+| `type` | String |  | Logical name of the persistence mechanism (e.g., 'Startup Run') |
+| `values[]` | Array[Object] |  | Value set extracted from the registry key. |
 | `key_path` | String | KEY_PATH | full registry key name |
 | `key_modif_time` | DateTime | DATE_MODIFICATION | last modification timestamp of the registry key |
 | `key_security` | Object |  |  |

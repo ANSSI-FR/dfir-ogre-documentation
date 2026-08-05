@@ -8,7 +8,7 @@
 
 ### Description 
 
-List installed software from various Xml files
+Each row describes installed-software evidence from an Amcache XML report, including program identity, observed times, hash, publisher, and executable metadata. Use it to correlate software inventory with files and host activity. The report is a point-in-time inventory and does not by itself prove installation time or execution.
 
 
 ### Timeline 

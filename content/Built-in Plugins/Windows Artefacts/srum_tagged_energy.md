@@ -8,9 +8,7 @@
 
 ### Description 
 
-Parse data from Srum `tagged_energy` table
-      ```{B6D82AF1-F780-4E17-8077-6CB9AD8A6FC4}```
-      ()
+Each row preserves an SRUM tagged-energy table record with timestamp, application identifier, user identifier, and database identity fields. Use these keys to correlate otherwise opaque records with other SRUM tables. This mapping does not decode energy metrics, so the row should not support claims about consumption or activity type.
 
 
 ### Timeline 

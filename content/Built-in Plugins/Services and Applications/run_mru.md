@@ -8,10 +8,7 @@
 
 ### Description 
 
-Extracts entries from the `RunMRU` in the `NTUser` hive, which stores commands typed in the `Windows + R` dialog.
-
-- Captures every command a user manually launched via the Run dialog.
-- Preserves the alphabetical index indicating the order of entry.
+Each row is a command stored in a user's RunMRU key after entry through the Windows Run dialog, with command text, MRU index, user and registry provenance, and key LastWrite time. Use it to reconstruct explicit command intent and pivot on paths, URLs, or utilities. MRU order is relative, and the shared key time is not an individual timestamp for every command.
 
 
 ### Timeline 

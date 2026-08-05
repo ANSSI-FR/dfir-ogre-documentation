@@ -8,8 +8,7 @@
 
 ### Description 
 
-Srum table that tracks statistics about inputs (focus, keyboard, mouse, etc.)
-      recieved by each application
+Each row is a Windows SRUM application-timeline interval associated with an application and user, with focus duration, input, audio, network, disk, and CPU activity counters. Use it to compare application engagement and correlate resource activity over time. Counters are aggregated telemetry rather than individual actions, and coverage depends on SRUM retention.
 
 
 ### Timeline 

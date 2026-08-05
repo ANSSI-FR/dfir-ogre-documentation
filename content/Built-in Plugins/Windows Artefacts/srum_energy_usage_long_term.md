@@ -8,8 +8,7 @@
 
 ### Description 
 
-Srum table that tracks long term, per‑process estimates of how much electrical
-      energy Windows thinks each component has consumed over time.
+Each row is an SRUM long-term power summary, with active or connected-standby time on AC or DC power, discharge duration and energy, battery capacity, cycle count, and configuration hash. Use it to establish broader power and uptime context. Values are aggregated system totals rather than discrete events or per-process measurements.
 
 
 ### Timeline 

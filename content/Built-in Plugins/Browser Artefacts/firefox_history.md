@@ -1,5 +1,5 @@
 ---
- title: 'Browser History Lite'
+ title: 'Firefox History'
 ---
 
 
@@ -8,15 +8,7 @@
 
 ### Description 
 
-Extracts navigation records from a Firefox `places` sqlite database. It records each visited
-URL together with its title, visit timestamp, visit count, and the referring page (if any).
-Each row corresponds to a single page visit, allowing reconstruction of browsing activity over
-time.
-
-- URL and page title provide the content accessed.
-- Visit timestamp indicates when the page was opened.
-- Visit count shows frequency of access.
-- Referrer reveals navigation paths.
+Each row represents a Firefox page visit, with URL, title, visit time, visit count, referrer, and hidden state where available. Use it to reconstruct navigation and correlate browsing with downloads, credentials, or endpoint events. History can be incomplete because of deletion, private browsing, retention, synchronization, or profile selection.
 
 
 ### Timeline 

@@ -8,7 +8,7 @@
 
 ### Description 
 
-SRUM table that tracks how much network traffic each installed app consumes
+Each row is an SRUM network-usage interval associated with an application, user, interface, and profile, with bytes sent and received. Use it to identify applications with network activity and correlate volume changes with other events. It provides aggregate byte counts, not remote endpoints, protocols, payloads, or individual connections.
 
 
 ### Timeline 

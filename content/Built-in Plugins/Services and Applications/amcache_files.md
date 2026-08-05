@@ -1,18 +1,14 @@
 ---
- title: 'Reg Autoruns'
+ title: 'Amcache Files'
 ---
 
 
-{{< callout type="important" >}}Data Type: **reg_autoruns** \
-	Python Parser: **RegAutorunsUser**{{< /callout >}}
+{{< callout type="important" >}}Data Type: **amcache_file** \
+	Python Parser: **RegAmCacheFile**{{< /callout >}}
 
 ### Description 
 
-Extracts persistence‑related registry data from the USER hive (HKCU).
-- Enumerates well‑known keys that Windows and third‑party software use for
-  automatic execution (autoruns) in the current user hive.
-- Groups the results by a *persistence type* (e.g. “Startup Run”, “Shell Load and Run”)
-  and returns the values found under each key.
+Each row is a file inventory record from the Amcache hive, with path, normalized hash, size, program identifiers, version or publisher data, timestamps, and registry provenance. Use it to identify binaries and correlate software across files, programs, and hosts. Amcache presence is contextual inventory evidence, not standalone proof of execution, and schema semantics vary by Windows version.
 
 
 ### Timeline 
@@ -20,16 +16,41 @@ Extracts persistence‑related registry data from the USER hive (HKCU).
 | Timeline Field | Data Field |
 |---|---|
 |Related User    | `key_security.owner_sid`   |
-|Description    | `type`   |
+|Description    | `path`   |
+|Additional Description    | `sha1`   |
+|    | `size`   |
+|    | `program_id`   |
 |    | `key_path`   |
-|Additional Description    | `values`   |
 
 ### Fields 
 
 | Output Name | Data Type | Qualifier | Description |
 |---|---|---|---|
-| `type` | String |  | Logical name of the persistence mechanism (e.g., 'Startup Run') |
-| `values[]` | Array[Object] |  | Value set extracted from the registry key. |
+| `name` | String | FILE_NAME | filename |
+| `path` | String | FILE_PATH | file path |
+| `size` | Int | FILE_SIZE | size in bytes |
+| `program_id` | String | APP_ID | program ID, if it exists |
+| `file_id` | String |  | raw Amcache FileId or legacy value 101 |
+| `sha1` | String | FILE_SHA1 | normalized 40-hex SHA-1 hash of the file |
+| `product_name` | String | PRODUCT | Product name |
+| `company_name` | String | COMPANY | Company name |
+| `product_version` | String | PE_VERSION | Product version |
+| `version_language` | Int |  | Microsoft Language ID in decimal |
+| `short_name` | String |  | ShortName of the file as found in the MFT |
+| `original_filename` | String | FILE_NAME | Original FileName field of the PE header |
+| `file_version` | String | PE_VERSION | File version |
+| `image_size` | Int |  | 'SizeOfImage' field of the PE header |
+| `file_description` | String |  | file description |
+| `linker_version` | String | PE_VERSION | combination of the 'MajorLinkerVersion' and 'MinorLinkerVersion' fields of the PE header |
+| `link_date` | DateTime | DATE_COMPILATION | Compilation date |
+| `binary_type` | String |  | 32BIT or 64BIT |
+| `creation_date` | DateTime | DATE_CREATION |  |
+| `modification_date` | DateTime | DATE_MODIFICATION |  |
+| `long_path_hash` | String | FILE_PATH_SHA1 | SHA-1 of the complete lowercase file path in UTF-16 |
+| `unique_id` | String |  | identifies the file location if it is in a program installation directory |
+| `volume_guid` | String | VOLUME_GUID | identifier of the volume where the file is located |
+| `is_pe_file` | Bool |  |  |
+| `is_os_component` | Bool |  |  |
 | `key_path` | String | KEY_PATH | full registry key name |
 | `key_modif_time` | DateTime | DATE_MODIFICATION | last modification timestamp of the registry key |
 | `key_security` | Object |  |  |

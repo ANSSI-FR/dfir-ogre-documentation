@@ -8,7 +8,7 @@
 
 ### Description 
 
-Srum table for windows server 2022 that tracks physical drive information
+Each row is Windows Server SRUM SDP physical-disk telemetry with timestamp and disk-size value plus application and user identifiers where recorded. Use it to establish storage-resource context across observations. The mapping exposes aggregate size only and cannot identify partitions, files, or individual disk operations.
 
 
 ### Timeline 

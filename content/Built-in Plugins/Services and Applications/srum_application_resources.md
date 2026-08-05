@@ -8,8 +8,7 @@
 
 ### Description 
 
-Srum table that tracks ressource usage for every exe that’s executed on the system
-      whether it still exists on disk or not. If it executed, it should be logged.
+Each row is a Windows SRUM resource-usage interval for an application and user, with foreground or background CPU cycles, context switches, and read, write, or flush counts. Use it to identify resource-intensive or previously observed applications and correlate usage over time. Aggregated counters do not reveal individual operations, and absence does not prove non-execution.
 
 
 ### Timeline 

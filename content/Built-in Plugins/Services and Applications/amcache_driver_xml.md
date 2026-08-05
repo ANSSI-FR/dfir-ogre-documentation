@@ -8,7 +8,7 @@
 
 ### Description 
 
-List drivers from various xml report files
+Each row is a driver inventory entry extracted from an Amcache XML report, with hash, name, version, vendor, size, and compilation metadata. Use these attributes to identify unusual or vulnerable drivers and correlate binaries across hosts. Inventory presence does not establish that the driver loaded or executed.
 
 
 ### Timeline 

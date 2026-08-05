@@ -1,5 +1,5 @@
 ---
- title: 'Browser Download History'
+ title: 'Chrome Download History'
 ---
 
 
@@ -8,12 +8,7 @@
 
 ### Description 
 
-Parses the download history database of a Chrome profile (typically `*/Default/History`). It enables analysts to reconstruct what files a user obtained from the web, when the download started and finished, how much data was transferred, and whether the file was opened or flagged as dangerous.
-
-- URL of the downloaded resource.
-- Local path where Chrome saved the file.
-- Byte counts: received vs. total size.
-- Start/end timestamps, download state, danger type, interruption reason and whether the file was opened.
+Each row represents a Chrome download record, linking the source URL to the saved path, start and end times, byte counts, state, interruption or danger status, and opened flag. Use it to trace file acquisition and correlate downloads with filesystem or execution evidence. A record can describe an interrupted, removed, or otherwise incomplete download.
 
 
 ### Timeline 

@@ -1,17 +1,14 @@
 ---
- title: 'Network Config'
+ title: 'X509Cert Software'
 ---
 
 
-{{< callout type="important" >}}Data Type: **network_config** \
-	Python Parser: **RegNetworkConfig**{{< /callout >}}
+{{< callout type="important" >}}Data Type: **x509_cert** \
+	Python Parser: **RegSystemCertificates**{{< /callout >}}
 
 ### Description 
 
-Extracts network settings from the Windows `System` hive.
-
-- Shows static IP assignments when DHCP is disabled.
-- Provides DHCP‑derived addresses and DNS when enabled.
+Each row is a machine-wide X.509 certificate decoded from the SOFTWARE hive, with subject, issuer, validity, public-key algorithm, fingerprint, and registry provenance. Use it to inventory trust material and identify unexpected issuers, subjects, or expired certificates. Store presence does not prove the certificate was trusted for a specific purpose or used in an observed connection.
 
 
 ### Timeline 
@@ -19,23 +16,27 @@ Extracts network settings from the Windows `System` hive.
 | Timeline Field | Data Field |
 |---|---|
 |Related User    | `key_security.owner_sid`   |
-|Description    | `ip_address`   |
-|    | `dns_suffix`   |
-|    | `dhcp`   |
-|Additional Description    | `network_mask`   |
-|    | `gateway`   |
+|Description    | `subject`   |
+|Additional Description    | `issuer`   |
 
 ### Fields 
 
 | Output Name | Data Type | Qualifier | Description |
 |---|---|---|---|
-| `ip_address` | String | IP_ADDRESS | IP address assigned to the network interface |
-| `network_mask` | String |  | Subnet mask associated with the IP address |
-| `dhcp` | Bool |  |  |
-| `dhcp_server` | String |  | Address of the DHCP server that provided the configuration |
-| `dns_suffix` | String |  | DNS suffix (domain) applied to the interface |
-| `name_servers` | String |  | Comma‑separated list of DNS name‑server addresses |
-| `gateway` | String |  | Default gateway IP address for the interface |
+| `subject` | String |  | certificate subject distinguished name (RFC 4514 format) |
+| `issuer` | String |  | certificate issuer distinguished name (RFC 4514 format) |
+| `not_valid_before` | DateTime |  | certificate start‑of‑validity timestamp (not before) |
+| `not_valid_after` | DateTime |  | certificate end‑of‑validity timestamp (not after) |
+| `pub_key_algo` | String |  | public‑key algorithm name (e.g., rsaEncryption) |
+| `pub_key_algo_oid` | String |  | OID of the public‑key algorithm |
+| `fingerprint_sha256` | String |  | SHA‑256 fingerprint of the certificate (hex string) |
+| `version` | String |  | X.509 certificate version |
+| `serial_number` | String |  | certificate serial number (decimal string) |
+| `extensions[]` | Array[Object] |  |  |
+| `extensions[].name` | String |  | human‑readable name of the extension |
+| `extensions[].oid` | String |  | object identifier (OID) of the extension |
+| `extensions[].critical` | String |  | whether the extension is marked critical (true/false) |
+| `extensions[].value` | String |  | string representation of the extension value |
 | `key_path` | String | KEY_PATH | full registry key name |
 | `key_modif_time` | DateTime | DATE_MODIFICATION | last modification timestamp of the registry key |
 | `key_security` | Object |  |  |

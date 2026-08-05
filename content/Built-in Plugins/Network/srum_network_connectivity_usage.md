@@ -8,7 +8,7 @@
 
 ### Description 
 
-Srum table that tracks network connection time statistics per interface
+Each row is an SRUM network-connectivity interval associated with an application, user, interface, and layer-2 profile, with connection start time and duration. Use it to place application network availability on a timeline and correlate profiles or interfaces. It records connectivity duration, not remote endpoints, payloads, or proof of a specific communication.
 
 
 ### Timeline 

@@ -8,10 +8,7 @@
 
 ### Description 
 
-Extracts metadata about installed programs from the Windows `AmCache` hive.
-
-- Retrieves program identifiers, names, versions, and publishers.
-- Captures installation source, directory paths, and MSI product/package codes.
+Each row is a program inventory record from the Amcache hive, with program identity, name, version, publisher, install source or path, and MSI identifiers where available. Use it to correlate installed software with related file records and enterprise inventory. Presence does not by itself prove installation time, current installation, or execution.
 
 
 ### Timeline 

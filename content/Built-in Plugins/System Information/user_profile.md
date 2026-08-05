@@ -8,13 +8,7 @@
 
 ### Description 
 
-Extracts data about Windows user profiles from the `Software` hive.
-
-- Lists all local user profiles present on the system.
-- Identifies which accounts have administrative privileges.
-- Shows the filesystem location of each profile directory.
-- Detects hidden or disabled accounts.
-- Provides registry key modification times and ACL details.
+Each row describes a Windows user profile, with account name, SID, profile path, administrative or hidden status, profile state, key time, and registry permissions. Use it to map artifacts to users and identify unusual, orphaned, or concealed profiles. Profile presence does not prove an active session, while absence from this snapshot does not exclude a removed profile.
 
 
 ### Timeline 

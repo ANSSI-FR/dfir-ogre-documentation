@@ -1,5 +1,5 @@
 ---
- title: 'Amcache Program Xml XML'
+ title: 'Amcache Program Wer'
 ---
 
 
@@ -8,12 +8,18 @@
 
 ### Description 
 
-Parse installed programs from `AEINV_PREVIOUS` reports
+Each row is a program inventory entry from an AEINV Windows Error Reporting XML report, with program identity, version, publisher, source, paths, and related executable hashes where available. Use it to correlate software and binaries seen by the reporting process. Presence does not by itself prove execution.
 
 
 ### Timeline 
 
-{{< callout type="warning" >}}This plugin does not contains timestamped data and cannot be used to create a timeline{{< /callout >}}
+| Timeline Field | Data Field |
+|---|---|
+|Description    | `name`   |
+|Additional Description    | `version`   |
+|    | `publisher`   |
+|    | `source`   |
+
 ### Fields 
 
 | Output Name | Data Type | Qualifier | Description |

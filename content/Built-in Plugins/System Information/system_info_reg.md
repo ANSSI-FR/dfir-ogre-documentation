@@ -1,5 +1,5 @@
 ---
- title: 'Reg Systeminfo'
+ title: 'System Info Reg'
 ---
 
 
@@ -8,7 +8,7 @@
 
 ### Description 
 
-Extracts various system information from the SYSTEM and SOFTWARE hives
+Each row provides host and operating-system context reconstructed from SYSTEM and SOFTWARE hives, including hostname, Windows version and build, install or shutdown times, domain role, architecture, timezone, and active control-set evidence. Use it to scope timelines and interpret version-dependent artifacts. Values reflect the captured Registry state and some timestamps require corroboration.
 
 
 ### Timeline 

@@ -1,5 +1,5 @@
 ---
- title: 'Listdlls'
+ title: 'List Dlls'
 ---
 
 
@@ -8,12 +8,18 @@
 
 ### Description 
 
-Parse output from Sysinternals **ListDLL** tool that lists loaded DLLs for running processes on Windows.
+Each row is a module listed by Sysinternals ListDLLs for a process observed at collection time, with process name, identifier, command line, module path, base address, and size. Use it to detect unexpected DLL loads and correlate modules with processes and hashes from other artifacts. It is a transient snapshot; absent or terminated processes are not represented and process identifiers can be reused.
 
 
 ### Timeline 
 
-{{< callout type="warning" >}}This plugin does not contains timestamped data and cannot be used to create a timeline{{< /callout >}}
+| Timeline Field | Data Field |
+|---|---|
+|Description    | `path`   |
+|Additional Description    | `process_name`   |
+|    | `pid`   |
+|    | `base_addr`   |
+
 ### Fields 
 
 | Output Name | Data Type | Qualifier | Description |

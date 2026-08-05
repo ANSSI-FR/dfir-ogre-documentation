@@ -8,14 +8,7 @@
 
 ### Description 
 
-Extracts metadata from Firefox browser add‑ons (version 26+). It parses each extension’s
-manifest to retrieve identifiers, version information, installation path and declared
-permissions.
-
-- Reveals which extensions are present on a system.
-- Provides version and source details for each add‑on.
-- Lists required, optional and user‑granted permissions.
-- Includes installation and update timestamps.
+Each row describes a Firefox add-on, including identity, version, install path, source, declared permissions or origins, and install or update times. Use it to assess extension provenance and capability or hunt for risky permissions and unexpected installation sources. Declared capability is not observed behavior, and the snapshot can miss removed add-ons.
 
 
 ### Timeline 

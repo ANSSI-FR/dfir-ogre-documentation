@@ -1,18 +1,14 @@
 ---
- title: 'Clsid'
+ title: 'Shim Database'
 ---
 
 
-{{< callout type="important" >}}Data Type: **clsid** \
-	Python Parser: **RegClsIdIUser**{{< /callout >}}
+{{< callout type="important" >}}Data Type: **shim_db** \
+	Python Parser: **RegShimDb**{{< /callout >}}
 
 ### Description 
 
-Enumerates every user‑specific COM class identifier (CLSID) stored in the `UsrClass` hive.
-
-- Provides a complete list of per‑user COM registrations.
-- Captures the executable that implements the COM object.
-- Records any alternate CLSID mapping via “TreatAs”.
+Each row identifies an installed Windows application-compatibility shim database, with database GUID, file path, install time, and registry provenance. Use it to find custom compatibility layers that may alter application behavior or provide persistence and correlate the database file. Installation can be legitimate and does not prove the shim was applied to a specific process.
 
 
 ### Timeline 
@@ -20,18 +16,16 @@ Enumerates every user‑specific COM class identifier (CLSID) stored in the `Usr
 | Timeline Field | Data Field |
 |---|---|
 |Related User    | `key_security.owner_sid`   |
-|Description    | `description`   |
-|Additional Description    | `executable`   |
-|    | `treat_as`   |
+|Description    | `target`   |
+|Additional Description    | `file_path`   |
 
 ### Fields 
 
 | Output Name | Data Type | Qualifier | Description |
 |---|---|---|---|
-| `guid` | String | APP_CLSID | lower‑cased CLSID identifying the COM class |
-| `description` | String |  | human‑readable description of the COM class |
-| `executable` | String | FILE_PATH | path(s) to the binary(ies) implementing the CLSID (e.g., InprocServer32, LocalServer32) |
-| `treat_as` | String | APP_CLSID | CLS ID that this entry redirects to via TreatAs |
+| `file_path` | String | FILE_PATH | filesystem path entry in the shim database file |
+| `target[]` | Array[String] |  | application compatibility target path associated with the shim database |
+| `install_time` | DateTime | DATE_INSTALLATION | timestamp when the entry was installed |
 | `key_path` | String | KEY_PATH | full registry key name |
 | `key_modif_time` | DateTime | DATE_MODIFICATION | last modification timestamp of the registry key |
 | `key_security` | Object |  |  |

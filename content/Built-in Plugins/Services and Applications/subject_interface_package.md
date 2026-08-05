@@ -8,12 +8,7 @@
 
 ### Description 
 
-Extracts Subject Interface Package (SIP) records from the Windows `Software` hive. It reads each SIP’s GUID, human‑readable name, associated DLL path, and entry‑point function name, together with key metadata.
-
-- Provides the SIP GUID, uniquely identifying the package.
-- Records the DLL location that implements the SIP.
-- Captures the function name used as the package's entry point.
-- Includes the registry key owner SID for user association.
+Each row is a Subject Interface Package registration used by Windows trust services, with GUID, descriptive name, implementing DLL, entry-point function, and registry provenance. Use it to hunt trust-provider tampering by comparing DLL paths and functions with a known-good baseline. Registration alone does not prove the package loaded or that its output was trustworthy.
 
 
 ### Timeline 

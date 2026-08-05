@@ -8,12 +8,7 @@
 
 ### Description 
 
-Extracts Windows 7 and later Explorer search history from WordWheelQuery in
-the `NTUSER.DAT` hive.
-
-- Decodes UTF-16LE registry values.
-- Uses MRUListEx to emit most-recent-first search order.
-- Associates the key LastWrite time only with the newest search.
+Each row is a Windows Explorer search query from WordWheelQuery, with decoded query text, MRU order, value index, user and registry provenance, and key LastWrite time. Use it to reconstruct search intent and pivot on filenames or terms. Only the newest query is associated with the key time; remaining entries have relative order but no individual timestamp.
 
 
 ### Timeline 

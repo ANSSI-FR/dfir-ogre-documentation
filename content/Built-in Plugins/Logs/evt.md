@@ -8,7 +8,7 @@
 
 ### Description 
 
-Parse Windows EventLog (EVT) files and emit one record per event.
+Each row represents a record parsed from a legacy Windows EVT log, with provider, event identifier, severity, record number, host, user, timestamps, message data, and recovery state. Use provider and event semantics to reconstruct system or security activity. Logs may be cleared, overwritten, filtered, or partially recovered, and event meaning depends on the provider schema.
 
 
 ### Timeline 

@@ -8,13 +8,7 @@
 
 ### Description 
 
-Extracts browsing history records from Internet Explorer 10+ WebCache databases (WebCacheV01.dat).
-The plugin queries the Containers and Container_X tables to retrieve URL visits with metadata.
-
-- Url provides the visited web address.
-- Filename and FileExtension indicate cached file details.
-- Timestamps (SyncTime, CreationTime, ExpiryTime, ModifiedTime, AccessedTime) show activity timeline.
-- AccessCount and SyncCount reveal frequency and synchronization patterns.
+Each row is an Internet Explorer or legacy WebCache container record, with URL, cached filename, request or response properties, access counts, and creation, access, modification, synchronization, or expiry times. Use it to reconstruct browsing and cached-resource activity. Cache records may arise from redirects or background content, and timestamp meaning varies by container.
 
 
 ### Timeline 

@@ -8,9 +8,7 @@
 
 ### Description 
 
-Extracts entries from the per‑user MUI cache stored in the `Registry` hive.
-
-- Provides executable name and its human‑readable description.
+Each row is a per-user MUI cache association between an executable path and its display description, with registry path, owner, and key LastWrite time. Use it to discover binaries exposed to the shell and attribute cached metadata to a profile. Cache presence is not standalone proof that the executable ran, and LastWrite is key-level.
 
 
 ### Timeline 

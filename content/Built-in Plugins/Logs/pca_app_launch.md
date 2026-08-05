@@ -8,12 +8,7 @@
 
 ### Description 
 
-Parses PCA application launch data.
-
-- Captures the exact path of every program launched via PCA.
-- Records the precise launch time with sub‑second resolution.
-- Stores the data in a simple CSV‑compatible format for easy correlation with other forensic artefacts.
-- Helps identify usage of older or compatibility‑mode applications.
+Each row is an application launch recorded by the Windows Program Compatibility Assistant, with executable path and high-resolution launch time. Use it as execution evidence and correlate the path with Prefetch, Amcache, UserAssist, or filesystem records. Coverage and retention vary by Windows version, so absence does not exclude execution.
 
 
 ### Timeline 

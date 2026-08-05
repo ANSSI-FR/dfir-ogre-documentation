@@ -1,5 +1,5 @@
 ---
- title: 'Processes Orc'
+ title: 'Processes Orc V1'
 ---
 
 
@@ -8,12 +8,7 @@
 
 ### Description 
 
-Extracts Windows processes data from an ORC‑generated CSV file. It captures basic process attributes such as name, executable path, command line, identifiers and timestamps, exposing the execution context recorded at collection time.
-
-- Provides process names and their originating executable locations.
-- Records command‑line arguments, enabling reconstruction of launch parameters.
-- Includes creation and termination timestamps for temporal correlation.
-- Supplies process IDs, parent IDs and session information for relationship mapping.
+Each row describes a process observed in an ORC process CSV, with name, executable path, command line, process and parent identifiers, session, and creation or termination times. Use it to reconstruct process ancestry and correlate execution context with files, users, and network evidence. It is a collection-time view; absence does not exclude earlier execution and identifiers can be reused.
 
 
 ### Timeline 

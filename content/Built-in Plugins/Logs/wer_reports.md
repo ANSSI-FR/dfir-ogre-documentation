@@ -1,5 +1,5 @@
 ---
- title: 'Wer'
+ title: 'Wer Reports'
 ---
 
 
@@ -8,8 +8,7 @@
 
 ### Description 
 
-ParsesWindows Error Reporting files (WER), extracting metadata about crashes,
-      hangs, and other failure events reported by the operating system.
+Each row represents a Windows Error Reporting crash, hang, or failure report, with application or module identity, report and event identifiers, timestamps, status, signatures, bucket data, and OS context where available. Use it to correlate failing executables with process, file, or timeline evidence. A report shows OS error handling, not the root cause or maliciousness, and submission status does not necessarily prove server receipt.
 
 
 ### Timeline 

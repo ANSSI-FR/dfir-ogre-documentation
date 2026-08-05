@@ -2,14 +2,14 @@
  title: 'Windows Artefacts'
 ---
 {{< cards >}}
- {{< card link="clsid" title="Clsid" subtitle="Enumerates every user‑specific COM class identifier (CLSID) stored in the `UsrClass` hive" tag="Registry" tagColor="purple">}}
- {{< card link="clsid_software" title="Clsid Software" subtitle="Extracts every CLSID registration stored in the machine‑wide `Software` hive" tag="Registry" tagColor="purple">}}
- {{< card link="hive" title="Hive" subtitle="Parse Windows Registry hive values" tag="HiveKey" tagColor="gray">}}
- {{< card link="lnk" title="Lnk" subtitle="Extracts every pieces of metadata that is stored in a Windows Shell Link file" tag="LnkBatched" tagColor="amber">}}
- {{< card link="objinfo" title="Objinfo" subtitle="Parses files produced by the GetObjInfo utility, extracting Windows object information from the object manager namespace" tag="Csv" tagColor="yellow">}}
- {{< card link="srum_energy_usage" title="Srum Energy Usage" subtitle="Srum table that tracks stores the per‑process estimates of how much electrical       energy Windows thinks each component has consumed over time" tag="Srum" tagColor="green">}}
- {{< card link="srum_energy_usage_long_term" title="Srum Energy Usage Long Term" subtitle="Srum table that tracks long term, per‑process estimates of how much electrical       energy Windows thinks each component has consumed over time" tag="Srum" tagColor="green">}}
- {{< card link="srum_tagged_energy" title="Srum Tagged Energy" subtitle="Parse data from Srum `tagged_energy` table       ```{B6D82AF1-F780-4E17-8077-6CB9AD8A6FC4}```       ()" tag="Srum" tagColor="green">}}
- {{< card link="srum_vfuprov" title="Srum Vfuprov" subtitle="Parse data from Srum `vfuprov` table ```{7ACBBAA3-D029-4BE4-9A7A-0885927F1D8F}```" tag="Srum" tagColor="green">}}
- {{< card link="srum_wpn_provider" title="Srum Wpn Provider" subtitle="Srum table that tracks telemetry that Windows collects about the Windows Push       Notification (WPN) service – i" tag="Srum" tagColor="green">}}
+ {{< card link="clsid_software" title="CLSID Software" subtitle="Shows machine-wide COM registrations with CLSIDs, descriptions, executables, redirects, and registry metadata." tag="Registry" tagColor="purple">}}
+ {{< card link="clsid_users" title="CLSID Users" subtitle="Shows per-user COM registrations with CLSIDs, descriptions, executables, redirects, and registry metadata." tag="Registry" tagColor="purple">}}
+ {{< card link="hive" title="Hive" subtitle="Shows raw Windows Registry keys and values with modification times, data types, owners, and access controls." tag="HiveKey" tagColor="gray">}}
+ {{< card link="lnk" title="Lnk" subtitle="Shows Windows shortcut and Jump List targets, arguments, timestamps, volume data, link flags, and extra metadata." tag="LnkBatched" tagColor="amber">}}
+ {{< card link="object_info" title="Object Info" subtitle="Shows Windows object-manager entries with types, namespace paths, symbolic-link targets, and creation times." tag="Csv" tagColor="yellow">}}
+ {{< card link="srum_energy_usage" title="Srum Energy Usage" subtitle="Shows SRUM battery energy events with state transitions, capacity, charge level, cycle count, and timestamps." tag="Srum" tagColor="green">}}
+ {{< card link="srum_energy_usage_long_term" title="Srum Energy Usage Long Term" subtitle="Shows long-term SRUM energy estimates by application, user, power source, activity state, and capacity." tag="Srum" tagColor="green">}}
+ {{< card link="srum_tagged_energy" title="Srum Tagged Energy" subtitle="Shows SRUM tagged-energy records with application, user, and timestamp identifiers for correlation." tag="Srum" tagColor="green">}}
+ {{< card link="srum_vfuprov" title="Srum Vfuprov" subtitle="Shows SRUM VFU provider records with application, user, and timestamp identifiers for correlation." tag="Srum" tagColor="green">}}
+ {{< card link="srum_wpn_provider" title="Srum Wpn Provider" subtitle="Shows SRUM push-notification activity with application, user, notification type, payload size, and network type." tag="Srum" tagColor="green">}}
 {{< /cards >}}

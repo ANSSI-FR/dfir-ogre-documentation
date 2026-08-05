@@ -8,8 +8,7 @@
 
 ### Description 
 
-Parse the `GetThis` files produced by Orc and retrieve information about the
-      collected files.
+Each row describes a file selected by ORC GetThis, with source path, volume and snapshot, NTFS identifiers and timestamps, size, hashes, match reason, and YARA result where available. Use it to connect collected content to its original filesystem context. Selection reflects collection rules rather than a complete inventory, and collection time is distinct from file timestamps.
 
 
 ### Timeline 

@@ -8,7 +8,7 @@
 
 ### Description 
 
-Parse data from Srum `vfuprov` table ```{7ACBBAA3-D029-4BE4-9A7A-0885927F1D8F}```
+Each row preserves an SRUM VFU provider table record with timestamp, application identifier, user identifier, and database identity fields. Use these keys to correlate otherwise opaque provider records with other SRUM tables. Because no provider-specific payload is decoded, interpretation should remain limited to presence and temporal association.
 
 
 ### Timeline 

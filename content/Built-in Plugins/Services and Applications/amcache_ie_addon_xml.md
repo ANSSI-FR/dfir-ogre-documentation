@@ -8,12 +8,18 @@
 
 ### Description 
 
-List internet explorer addons from different xml report files
+Each row identifies an Internet Explorer add-on found in an Amcache XML report, including its identifier, name, type, and publisher. Use it to inventory browser integrations and pivot on suspicious publishers or identifiers. Report presence does not show that the add-on was enabled or used.
 
 
 ### Timeline 
 
-{{< callout type="warning" >}}This plugin does not contains timestamped data and cannot be used to create a timeline{{< /callout >}}
+| Timeline Field | Data Field |
+|---|---|
+|Description    | `name`   |
+|Additional Description    | `type`   |
+|    | `publisher`   |
+|    | `id`   |
+
 ### Fields 
 
 | Output Name | Data Type | Qualifier | Description |

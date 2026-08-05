@@ -8,12 +8,7 @@
 
 ### Description 
 
-Extracts all service definitions from a Windows `System` hive, in the related control‑set keys.
-
-- Provides service identifiers and display names.
-- Shows how the service is configured (type, start type, image path).
-- Reveals the account (user or system) that owns / runs the service.
-- Supplies raw values useful for correlation with other artefacts.
+Each row is a Windows service or driver definition from a SYSTEM-hive control set, with service name, start mode, image path, account, dependencies, service DLL, failure actions, and registry provenance. Use it to identify persistence or privilege boundaries and correlate configured binaries. Configuration does not prove the service ran, and the relevant control set must be established.
 
 
 ### Timeline 

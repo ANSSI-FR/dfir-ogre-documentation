@@ -1,18 +1,14 @@
 ---
- title: 'Reg Autoruns System'
+ title: 'Network Configuration'
 ---
 
 
-{{< callout type="important" >}}Data Type: **reg_autoruns** \
-	Python Parser: **RegAutorunsSystem**{{< /callout >}}
+{{< callout type="important" >}}Data Type: **network_config** \
+	Python Parser: **RegNetworkConfig**{{< /callout >}}
 
 ### Description 
 
-Extracts persistence‑related registry data from the SYSTEM hive.
-- Enumerates well‑known keys that are used by Windows and third‑party software
-  to achieve automatic execution (autoruns).
-- Groups the data by a *persistence type* (e.g., “Session Manager *Execute”,
-  “Network Providers”, etc.) and returns the values found under each key.
+Each row describes a Windows network-interface configuration from the SYSTEM hive, including interface identity, IP address, mask, gateway, DHCP and DNS values, plus registry provenance. Use it to establish host network context and correlate addresses with logs or captures. Settings can be historical, stale, or lease-derived and do not represent network traffic.
 
 
 ### Timeline 
@@ -20,16 +16,23 @@ Extracts persistence‑related registry data from the SYSTEM hive.
 | Timeline Field | Data Field |
 |---|---|
 |Related User    | `key_security.owner_sid`   |
-|Description    | `type`   |
-|    | `key_path`   |
-|Additional Description    | `values`   |
+|Description    | `ip_address`   |
+|    | `dns_suffix`   |
+|    | `dhcp`   |
+|Additional Description    | `network_mask`   |
+|    | `gateway`   |
 
 ### Fields 
 
 | Output Name | Data Type | Qualifier | Description |
 |---|---|---|---|
-| `type` | String |  | Logical name of the persistence mechanism (e.g., 'Session Manager *Execute') |
-| `values[]` | Array[Object] |  | value set extracted from the registry key. |
+| `ip_address` | String | IP_ADDRESS | IP address assigned to the network interface |
+| `network_mask` | String |  | Subnet mask associated with the IP address |
+| `dhcp` | Bool |  |  |
+| `dhcp_server` | String |  | Address of the DHCP server that provided the configuration |
+| `dns_suffix` | String |  | DNS suffix (domain) applied to the interface |
+| `name_servers` | String |  | Comma‑separated list of DNS name‑server addresses |
+| `gateway` | String |  | Default gateway IP address for the interface |
 | `key_path` | String | KEY_PATH | full registry key name |
 | `key_modif_time` | DateTime | DATE_MODIFICATION | last modification timestamp of the registry key |
 | `key_security` | Object |  |  |

@@ -1,5 +1,5 @@
 ---
- title: 'Fastfind Reg'
+ title: 'Fastfind Registry'
 ---
 
 
@@ -8,7 +8,7 @@
 
 ### Description 
 
-Parse the registry results of the fastfind tool
+Each row is a Registry match returned by FastFind, with hive, key and value paths, value data, key timestamp, and volume or snapshot context. Use it to locate configuration, persistence, or indicator hits across hives and snapshots. Results reflect the configured search, and a key LastWrite time is not a per-value modification time.
 
 
 ### Timeline 

@@ -8,7 +8,7 @@
 
 ### Description 
 
-Extracts metadata from Windows recycle‑bin files.
+Each row represents Recycle Bin metadata for a deleted item, with original path, item size, deletion time, and format header. Use it to place a file or directory in a deletion timeline and correlate its former location with filesystem records. It does not identify the actor or prove permanent deletion, and metadata may be absent after cleanup or bypassing the Recycle Bin.
 
 
 ### Timeline 

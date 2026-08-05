@@ -8,11 +8,7 @@
 
 ### Description 
 
-Extracts Windows XP Search Assistant entries from the `NTUSER.DAT` hive.
-
-- Retrieves search queries from category subkeys such as 5603 and 5604.
-- Emits entries in deterministic most-recent-first numeric order.
-- Associates the category key LastWrite time only with index 000.
+Each row is a Windows XP Search Assistant query recovered from a per-user hive, with search category, query text, MRU order, registry provenance, and key LastWrite time. Use it to reconstruct user search intent and pivot on filenames, hosts, or terms. Only the newest indexed entry is associated with the category key time; other queries have no individual timestamp.
 
 
 ### Timeline 

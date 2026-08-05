@@ -8,9 +8,7 @@
 
 ### Description 
 
-Extracts the Internet Explorer anti‑phishing registry hive under `NTUser` hive.
-
-- Extracts the `UserFile` value and the key’s security descriptor, exposing the file used for IE’s anti‑phishing feature and the owning user.
+Each row exposes the Internet Explorer anti-phishing UserFile registry setting for a user, with its configured value, key path, LastWrite time, owner, and access controls. Use it to locate related browser-protection data and assess unexpected configuration changes. The setting alone does not describe the file contents or prove that Internet Explorer consumed it.
 
 
 ### Timeline 

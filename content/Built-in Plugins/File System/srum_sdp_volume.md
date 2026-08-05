@@ -8,7 +8,7 @@
 
 ### Description 
 
-Srum table for windows server 2022 that tracks storage volumes information
+Each row is Windows Server SRUM SDP volume telemetry with timestamp and total or used storage values plus application and user identifiers where recorded. Use it to track aggregate capacity changes or correlate resource context. It is summary telemetry, not evidence of which files caused the change.
 
 
 ### Timeline 

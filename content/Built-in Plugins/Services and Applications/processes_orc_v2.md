@@ -1,5 +1,5 @@
 ---
- title: 'Processes Orc Csv'
+ title: 'Processes Orc V2'
 ---
 
 
@@ -8,13 +8,7 @@
 
 ### Description 
 
-Parses CSV files produced by ORC that enumerate running processes. It extracts each process’s metadata, such as name, executable path, timestamps, identifiers, and resource usage.
-
-- Process name, command‑line and executable location.
-- Creation (`creation`) and termination (`termination`) timestamps.
-- Parent/child relationship via `parent_id` and `process_id`.
-- Resource metrics: memory size, CPU times, priority, session.
-- Execution context: user‑mode/kernel‑mode time, responding state, privileged flag.
+Each row describes a process observed in an enriched ORC process CSV, with identity, executable and command line, parentage, timing, version, window, resource, and response metadata. Use it to reconstruct process trees and flag anomalous paths or behavior. It remains a snapshot; absence does not exclude earlier execution and identifiers can be reused.
 
 
 ### Timeline 

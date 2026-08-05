@@ -1,5 +1,5 @@
 ---
- title: 'Amcache Program Xml'
+ title: 'Amcache Program Report'
 ---
 
 
@@ -8,12 +8,18 @@
 
 ### Description 
 
-Parse installed programs from AEINV WER xml reports
+Each row is a program inventory entry from a FullCompatReport, with program identity, version, publisher, source, paths, and related executable hashes where available. Use it to correlate installed software and binaries at report time. Inventory presence does not by itself prove installation time or execution.
 
 
 ### Timeline 
 
-{{< callout type="warning" >}}This plugin does not contains timestamped data and cannot be used to create a timeline{{< /callout >}}
+| Timeline Field | Data Field |
+|---|---|
+|Description    | `name`   |
+|Additional Description    | `version`   |
+|    | `publisher`   |
+|    | `source`   |
+
 ### Fields 
 
 | Output Name | Data Type | Qualifier | Description |

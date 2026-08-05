@@ -1,18 +1,14 @@
 ---
- title: 'Reg Autoruns Software'
+ title: 'X509 Certificates Users'
 ---
 
 
-{{< callout type="important" >}}Data Type: **reg_autoruns** \
-	Python Parser: **RegAutorunsSoftware**{{< /callout >}}
+{{< callout type="important" >}}Data Type: **x509_cert** \
+	Python Parser: **RegUserCertificates**{{< /callout >}}
 
 ### Description 
 
-Extracts persistence‑related registry data from the SOFTWARE hive.
-- Enumerates well‑known keys that Windows and third‑party software use for
-  automatic execution (autoruns).
-- Groups the results by a *persistence type* (e.g. “AppInit DLLs”, “Startup Run”)
-  and returns the values found under each key.
+Each row is a per-user X.509 certificate decoded from an NTUSER hive, with subject, issuer, validity, public-key algorithm, fingerprint, and registry provenance. Use it to attribute trust material to a profile and identify unexpected issuers or subjects. Store presence does not prove the certificate was trusted for a specific purpose or used in an observed connection.
 
 
 ### Timeline 
@@ -20,16 +16,27 @@ Extracts persistence‑related registry data from the SOFTWARE hive.
 | Timeline Field | Data Field |
 |---|---|
 |Related User    | `key_security.owner_sid`   |
-|Description    | `type`   |
-|    | `key_path`   |
-|Additional Description    | `values`   |
+|Description    | `subject`   |
+|Additional Description    | `issuer`   |
 
 ### Fields 
 
 | Output Name | Data Type | Qualifier | Description |
 |---|---|---|---|
-| `type` | String |  | Logical name of the persistence mechanism (e.g., 'AppInit DLLs') |
-| `values[]` | Array[Object] |  | Value set extracted from the registry key. |
+| `subject` | String |  | certificate subject distinguished name (RFC 4514 format) |
+| `issuer` | String |  | certificate issuer distinguished name (RFC 4514 format) |
+| `not_valid_before` | DateTime |  | certificate start‑of‑validity timestamp (not before) |
+| `not_valid_after` | DateTime |  | certificate end‑of‑validity timestamp (not after) |
+| `pub_key_algo` | String |  | public‑key algorithm name (e.g., rsaEncryption) |
+| `pub_key_algo_oid` | String |  | OID of the public‑key algorithm |
+| `fingerprint_sha256` | String |  | SHA‑256 fingerprint of the certificate (hex string) |
+| `version` | String |  | X.509 certificate version |
+| `serial_number` | String |  | certificate serial number (decimal string) |
+| `extensions[]` | Array[Object] |  |  |
+| `extensions[].name` | String |  | human‑readable name of the extension |
+| `extensions[].oid` | String |  | object identifier (OID) of the extension |
+| `extensions[].critical` | String |  | whether the extension is marked critical (true/false) |
+| `extensions[].value` | String |  | string representation of the extension value |
 | `key_path` | String | KEY_PATH | full registry key name |
 | `key_modif_time` | DateTime | DATE_MODIFICATION | last modification timestamp of the registry key |
 | `key_security` | Object |  |  |

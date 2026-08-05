@@ -1,5 +1,5 @@
 ---
- title: 'Clsid Software'
+ title: 'CLSID Software'
 ---
 
 
@@ -8,11 +8,7 @@
 
 ### Description 
 
-Extracts every CLSID registration stored in the machine‑wide `Software` hive.
-
-- Reveals which COM objects are registered system‑wide.
-- Shows the executable(s) implementing each CLSID, useful for locating potentially malicious components.
-- Lists “TreatAs” links that redirect one CLSID to another.
+Each row is a machine-wide COM class registration, with CLSID, description, implementing executable or DLL, TreatAs redirection, and registry provenance. Use it to hunt COM hijacking or persistence by comparing handlers and redirects with expected baselines. Registration alone does not prove that the COM object was instantiated or its code loaded.
 
 
 ### Timeline 

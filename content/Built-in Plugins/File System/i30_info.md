@@ -1,5 +1,5 @@
 ---
- title: 'I30Info'
+ title: 'I30 info'
 ---
 
 
@@ -8,7 +8,7 @@
 
 ### Description 
 
-Extract NTFS's $i30 informations from an ORC‑generated CSV file.
+Each row represents a current or carved NTFS directory-index entry, with name, reconstructed path, file and parent record identifiers, timestamps, size, attributes, volume, and snapshot. Use it to recover directory membership and possible deleted-name remnants. Carved records and embedded timestamps require corroboration, and a directory entry alone does not prove user interaction.
 
 
 ### Timeline 

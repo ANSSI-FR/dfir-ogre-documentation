@@ -8,7 +8,7 @@
 
 ### Description 
 
-Srum table for windows server 2022 that tracks network activity
+Each row is Windows Server SRUM SDP network telemetry with timestamp and inbound, outbound, and total byte counters plus application and user identifiers where recorded. Use it to identify changes in aggregate network use. The counters do not expose endpoints, protocols, payloads, or individual connections.
 
 
 ### Timeline 

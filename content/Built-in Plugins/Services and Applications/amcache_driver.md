@@ -8,10 +8,7 @@
 
 ### Description 
 
-Extracts driver metadata stored in the `AmCache` hive.
-
-- Retrieves driver attributes (name, version, product, company, etc.).
-- Captures file‑system information (path, size, raw Amcache driver ID, normalized SHA‑1, compilation date).
+Each row is a driver inventory record from the Amcache hive, with driver name and path, identifier or hash, version, vendor, size, and compilation metadata. Use it to identify rare or vulnerable drivers and correlate binaries across hosts. Amcache inventory presence does not establish that the driver loaded or executed, and fields vary by Windows version.
 
 
 ### Timeline 

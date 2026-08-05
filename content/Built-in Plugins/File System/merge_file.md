@@ -8,8 +8,7 @@
 
 ### Description 
 
-Reads a text file and concatenates every line into a single output line. It is a simple
-pre‑processing step that normalises multi‑line artefacts for downstream analysis.
+Each row is the complete text of one multiline input artifact after its lines are concatenated for downstream parsing or language-model analysis. It preserves content but adds no independent event semantics, timestamps, or provenance beyond the source file. Interpret any claims using the originating artifact and collection context.
 
 
 ### Timeline 

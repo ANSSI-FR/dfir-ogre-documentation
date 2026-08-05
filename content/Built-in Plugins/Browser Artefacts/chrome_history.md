@@ -1,5 +1,5 @@
 ---
- title: 'Browser History'
+ title: 'Chrome History'
 ---
 
 
@@ -8,13 +8,7 @@
 
 ### Description 
 
-Parses the browsing hisory database of a Chrome profile (typically `*/Default/History`). It
-extracts each recorded URL, its page title, visit timestamps, the number of times the URL was
-visited, and the referer URL if available.
-
-- Shows which web resources a user accessed.
-- Provides visit frequency, helping gauge the relevance of each site.
-- Captures the referer, offering context about navigation paths.
+Each row represents a Chrome visit, with URL, page title, visit time, visit count, referrer, and hidden state where available. Use it to reconstruct navigation and correlate web activity with downloads, authentication, or endpoint events. Browser history can be incomplete because of deletion, private browsing, retention, or profile selection.
 
 
 ### Timeline 

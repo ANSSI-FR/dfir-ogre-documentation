@@ -1,17 +1,14 @@
 ---
- title: 'Shim Db'
+ title: 'Autoruns Reg System'
 ---
 
 
-{{< callout type="important" >}}Data Type: **shim_db** \
-	Python Parser: **RegShimDb**{{< /callout >}}
+{{< callout type="important" >}}Data Type: **reg_autoruns** \
+	Python Parser: **RegAutorunsSystem**{{< /callout >}}
 
 ### Description 
 
-Extracts information about the Windows Application Compatibility Shim database stored in the `Software` hive. .
-
-- Lists each shim database GUID with the registry keys that reference it.
-- Provides the installation timestamp and the physical file path of the shim database.
+Each row is a SYSTEM-hive auto-start value found in a known persistence location, with persistence type, control-set key and value, command data, LastWrite time, owner, and permissions. Use it to identify boot or service-related persistence and correlate commands with binaries. Configuration does not prove execution, and the active control set must be established for incident-time interpretation.
 
 
 ### Timeline 
@@ -19,16 +16,16 @@ Extracts information about the Windows Application Compatibility Shim database s
 | Timeline Field | Data Field |
 |---|---|
 |Related User    | `key_security.owner_sid`   |
-|Description    | `target`   |
-|Additional Description    | `file_path`   |
+|Description    | `type`   |
+|    | `key_path`   |
+|Additional Description    | `values`   |
 
 ### Fields 
 
 | Output Name | Data Type | Qualifier | Description |
 |---|---|---|---|
-| `file_path` | String | FILE_PATH | filesystem path entry in the shim database file |
-| `target[]` | Array[String] |  | application compatibility target path associated with the shim database |
-| `install_time` | DateTime | DATE_INSTALLATION | timestamp when the entry was installed |
+| `type` | String |  | Logical name of the persistence mechanism (e.g., 'Session Manager *Execute') |
+| `values[]` | Array[Object] |  | value set extracted from the registry key. |
 | `key_path` | String | KEY_PATH | full registry key name |
 | `key_modif_time` | DateTime | DATE_MODIFICATION | last modification timestamp of the registry key |
 | `key_security` | Object |  |  |

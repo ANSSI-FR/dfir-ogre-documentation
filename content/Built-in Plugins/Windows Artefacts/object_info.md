@@ -1,5 +1,5 @@
 ---
- title: 'Objinfo'
+ title: 'Object Info'
 ---
 
 
@@ -8,12 +8,7 @@
 
 ### Description 
 
-Parses files produced by the GetObjInfo utility, extracting Windows object information from the object manager namespace.
-
-- Object type indicates whether the entry is a directory, mutex, symbolic link, etc.
-- Object name and path uniquely identify each object in the namespace.
-- Link target shows where a symbolic link points to when present.
-- Creation time records when a link was established.
+Each row represents a Windows object-manager namespace entry captured by GetObjInfo, with object type, name, namespace path, symbolic-link target, and link creation time where available. Use it to find suspicious mutexes, devices, or redirections and correlate named objects with processes. The namespace is transient, so the output reflects collection-time state rather than historical activity.
 
 
 ### Timeline 

@@ -1,16 +1,14 @@
 ---
- title: 'X509 Cert'
+ title: 'CLSID Users'
 ---
 
 
-{{< callout type="important" >}}Data Type: **x509_cert** \
-	Python Parser: **RegSystemCertificates**{{< /callout >}}
+{{< callout type="important" >}}Data Type: **clsid** \
+	Python Parser: **RegClsIdIUser**{{< /callout >}}
 
 ### Description 
 
-Parses the Windows `Software` registry hive to collect system‑wide X509 certificates stored in the `Software` hive. It reads the binary certificate blobs, decodes them, and extracts key certificate attributes.
-
-- Provides complete certificate details (subject, issuer, validity period, public‑key algorithm, fingerprint).
+Each row is a per-user COM class registration, with CLSID, description, implementing executable or DLL, TreatAs redirection, and registry provenance. Use it to find user-scoped COM hijacking or persistence and attribute the registration to a profile. Registration alone does not prove that the COM object was instantiated or its code loaded.
 
 
 ### Timeline 
@@ -18,27 +16,18 @@ Parses the Windows `Software` registry hive to collect system‑wide X509 certif
 | Timeline Field | Data Field |
 |---|---|
 |Related User    | `key_security.owner_sid`   |
-|Description    | `subject`   |
-|Additional Description    | `issuer`   |
+|Description    | `description`   |
+|Additional Description    | `executable`   |
+|    | `treat_as`   |
 
 ### Fields 
 
 | Output Name | Data Type | Qualifier | Description |
 |---|---|---|---|
-| `subject` | String |  | certificate subject distinguished name (RFC 4514 format) |
-| `issuer` | String |  | certificate issuer distinguished name (RFC 4514 format) |
-| `not_valid_before` | DateTime |  | certificate start‑of‑validity timestamp (not before) |
-| `not_valid_after` | DateTime |  | certificate end‑of‑validity timestamp (not after) |
-| `pub_key_algo` | String |  | public‑key algorithm name (e.g., rsaEncryption) |
-| `pub_key_algo_oid` | String |  | OID of the public‑key algorithm |
-| `fingerprint_sha256` | String |  | SHA‑256 fingerprint of the certificate (hex string) |
-| `version` | String |  | X.509 certificate version |
-| `serial_number` | String |  | certificate serial number (decimal string) |
-| `extensions[]` | Array[Object] |  |  |
-| `extensions[].name` | String |  | human‑readable name of the extension |
-| `extensions[].oid` | String |  | object identifier (OID) of the extension |
-| `extensions[].critical` | String |  | whether the extension is marked critical (true/false) |
-| `extensions[].value` | String |  | string representation of the extension value |
+| `guid` | String | APP_CLSID | lower‑cased CLSID identifying the COM class |
+| `description` | String |  | human‑readable description of the COM class |
+| `executable` | String | FILE_PATH | path(s) to the binary(ies) implementing the CLSID (e.g., InprocServer32, LocalServer32) |
+| `treat_as` | String | APP_CLSID | CLS ID that this entry redirects to via TreatAs |
 | `key_path` | String | KEY_PATH | full registry key name |
 | `key_modif_time` | DateTime | DATE_MODIFICATION | last modification timestamp of the registry key |
 | `key_security` | Object |  |  |

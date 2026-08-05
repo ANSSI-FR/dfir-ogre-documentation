@@ -8,18 +8,19 @@
 
 ### Description 
 
-Parses a Windows volume‑statistics csv file. Each line describes:.
-
-- Computer name identifies the host that exported the volume list.
-- Volume ID and mount point uniquely reference the volume on the system.
-- Volume type indicates whether the volume is fixed, removable, etc.
-- Shadow‑copy ID links the entry to a specific VSS snapshot when present.
-- etc.
+Each row describes a volume observed by ORC, with host, volume identifier, mount point or device location, volume type, shadow-copy identifier, and indicators of which artifact sets were collected. Use it to map paths and records to the correct live volume or snapshot. It is collection metadata and does not itself represent file or user activity.
 
 
 ### Timeline 
 
-{{< callout type="warning" >}}This plugin does not contains timestamped data and cannot be used to create a timeline{{< /callout >}}
+| Timeline Field | Data Field |
+|---|---|
+|Description    | `mount_point`   |
+|    | `volumeid`   |
+|Additional Description    | `volume_type`   |
+|    | `location`   |
+|    | `shadow_copy`   |
+
 ### Fields 
 
 | Output Name | Data Type | Qualifier | Description |

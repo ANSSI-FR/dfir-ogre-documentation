@@ -8,7 +8,7 @@
 
 ### Description 
 
-Extracts Activity Moderator (BAM/DAM) records from the Windows `System` hive. It parses user‑specific settings to retrieve the executable path and execution time.
+Each row is a Background or Desktop Activity Moderator record associating an executable path and user SID with a recorded run time. Use it as recent execution evidence and correlate the path with Prefetch, UserAssist, Amcache, and filesystem records. Retention, coverage, and path forms vary by Windows version, so absence does not exclude execution.
 
 
 ### Timeline 

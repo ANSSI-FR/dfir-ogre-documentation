@@ -8,9 +8,7 @@
 
 ### Description 
 
-Srum table that tracks telemetry that Windows collects about the Windows Push
-      Notification (WPN) service – i.e., the background “push‑notification” system that delivers
-      toast, badge, tile, and raw notifications to modern (UWP/Store) apps.
+Each row is Windows Push Notification telemetry from SRUM, associated with an application and user and including notification type, payload size, network type, and timestamp. Use it to correlate application notification activity with network and user timelines. It records notification metadata, not payload content or proof that a user viewed or acted on the notification.
 
 
 ### Timeline 

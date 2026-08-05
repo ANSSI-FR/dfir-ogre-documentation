@@ -8,7 +8,7 @@
 
 ### Description 
 
-Parse the filesystem results of the fastfind tool
+Each row is a filesystem match returned by FastFind, with volume and snapshot context, path, NTFS identifiers, timestamps, attributes, hashes, and match details. Use it to pivot from search criteria to matching files and correlate records across snapshots. Results reflect the configured search and collected volumes, not a complete filesystem inventory.
 
 
 ### Timeline 

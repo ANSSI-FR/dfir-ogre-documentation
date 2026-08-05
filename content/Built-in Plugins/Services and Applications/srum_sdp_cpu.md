@@ -8,7 +8,7 @@
 
 ### Description 
 
-Srum table for windows server 2022 that tracks cpu time
+Each row is Windows Server SRUM SDP processor telemetry with timestamp and accumulated processor time plus application and user identifiers where recorded. Use it to compare CPU usage context across intervals. The counter is aggregate telemetry and does not reveal individual instructions, threads, or actions.
 
 
 ### Timeline 

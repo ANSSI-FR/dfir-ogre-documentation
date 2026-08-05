@@ -2,11 +2,11 @@
  title: 'Browser Artefacts'
 ---
 {{< cards >}}
- {{< card link="browser_download_history" title="Browser Download History" subtitle="Parses the download history database of a Chrome profile (typically `*/Default/History`)" tag="SQLite" tagColor="orange">}}
- {{< card link="browser_download_history_lite" title="Browser Download History Lite" subtitle="Extracts records from the `places` sqlite database that Firefox uses to store download metadata" tag="SQLite" tagColor="orange">}}
- {{< card link="browser_history" title="Browser History" subtitle="Parses the browsing hisory database of a Chrome profile (typically `*/Default/History`)" tag="SQLite" tagColor="orange">}}
- {{< card link="browser_history_lite" title="Browser History Lite" subtitle="Extracts navigation records from a Firefox `places` sqlite database" tag="SQLite" tagColor="orange">}}
- {{< card link="chrome_extension" title="Chrome Extension" subtitle="Extracts identity, provenance, security policy and execution metadata from Manifest V2 and Manifest V3 Chrome-based browser extensions" tag="ChromeExtension" tagColor="blue">}}
- {{< card link="firefox_extension" title="Firefox Extension" subtitle="Extracts metadata from Firefox browser add‑ons (version 26+)" tag="FirefoxExtension" tagColor="blue">}}
- {{< card link="ie_webcache_history" title="Ie Webcache History" subtitle="Extracts browsing history records from Internet Explorer 10+ WebCache databases (WebCacheV01" tag="IeWebCache" tagColor="amber">}}
+ {{< card link="chrome_download_history" title="Chrome Download History" subtitle="Shows Chrome downloads with source URLs, saved paths, timestamps, sizes, states, and danger indicators." tag="SQLite" tagColor="orange">}}
+ {{< card link="chrome_extension" title="Chrome Extension" subtitle="Shows Chrome extension identity, version, source, permissions, scripts, resources, and security policy." tag="ChromeExtension" tagColor="blue">}}
+ {{< card link="chrome_history" title="Chrome History" subtitle="Shows Chrome URL visits with titles, timestamps, visit counts, referrers, and hidden status." tag="SQLite" tagColor="orange">}}
+ {{< card link="firefox_download_history" title="Firefox Download History" subtitle="Shows Firefox downloads with source URLs, saved paths, timestamps, sizes, and deletion state." tag="SQLite" tagColor="orange">}}
+ {{< card link="firefox_extension" title="Firefox Extension" subtitle="Shows Firefox add-on identity, version, source, permissions, origins, and installation or update times." tag="FirefoxExtension" tagColor="blue">}}
+ {{< card link="firefox_history" title="Firefox History" subtitle="Shows Firefox URL visits with titles, timestamps, visit counts, referrers, and hidden status." tag="SQLite" tagColor="orange">}}
+ {{< card link="ie_webcache_history" title="Ie Webcache History" subtitle="Shows Internet Explorer WebCache visits with URLs, cached files, timestamps, access counts, headers, and redirects." tag="IeWebCache" tagColor="amber">}}
 {{< /cards >}}

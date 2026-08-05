@@ -8,7 +8,7 @@
 
 ### Description 
 
-Parse data from srum
+Each row preserves an SRUM energy-estimation record with timestamp, application and user identifiers, and an opaque binary payload. Use the identifiers and time for correlation or future schema-aware decoding. Because the payload is not interpreted by this mapping, it should not support claims about specific energy components or quantities.
 
 
 ### Timeline 
