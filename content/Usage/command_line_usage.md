@@ -64,7 +64,7 @@ dfir-ogre folder \
 {{< callout >}}
 The folder can contains any kind of data, not just an extracted DFIR-ORC.
 
-In the `ogre.yaml` [configuration file](/usage/ogre_configuration/ "Ogre configuration"), only the *archive_file_pattern* mapping will be used. 
+In the `ogre.yaml` [configuration file](/usage/ogre_configuration/ "Ogre configuration"), only the *original_file_pattern* mapping will be used only if the parser finds GetThis.csv files in the folder and sub-folders
 
 {{</ callout >}}
 
@@ -151,6 +151,25 @@ dfir-ogre timeline \
 ```
 
 The generated timeline is placed in the directory you provide via `--timeline_folder`.
+
+
+## The `folder` Command
+
+This is used to extract artefact 
+- from an already unpacked DFIR-ORC archive, 
+- or from a folder that contains data that does not come from DFIR-ORC. 
+
+In the `ogre.yaml` [configuration file](/usage/ogre_configuration/ "Ogre configuration"), the *original_file_pattern* mapping will be used only if the parser finds GetThis.csv files in the folder and sub-folders.
+
+Typical usage:  
+```bash
+dfir-ogre folder \
+    --folder my/artifact/folder/
+    --configuration ogre.yaml
+    [--case <name>]
+```  
+
+
 
 ## The `plugin` Command
 Run a plugin against a single file. Typical use‑case:

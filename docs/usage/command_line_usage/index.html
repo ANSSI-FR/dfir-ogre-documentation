@@ -73,7 +73,7 @@ dfir-ogre orc \ --archive myarchive.7z --configuration ogre.yaml [--case &lt;nam
 A ready to use ogre.yaml file is provided in the dfir-ogre/configuration/ folder.">
 	<meta itemprop="datePublished" content="2026-01-06T15:52:05+01:00">
 	<meta itemprop="dateModified" content="2026-01-06T15:52:05+01:00">
-	<meta itemprop="wordCount" content="779">
+	<meta itemprop="wordCount" content="853">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Command line usage">
 	<meta name="twitter:description" content="Overview The command line has three main usages:
@@ -1706,6 +1706,10 @@ A ready to use ogre.yaml file is provided in the dfir-ogre/configuration/ folder
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#the-folder-command">The folder Command
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
         <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#the-plugin-command">The plugin Command
         </a>
       </li>
@@ -1837,7 +1841,7 @@ Typical usage:</p>
 
   <div class="hx:w-full hx:min-w-0 hx:leading-7">
     <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>The folder can contains any kind of data, not just an extracted DFIR-ORC.</p>
-<p>In the <code>ogre.yaml</code> <a href="/dfir-ogre-documentation/usage/ogre_configuration/"title="Ogre configuration">configuration file</a>, only the <em>archive_file_pattern</em> mapping will be used.</p>
+<p>In the <code>ogre.yaml</code> <a href="/dfir-ogre-documentation/usage/ogre_configuration/"title="Ogre configuration">configuration file</a>, only the <em>original_file_pattern</em> mapping will be used only if the parser finds GetThis.csv files in the folder and sub-folders</p>
 </div>
   </div>
 </div>
@@ -1974,6 +1978,31 @@ Typical usage:</p>
 </div>
 </div>
 <p>The generated timeline is placed in the directory you provide via <code>--timeline_folder</code>.</p>
+<h2>The <code>folder</code> Command<span class="hx:absolute hx:-mt-20" id="the-folder-command"></span>
+    <a href="#the-folder-command" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>This is used to extract artefact</p>
+<ul>
+<li>from an already unpacked DFIR-ORC archive,</li>
+<li>or from a folder that contains data that does not come from DFIR-ORC.</li>
+</ul>
+<p>In the <code>ogre.yaml</code> <a href="/dfir-ogre-documentation/usage/ogre_configuration/"title="Ogre configuration">configuration file</a>, the <em>original_file_pattern</em> mapping will be used only if the parser finds GetThis.csv files in the folder and sub-folders.</p>
+<p>Typical usage:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dfir-ogre folder <span class="se">\
+</span></span></span><span class="line"><span class="cl">    --folder my/artifact/folder/
+</span></span><span class="line"><span class="cl">    --configuration ogre.yaml
+</span></span><span class="line"><span class="cl">    <span class="o">[</span>--case &lt;name&gt;<span class="o">]</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+    aria-label="Copy code"
+    data-copied-label="Copied!"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
 <h2>The <code>plugin</code> Command<span class="hx:absolute hx:-mt-20" id="the-plugin-command"></span>
     <a href="#the-plugin-command" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Run a plugin against a single file. Typical use‑case:</p>
 <ul>
