@@ -23,6 +23,8 @@ The `ogre.yaml` [configuration file](/usage/ogre_configuration/ "Ogre configurat
 A ready to use ogre.yaml file is provided in the `dfir-ogre/configuration/` folder.
 {{</ callout >}}
 
+
+
 ---
 **`timeline`**: Same as `orc` but creates a single CSV file that contains a sorted timeline.
 
@@ -46,6 +48,25 @@ dfir-ogre plugin \
     --computer_name HOST01 \
     --output_folder ./out \
 ```  
+
+
+---
+
+**`folder`**: runs parsers defined in the YAML configuration on the files located in the defined folder. 
+
+Typical usage:  
+```bash
+dfir-ogre folder \
+    --folder my/artifact/folder/
+    --configuration ogre.yaml
+    [--case <name>]
+```  
+{{< callout >}}
+The folder can contains any kind of data, not just an extracted DFIR-ORC.
+
+In the `ogre.yaml` [configuration file](/usage/ogre_configuration/ "Ogre configuration"), only the *archive_file_pattern* mapping will be used. 
+
+{{</ callout >}}
 
 
 ---
