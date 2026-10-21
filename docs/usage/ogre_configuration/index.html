@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr"><head><script src="/dfir-ogre-documentation/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=dfir-ogre-documentation/livereload" data-no-instant defer></script>
+<html lang="en" dir="ltr"><head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="noindex, nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="index, follow" />
   <link rel="icon shortcut" href="/dfir-ogre-documentation/favicon.ico" sizes="32x32" />
 <link rel="icon" href="/dfir-ogre-documentation/favicon.svg" type="image/svg+xml" id="favicon-svg" />
 <link rel="icon" href="/dfir-ogre-documentation/favicon-16x16.png" type="image/png" sizes="16x16" />
@@ -9,15 +9,18 @@
 <link rel="apple-touch-icon" href="/dfir-ogre-documentation/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/dfir-ogre-documentation/site.webmanifest" rel="manifest" />
 <title>Configuration guide – DFIR-OGRE documentation</title>
-  <meta name="description" content="Most of DFIR-OGRE commands relies on a ogre.yaml configuration file, It tells the CLI where to write outputs, how the generated records should be formatted and which plugins to run on which file.
-Ready to use ogre.yaml files are provided in the dfir-ogre/configuration/ folder. The configuration files for the default plugins are available in the dfir-ogre-plugin-windows/configuration/ folder. Overview Here is a example of a configuration file." /><link rel="canonical" href="http://localhost:1313/dfir-ogre-documentation/usage/ogre_configuration/" itemprop="url" />
+  <meta name="description" content="The orc, folder, timeline, and list commands use an ogre.yaml configuration file. It selects plugin libraries, maps source files to parsers, and defines output destinations and formats. The single-file plugin command takes those output settings directly on the command line.
+Ready to use ogre.yaml files are provided in the dfir-ogre/configuration/ folder. The configuration files for the default plugins are available in the dfir-ogre-plugin-windows/configuration/ folder. Overview Here is a example of a configuration file." /><link rel="canonical" href="https://anssi-fr.github.io/dfir-ogre-documentation/usage/ogre_configuration/" itemprop="url" />
 
 <meta property="og:title" content="Configuration guide">
 <meta
   property="og:description"
   content="
     
-      Most of DFIR-OGRE commands relies on a ogre.yaml configuration file, It tells the CLI where to write outputs, how the generated records should be formatted and which plugins to run on which file.
+      The orc, folder, timeline, and list commands use an ogre.yaml
+configuration file. It selects plugin libraries, maps source files to parsers,
+and defines output destinations and formats. The single-file plugin command
+takes those output settings directly on the command line.
 
   
 
@@ -43,7 +46,7 @@ Overview
   content="
     article
   ">
-<meta property="og:url" content="http://localhost:1313/dfir-ogre-documentation/usage/ogre_configuration/"><meta property="article:section" content="usage">
+<meta property="og:url" content="https://anssi-fr.github.io/dfir-ogre-documentation/usage/ogre_configuration/"><meta property="article:section" content="usage">
 
 <meta
   property="article:published_time"
@@ -52,26 +55,32 @@ Overview
 
 <meta
   property="article:modified_time"
-  content="2026-01-06T15:52:05+01:00">
+  content="2026-10-21T00:00:00+00:00">
 
 
 
 	<meta itemprop="name" content="Configuration guide">
-	<meta itemprop="description" content="Most of DFIR-OGRE commands relies on a ogre.yaml configuration file, It tells the CLI where to write outputs, how the generated records should be formatted and which plugins to run on which file.
+	<meta itemprop="description" content="The orc, folder, timeline, and list commands use an ogre.yaml configuration file. It selects plugin libraries, maps source files to parsers, and defines output destinations and formats. The single-file plugin command takes those output settings directly on the command line.
 Ready to use ogre.yaml files are provided in the dfir-ogre/configuration/ folder. The configuration files for the default plugins are available in the dfir-ogre-plugin-windows/configuration/ folder. Overview Here is a example of a configuration file.">
 	<meta itemprop="datePublished" content="2026-01-06T15:52:05+01:00">
-	<meta itemprop="dateModified" content="2026-01-06T15:52:05+01:00">
-	<meta itemprop="wordCount" content="960">
+	<meta itemprop="dateModified" content="2026-10-21T00:00:00+00:00">
+	<meta itemprop="wordCount" content="1049">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Configuration guide">
-	<meta name="twitter:description" content="Most of DFIR-OGRE commands relies on a ogre.yaml configuration file, It tells the CLI where to write outputs, how the generated records should be formatted and which plugins to run on which file.
+	<meta name="twitter:description" content="The orc, folder, timeline, and list commands use an ogre.yaml configuration file. It selects plugin libraries, maps source files to parsers, and defines output destinations and formats. The single-file plugin command takes those output settings directly on the command line.
 Ready to use ogre.yaml files are provided in the dfir-ogre/configuration/ folder. The configuration files for the default plugins are available in the dfir-ogre-plugin-windows/configuration/ folder. Overview Here is a example of a configuration file.">
-<link href="/dfir-ogre-documentation/css/compiled/main.css" rel="stylesheet" />
-    <link href="/dfir-ogre-documentation/css/variables.css" rel="stylesheet" />
-    <link href="/dfir-ogre-documentation/css/custom.css" rel="stylesheet" />
+
+    <link rel="preload" href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" as="style" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
+    <link href="/dfir-ogre-documentation/css/compiled/main.min.0fedb1ba790beb5b32b6981b7b855eaa40d242cd87a4c80b198db42f19a66b75.css" rel="stylesheet" integrity="sha256-D&#43;2xunkL61sytpgbe4VeqkDSQs2HpMgLGY20Lxmma3U=" />
 
   
-<script src="/dfir-ogre-documentation/js/main-head.js" integrity=""></script>
+
+
+
+
+
+
+<script src="/dfir-ogre-documentation/js/main-head.min.2375b7265ea066ecb314226ce5ff17478453df5f350d34d830b3fc96fba21672.js" integrity="sha256-I3W3Jl6gZuyzFCJs5f8XR4RT3181DTTYMLP8lvuiFnI="></script>
 
   
   
@@ -1667,7 +1676,7 @@ Ready to use ogre.yaml files are provided in the dfir-ogre/configuration/ folder
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#placeholder-variables">Place‑holder Variables
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#placeholder-variables">Placeholder Variables
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
@@ -1733,7 +1742,10 @@ Ready to use ogre.yaml files are provided in the dfir-ogre/configuration/ folder
             
           </div>
           
-          <p>Most of <strong>DFIR-OGRE</strong> commands relies on a <code>ogre.yaml</code> configuration file, It tells the CLI where to write outputs, how the generated records should be formatted and which plugins to run on which file.</p>
+          <p>The <code>orc</code>, <code>folder</code>, <code>timeline</code>, and <code>list</code> commands use an <code>ogre.yaml</code>
+configuration file. It selects plugin libraries, maps source files to parsers,
+and defines output destinations and formats. The single-file <code>plugin</code> command
+takes those output settings directly on the command line.</p>
 <div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-purple-200 hx:bg-purple-100 hx:text-purple-900 hx:dark:border-purple-200/30 hx:dark:bg-purple-900/30 hx:dark:text-purple-200">
   <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
 
@@ -1785,7 +1797,7 @@ Ready to use ogre.yaml files are provided in the dfir-ogre/configuration/ folder
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">file</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">format</span><span class="p">:</span><span class="w"> </span><span class="l">jsonl</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">date_format</span><span class="p">:</span><span class="w"> </span><span class="l">iso_utc</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with_timeline</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with_timeline</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">include_empty_field</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">output_folder</span><span class="p">:</span><span class="w"> </span><span class="l">$output_folder/raw/$mapping_label/$computer_name</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">base_file_name</span><span class="p">:</span><span class="w"> </span><span class="l">$file_name</span><span class="w">
@@ -1801,10 +1813,10 @@ Ready to use ogre.yaml files are provided in the dfir-ogre/configuration/ folder
 </span></span></span><span class="line"><span class="cl"><span class="w">          
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># NTFSInfo</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">archive_file_pattern</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;NTFSInfo.*\.csv$&#39;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">plugin_file</span><span class="p">:</span><span class="w"> </span><span class="l">$plugin_folder/ntfs_info.xml</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">mapping_label</span><span class="p">:</span><span class="w"> </span><span class="l">ntfs_info</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">output</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">timeline</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">plugin_file</span><span class="p">:</span><span class="w"> </span><span class="l">$plugin_folder/ntfs_info.xml</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">mapping_label</span><span class="p">:</span><span class="w"> </span><span class="l">ntfs_info</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">output</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span>- <span class="l">timeline</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="Copy code"
@@ -1818,7 +1830,7 @@ Ready to use ogre.yaml files are provided in the dfir-ogre/configuration/ folder
 </div>
 <h2>General Settings<span class="hx:absolute hx:-mt-20" id="general-settings"></span>
     <a href="#general-settings" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
-<li><strong>plugin_prefixes</strong> : A comma separated list of Python package name prefixes that will be loaded to discover available parsers.</li>
+<li><strong>plugin_prefixes</strong>: A YAML list of Python package name prefixes used to discover available parsers.</li>
 <li><strong>case</strong> : name of the case.</li>
 <li><strong>output_folder</strong> : Base directory where all generated artefacts are stored.</li>
 <li><strong>temp_folder</strong> : Temporary directory used while processing an ORC archive (e.g., to unpack files)</li>
@@ -1826,7 +1838,7 @@ Ready to use ogre.yaml files are provided in the dfir-ogre/configuration/ folder
 <li><strong>plugin_folder</strong> : Base directory where all <strong>XML plugin descriptors</strong> are found. Plugins are described using xml files. Default plugins filed are available in the <code>dfir-ogre-plugin-windows/configuration/</code> folder</li>
 <li><strong>inner_archive_password</strong> : Default password used for encrypted inner archives.</li>
 </ul>
-<h2>Place‑holder Variables<span class="hx:absolute hx:-mt-20" id="placeholder-variables"></span>
+<h2>Placeholder Variables<span class="hx:absolute hx:-mt-20" id="placeholder-variables"></span>
     <a href="#placeholder-variables" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The configuration file uses a few <strong>runtime placeholders</strong> that are substituted during the parsing:</p>
 <table>
 	<thead>
@@ -1850,7 +1862,7 @@ Ready to use ogre.yaml files are provided in the dfir-ogre/configuration/ folder
 			</tr>
 			<tr>
 					<td><code>$computer_name</code></td>
-					<td>The computer name extracted from the ORC metadata.</td>
+					<td>Computer name from ORC metadata, or the name selected for a <code>folder</code> run.</td>
 			</tr>
 			<tr>
 					<td><code>$mapping_label</code></td>
@@ -1861,11 +1873,29 @@ Ready to use ogre.yaml files are provided in the dfir-ogre/configuration/ folder
 					<td>Base name of the extracted source file (without extension).</td>
 			</tr>
 			<tr>
+					<td><code>$parser</code></td>
+					<td>Parser command from the XML descriptor.</td>
+			</tr>
+			<tr>
+					<td><code>$timestamp</code></td>
+					<td>Collection timestamp in <code>YYYYMMDD_HHMMSS</code> form; folder runs use the invocation time.</td>
+			</tr>
+			<tr>
+					<td><code>$archive_name</code></td>
+					<td>Source archive&rsquo;s filename stem; folder runs use the source folder&rsquo;s name.</td>
+			</tr>
+			<tr>
+					<td><code>$relative_path</code></td>
+					<td>Source parent path. Preserves directories in <code>output_folder</code>; flattens separators to underscores in <code>base_file_name</code>.</td>
+			</tr>
+			<tr>
 					<td><code>$dir_tree</code></td>
 					<td>Directory tree defined when using the CLI whith json parameters</td>
 			</tr>
 	</tbody>
 </table>
+<p>These variables belong to YAML configuration resolution. For the four variables
+available to the single-file CLI, see <a href="/dfir-ogre-documentation/usage/command_line_usage/#filename-templates">plugin filename templates</a>.</p>
 <h2>Output Section: how to write extracted artefacts<span class="hx:absolute hx:-mt-20" id="output-section-how-to-write-extracted-artefacts"></span>
     <a href="#output-section-how-to-write-extracted-artefacts" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The <code>output</code> block defines output &ldquo;templates&rdquo;,
 each entry can be referenced in the <code>mapping</code> section via the <code>output:</code> parameter.</p>
@@ -1905,26 +1935,32 @@ each entry can be referenced in the <code>mapping</code> section via the <code>o
 <li>
 <p><strong>format</strong>: Defines the output data format:</p>
 <ul>
-<li><em>json</em>: data is written in JSONL format.</li>
-<li><em>csv</em>: The is are written in the CSV format.</li>
-<li><em>normalized_json</em>: data is extracted in a normalized JSONL format that avoids data duplication (see <a href="/dfir-ogre-documentation/usage/artefacts_format/#normalized-formats">output format</a>.</li>
-<li><em>normalized_csv</em>: data is extracted in a normalized JSONL format that avoids data duplication (see <a href="/dfir-ogre-documentation/usage/artefacts_format/#normalized-formats">output format</a>.</li>
+<li><code>jsonl</code>: JSON Lines, with metadata embedded in each record.</li>
+<li><code>csv</code>: semicolon-delimited CSV.</li>
+<li><code>normalized_jsonl</code>: data, metadata, and optional timeline records in separate JSONL files.</li>
+<li><code>normalized_csv</code>: data, metadata, and optional timeline records in separate CSV files.</li>
+<li><code>analytics_jsonl</code>: JSONL with an analytics envelope around each data record, plus separate metadata and optional timeline files.</li>
 </ul>
+<p>See <a href="/dfir-ogre-documentation/usage/artefacts_format/">output formats</a> for the record layouts.</p>
 </li>
 <li>
 <p><strong>date_format</strong>: The output date format. The following formats are supported:</p>
 <ul>
-<li><em>iso</em>: ISO‑8601 format with timezone information. Example: <em>1978-04-16T10:31:42.123456+02:00</em>.</li>
-<li><em>iso_utc</em>: ISO‑8601 format converted to UTC with timezone information. Example: <em>1978-04-16T08:31:42.123456+00:00</em>.</li>
+<li><code>iso</code> or <code>iso_utc</code>: ISO-8601 in UTC with microseconds and an explicit offset. Both currently produce values such as <code>1978-04-16T08:31:42.123456+00:00</code>.</li>
 <li><em>utc_naive</em>: Simple UTC format without timezone (some downstream systems may prefer this incomplete format). Example: <em>1978-04-16 08:31:42.123456</em>.</li>
+<li>A custom chrono strftime pattern, such as <code>'%Y-%m-%d %H:%M:%S'</code>.</li>
 </ul>
 </li>
 <li>
-<p><strong>with_timeline</strong>: Indicates whether a timeline format should be included. During parsing, an error will be raised if the plugin does not support timeline generation.</p>
+<p><strong>with_timeline</strong>: Request timeline entries using the XML descriptor&rsquo;s timeline
+configuration. Use a descriptor defining timeline rules to obtain those entries.</p>
 </li>
-</ul>
-<p><strong>timeline_include_undated</strong> with <strong>with_timeline: true</strong> indicate whether to emit timeline records even if there is no valid date for an entry. Records are inserted with <strong>timestamp: null</strong> and <strong>timestamp_meaning: &ldquo;empty placeholder&rdquo;</strong></p>
-<ul>
+<li>
+<p><strong>timeline_include_undated</strong>: With <code>with_timeline: true</code>, emit a placeholder
+timeline entry when no valid date is available, using <code>timestamp: null</code> and
+<code>timestamp_meaning: &quot;empty placeholder&quot;</code>. Defaults to <code>false</code> and is incompatible
+with <code>analytics_jsonl</code>.</p>
+</li>
 <li>
 <p><strong>include_empty_field</strong>: Indicates whether empty fields should be included in the output.</p>
 </li>
@@ -1935,7 +1971,9 @@ each entry can be referenced in the <code>mapping</code> section via the <code>o
 <p><strong>base_file_name</strong>: The output file name; note in the example using placeholder variables.</p>
 </li>
 <li>
-<p><strong>compression_level</strong>: (Optional, between 1 and 9) Specifies the desired compression level for gzip output. Level 1 provides the lowest compression (and fastest speed). Default value: 5.</p>
+<p><strong>compression_level</strong>: Optional gzip compression level from 0 to 9. Level 0
+disables compression while retaining gzip framing; level 1 favors speed and
+level 9 favors compression. Default: 5.</p>
 </li>
 </ul>
 <h2>Mapping Section: Which plugin processes which artefact?<span class="hx:absolute hx:-mt-20" id="mapping-section-which-plugin-processes-which-artefact"></span>
@@ -2101,7 +2139,7 @@ each entry can be referenced in the <code>mapping</code> section via the <code>o
   </a></div></div>
     </div></footer>
     
-    <script defer src="/dfir-ogre-documentation/js/main.js" integrity=""></script>
-<script defer src="/dfir-ogre-documentation/js/flexsearch.9f5b5908f93ae86f1ecd4b043b799f580c2d1654e703dd9357d568ac41b2547a.js" integrity="sha256-n1tZCPk66G8ezUsEO3mfWAwtFlTnA92TV9VorEGyVHo=" crossorigin="anonymous"></script><script defer src="/dfir-ogre-documentation/en.search.js" integrity=""></script>
+    <script defer src="/dfir-ogre-documentation/js/main.min.e6ec223dd3472e6949081d081ee4fc56c7e7f90951c40b4ae16c7db05d6213ee.js" integrity="sha256-5uwiPdNHLmlJCB0IHuT8Vsfn&#43;QlRxAtK4Wx9sF1iE&#43;4="></script>
+<script defer src="/dfir-ogre-documentation/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script><script defer src="/dfir-ogre-documentation/en.search.min.e501b4d6f6d74bd60ef5a7c41d513847c5d12b886fd68b45186fb216c3de1de4.js" integrity="sha256-5QG01vbXS9YO9afEHVE4R8XRK4hv1otFGG&#43;yFsPeHeQ="></script>
   </body>
 </html>
