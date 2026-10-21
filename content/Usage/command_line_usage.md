@@ -1,256 +1,291 @@
 ---
 date: '2026-01-06T15:52:05+01:00'
+lastmod: '2026-10-21'
 title: 'Command line usage'
 weight: 1
 ---
 
 ## Overview
 
-The command line has three main usages:
+Use the `dfir-ogre` command after installing and activating your environment.
+Choose the command that matches your source data:
 
-**`orc`**: Unpacks DFIR-ORC archives and runs every parser defined in the YAML configuration on the extracted files.  
+| Command | Use it to |
+|---------|-----------|
+| [`orc`](#the-orc-command) | Extract and parse DFIR-ORC archives using YAML mapping rules. |
+| [`folder`](#the-folder-command) | Parse files collected from one computer, including unpacked ORC collections. |
+| [`plugin`](#the-plugin-command) | Run one parser against one file, with output options supplied on the command line. |
+| [`timeline`](#the-timeline-command) | Parse ORC archives and combine timeline records into a sorted CSV file. |
+| [`list`](#the-list-command) | List available parsers using the libraries selected in a YAML configuration. |
 
-Typical usage:  
-```bash
-dfir-ogre orc \
-    --archive myarchive.7z
-    --configuration ogre.yaml
-    [--case <name>]
-```  
-{{< callout >}}
-The `ogre.yaml` [configuration file](/usage/ogre_configuration/ "Ogre configuration") tells the CLI which parsers (plugins) to run, where to read source files,  where to write outputs, and how the generated artefacts should be formatted. 
-
-A ready to use ogre.yaml file is provided in the `dfir-ogre/configuration/` folder.
-{{</ callout >}}
-
-
-
----
-**`timeline`**: Same as `orc` but creates a single CSV file that contains a sorted timeline.
-
-It requires a specific `ogre.yaml` file provided here `dfir-ogre/configuration/ogre_timeline.yaml` .
+Get help for the command or an individual subcommand:
 
 ```bash
-dfir-ogre timeline \
-    --archive secret.7z \
-    --timeline_folder ./timeline \
-    --configuration ogre_timeline.yaml
-```  
-
-
----
-**`plugin`**: Executes a single plugin on a single input file. Useful for debugging or ad‑hoc analysis without dealing with archives.  
-Typical usage:  
-```bash
-dfir-ogre plugin \
-    --filename sample.txt \
-    --plugin_config sample_plugin.xml \
-    --computer_name HOST01 \
-    --output_folder ./out \
-```  
-
-
----
-
-**`folder`**: runs parsers defined in the YAML configuration on the files located in the defined folder. 
-
-Typical usage:  
-```bash
-dfir-ogre folder \
-    --folder my/artifact/folder/
-    --configuration ogre.yaml
-    [--case <name>]
-```  
-{{< callout >}}
-The folder can contains any kind of data, not just an extracted DFIR-ORC.
-
-In the `ogre.yaml` [configuration file](/usage/ogre_configuration/ "Ogre configuration"), only the *original_file_pattern* mapping will be used only if the parser finds GetThis.csv files in the folder and sub-folders
-
-{{</ callout >}}
-
-
----
-
-##  The `orc` command
-
-Unpacks DFIR-ORC archives and runs every parser defined in the YAML configuration on the extracted files.
-
-### Parameters
-
-| Parameter | Description |
-|-----------|-------------|
-| `--archive` | **Required**. Can be one of four forms: <br>• A **single** 7z/zip archive file path. <br>• A **comma‑separated list** of archive files (treated as one case). <br>• A path to an Orc `xxx_Outcome.json` file.<br>• A **JSON string** that describes the archives to be parsed  |
-| `--configuration` | path to the `ogre.yaml` configuration|
-| `--case` | Overrides the case name coming from the configuration or the ORC metadata. |
-
-
-### What happens internally
-
-1. **Extraction**: each archive is extracted into `temp_folder`  
-2. **File matching**: for every entry in the `mapping` section of the configuration, the CLI evaluates the appropriate regex (`original_file_pattern` *or* `archive_file_pattern`). 
-3. **Parser execution**: matching files are handed to the configured parser plugin. 
-4. **Output generation**: according to the `output:` definitions (rawjson, gzip, timeline, …) the parsed records are stored in the paths built from placeholders (`$output_folder`, `$archive_name`, `$mapping_label`, …).
-5. **Reporting**: a JSON report summarising success/failure per parser is created. 
-
-
-### Example (ORC outcome)
-
-```bash
-dfir-ogre orc \
-    --archive ORC_xxx_Outcome.json \
-    --configuration configuration/ogre.yaml
+dfir-ogre --help
+dfir-ogre plugin --help
 ```
 
-Every archives defined in the outcome will be processed, and some metadata will be included in the parsed records
+Examples below assume you are in the directory containing the sibling
+`dfir-ogre/` and `dfir-ogre-plugin-windows/` checkouts. Adjust input paths and
+configuration settings for your collection. Paths inside a YAML configuration
+are resolved relative to your working directory.
 
-### Example (multiple archives)
+The `orc`, `folder`, and `timeline` commands read their mappings and output
+settings from a [YAML configuration](/usage/ogre_configuration/). The `plugin`
+command takes an XML plugin descriptor directly and does not need a YAML file.
+Use `dfir-ogre plugin` for individual parsers; the standalone `dfir-ogre-plugin`
+command has been removed.
 
-```bash
-dfir-ogre orc \
-    --archive "host1.7z,host1_small.7z,host1_detailled.7z" \
-    --configuration configuration/ogre.yaml
-```
+## The `orc` command
 
-All three archives are processed as a single **DFIR-ORC** from a single machine whose name defaults to the first archive (`host1`).
-
-### Example (json_ data)
-
-```bash
-dfir-ogre orc \
-    --archive '{"id": "the_host_id","hostname": "HOSTNAME", "unencrypted_data_files":["file1.7z","file2.7z"]'} \
-    --configuration ogre.yaml
-```
-
-The JSON must contain at least:
-
-```json
-{
-  "id": "the_host_id",
-  "hostname": "HOSTNAME",
-  "timestamp": "20250904_221144",
-  "unencrypted_data_files": ["file1.7z","file2.7z"]
-}
-```
-
-Optional field:
-* `dir_tree` – a relative path that can be appended to every output folder (useful for hierarchical storage).  
-
-
-
-## The `timeline` Command
-
-The `timeline` sub‑command is a thin wrapper around the `orc` command that creates a single CSV file that contains a sorted timeline.
-
-It requires a specific `ogre_timeline.yaml` configuration file that can be found in the in the `/dfir-ogre/configuration/` folder
-
-```bash
-dfir-ogre timeline \
-    --archive ORC_xxx_Outcome.json \
-    --timeline_folder ./timeline_output/ \
-    --configuration configuration/ogre_timeline.yaml
-```
-
-The generated timeline is placed in the directory you provide via `--timeline_folder`.
-
-
-## The `folder` Command
-
-This is used to extract artefact 
-- from an already unpacked DFIR-ORC archive, 
-- or from a folder that contains data that does not come from DFIR-ORC. 
-
-In the `ogre.yaml` [configuration file](/usage/ogre_configuration/ "Ogre configuration"), the *original_file_pattern* mapping will be used only if the parser finds GetThis.csv files in the folder and sub-folders.
-
-Typical usage:  
-```bash
-dfir-ogre folder \
-    --folder my/artifact/folder/
-    --configuration ogre.yaml
-    [--case <name>]
-```  
-
-
-
-## The `plugin` Command
-Run a plugin against a single file. Typical use‑case:
- - parse data that is not located in an orc archive.
- - debug a single plugin without the overhead of unpacking an entire ORC archive.
+Parse archives belonging to one computer. The configuration selects files,
+parsers, output formats, destinations, and the report directory.
 
 | Parameter | Meaning |
 |-----------|---------|
-| `--filename` | The file that the parser will receive. |
-| `--plugin_config` | Path to the plugin’s XML configuration. |
-| `--computer_name` | computer identifier that will be stored in the metadata. |
-| `--output_folder` | Destination directory for the parser’s output. |
-| `--output_type` | `file` (default) or `gzip`. Existing output files cause an error. |
-| `--output_format` | `jsonl` (default), `csv`, `normalized_jsonl`, `normalized_csv`, or `analytics_jsonl`. |
-| `--compression_level` | Gzip compression level, from 0 to 9; defaults to 5. Requires `--output_type gzip`. |
-| `--output_name` | Base filename template; defaults to `$file_name`. See placeholders below. |
-| `--output_date_format` | `iso` (default), `iso_utc`, `utc_naive`, or a custom chrono strftime pattern. |
-| `--params` | JSON object passed verbatim to the parser (some plugins need extra parameters). |
-| `--timeline` | If present, the parser is asked to emit timeline entries. |
-| `--timeline_include_undated` | Include timeline entries with a null timestamp when no date is available. Requires `--timeline`; incompatible with `analytics_jsonl`. |
-| `--include_empty` | Keep empty fields in the final JSON output. |
-| `--library` | optional, reference a [custom plugin library](/plugin-creation/custom_library/)  |
-| `--dry_run` | Validate the parser, input path, output options, and output names, then print a JSON plan without parsing the artifact or creating output files. |
+| `--archive` | **Required.** A `.7z` archive, comma-separated archive paths, an ORC `Outcome.json` path, or an inline JSON archive definition. |
+| `--configuration` | **Required.** Path to the YAML configuration. |
+| `--case` | Case name used when resolving the configuration. Default: `default_case`. |
+| `--password` | Optional password for the outer archives. Passwords for nested archives are configured with `inner_archive_password` in YAML. |
 
-Filename templates support `$computer_name`, `$parser`, `$file_name` (the input
-filename without its final extension), and `$timestamp` (one invocation timestamp
-in UTC, formatted as `YYYYMMDD_HHMMSS`). Braced placeholders such as
-`${file_name}` are also accepted. Quote templates with single quotes to prevent
-your shell from expanding them. Unknown placeholders, empty names, and names
-containing path separators or invalid filename characters cause an error.
+### Parse an ORC outcome
 
-OGRE appends the data type and format/compression extension automatically. For
-example, `--output_name '$computer_name-$file_name' --output_type gzip` can produce
-`WORKSTATION01-SRUDB.srum_application_resources.jsonl.gz`. The output directory
-remains controlled by `--output_folder`.
+```bash
+dfir-ogre orc \
+    --archive evidence/ORC_WorkStation_HOST01_Outcome.json \
+    --configuration dfir-ogre/configuration/ogre.yaml \
+    --case incident_001
+```
 
-All potential output paths are checked before parsing, including shared
-`ogre_metadata` files and timeline companion files for normalized formats.
-Existing targets cause an error; files are neither appended to nor overwritten.
-Choose a different output directory or filename for another invocation. Normalized
-metadata filenames are fixed and need a different directory if they already exist.
-A dry-run
-performs the same checks and lists possible files from every XML data-type
-mapping; a parser may produce only a subset when the artifact lacks those data.
-Dry-run does not validate artifact contents or execute the parser's mapping logic.
+Archive paths in an outcome file are resolved relative to that file. OGRE
+extracts selected artifacts, applies the configured mappings, writes the
+outputs, and creates a JSON processing report in `report_folder`. Check that
+report for extraction and parsing errors.
 
+### Parse several archives from one computer
 
-*Example*
+```bash
+dfir-ogre orc \
+    --archive 'evidence/host1_general.7z,evidence/host1_details.7z' \
+    --configuration dfir-ogre/configuration/ogre.yaml \
+    --case incident_001
+```
+
+The archives are treated as one collection. When an ORC hostname cannot be
+inferred from the first archive's name, its filename stem is used.
+
+### Supply archive metadata as JSON
+
+```bash
+dfir-ogre orc \
+    --archive '{"id":"collection-001","hostname":"HOST01","timestamp":"20261021_120000","unencrypted_data_files":["evidence/general.7z","evidence/details.7z"]}' \
+    --configuration dfir-ogre/configuration/ogre.yaml \
+    --case incident_001
+```
+
+The JSON object requires `id`, `hostname`, `timestamp`, and a nonempty
+`unencrypted_data_files` array. `timestamp` uses `YYYYMMDD_HHMMSS` and is
+interpreted as UTC. Optional `dir_tree` supplies a directory-tree value for
+configuration placeholders. Archive paths in an inline definition are relative
+to the working directory.
+
+## The `folder` Command
+
+Parse ordinary files from one computer without unpacking an archive. This also
+supports collections that have already been extracted from DFIR-ORC.
+
+| Parameter | Meaning |
+|-----------|---------|
+| `--folder` | **Required.** Root directory containing the source artifacts. Subdirectories are scanned. |
+| `--configuration` | **Required.** Path to the YAML configuration containing mappings and output definitions. |
+| `--computer_name` | Computer name stored in metadata. Defaults to the source directory's name. |
+| `--case` | Case name used when resolving the configuration. Default: `default_case`. |
+
+```bash
+dfir-ogre folder \
+    --folder evidence/HOST01 \
+    --configuration dfir-ogre/configuration/ogre.yaml \
+    --computer_name HOST01 \
+    --case incident_001
+```
+
+Files are read in place. `archive_file_pattern` rules match paths relative to
+the source root. `original_file_pattern` rules use original Windows paths from
+`GetThis.csv` files discovered throughout the collection; they do not infer
+original paths from the physical folder layout. Files without a matching index
+entry can still be selected by `archive_file_pattern` rules.
+
+Use `$relative_path` in YAML output definitions to preserve source directory
+context. In `output_folder` it retains directories; in `base_file_name` it is
+flattened into a filename. See [configuration placeholders](/usage/ogre_configuration/#placeholder-variables).
+
+Folder processing writes a JSON report containing the source folder and run ID.
+Extraction/preparation or parsing errors produce a nonzero exit status.
+
+## The `plugin` Command
+
+Run one parser against one existing file. The XML descriptor selects the parser
+and its data-type mappings. This is useful for individual artifacts and for
+checking a parser without preparing an archive or folder configuration.
+
+| Parameter | Meaning |
+|-----------|---------|
+| `--filename` | **Required.** Path to the input file. |
+| `--plugin_config` | **Required.** Path to the XML plugin descriptor. |
+| `--computer_name` | **Required.** Computer identifier stored in output metadata. |
+| `--output_folder` | **Required.** Destination directory; created during parsing if necessary. |
+| `--output_type` | `file` (default) or `gzip`. |
+| `--output_format` | `jsonl` (default), `csv`, `normalized_jsonl`, `normalized_csv`, or `analytics_jsonl`. See [output formats](/usage/artefacts_format/). |
+| `--compression_level` | Gzip compression level, 0–9; default: 5. Requires `--output_type gzip`. Level 0 retains gzip framing without compression. |
+| `--output_name` | Base filename template. Default: `$file_name`. See [filename templates](#filename-templates). |
+| `--output_date_format` | `iso` (default), `iso_utc`, `utc_naive`, or a custom chrono strftime pattern, such as `'%Y-%m-%d %H:%M:%S'`. |
+| `--params` | JSON object containing parser-specific parameters. Values are converted to strings before being passed to the parser. |
+| `--timeline` | Emit timeline entries using the XML timeline configuration. Off by default. |
+| `--timeline_include_undated` | Retain entries without dates as null-timestamp timeline entries. Requires `--timeline`; incompatible with `analytics_jsonl`. |
+| `--include_empty` | Include null fields in the output. Off by default. |
+| `--timeout` | Maximum worker runtime in seconds. Default: 60. |
+| `--library` | Additional Python library to import for [custom parsers](/plugin-creation/custom_library/). The library must be installed or importable in the active environment. |
+| `--dry_run` | Validate settings and print a JSON plan without parsing the artifact or creating output files. |
+
+### Parse an individual artifact
 
 ```bash
 dfir-ogre plugin \
-    --filename sample.txt \
-    --plugin_config plugins/sample_text.xml \
-    --computer_name WORKSTATION01 \
-    --output_folder ./tmp/plugin_out \
-    --params '{"ignore_header":true}'
+    --filename evidence/application.pf \
+    --plugin_config dfir-ogre-plugin-windows/configuration/prefetch.xml \
+    --computer_name HOST01 \
+    --output_folder output/prefetch
 ```
+
+With the default naming and format, this produces
+`output/prefetch/application.prefetch.jsonl`.
+
+### Filename templates
+
+The template controls the base filename. OGRE appends the XML data type and the
+format/compression extension automatically. Each data type stays in its own file,
+which is useful for artifacts such as SRUM that contain several providers.
+
+| Placeholder | Meaning |
+|-------------|---------|
+| `$file_name` | Input filename without its final extension; `SRUDB.dat` becomes `SRUDB`. |
+| `$computer_name` | Value supplied through `--computer_name`. |
+| `$parser` | Parser command from the XML descriptor, such as `Srum`. |
+| `$timestamp` | One invocation timestamp in UTC, formatted as `YYYYMMDD_HHMMSS`. |
+
+Braced placeholders such as `${file_name}` are also accepted. Use `$$` for a
+literal dollar sign. Quote templates with single quotes so your shell does not
+expand them. Unknown placeholders, empty names, path separators, and invalid
+filename characters cause an error. Use `--output_folder` to choose a directory.
+
+```bash
+dfir-ogre plugin \
+    --filename evidence/SRUDB.dat \
+    --plugin_config dfir-ogre-plugin-windows/configuration/srum.xml \
+    --computer_name HOST01 \
+    --output_folder output/srum \
+    --output_type gzip \
+    --compression_level 5 \
+    --output_name '${computer_name}_${parser}_${file_name}_${timestamp}'
+```
+
+One resulting filename could be
+`HOST01_Srum_SRUDB_20261021_120000.srum_application_resources.jsonl.gz`.
+
+### Preview a run
+
+Add `--dry_run` to inspect the parser, resolved base name, output settings, and
+possible files:
+
+```bash
+dfir-ogre plugin \
+    --filename evidence/SRUDB.dat \
+    --plugin_config dfir-ogre-plugin-windows/configuration/srum.xml \
+    --computer_name HOST01 \
+    --output_folder output/srum \
+    --output_type gzip \
+    --output_format normalized_jsonl \
+    --timeline \
+    --dry_run
+```
+
+The JSON plan includes `parser`, `input_file`, `output_folder`, `base_file_name`,
+`output_type`, `format`, `date_format`, timeline options, and a `files` array.
+It lists possible files from every XML mapping. A real run may produce only a
+subset when the artifact lacks some data types. Dry-run checks that the input
+file exists, but does not read its contents or execute the parser's mapping
+logic. The computer name is supplied by the caller; no host identification is
+performed on the artifact.
+
+A later invocation expands `$timestamp` again, so a timestamped filename can
+differ from the one shown in an earlier preview.
+
+### Existing files and failures
+
+The plugin command errors if a planned output target already exists. It neither
+appends to nor overwrites existing files, including when another invocation
+creates a target while parsing is in progress. This applies to data files and,
+for normalized/analytics formats, shared metadata and timeline companion files.
+
+For a base name of `SRUDB`, `normalized_jsonl` with gzip and timeline enabled can
+produce:
+
+```text
+SRUDB.srum_application_resources.jsonl.gz
+SRUDB.srum_application_resources.tl.jsonl.gz
+ogre_metadata.jsonl.gz
+```
+
+Changing the base name can resolve a data-file collision. Shared metadata names
+are fixed, so an existing `ogre_metadata` file requires a new output directory.
+These existence checks also run in dry-run mode.
+
+Parser errors, output errors, unknown parsers, crashes, and timeouts return a
+nonzero exit status. A parser can report errors while still producing valid
+records; those partial results remain available. Check the errors before using
+them as a complete extraction.
+
+## The `timeline` Command
+
+Parse ORC archives and create one CSV sorted by timestamp. Use the supplied
+`ogre_timeline.yaml`, which configures the intermediate timeline files expected
+by this command.
+
+| Parameter | Meaning |
+|-----------|---------|
+| `--archive` | **Required.** Archive input in the same forms accepted by `orc`. |
+| `--configuration` | **Required.** Path to the timeline YAML configuration. |
+| `--timeline_folder` | **Required.** Destination for `<computer>.timeline.csv`. |
+| `--case` | Case name used when resolving the configuration. Default: `default_case`. |
+| `--password` | Optional password for the outer archives. |
+
+```bash
+dfir-ogre timeline \
+    --archive evidence/ORC_WorkStation_HOST01_Outcome.json \
+    --configuration dfir-ogre/configuration/ogre_timeline.yaml \
+    --timeline_folder output/timeline \
+    --case incident_001
+```
+
+The final CSV remains in `--timeline_folder`. The intermediate directories
+specified by this command's `temp_folder` and `output_folder` configuration are
+removed after timeline generation; use dedicated locations for those settings.
 
 ## The `list` Command
 
-List every python parsers that can be used by an `ogre.yaml` configuration file
+List parser names and descriptions from the Python libraries selected by
+`plugin_prefixes` in the YAML configuration.
 
-*Usage*
+| Parameter | Meaning |
+|-----------|---------|
+| `--configuration` | **Required.** Path to the YAML configuration. |
+| `--case` | Case name used when resolving the configuration. Default: `default_case`. |
 
 ```bash
-dfir-ogre list --configuration ogre.yaml
+dfir-ogre list \
+    --configuration dfir-ogre/configuration/ogre.yaml \
+    --case incident_001
 ```
 
-*What it does*  
-- Loads every Python package whose name begins with one of the `plugin_prefixes` declared in the configuration.  
-- Instantiates each discovered parser and prints its name and description.
-
-Output (truncated)
-
-```
-┌───────────┬───────────────────────────────────────┐
-│ Command   │ Description                           │
-├───────────┼───────────────────────────────────────┤
-│ Csv       │ Generic CSV parser                    │
-│ Evtx      │ Windows Event Log parser              │
-│ NTFSInfo  │ NTFSInfo parser                       │
-│ Void      │ No‑op parser – useful for testing     │
-└───────────┴───────────────────────────────────────┘
-```
+The output is a table of parser commands and descriptions. Use the matching XML
+descriptor when running a parser with `dfir-ogre plugin`.

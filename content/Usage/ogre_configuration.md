@@ -1,10 +1,14 @@
 ---
 date: '2026-01-06T15:52:05+01:00'
+lastmod: '2026-10-21'
 title: 'Configuration guide'
 weight: 2
 ---
 
-Most of **DFIR-OGRE** commands relies on a `ogre.yaml` configuration file, It tells the CLI where to write outputs, how the generated records should be formatted and which plugins to run on which file.
+The `orc`, `folder`, `timeline`, and `list` commands use an `ogre.yaml`
+configuration file. It selects plugin libraries, maps source files to parsers,
+and defines output destinations and formats. The single-file `plugin` command
+takes those output settings directly on the command line.
 
 {{< callout type="important" >}}Ready to use `ogre.yaml` files are provided in the `dfir-ogre/configuration/` folder.
 {{< /callout >}}
@@ -48,7 +52,7 @@ output:
         type: file
         format: jsonl
         date_format: iso_utc
-        with_timeline: true
+        with_timeline: false
         include_empty_field: false
         output_folder: $output_folder/raw/$mapping_label/$computer_name
         base_file_name: $file_name
@@ -64,16 +68,16 @@ mapping:
           
     # NTFSInfo
     - archive_file_pattern: 'NTFSInfo.*\.csv$'
-    plugin_file: $plugin_folder/ntfs_info.xml
-    mapping_label: ntfs_info
-    output:
-        - timeline
+      plugin_file: $plugin_folder/ntfs_info.xml
+      mapping_label: ntfs_info
+      output:
+          - timeline
 
 ```
 
 ## General Settings
 
-- **plugin_prefixes** : A comma separated list of Python package name prefixes that will be loaded to discover available parsers.  
+- **plugin_prefixes**: A YAML list of Python package name prefixes used to discover available parsers.
 - **case** : name of the case.  
 - **output_folder** : Base directory where all generated artefacts are stored.
 - **temp_folder** : Temporary directory used while processing an ORC archive (e.g., to unpack files)  
@@ -82,7 +86,7 @@ mapping:
 - **inner_archive_password** : Default password used for encrypted inner archives.  
 
 
-## Place‑holder Variables
+## Placeholder Variables
 
 The configuration file uses a few **runtime placeholders** that are substituted during the parsing:
 
@@ -91,10 +95,17 @@ The configuration file uses a few **runtime placeholders** that are substituted 
 | `$output_folder` | The global `output_folder` defined at the top of the file (with `$case` already replaced). |
 | `$plugin_folder` | The global 'plugin_folder' defined at the top of the file |
 | `$case` | The global 'case' name defined at the top of the file |
-| `$computer_name` | The computer name extracted from the ORC metadata. |
+| `$computer_name` | Computer name from ORC metadata, or the name selected for a `folder` run. |
 | `$mapping_label` | The `mapping_label` of the *current* mapping entry. |
 | `$file_name` | Base name of the extracted source file (without extension). |
+| `$parser` | Parser command from the XML descriptor. |
+| `$timestamp` | Collection timestamp in `YYYYMMDD_HHMMSS` form; folder runs use the invocation time. |
+| `$archive_name` | Source archive's filename stem; folder runs use the source folder's name. |
+| `$relative_path` | Source parent path. Preserves directories in `output_folder`; flattens separators to underscores in `base_file_name`. |
 | `$dir_tree` | Directory tree defined when using the CLI whith json parameters |
+
+These variables belong to YAML configuration resolution. For the four variables
+available to the single-file CLI, see [plugin filename templates](/usage/command_line_usage/#filename-templates).
 
 ## Output Section: how to write extracted artefacts
 
@@ -123,20 +134,27 @@ This example defines an output template named `timeline` that will write JSONL t
   - *gzip*: compresses the data into a gzip file.
 
 - **format**: Defines the output data format:
-  - *json*: data is written in JSONL format.
-  - *csv*: The is are written in the CSV format.
-  - *normalized_json*: data is extracted in a normalized JSONL format that avoids data duplication (see [output format](/usage/artefacts_format/#normalized-formats).
-  - *normalized_csv*: data is extracted in a normalized JSONL format that avoids data duplication (see [output format](/usage/artefacts_format/#normalized-formats).
+  - `jsonl`: JSON Lines, with metadata embedded in each record.
+  - `csv`: semicolon-delimited CSV.
+  - `normalized_jsonl`: data, metadata, and optional timeline records in separate JSONL files.
+  - `normalized_csv`: data, metadata, and optional timeline records in separate CSV files.
+  - `analytics_jsonl`: JSONL with an analytics envelope around each data record, plus separate metadata and optional timeline files.
+
+  See [output formats](/usage/artefacts_format/) for the record layouts.
 
 
 - **date_format**: The output date format. The following formats are supported:
-  - *iso*: ISO‑8601 format with timezone information. Example: *1978-04-16T10:31:42.123456+02:00*.
-  - *iso_utc*: ISO‑8601 format converted to UTC with timezone information. Example: *1978-04-16T08:31:42.123456+00:00*.
+  - `iso` or `iso_utc`: ISO-8601 in UTC with microseconds and an explicit offset. Both currently produce values such as `1978-04-16T08:31:42.123456+00:00`.
   - *utc_naive*: Simple UTC format without timezone (some downstream systems may prefer this incomplete format). Example: *1978-04-16 08:31:42.123456*.
+  - A custom chrono strftime pattern, such as `'%Y-%m-%d %H:%M:%S'`.
 
-- **with_timeline**: Indicates whether a timeline format should be included. During parsing, an error will be raised if the plugin does not support timeline generation.
+- **with_timeline**: Request timeline entries using the XML descriptor's timeline
+  configuration. Use a descriptor defining timeline rules to obtain those entries.
 
-**timeline_include_undated** with **with\_timeline: true** indicate whether to emit timeline records even if there is no valid date for an entry. Records are inserted with **timestamp: null** and **timestamp_meaning: "empty placeholder"** 
+- **timeline_include_undated**: With `with_timeline: true`, emit a placeholder
+  timeline entry when no valid date is available, using `timestamp: null` and
+  `timestamp_meaning: "empty placeholder"`. Defaults to `false` and is incompatible
+  with `analytics_jsonl`.
 
 - **include_empty_field**: Indicates whether empty fields should be included in the output.
 
@@ -144,7 +162,9 @@ This example defines an output template named `timeline` that will write JSONL t
 
 - **base_file_name**: The output file name; note in the example using placeholder variables.
 
-- **compression_level**: (Optional, between 1 and 9) Specifies the desired compression level for gzip output. Level 1 provides the lowest compression (and fastest speed). Default value: 5.
+- **compression_level**: Optional gzip compression level from 0 to 9. Level 0
+  disables compression while retaining gzip framing; level 1 favors speed and
+  level 9 favors compression. Default: 5.
 
 
 ## Mapping Section: Which plugin processes which artefact?
