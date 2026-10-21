@@ -182,12 +182,39 @@ Run a plugin against a single file. Typical use‑case:
 | `--plugin_config` | Path to the plugin’s XML configuration. |
 | `--computer_name` | computer identifier that will be stored in the metadata. |
 | `--output_folder` | Destination directory for the parser’s output. |
-| `--output_format` | the [output format](/usage/artefacts_format/). defaults to `jsonl` |
-| `--output_date_format` | the output date format (`iso`, `iso_utc` or `naive_utc`). defaults to `iso_utc` |
+| `--output_type` | `file` (default) or `gzip`. Existing output files cause an error. |
+| `--output_format` | `jsonl` (default), `csv`, `normalized_jsonl`, `normalized_csv`, or `analytics_jsonl`. |
+| `--compression_level` | Gzip compression level, from 0 to 9; defaults to 5. Requires `--output_type gzip`. |
+| `--output_name` | Base filename template; defaults to `$file_name`. See placeholders below. |
+| `--output_date_format` | `iso` (default), `iso_utc`, `utc_naive`, or a custom chrono strftime pattern. |
 | `--params` | JSON object passed verbatim to the parser (some plugins need extra parameters). |
 | `--timeline` | If present, the parser is asked to emit timeline entries. |
+| `--timeline_include_undated` | Include timeline entries with a null timestamp when no date is available. Requires `--timeline`; incompatible with `analytics_jsonl`. |
 | `--include_empty` | Keep empty fields in the final JSON output. |
 | `--library` | optional, reference a [custom plugin library](/plugin-creation/custom_library/)  |
+| `--dry_run` | Validate the parser, input path, output options, and output names, then print a JSON plan without parsing the artifact or creating output files. |
+
+Filename templates support `$computer_name`, `$parser`, `$file_name` (the input
+filename without its final extension), and `$timestamp` (one invocation timestamp
+in UTC, formatted as `YYYYMMDD_HHMMSS`). Braced placeholders such as
+`${file_name}` are also accepted. Quote templates with single quotes to prevent
+your shell from expanding them. Unknown placeholders, empty names, and names
+containing path separators or invalid filename characters cause an error.
+
+OGRE appends the data type and format/compression extension automatically. For
+example, `--output_name '$computer_name-$file_name' --output_type gzip` can produce
+`WORKSTATION01-SRUDB.srum_application_resources.jsonl.gz`. The output directory
+remains controlled by `--output_folder`.
+
+All potential output paths are checked before parsing, including shared
+`ogre_metadata` files and timeline companion files for normalized formats.
+Existing targets cause an error; files are neither appended to nor overwritten.
+Choose a different output directory or filename for another invocation. Normalized
+metadata filenames are fixed and need a different directory if they already exist.
+A dry-run
+performs the same checks and lists possible files from every XML data-type
+mapping; a parser may produce only a subset when the artifact lacks those data.
+Dry-run does not validate artifact contents or execute the parser's mapping logic.
 
 
 *Example*
