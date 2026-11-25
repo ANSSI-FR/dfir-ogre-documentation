@@ -34,11 +34,33 @@ A polymorphic type representing various serializable data types.
 - `Null()`: Represents a null value.
 - `String(v: str)`: Represents a string.
 - `Array(v: List[Value])`: Represents a list of `Value` objects.
-- `Int(v: int)`: Represents an integer.
+- `Int(v: int)`: Represents a signed 64-bit integer (`-2**63` through `2**63 - 1`).
+- `UInt(v: int)`: Represents an unsigned 64-bit integer (`0` through `2**64 - 1`).
 - `Float(v: float)`: Represents a floating-point number.
 - `Bool(v: bool)`: Represents a boolean.
 - `Date(v: datetime)`: Represents a UTC timestamp.
 - `Object(v: Record)`: Represents a nested `Record`.
+
+`Value.UInt(...)` rejects Python integers outside its bounds. The digits are
+preserved exactly in JSON/JSONL and CSV output, including nested arrays and
+objects. Native JSON, JSONL and EVTX integers use `Int` when representable and
+`UInt` for larger positive values through `2**64 - 1`.
+
+Use `Parser.UInt()` when constructing an explicitly unsigned decimal field
+mapping, or `parser="UInt"` in XML. `Parser.Int()` remains signed. Explicit
+integer mappings check the range for strings, native JSON numbers and mapped
+array elements. Missing values follow the existing null/default behavior;
+negative, fractional and overflowing UInt values are parsing errors. UInt can
+also be used in `Parser.Dynamic(...)` alternatives.
+When an integer field belongs to `multi_input`, validation preserves its source
+text, including leading zeros, so an existing joined identifier is not rewritten.
+
+```python
+from dfir_ogre_common import Parser, Value
+
+maximum_counter = Value.UInt(18446744073709551615)
+counter_parser = Parser.UInt()
+```
 
 ---
 

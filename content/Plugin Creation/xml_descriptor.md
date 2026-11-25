@@ -212,7 +212,8 @@ Maps a single input column/element to an output field.
 | `String`         | Returns the raw string value                      | -                             |
 | `StringToUpper`  | Converts to uppercase                             | -                             |
 | `StringToLower`  | Converts to lowercase                             | -                             |
-| `Int`            | Parses as 64-bit integer                           | -                             |
+| `Int`            | Parses as signed 64-bit integer                    | -                             |
+| `UInt`           | Parses as unsigned 64-bit decimal integer          | -                             |
 | `Float`          | Parses as floating-point number                    | -                             |
 | `Bool`           | Parses as boolean                                  | -                             |
 | `IntRadix`       | Parses as integer with explicit radix              | `radix` (unsigned int, e.g. `"16"`) |
@@ -222,6 +223,28 @@ Maps a single input column/element to an output field.
 | `Split`          | Splits a string by a delimiter                      | `split_by` (e.g., `";"`)     |
 | `Extension`      | Uses a custom Rust extension parser                 | -                             |
 | `PyParser`       | Uses a Python parser extension                     | -                             |
+
+`Int` accepts values from `-9223372036854775808` to `9223372036854775807`.
+`UInt` accepts values from `0` to `18446744073709551615`; negative, fractional,
+invalid and overflowing input is rejected. Both parsers use checked conversion,
+including for native JSON numbers and elements of explicitly mapped arrays.
+UInt also supports field defaults and Dynamic parser alternatives.
+Integer child fields of `multi_input` are validated before joining. Their
+original text is retained, including leading zeros; missing, null or empty
+inputs use a declared default. A null native JSON scalar remains null.
+
+```xml
+<field input="counter" output="counter" parser="UInt" />
+<array>
+  <field input="counters" parser="UInt" />
+</array>
+```
+
+JSON, JSONL and EVTX numbers without an explicit integer mapping retain their
+native numeric representation: signed `Int` when representable, otherwise
+unsigned `UInt` through `2^64 - 1`. JSON/JSONL and CSV exports retain the exact
+decimal digits. Configure downstream readers to retain unsigned 64-bit
+precision; converting these values to floating point can round them.
 
 ---
 
