@@ -26,7 +26,7 @@ Each row is a path configured for exclusion from Volume Shadow Copy or backup pr
 |---|---|---|
 | `type` | String | type of the excluded entry (e.g., file or folder) |
 | `name` | String | display name of the excluded item |
-| `file_path` | String | full filesystem path of the excluded file or folder |
+| `file_path[]` | Array[String] | full filesystem path of the excluded file or folder |
 | `key_path` | String | full registry key name |
 | `key_modif_time` | DateTime | last modification timestamp of the registry key |
 | `key_security` | Object |  |

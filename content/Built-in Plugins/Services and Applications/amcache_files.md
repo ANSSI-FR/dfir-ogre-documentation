@@ -37,10 +37,9 @@ Each row is a file inventory record from the Amcache hive, with path, normalized
 | `product_version` | String | Product version |
 | `version_language` | Int | Microsoft Language ID in decimal |
 | `short_name` | String | ShortName of the file as found in the MFT |
-| `original_filename` | String | Original FileName field of the PE header |
 | `file_version` | String | File version |
 | `image_size` | Int | 'SizeOfImage' field of the PE header |
-| `file_description` | String | File description |
+| `file_description` | String | File description from the PE version resource (legacy Root\File entries only) |
 | `linker_version` | String | combination of the 'MajorLinkerVersion' and 'MinorLinkerVersion' fields of the PE header |
 | `link_date` | DateTime | PE link (compilation) date |
 | `binary_type` | String | 32BIT or 64BIT binary |
@@ -49,8 +48,8 @@ Each row is a file inventory record from the Amcache hive, with path, normalized
 | `long_path_hash` | String | SHA-1 of the complete lowercase file path in UTF-16 |
 | `unique_id` | String | identifies the file location if it is in a program installation directory |
 | `volume_guid` | String | identifier of the volume where the file is located |
-| `is_pe_file` | Bool | Whether the file is a PE executable |
-| `is_os_component` | Bool | Whether the file is a Windows OS component |
+| `is_pe_file` | Int | Whether the file is a PE executable |
+| `is_os_component` | Int | Whether the file is a Windows OS component |
 | `key_path` | String | full registry key name |
 | `key_modif_time` | DateTime | last modification timestamp of the registry key |
 | `key_security` | Object |  |
@@ -75,3 +74,4 @@ Each row is a file inventory record from the Amcache hive, with path, normalized
 | `key_security.dacl_aces[].object_type_guid` | String | GUID identifying the object type governed by the ACE |
 | `key_security.dacl_aces[].inherited_object_type_guid` | String | GUID identifying the inherited object type governed by the ACE |
 | `key_security.dacl_aces[].raw_hex` | String | raw ACE bytes preserved as hexadecimal |
+| `version` | String | Version value of InventoryApplicationFile entries |

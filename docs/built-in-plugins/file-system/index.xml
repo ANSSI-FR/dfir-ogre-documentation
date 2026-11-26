@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DFIR-OGRE documentation – File System</title>
-    <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/</link>
+    <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/</link>
     <description>Recent content in File System on DFIR-OGRE documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Backup Exclude</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/backup_exclude/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/backup_exclude/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/backup_exclude/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/backup_exclude/</guid>
       <description>
         
         
@@ -82,8 +82,8 @@ Python Parser: &lt;strong&gt;RegSnapExclude&lt;/strong&gt;&lt;/div&gt;
 					&lt;td&gt;display name of the excluded item&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;file_path&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;file_path[]&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Array[String]&lt;/td&gt;
 					&lt;td&gt;full filesystem path of the excluded file or folder&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
@@ -214,10 +214,10 @@ Python Parser: &lt;strong&gt;RegSnapExclude&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Getthis</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/getthis/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/getthis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/getthis/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/getthis/</guid>
       <description>
         
         
@@ -445,10 +445,10 @@ Python Parser: &lt;strong&gt;GetThis&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>I30 info</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/i30_info/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/i30_info/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/i30_info/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/i30_info/</guid>
       <description>
         
         
@@ -580,10 +580,10 @@ Python Parser: &lt;strong&gt;I30Info&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Mass Storage</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/mass_storage/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/mass_storage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/mass_storage/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/mass_storage/</guid>
       <description>
         
         
@@ -754,8 +754,8 @@ Python Parser: &lt;strong&gt;RegMassStorageSystem&lt;/strong&gt;&lt;/div&gt;
 					&lt;td&gt;reason string associated with device install or removal events&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;registry_path&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;registry_path[]&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Array[String]&lt;/td&gt;
 					&lt;td&gt;registry key paths that contributed to this device record&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
@@ -764,8 +764,8 @@ Python Parser: &lt;strong&gt;RegMassStorageSystem&lt;/strong&gt;&lt;/div&gt;
 					&lt;td&gt;path to the SetupAPI sample file used for this record&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;users&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;users[]&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Array[String]&lt;/td&gt;
 					&lt;td&gt;owner SID(s) of the registry entries&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
@@ -826,10 +826,10 @@ Python Parser: &lt;strong&gt;RegMassStorageSystem&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Merge File</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/merge_file/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/merge_file/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/merge_file/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/merge_file/</guid>
       <description>
         
         
@@ -870,11 +870,318 @@ Python Parser: &lt;strong&gt;Merge&lt;/strong&gt;&lt;/div&gt;
     </item>
     
     <item>
-      <title>Ntfs Info</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/ntfs_info/</link>
+      <title>MFT</title>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/mft/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/ntfs_info/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/mft/</guid>
+      <description>
+        
+        
+        &lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-purple-200 hx:bg-purple-100 hx:text-purple-900 hx:dark:border-purple-200/30 hx:dark:bg-purple-900/30 hx:dark:text-purple-200&#34;&gt;
+  &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;svg height=1.2em class=&#34;hx:inline-block hx:align-middle&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;Data Type: &lt;strong&gt;mft&lt;/strong&gt; &lt;br&gt;
+Python Parser: &lt;strong&gt;MFT&lt;/strong&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3&gt;Description&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;description&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Extracts MFT file records from a standalone raw $MFT. Output fields and qualifiers follow NTFSInfo naming scheme.&lt;/p&gt;
+&lt;p&gt;It includes deleted records, sequence-aware reconstructed paths, $SI/$FN timestamps, file attributes, logical stream sizes, ADS metadata and USN.&lt;/p&gt;
+&lt;p&gt;Unknown parent chains use &lt;em&gt;$OrphanFiles&lt;/em&gt;.&lt;/p&gt;
+&lt;h3&gt;Timeline&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;timeline&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#timeline&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Timeline Field&lt;/th&gt;
+					&lt;th&gt;Data Field&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Description&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;file_path&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Additional Description&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;file_size&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;Fields&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;fields&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#fields&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Output Name&lt;/th&gt;
+					&lt;th&gt;Data Type&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_path&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;full path (path+name) of the file, rebuilt from the parent chain&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;parent&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;full parent directory path of the entry (orphaned records are under $OrphanFiles)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_name&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;name of the file without path&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;extension&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;file extension (e.g., .txt, .exe)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_size&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Int&lt;/td&gt;
+					&lt;td&gt;logical size of the unnamed data stream in bytes, absent when unknown&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_in_use&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Bool&lt;/td&gt;
+					&lt;td&gt;flag indicating whether the MFT record is allocated (true) or free (false)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;sequence_number&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Int&lt;/td&gt;
+					&lt;td&gt;sequence number of the MFT record&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;record_number&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Int&lt;/td&gt;
+					&lt;td&gt;index of the MFT record&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;parent_sequence_number&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Int&lt;/td&gt;
+					&lt;td&gt;sequence number of the parent directory reference&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;parent_record_number&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Int&lt;/td&gt;
+					&lt;td&gt;record number of the parent directory&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;hard_link_count&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Int&lt;/td&gt;
+					&lt;td&gt;hard link count stored in the MFT record header&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;short_name&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;DOS 8.3 alias when it can be associated unambiguously with this link&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;ads[]&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Array[Object]&lt;/td&gt;
+					&lt;td&gt;alternate data streams as name/size objects; an empty array when none are found; CSV stores the array as JSON in one cell&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;ads[].name&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;alternate data stream name&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;ads[].size&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;UInt&lt;/td&gt;
+					&lt;td&gt;logical stream size in bytes; null when VCN-0 metadata is unavailable (omitted from JSONL when empty fields are disabled)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_attribute_raw&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;raw FILE_ATTRIBUTE bitmask in hexadecimal, including unknown bits&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_attributes_archive&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Bool&lt;/td&gt;
+					&lt;td&gt;archive attribute flag&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_attributes_no_scrub_data&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Bool&lt;/td&gt;
+					&lt;td&gt;no-scrub-data attribute flag&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_attributes_compressed&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Bool&lt;/td&gt;
+					&lt;td&gt;compressed attribute flag&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_attributes_directory&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Bool&lt;/td&gt;
+					&lt;td&gt;true when the MFT record is a directory&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_attributes_encrypted&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Bool&lt;/td&gt;
+					&lt;td&gt;encrypted attribute flag&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_attributes_hidden&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Bool&lt;/td&gt;
+					&lt;td&gt;hidden attribute flag&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_attributes_not_content_indexed&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Bool&lt;/td&gt;
+					&lt;td&gt;not-content-indexed attribute flag&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_attributes_reparse_point&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Bool&lt;/td&gt;
+					&lt;td&gt;reparse-point attribute flag&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_attributes_normal&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Bool&lt;/td&gt;
+					&lt;td&gt;normal attribute flag&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_attributes_offline&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Bool&lt;/td&gt;
+					&lt;td&gt;offline attribute flag&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_attributes_sparse_file&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Bool&lt;/td&gt;
+					&lt;td&gt;sparse-file attribute flag&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_attributes_readonly&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Bool&lt;/td&gt;
+					&lt;td&gt;read-only attribute flag&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_attributes_system&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Bool&lt;/td&gt;
+					&lt;td&gt;system attribute flag&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_attributes_temporary&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Bool&lt;/td&gt;
+					&lt;td&gt;temporary attribute flag&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_attributes_virtual&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Bool&lt;/td&gt;
+					&lt;td&gt;virtual attribute flag&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_attributes_recall_on_data_access&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Bool&lt;/td&gt;
+					&lt;td&gt;recall-on-data-access attribute flag&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_attributes_device&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Bool&lt;/td&gt;
+					&lt;td&gt;device attribute flag&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_attributes_ea&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Bool&lt;/td&gt;
+					&lt;td&gt;EA / recall-on-open shared bit (0x40000); a raw MFT cannot distinguish these aliases&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_attributes_pinned&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Bool&lt;/td&gt;
+					&lt;td&gt;pinned attribute flag&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_attributes_integrity_stream&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Bool&lt;/td&gt;
+					&lt;td&gt;integrity-stream attribute flag&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_attributes_recall_on_open&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Bool&lt;/td&gt;
+					&lt;td&gt;recall-on-open / EA shared bit (0x40000); a raw MFT cannot distinguish these aliases&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_attributes_unpinned&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Bool&lt;/td&gt;
+					&lt;td&gt;unpinned attribute flag&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;usn_number&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Int&lt;/td&gt;
+					&lt;td&gt;last USN of the record, from $STANDARD_INFORMATION&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;owner_id&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Int&lt;/td&gt;
+					&lt;td&gt;owner identifier from $STANDARD_INFORMATION&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;security_id&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Int&lt;/td&gt;
+					&lt;td&gt;security descriptor identifier from $STANDARD_INFORMATION&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_name_flags&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Int&lt;/td&gt;
+					&lt;td&gt;$FILE_NAME namespace (0 POSIX, 1 Win32, 2 DOS, 3 Win32 and DOS)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;fn_creation_date&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;DateTime&lt;/td&gt;
+					&lt;td&gt;creation timestamp of the $FILE_NAME attribute&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;fn_lastmod_date&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;DateTime&lt;/td&gt;
+					&lt;td&gt;last modification timestamp of the $FILE_NAME attribute&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;fn_lastaccess_date&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;DateTime&lt;/td&gt;
+					&lt;td&gt;last access timestamp of the $FILE_NAME attribute&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;fn_lastchange_date&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;DateTime&lt;/td&gt;
+					&lt;td&gt;MFT record change timestamp of the $FILE_NAME attribute&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;si_creation_date&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;DateTime&lt;/td&gt;
+					&lt;td&gt;creation timestamp of the $STANDARD_INFORMATION attribute&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;si_lastmod_date&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;DateTime&lt;/td&gt;
+					&lt;td&gt;last modification timestamp of the $STANDARD_INFORMATION attribute&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;si_lastaccess_date&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;DateTime&lt;/td&gt;
+					&lt;td&gt;last access timestamp of the $STANDARD_INFORMATION attribute&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;si_lastchange_date&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;DateTime&lt;/td&gt;
+					&lt;td&gt;MFT record change timestamp of the $STANDARD_INFORMATION attribute&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Ntfs Info</title>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/ntfs_info/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/ntfs_info/</guid>
       <description>
         
         
@@ -1238,6 +1545,11 @@ Python Parser: &lt;strong&gt;NTFSInfo&lt;/strong&gt;&lt;/div&gt;
 					&lt;td&gt;String&lt;/td&gt;
 					&lt;td&gt;subsystem type defined in the PE header (e.g., GUI, Console)&lt;/td&gt;
 			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;volume_id&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;identifier of the volume that holds the file, as in usninfo and volstats&lt;/td&gt;
+			&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
 
@@ -1246,10 +1558,10 @@ Python Parser: &lt;strong&gt;NTFSInfo&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Pending Rename</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/pending_rename/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/pending_rename/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/pending_rename/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/pending_rename/</guid>
       <description>
         
         
@@ -1435,10 +1747,10 @@ Python Parser: &lt;strong&gt;RegPendingRename&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Recycle Bin</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/recycle_bin/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/recycle_bin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/recycle_bin/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/recycle_bin/</guid>
       <description>
         
         
@@ -1494,7 +1806,7 @@ Python Parser: &lt;strong&gt;RecycleBin&lt;/strong&gt;&lt;/div&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;header&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;Int&lt;/td&gt;
 					&lt;td&gt;INFO2 file version identifier (1 = Vista/7, 2 = Windows 10+)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
@@ -1510,10 +1822,10 @@ Python Parser: &lt;strong&gt;RecycleBin&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Shellbags</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/shellbags/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/shellbags/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/shellbags/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/shellbags/</guid>
       <description>
         
         
@@ -1743,10 +2055,10 @@ Python Parser: &lt;strong&gt;RegShellBag&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Srum Sdp Physical Disk</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/srum_sdp_physical_disk/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/srum_sdp_physical_disk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/srum_sdp_physical_disk/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/srum_sdp_physical_disk/</guid>
       <description>
         
         
@@ -1823,10 +2135,10 @@ Python Parser: &lt;strong&gt;Srum&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Srum Sdp Volume</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/srum_sdp_volume/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/srum_sdp_volume/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/srum_sdp_volume/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/srum_sdp_volume/</guid>
       <description>
         
         
@@ -1908,10 +2220,10 @@ Python Parser: &lt;strong&gt;Srum&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Usn Info</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/usn_info/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/usn_info/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/usn_info/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/usn_info/</guid>
       <description>
         
         
@@ -2160,10 +2472,10 @@ Python Parser: &lt;strong&gt;USNInfo&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Volstats</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/volstats/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/volstats/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/volstats/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/volstats/</guid>
       <description>
         
         
@@ -2287,10 +2599,10 @@ Python Parser: &lt;strong&gt;Csv&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Vss Snapshot</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/vss_snapshot/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/vss_snapshot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/file-system/vss_snapshot/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/file-system/vss_snapshot/</guid>
       <description>
         
         

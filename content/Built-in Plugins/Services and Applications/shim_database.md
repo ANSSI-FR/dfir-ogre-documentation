@@ -50,3 +50,5 @@ Each row identifies an installed Windows application-compatibility shim database
 | `key_security.dacl_aces[].object_type_guid` | String | GUID identifying the object type governed by the ACE |
 | `key_security.dacl_aces[].inherited_object_type_guid` | String | GUID identifying the inherited object type governed by the ACE |
 | `key_security.dacl_aces[].raw_hex` | String | raw ACE bytes preserved as hexadecimal |
+| `guid` | String | GUID of the installed shim database (name of its InstalledSDB key) |
+| `description` | String | DatabaseDescription value of the shim database |

@@ -26,7 +26,7 @@ Each row is a TCP or UDP endpoint from a Sysinternals Tcpvcon snapshot, with own
 | Output Name | Data Type | Description |
 |---|---|---|
 | `process_name` | String | Process name |
-| `pid` | String | Process identifier (PID) |
+| `pid` | Int | Process identifier (PID) |
 | `protocol` | String | Protocol.  e.g. TCP, UDP, TCPV6, UDPV6 |
 | `state` | String | LISTENING, ESTABLISHED, … (can be empty for UDP) |
 | `local_adress` | String | Local IP address |

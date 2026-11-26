@@ -35,7 +35,7 @@ Each row is a program inventory entry from a FullCompatReport, with program iden
 | `indicators[].run` | String | Registry key/value that launched the program |
 | `files[]` | Array[Object] |  |
 | `files[].name` | String | File name |
-| `files[].sha1` | String | SHA-1 hash of the file |
+| `files[].sha1` | Python | SHA-1 hash of the file |
 | `files[].size` | IntRadix | File size in bytes |
 | `files[].product` | String | Product name |
 | `files[].company` | String | Company (vendor) name |

@@ -40,21 +40,21 @@ Each row is a Windows service or driver definition from a SYSTEM-hive control se
 | `is_service_win32` | Bool | whether the service is a WIN32 service |
 | `image_path` | String | command line or executable path that the service runs |
 | `group` | String | load‑order group name the service belongs to |
-| `tag` | String | numeric tag used for service ordering |
-| `depend_on_group` | String | service groups this service depends on |
-| `depend_on_service` | String | other services this service depends on |
+| `tag` | Int | numeric tag used for service ordering |
+| `depend_on_group[]` | Array[String] | service groups this service depends on |
+| `depend_on_service[]` | Array[String] | other services this service depends on |
 | `delete_flag` | String | flag indicating the service is marked for deletion |
 | `object_name` | String | kernel object name for driver services |
 | `run_as` | String | account name under which the service runs |
-| `wow64` | String | WOW64 flag indicating a 32‑bit service on a 64‑bit OS |
+| `wow64` | Int | WOW64 flag indicating a 32‑bit service on a 64‑bit OS |
 | `alias` | String | alternative name (alias) for the service |
-| `delayed_auto_start` | String | whether the service uses delayed automatic start |
-| `preshutdown_timeout` | String | pre‑shutdown timeout value (milliseconds) |
+| `delayed_auto_start` | Int | whether the service uses delayed automatic start |
+| `preshutdown_timeout` | Int | pre‑shutdown timeout value (milliseconds) |
 | `service_sid_type` | String | SID type assigned to the service (None, Unrestricted, Restricted) |
-| `required_privileges` | String | list of privileges the service requires |
+| `required_privileges[]` | Array[String] | list of privileges the service requires |
 | `launch_protected` | String | protected‑process level of the service (None, Windows, Light, etc.) |
-| `user_service_flags` | String | flags controlling user‑service permissions (e.g., DSMA allow) |
-| `svchost_split_disable` | String | whether svchost split is disabled for this service |
+| `user_service_flags` | Int | flags controlling user‑service permissions (e.g., DSMA allow) |
+| `svchost_split_disable` | Bool | whether svchost split is disabled for this service |
 | `package_fullname` | String | full package name for a packaged service |
 | `app_usermodel_id` | String | AppUserModel ID associated with the service |
 | `package_origin` | String | origin of the package (Unsigned, Inbox, Store, Developer) |

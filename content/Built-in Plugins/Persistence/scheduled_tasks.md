@@ -68,7 +68,7 @@ Each row reconstructs a Registry-backed scheduled task, with task identity, auth
 | `plain.mtime` | DateTime | modification timestamp of the plain sub‑key for the task |
 | `tree` | Object |  |
 | `tree.mtime` | DateTime | modification timestamp of the tree sub‑key for the task |
-| `creation_date` | String | timestamp when the scheduled task was initially created |
+| `creation_date` | DateTime | timestamp when the scheduled task was initially created |
 | `last_run_launch_date` | DateTime | timestamp of the most recent task launch |
 | `last_run_exit_code` | Int | exit code returned by the latest execution of the task |
 | `last_run_exit_date` | DateTime | timestamp when the latest task execution completed |

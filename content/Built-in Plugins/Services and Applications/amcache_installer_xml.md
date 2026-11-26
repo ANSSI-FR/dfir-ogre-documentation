@@ -35,7 +35,7 @@ Each row describes installed-software evidence from an Amcache XML report, inclu
 | `pe_header_hash` | String | Hash of the PE header |
 | `image_size` | IntRadix | Size of the executable image in memory |
 | `pe_checksum` | String | PE image checksum |
-| `link_date` | String | PE link (compilation) date |
+| `link_date` | DateTime | PE link (compilation) date |
 | `linker_version` | String | PE linker version |
 | `bin_file_version` | String | Binary file version |
 | `bin_product_version` | String | Binary product version |
@@ -43,7 +43,7 @@ Each row describes installed-software evidence from an Amcache XML report, inclu
 | `created` | DateTime | Installed executable creation timestamp |
 | `modified` | DateTime | Installed executable modification timestamp |
 | `version_language` | String | Language code of the installed executable |
-| `sha1` | String | SHA-1 hash of the installed executable |
+| `sha1` | Python | SHA-1 hash of the installed executable |
 | `sig_publisher_name` | String | Publisher name from the signature |
 | `file_version` | String | Installed executable file version |
 | `company` | String | Company (vendor) name |

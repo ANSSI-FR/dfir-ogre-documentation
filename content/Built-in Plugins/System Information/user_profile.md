@@ -29,8 +29,8 @@ Each row describes a Windows user profile, with account name, SID, profile path,
 | `path` | String | filesystem path to the user's profile directory |
 | `is_hidden` | Bool | True if the account is listed as hidden in SpecialAccounts\UserList |
 | `is_admin` | Bool | True if the profile's State flag indicates administrative rights (0x100 set) |
-| `ref_count` | String | reference count value for the profile entry |
-| `state` | String | raw State field value from the registry (used to infer admin status) |
+| `ref_count` | Int | reference count value for the profile entry |
+| `state` | Int | raw State field value from the registry (used to infer admin status) |
 | `key_path` | String | full registry key name |
 | `key_modif_time` | DateTime | last modification timestamp of the registry key |
 | `key_security` | Object |  |

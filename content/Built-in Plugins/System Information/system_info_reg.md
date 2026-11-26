@@ -52,7 +52,7 @@ Each row provides host and operating-system context reconstructed from SYSTEM an
 | `interfaces[].description` | String | Network interface description |
 | `interfaces[].mac` | String | Physical MAC address of the interface |
 | `interfaces[].ipv4` | String | IPv4 addresses assigned to the interface |
-| `interfaces[].dhcp_enabled` | String | Whether DHCP is enabled for this interfac |
+| `interfaces[].dhcp_enabled` | Int | Whether DHCP is enabled for this interfac |
 | `interfaces[].dhcp_ipv4` | String | Current IPv4 address obtained via DHCP |
 | `interfaces[].dhcp_ipv4_server` | String | DHCP server that provided the IPv4 address |
 | `interfaces[].ipv6` | String | IPv6 addresses assigned to the interface |

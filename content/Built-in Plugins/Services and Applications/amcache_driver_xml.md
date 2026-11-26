@@ -23,7 +23,7 @@ Each row is a driver inventory entry extracted from an Amcache XML report, with 
 
 | Output Name | Data Type | Description |
 |---|---|---|
-| `sha1` | String | SHA-1 hash of the driver binary |
+| `sha1` | Python | SHA-1 hash of the driver binary |
 | `name` | String | Driver name |
 | `type` | String | Driver type (e.g. Kernel, File System) |
 | `version` | String | Driver version |

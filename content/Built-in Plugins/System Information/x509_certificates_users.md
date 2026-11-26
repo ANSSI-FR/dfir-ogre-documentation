@@ -35,7 +35,7 @@ Each row is a per-user X.509 certificate decoded from an NTUSER hive, with subje
 | `extensions[]` | Array[Object] |  |
 | `extensions[].name` | String | human‑readable name of the extension |
 | `extensions[].oid` | String | object identifier (OID) of the extension |
-| `extensions[].critical` | String | whether the extension is marked critical (true/false) |
+| `extensions[].critical` | Bool | whether the extension is marked critical (true/false) |
 | `extensions[].value` | String | string representation of the extension value |
 | `key_path` | String | full registry key name |
 | `key_modif_time` | DateTime | last modification timestamp of the registry key |

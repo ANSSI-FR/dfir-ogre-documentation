@@ -45,11 +45,17 @@ Each row represents a Windows EVTX event, preserving system metadata and structu
 | `system.provider.provider_name` | String | name of the event provider |
 | `system.provider.guid` | Python | GUID of the event provider |
 | `system.execution` | Object |  |
-| `system.execution.process_id` | String | process identifier that generated the event |
-| `system.execution.thread_id` | String | thread identifier that generated the event |
-| `system.event_record_id` | String | unique record identifier for the event |
+| `system.execution.process_id` | Int | process identifier that generated the event |
+| `system.execution.thread_id` | Int | thread identifier that generated the event |
+| `system.event_record_id` | Int | unique record identifier for the event |
 | `system.computer` | String | name of the computer that logged the event |
-| `system.event_id` | String | numeric identifier of the event type |
+| `system.event_id` | Int | numeric identifier of the event type |
+| `system.channel` | String | event log channel the event was written to |
+| `system.level` | Int | severity level of the event (1 critical, 2 error, 3 warning, 4 information, 5 verbose) |
+| `system.version` | Int | version of the event definition |
+| `system.task` | Int | task category of the event |
+| `system.opcode` | Int | operation code of the event |
+| `system.keywords` | String | keyword bitmask of the event, in hexadecimal |
 | `event_data` | Object |  |
 | `event_data.class_guid` | Python | GUID of the device setup class |
 | `user_data` | Object |  |

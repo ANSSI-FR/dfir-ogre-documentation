@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DFIR-OGRE documentation – Persistence</title>
-    <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/</link>
+    <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/</link>
     <description>Recent content in Persistence on DFIR-OGRE documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Autoruns</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/autoruns/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/autoruns/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/autoruns/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/autoruns/</guid>
       <description>
         
         
@@ -173,10 +173,10 @@ Python Parser: &lt;strong&gt;Autoruns&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Autoruns Reg Software</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/autoruns_reg_software/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/autoruns_reg_software/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/autoruns_reg_software/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/autoruns_reg_software/</guid>
       <description>
         
         
@@ -366,10 +366,10 @@ Python Parser: &lt;strong&gt;RegAutorunsSoftware&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Autoruns Reg System</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/autoruns_reg_system/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/autoruns_reg_system/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/autoruns_reg_system/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/autoruns_reg_system/</guid>
       <description>
         
         
@@ -559,10 +559,10 @@ Python Parser: &lt;strong&gt;RegAutorunsSystem&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Autoruns Reg User</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/autoruns_reg_user/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/autoruns_reg_user/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/autoruns_reg_user/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/autoruns_reg_user/</guid>
       <description>
         
         
@@ -752,10 +752,10 @@ Python Parser: &lt;strong&gt;RegAutorunsUser&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Scheduled Tasks</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/scheduled_tasks/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/scheduled_tasks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/scheduled_tasks/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/scheduled_tasks/</guid>
       <description>
         
         
@@ -1027,7 +1027,7 @@ Python Parser: &lt;strong&gt;RegScheduledTask&lt;/strong&gt;&lt;/div&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;creation_date&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;DateTime&lt;/td&gt;
 					&lt;td&gt;timestamp when the scheduled task was initially created&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
@@ -1178,10 +1178,10 @@ Python Parser: &lt;strong&gt;RegScheduledTask&lt;/strong&gt;&lt;/div&gt;
     
     <item>
       <title>Services Control Set</title>
-      <link>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/services_control_set/</link>
+      <link>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/services_control_set/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anssi-fr.github.io/dfir-ogre-documentation/built-in-plugins/persistence/services_control_set/</guid>
+      <guid>http://localhost:1313/dfir-ogre-documentation/built-in-plugins/persistence/services_control_set/</guid>
       <description>
         
         
@@ -1312,17 +1312,17 @@ Python Parser: &lt;strong&gt;RegServicesControlSet&lt;/strong&gt;&lt;/div&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;tag&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;Int&lt;/td&gt;
 					&lt;td&gt;numeric tag used for service ordering&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;depend_on_group&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;depend_on_group[]&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Array[String]&lt;/td&gt;
 					&lt;td&gt;service groups this service depends on&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;depend_on_service&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;depend_on_service[]&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Array[String]&lt;/td&gt;
 					&lt;td&gt;other services this service depends on&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
@@ -1342,7 +1342,7 @@ Python Parser: &lt;strong&gt;RegServicesControlSet&lt;/strong&gt;&lt;/div&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;wow64&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;Int&lt;/td&gt;
 					&lt;td&gt;WOW64 flag indicating a 32‑bit service on a 64‑bit OS&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
@@ -1352,12 +1352,12 @@ Python Parser: &lt;strong&gt;RegServicesControlSet&lt;/strong&gt;&lt;/div&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;delayed_auto_start&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;Int&lt;/td&gt;
 					&lt;td&gt;whether the service uses delayed automatic start&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;preshutdown_timeout&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;Int&lt;/td&gt;
 					&lt;td&gt;pre‑shutdown timeout value (milliseconds)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
@@ -1366,8 +1366,8 @@ Python Parser: &lt;strong&gt;RegServicesControlSet&lt;/strong&gt;&lt;/div&gt;
 					&lt;td&gt;SID type assigned to the service (None, Unrestricted, Restricted)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;required_privileges&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;required_privileges[]&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Array[String]&lt;/td&gt;
 					&lt;td&gt;list of privileges the service requires&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
@@ -1377,12 +1377,12 @@ Python Parser: &lt;strong&gt;RegServicesControlSet&lt;/strong&gt;&lt;/div&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;user_service_flags&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;Int&lt;/td&gt;
 					&lt;td&gt;flags controlling user‑service permissions (e.g., DSMA allow)&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;svchost_split_disable&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;String&lt;/td&gt;
+					&lt;td&gt;Bool&lt;/td&gt;
 					&lt;td&gt;whether svchost split is disabled for this service&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;

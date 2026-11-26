@@ -24,5 +24,5 @@ Each row represents Recycle Bin metadata for a deleted item, with original path,
 |---|---|---|
 | `path` | String | original full path of the deleted file before it was sent to the Recycle Bin |
 | `size` | Int | size, in bytes, of the original file that was deleted |
-| `header` | String | INFO2 file version identifier (1 = Vista/7, 2 = Windows 10+) |
+| `header` | Int | INFO2 file version identifier (1 = Vista/7, 2 = Windows 10+) |
 | `uninstall_date` | DateTime | timestamp when the file was removed (deleted) and placed in the Recycle Bin |

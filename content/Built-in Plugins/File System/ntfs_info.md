@@ -86,3 +86,4 @@ Each row represents an NTFS Master File Table record exported by ORC, with path,
 | `pe_platform` | String | target platform/architecture of the PE (e.g., x86, x64) |
 | `pe_compilation_date` | DateTime | compilation timestamp of the PE executable |
 | `pe_subsystem` | String | subsystem type defined in the PE header (e.g., GUI, Console) |
+| `volume_id` | String | identifier of the volume that holds the file, as in usninfo and volstats |

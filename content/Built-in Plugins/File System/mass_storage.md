@@ -48,9 +48,9 @@ Each row consolidates registry evidence for a mass-storage device, with device a
 | `attributes2` | String | raw attribute string 2 from device metadata |
 | `attributes3` | String | raw attribute string 3 from device metadata |
 | `reason` | String | reason string associated with device install or removal events |
-| `registry_path` | String | registry key paths that contributed to this device record |
+| `registry_path[]` | Array[String] | registry key paths that contributed to this device record |
 | `setupapi_sample_path` | String | path to the SetupAPI sample file used for this record |
-| `users` | String | owner SID(s) of the registry entries |
+| `users[]` | Array[String] | owner SID(s) of the registry entries |
 | `setupapi_first_seen` | DateTime | first timestamp the device appeared in SetupAPI (installation) |
 | `setupapi_last_seen` | DateTime | last timestamp the device appeared in SetupAPI (removal) |
 | `usbstor_last_modified` | DateTime | last modification timestamp of the USBSTOR registry key |
