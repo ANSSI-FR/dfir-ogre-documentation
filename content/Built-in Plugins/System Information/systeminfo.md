@@ -4,11 +4,13 @@
 
 
 {{< callout type="important" >}}Data Type: **systeminfo** \
-	Python Parser: **Regexp**{{< /callout >}}
+	Python Parser: **SystemInfo**{{< /callout >}}
 
 ### Description 
 
 Each row summarizes a host from Windows systeminfo output, including hostname, OS edition and build, installation and boot times, hardware, memory, domain, hotfixes, network adapters, and virtualization support. Use it to scope the system and interpret version-dependent artifacts. Values reflect collection-time or OS-reported state rather than historical activity.
+
+The parser reads CSV quoting and multiline fields, maps recognized headers independently of column order, and supports older Windows headers without Hyper-V information. Values remain strings, including locale-dependent date and memory representations. Legacy `System Up Time` is preserved as `system_up_time`, separately from `system_boot_time`.
 
 
 ### Timeline 
@@ -34,6 +36,7 @@ Each row summarizes a host from Windows systeminfo output, including hostname, O
 | `product_id` | String | Product ID |
 | `original_install_date` | String | Original install date of the OS |
 | `system_boot_time` | String | System boot time |
+| `system_up_time` | String | System uptime reported by older Windows versions |
 | `system_manufacturer` | String | System manufacturer |
 | `system_model` | String | System model |
 | `system_type` | String | System type (e.g., x64‑based PC) |

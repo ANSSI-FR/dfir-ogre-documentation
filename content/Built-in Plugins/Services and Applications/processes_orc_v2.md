@@ -10,6 +10,8 @@
 
 Each row describes a process observed in an enriched ORC process CSV, with identity, executable and command line, parentage, timing, version, window, resource, and response metadata. Use it to reconstruct process trees and flag anomalous paths or behavior. It remains a snapshot; absence does not exclude earlier execution and identifiers can be reused.
 
+The general configurations export these records through `raw_data`. `StartTime` and `ExitTime` remain strings because their date formats vary between collections. The dedicated timeline configurations omit this mapping.
+
 
 ### Timeline 
 
